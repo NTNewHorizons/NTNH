@@ -61,3 +61,27 @@ shapeless=
 shapeless=
     ae2:ItemMaterial.AdvCard ae2:ItemMaterial.BlankPattern ae2:ItemMaterial.EngProcessor
     -> ae2:ItemMaterial.CardLockCrafting
+
+shapeless=
+    ae2:ItemMaterial.AdvCard oredictionary:craftingTableWood mc:redstone_torch
+    -> ae2:ItemMaterial.CardFakeCrafting
+
+shapeless=
+    ae2:ItemMaterial.CardSpeed ae2:ItemMaterial.Cell16kPart
+    -> ae2:ItemMaterial.CardSuperSpeed
+
+shapeless=
+    ae2:ItemMaterial.CardSuperSpeed ae2:ItemMaterial.Cell1024kPart
+    -> ae2:ItemMaterial.CardSuperluminalSpeed
+
+shapeless=
+    ae2:ItemMaterial.BasicCard mc:ender_pearl
+    -> ae2:ItemMaterial.CardVoidOverflow
+
+shapeless=
+    ae2:ItemMaterial.AdvCard ae2:ItemMaterial.LogicProcessor
+    -> ae2:ItemMaterial.CardDistribution
+
+shapeless=
+    ae2:ItemMaterial.AdvCard mc:book
+    -> ae2:ItemMaterial.CardOreFilter

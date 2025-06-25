@@ -12,6 +12,9 @@
 
 // ================================================================================
 //#MARKER REMOVE
+recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:68>);
+recipes.remove(<ae2stuff:Wireless>);
+recipes.remove(<ae2stuff:Wireless:17>);
 recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:54>);
 recipes.remove(<minecraft:flint_and_steel>);
 recipes.remove(<openfm:MemoryCard>);
@@ -267,6 +270,7 @@ recipes.addShapeless(<minecraft:flint_and_steel>, [<ore:ingotSteel>, <minecraft:
 
 // ================================================================================
 //#MARKER ADD SHAPED
+recipes.addShaped(<ae2stuff:Wireless>, [[<ore:crystalPureFluix>, <appliedenergistics2:item.ItemMultiMaterial:24>, <ore:crystalPureFluix>], [<ore:Steel>, <appliedenergistics2:item.ItemMultiMaterial:41>, <ore:Steel>], [<ore:crystalPureFluix>, <appliedenergistics2:item.ItemMultiMaterial:24>, <ore:crystalPureFluix>]]);
 recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:44>, [[<hbm:item.circuit:3>, <ore:ingotIron>, <appliedenergistics2:item.ItemMultiMaterial:16>]]);
 recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:43>, [[<appliedenergistics2:item.ItemMultiMaterial:18>, <ore:ingotIron>, <hbm:item.circuit:3>]]);
 recipes.addShaped(<openfm:MemoryCard>, [[<hbm:item.wire_fine:2900>], [<OpenComputers:item:4>]]);

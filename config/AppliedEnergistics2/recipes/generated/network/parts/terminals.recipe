@@ -13,3 +13,7 @@ shapeless=
 shapeless=
     ae2:ItemPart.CraftingTerminal ae2:ItemMaterial.EngProcessor
     -> ae2:ItemPart.PatternTerminal
+
+shapeless=
+    ae2:ItemPart.PatternTerminal ae2:ItemMaterial.CalcProcessor ae2:ItemMaterial.EngProcessor ae2:ItemMaterial.LogicProcessor
+    -> ae2:ItemPart.PatternTerminalEx

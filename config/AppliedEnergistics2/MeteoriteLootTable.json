@@ -1,0 +1,477 @@
+{
+  "Info and Tips:": [
+    "Parameters:",
+    "item:  TYPE: STRING  DEFAULT VALUE:  NONE. PARAMETER IS REQUIRED  DESCRIPTION: The name of the item as used by the /give command  EXAMPLE: \"minecraft:dirt\"",
+    "meta_data:  TYPE: NON-NEGATIVE INTEGER  DEFAULT VALUE:  0  DESCRIPTION: Metadata value for the item, the 3rd parameter in the /give command  EXAMPLE: 3",
+    "min_value:  TYPE: NON-NEGATIVE INTEGER  DEFAULT VALUE:  0  DESCRIPTION: The minimum amount of that item that is inserted when that item is selected (SETTING TO 1 DOES NOT GUARANTEE THAT ITEM IN EVERY CHEST)  EXAMPLE: 4",
+    "max_value:  TYPE: NON-NEGATIVE INTEGER  DEFAULT VALUE:  1  DESCRIPTION: The maximum amount of that item that is inserted when that item is selected  EXAMPLE: 72",
+    "weight:  TYPE: NON-NEGATIVE INTEGER  DEFAULT VALUE:  1  DESCRIPTION:  The weighted chance the item is chosen. (Weights are compared between entries with the same exclusive group)  EXAMPLE: 40",
+    "exclusiveGroupID:  TYPE: INTEGER  DEFAULT VALUE:  -1  DESCRIPTION:  exclusiveGroupID lets you group entries so only one from the group can appear, chosen based on weight. If multiple entries share the same group ID, only one will be picked. If an entry is the only one in its group, its guaranteed to appear. Setting this parameter to -1 will cause it to ignore exclusivity  EXAMPLE: 154",
+    "",
+    "Notes:",
+    "The Key Value:  For the dimension_loot_tables a key value is required, this value represents the dimensionID for the loot tables. For example, -29 is Galacticraft Mars, the loot tables under that id will only spawn in that dimension (if meteorites spawn there)",
+    "The list of loot tables:  The chance of a loot table within a dimension being selected is weighted by the total weight of every entry in that loot table against every other loot tables total weights",
+    "Format:  {",
+    "      \"dimension_loot_tables\": {",
+    "   \"0\": [   This is the start of a list of loot tables",
+    "       [    this is the start of a loot table,",
+    "         {",
+    "             ENTRY",
+    "         },",
+    "         {",
+    "             ANOTHER ENTRY",
+    "         }",
+    "       ],   this is the end of a loot table",
+    "       [    this is the start of another separate loot table",
+    "         {",
+    "             ENTRY",
+    "         },",
+    "         {",
+    "             ANOTHER ENTRY",
+    "         }",
+    "       ]    this is the end of a loot table",
+    "    ], this is the end of the list of loot tables",
+    "    \"-29\": [   this is the start of a list of loot tables for another dimension, and so on",
+    "       [",
+    "         {",
+    " }"
+  ],
+  "dimension_loot_tables": {
+    "0": [
+      [
+        {
+          "item": "appliedenergistics2:item.ItemMultiMaterial",
+          "meta_data": 13,
+          "min_value": 1,
+          "max_value": 1,
+          "weight": 3,
+          "exclusiveGroupID": 1
+        },
+        {
+          "item": "ore#nuggetCopper",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": 3
+        },
+        {
+          "item": "ore#nuggetPlatinum",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": 3
+        },
+        {
+          "item": "ore#nuggetIron",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": -1
+        },
+        {
+          "item": "minecraft:gold_nugget",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": -1
+        },
+        {
+          "item": "appliedenergistics2:tile.BlockSkyStone",
+          "meta_data": 0,
+          "min_value": 0,
+          "max_value": 12,
+          "weight": 1,
+          "exclusiveGroupID": -1
+        }
+      ],
+      [
+        {
+          "item": "appliedenergistics2:item.ItemMultiMaterial",
+          "meta_data": 14,
+          "min_value": 1,
+          "max_value": 1,
+          "weight": 3,
+          "exclusiveGroupID": 1
+        },
+        {
+          "item": "ore#nuggetTin",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": 4
+        },
+        {
+          "item": "ore#nuggetNickel",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": 4
+        },
+        {
+          "item": "ore#nuggetIron",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": -1
+        },
+        {
+          "item": "minecraft:gold_nugget",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": -1
+        },
+        {
+          "item": "appliedenergistics2:tile.BlockSkyStone",
+          "meta_data": 0,
+          "min_value": 0,
+          "max_value": 12,
+          "weight": 1,
+          "exclusiveGroupID": -1
+        }
+      ],
+      [
+        {
+          "item": "appliedenergistics2:item.ItemMultiMaterial",
+          "meta_data": 15,
+          "min_value": 1,
+          "max_value": 1,
+          "weight": 3,
+          "exclusiveGroupID": 1
+        },
+        {
+          "item": "ore#nuggetSilver",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": 5
+        },
+        {
+          "item": "ore#nuggetAluminium",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": 5
+        },
+        {
+          "item": "ore#nuggetIron",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": -1
+        },
+        {
+          "item": "minecraft:gold_nugget",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": -1
+        },
+        {
+          "item": "appliedenergistics2:tile.BlockSkyStone",
+          "meta_data": 0,
+          "min_value": 0,
+          "max_value": 12,
+          "weight": 1,
+          "exclusiveGroupID": -1
+        }
+      ],
+      [
+        {
+          "item": "appliedenergistics2:item.ItemMultiMaterial",
+          "meta_data": 19,
+          "min_value": 1,
+          "max_value": 1,
+          "weight": 3,
+          "exclusiveGroupID": 1
+        },
+        {
+          "item": "ore#nuggetLead",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": 2
+        },
+        {
+          "item": "ore#nuggetElectrum",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": 2
+        },
+        {
+          "item": "ore#nuggetIron",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": -1
+        },
+        {
+          "item": "minecraft:gold_nugget",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": -1
+        },
+        {
+          "item": "appliedenergistics2:tile.BlockSkyStone",
+          "meta_data": 0,
+          "min_value": 0,
+          "max_value": 12,
+          "weight": 1,
+          "exclusiveGroupID": -1
+        }
+      ]
+    ],
+    "-29": [
+      [
+        {
+          "item": "appliedenergistics2:item.ItemMultiMaterial",
+          "meta_data": 13,
+          "min_value": 1,
+          "max_value": 1,
+          "weight": 3,
+          "exclusiveGroupID": 1
+        },
+        {
+          "item": "ore#nuggetCopper",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": 3
+        },
+        {
+          "item": "ore#nuggetPlatinum",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": 3
+        },
+        {
+          "item": "ore#nuggetIron",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": -1
+        },
+        {
+          "item": "minecraft:gold_nugget",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": -1
+        },
+        {
+          "item": "appliedenergistics2:tile.BlockSkyStone",
+          "meta_data": 0,
+          "min_value": 0,
+          "max_value": 12,
+          "weight": 1,
+          "exclusiveGroupID": -1
+        },
+        {
+          "item": "minecraft:diamond",
+          "meta_data": 0,
+          "min_value": 2,
+          "max_value": 4,
+          "weight": 1,
+          "exclusiveGroupID": -1
+        }
+      ],
+      [
+        {
+          "item": "appliedenergistics2:item.ItemMultiMaterial",
+          "meta_data": 14,
+          "min_value": 1,
+          "max_value": 1,
+          "weight": 3,
+          "exclusiveGroupID": 1
+        },
+        {
+          "item": "ore#nuggetTin",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": 4
+        },
+        {
+          "item": "ore#nuggetNickel",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": 4
+        },
+        {
+          "item": "ore#nuggetIron",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": -1
+        },
+        {
+          "item": "minecraft:gold_nugget",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": -1
+        },
+        {
+          "item": "appliedenergistics2:tile.BlockSkyStone",
+          "meta_data": 0,
+          "min_value": 0,
+          "max_value": 12,
+          "weight": 1,
+          "exclusiveGroupID": -1
+        },
+        {
+          "item": "minecraft:diamond",
+          "meta_data": 0,
+          "min_value": 2,
+          "max_value": 4,
+          "weight": 1,
+          "exclusiveGroupID": -1
+        }
+      ],
+      [
+        {
+          "item": "appliedenergistics2:item.ItemMultiMaterial",
+          "meta_data": 15,
+          "min_value": 1,
+          "max_value": 1,
+          "weight": 3,
+          "exclusiveGroupID": 1
+        },
+        {
+          "item": "ore#nuggetSilver",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": 5
+        },
+        {
+          "item": "ore#nuggetAluminium",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": 5
+        },
+        {
+          "item": "ore#nuggetIron",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": -1
+        },
+        {
+          "item": "minecraft:gold_nugget",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": -1
+        },
+        {
+          "item": "appliedenergistics2:tile.BlockSkyStone",
+          "meta_data": 0,
+          "min_value": 0,
+          "max_value": 12,
+          "weight": 1,
+          "exclusiveGroupID": -1
+        },
+        {
+          "item": "minecraft:diamond",
+          "meta_data": 0,
+          "min_value": 2,
+          "max_value": 4,
+          "weight": 1,
+          "exclusiveGroupID": -1
+        }
+      ],
+      [
+        {
+          "item": "appliedenergistics2:item.ItemMultiMaterial",
+          "meta_data": 19,
+          "min_value": 1,
+          "max_value": 1,
+          "weight": 3,
+          "exclusiveGroupID": 1
+        },
+        {
+          "item": "ore#nuggetLead",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": 2
+        },
+        {
+          "item": "ore#nuggetElectrum",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": 2
+        },
+        {
+          "item": "ore#nuggetIron",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": -1
+        },
+        {
+          "item": "minecraft:gold_nugget",
+          "meta_data": 0,
+          "min_value": 1,
+          "max_value": 12,
+          "weight": 3,
+          "exclusiveGroupID": -1
+        },
+        {
+          "item": "appliedenergistics2:tile.BlockSkyStone",
+          "meta_data": 0,
+          "min_value": 0,
+          "max_value": 12,
+          "weight": 1,
+          "exclusiveGroupID": -1
+        },
+        {
+          "item": "minecraft:diamond",
+          "meta_data": 0,
+          "min_value": 2,
+          "max_value": 4,
+          "weight": 1,
+          "exclusiveGroupID": -1
+        }
+      ]
+    ]
+  }
+}
