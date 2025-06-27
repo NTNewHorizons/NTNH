@@ -1,0 +1,55 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 8281162709432355983,
+      "questIDLow:4": -5071351204194697637
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "A mechanical press (also known as a fruit press) is composed of two blocks (much like a door), the upper part and the lower part. The upper part represents the pressing mechanism while the lower part represents the pressing slats and the liquid container.\n\nTo make the fruit press functional, the upper part must be powered by redstone. This can be achieved by either supplying it with a redstone current or by placing adding a lever on the long wooden bars at the sides of the fruit press.\n\nOnce powered, proceed to opening the GUI of the fruit press by right-clicking the bottom part:\n\n[img height\u003d100]resources:MechanicalPressExplanation.png[/img]\n\n§cRed§r - Raw / Input slot\n§aGreen§r - Liquid / Output slot\n§9Blue§r - Byproduct slot\n§4X§r - Discards the contents of the liquid slot\n\nIt functions the same way as a Furnace. Once the input slot is filled and the press\u0027 powered, it will start pressing one item at a time, slowly filling the liquid slot until its maximum capacity (1000 mB). Every item pressed will also add up into an invisible byproduct counter. If the counter reaches its limit (1.0), it will create a bonemeal in the byproduct slot and then resets the counter again.\n\nEmpty buckets and glass bottles can be used to retrieve the liquid contents of the output slot provided that the liquid amount is equal to 1000 or greater than or equal to 333, respectively.\n\n§6Recipes:\n§6In        | Out            | Amt  | Byprod\n-------|-----------|-----|-------\nApple    | Apple Cider | 40   | 0.30\nGrape   | Wine           | 40   | 0.30",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "Growthcraft|Cellar:grc.fruitPress"
+      },
+      "isMain:1": 1,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Mechanical Press",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": 4859928138216785781,
+  "questIDLow:4": -9097048405566546464,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 0,
+      "partialMatch:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "Growthcraft|Cellar:grc.fruitPress"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

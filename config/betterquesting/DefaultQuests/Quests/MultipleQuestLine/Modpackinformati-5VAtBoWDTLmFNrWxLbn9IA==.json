@@ -1,0 +1,37 @@
+{
+  "preRequisites:9": {},
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "Welcome to Nuclear Tech: New Horizons!\n\nPlease read the following information before starting out.\n\n1) Remember to Claim your base and Chunkload your reactors using Server Utilities (from the inventory).\n\n2) Normal world generation is available in the world creation tab for those that feel like RTG may be affecting their performance.\n\n3) If shaders are glitching out try to use fancy textures.\n\n4) If you are encountering any rendering problems, try to scroll around in NEI.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:tile.book_guide"
+      },
+      "isMain:1": 1,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Modpack information",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "ALWAYS"
+    }
+  },
+  "questIDHigh:4": -1922987534854173511,
+  "questIDLow:4": -8847684645341758176,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

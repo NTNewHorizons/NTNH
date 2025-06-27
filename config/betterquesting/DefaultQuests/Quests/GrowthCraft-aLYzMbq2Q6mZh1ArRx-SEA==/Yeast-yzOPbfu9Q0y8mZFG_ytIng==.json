@@ -1,0 +1,61 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": -8311787215181953238,
+      "questIDLow:4": -4625460872863858669
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "Making yeast is fairly simple to do. First, one must fill up a Culture Jar with young booze of any kind. This will, over time, cause the formation of brewer\u0027s yeast. This will also consume some of the fluid. In some biomes, you can get certain kinds of yeast, such as lager yeast, and ethereal yeast. You can also get another form of yeast, Bayanus Yeast, from breaking grapes, as a rare drop.\n\nYou can also take existing yeast, and place it into the jar to culture that type only, irregardless of the biome.\n\nOnce you have yeast, you can use brewer\u0027s yeast in place of netherwart, though netherwart ferments faster than brewer\u0027s yeast.\n\nTo make use of yeast fully, follow any instructions laid out here:\n\n[url]https://docs.google.com/spreadsheets/d/1ykz1iqWUkarnZC76FGyjKs2wExdOgLJ7XHt3haNOV30/edit#gid\u003d1739283064[/url]\n\nNote: Kumis from Milk is currently not on this list, but, it requires one to ferment milk in a barrel.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 32767,
+        "OreDict:8": "",
+        "id:8": "Growthcraft|Cellar:grc.yeast"
+      },
+      "isMain:1": 1,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Yeast",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": -3804539557660245172,
+  "questIDLow:4": -4856690989027604322,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 0,
+      "partialMatch:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "Growthcraft|Cellar:grc.fermentJar"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "Growthcraft|Cellar:grc.yeast"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

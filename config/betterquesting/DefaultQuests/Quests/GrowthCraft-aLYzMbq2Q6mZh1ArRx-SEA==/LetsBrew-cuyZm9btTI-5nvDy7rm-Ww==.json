@@ -1,0 +1,42 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": -4773025895559312336,
+      "questIDLow:4": -5598410955789435696
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "Alcoholic beverage or \"Booze\" is a new type of item introduced by Growthcraft Cellar. It is a somewhat combination of food and potion, it gives magical potion effects while restoring hunger points. Take note though that it will only restore hunger points but not saturation points. It will decrease your saturation points instead, meaning that the more you drink the alcoholic beverage, the more hungry you get in the long run.\n\nIn addition to these effects, alcoholic beverages also gives a Tipsy potion effect, more info in the following sub-chapter.\n\nBrewing alcoholic beverages is a new hobby in-game. Unlike in-game crafting (smelting, brewing, etc.), brewing boozes are divided into parts before actually getting the desired product. It increases challenge but still retaining simplicity.\n\n§6Tipsy§r is a potion effect which will represent the \u0027level\u0027 of drunk-ness of the player.\n\nTipsy is achieved in chance (depending on the type of booze) and increases its level by chance. There are four levels of tipsy. Each have varying durations and effects on the player.\n\nAt Tipsy I and Tipsy II, not observable effects are made. Tipsy I lasts for 2 minutes and 30 seconds while Tipsy II lasts for 5 minutes and 37.5 seconds. Continued drinking will raise the level of Tipsy furthermore into levels which are not recommended for adventuring. At Tipsy III, swirling of the screen will be observed and will last for 10 minutes. In addition to swirling of the screen, blindness will also happen at Tipsy IV. Tipsy IV lasts for 20 minutes (or half-Minecraft day).\n\nTipsy IV is the max level for Tipsy and will not raise up anymore.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "Growthcraft|Cellar:grc.chievItemDummy"
+      },
+      "isMain:1": 1,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Let\u0027s Brew!",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": 8281162709432355983,
+  "questIDLow:4": -5071351204194697637,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

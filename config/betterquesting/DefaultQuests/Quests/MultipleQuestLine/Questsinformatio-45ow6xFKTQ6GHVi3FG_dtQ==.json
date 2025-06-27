@@ -1,0 +1,42 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": -1922987534854173511,
+      "questIDLow:4": -8847684645341758176
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "This version of the Questbook was originally made by _SkippyPlaysMC_ and modified by Bufka2011.\n\nNotes:\n\n1) This questbook does not contain all the content from the mod, such as the guns, many armor sets and others. Make sure to browse NEI.\n\n2) When updating the modpack to newer versions that has introduced changes to the questbook, in case the quests dont update, delete the betterquesting folder in the world file.\nAfter it is deleted, turn on cheats and do \"/bq_admin edit true\", head over to the chapter of your choice, press the designer button (the one with many squares), click on your quest of choice and finally press the autocomplete button (checkmark) to complete the quests previously completed.\n\nSpecial thanks to everyone on discord who helped out with questions and recommendations while making the quests, aswell as the official NTM Wiki for providing information used in the quests.\n",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 5,
+        "OreDict:8": "",
+        "id:8": "hbm:tile.concrete_colored_ext"
+      },
+      "isMain:1": 1,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Quests information",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": -2046269294520939250,
+  "questIDLow:4": -8782766154957464139,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

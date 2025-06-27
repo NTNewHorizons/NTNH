@@ -1,0 +1,55 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 4859928138216785781,
+      "questIDLow:4": -9097048405566546464
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "Brew Kettle is a utility block which is a part in the brewing process. It is used to combine grains with a source liquid (commonly water) to produce wort.\n\nCompared to the fruit press, the brew kettle is more complicated in terms of the recipes it utilizes. To start the mashing process, the brew kettle must have fire beneath it (netherrack + fire for a makeshift stove).\n\nRight-clicking the brew kettle will bring about its GUI:\n\n[img height\u003d100]resources:BrewKettleExplanation.png[/img]\n\n§cRed§r - Raw / Input liquid slot\n§aGreen§r - Raw / Input item slot\n§9Blue§r - Liquid / Output slot\n§eYellow§r - Byproduct slot\n§4X§r - Discards the contents of the liquid slot adjacent to it \u003c - Switches the two fluid bars.\n\nIt works the same way as the fruit press, but only needing one additional input (a liquid). Right-clicking the brew kettle while holding a fluid container will fill the liquid input slot. Once both the input slots is filled and a fire source is present, it will start the mashing process, slowly filling the output slot until its max capacity (1000 mb). Every item brewed will also add up into an invisible byproduct counter. If the counter reaches its limit (1.0), it will create a bonemeal in the byproduct slot and then resets the counter again.\n\nEmpty buckets and glass bottles can be used to retrieve the liquid contents of the output slot provided that the liquid amount is equal to 1000 or greater than or equal to 333, respectively.\n\n§6Recipes:\nLiq In | Item In  | Output | Amt | Byprod\n-----+-------+------+---+-------\nWater | Wheat    | Ale*    | 40  | 0.30\nWater | Rice      | Sake   | 25  | 0.20\nAle*   | Hops     | Ale     | 40  | 0.30\n* \u003d No-hops",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "Growthcraft|Cellar:grc.brewKettle"
+      },
+      "isMain:1": 1,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Brew Kettle",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": -4329167660588971798,
+  "questIDLow:4": -6613453667762505278,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 0,
+      "partialMatch:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "Growthcraft|Cellar:grc.brewKettle"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

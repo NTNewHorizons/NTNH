@@ -1,0 +1,57 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": -4329167660588971798,
+      "questIDLow:4": -6613453667762505278
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "The Fermentation Barrel (also known as a Fermenting Barrel) is a utility block and the final part of the brewing process. It is used to ferment young boozes into matured boozes which have potion effects. It is also used to lengthen or strengthen the potion effect.\n\nThe Fermenting Barrel is a utility block and the final part of the brewing process. It is used to ferment young boozes into matured boozes which have potion effects. It is also used to lengthen or strengthen the potion effect.\n\n[img height\u003d100]resources:FermentationBarrelExplanation.png[/img]\n§cRed§r - Ingredient/Input slot (Netherwart, Redstone, or Glowstone dust)\n§aGreen§r - Liquid slot, max capacity of 3000 mB.\n§4X §r- Discards the contents of the liquid slot.\n\nThe bubbles and the upwards-pointing arrow at the left represent the fermenting progress, which lasts for one Minecraft day (approximately 20 minutes). The item icons at the right indicates if the booze is matured or young, and if it has a glowstone (strength) or redstone (length) modifier.\n\nRight-clicking the barrel with a fluid container will fill/drain the barrel.\n\nOnly boozes with Young, Fermented, Extended, and Potent modifiers can be fermented on the barrel. Extended and Potent boozes can cancel each others\u0027 effects by fermenting it with the opposite ingredient.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "Growthcraft|Cellar:grc.fermentBarrel",
+        "tag:10": {}
+      },
+      "isMain:1": 1,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Fermentation Barrel",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": -8311787215181953238,
+  "questIDLow:4": -4625460872863858669,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 0,
+      "partialMatch:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "Growthcraft|Cellar:grc.fermentBarrel",
+          "tag:10": {}
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

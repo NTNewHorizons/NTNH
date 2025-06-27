@@ -1,0 +1,75 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": -1922987534854173511,
+      "questIDLow:4": -8847684645341758176
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "Food is really important now. It\u0027s better to make your first farm as soon as you can.\n\nWhen you\u0027re using a hoe on a dirt it gives you some seeds. If there is a water nearby, you\u0027re making a vanilla farmland block.\n\nTo plant rice you should make a depression in the ground by right-clicking on a farmland block.\n\nAlso you can\u0027t craft wooden ore stone hoe, only copper or higher.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "minecraft:iron_hoe"
+      },
+      "isMain:1": 0,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Farming information",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": -864477191286665907,
+  "questIDLow:4": -8851562477268482629,
+  "rewards:9": {
+    "0:10": {
+      "choices:9": {
+        "0:10": {
+          "Count:3": 2,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "harvestcraft:pamappleSapling"
+        },
+        "1:10": {
+          "Count:3": 8,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "minecraft:wheat_seeds"
+        }
+      },
+      "ignoreDisabled:1": 0,
+      "index:3": 0,
+      "rewardID:8": "bq_standard:choice"
+    },
+    "1:10": {
+      "ignoreDisabled:1": 0,
+      "index:3": 1,
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 4,
+          "Damage:2": 1,
+          "OreDict:8": "",
+          "id:8": "hbm:item.canned_conserve"
+        }
+      }
+    }
+  },
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "preRequisites:9": {},
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "[note]GrowthCraft[/note] is a modification that primarily adds various improvements to farming and food production in the game.\n\nThe mod itself includes multiple modules, and we’ll explore each of them below:\n\n- §lCore§r — the main component of the mod.\n- §lCellar§r — adds new features for crafting alcoholic beverages.\n- §lApples§r — changes how apples are obtained in the game and adds a recipe for making apple cider.\n- §lGrapes§r — introduces a new crop, grapes, and enables the production of grape wine.\n- §lHops§r — adds a new crop, hops, and includes a recipe for brewing ale.\n- §lRice§r — introduces a new crop, rice, a new food item, onigiri (rice ball), and a recipe for making sake.\n- §lBee§rs — adds a new activity, beekeeping, and a recipe for crafting mead.\n- §lBamboo§r — introduces a new plant, bamboo, and recipes for using it in construction.\n- §lFishtrap§l§l§r§r — adds a fishtrap block that automatically catches fish and some other items.\n\nThe core focus of the mod is alcohol, resembling potion brewing (a guide link will be added soon), where brewing regular wine can grant effects like jump boost or speed, etc.\n\nNaturally, it also gives a drunkenness effect, which is quite amusing when it’s intense (similar to the Wither effect but longer-lasting).\n\nThere are four types of drink effects, which we’ll also discuss.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "Growthcraft|Cellar:grc.brewKettle"
+      },
+      "isMain:1": 1,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "What is GrowthCraft?",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": -4773025895559312336,
+  "questIDLow:4": -5598410955789435696,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}
