@@ -1,742 +1,132 @@
 {
   "recipes": [
-    {
-      "toppings": [
-        ["item","minecraft:redstone",1],
-        ["item","hbm:item.nugget_silicon",1]
+	{
+      "inputs": [
+        ["item","appliedenergistics2:item.ItemMultiMaterial",1,35],
+        ["item","appliedenergistics2:item.ItemMultiMaterial",1,39]
       ],
-      "pcb": [
-        ["item","hbm:item.ingot_polymer",1]
-      ],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,23],
-      "duration": 100,
-      "consumption": 1000
+      "output": ["appliedenergistics2:item.ItemBasicStorageCell.1k"],
+      "duration": 200,
+      "consumption": 1250
     },
     {
-      "toppings": [
-        ["item","minecraft:redstone",4],
-        ["item","hbm:item.circuit",1,4],
-        ["item","OpenComputers:item",4,23]
+      "inputs": [
+        ["item","appliedenergistics2:item.ItemMultiMaterial",1,36],
+        ["item","appliedenergistics2:item.ItemMultiMaterial",1,39]
       ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",8,24],
-      "duration": 100,
-      "consumption": 1000
+      "output": ["appliedenergistics2:item.ItemBasicStorageCell.4k"],
+      "duration": 250,
+      "consumption": 2000
     },
     {
-      "toppings": [
-        ["item","minecraft:redstone",4],
-        ["item","OpenComputers:item",8,24],
-        ["item","OpenComputers:item",4,23]
+      "inputs": [
+        ["item","appliedenergistics2:item.ItemMultiMaterial",1,37],
+        ["item","appliedenergistics2:item.ItemMultiMaterial",1,39]
       ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",4,25],
-      "duration": 100,
-      "consumption": 1000
+      "output": ["appliedenergistics2:item.ItemBasicStorageCell.16k"],
+      "duration": 300,
+      "consumption": 4500
     },
     {
-      "toppings": [
-        ["item","minecraft:redstone",4],
-        ["item","OpenComputers:item",4,25],
-        ["item","OpenComputers:item",4,23]
+      "inputs": [
+        ["item","appliedenergistics2:item.ItemMultiMaterial",1,38],
+        ["item","appliedenergistics2:item.ItemMultiMaterial",1,39]
       ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",2,26],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","appliedenergistics2:item.ItemMultiMaterial",1,23],
-        ["item","OpenComputers:item",1,24],
-        ["item","OpenComputers:item",3,23]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,27],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","appliedenergistics2:item.ItemMultiMaterial",1,22],
-        ["item","OpenComputers:item",1,24],
-        ["item","OpenComputers:item",3,23]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,28],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,27],
-        ["item","OpenComputers:item",1,28],
-        ["item","OpenComputers:item",1,24]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,29],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,27],
-        ["item","OpenComputers:item",1,28],
-        ["item","OpenComputers:item",1,25]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,42],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,27],
-        ["item","OpenComputers:item",1,28],
-        ["item","OpenComputers:item",1,26]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,43],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","minecraft:redstone",4],
-        ["item","OpenComputers:item",2,24]
-      ],
-      "pcb": ["item","hbm:item.circuit",1,3],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,1],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","minecraft:redstone",4],
-        ["item","OpenComputers:item",2,25]
-      ],
-      "pcb": ["item","hbm:item.circuit",1,3],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,2],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","minecraft:redstone",4],
-        ["item","OpenComputers:item",2,26]
-      ],
-      "pcb": ["item","hbm:item.circuit",1,3],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,38],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","minecraft:redstone",4]
-      ],
-      "pcb": [
-        ["item","hbm:item.circuit",1,3],
-        ["item","hbm:item.ingot_polymer",1]
-      ],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,33],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,27],
-        ["item","OpenComputers:item",1,33],
-        ["item","OpenComputers:item",1,1]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,8],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,27],
-        ["item","OpenComputers:item",1,33],
-        ["item","OpenComputers:item",1,2]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,9],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,27],
-        ["item","OpenComputers:item",1,33],
-        ["item","OpenComputers:item",1,38]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,10],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,28],
-        ["item","OpenComputers:item",1,24]
-      ],
-      "pcb": ["item","hbm:item.circuit",1,3],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,70],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,28],
-        ["item","OpenComputers:item",1,25]
-      ],
-      "pcb": ["item","hbm:item.circuit",1,3],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,71],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,28],
-        ["item","OpenComputers:item",1,26]
-      ],
-      "pcb": ["item","hbm:item.circuit",1,3],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,72],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,42],
-        ["item","OpenComputers:item",1,71],
-        ["item","OpenComputers:item",1,9]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,101],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,43],
-        ["item","OpenComputers:item",1,72],
-        ["item","OpenComputers:item",1,10]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,102],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,33],
-        ["item","OpenComputers:item",1,29],
-        ["item","OpenComputers:item",1,24]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,104],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,33],
-        ["item","OpenComputers:item",1,42],
-        ["item","OpenComputers:item",1,25]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,105],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,33],
-        ["item","OpenComputers:item",1,43],
-        ["item","OpenComputers:item",1,26]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,106],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",2,24],
-        ["item","OpenComputers:item",3,19]
-      ],
-      "pcb": ["item","hbm:item.circuit",1,3],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,5],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",2,25],
-        ["item","OpenComputers:item",3,19]
-      ],
-      "pcb": ["item","hbm:item.circuit",1,3],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,6],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",2,26],
-        ["item","OpenComputers:item",3,19]
-      ],
-      "pcb": ["item","hbm:item.circuit",1,3],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,7],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,33],
-        ["item","OpenComputers:cable",1],
-        ["item","OpenComputers:item",1,24]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,11],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,33],
-        ["item","OpenComputers:item",1,11],
-        ["item","OpenComputers:item",1,24]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,113],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,33],
-        ["item","OpenComputers:item",1,113],
-        ["item","OpenComputers:item",1,25]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,13],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",2,26],
-        ["item","minecraft:ender_pearl",2],
-        ["item","OpenComputers:item",2,11]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,51],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,33],
-        ["item","minecraft:ender_pearl",1],
-        ["item","OpenComputers:item",1,25]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,44],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,33],
-        ["item","minecraft:redstone_block",1],
-        ["item","OpenComputers:item",1,24]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,66],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,33],
-        ["item","minecraft:redstone_block",1],
-        ["item","OpenComputers:item",1,25]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,12],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,70],
-        ["item","OpenComputers:item",1,1],
-        ["item","OpenComputers:item",1,24]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,45],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,71],
-        ["item","OpenComputers:item",1,2],
-        ["item","OpenComputers:item",1,25]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,46],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,72],
-        ["item","OpenComputers:item",1,38],
-        ["item","OpenComputers:item",1,26]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,40],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,70],
-        ["item","OpenComputers:item",1,24]
-      ],
-      "pcb": ["item","hbm:item.circuit",1,3],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,74],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,71],
-        ["item","OpenComputers:item",1,25]
-      ],
-      "pcb": ["item","hbm:item.circuit",1,3],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,92],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","minecraft:redstone_block",1],
-        ["item","OpenComputers:item",1,24]
-      ],
-      "pcb": ["item","hbm:item.circuit",1,3],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,82],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","minecraft:redstone_block",1],
-        ["item","OpenComputers:item",1,25]
-      ],
-      "pcb": ["item","hbm:item.circuit",1,3],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,86],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,70],
-        ["item","hbm:item.drone",1],
-        ["item","OpenComputers:item",1,82]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,83],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,71],
-        ["item","hbm:item.drone",1],
-        ["item","OpenComputers:item",1,86]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,87],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,25],
-        ["item","OpenComputers:item",3,13]
-      ],
-      "pcb": ["item","hbm:item.circuit",1,3],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,108],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","OpenComputers:item",1,25],
-        ["item","OpenComputers:keyboard",1],
-        ["item","OpenComputers:item",1,13]
-      ],
-      "pcb": [],             
-      "solder": [],
-      "output": ["OpenComputers:item",1,41],
-      "duration": 100,
-      "consumption": 1000
-    },  
-    { 
-      "toppings": [
-        ["item","appliedenergistics2:item.ItemMultiMaterial",8,10],
-        ["item","hbm:item.plate_polymer",16],
-        ["item","hbm:item.ingot_tcalloy",1]
-      ],
-      "pcb": [],             
-      "solder": [
-        ["dict","wireFineLead",32]
-      ],
-      "output": ["appliedenergistics2:item.ItemMultiMaterial",1,35],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","appliedenergistics2:item.ItemMultiMaterial",8,10],
-        ["item","hbm:item.plate_polymer",16],
-        ["item","appliedenergistics2:item.ItemMultiMaterial",3,35]
-      ],
-      "pcb": [],             
-      "solder": [
-        ["dict","wireFineLead",32]
-      ],
-      "output": ["appliedenergistics2:item.ItemMultiMaterial",1,36],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","appliedenergistics2:item.ItemMultiMaterial",8,10],
-        ["item","hbm:item.plate_polymer",16],
-        ["item","appliedenergistics2:item.ItemMultiMaterial",3,36]
-      ],
-      "pcb": [],             
-      "solder": [
-        ["dict","wireFineLead",32]
-      ],
-      "output": ["appliedenergistics2:item.ItemMultiMaterial",1,37],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","appliedenergistics2:item.ItemMultiMaterial",8,10],
-        ["item","hbm:item.plate_polymer",16],
-        ["item","appliedenergistics2:item.ItemMultiMaterial",3,37]
-      ],
-      "pcb": [],             
-      "solder": [
-        ["dict","wireFineLead",32]
-      ],
-      "output": ["appliedenergistics2:item.ItemMultiMaterial",1,38],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","appliedenergistics2:item.ItemMultiMaterial",8,10],
-        ["item","hbm:item.plate_polymer",16],
-        ["item","appliedenergistics2:item.ItemMultiMaterial",3,38]
-      ],
-      "pcb": [],             
-      "solder": [
-        ["dict","wireFineLead",32]
-      ],
-      "output": ["appliedenergistics2:item.ItemMultiMaterial",1,57],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","appliedenergistics2:item.ItemMultiMaterial",8,10],
-        ["item","hbm:item.plate_polymer",16],
-        ["item","appliedenergistics2:item.ItemMultiMaterial",3,57]
-      ],
-      "pcb": [],             
-      "solder": [
-        ["dict","wireFineLead",32]
-      ],
-      "output": ["appliedenergistics2:item.ItemMultiMaterial",1,58],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","appliedenergistics2:item.ItemMultiMaterial",8,10],
-        ["item","hbm:item.plate_polymer",16],
-        ["item","appliedenergistics2:item.ItemMultiMaterial",3,58]
-      ],
-      "pcb": [],             
-      "solder": [
-        ["dict","wireFineLead",32]
-      ],
-      "output": ["appliedenergistics2:item.ItemMultiMaterial",1,59],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","appliedenergistics2:item.ItemMultiMaterial",8,10],
-        ["item","hbm:item.plate_polymer",16],
-        ["item","appliedenergistics2:item.ItemMultiMaterial",3,59]
-      ],
-      "pcb": [],             
-      "solder": [
-        ["dict","wireFineLead",32]
-      ],
-      "output": ["appliedenergistics2:item.ItemMultiMaterial",1,60],
-      "duration": 100,
-      "consumption": 1000
-    },
-    {
-      "toppings": [
-        ["item","appliedenergistics2:item.ItemExtremeStorageCell.Container",1],
-        ["item","hbm:item.circuit",1,16],
-        ["item","appliedenergistics2:item.ItemMultiMaterial",1,60]
-      ],
-      "pcb": [],             
-      "solder": [
-        ["dict","wireFineLead",64]
-      ],
-      "output": ["appliedenergistics2:item.ItemExtremeStorageCell.Quantum",1],
+      "output": ["appliedenergistics2:item.ItemBasicStorageCell.64k"],
       "duration": 350,
-      "consumption": 100000000
-    },    
-    {
-      "toppings": [
-        ["item","appliedenergistics2:item.ItemMultiMaterial",1,20],
-        ["item","minecraft:redstone",1],
-        ["item","appliedenergistics2:item.ItemMultiMaterial",1,17]
-      ],
-      "pcb": [],             
-      "solder": [
-        ["dict","wireFineLead",8]
-      ],
-      "output": ["appliedenergistics2:item.ItemMultiMaterial",1,24],
-      "duration": 100,
-      "consumption": 1000
+      "consumption": 8000
     },
     {
-      "toppings": [
-        ["item","appliedenergistics2:item.ItemMultiMaterial",1,20],
-        ["item","minecraft:redstone",1],
-        ["item","appliedenergistics2:item.ItemMultiMaterial",1,18]
+      "inputs": [
+        ["item","appliedenergistics2:item.ItemMultiMaterial",1,57],
+        ["item","appliedenergistics2:item.ItemMultiMaterial",1,61]
       ],
-      "pcb": [],             
-      "solder": [
-        ["dict","wireFineLead",8]
-      ],
-      "output": ["appliedenergistics2:item.ItemMultiMaterial",1,22],
-      "duration": 100,
-      "consumption": 1000
+      "output": ["appliedenergistics2:item.ItemAdvancedStorageCell.256k"],
+      "duration": 400,
+      "consumption": 10000
     },
-    { 
-      "toppings": [
-        ["item","appliedenergistics2:item.ItemMultiMaterial",1,20],
-        ["item","minecraft:redstone",1],
-        ["item","appliedenergistics2:item.ItemMultiMaterial",1,16]
+    {
+      "inputs": [
+        ["item","appliedenergistics2:item.ItemMultiMaterial",1,58],
+        ["item","appliedenergistics2:item.ItemMultiMaterial",1,61]
       ],
-      "pcb": [],             
-      "solder": [
-        ["dict","wireFineLead",8]
-      ],
-      "output": ["appliedenergistics2:item.ItemMultiMaterial",1,23],
-      "duration": 100,
-      "consumption": 1000
+      "output": ["appliedenergistics2:item.ItemAdvancedStorageCell.1024k"],
+      "duration": 450,
+      "consumption": 12000
     },
-    { 
-      "toppings": [
-        ["item","appliedenergistics2:item.ItemMultiMaterial",8,9],
-        ["item","hbm:item.plate_polymer",16],
-        ["item","hbm:item.nugget_technetium",2]
+    {
+      "inputs": [
+        ["item","appliedenergistics2:item.ItemMultiMaterial",1,59],
+        ["item","appliedenergistics2:item.ItemMultiMaterial",1,61]
       ],
-      "pcb": [],             
-      "solder": [
-        ["dict","wireFineLead",32]
-      ],
-      "output": ["appliedenergistics2:item.ItemMultiMaterial",1,32],
-      "duration": 100,
-      "consumption": 1000
+      "output": ["appliedenergistics2:item.ItemAdvancedStorageCell.4096k"],
+      "duration": 500,
+      "consumption": 15000
     },
-    { 
-      "toppings": [
-        ["item","appliedenergistics2:item.ItemMultiMaterial",8,9],
-        ["item","hbm:item.plate_polymer",16],
-        ["item","appliedenergistics2:item.ItemMultiMaterial",3,32]
+    {
+      "inputs": [
+        ["item","appliedenergistics2:item.ItemMultiMaterial",1,60],
+        ["item","appliedenergistics2:item.ItemMultiMaterial",1,61]
       ],
-      "pcb": [],             
-      "solder": [
-        ["dict","wireFineLead",32]
-      ],
-      "output": ["appliedenergistics2:item.ItemMultiMaterial",1,33],
-      "duration": 100,
-      "consumption": 1000
+      "output": ["appliedenergistics2:item.ItemAdvancedStorageCell.16384k"],
+      "duration": 550,
+      "consumption": 20000
     },
-    { 
-      "toppings": [
-        ["item","appliedenergistics2:item.ItemMultiMaterial",8,9],
-        ["item","hbm:item.plate_polymer",16],
-        ["item","appliedenergistics2:item.ItemMultiMaterial",3,33]
+    {
+      "inputs": [
+        ["item","appliedenergistics2:item.ItemMultiMaterial",1,38],
+        ["item","appliedenergistics2:item.ItemMultiMaterial",1,61]
       ],
-      "pcb": [],             
-      "solder": [
-        ["dict","wireFineLead",32]
+      "output": ["appliedenergistics2:item.ItemExtremeStorageCell.Container",1],
+      "duration": 350,
+      "consumption": 50000
+    },
+    {
+      "inputs": [
+        ["item","appliedenergistics2:item.ItemMultiMaterial",1,32],
+        ["item","appliedenergistics2:item.ItemMultiMaterial",1,39]
       ],
-      "output": ["appliedenergistics2:item.ItemMultiMaterial",1,34],
-      "duration": 100,
-      "consumption": 1000
+      "output": ["appliedenergistics2:item.ItemSpatialStorageCell.2Cubed"],
+      "duration": 250,
+      "consumption": 2000
+    },
+    {
+      "inputs": [
+        ["item","appliedenergistics2:item.ItemMultiMaterial",1,33],
+        ["item","appliedenergistics2:item.ItemMultiMaterial",1,39]
+      ],
+      "output": ["appliedenergistics2:item.ItemSpatialStorageCell.16Cubed"],
+      "duration": 300,
+      "consumption": 4500
+    },
+    {
+      "inputs": [
+        ["item","appliedenergistics2:item.ItemMultiMaterial",1,34],
+        ["item","appliedenergistics2:item.ItemMultiMaterial",1,39]
+      ],
+      "output": ["appliedenergistics2:item.ItemSpatialStorageCell.128Cubed"],
+      "duration": 350,
+      "consumption": 8000
+    },
+    {
+      "inputs": [
+      ["item","appliedenergistics2:item.ItemAdvancedStorageCell.16384k"],
+      ["item","hbm:item.singularity_spark"]
+      ],
+      "fluid": ["STELLAR_FLUX",1000],
+      "output": ["appliedenergistics2:item.ItemExtremeStorageCell.Universe",1],
+      "duration": 600,
+      "consumption": 50000
+    },
+    {
+      "inputs": [
+      ["item","appliedenergistics2:item.ItemExtremeStorageCell.Quantum",1],
+      ["item","hbm:item.singularity_spark"]
+      ],
+      "fluid": ["STELLAR_FLUX",1000],
+      "output": ["appliedenergistics2:item.ItemExtremeStorageCell.Singularity",1],
+      "duration": 600,
+      "consumption": 70000
     },
     {
       "inputs": [

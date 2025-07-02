@@ -20,126 +20,11 @@
       "input": ["item","minecraft:gold_ingot",1],
       "stamp": "circuit",
       "output": ["appliedenergistics2:item.ItemMultiMaterial",1,18]
-    },
-    {
-      "input": ["item","minecraft:log",1,3],
+    },    
+	{
+      "input": ["item","hbm:item.powder_sawdust"],
       "stamp": "flat",
-      "output": ["hbm:item.ball_resin"]
-    },
-    {
-      "input": ["dict","ingotStainlessSteel"],
-      "stamp": "plate",
-      "output": ["hbm:item.plate_stainless"]
-    },
-    {
-      "input": ["dict","plateGunMetal"],
-      "stamp": "c50",
-      "output": ["hbm:item.casing",2,1]
-    },
-    {
-      "input": ["dict","ingotLead"],
-      "stamp": "wire",
-      "output": ["hbm:item.wire_fine",8,8200]
-    },
-    {
-      "input": ["dict","plateWeaponSteel"],
-      "stamp": "c50",
-      "output": ["hbm:item.casing",2,3]
-    },
-    {
-      "input": ["dict","ingotSteel"],
-      "stamp": "wire",
-      "output": ["hbm:item.wire_fine",8,30]
-    },
-    {
-      "input": ["dict","ingotGold"],
-      "stamp": "wire",
-      "output": ["hbm:item.wire_fine",8,7900]
-    },
-    {
-      "input": ["dict","billetGalliumArsenide"],
-      "stamp": "circuit",
-      "output": ["hbm:item.circuit",1,5]
-    },
-    {
-      "input": ["dict","ingotZinc"],
-      "stamp": "wire",
-      "output": ["hbm:item.wire_fine",8,3000]
-    },
-    {
-      "input": ["dict","ingotAdvancedAlloy"],
-      "stamp": "plate",
-      "output": ["hbm:item.plate_advanced_alloy"]
-    },
-    {
-      "input": ["item","minecraft:paper"],
-      "stamp": "printing5",
-      "output": ["hbm:item.page_of_",1,4]
-    },
-    {
-      "input": ["dict","gemAnyCoke"],
-      "stamp": "flat",
-      "output": ["hbm:item.ingot_graphite"]
-    },
-    {
-      "input": ["item","hbm:item.meteorite_sword_reforged"],
-      "stamp": "flat",
-      "output": ["hbm:item.meteorite_sword_hardened"]
-    },
-    {
-      "input": ["dict","dustCoal"],
-      "stamp": "flat",
-      "output": ["hbm:item.briquette"]
-    },
-    {
-      "input": ["dict","dustDiamond"],
-      "stamp": "flat",
-      "output": ["minecraft:diamond"]
-    },
-    {
-      "input": ["item","hbm:item.biomass"],
-      "stamp": "flat",
-      "output": ["hbm:item.biomass_compressed"]
-    },
-    {
-      "input": ["dict","ingotAdvancedAlloy"],
-      "stamp": "wire",
-      "output": ["hbm:item.wire_fine",8,32]
-    },
-    {
-      "input": ["dict","ingotCMBSteel"],
-      "stamp": "plate",
-      "output": ["hbm:item.plate_combine_steel"]
-    },
-    {
-      "input": ["dict","ingotWeaponSteel"],
-      "stamp": "plate",
-      "output": ["hbm:item.plate_weaponsteel"]
-    },
-    {
-      "input": ["dict","ingotCopper"],
-      "stamp": "wire",
-      "output": ["hbm:item.wire_fine",8,2900]
-    },
-    {
-      "input": ["dict","ingotNickelPure"],
-      "stamp": "plate",
-      "output": ["hbm:item.plate_nickel"]
-    },
-    {
-      "input": ["dict","billetSilicon"],
-      "stamp": "circuit",
-      "output": ["hbm:item.circuit",1,4]
-    },
-    {
-      "input": ["dict","plateGunMetal"],
-      "stamp": "c9",
-      "output": ["hbm:item.casing",4]
-    },
-    {
-      "input": ["dict","ingotSaturnite"],
-      "stamp": "plate",
-      "output": ["hbm:item.plate_saturnite"]
+      "output": ["hbm:item.briquette",1,2]
     },
     {
       "input": ["dict","ingotGold"],
@@ -147,64 +32,9 @@
       "output": ["hbm:item.plate_gold"]
     },
     {
-      "input": ["item","minecraft:paper"],
-      "stamp": "printing4",
-      "output": ["hbm:item.page_of_",1,3]
-    },
-    {
-      "input": ["dict","ingotSteel"],
+      "input": ["dict","ingotSaturnite"],
       "stamp": "plate",
-      "output": ["hbm:item.plate_steel"]
-    },
-    {
-      "input": ["dict","ingotZirconium"],
-      "stamp": "wire",
-      "output": ["hbm:item.wire_fine",8,4000]
-    },
-    {
-      "input": ["item","minecraft:paper"],
-      "stamp": "printing3",
-      "output": ["hbm:item.page_of_",1,2]
-    },
-    {
-      "input": ["item","minecraft:paper"],
-      "stamp": "printing8",
-      "output": ["hbm:item.page_of_",1,7]
-    },
-    {
-      "input": ["item","hbm:item.powder_sawdust"],
-      "stamp": "flat",
-      "output": ["hbm:item.briquette",1,2]
-    },
-    {
-      "input": ["dict","dustNetherQuartz"],
-      "stamp": "flat",
-      "output": ["minecraft:quartz"]
-    },
-    {
-      "input": ["dict","ingotCopper"],
-      "stamp": "plate",
-      "output": ["hbm:item.plate_copper"]
-    },
-    {
-      "input": ["dict","plateWeaponSteel"],
-      "stamp": "c9",
-      "output": ["hbm:item.casing",4,2]
-    },
-    {
-      "input": ["dict","ingotSchrabidium"],
-      "stamp": "wire",
-      "output": ["hbm:item.wire_fine",8,12626]
-    },
-    {
-      "input": ["dict","ingotIron"],
-      "stamp": "plate",
-      "output": ["hbm:item.plate_iron"]
-    },
-    {
-      "input": ["dict","ingotTungsten"],
-      "stamp": "wire",
-      "output": ["hbm:item.wire_fine",8,7400]
+      "output": ["hbm:item.plate_saturnite"]
     },
     {
       "input": ["dict","ingotLead"],
@@ -212,34 +42,39 @@
       "output": ["hbm:item.plate_lead"]
     },
     {
-      "input": ["dict","ingotDuraSteel"],
-      "stamp": "plate",
-      "output": ["hbm:item.plate_dura_steel"]
-    },
-    {
       "input": ["dict","ingotAluminum"],
       "stamp": "wire",
       "output": ["hbm:item.wire_fine",8,1300]
     },
     {
-      "input": ["dict","ingotMagnetizedTungsten"],
-      "stamp": "wire",
-      "output": ["hbm:item.wire_fine",8,38]
+      "input": ["dict","dustNetherQuartz"],
+      "stamp": "flat",
+      "output": ["minecraft:quartz"]
     },
     {
-      "input": ["dict","ingotMingrade"],
-      "stamp": "wire",
-      "output": ["hbm:item.wire_fine",8,31]
+      "input": ["dict","plateGunMetal"],
+      "stamp": "c50",
+      "output": ["hbm:item.casing",2,1]
     },
     {
-      "input": ["dict","ingotTitanium"],
+      "input": ["dict","dustCoal"],
+      "stamp": "flat",
+      "output": ["hbm:item.briquette"]
+    },
+    {
+      "input": ["dict","gemAnyCoke"],
+      "stamp": "flat",
+      "output": ["hbm:item.ingot_graphite"]
+    },
+    {
+      "input": ["dict","ingotGunMetal"],
       "stamp": "plate",
-      "output": ["hbm:item.plate_titanium"]
+      "output": ["hbm:item.plate_gunmetal"]
     },
     {
-      "input": ["dict","ingotSchrabidium"],
-      "stamp": "plate",
-      "output": ["hbm:item.plate_schrabidium"]
+      "input": ["item","minecraft:paper"],
+      "stamp": "printing7",
+      "output": ["hbm:item.page_of_",1,6]
     },
     {
       "input": ["dict","dustLignite"],
@@ -247,9 +82,39 @@
       "output": ["hbm:item.briquette",1,1]
     },
     {
+      "input": ["dict","ingotAluminum"],
+      "stamp": "plate",
+      "output": ["hbm:item.plate_aluminium"]
+    },
+    {
+      "input": ["dict","ingotMingrade"],
+      "stamp": "wire",
+      "output": ["hbm:item.wire_fine",8,31]
+    },
+    {
+      "input": ["dict","ingotMagnetizedTungsten"],
+      "stamp": "wire",
+      "output": ["hbm:item.wire_fine",8,38]
+    },
+    {
+      "input": ["dict","ingotZirconium"],
+      "stamp": "wire",
+      "output": ["hbm:item.wire_fine",8,4000]
+    },
+    {
       "input": ["dict","ingotCarbon"],
       "stamp": "wire",
       "output": ["hbm:item.wire_fine",8,699]
+    },
+    {
+      "input": ["dict","ingotCMBSteel"],
+      "stamp": "plate",
+      "output": ["hbm:item.plate_combine_steel"]
+    },
+    {
+      "input": ["dict","ingotDuraSteel"],
+      "stamp": "plate",
+      "output": ["hbm:item.plate_dura_steel"]
     },
     {
       "input": ["item","minecraft:paper"],
@@ -257,14 +122,9 @@
       "output": ["hbm:item.page_of_"]
     },
     {
-      "input": ["dict","ingotAluminum"],
-      "stamp": "plate",
-      "output": ["hbm:item.plate_aluminium"]
-    },
-    {
-      "input": ["item","minecraft:paper"],
-      "stamp": "printing6",
-      "output": ["hbm:item.page_of_",1,5]
+      "input": ["dict","ingotGold"],
+      "stamp": "wire",
+      "output": ["hbm:item.wire_fine",8,7900]
     },
     {
       "input": ["dict","dustLapis"],
@@ -277,19 +137,159 @@
       "output": ["minecraft:emerald"]
     },
     {
-      "input": ["item","minecraft:paper"],
-      "stamp": "printing7",
-      "output": ["hbm:item.page_of_",1,6]
+      "input": ["dict","ingotIron"],
+      "stamp": "plate",
+      "output": ["hbm:item.plate_iron"]
     },
     {
-      "input": ["dict","ingotGunMetal"],
+      "input": ["dict","plateWeaponSteel"],
+      "stamp": "c50",
+      "output": ["hbm:item.casing",2,3]
+    },
+    {
+      "input": ["dict","ingotTungsten"],
+      "stamp": "wire",
+      "output": ["hbm:item.wire_fine",8,7400]
+    },
+    {
+      "input": ["dict","ingotStainlessSteel"],
       "stamp": "plate",
-      "output": ["hbm:item.plate_gunmetal"]
+      "output": ["hbm:item.plate_stainless"]
+    },
+    {
+      "input": ["dict","ingotZinc"],
+      "stamp": "wire",
+      "output": ["hbm:item.wire_fine",8,3000]
+    },
+    {
+      "input": ["dict","ingotLead"],
+      "stamp": "wire",
+      "output": ["hbm:item.wire_fine",8,8200]
+    },
+    {
+      "input": ["item","minecraft:paper"],
+      "stamp": "printing6",
+      "output": ["hbm:item.page_of_",1,5]
+    },
+    {
+      "input": ["item","minecraft:log",1,3],
+      "stamp": "flat",
+      "output": ["hbm:item.ball_resin"]
+    },
+    {
+      "input": ["dict","ingotTitanium"],
+      "stamp": "plate",
+      "output": ["hbm:item.plate_titanium"]
+    },
+    {
+      "input": ["dict","ingotSchrabidium"],
+      "stamp": "plate",
+      "output": ["hbm:item.plate_schrabidium"]
+    },
+    {
+      "input": ["dict","ingotNickelPure"],
+      "stamp": "plate",
+      "output": ["hbm:item.plate_nickel"]
+    },
+    {
+      "input": ["item","minecraft:paper"],
+      "stamp": "printing5",
+      "output": ["hbm:item.page_of_",1,4]
+    },
+    {
+      "input": ["dict","ingotWeaponSteel"],
+      "stamp": "plate",
+      "output": ["hbm:item.plate_weaponsteel"]
+    },
+    {
+      "input": ["dict","ingotSchrabidium"],
+      "stamp": "wire",
+      "output": ["hbm:item.wire_fine",8,12626]
+    },
+    {
+      "input": ["dict","ingotAdvancedAlloy"],
+      "stamp": "wire",
+      "output": ["hbm:item.wire_fine",8,32]
+    },
+    {
+      "input": ["dict","billetSilicon"],
+      "stamp": "circuit",
+      "output": ["hbm:item.circuit",1,4]
+    },
+    {
+      "input": ["dict","billetGalliumArsenide"],
+      "stamp": "circuit",
+      "output": ["hbm:item.circuit",1,5]
+    },
+    {
+      "input": ["dict","plateWeaponSteel"],
+      "stamp": "c9",
+      "output": ["hbm:item.casing",4,2]
+    },
+    {
+      "input": ["item","hbm:item.biomass"],
+      "stamp": "flat",
+      "output": ["hbm:item.biomass_compressed"]
     },
     {
       "input": ["item","minecraft:paper"],
       "stamp": "printing2",
       "output": ["hbm:item.page_of_",1,1]
+    },
+    {
+      "input": ["dict","plateGunMetal"],
+      "stamp": "c9",
+      "output": ["hbm:item.casing",4]
+    },
+    {
+      "input": ["item","hbm:item.meteorite_sword_reforged"],
+      "stamp": "flat",
+      "output": ["hbm:item.meteorite_sword_hardened"]
+    },
+    {
+      "input": ["dict","dustDiamond"],
+      "stamp": "flat",
+      "output": ["minecraft:diamond"]
+    },
+    {
+      "input": ["item","minecraft:paper"],
+      "stamp": "printing3",
+      "output": ["hbm:item.page_of_",1,2]
+    },
+    {
+      "input": ["dict","ingotCopper"],
+      "stamp": "plate",
+      "output": ["hbm:item.plate_copper"]
+    },
+    {
+      "input": ["dict","ingotCopper"],
+      "stamp": "wire",
+      "output": ["hbm:item.wire_fine",8,2900]
+    },
+    {
+      "input": ["dict","ingotSteel"],
+      "stamp": "plate",
+      "output": ["hbm:item.plate_steel"]
+    },
+    {
+      "input": ["item","minecraft:paper"],
+      "stamp": "printing8",
+      "output": ["hbm:item.page_of_",1,7]
+    },
+    {
+      "input": ["dict","ingotAdvancedAlloy"],
+      "stamp": "plate",
+      "output": ["hbm:item.plate_advanced_alloy"]
+    },
+    {
+      "input": ["dict","ingotSteel"],
+      "stamp": "wire",
+      "output": ["hbm:item.wire_fine",8,30]
+    },
+    {
+      "input": ["item","minecraft:paper"],
+      "stamp": "printing4",
+      "output": ["hbm:item.page_of_",1,3]
     }
   ]
 }
