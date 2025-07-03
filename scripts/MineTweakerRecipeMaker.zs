@@ -12,6 +12,7 @@
 
 // ================================================================================
 //#MARKER REMOVE
+recipes.remove(<hbm:tile.machine_solar_boiler>);
 recipes.remove(<Growthcraft|Cellar:grc.brewKettle>);
 recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:68>);
 recipes.remove(<ae2stuff:Wireless>);
@@ -271,6 +272,7 @@ recipes.addShapeless(<minecraft:flint_and_steel>, [<ore:ingotSteel>, <minecraft:
 
 // ================================================================================
 //#MARKER ADD SHAPED
+recipes.addShaped(<hbm:tile.machine_solar_boiler>, [[<ore:plateTripleSteel>, <ore:shellSteel>, <ore:plateTripleSteel>], [<ore:dye>, <ore:shellSteel>, <ore:dye>], [<ore:plateTripleSteel>, <ore:shellSteel>, <ore:plateTripleSteel>]]);
 recipes.addShaped(<Growthcraft|Cellar:grc.brewKettle>, [[<ore:Steel>, null, <ore:Steel>], [<ore:Steel>, null, <ore:Steel>], [<ore:Steel>, <ore:Steel>, <ore:Steel>]]);
 recipes.addShaped(<ae2stuff:Wireless>, [[<ore:crystalPureFluix>, <appliedenergistics2:item.ItemMultiMaterial:24>, <ore:crystalPureFluix>], [<ore:Steel>, <appliedenergistics2:item.ItemMultiMaterial:41>, <ore:Steel>], [<ore:crystalPureFluix>, <appliedenergistics2:item.ItemMultiMaterial:24>, <ore:crystalPureFluix>]]);
 recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:44>, [[<hbm:item.circuit:3>, <ore:ingotIron>, <appliedenergistics2:item.ItemMultiMaterial:16>]]);
