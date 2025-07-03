@@ -37,6 +37,28 @@ on:
         required: true
         type: string
 
+env:
+  instance.cfg: |
+    [General]
+    name=NTNH-${{ github.event.inputs.release_version }}
+    iconKey=default
+    InstanceType=OneSix
+  mmc-pack.json: |
+    {
+        "components": [
+            {
+                "important": true,
+                "uid": "net.minecraft",
+                "version": "1.7.10"
+            },
+            {
+                "uid": "net.minecraftforge",
+                "version": "10.13.4.1614"
+            }
+        ],
+        "formatVersion": 1
+    }
+
 jobs:
   package:
     runs-on: ubuntu-latest
@@ -62,12 +84,8 @@ jobs:
           mkdir -p modpack-lwjgl3ify/.minecraft/mods
           cp -r ntnh/* modpack-lwjgl3ify/.minecraft/
 
-          cat > modpack-lwjgl3ify/instance.cfg <<< "
-            [General]
-            name=NTNH
-            iconKey=default
-            InstanceType=OneSix
-          "
+          cat > modpack-lwjgl3ifyinstance.cfg <<< "${{ github.event.inputs.instance.cfg }}"
+          cat > modpack-lwjgl3ify/mmc-pack.json <<< "${{ github.event.inputs.mmc-pack.json }}"
 
           cp -r lwjgl3ify-multimc/patches modpack-lwjgl3ify/
           cp -r lwjgl3ify-multimc/libraries modpack-lwjgl3ify/
@@ -80,12 +98,8 @@ jobs:
           mkdir -p modpack-prism/.minecraft
           cp -r ntnh/* modpack-prism/.minecraft/
 
-          cat > modpack-prism/instance.cfg <<< "
-            [General]
-            name=NTNH
-            iconKey=default
-            InstanceType=OneSix
-          "
+          cat > modpack-prism/instance.cfg <<< "${{ github.event.inputs.instance.cfg }}"
+          cat > modpack-prism/mmc-pack.json <<< "${{ github.event.inputs.mmc-pack.json }}"
 
       - name: Run Native Script
         if: github.event.inputs.native == 'true'
