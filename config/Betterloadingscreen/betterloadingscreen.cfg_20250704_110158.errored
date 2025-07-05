@@ -52,7 +52,35 @@ layout {
 
     # List of paths to backgrounds that will be used if randomBackgrounds is true.
     # The paths must be separated by commas. [default: {betterloadingscreen:textures/backgrounds/01.png, betterloadingscreen:textures/backgrounds/02.png}]
-    S:backgroundList={betterloadingscreen:textures/backgrounds/bg.png, betterloadingscreen:textures/backgrounds/bg1.png, betterloadingscreen:textures/backgrounds/bg2.png, betterloadingscreen:textures/backgrounds/bg3.png, betterloadingscreen:textures/backgrounds/bg4.png, betterloadingscreen:textures/backgrounds/bg5.png, betterloadingscreen:textures/backgrounds/bg6.png, betterloadingscreen:textures/backgrounds/bg7.png, betterloadingscreen:textures/backgrounds/bg8.png, betterloadingscreen:textures/backgrounds/bg9.png, betterloadingscreen:textures/backgrounds/bg10.png, betterloadingscreen:textures/backgrounds/bg11.png, betterloadingscreen:textures/backgrounds/bg12.png, betterloadingscreen:textures/backgrounds/bg13.png, betterloadingscreen:textures/backgrounds/bg14.png}
+    S:backgroundList={
+		betterloadingscreen:textures/backgrounds/bg.png,
+		betterloadingscreen:textures/backgrounds/bg1.png,
+		betterloadingscreen:textures/backgrounds/bg2.png,
+		betterloadingscreen:textures/backgrounds/bg3.png,
+		betterloadingscreen:textures/backgrounds/bg4.png,
+		betterloadingscreen:textures/backgrounds/bg5.png,
+		betterloadingscreen:textures/backgrounds/bg6.png,
+		betterloadingscreen:textures/backgrounds/bg7.png,
+		betterloadingscreen:textures/backgrounds/bg8.png,
+		betterloadingscreen:textures/backgrounds/bg9.png,
+		betterloadingscreen:textures/backgrounds/bg10.png,
+		betterloadingscreen:textures/backgrounds/bg11.png,
+		betterloadingscreen:textures/backgrounds/bg12.png,
+		betterloadingscreen:textures/backgrounds/bg13.png,
+		betterloadingscreen:textures/backgrounds/bg14.png,
+		betterloadingscreen:textures/backgrounds/bg15.png,
+		betterloadingscreen:textures/backgrounds/bg16.png,
+		betterloadingscreen:textures/backgrounds/bg17.png,
+		betterloadingscreen:textures/backgrounds/bg18.png,
+		betterloadingscreen:textures/backgrounds/bg19.png,
+		betterloadingscreen:textures/backgrounds/bg20.png,
+		betterloadingscreen:textures/backgrounds/bg21.png,
+		betterloadingscreen:textures/backgrounds/bg22.png,
+		betterloadingscreen:textures/backgrounds/bg23.png,
+		betterloadingscreen:textures/backgrounds/bg24.png,
+		betterloadingscreen:textures/backgrounds/bg25.png,
+		betterloadingscreen:textures/backgrounds/bg26.png,
+	}
 
     # Transparency of main and GT material dynamic loading bar [range: 0.0 ~ 1.0, default: 0.5]
     S:loadingBarsAlpha=0.5
