@@ -1,0 +1,68 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 3567816166670550715,
+      "questIDLow:4": -6766783877923763225
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "Laythe is the only added planet that is initially habitable. The gravity here is slightly less than Earth\u0027s. Additionally, Laythe is a satellite of Jool.\n\nLaythe is predominantly a water planet, as water bodies cover the largest area.\n\nLocal kelp and seagrass grow in them, structured similarly to their Earth counterparts but containing a different pigment instead of chlorophyll, giving them a burgundy color. The dark depths of the seas (which can reach up to 40 blocks deep) are adorned with glowing grass and numerous colorful coral reefs (orange, pink, purple specimens). Corals usually prefer to occupy the coastal zone higher up towards the surface or slopes.\n\n[note]The marine fauna is quite diverse and includes organisms such as: scatter, deep-sea squid, runner crab, sifter eel, and scrapfish. All of them can only live underwater and die on land. The aquatic fauna is harmless to the player.[/note]\n\nOn the shores, you can encounter an unusual life form - living flesh, which looks like something plant-like. It is safe for the player. It can be collected using the \u0027Silk Touch\u0027 enchantment.\n\nLaythe\u0027s atmosphere is completely identical to ours. The sky during daylight is tinted in lilac tones, and on the horizon to the east, neighboring celestial bodies are always visible: the green gas giant Jool and two other satellites. They are stationary relative to the horizon. The planet experiences rain, and at the poles - snowfalls.\n\nAnd the player can sleep at night.\n\n[warn]Laythe\u0027s subsurface is almost analogous to Earth\u0027s, consisting of ordinary stone, dirt, gravel, etc. The ores here are also familiar, although coal, natural gas deposits, and oil are almost completely absent.[/warn]",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:tile.laythe_silt"
+      },
+      "isMain:1": 1,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Laythe",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": 5091114072294771997,
+  "questIDLow:4": -5545061285848322781,
+  "rewards:9": {
+    "0:10": {
+      "ignoreDisabled:1": 0,
+      "index:3": 0,
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 8,
+          "OreDict:8": "",
+          "id:8": "enhancedlootbags:lootbag"
+        }
+      }
+    }
+  },
+  "tasks:9": {
+    "0:10": {
+      "biome:3": -1,
+      "dimension:3": 22,
+      "hideInfo:1": 0,
+      "index:3": 0,
+      "invert:1": 0,
+      "name:8": "Лейт",
+      "posX:3": 0,
+      "posY:3": 0,
+      "posZ:3": 0,
+      "range:3": -1,
+      "structure:8": "",
+      "taskID:8": "bq_standard:location",
+      "taxiCabDist:1": 0,
+      "visible:1": 0
+    }
+  }
+}

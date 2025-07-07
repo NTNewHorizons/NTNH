@@ -1,0 +1,42 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 5943635485894331677,
+      "questIDLow:4": -5485551027818653771
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "The engine is installed next to the orbital station; engines must be placed strictly in the direction of the station\u0027s movement around the orbit, with all devices placed with the nozzle towards your face. To launch, you need the orbital station\u0027s computer, to which the engine will automatically connect. The computer distributes fuel evenly among all engines. If the engine(s) have enough fuel and energy, after installing the hard drive into the computer, you will depart to your destination. If there is a shortage, the computer will indicate it.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:item.mp_thruster_20_solid_multier"
+      },
+      "isMain:1": 1,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Rocket Engines",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": -573848527699817075,
+  "questIDLow:4": -9019486541423148354,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

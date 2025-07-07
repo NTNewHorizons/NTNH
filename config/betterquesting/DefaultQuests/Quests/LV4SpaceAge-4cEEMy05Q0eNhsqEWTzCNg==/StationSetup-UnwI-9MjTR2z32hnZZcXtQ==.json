@@ -1,0 +1,69 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": -8879264726169074909,
+      "questIDLow:4": -5030311693934117498
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "So, you\u0027ve docked at the station. The station itself orbits the planet from which it was launched. It can be used for travel, but you\u0027ll need rocket engines and an Orbital Station Computer.\n\nFirst, install the computer, then place the engines next to the station and fuel them.\n\nThe computer will automatically configure to these engines. If there is enough fuel, travel will be possible.\n\nTo depart, insert a disk with the desired planet into the computer (you already know how to program disks).\n\nAnd off you go!!!\n\nYou have arrived in orbit around the target planet. You can descend to the surface using a capsule (which is single-use, so not the best choice), or with a drop pod. The latter has its own engine, allowing it to land on planets and return to the station. The pod must be installed under the station, between the docking ports. The device requires its own fuel (oxygen and hydrogen), which you will input through the station\u0027s ports.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:tile.orbital_station_computer"
+      },
+      "isMain:1": 1,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Station Setup",
+      "questLogic:8": "OR",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": 5943635485894331677,
+  "questIDLow:4": -5485551027818653771,
+  "rewards:9": {
+    "0:10": {
+      "ignoreDisabled:1": 0,
+      "index:3": 0,
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 8,
+          "OreDict:8": "",
+          "id:8": "enhancedlootbags:lootbag"
+        }
+      }
+    }
+  },
+  "tasks:9": {
+    "0:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 0,
+      "partialMatch:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.orbital_station_computer"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

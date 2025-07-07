@@ -1,0 +1,55 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 3181469900866736092,
+      "questIDLow:4": -7120697022436138891
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "The Air Vent is a device for creating a breathable atmosphere.\n\nIt must be installed in an enclosed space with no contact with the external environment to prevent oxygen from escaping. After supplying oxygen to the device, an atmosphere of breathable air at 0.2 atm pressure is created in the room. The buffer capacity is 16,000 mB.\n\nOne player consumes 10 mB of oxygen per second (thus, a full valve can support the atmosphere for one person for just over 26 minutes). If the seal is broken while the valve is operating, the device will continue to work, but consumption will increase significantly, and oxygen will stop reaching the player, leading to their death.\n\n[note]Does not require energy, has no interface, works automatically.[/note]",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:tile.air_vent"
+      },
+      "isMain:1": 1,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Air Vent",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": -436792582001047007,
+  "questIDLow:4": -6116241394010379292,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 0,
+      "partialMatch:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.air_vent"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

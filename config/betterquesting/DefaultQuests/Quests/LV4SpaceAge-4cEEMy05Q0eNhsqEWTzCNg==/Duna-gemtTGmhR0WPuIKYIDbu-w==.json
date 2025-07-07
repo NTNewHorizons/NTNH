@@ -1,0 +1,68 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 4554143896034429804,
+      "questIDLow:4": -5111084386164141871
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "Duna is a desert planet colored in characteristic red tones (with the exception of local glaciers). The landscape is quite diverse; players can encounter several biomes:\n\nPlains and lowlands - areas with relatively smooth terrain. The surface is composed of Dunian sands and stone with rare inclusions of iron ores, hematite, clusters, and calcium blocks. Sometimes there are shallow caves containing deposits of titanium and copper ores.\n\nDuna has its own atmosphere consisting of carbon dioxide (80%), which is not breathable (besides it, the composition includes nitrogen (10%), argon (8%), and a little oxygen (2%)). For this reason, open fires cannot be lit on the planet, and torches do not burn (not enough oxygen for combustion). Water evaporates instantly.\n\nDuna is rich in minerals, such as beryllium and uranium.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:tile.duna_sands"
+      },
+      "isMain:1": 1,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Duna",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": -9085540229541968059,
+  "questIDLow:4": -8090573140683985157,
+  "rewards:9": {
+    "0:10": {
+      "ignoreDisabled:1": 0,
+      "index:3": 0,
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 8,
+          "OreDict:8": "",
+          "id:8": "enhancedlootbags:lootbag"
+        }
+      }
+    }
+  },
+  "tasks:9": {
+    "0:10": {
+      "biome:3": -1,
+      "dimension:3": 16,
+      "hideInfo:1": 0,
+      "index:3": 0,
+      "invert:1": 0,
+      "name:8": "Дюна",
+      "posX:3": 0,
+      "posY:3": 0,
+      "posZ:3": 0,
+      "range:3": -1,
+      "structure:8": "",
+      "taskID:8": "bq_standard:location",
+      "taxiCabDist:1": 0,
+      "visible:1": 0
+    }
+  }
+}

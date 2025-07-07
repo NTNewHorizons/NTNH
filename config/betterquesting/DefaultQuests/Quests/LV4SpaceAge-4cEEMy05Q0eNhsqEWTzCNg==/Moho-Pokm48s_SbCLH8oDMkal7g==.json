@@ -1,0 +1,68 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 4554143896034429804,
+      "questIDLow:4": -5111084386164141871
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "Moho is a planet analogous to Mercury: it is close to the Sun, which has influenced its appearance. In the \u0027Moho Cliffs\u0027 biome, the planet\u0027s terrain is extremely chaotic and shapeless: the landscape is predominantly mountainous, with significant elevation changes, riddled with craters, and tousled by disorderly mountain ranges. Moho has active volcanic processes, so interspersed with elevations, you often find basalt deltas (which constitute a separate biome) and lava lakes. Moreover, Moho is rich in its fire geysers, similar to those in the Nether. Occasionally, you may come across deposits of sulfurous stone.\n\nThe surface abounds with deposits of hematite, phosphate, and iron ores. In the depths of the planet, there are extensive caves.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:tile.moho_regolith"
+      },
+      "isMain:1": 1,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Moho",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": 4506175661970246064,
+  "questIDLow:4": -8421790663082334738,
+  "rewards:9": {
+    "0:10": {
+      "ignoreDisabled:1": 0,
+      "index:3": 0,
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 8,
+          "OreDict:8": "",
+          "id:8": "enhancedlootbags:lootbag"
+        }
+      }
+    }
+  },
+  "tasks:9": {
+    "0:10": {
+      "biome:3": -1,
+      "dimension:3": 20,
+      "hideInfo:1": 0,
+      "index:3": 0,
+      "invert:1": 0,
+      "name:8": "Мохо",
+      "posX:3": 0,
+      "posY:3": 0,
+      "posZ:3": 0,
+      "range:3": -1,
+      "structure:8": "",
+      "taskID:8": "bq_standard:location",
+      "taxiCabDist:1": 0,
+      "visible:1": 0
+    }
+  }
+}

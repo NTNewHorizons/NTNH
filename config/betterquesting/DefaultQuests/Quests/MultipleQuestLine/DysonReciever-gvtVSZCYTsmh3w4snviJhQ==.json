@@ -1,20 +1,25 @@
 {
-  "preRequisites:9": {},
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 3029761146375281,
+      "questIDLow:4": -6719388168448259682
+    }
+  },
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "The Book of Boxcars is an item which allows the crafting of many special items. The book can be found inside Meteorite Dungeons found randomly in the wilderness, indicated by either skulls on the ground of a black pillar.",
+      "desc:8": "This mechanism receives energy from the Dyson swarm and converts it into a beam. It requires a satellite ID chip with a specific frequency to operate. Note that by default, the receiver only receives energy during daylight hours, not at night or in the rain! (We\u0027ll talk about night mode later). Also, remember that operation will cease if sunlight is blocked by blocks or other mechanisms. This beam can be converted into various forms of energy using the mechanisms described below. Be careful: the beam explodes blocks and entities that fall into the affected area!\n\nWhen hovering the cursor, it displays the number of Dyson swarm modules and consumers of its energy. There can be multiple receivers, and the output energy will be divided equally among all devices.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
         "Damage:2": 0,
         "OreDict:8": "",
-        "id:8": "hbm:item.book_of_"
+        "id:8": "hbm:tile.dyson_receiver"
       },
       "isMain:1": 1,
       "isSilent:1": 0,
       "lockedProgress:1": 0,
-      "name:8": "The Book of Boxcars",
+      "name:8": "Dyson Reciever",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,
@@ -25,8 +30,8 @@
       "visibility:8": "NORMAL"
     }
   },
-  "questIDHigh:4": 0,
-  "questIDLow:4": 261,
+  "questIDHigh:4": -9008512855177670967,
+  "questIDLow:4": -6782686928988239483,
   "rewards:9": {
     "0:10": {
       "ignoreDisabled:1": 0,
@@ -55,7 +60,7 @@
       "autoConsume:1": 0,
       "consume:1": 0,
       "groupDetect:1": 0,
-      "ignoreNBT:1": 0,
+      "ignoreNBT:1": 1,
       "index:3": 0,
       "partialMatch:1": 1,
       "requiredItems:9": {
@@ -63,7 +68,7 @@
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "hbm:item.book_of_"
+          "id:8": "hbm:tile.dyson_receiver"
         }
       },
       "taskID:8": "bq_standard:retrieval"

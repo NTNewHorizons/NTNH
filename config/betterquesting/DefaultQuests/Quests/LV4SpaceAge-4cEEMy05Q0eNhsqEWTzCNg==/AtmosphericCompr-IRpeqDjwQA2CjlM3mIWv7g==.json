@@ -1,37 +1,25 @@
 {
   "preRequisites:9": {
     "0:10": {
-      "questIDHigh:4": 0,
-      "questIDLow:4": 195
-    },
-    "1:10": {
-      "questIDHigh:4": 0,
-      "questIDLow:4": 261
-    },
-    "2:10": {
-      "questIDHigh:4": 0,
-      "questIDLow:4": 277
-    },
-    "3:10": {
-      "questIDHigh:4": 0,
-      "questIDLow:4": 39
+      "questIDHigh:4": -4414222095862512001,
+      "questIDLow:4": -8130293137270123816
     }
   },
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "The FenSU is the ultimate energy storage block, being able to store 9.22EHE.\n\n[F1] For more information.",
+      "desc:8": "The Atmospheric Compressor is needed for collecting and liquefying atmospheric air.\n\nIt should be noted that the compressor can work with the air of any planet that has an atmosphere (for example, Duna or Eve). The device automatically adjusts to the current type of air. It does not work in a vacuum (for example, on the Moon); however, if you place the compressor, say, on an orbital station and create an atmosphere, and then power the device, the compressor will extract \u0027nothing.\u0027 There is no practical benefit from this.\n\nThe mechanism\u0027s functionality is simple: just supply power to the compressor, and it will start working (consumption 200 kHE/s). There is no interface.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
         "Damage:2": 0,
         "OreDict:8": "",
-        "id:8": "hbm:tile.machine_fensu"
+        "id:8": "hbm:tile.machine_atmo_vent"
       },
       "isMain:1": 1,
       "isSilent:1": 0,
       "lockedProgress:1": 0,
-      "name:8": "FEnSU",
+      "name:8": "Atmospheric Compressor",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,
@@ -42,8 +30,8 @@
       "visibility:8": "NORMAL"
     }
   },
-  "questIDHigh:4": 0,
-  "questIDLow:4": 278,
+  "questIDHigh:4": 2385323029248884749,
+  "questIDLow:4": -9039195903838801938,
   "rewards:9": {
     "0:10": {
       "ignoreDisabled:1": 0,
@@ -52,16 +40,7 @@
       "rewards:9": {
         "0:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
-          "id:8": "amazingtrophies:trophy",
-          "tag:10": {
-            "trophyID:8": "fensu"
-          }
-        },
-        "1:10": {
-          "Count:3": 1,
-          "Damage:2": 7,
+          "Damage:2": 8,
           "OreDict:8": "",
           "id:8": "enhancedlootbags:lootbag"
         }
@@ -73,7 +52,7 @@
       "autoConsume:1": 0,
       "consume:1": 0,
       "groupDetect:1": 0,
-      "ignoreNBT:1": 0,
+      "ignoreNBT:1": 1,
       "index:3": 0,
       "partialMatch:1": 1,
       "requiredItems:9": {
@@ -81,7 +60,7 @@
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "hbm:tile.machine_fensu"
+          "id:8": "hbm:tile.machine_atmo_vent"
         }
       },
       "taskID:8": "bq_standard:retrieval"

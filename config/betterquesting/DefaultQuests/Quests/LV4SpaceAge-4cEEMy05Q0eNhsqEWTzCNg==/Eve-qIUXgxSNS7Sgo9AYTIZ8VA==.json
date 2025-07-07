@@ -1,0 +1,72 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 3290030937161681971,
+      "questIDLow:4": -5023749860703878597
+    },
+    "1:10": {
+      "questIDHigh:4": 174709753079482525,
+      "questIDLow:4": -5688364192931147079
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "Eve is likely the most hostile and unwelcoming planet to the player among all existing ones. The gravity here slightly exceeds that of Earth, and on Eve, there are local volcanoes. What are they? They are energy geysers in the form of standalone basalt mountains up to 30 meters high with a channel in the center where the core is located, which can be mined and taken with you. Every 15 seconds, this structure emits a glowing column of energy upward, illuminating the entire sky around as if after a lightning flash. The beam is dangerous to all living things: it deals 20 HP damage.\n\nThe local atmosphere is extremely aggressive and contains potassium permanganate (30%), mercury (25%), ammonia (15%), and xenon (5%). The air can literally dissolve many types of armor, after which it starts damaging the player themselves (a warning \u0027My suit is melting\u0027 appears on the screen). As you understand, the local atmosphere is unsuitable for breathing.\n\n[warn]Underground, there are deposits of almost all known useful metals and other ores. The lakes are full of mercury. Mercury can be pumped from the ground on the planet using a pump. It\u0027s also worth mentioning the bedrock ore, from which you can literally mine Schrabidium, plutonium, and niobium.[/warn]",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:tile.eve_silt"
+      },
+      "isMain:1": 1,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Eve",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": -6303606251682182220,
+  "questIDLow:4": -6871419803655570348,
+  "rewards:9": {
+    "0:10": {
+      "ignoreDisabled:1": 0,
+      "index:3": 0,
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 8,
+          "OreDict:8": "",
+          "id:8": "enhancedlootbags:lootbag"
+        }
+      }
+    }
+  },
+  "tasks:9": {
+    "0:10": {
+      "biome:3": -1,
+      "dimension:3": 18,
+      "hideInfo:1": 0,
+      "index:3": 0,
+      "invert:1": 0,
+      "name:8": "Ева",
+      "posX:3": 0,
+      "posY:3": 0,
+      "posZ:3": 0,
+      "range:3": -1,
+      "structure:8": "",
+      "taskID:8": "bq_standard:location",
+      "taxiCabDist:1": 0,
+      "visible:1": 0
+    }
+  }
+}

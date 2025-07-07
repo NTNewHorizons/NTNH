@@ -1,37 +1,25 @@
 {
   "preRequisites:9": {
     "0:10": {
-      "questIDHigh:4": 0,
-      "questIDLow:4": 195
-    },
-    "1:10": {
-      "questIDHigh:4": 0,
-      "questIDLow:4": 261
-    },
-    "2:10": {
-      "questIDHigh:4": 0,
-      "questIDLow:4": 277
-    },
-    "3:10": {
-      "questIDHigh:4": 0,
-      "questIDLow:4": 39
+      "questIDHigh:4": -573848527699817075,
+      "questIDLow:4": -9019486541423148354
     }
   },
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "The FenSU is the ultimate energy storage block, being able to store 9.22EHE.\n\n[F1] For more information.",
+      "desc:8": "The LPW-3N engine uses various liquids for operation, which are preheated in a WWER. To do this, change the coolant type in the reactor interface using the identifier, then directly connect the WWER to the engine (a tooltip will appear when hovering, indicating where to place the reactor access hatch). [warn]It is impossible to pipe or collect the heated liquids in tanks.[/warn] It can use bromides, hydrogen, nuclear, and toxic waste as fuel. It has high thrust and good fuel efficiency. For your convenience, the engine\u0027s buffer is huge (1,280,000 mB), designed to prevent overflow (and consequently, explosion) of the WWER with hot coolant, especially when bromides are used as fuel.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
         "Damage:2": 0,
         "OreDict:8": "",
-        "id:8": "hbm:tile.machine_fensu"
+        "id:8": "hbm:tile.machine_htr3"
       },
       "isMain:1": 1,
       "isSilent:1": 0,
       "lockedProgress:1": 0,
-      "name:8": "FEnSU",
+      "name:8": "LPW-3N",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,
@@ -42,8 +30,8 @@
       "visibility:8": "NORMAL"
     }
   },
-  "questIDHigh:4": 0,
-  "questIDLow:4": 278,
+  "questIDHigh:4": 6361850014736599666,
+  "questIDLow:4": -5264279690860071533,
   "rewards:9": {
     "0:10": {
       "ignoreDisabled:1": 0,
@@ -52,16 +40,7 @@
       "rewards:9": {
         "0:10": {
           "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
-          "id:8": "amazingtrophies:trophy",
-          "tag:10": {
-            "trophyID:8": "fensu"
-          }
-        },
-        "1:10": {
-          "Count:3": 1,
-          "Damage:2": 7,
+          "Damage:2": 8,
           "OreDict:8": "",
           "id:8": "enhancedlootbags:lootbag"
         }
@@ -73,7 +52,7 @@
       "autoConsume:1": 0,
       "consume:1": 0,
       "groupDetect:1": 0,
-      "ignoreNBT:1": 0,
+      "ignoreNBT:1": 1,
       "index:3": 0,
       "partialMatch:1": 1,
       "requiredItems:9": {
@@ -81,7 +60,7 @@
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "hbm:tile.machine_fensu"
+          "id:8": "hbm:tile.machine_htr3"
         }
       },
       "taskID:8": "bq_standard:retrieval"

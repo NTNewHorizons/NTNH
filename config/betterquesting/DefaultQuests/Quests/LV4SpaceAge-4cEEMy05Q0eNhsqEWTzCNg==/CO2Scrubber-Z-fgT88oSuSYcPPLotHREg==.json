@@ -1,20 +1,25 @@
 {
-  "preRequisites:9": {},
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": -4414222095862512001,
+      "questIDLow:4": -8130293137270123816
+    }
+  },
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "The Book of Boxcars is an item which allows the crafting of many special items. The book can be found inside Meteorite Dungeons found randomly in the wilderness, indicated by either skulls on the ground of a black pillar.",
+      "desc:8": "The CO2 Scrubber is a mechanism for cleaning air in sealed environments under increased pressure.\n\nThe device absorbs carbon dioxide from the surrounding air and collects it. It only works if two conditions are met: the room is sealed and isolated, and the air pressure is elevated (above 1.0 atm). The latter can be achieved by adding a stream of oxygen from the ventilation to the Earth\u0027s air (resulting in a total pressure of 1.1 atm).\n\nThe maximum number of scrubbers in a room is 5; any additional units placed will not collect carbon dioxide.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
         "Damage:2": 0,
         "OreDict:8": "",
-        "id:8": "hbm:item.book_of_"
+        "id:8": "hbm:tile.air_scrubber"
       },
       "isMain:1": 1,
       "isSilent:1": 0,
       "lockedProgress:1": 0,
-      "name:8": "The Book of Boxcars",
+      "name:8": "CO2 Scrubber",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,
@@ -25,8 +30,8 @@
       "visibility:8": "NORMAL"
     }
   },
-  "questIDHigh:4": 0,
-  "questIDLow:4": 261,
+  "questIDHigh:4": 7487199538909301476,
+  "questIDLow:4": -7462196526617341678,
   "rewards:9": {
     "0:10": {
       "ignoreDisabled:1": 0,
@@ -35,17 +40,9 @@
       "rewards:9": {
         "0:10": {
           "Count:3": 1,
-          "Damage:2": 7,
+          "Damage:2": 8,
           "OreDict:8": "",
-          "id:8": "enhancedlootbags:lootbag",
-          "tag:10": {
-            "ench:9": {
-              "0:10": {
-                "id:2": 35,
-                "lvl:2": 3
-              }
-            }
-          }
+          "id:8": "enhancedlootbags:lootbag"
         }
       }
     }
@@ -55,7 +52,7 @@
       "autoConsume:1": 0,
       "consume:1": 0,
       "groupDetect:1": 0,
-      "ignoreNBT:1": 0,
+      "ignoreNBT:1": 1,
       "index:3": 0,
       "partialMatch:1": 1,
       "requiredItems:9": {
@@ -63,7 +60,7 @@
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "hbm:item.book_of_"
+          "id:8": "hbm:tile.air_scrubber"
         }
       },
       "taskID:8": "bq_standard:retrieval"

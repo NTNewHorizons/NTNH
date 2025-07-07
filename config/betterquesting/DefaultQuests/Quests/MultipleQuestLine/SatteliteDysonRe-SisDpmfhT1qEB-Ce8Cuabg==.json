@@ -1,20 +1,26 @@
 {
-  "preRequisites:9": {},
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": -9008512855177670967,
+      "questIDLow:4": -6782686928988239483
+    }
+  },
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "The Book of Boxcars is an item which allows the crafting of many special items. The book can be found inside Meteorite Dungeons found randomly in the wilderness, indicated by either skulls on the ground of a black pillar.",
+      "desc:8": "Here is the mechanism that will allow the Swarm to operate even at night. Set it to the same frequency as the chips for the launch system and receiver, and launch it using the Soyuz or from the station. The relay is placed into the planet\u0027s orbit, meaning that to use the receiver on each celestial body, you need to launch relays on each planet if you want to use the swarm.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
         "Damage:2": 0,
         "OreDict:8": "",
-        "id:8": "hbm:item.book_of_"
+        "id:8": "hbm:item.sat_dyson_relay",
+        "tag:10": {}
       },
       "isMain:1": 1,
       "isSilent:1": 0,
       "lockedProgress:1": 0,
-      "name:8": "The Book of Boxcars",
+      "name:8": "Sattelite Dyson Relay",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,
@@ -25,8 +31,8 @@
       "visibility:8": "NORMAL"
     }
   },
-  "questIDHigh:4": 0,
-  "questIDLow:4": 261,
+  "questIDHigh:4": 5344369396047499098,
+  "questIDLow:4": -8932924362627245458,
   "rewards:9": {
     "0:10": {
       "ignoreDisabled:1": 0,
@@ -35,7 +41,7 @@
       "rewards:9": {
         "0:10": {
           "Count:3": 1,
-          "Damage:2": 7,
+          "Damage:2": 8,
           "OreDict:8": "",
           "id:8": "enhancedlootbags:lootbag",
           "tag:10": {
@@ -55,7 +61,7 @@
       "autoConsume:1": 0,
       "consume:1": 0,
       "groupDetect:1": 0,
-      "ignoreNBT:1": 0,
+      "ignoreNBT:1": 1,
       "index:3": 0,
       "partialMatch:1": 1,
       "requiredItems:9": {
@@ -63,7 +69,8 @@
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "hbm:item.book_of_"
+          "id:8": "hbm:item.sat_dyson_relay",
+          "tag:10": {}
         }
       },
       "taskID:8": "bq_standard:retrieval"

@@ -1,20 +1,25 @@
 {
-  "preRequisites:9": {},
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": -9008512855177670967,
+      "questIDLow:4": -6782686928988239483
+    }
+  },
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "The Book of Boxcars is an item which allows the crafting of many special items. The book can be found inside Meteorite Dungeons found randomly in the wilderness, indicated by either skulls on the ground of a black pillar.",
+      "desc:8": "Like the previous two, the terraformer is one of the consumers of the swarm\u0027s energy. Similar to the atmosphere editor, the terraformer can release and absorb gases to alter their composition. By default, it will release oxygen into the atmosphere, making it breathable. The fluid identifier is used to switch between gas types, and the screwdriver toggles between releasing and absorbing gases from the atmosphere. Consumption is 150 TE/s (i.e., a minimum of about 1024 Dyson swarm units is required).\n\nPosition it so that the square window receives the beam. When the terraformer is operating, the copper coils will start to twitch and shake slightly, and clouds of gas will be abundantly released from the center (the color will match the color of the air).",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
         "Damage:2": 0,
         "OreDict:8": "",
-        "id:8": "hbm:item.book_of_"
+        "id:8": "hbm:tile.dyson_converter_anatmogenesis"
       },
       "isMain:1": 1,
       "isSilent:1": 0,
       "lockedProgress:1": 0,
-      "name:8": "The Book of Boxcars",
+      "name:8": "Dyson Anatmogenesis Terraformer",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,
@@ -25,8 +30,8 @@
       "visibility:8": "NORMAL"
     }
   },
-  "questIDHigh:4": 0,
-  "questIDLow:4": 261,
+  "questIDHigh:4": 5498372077632243440,
+  "questIDLow:4": -7694975654508543166,
   "rewards:9": {
     "0:10": {
       "ignoreDisabled:1": 0,
@@ -55,7 +60,7 @@
       "autoConsume:1": 0,
       "consume:1": 0,
       "groupDetect:1": 0,
-      "ignoreNBT:1": 0,
+      "ignoreNBT:1": 1,
       "index:3": 0,
       "partialMatch:1": 1,
       "requiredItems:9": {
@@ -63,7 +68,7 @@
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "hbm:item.book_of_"
+          "id:8": "hbm:tile.dyson_converter_anatmogenesis"
         }
       },
       "taskID:8": "bq_standard:retrieval"
