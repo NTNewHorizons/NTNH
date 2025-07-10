@@ -20,7 +20,12 @@
       "input": ["item","minecraft:gold_ingot",1],
       "stamp": "circuit",
       "output": ["appliedenergistics2:item.ItemMultiMaterial",1,18]
-    },    
+    },
+	{
+      "input": ["item","hbm:item.plate_iron",1],
+      "stamp": "circuit",
+      "output": ["OpenComputers:item",1,19]
+    },
 	{
       "input": ["item","hbm:item.powder_sawdust"],
       "stamp": "flat",

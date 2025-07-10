@@ -12,6 +12,7 @@
 
 // ================================================================================
 //#MARKER REMOVE
+recipes.remove(<OpenComputers:item:19>);
 recipes.remove(<hbm:tile.machine_solar_boiler>);
 recipes.remove(<Growthcraft|Cellar:grc.brewKettle>);
 recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:68>);
@@ -272,6 +273,7 @@ recipes.addShapeless(<minecraft:flint_and_steel>, [<ore:ingotSteel>, <minecraft:
 
 // ================================================================================
 //#MARKER ADD SHAPED
+recipes.addShaped(<OpenComputers:cable> * 16, [[null, <hbm:item.plate_polymer>, null], [<hbm:item.plate_polymer>, <ore:wireFineMingrade>, <hbm:item.plate_polymer>], [null, <hbm:item.plate_polymer>, null]]);
 recipes.addShaped(<hbm:tile.machine_solar_boiler>, [[<ore:plateTripleSteel>, <ore:shellSteel>, <ore:plateTripleSteel>], [<ore:dye>, <ore:shellSteel>, <ore:dye>], [<ore:plateTripleSteel>, <ore:shellSteel>, <ore:plateTripleSteel>]]);
 recipes.addShaped(<Growthcraft|Cellar:grc.brewKettle>, [[<ore:Steel>, null, <ore:Steel>], [<ore:Steel>, null, <ore:Steel>], [<ore:Steel>, <ore:Steel>, <ore:Steel>]]);
 recipes.addShaped(<ae2stuff:Wireless>, [[<ore:crystalPureFluix>, <appliedenergistics2:item.ItemMultiMaterial:24>, <ore:crystalPureFluix>], [<ore:Steel>, <appliedenergistics2:item.ItemMultiMaterial:41>, <ore:Steel>], [<ore:crystalPureFluix>, <appliedenergistics2:item.ItemMultiMaterial:24>, <ore:crystalPureFluix>]]);
@@ -387,7 +389,6 @@ recipes.addShaped(<OpenComputers:case3>, [[<ore:Steel>, <ore:oc:circuitChip3>, <
 recipes.addShaped(<OpenComputers:case2>, [[<ore:Steel>, <ore:oc:circuitChip2>, <ore:Steel>], [<ore:Steel>, <ore:chestWood>, <ore:Steel>], [<ore:Steel>, <hbm:item.circuit:3>, <ore:Steel>]]);
 recipes.addShaped(<OpenComputers:case1>, [[<ore:Steel>, <ore:oc:circuitChip1>, <ore:Steel>], [<ore:Steel>, <ore:chestWood>, <ore:Steel>], [<ore:Steel>, <hbm:item.circuit:3>, <ore:Steel>]]);
 recipes.addShaped(<OpenComputers:capacitor>, [[<ore:Steel>, <ore:oc:materialTransistor>, <ore:Steel>], [<ore:Steel>, <ore:dustRedstone>, <ore:Steel>], [<ore:Steel>, <hbm:item.circuit:3>, <ore:Steel>]]);
-recipes.addShaped(<OpenComputers:cable> * 16, [[null, <hbm:item.plate_polymer>, null], [<hbm:item.plate_polymer>, <ore:dustRedstone>, <hbm:item.plate_polymer>], [null, <hbm:item.plate_polymer>, null]]);
 recipes.addShaped(<OpenComputers:assembler>, [[<ore:Steel>, <hbm:tile.machine_autocrafter>, <ore:Steel>], [<hbm:item.part_generic:1>, <ore:oc:circuitChip2>, <hbm:item.part_generic:1>], [<ore:Steel>, <hbm:item.circuit:3>, <ore:Steel>]]);
 recipes.addShaped(<OpenComputers:adapter>, [[<ore:Steel>, <ore:oc:cable>, <ore:Steel>], [<ore:oc:cable>, <ore:oc:circuitChip1>, <ore:oc:cable>], [<ore:Steel>, <hbm:item.circuit:3>, <ore:Steel>]]);
 recipes.addShaped(<RandomThings:fertilizedDirt> * 5, [[<minecraft:dirt>, <hbm:item.powder_fertilizer>, <minecraft:dirt>], [<hbm:item.powder_fertilizer>, <minecraft:dirt>, <hbm:item.powder_fertilizer>], [<minecraft:dirt>, <hbm:item.powder_fertilizer>, <minecraft:dirt>]]);
