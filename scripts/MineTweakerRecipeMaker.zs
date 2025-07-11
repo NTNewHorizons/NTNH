@@ -12,6 +12,7 @@
 
 // ================================================================================
 //#MARKER REMOVE
+recipes.remove(<minecraft:anvil>);
 recipes.remove(<OpenComputers:item:19>);
 recipes.remove(<hbm:tile.machine_solar_boiler>);
 recipes.remove(<Growthcraft|Cellar:grc.brewKettle>);
@@ -273,6 +274,10 @@ recipes.addShapeless(<minecraft:flint_and_steel>, [<ore:ingotSteel>, <minecraft:
 
 // ================================================================================
 //#MARKER ADD SHAPED
+recipes.addShaped(<OpenComputers:keyboard>, [[<ore:oc:materialButtonGroup>, <ore:oc:materialButtonGroup>, <ore:oc:materialButtonGroup>], [<ore:oc:materialButtonGroup>, <ore:oc:materialButtonGroup>, <ore:oc:materialButtonGroup>], [<ore:oc:materialButtonGroup>, <ore:oc:materialButtonGroup>, <ore:oc:materialArrowKey>]]);
+recipes.addShaped(<OpenComputers:item:21>, [[null, <ore:buttonStone>, null], [<ore:buttonStone>, <ore:buttonStone>, <ore:buttonStone>], [null, <hbm:item.circuit:3>, null]]);
+recipes.addShaped(<OpenComputers:item:20>, [[<ore:buttonStone>, <ore:buttonStone>, <ore:buttonStone>], [<ore:buttonStone>, <ore:buttonStone>, <ore:buttonStone>], [null, <hbm:item.circuit:3>, null]]);
+recipes.addShaped(<minecraft:anvil>, [[<ore:ingotIron>, <ore:ingotIron>, <ore:ingotIron>], [null, <ore:ingotIron>, null], [<ore:ingotIron>, <ore:ingotIron>, <ore:ingotIron>]]);
 recipes.addShaped(<OpenComputers:cable> * 16, [[null, <hbm:item.plate_polymer>, null], [<hbm:item.plate_polymer>, <ore:wireFineMingrade>, <hbm:item.plate_polymer>], [null, <hbm:item.plate_polymer>, null]]);
 recipes.addShaped(<hbm:tile.machine_solar_boiler>, [[<ore:plateTripleSteel>, <ore:shellSteel>, <ore:plateTripleSteel>], [<ore:dye>, <ore:shellSteel>, <ore:dye>], [<ore:plateTripleSteel>, <ore:shellSteel>, <ore:plateTripleSteel>]]);
 recipes.addShaped(<Growthcraft|Cellar:grc.brewKettle>, [[<ore:Steel>, null, <ore:Steel>], [<ore:Steel>, null, <ore:Steel>], [<ore:Steel>, <ore:Steel>, <ore:Steel>]]);
@@ -365,7 +370,6 @@ recipes.addShaped(<OpenComputers:item:49>, [[null, <ore:materialEnderPearl>, nul
 recipes.addShaped(<OpenComputers:item:94>, [[<ore:Steel>, <minecraft:dispenser>, <ore:Steel>], [<ore:oc:materialTransistor>, <hbm:item.part_generic:1>, <ore:oc:materialTransistor>], [<ore:Steel>, <hbm:item.circuit:3>, <ore:Steel>]]);
 recipes.addShaped(<OpenComputers:item:107>, [[<ore:Steel>, <ore:oc:wlanCard>, <ore:Steel>], [<ore:oc:cpu2>, <ore:oc:materialAcid>, <ore:oc:ram3>], [<ore:Steel>, <ore:oc:capacitor>, <ore:Steel>]]);
 recipes.addShaped(<OpenComputers:item>, [[<ore:torchRedstoneActive>], [<ore:oc:materialTransistor>], [<hbm:item.circuit:3>]]);
-recipes.addShaped(<OpenComputers:keyboard>, [[<ore:buttonStone>, <ore:buttonStone>, <ore:buttonStone>], [<ore:buttonStone>, <ore:buttonStone>, <ore:buttonStone>], [<ore:buttonStone>, <ore:buttonStone>, <ore:buttonStone>]]);
 recipes.addShaped(<OpenComputers:transposer>, [[<ore:Steel>, <ore:Steel>, <ore:Steel>], [<hbm:item.part_generic:1>, <hbm:tile.crate_steel>, <hbm:item.part_generic:1>], [<ore:Steel>, <ore:Steel>, <ore:Steel>]]);
 recipes.addShaped(<OpenComputers:netSplitter>, [[<ore:Steel>, <ore:oc:cable>, <ore:Steel>], [<ore:oc:cable>, <ore:dustRedstone>, <ore:oc:cable>], [<ore:Steel>, <hbm:item.circuit:3>, <ore:Steel>]]);
 recipes.addShaped(<OpenComputers:waypoint>, [[<ore:Steel>, <ore:oc:circuitChip1>, <ore:Steel>], [<ore:oc:materialTransistor>, <ore:materialEnderPearl>, <ore:oc:materialTransistor>], [<ore:Steel>, <hbm:item.circuit:3>, <ore:Steel>]]);
@@ -379,7 +383,7 @@ recipes.addShaped(<OpenComputers:redstone>, [[<ore:Steel>, <minecraft:redstone>,
 recipes.addShaped(<OpenComputers:raid>, [[<ore:Steel>, <ore:oc:cpu2>, <ore:Steel>], [<ore:oc:ram3>, <ore:oc:diskDrive>, <ore:oc:ram3>], [<ore:Steel>, <ore:oc:circuitChip2>, <ore:Steel>]]);
 recipes.addShaped(<OpenComputers:powerDistributor>, [[<ore:Steel>, <ore:Steel>, <ore:Steel>], [<ore:oc:cable>, <ore:oc:circuitChip1>, <ore:oc:cable>], [<ore:Steel>, <hbm:item.circuit:3>, <ore:Steel>]]);
 recipes.addShaped(<OpenComputers:powerConverter>, [[<ore:Steel>, <ore:oc:cable>, <ore:Steel>], [<ore:Steel>, <ore:oc:circuitChip1>, <ore:Steel>], [<ore:Steel>, <hbm:item.circuit:3>, <ore:Steel>]]);
-recipes.addShaped(<OpenComputers:hologram2>, [[<ore:Steel>, <hbm:tile.reinforced_glass>, <ore:Steel>], [<hbm:item.circuit:3>, <OpenComputers:item:25>, <hbm:item.circuit:3>], [<ore:Steel>, <ore:dustGlowstone>, <ore:Steel>]]);
+recipes.addShaped(<OpenComputers:hologram2>, [[<ore:Steel>, <hbm:tile.reinforced_glass>, <ore:Steel>], [<hbm:item.circuit:9>, <OpenComputers:item:25>, <hbm:item.circuit:9>], [<ore:Steel>, <ore:dustGlowstone>, <ore:Steel>]]);
 recipes.addShaped(<OpenComputers:hologram1>, [[<ore:Steel>, <hbm:tile.reinforced_glass>, <ore:Steel>], [<hbm:item.circuit:3>, <ore:oc:circuitChip1>, <hbm:item.circuit:3>], [<ore:Steel>, <ore:dustGlowstone>, <ore:Steel>]]);
 recipes.addShaped(<OpenComputers:geolyzer>, [[<ore:Steel>, <hbm:item.survey_scanner>, <ore:Steel>], [<ore:Steel>, <ore:oc:circuitChip2>, <ore:Steel>], [<ore:Steel>, <hbm:item.circuit:3>, <ore:Steel>]]);
 recipes.addShaped(<OpenComputers:diskDrive>, [[<ore:Steel>, <ore:oc:circuitChip1>, <ore:Steel>], [<hbm:item.part_generic:1>, null, <hbm:item.part_generic:1>], [<ore:Steel>, <hbm:item.circuit:3>, <ore:Steel>]]);
