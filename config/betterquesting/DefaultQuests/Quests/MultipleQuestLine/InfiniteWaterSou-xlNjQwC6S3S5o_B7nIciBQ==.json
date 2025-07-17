@@ -1,22 +1,22 @@
 {
   "preRequisites:9": {
     "0:10": {
-      "questIDHigh:4": 7668713233961733844,
-      "questIDLow:4": -8186258255035639237
+      "questIDHigh:4": 0,
+      "questIDLow:4": 187
     }
   },
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "Tired of using buckets to give water to your machines? Try using water pumps or infinite water tanks!",
+      "desc:8": "Tired of using buckets to give water to your machines? Try using water pumps or infinite water tanks!\n\nInfinite Water Tank will give 50mb/t\nEnhanced Infinite Water Tank will give 500mb/t\nPump will give 1000mb/t but requires steam to operate.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
         "Damage:2": 0,
         "OreDict:8": "",
-        "id:8": "hbm:tile.pump_electric"
+        "id:8": "hbm:tile.pump_steam"
       },
-      "isMain:1": 0,
+      "isMain:1": 1,
       "isSilent:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Infinite Water Sources",
@@ -63,7 +63,7 @@
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "hbm:tile.pump_steam"
+          "id:8": "hbm:item.inf_water_mk2"
         }
       },
       "taskID:8": "bq_standard:retrieval"
@@ -73,14 +73,14 @@
       "consume:1": 0,
       "groupDetect:1": 0,
       "ignoreNBT:1": 1,
-      "index:3": 4,
+      "index:3": 2,
       "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "hbm:tile.pump_electric"
+          "id:8": "hbm:tile.pump_steam"
         }
       },
       "taskID:8": "bq_standard:retrieval"
