@@ -12,6 +12,32 @@
 
 // ================================================================================
 //#MARKER REMOVE
+recipes.remove(<ae2fc:part_fluid_export>);
+recipes.remove(<ae2fc:part_fluid_import>);
+recipes.remove(<ae2fc:fluid_storage4096>);
+recipes.remove(<ae2fc:multi_fluid_storage4>);
+recipes.remove(<ae2fc:multi_fluid_storage16>);
+recipes.remove(<ae2fc:fluid_storage1024>);
+recipes.remove(<ae2fc:fluid_storage256>);
+recipes.remove(<ae2fc:multi_fluid_storage64>);
+recipes.remove(<ae2fc:multi_fluid_storage256>);
+recipes.remove(<ae2fc:fluid_storage64>);
+recipes.remove(<ae2fc:multi_fluid_storage1024>);
+recipes.remove(<ae2fc:fluid_storage16>);
+recipes.remove(<ae2fc:multi_fluid_storage4096>);
+recipes.remove(<ae2fc:fluid_storage4>);
+recipes.remove(<ae2fc:fluid_storage1>);
+recipes.remove(<ae2fc:multi_fluid_storage16384>);
+recipes.remove(<ae2fc:multi_fluid_storage1>);
+recipes.remove(<ae2fc:fluid_storage16384>);
+recipes.remove(<ae2fc:fluid_part:7>);
+recipes.remove(<ae2fc:fluid_part:6>);
+recipes.remove(<ae2fc:fluid_part:5>);
+recipes.remove(<ae2fc:fluid_part:4>);
+recipes.remove(<ae2fc:fluid_part:3>);
+recipes.remove(<ae2fc:fluid_part:2>);
+recipes.remove(<ae2fc:fluid_part:1>);
+recipes.remove(<ae2fc:fluid_part>);
 recipes.remove(<minecraft:stonebrick:1>);
 recipes.remove(<minecraft:mossy_cobblestone>);
 recipes.remove(<minecraft:chainmail_boots>);
@@ -281,6 +307,8 @@ recipes.addShapeless(<minecraft:flint_and_steel>, [<ore:ingotSteel>, <minecraft:
 
 // ================================================================================
 //#MARKER ADD SHAPED
+recipes.addShaped(<ae2fc:part_fluid_export>, [[<ore:gemLapis>, <appliedenergistics2:item.ItemMultiMaterial:22>, <ore:gemLapis>], [<ore:ingotSteel>, <ore:craftingPiston>, <ore:ingotSteel>]]);
+recipes.addShaped(<ae2fc:part_fluid_import>, [[<ore:gemLapis>, <appliedenergistics2:item.ItemMultiMaterial:24>, <ore:gemLapis>], [<ore:ingotSteel>, <ore:craftingPiston>, <ore:ingotSteel>]]);
 recipes.addShaped(<OpenComputers:keyboard>, [[<ore:oc:materialButtonGroup>, <ore:oc:materialButtonGroup>, <ore:oc:materialButtonGroup>], [<ore:oc:materialButtonGroup>, <ore:oc:materialButtonGroup>, <ore:oc:materialButtonGroup>], [<ore:oc:materialButtonGroup>, <ore:oc:materialButtonGroup>, <ore:oc:materialArrowKey>]]);
 recipes.addShaped(<OpenComputers:item:21>, [[null, <ore:buttonStone>, null], [<ore:buttonStone>, <ore:buttonStone>, <ore:buttonStone>], [null, <hbm:item.circuit:3>, null]]);
 recipes.addShaped(<OpenComputers:item:20>, [[<ore:buttonStone>, <ore:buttonStone>, <ore:buttonStone>], [<ore:buttonStone>, <ore:buttonStone>, <ore:buttonStone>], [null, <hbm:item.circuit:3>, null]]);
