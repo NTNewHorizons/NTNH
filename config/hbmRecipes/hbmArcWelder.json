@@ -1,5 +1,13 @@
 {
   "recipes": [
+    {
+      "inputs": [
+        ["dict","plateSextupleSteel",4]
+      ],
+      "output": ["hbm:tile.block_case"],
+      "duration": 200,
+      "consumption": 1250
+    },
 	{
       "inputs": [
         ["item","ae2fc:fluid_storage_housing",1,0],

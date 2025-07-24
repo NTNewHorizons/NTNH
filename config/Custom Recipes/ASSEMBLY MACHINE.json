@@ -1,0 +1,405 @@
+{
+      "name": "ass.ocadapter",
+      "inputItem": [
+        ["item","hbm:tile.block_case",1],
+        ["item","OpenComputers:cable",6],
+        ["item","OpenComputers:item",1,24],
+        ["item","hbm:item.circuit",1,3]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:adapter"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.ocassembler",
+      "inputItem": [
+        ["item","hbm:tile.block_case",1],
+        ["item","hbm:tile.machine_autocrafter",1],
+        ["item","hbm:item.part_generic",2,1],
+        ["item","OpenComputers:item",1,25],
+        ["item","hbm:item.circuit",1,3]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:assembler"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.occapacitor",
+      "inputItem": [
+        ["item","hbm:tile.block_case",1],
+        ["item","hbm:item.battery_generic",1],
+        ["item","OpenComputers:item",1,23],
+        ["dict","dustRedstone",1],
+        ["dict","dyeGreen",1],
+        ["item","hbm:item.circuit",1,3]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:capacitor"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.occase1",
+      "inputItem": [
+        ["item","hbm:tile.block_case",1],
+        ["item","minecraft:chest",1],
+        ["item","OpenComputers:item",1,24],
+        ["item","hbm:item.circuit",1,3]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:case1"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.occase2",
+      "inputItem": [
+        ["item","OpenComputers:case1",1],
+        ["dict","hbm:plateTripleSteel",2],
+        ["item","OpenComputers:item",1,25],
+        ["item","hbm:item.circuit",1,8]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:case2"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.occase3",
+      "inputItem": [
+        ["item","OpenComputers:case2",1],
+        ["dict","plateSextupleSteel",6],
+        ["item","OpenComputers:item",1,26],
+        ["item","hbm:item.circuit",1,9]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:case3"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.occharger",
+      "inputItem": [
+        ["item","hbm:tile.block_case",1],
+        ["item","OpenComputers:capacitor",2],
+        ["item","OpenComputers:item",1,25]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:charger"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.ocdisassembler",
+      "inputItem": [
+        ["item","hbm:tile.block_case",1],
+        ["item","hbm:item.part_generic",2,1],
+        ["item","OpenComputers:item",1,24],
+        ["item","OpenComputers:item",1,28],
+        ["item","hbm:item.circuit",1,3]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:adapter"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.ocdrive",
+      "inputItem": [
+        ["item","hbm:tile.block_case",1],
+        ["item","hbm:item.part_generic",2,1],
+        ["item","OpenComputers:item",1,24],
+        ["item","hbm:item.circuit",1,3]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:diskDrive"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.ocgeolyzer",
+      "inputItem": [
+        ["item","hbm:tile.block_case",1],
+        ["item","hbm:item.survey_scanner",1],
+        ["item","OpenComputers:item",1,25],
+        ["item","hbm:item.circuit",1,3]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:geolyzer"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.ochologram1",
+      "inputItem": [
+        ["item","hbm:tile.block_case",1],
+        ["dict","dustGlowstone",1],
+        ["item","OpenComputers:item",1,24],
+        ["item","hbm:item.circuit",2,3],
+        ["item","hbm:tile.reinforced_glass",1]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:hologram1"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.ochologram2",
+      "inputItem": [
+        ["item","OpenComputers:item",1,25],
+        ["item","OpenComputers:hologram1",1],
+        ["item","hbm:item.circuit",2,9]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:hologram2"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.ocmotionsensor",
+      "inputItem": [
+        ["item","hbm:tile.block_case",1],
+        ["item","minecraft:daylight_detector",6],
+        ["item","OpenComputers:item",1,32]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:motionSensor"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.ocpowerconverter",
+      "inputItem": [
+        ["item","hbm:tile.block_case",1],
+        ["item","OpenComputers:cable",1],
+        ["item","OpenComputers:item",1,24],
+        ["item","hbm:item.circuit",1,3]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:powerConverter"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.ocpowerdistributor",
+      "inputItem": [
+        ["item","hbm:tile.block_case",1],
+        ["item","OpenComputers:cable",2],
+        ["item","OpenComputers:item",1,24],
+        ["item","hbm:item.circuit",1,3]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:powerDistributor"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.ocraid",
+      "inputItem": [
+        ["item","hbm:tile.block_case",1],
+        ["item","OpenComputers:diskDrive",1],
+        ["item","OpenComputers:item",1,25],
+        ["item","OpenComputers:item",2,2],
+        ["item","OpenComputers:item",1,42]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:raid"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.ocredstone",
+      "inputItem": [
+        ["item","hbm:tile.block_case",1],
+        ["dict","blockRedstone",1],
+        ["item","OpenComputers:item",1,6]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:redstone"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.ocrelay",
+      "inputItem": [
+        ["item","hbm:tile.block_case",1],
+        ["item","OpenComputers:cable",6],
+        ["item","OpenComputers:item",1,11],
+        ["item","hbm:item.circuit",1,3]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:relay"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.ocscreen1",
+      "inputItem": [
+        ["item","hbm:tile.block_case",1],
+        ["item","OpenComputers:item",1,24],
+        ["item","minecraft:glass",1],
+        ["dict","ingotSteel",7]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:screen1"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.ocscreen2",
+      "inputItem": [
+        ["item","hbm:tile.block_case",1],
+        ["item","OpenComputers:item",1,25],
+        ["item","minecraft:glass",1],
+        ["dict","ingotSteel",7]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:screen2"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.ocscreen3",
+      "inputItem": [
+        ["item","hbm:tile.block_case",1],
+        ["item","OpenComputers:item",1,26],
+        ["item","minecraft:glass",1],
+        ["dict","ingotSteel",7]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:screen3"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.ocrack",
+      "inputItem": [
+        ["item","OpenComputers:item",1,13],
+        ["item","OpenComputers:relay",1],
+        ["item","OpenComputers:powerDistributor",1]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:rack"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.ocprinter",
+      "inputItem": [
+        ["item","hbm:tile.block_case",1],
+        ["item","OpenComputers:cable",6],
+        ["item","OpenComputers:item",1,24],
+        ["item","hbm:item.circuit",1,3]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:printer"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.ocprint",
+      "inputItem": [
+        ["item","hbm:tile.block_case",1],
+        ["item","hbm:tile.machine_autocrafter",1],
+        ["item","hbm:item.part_generic",2,1],
+        ["item","OpenComputers:item",1,26],
+        ["item","hbm:item.circuit",1,3]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:printer"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.ocwaypoint",
+      "inputItem": [
+        ["item","hbm:tile.block_case",1],
+        ["item","OpenComputers:item",1,24],
+        ["item","OpenComputers:item",2,23],
+        ["item","hbm:item.circuit",1,3]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:waypoint"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.ocnetsplitter",
+      "inputItem": [
+        ["item","hbm:tile.block_case",1],
+        ["item","OpenComputers:cable",6],
+        ["item","OpenComputers:item",1,24],
+        ["dict","dustRedstone",1],
+        ["item","hbm:item.circuit",1,3]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:netSplitter"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.octransposer",
+      "inputItem": [
+        ["item","hbm:tile.block_case",1],
+        ["item","hbm:tile.crate_steel",1],
+        ["item","hbm:item.part_generic",2,1]
+      ],
+      "outputItem": [
+        ["single",["OpenComputers:transposer"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.ocradio",
+      "inputItem": [
+        ["item","hbm:tile.block_case",1],
+        ["item","OpenComputers:item",1,42],
+        ["item","hbm:item.magnetron",1]
+      ],
+      "outputItem": [
+        ["single",["openfm:Radio"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+    {
+      "name": "ass.ocspeaker",
+      "inputItem": [
+        ["item","hbm:tile.block_case",1],
+        ["item","computronics:computronics.ironNoteBlock",1]
+      ],
+      "outputItem": [
+        ["single",["openfm:Speaker"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
