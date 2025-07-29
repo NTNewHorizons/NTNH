@@ -8,7 +8,7 @@
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "No Description",
+      "desc:8": "A very valuable gemstone that is used to create a cast pickaxe, meteorite talisman, black diamond, composite euphemium plates and special 227mm shells.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -33,5 +33,23 @@
   "questIDHigh:4": -4200229927184087041,
   "questIDLow:4": -8511202365780115733,
   "rewards:9": {},
-  "tasks:9": {}
+  "tasks:9": {
+    "0:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 0,
+      "partialMatch:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.gem_volcanic"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
 }
