@@ -8,7 +8,7 @@
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "No Description",
+      "desc:8": "The formation of a volcano is driven by the volcanic core, a block that continuously erupts lava, allowing the volcano to grow. The lava cools quickly, turning into basalt or basaltic ore.\n\nThe resulting volcano grows quite slowly, reaching about 60 blocks in height over 20-30 minutes.\nVolcanic lava differs from regular lava not only in appearance. It \"melts\" any non-explosion-resistant blocks, so the volcano can extend underground.\nBasaltic ores (asbestos, sulfur, fluorite, molysite) form when the lava cools, each with a 0.5% chance.\n\nVolcanic gem ore spawns with a 5% chance if the following conditions are met:\n- All 6 blocks around the cooling lava are basalt or lava;\n- The block 10 blocks above the cooling lava is basalt or lava;\n- There are fewer than 3 lava blocks around the cooling lava.\nThe ore also forms after volcanic lava contacts diamond ore.\nThis means volcanic gems most often appear near the core or crater of the volcano.\n\n[note]Forming a Radioactive Volcano\nIf the volcanic core is exposed to radioactive fallout (e.g., after a nearby nuclear explosion) for some time, the core will begin generating new volcanic radioactive lava (yellow in color), ultimately leading to the formation of a so-called radioactive volcano. Such a volcano will consist not of basalt but of various types of quenched sellaphite blocks and sellaphite ores. The lava will convert diamond ores into radioactive gem ore.[/note]",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -33,5 +33,10 @@
   "questIDHigh:4": -4812035679007519365,
   "questIDLow:4": -8915000965156691319,
   "rewards:9": {},
-  "tasks:9": {}
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
 }
