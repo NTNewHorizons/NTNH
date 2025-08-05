@@ -8,7 +8,7 @@
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "The Template Folder is an item that will allow one to create schematics for crafting, chemical processes and shaping molds.\n\nThe first thing one creates with a Template Folder are molds needed in the Burner Press. Simply make a Flat stamp out of any available material and then select the specific mold from the Template Folder.\n\nFor Assembly and Chemical Templates, a dye and a piece of paper are needed.",
+      "desc:8": "The Template Folder is an item that will allow one to create schematics for crafting, chemical processes and shaping molds.\n\nThe first thing one creates with a Template Folder are molds needed in the Burner Press. Simply make a Flat stamp out of any available material and then select the specific mold from the Template Folder.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -32,7 +32,21 @@
   },
   "questIDHigh:4": 0,
   "questIDLow:4": 2,
-  "rewards:9": {},
+  "rewards:9": {
+    "0:10": {
+      "ignoreDisabled:1": 0,
+      "index:3": 0,
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "OreDict:8": "",
+          "id:8": "enhancedlootbags:lootbag"
+        }
+      }
+    }
+  },
   "tasks:9": {
     "0:10": {
       "autoConsume:1": 0,
