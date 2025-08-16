@@ -1,0 +1,48 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": -4234283974238320836,
+      "questIDLow:4": -8474188240158341579
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "Witches bring stitches because they are always infernal and very dangerous. Be careful since they throw potions at you.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 66,
+        "OreDict:8": "",
+        "id:8": "minecraft:spawn_egg"
+      },
+      "isMain:1": 0,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Time to Kill (Witch)",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": -1121930948840635752,
+  "questIDLow:4": -6830936579254308628,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "damageType:8": "",
+      "ignoreNBT:1": 1,
+      "index:3": 0,
+      "required:3": 10,
+      "subtypes:1": 1,
+      "target:8": "Witch",
+      "targetNBT:10": {},
+      "taskID:8": "bq_standard:hunt"
+    }
+  }
+}
