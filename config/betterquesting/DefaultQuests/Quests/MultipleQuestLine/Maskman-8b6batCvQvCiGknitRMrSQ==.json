@@ -1,0 +1,148 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 0,
+      "questIDLow:4": 0
+    },
+    "1:10": {
+      "questIDHigh:4": 0,
+      "questIDLow:4": 114
+    },
+    "2:10": {
+      "questIDHigh:4": 0,
+      "questIDLow:4": 10
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "Maskman is first NTM boss. To summon it, you should be under radiation poisoning (50 rad). Just wait for him to arrive.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:item.coin_maskman"
+      },
+      "isMain:1": 1,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Maskman",
+      "questLogic:8": "OR",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": -1027212781923908880,
+  "questIDLow:4": -6766014252121380023,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "damageType:8": "",
+      "ignoreNBT:1": 1,
+      "index:3": 0,
+      "required:3": 1,
+      "subtypes:1": 1,
+      "target:8": "entity_mob_mask_man",
+      "targetNBT:10": {
+        "AbsorptionAmount:5": 0.0,
+        "Air:2": 300,
+        "AttackTime:2": 0,
+        "Attributes:9": {
+          "0:10": {
+            "Base:6": 1000.0,
+            "Name:8": "generic.maxHealth"
+          },
+          "1:10": {
+            "Base:6": 1.0,
+            "Name:8": "generic.knockbackResistance"
+          },
+          "2:10": {
+            "Base:6": 0.25,
+            "Name:8": "generic.movementSpeed"
+          },
+          "3:10": {
+            "Base:6": 100.0,
+            "Name:8": "generic.followRange"
+          },
+          "4:10": {
+            "Base:6": 15.0,
+            "Name:8": "generic.attackDamage"
+          }
+        },
+        "BookshelfData:10": {
+          "BookshelfBuff:9": {}
+        },
+        "CanPickUpLoot:1": 0,
+        "CustomName:8": "",
+        "CustomNameVisible:1": 0,
+        "DeathTime:2": 0,
+        "Dimension:3": 0,
+        "DropChances:9": {
+          "0:5": 0.085,
+          "1:5": 0.085,
+          "2:5": 0.085,
+          "3:5": 0.085,
+          "4:5": 0.085
+        },
+        "Equipment:9": {
+          "0:10": {},
+          "1:10": {},
+          "2:10": {},
+          "3:10": {},
+          "4:10": {}
+        },
+        "FallDistance:5": 0.0,
+        "Fire:2": 0,
+        "HbmLivingProps:10": {
+          "hfr_activation:5": 0.0,
+          "hfr_asbestos:3": 0,
+          "hfr_balefire:3": 0,
+          "hfr_blackfire:3": 0,
+          "hfr_blacklung:3": 0,
+          "hfr_bomb:3": 0,
+          "hfr_cont_count:3": 0,
+          "hfr_contagion:3": 0,
+          "hfr_digamma:5": 0.0,
+          "hfr_fire:3": 0,
+          "hfr_gravity:1": 0,
+          "hfr_oil:3": 0,
+          "hfr_oxygen:3": 100,
+          "hfr_phosphorus:3": 0,
+          "hfr_radiation:5": 0.0
+        },
+        "HealF:5": 1000.0,
+        "Health:2": 1000,
+        "HurtTime:2": 0,
+        "Invulnerable:1": 0,
+        "Leashed:1": 0,
+        "Motion:9": {
+          "0:6": 0.0,
+          "1:6": 0.0,
+          "2:6": 0.0
+        },
+        "OnGround:1": 0,
+        "PersistenceRequired:1": 0,
+        "PortalCooldown:3": 0,
+        "Pos:9": {
+          "0:6": 0.0,
+          "1:6": 0.0,
+          "2:6": 0.0
+        },
+        "Rotation:9": {
+          "0:5": 0.7445545,
+          "1:5": 0.0
+        },
+        "UUIDLeast:4": -7228898180310767501,
+        "UUIDMost:4": 5239204693358297905,
+        "id:8": "entity_mob_mask_man"
+      },
+      "taskID:8": "bq_standard:hunt"
+    }
+  }
+}
