@@ -1,0 +1,48 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 1010420867898101172,
+      "questIDLow:4": -6113139617334346026
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "You should be careful with this task. Fire protection is highly recommended.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "minecraft:blaze_rod"
+      },
+      "isMain:1": 0,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Time to Kill (Blaze)",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": 4881104955388413867,
+  "questIDLow:4": -8341112793325261834,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "damageType:8": "",
+      "ignoreNBT:1": 1,
+      "index:3": 0,
+      "required:3": 10,
+      "subtypes:1": 1,
+      "target:8": "Blaze",
+      "targetNBT:10": {},
+      "taskID:8": "bq_standard:hunt"
+    }
+  }
+}
