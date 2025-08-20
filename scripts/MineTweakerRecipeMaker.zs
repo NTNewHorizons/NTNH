@@ -12,6 +12,8 @@
 
 // ================================================================================
 //#MARKER REMOVE
+recipes.remove(<OpenBlocks:hangglider>);
+recipes.remove(<OpenBlocks:generic>);
 recipes.remove(<row:item.row.traincabin>);
 recipes.remove(<row:item.row.light>);
 recipes.remove(<row:item.row.funnellarge>);
@@ -308,6 +310,8 @@ recipes.addShapeless(<minecraft:flint_and_steel>, [<ore:ingotSteel>, <minecraft:
 
 // ================================================================================
 //#MARKER ADD SHAPED
+recipes.addShaped(<OpenBlocks:hangglider>, [[<OpenBlocks:generic>, <hbm:tile.steel_beam>, <OpenBlocks:generic>]]);
+recipes.addShaped(<OpenBlocks:generic>, [[null, null, <ore:wireFineSteel>], [null, <ore:wireFineSteel>, <minecraft:leather>], [<ore:wireFineSteel>, <minecraft:leather>, <minecraft:leather>]]);
 recipes.addShaped(<row:item.row.battery>, [[<hbm:item.battery_advanced>]]);
 recipes.addShaped(<GraviGun:GraviGun>, [[null, <hbm:tile.tesla>, <hbm:item.circuit:9>], [<ore:billetSchrabidium>, <ore:barrelHeavyWeaponSteel>, <ore:receiverHeavyWeaponSteel>], [null, <ore:stockAnyPlastic>, <ore:gripAnyPlastic>]]);
 recipes.addShaped(<appliedenergistics2:tile.BlockEnergyAcceptor>, [[<ore:ingotSteel>, <appliedenergistics2:tile.BlockQuartzGlass>, <ore:ingotSteel>], [<appliedenergistics2:tile.BlockQuartzGlass>, <ore:crystalFluix>, <appliedenergistics2:tile.BlockQuartzGlass>], [<ore:ingotSteel>, <appliedenergistics2:tile.BlockQuartzGlass>, <ore:ingotSteel>]]);
