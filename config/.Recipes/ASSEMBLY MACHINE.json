@@ -1,4 +1,20 @@
   {
+      "name": "ass.adv.jetpack",
+      "inputItem": [
+        ["dict","plateTripleCopper",2],
+        ["dict","ntmpipeCopper",2],
+        ["dict","ingotSteel",2],
+        ["item","hbm:item.coil_tungsten",2],
+        ["item","hbm:item.circuit",1,8],
+        ["item","adventurebackpack:backpackComponent",1,2],
+      ],
+      "outputItem": [
+        ["single",["adventurebackpack:coalJetpack"]]
+      ],
+      "duration": 200,
+      "power": 100
+    },
+	{
       "name": "ass.row.boiler",
       "inputItem": [
         ["dict","plateTripleCopper",3],
@@ -57,20 +73,6 @@
       "power": 100
     },
 	{
-      "name": "ass.oc.adapter",
-      "inputItem": [
-        ["item","hbm:tile.case",1],
-        ["item","OpenComputers:cable",6],
-        ["item","OpenComputers:item",1,24],
-        ["item","hbm:item.circuit",1,3]
-      ],
-      "outputItem": [
-        ["single",["OpenComputers:adapter"]]
-      ],
-      "duration": 200,
-      "power": 100
-    },
-    {
       "name": "ass.oc.assembler",
       "inputItem": [
         ["item","hbm:tile.case",1],
