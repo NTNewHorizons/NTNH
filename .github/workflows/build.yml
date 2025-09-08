@@ -1,87 +1,153 @@
-name: Release Build
+name: Build NTNH Packages
 
 on:
   workflow_dispatch:
     inputs:
-      version:
-        type: string
-        required: true
-        description: 'Version number (e.g., 1.2.0)'
       branch:
-        type: string
+        type: choice
         required: true
-        description: 'Branch to build from (e.g., main)'
-      is_latest:
+        description: "Which branch you want to build?"
+        options:
+          - "main"
+          - "twopointzero"
+      output:
+        type: choice
+        required: true
+        description: "Which one do you want to build?"
+        options:
+          - "artifact"
+          - "release"
+      lwjgl3ify:
+        description: 'Do you want to build lwjfl3ify package?'
+        required: true
         type: boolean
-        required: false
-        default: false
-        description: 'Set as latest release on GitHub'
+        default: true
+      prism:
+        description: 'Do you want to build prism package?'
+        required: true
+        type: boolean
+        default: true
+      native:
+        description: 'Do you want to build native package?'
+        required: true
+        type: boolean
+        default: true
+      release_version:
+        description: 'Release Version'
+        required: true
+        type: string
+
+env:
+  instance.cfg: |
+    [General]
+    name=NTNH-${{ github.event.inputs.release_version }}
+    iconKey=default
+    InstanceType=OneSix
+  mmc-pack.json: |
+    {
+        "components": [
+            {
+                "important": true,
+                "uid": "net.minecraft",
+                "version": "1.7.10"
+            },
+            {
+                "uid": "net.minecraftforge",
+                "version": "10.13.4.1614"
+            }
+        ],
+        "formatVersion": 1
+    }
 
 jobs:
-  build-and-release:
+  package:
     runs-on: ubuntu-latest
+
     steps:
-      # 1. Checkout code
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v4
         with:
-          ref: ${{ inputs.branch }}
+          path: ntnh
+          ref: ${{ github.event.inputs.branch }}
 
-      # 2. Create and push tag
-      - name: Create tag
+      - name: Run lwjgl3ify Script
+        if: github.event.inputs.lwjgl3ify == 'true'
         run: |
-          git tag ${{ inputs.version }}
-          git push origin ${{ inputs.version }}
+          version=$(curl -s https://api.github.com/repos/GTNewHorizons/lwjgl3ify/releases/latest | jq -r .tag_name)
+          zip_url="https://github.com/GTNewHorizons/lwjgl3ify/releases/download/$version/lwjgl3ify-${version}-multimc.zip"
+          jar_url="https://github.com/GTNewHorizons/lwjgl3ify/releases/download/$version/lwjgl3ify-${version}.jar"
 
-      # 3. Build all formats
-      - name: Build Archives
+          curl -L "$zip_url" -o "lwjgl3ify-${version}-multimc.zip"
+          unzip -q "lwjgl3ify-${version}-multimc.zip" -d lwjgl3ify-multimc
+          curl -L "$jar_url" -o "lwjgl3ify-${version}.jar"
+
+          mkdir -p modpack-lwjgl3ify/.minecraft/mods
+          cp -r ntnh/* modpack-lwjgl3ify/.minecraft/
+
+          cat > modpack-lwjgl3ifyinstance.cfg <<< "${{ github.event.inputs.instance.cfg }}"
+          cat > modpack-lwjgl3ify/mmc-pack.json <<< "${{ github.event.inputs.mmc-pack.json }}"
+
+          cp -r lwjgl3ify-multimc/patches modpack-lwjgl3ify/
+          cp -r lwjgl3ify-multimc/libraries modpack-lwjgl3ify/
+          cp -r lwjgl3ify-multimc/mmc-pack.json modpack-lwjgl3ify/
+          cp -r "lwjgl3ify-${version}.jar" modpack-lwjgl3ify/.minecraft/mods/
+
+      - name: Run Prism Script
+        if: github.event.inputs.prism == 'true'
         run: |
-          # Убедимся, что директории существуют
-          mkdir -p ./build
-          cp -r ./mods ./config ./scripts ./serverutilities ./shaderpacks ./build/
+          mkdir -p modpack-prism/.minecraft
+          cp -r ntnh/* modpack-prism/.minecraft/
 
-          # Общие файлы
-          cp icon.png ./build/
-          cp oauthprofiles.json ./build/
+          cat > modpack-prism/instance.cfg <<< "${{ github.event.inputs.instance.cfg }}"
+          cat > modpack-prism/mmc-pack.json <<< "${{ github.event.inputs.mmc-pack.json }}"
 
-          # 1. NTNH-X.X.X-Native.zip
-          zip -r "NTNH-${{ inputs.version }}-Native.zip" ./build/
+      - name: Run Native Script
+        if: github.event.inputs.native == 'true'
+        run: |
+          mkdir -p modpack-native
+          cp -r ntnh/* modpack-native
 
-          # 2. Modrinth mrpack
-          mkdir -p ./build-modrinth
-          cp -r ./build/* ./build-modrinth/
-          echo '{"manifest": {"format_version": 1, "name": "NTNH", "version": "${{ inputs.version }}", "author": "Your Name", "description": "NTNH modpack", "files": []}}' > ./build-modrinth/modrinth.json
-          zip -r "NTNH-${{ inputs.version }}-Modrinth.mrpack" ./build-modrinth/
-
-          # 3. CurseForge zip
-          mkdir -p ./build-curseforge
-          cp -r ./build/* ./build-curseforge/
-          echo '{"manifest": {"format_version": 1, "name": "NTNH", "version": "${{ inputs.version }}", "author": "Your Name", "description": "NTNH modpack", "files": []}}' > ./build-curseforge/curseforge.json
-          zip -r "NTNH-${{ inputs.version }}-Curseforge.zip" ./build-curseforge/
-
-          # 4. MMC/PrismLauncher
-          mkdir -p ./build-mmc
-          cp -r ./build/* ./build-mmc/
-          echo '{"name": "NTNH", "version": "${{ inputs.version }}", "icon": "icon.png", "modList": [], "overrides": "."}' > ./build-mmc/mmc-pack-profile.json
-          zip -r "NTNH-${{ inputs.version }}-MMC_Prism.zip" ./build-mmc/
-
-          # Сохраняем архивы в рабочей директории
-          mv *.zip ./
-
-      # 4. Publish release
-      - name: Publish Release
-        uses: softprops/action-gh-release@v1
+      - name: Upload lwjgl3ify Artifact
+        if: github.event.inputs.lwjgl3ify == 'true' && github.event.inputs.output == 'artifact'
+        uses: actions/upload-artifact@v4
         with:
-          draft: false
-          prerelease: false
-          token: ${{ secrets.GITHUB_TOKEN }}
-          tag_name: ${{ inputs.version }}
-          name: NTNH ${inputs.version}
-          body: |
-            $(cat CHANGELOG.txt)
+          name: NTNH-${{ github.event.inputs.release_version }}-lwjgl3ify
+          path: modpack-lwjgl3ify
+          include-hidden-files: true
+
+      - name: Upload Prism Artifact
+        if: github.event.inputs.prism == 'true' && github.event.inputs.output == 'artifact'
+        uses: actions/upload-artifact@v4
+        with:
+          name: NTNH-${{ github.event.inputs.release_version }}-MMC_Prism
+          path: modpack-prism
+          include-hidden-files: true
+
+      - name: Upload Native Artifact
+        if: github.event.inputs.native == 'true' && github.event.inputs.output == 'artifact'
+        uses: actions/upload-artifact@v4
+        with:
+          name: NTNH-${{ github.event.inputs.release_version }}-Native
+          path: modpack-native
+          include-hidden-files: true
+
+      - name: Zip Files
+        if: github.event.inputs.output == 'release'
+        continue-on-error: true
+        run: |
+          zip -r "NTNH-${{ github.event.inputs.release_version }}-lwjgl3ify.zip" ntnh/modpack-lwjgl3ify/
+          zip -r "NTNH-${{ github.event.inputs.release_version }}-Prism.zip" ntnh/modpack-prism/
+          zip -r "NTNH-${{ github.event.inputs.release_version }}-Native.zip" ntnh/modpack-native/
+
+      - name: Create GitHub Release
+        if: github.ref_type == 'tag' && github.event.inputs.output == 'release'
+        uses: softprops/action-gh-release@v2
+        with:
+          name: ${{ github.event.inputs.release_version }}
+          tag_name: ${{ github.event.inputs.release_version }}
+          body: ${{ github.event.inputs.changelog }}
+          token: ${{ secrets.RELEASE_GITHUB_TOKEN }}
           files: |
-            NTNH-${{ inputs.version }}-Native.zip
-            NTNH-${{ inputs.version }}-Modrinth.mrpack
-            NTNH-${{ inputs.version }}-Curseforge.zip
-            NTNH-${{ inputs.version }}-MMC_Prism.zip
-          latest: ${{ inputs.is_latest }}
+            NTNH-${{ github.event.inputs.release_version }}-lwjgl3ify.zip
+            NTNH-${{ github.event.inputs.release_version }}-Prism.zip
+            NTNH-${{ github.event.inputs.release_version }}-Native.zip
