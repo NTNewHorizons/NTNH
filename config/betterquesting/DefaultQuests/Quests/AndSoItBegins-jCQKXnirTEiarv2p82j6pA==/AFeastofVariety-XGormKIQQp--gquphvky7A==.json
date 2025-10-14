@@ -1,0 +1,62 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": -1922987534854173511,
+      "questIDLow:4": -8847684645341758176
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "§cImportant!§r In this modpack, you get hungry much faster than in vanilla Minecraft - and you can\u0027t survive on the same food forever. Eating nothing but carrots (or any single food) won\u0027t cut it!\n\nInstead,§a §lvariety is your lifeline§r. The more diverse your diet - trying new ingredients and unique dishes - the more your §lmaximum health will increase§r. On the flip side, eating the same foods over and over reduces your saturation and holds you back.\n\n§lFarming is the foundation of survival.\n§rUse an iron hoe or better to till soil near water, creating fertile farmland where you can grow crops. You can obtain seeds by right-clicking grass blocks with a hoe. Thanks to §lPam\u0027s HarvestCraft§r, you\u0027ll have access to dozens of new crops and delicious, nutritious recipes—from humble vegetables to gourmet meals.\n\nKeep track of your culinary journey with the §r§lFood Book§r (crafted with a book and a carrot). It shows which foods you\u0027ve eaten and which ones you should try next to keep your diet balanced.\n\nDon\u0027t forget your §lLunch Bag (or Lunchbox)§r!  \nFill it with a variety of meals, close it (Shift + Right-Click), and it will automatically feed you the right foods at the right time—perfect for maintaining a healthy, diverse diet on the go.\n\n§lDiversify your meals to thrive!§r The wider your menu, the stronger you become.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "minecraft:iron_hoe"
+      },
+      "isMain:1": 0,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "A Feast of Variety",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": 6659182933574697631,
+  "questIDLow:4": -4719020714928557332,
+  "rewards:9": {
+    "0:10": {
+      "ignoreDisabled:1": 0,
+      "index:3": 0,
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 4,
+          "Damage:2": 1,
+          "OreDict:8": "",
+          "id:8": "hbm:item.canned_conserve"
+        },
+        "1:10": {
+          "Count:3": 3,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "minecraft:wheat_seeds"
+        }
+      }
+    }
+  },
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}
