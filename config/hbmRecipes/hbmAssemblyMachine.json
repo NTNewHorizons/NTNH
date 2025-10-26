@@ -783,7 +783,7 @@
       "inputItem": [
         ["item","hbm:item.circuit",12,9],
         ["item","hbm:item.circuit",8,1],
-        ["dict","wireFineGold",32]
+        ["dict","ingotRubber",4]
       ],
       "inputFluid": [
         ["SULFURIC_ACID",1000]
@@ -2767,6 +2767,129 @@
       ],
       "duration": 100,
       "power": 100
+    },
+    {
+      "name": "ass.pwrfuel",
+      "inputItem": [
+        ["dict","plateTripleLead",4],
+        ["dict","plateSextupleZirconium",2]
+      ],
+      "outputItem": [
+        ["single",["hbm:tile.pwr_fuel",4]]
+      ],
+      "duration": 200,
+      "power": 500
+    },
+    {
+      "name": "ass.pwrcontrol",
+      "inputItem": [
+        ["dict","plateTripleSteel",2],
+        ["dict","ingotBoron",4],
+        ["item","hbm:item.motor"]
+      ],
+      "outputItem": [
+        ["single",["hbm:tile.pwr_control",4]]
+      ],
+      "duration": 200,
+      "power": 500
+    },
+    {
+      "name": "ass.pwrchannel",
+      "inputItem": [
+        ["dict","ntmpipeSteel",4],
+        ["dict","plateCopper",4]
+      ],
+      "outputItem": [
+        ["single",["hbm:tile.pwr_channel",4]]
+      ],
+      "duration": 200,
+      "power": 500
+    },
+    {
+      "name": "ass.pwrheatex",
+      "inputItem": [
+        ["dict","plateTripleCopper",4],
+        ["item","hbm:item.motor"]
+      ],
+      "outputItem": [
+        ["single",["hbm:tile.pwr_heatex",4]]
+      ],
+      "duration": 200,
+      "power": 500
+    },
+    {
+      "name": "ass.pwrheatsink",
+      "inputItem": [
+        ["dict","plateTripleSaturnite",4],
+        ["dict","plateTripleCopper",4]
+      ],
+      "outputItem": [
+        ["single",["hbm:tile.pwr_heatsink",4]]
+      ],
+      "duration": 200,
+      "power": 500
+    },
+    {
+      "name": "ass.pwrreflector",
+      "inputItem": [
+        ["dict","plateTripleSteel",2],
+        ["dict","plateTungCar",4]
+      ],
+      "outputItem": [
+        ["single",["hbm:tile.pwr_reflector",4]]
+      ],
+      "duration": 200,
+      "power": 500
+    },
+    {
+      "name": "ass.pwrcasing",
+      "inputItem": [
+        ["dict","plateLead",4],
+        ["dict","anyConcrete",4]
+      ],
+      "outputItem": [
+        ["single",["hbm:tile.pwr_casing",4]]
+      ],
+      "duration": 200,
+      "power": 500
+    },
+    {
+      "name": "ass.pwrcontroller",
+      "inputItem": [
+        ["dict","plateTripleLead",4],
+        ["dict","ingotRubber",4],
+        ["item","hbm:item.circuit",4,9]
+      ],
+      "outputItem": [
+        ["single",["hbm:tile.pwr_controller"]]
+      ],
+      "duration": 200,
+      "power": 500
+    },
+    {
+      "name": "ass.pwrport",
+      "inputItem": [
+        ["dict","plateLead",4],
+        ["dict","anyConcrete",4],
+        ["dict","ntmpipeSteel",4]
+      ],
+      "outputItem": [
+        ["single",["hbm:tile.pwr_port",4]]
+      ],
+      "duration": 200,
+      "power": 500
+    },
+    {
+      "name": "ass.pwrneutronsource",
+      "inputItem": [
+        ["dict","plateSextupleZirconium"],
+        ["item","hbm:item.billet_ra226be",3]
+      ],
+      "outputItem": [
+        ["single",["hbm:tile.pwr_neutron_source"]]
+      ],
+      "duration": 200,
+      "power": 500
     },
     {
       "name": "ass.fusioncore",

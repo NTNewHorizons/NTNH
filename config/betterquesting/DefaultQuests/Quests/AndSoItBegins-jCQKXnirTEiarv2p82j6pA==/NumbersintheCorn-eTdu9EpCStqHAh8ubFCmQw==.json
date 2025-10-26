@@ -1,0 +1,42 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": -1922987534854173511,
+      "questIDLow:4": -8847684645341758176
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "What\u0027s with the numbers in the corner? That is the In-Game Info (IGI) mod. Some of the info it gives is useful right away, some of it shines later on in progression.\n\nFor now, the most important thing it does is showing if you are in an ore chunk. Further quests will explain what it means.\n\nIf you want to hide it, type \"/igi disable\" in the chat. Type \"/igi enable\" if you want to turn it back on.\n\nThe command \"/igi config\" opens the configuration window to control its position, scale, and size.\n\nIf you need suggestions on solving TPS problems, feel free to ask for help in the NTNH Discord.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:item.clay_tablet"
+      },
+      "isMain:1": 0,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Numbers in the Corner?",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": 8734571997805300442,
+  "questIDLow:4": -8718371644389677501,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

@@ -46,14 +46,17 @@
   "questIDLow:4": -6275284033136656508,
   "rewards:9": {
     "0:10": {
+      "ignoreDisabled:1": 0,
       "index:3": 0,
-      "orig_data:10": {
-        "Count:3": 1,
-        "Damage:2": 6,
-        "OreDict:8": "",
-        "id:8": "enhancedlootbags:lootbags"
-      },
-      "rewardID:8": "betterquesting:placeholder"
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 6,
+          "OreDict:8": "",
+          "id:8": "enhancedlootbags:lootbag"
+        }
+      }
     }
   },
   "tasks:9": {

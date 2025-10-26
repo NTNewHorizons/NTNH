@@ -97,12 +97,12 @@
     {
       "name": "chem.helium3",
       "inputItem": [
-        ["item","hbm:tile.moon_turf",8]
+        ["item","hbm:tile.moon_turf"]
       ],
       "outputFluid": [
-        ["HELIUM3",1000]
+        ["HELIUM3",125]
       ],
-      "duration": 200,
+      "duration": 25,
       "power": 2000,
       "icon": ["hbm:item.gas_full",1,57],
       "named": true
@@ -211,6 +211,34 @@
       "power": 100,
       "icon": ["hbm:item.canister_full",1,46],
       "named": true
+    },
+    {
+      "name": "chem.coallube",
+      "inputFluid": [
+        ["COALCREOSOTE",1000]
+      ],
+      "outputFluid": [
+        ["LUBRICANT",1000]
+      ],
+      "duration": 40,
+      "power": 100,
+      "icon": ["hbm:item.canister_full",1,18],
+      "named": true,
+      "blueprintpool": "alt..lube"
+    },
+    {
+      "name": "chem.heavylube",
+      "inputFluid": [
+        ["HEAVYOIL",2000]
+      ],
+      "outputFluid": [
+        ["LUBRICANT",1000]
+      ],
+      "duration": 40,
+      "power": 100,
+      "icon": ["hbm:item.canister_full",1,18],
+      "named": true,
+      "blueprintpool": "alt..lube"
     },
     {
       "name": "chem.tarsand",
@@ -534,6 +562,61 @@
       ],
       "duration": 40,
       "power": 100
+    },
+    {
+      "name": "chem.biosolidfuel",
+      "inputItem": [
+        ["item","hbm:item.biomass_compressed",4]
+      ],
+      "outputItem": [
+        ["single",["hbm:item.solid_fuel"]]
+      ],
+      "duration": 40,
+      "power": 100,
+      "named": true,
+      "blueprintpool": "alt..biosolidfuel"
+    },
+    {
+      "name": "chem.biooilsolidfuel",
+      "inputItem": [
+        ["item","hbm:item.biomass_compressed",2]
+      ],
+      "inputFluid": [
+        ["HEATINGOIL",100]
+      ],
+      "outputItem": [
+        ["single",["hbm:item.solid_fuel"]]
+      ],
+      "duration": 40,
+      "power": 100,
+      "named": true,
+      "blueprintpool": "alt..biosolidfuel"
+    },
+    {
+      "name": "chem.oilelectrodes",
+      "inputFluid": [
+        ["HEATINGOIL",4000]
+      ],
+      "outputItem": [
+        ["single",["hbm:item.arc_electrode"]]
+      ],
+      "duration": 600,
+      "power": 100,
+      "named": true,
+      "blueprintpool": "alt..electrodes"
+    },
+    {
+      "name": "chem.lubeelectrodes",
+      "inputFluid": [
+        ["LUBRICANT",8000]
+      ],
+      "outputItem": [
+        ["single",["hbm:item.arc_electrode"]]
+      ],
+      "duration": 600,
+      "power": 100,
+      "named": true,
+      "blueprintpool": "alt..electrodes"
     },
     {
       "name": "chem.peroxide",
