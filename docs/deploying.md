@@ -1,1 +1,2 @@
-a
+# NTNH SERVER DOCUMENTATION
+## Step 2 - deploying
