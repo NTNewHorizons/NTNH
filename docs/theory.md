@@ -1,1 +1,2 @@
-c
+# NTNH SERVER DOCUMENTATION
+## Step 1 - theory
