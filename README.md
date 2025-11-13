@@ -1,4 +1,3 @@
-[![Crowdin](https://badges.crowdin.net/ntnh/localized.svg)](https://crowdin.com/project/ntnh)
 # Nuclear Tech: New Horizons  
 *Forge Your Future in a World of Atomic Power and Discovery*
 
