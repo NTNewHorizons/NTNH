@@ -7,9 +7,11 @@ on:
         description: 'Branch to build from'
         required: true
         default: 'experiments/packwiz'
+        type: string
       version:
         description: 'Version tag (e.g. 1.0.0)'
         required: true
+        type: string
       release_type:
         description: 'Release type'
         required: true
@@ -19,14 +21,16 @@ on:
           - release
           - pre-release
           - latest
-      build_type:
-        description: 'Build type'
+      curseforge_build:
+        description: 'Generate CurseForge build'
         required: true
-        default: 'curseforge'
-        type: choice
-        options:
-          - curseforge
-          - modrinth
+        default: 'true'
+        type: boolean
+      modrinth_build:
+        description: 'Generate Modrinth build'
+        required: true
+        default: 'true'
+        type: boolean
 
 jobs:
   build-and-release:
@@ -47,29 +51,49 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
-          go-version: '1.21'
+          go-version: '1.23'
 
       - name: Install packwiz
         run: |
-          cd NTNH
           go install github.com/packwiz/packwiz@latest
+        env:
+          GOPATH: /home/runner/go
 
-      - name: Run packwiz export
-        id: export
+      - name: Set up packwiz environment
+        run: |
+          echo "/home/runner/go/bin" >> $GITHUB_PATH
+        shell: bash
+
+      - name: Run CurseForge export (if selected)
+        id: curseforge_export
+        if: ${{ github.event.inputs.curseforge_build == 'true' }}
         run: |
           cd NTNH
-          if [ "${{ github.event.inputs.build_type }}" == "curseforge" ]; then
-            packwiz curseforge export
-            export_file=$(ls *.zip | head -1)
-          elif [ "${{ github.event.inputs.build_type }}" == "modrinth" ]; then
-            packwiz modrinth export
-            export_file=$(ls *.zip | head -1)
-          else
-            echo "Invalid build type"
+          packwiz curseforge export
+          # Find the generated ZIP file
+          export_file=$(find . -maxdepth 1 -name "*.zip" -print -quit)
+          if [ -z "$export_file" ]; then
+            echo "No ZIP file found after CurseForge export"
             exit 1
           fi
-          echo "export_file=$export_file" >> $GITHUB_OUTPUT
-          echo "Build completed: $export_file"
+          echo "curseforge_file=${export_file#./}" >> $GITHUB_OUTPUT
+          echo "CurseForge build generated: ${export_file#./}"
+        shell: bash
+
+      - name: Run Modrinth export (if selected)
+        id: modrinth_export
+        if: ${{ github.event.inputs.modrinth_build == 'true' }}
+        run: |
+          cd NTNH
+          packwiz modrinth export
+          # Find the generated ZIP file
+          export_file=$(find . -maxdepth 1 -name "*.zip" -print -quit)
+          if [ -z "$export_file" ]; then
+            echo "No ZIP file found after Modrinth export"
+            exit 1
+          fi
+          echo "modrinth_file=${export_file#./}" >> $GITHUB_OUTPUT
+          echo "Modrinth build generated: ${export_file#./}"
         shell: bash
 
       - name: Read CHANGELOG
@@ -77,14 +101,41 @@ jobs:
         run: |
           cd NTNH
           if [ -f CHANGELOG ]; then
-            changelog_content=$(cat CHANGELOG)
-            echo "changelog_content<<EOF" >> $GITHUB_OUTPUT
-            echo "$changelog_content" >> $GITHUB_OUTPUT
-            echo "EOF" >> $GITHUB_OUTPUT
+            # Read CHANGELOG and escape special characters for GitHub Actions
+            changelog_content=$(cat CHANGELOG | sed 's/%/%25/g; s/\n/%0A/g; s/\r/%0D/g')
+            echo "changelog_content=$changelog_content" >> $GITHUB_OUTPUT
           else
             echo "CHANGELOG file not found, using default message"
             echo "changelog_content=No changelog available for this release." >> $GITHUB_OUTPUT
           fi
+        shell: bash
+
+      - name: Prepare release files
+        id: prepare_files
+        run: |
+          files=""
+          
+          # Add CurseForge file if generated
+          if [ "${{ github.event.inputs.curseforge_build }}" == "true" ] && [ -n "${{ steps.curseforge_export.outputs.curseforge_file }}" ]; then
+            files="${files} NTNH/${{ steps.curseforge_export.outputs.curseforge_file }}"
+          fi
+          
+          # Add Modrinth file if generated
+          if [ "${{ github.event.inputs.modrinth_build }}" == "true" ] && [ -n "${{ steps.modrinth_export.outputs.modrinth_file }}" ]; then
+            files="${files} NTNH/${{ steps.modrinth_export.outputs.modrinth_file }}"
+          fi
+          
+          # Trim leading space
+          files=$(echo "$files" | sed 's/^ //')
+          
+          echo "release_files=$files" >> $GITHUB_OUTPUT
+          
+          if [ -z "$files" ]; then
+            echo "No build files were generated. At least one build type must be selected."
+            exit 1
+          fi
+          
+          echo "Release files to upload: $files"
         shell: bash
 
       - name: Create Release
@@ -96,13 +147,12 @@ jobs:
           body: ${{ steps.changelog.outputs.changelog_content }}
           draft: false
           prerelease: ${{ github.event.inputs.release_type == 'pre-release' }}
-          files: NTNH/${{ steps.export.outputs.export_file }}
+          files: ${{ steps.prepare_files.outputs.release_files }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set latest release if needed
-        if: github.event.inputs.release_type == 'latest'
+        if: github.event.inputs.release_type == 'latest' && github.event.inputs.release_type != 'pre-release'
         run: |
-          echo "Setting release as latest..."
-          # This is handled automatically by GitHub when creating a non-prerelease
-          # No additional action needed as GitHub will treat the most recent non-prerelease as latest
+          echo "This release will be set as latest automatically by GitHub since it's not a pre-release."
+        shell: bash
