@@ -63,6 +63,32 @@ jobs:
         run: |
           echo "/home/runner/go/bin" >> $GITHUB_PATH
 
+      - name: Update version in pack.toml
+        run: |
+          cd NTNH
+          echo "Updating pack.toml with version: ${{ github.event.inputs.version }}"
+          
+          # Update the version field in pack.toml
+          if [[ "$(uname)" == "Darwin" ]]; then
+            # macOS version of sed
+            sed -i '' "s/^version = .*/version = \"${{ github.event.inputs.version }}\"/" pack.toml
+          else
+            # Linux version of sed
+            sed -i "s/^version = .*/version = \"${{ github.event.inputs.version }}\"/" pack.toml
+          fi
+          
+          echo "Updated pack.toml:"
+          cat pack.toml
+        shell: bash
+
+      - name: Run packwiz refresh
+        run: |
+          cd NTNH
+          echo "Running packwiz refresh to update metadata..."
+          packwiz refresh
+          echo "Packwiz refresh completed successfully"
+        shell: bash
+
       - name: Run CurseForge export (if selected)
         id: curseforge_export
         if: ${{ github.event.inputs.curseforge_build == 'true' }}
@@ -71,23 +97,26 @@ jobs:
           echo "Running packwiz curseforge export..."
           packwiz curseforge export
           
-          # Find the generated ZIP file - look for files with the expected pattern
-          export_file=$(find . -maxdepth 1 -name "Nuclear Tech: New Horizons-*.zip" -print -quit)
+          # Find the generated export file - be format-agnostic
+          # Look for files with the pack name and version
+          export_file=$(find . -maxdepth 1 -name "*Nuclear Tech: New Horizons*${{ github.event.inputs.version }}*" -print -quit)
+          
+          # If not found by name, look for recently modified files with common extensions
+          if [ -z "$export_file" ]; then
+            echo "Could not find by name, searching by extension and modification time..."
+            export_file=$(find . -maxdepth 1 -type f \( -name "*.zip" -o -name "*.jar" -o -name "*.mrpack" \) -mmin -1 -print -quit)
+          fi
           
           if [ -z "$export_file" ]; then
-            echo "No expected ZIP file found after CurseForge export"
-            # Fallback to any ZIP file if the expected pattern isn't found
-            export_file=$(find . -maxdepth 1 -name "*.zip" -print -quit)
-            
-            if [ -z "$export_file" ]; then
-              echo "No ZIP file found after CurseForge export"
-              exit 1
-            fi
+            echo "No export file found after CurseForge export"
+            echo "Listing directory contents for debugging:"
+            ls -la
+            exit 1
           fi
           
           # Clean up the filename (remove ./ prefix)
           clean_filename=$(basename "$export_file")
-          echo "Found ZIP file: $clean_filename"
+          echo "Found export file: $clean_filename"
           
           echo "curseforge_file=$clean_filename" >> $GITHUB_OUTPUT
           echo "curseforge_path=$export_file" >> $GITHUB_OUTPUT
@@ -102,23 +131,26 @@ jobs:
           echo "Running packwiz modrinth export..."
           packwiz modrinth export
           
-          # Find the generated ZIP file - look for files with the expected pattern
-          export_file=$(find . -maxdepth 1 -name "Nuclear Tech: New Horizons-*.zip" -print -quit)
+          # Find the generated export file - be format-agnostic
+          # Look for files with the pack name and version
+          export_file=$(find . -maxdepth 1 -name "*Nuclear Tech: New Horizons*${{ github.event.inputs.version }}*" -print -quit)
+          
+          # If not found by name, look for recently modified files with common extensions
+          if [ -z "$export_file" ]; then
+            echo "Could not find by name, searching by extension and modification time..."
+            export_file=$(find . -maxdepth 1 -type f \( -name "*.zip" -o -name "*.jar" -o -name "*.mrpack" \) -mmin -1 -print -quit)
+          fi
           
           if [ -z "$export_file" ]; then
-            echo "No expected ZIP file found after Modrinth export"
-            # Fallback to any ZIP file if the expected pattern isn't found
-            export_file=$(find . -maxdepth 1 -name "*.zip" -print -quit)
-            
-            if [ -z "$export_file" ]; then
-              echo "No ZIP file found after Modrinth export"
-              exit 1
-            fi
+            echo "No export file found after Modrinth export"
+            echo "Listing directory contents for debugging:"
+            ls -la
+            exit 1
           fi
           
           # Clean up the filename (remove ./ prefix)
           clean_filename=$(basename "$export_file")
-          echo "Found ZIP file: $clean_filename"
+          echo "Found export file: $clean_filename"
           
           echo "modrinth_file=$clean_filename" >> $GITHUB_OUTPUT
           echo "modrinth_path=$export_file" >> $GITHUB_OUTPUT
@@ -191,3 +223,14 @@ jobs:
           files: ${{ steps.prepare_files.outputs.release_files }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit and push version changes (optional)
+        if: ${{ github.ref == format('refs/heads/{0}', github.event.inputs.branch) }}
+        run: |
+          cd NTNH
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add pack.toml index.toml
+          git commit -m "Update version to ${{ github.event.inputs.version }}" || echo "No changes to commit"
+          git push origin ${{ github.event.inputs.branch }} || echo "Push failed - might need manual merge"
+        shell: bash
