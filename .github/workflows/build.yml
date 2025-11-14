@@ -163,17 +163,17 @@ jobs:
           echo "Modrinth build generated: $new_filename"
         shell: bash
 
-      - name: Check for MaryTTS.zip
-        id: marytts_check
+      - name: Check for Mary-TTS.zip
+        id: mary-tts_check
         run: |
           cd NTNH
-          if [ -f "MaryTTS.zip" ]; then
-            echo "MaryTTS.zip found in repository"
-            echo "marytts_exists=true" >> $GITHUB_OUTPUT
-            echo "marytts_file=MaryTTS.zip" >> $GITHUB_OUTPUT
+          if [ -f "Mary=TTS.zip" ]; then
+            echo "Mary=TTS.zip found in repository"
+            echo "mary-tts_exists=true" >> $GITHUB_OUTPUT
+            echo "mary-tts_file=Mary-TTS.zip" >> $GITHUB_OUTPUT
           else
-            echo "MaryTTS.zip not found in repository"
-            echo "marytts_exists=false" >> $GITHUB_OUTPUT
+            echo "Mary-TTS.zip not found in repository"
+            echo "mary-tts_exists=false" >> $GITHUB_OUTPUT
           fi
         shell: bash
 
@@ -219,10 +219,10 @@ jobs:
             echo "Adding Modrinth file: ${{ steps.modrinth_export.outputs.modrinth_file }}"
           fi
           
-          # Always add MaryTTS.zip if it exists
-          if [ "${{ steps.marytts_check.outputs.marytts_exists }}" == "true" ]; then
-            files="$files NTNH/${{ steps.marytts_check.outputs.marytts_file }}"
-            echo "Adding MaryTTS.zip to release files"
+          # Always add Mary-TTS.zip if it exists
+          if [ "${{ steps.mary-tts_check.outputs.mary-tts_exists }}" == "true" ]; then
+            files="$files NTNH/${{ steps.mary-tts_check.outputs.mary-tts_file }}"
+            echo "Adding Mary-TTS.zip to release files"
           fi
           
           # Trim leading space
