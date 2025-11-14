@@ -1,0 +1,65 @@
+name: Manual Pack Build & Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag_version:
+        description: 'Tag version (e.g. v1.2.3)'
+        required: true
+      release_type:
+        description: 'Type of release (release, latest release, pre-release)'
+        required: true
+        default: 'release'
+        options:
+          - release
+          - latest release
+          - pre-release
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout target repo (experiments/server)
+        uses: actions/checkout@v4
+        with:
+          repository: Nuclear-Tech-New-Horizons/NTNH
+          ref: experiments/server
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.21'
+
+      - name: Add GOPATH bin to PATH
+        run: echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
+
+      - name: Install packwiz
+        run: go install github.com/packwiz/packwiz@latest
+
+      - name: Export CurseForge pack (produce .zip)
+        run: |
+          # adjust flags if your packwiz config requires them
+          packwiz curseforge export --no-confirm
+
+      - name: Locate generated zip
+        id: findzip
+        run: |
+          set -e
+          zipfile=$(find . -type f -name "*.zip" | head -n 1 || true)
+          if [ -z "$zipfile" ]; then
+            echo "No zip file produced" >&2
+            exit 1
+          fi
+          echo "zipfile=$zipfile" >> $GITHUB_OUTPUT
+
+      - name: Create release and upload asset
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ github.event.inputs.tag_version }}
+          name: ${{ github.event.inputs.tag_version }}
+          files: ${{ steps.findzip.outputs.zipfile }}
+          prerelease: ${{ contains(github.event.inputs.release_type, 'pre') }}
+          draft: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
