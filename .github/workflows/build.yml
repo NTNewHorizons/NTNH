@@ -89,6 +89,22 @@ jobs:
           echo "Packwiz refresh completed successfully"
         shell: bash
 
+      - name: Prepare manual downloads (required for Modrinth export)
+        if: ${{ github.event.inputs.modrinth_build == 'true' }}
+        run: |
+          cd NTNH
+          echo "Creating cache directory for manual downloads..."
+          mkdir -p /home/runner/.cache/packwiz/cache/import
+          
+          echo "Downloading Low On Fire texture pack..."
+          wget -O /home/runner/.cache/packwiz/cache/import/LowOnFire_1.8.zip https://edge.forgecdn.net/files/4307/966/LowOnFire_1.8.zip
+          
+          echo "Downloading Rails of War mod..."
+          wget -O /home/runner/.cache/packwiz/cache/import/RailsOfWar-1.7.10-5.8-RC7.jar https://edge.forgecdn.net/files/2459/153/RailsOfWar-1.7.10-5.8-RC7.jar
+          
+          echo "Manual downloads prepared successfully"
+        shell: bash
+
       - name: Run CurseForge export (if selected)
         id: curseforge_export
         if: ${{ github.event.inputs.curseforge_build == 'true' }}
@@ -164,16 +180,16 @@ jobs:
         shell: bash
 
       - name: Check for Mary-TTS.zip
-        id: mary-tts_check
+        id: marytts_check
         run: |
           cd NTNH
-          if [ -f "Mary=TTS.zip" ]; then
-            echo "Mary=TTS.zip found in repository"
-            echo "mary-tts_exists=true" >> $GITHUB_OUTPUT
-            echo "mary-tts_file=Mary-TTS.zip" >> $GITHUB_OUTPUT
+          if [ -f "Mary-TTS.zip" ]; then
+            echo "Mary-TTS.zip found in repository"
+            echo "marytts_exists=true" >> $GITHUB_OUTPUT
+            echo "marytts_file=Mary-TTS.zip" >> $GITHUB_OUTPUT
           else
             echo "Mary-TTS.zip not found in repository"
-            echo "mary-tts_exists=false" >> $GITHUB_OUTPUT
+            echo "marytts_exists=false" >> $GITHUB_OUTPUT
           fi
         shell: bash
 
@@ -220,8 +236,8 @@ jobs:
           fi
           
           # Always add Mary-TTS.zip if it exists
-          if [ "${{ steps.mary-tts_check.outputs.mary-tts_exists }}" == "true" ]; then
-            files="$files NTNH/${{ steps.mary-tts_check.outputs.mary-tts_file }}"
+          if [ "${{ steps.marytts_check.outputs.marytts_exists }}" == "true" ]; then
+            files="$files NTNH/${{ steps.marytts_check.outputs.marytts_file }}"
             echo "Adding Mary-TTS.zip to release files"
           fi
           
