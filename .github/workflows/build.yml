@@ -71,12 +71,18 @@ jobs:
           echo "Running packwiz curseforge export..."
           packwiz curseforge export
           
-          # Find the generated ZIP file - look for files containing the version
-          export_file=$(find . -maxdepth 1 -name "*.zip" -print -quit)
+          # Find the generated ZIP file - look for files with the expected pattern
+          export_file=$(find . -maxdepth 1 -name "Nuclear Tech: New Horizons-*.zip" -print -quit)
           
           if [ -z "$export_file" ]; then
-            echo "No ZIP file found after CurseForge export"
-            exit 1
+            echo "No expected ZIP file found after CurseForge export"
+            # Fallback to any ZIP file if the expected pattern isn't found
+            export_file=$(find . -maxdepth 1 -name "*.zip" -print -quit)
+            
+            if [ -z "$export_file" ]; then
+              echo "No ZIP file found after CurseForge export"
+              exit 1
+            fi
           fi
           
           # Clean up the filename (remove ./ prefix)
@@ -96,12 +102,18 @@ jobs:
           echo "Running packwiz modrinth export..."
           packwiz modrinth export
           
-          # Find the generated ZIP file
-          export_file=$(find . -maxdepth 1 -name "*.zip" -print -quit)
+          # Find the generated ZIP file - look for files with the expected pattern
+          export_file=$(find . -maxdepth 1 -name "Nuclear Tech: New Horizons-*.zip" -print -quit)
           
           if [ -z "$export_file" ]; then
-            echo "No ZIP file found after Modrinth export"
-            exit 1
+            echo "No expected ZIP file found after Modrinth export"
+            # Fallback to any ZIP file if the expected pattern isn't found
+            export_file=$(find . -maxdepth 1 -name "*.zip" -print -quit)
+            
+            if [ -z "$export_file" ]; then
+              echo "No ZIP file found after Modrinth export"
+              exit 1
+            fi
           fi
           
           # Clean up the filename (remove ./ prefix)
@@ -119,27 +131,18 @@ jobs:
           cd NTNH
           if [ -f CHANGELOG ]; then
             echo "Reading CHANGELOG file..."
-            # Read the file and handle special characters properly
+            
+            # Read the CHANGELOG directly without complex escaping
+            # The action-gh-release action can handle markdown content
             changelog_content=$(cat CHANGELOG)
             
-            # Escape special characters for GitHub Actions
-            # Replace % with %25, newlines with %0A, carriage returns with %0D
-            # But do this in a way that handles multi-line content properly
-            escaped_content=$(echo "$changelog_content" | sed 's/%/%25/g; s/\r/%0D/g' | awk '{printf "%s\\n", $0}' | sed '$s/\\n$//' | tr '\n' ' ' | sed 's/\\n/%0A/g; s/ $//')
+            # Escape $ characters for GitHub Actions
+            escaped_content=$(echo "$changelog_content" | sed 's/\$/\$\$/g')
             
-            # If the escaping fails, use a simpler approach
-            if [ -z "$escaped_content" ]; then
-              echo "Simple escaping fallback"
-              escaped_content=$(echo "$changelog_content" | sed 's/%/%25/g; s/\r/%0D/g; s/\\n/%0A/g')
-            fi
+            echo "changelog_content<<EOF" >> $GITHUB_OUTPUT
+            echo "$escaped_content" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
             
-            # If still empty, use first 500 characters as fallback
-            if [ -z "$escaped_content" ]; then
-              echo "Using fallback content"
-              escaped_content=$(echo "$changelog_content" | head -c 500 | sed 's/%/%25/g; s/\r/%0D/g; s/\n/%0A/g')
-            fi
-            
-            echo "changelog_content=$escaped_content" >> $GITHUB_OUTPUT
             echo "Successfully read CHANGELOG"
           else
             echo "CHANGELOG file not found, using default message"
@@ -151,39 +154,29 @@ jobs:
         id: prepare_files
         run: |
           files=""
-          declare -a file_paths=()
           
           # Add CurseForge file if generated
           if [ "${{ github.event.inputs.curseforge_build }}" == "true" ] && [ -n "${{ steps.curseforge_export.outputs.curseforge_file }}" ]; then
-            cf_file="${{ steps.curseforge_export.outputs.curseforge_file }}"
-            cf_path="${{ steps.curseforge_export.outputs.curseforge_path }}"
-            files="$files NTNH/$cf_file"
-            file_paths+=("NTNH/$cf_path")
-            echo "Adding CurseForge file: $cf_file"
+            files="$files NTNH/${{ steps.curseforge_export.outputs.curseforge_file }}"
+            echo "Adding CurseForge file: ${{ steps.curseforge_export.outputs.curseforge_file }}"
           fi
           
           # Add Modrinth file if generated
           if [ "${{ github.event.inputs.modrinth_build }}" == "true" ] && [ -n "${{ steps.modrinth_export.outputs.modrinth_file }}" ]; then
-            mr_file="${{ steps.modrinth_export.outputs.modrinth_file }}"
-            mr_path="${{ steps.modrinth_export.outputs.modrinth_path }}"
-            files="$files NTNH/$mr_file"
-            file_paths+=("NTNH/$mr_path")
-            echo "Adding Modrinth file: $mr_file"
+            files="$files NTNH/${{ steps.modrinth_export.outputs.modrinth_file }}"
+            echo "Adding Modrinth file: ${{ steps.modrinth_export.outputs.modrinth_file }}"
           fi
           
           # Trim leading space
           files=$(echo "$files" | sed 's/^ //')
-          
-          echo "release_files=$files" >> $GITHUB_OUTPUT
-          echo "file_paths=${file_paths[@]}" >> $GITHUB_OUTPUT
           
           if [ -z "$files" ]; then
             echo "No build files were generated. At least one build type must be selected."
             exit 1
           fi
           
+          echo "release_files=$files" >> $GITHUB_OUTPUT
           echo "Release files to upload: $files"
-          echo "File paths: ${file_paths[@]}"
         shell: bash
 
       - name: Create Release
@@ -198,13 +191,3 @@ jobs:
           files: ${{ steps.prepare_files.outputs.release_files }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Verification step
-        run: |
-          echo "Release created successfully!"
-          echo "Version: ${{ github.event.inputs.version }}"
-          echo "Release type: ${{ github.event.inputs.release_type }}"
-          echo "CurseForge build: ${{ github.event.inputs.curseforge_build }}"
-          echo "Modrinth build: ${{ github.event.inputs.modrinth_build }}"
-          echo "Files uploaded: ${{ steps.prepare_files.outputs.release_files }}"
-        shell: bash
