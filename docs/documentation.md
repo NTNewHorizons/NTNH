@@ -1,20 +1,27 @@
-# NTNH SERVER DOCUMENTATION
+# NTNH SERVER DOCUMENTATION  
 
-Hey there! This documentation is going to guide you through all steps - from theory of how server works to configuring your server as you like it.
-    
-> If you have any questions (from suggestions to typo reports) - ping @Bufka2011 in NTNH Discord.
+Hey there! 👋  
+Welcome to the official documentation for **NTNH Server**.
 
----
+This guide will walk you through everything you need to know - from understanding how the server works, to deploying it on your machine, and finally customizing it to your exact liking.
 
-[Step 1 - theory](https://github.com/Nuclear-Tech-New-Horizons/NTNH/blob/server/docs/theory.md)
-> Explains how a server works and what will you need for it.
-
----
-
-[Step 2 - deploying](https://github.com/Nuclear-Tech-New-Horizons/NTNH/blob/server/docs/deploying.md)
-> Guides you through installing the server and getting it started.
+> 💬 **Need help?** Got a suggestion, found a typo, or just want to say hi?  
+> Join our Discord and ping **@Bufka2011** - we’re happy to help!
 
 ---
 
-[Step 3 - configuring](https://github.com/Nuclear-Tech-New-Horizons/NTNH/blob/server/docs/configuring.md)
-> Shows you how can you change your server and look like how you want it to.
+## 📚 Table of Contents
+
+| Step | Title | Description |
+|------|-------|-------------|
+| ✅ **1** | [Theory](theory.md) | Understand how a Minecraft server works, what components are involved, and what you’ll need before deploying. |
+| ✅ **2** | [Deploying](deploying.md) | Step-by-step instructions to install, configure, and launch your server for the first time. |
+| ✅ **3** | [Configuring](configuring.md) | Customize server settings, plugins, mods, world generation, and performance options to suit your playstyle. |
+
+---
+
+## 🔗 Quick Links
+
+- [Theory: How It All Works](theory.md)  
+- [Deploying: Install & Run in Minutes](deploying.md)  
+- [Configuring: Make It Yours](configuring.md)
