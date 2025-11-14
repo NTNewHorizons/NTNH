@@ -98,7 +98,6 @@ jobs:
           packwiz curseforge export
           
           # Find the generated export file - be format-agnostic
-          # Look for files with the pack name and version
           export_file=$(find . -maxdepth 1 -name "*Nuclear Tech: New Horizons*${{ github.event.inputs.version }}*" -print -quit)
           
           # If not found by name, look for recently modified files with common extensions
@@ -118,9 +117,13 @@ jobs:
           clean_filename=$(basename "$export_file")
           echo "Found export file: $clean_filename"
           
-          echo "curseforge_file=$clean_filename" >> $GITHUB_OUTPUT
-          echo "curseforge_path=$export_file" >> $GITHUB_OUTPUT
-          echo "CurseForge build generated: $clean_filename"
+          # Rename the file to NTNH-X.X.X-CurseForge.zip
+          new_filename="NTNH-${{ github.event.inputs.version }}-CurseForge.zip"
+          mv "$export_file" "$new_filename"
+          echo "Renamed file to: $new_filename"
+          
+          echo "curseforge_file=$new_filename" >> $GITHUB_OUTPUT
+          echo "CurseForge build generated: $new_filename"
         shell: bash
 
       - name: Run Modrinth export (if selected)
@@ -132,7 +135,6 @@ jobs:
           packwiz modrinth export
           
           # Find the generated export file - be format-agnostic
-          # Look for files with the pack name and version
           export_file=$(find . -maxdepth 1 -name "*Nuclear Tech: New Horizons*${{ github.event.inputs.version }}*" -print -quit)
           
           # If not found by name, look for recently modified files with common extensions
@@ -152,9 +154,27 @@ jobs:
           clean_filename=$(basename "$export_file")
           echo "Found export file: $clean_filename"
           
-          echo "modrinth_file=$clean_filename" >> $GITHUB_OUTPUT
-          echo "modrinth_path=$export_file" >> $GITHUB_OUTPUT
-          echo "Modrinth build generated: $clean_filename"
+          # Rename the file to NTNH-X.X.X-Modrinth.mrpack
+          new_filename="NTNH-${{ github.event.inputs.version }}-Modrinth.mrpack"
+          mv "$export_file" "$new_filename"
+          echo "Renamed file to: $new_filename"
+          
+          echo "modrinth_file=$new_filename" >> $GITHUB_OUTPUT
+          echo "Modrinth build generated: $new_filename"
+        shell: bash
+
+      - name: Check for MaryTTS.zip
+        id: marytts_check
+        run: |
+          cd NTNH
+          if [ -f "MaryTTS.zip" ]; then
+            echo "MaryTTS.zip found in repository"
+            echo "marytts_exists=true" >> $GITHUB_OUTPUT
+            echo "marytts_file=MaryTTS.zip" >> $GITHUB_OUTPUT
+          else
+            echo "MaryTTS.zip not found in repository"
+            echo "marytts_exists=false" >> $GITHUB_OUTPUT
+          fi
         shell: bash
 
       - name: Read CHANGELOG
@@ -199,6 +219,12 @@ jobs:
             echo "Adding Modrinth file: ${{ steps.modrinth_export.outputs.modrinth_file }}"
           fi
           
+          # Always add MaryTTS.zip if it exists
+          if [ "${{ steps.marytts_check.outputs.marytts_exists }}" == "true" ]; then
+            files="$files NTNH/${{ steps.marytts_check.outputs.marytts_file }}"
+            echo "Adding MaryTTS.zip to release files"
+          fi
+          
           # Trim leading space
           files=$(echo "$files" | sed 's/^ //')
           
@@ -216,7 +242,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ github.event.inputs.version }}
-          name: NTNH v${{ github.event.inputs.version }}
+          name: v${{ github.event.inputs.version }}
           body: ${{ steps.changelog.outputs.changelog_content }}
           draft: false
           prerelease: ${{ github.event.inputs.release_type == 'pre-release' }}
