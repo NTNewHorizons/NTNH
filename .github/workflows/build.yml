@@ -1,65 +1,108 @@
-name: Manual Pack Build & Release
+name: Build and Release Modpack
 
 on:
   workflow_dispatch:
     inputs:
-      tag_version:
-        description: 'Tag version (e.g. v1.2.3)'
+      branch:
+        description: 'Branch to build from'
+        required: true
+        default: 'experiments/packwiz'
+      version:
+        description: 'Version tag (e.g. 1.0.0)'
         required: true
       release_type:
-        description: 'Type of release (release, latest release, pre-release)'
+        description: 'Release type'
         required: true
         default: 'release'
+        type: choice
         options:
           - release
-          - latest release
           - pre-release
+          - latest
+      build_type:
+        description: 'Build type'
+        required: true
+        default: 'curseforge'
+        type: choice
+        options:
+          - curseforge
+          - modrinth
 
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+
     steps:
-      - name: Checkout target repo (experiments/server)
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           repository: Nuclear-Tech-New-Horizons/NTNH
-          ref: experiments/server
-          token: ${{ secrets.GITHUB_TOKEN }}
+          ref: ${{ github.event.inputs.branch }}
+          path: NTNH
+          fetch-depth: 0
 
-      - name: Setup Go
-        uses: actions/setup-go@v4
+      - name: Set up Go
+        uses: actions/setup-go@v5
         with:
           go-version: '1.21'
 
-      - name: Add GOPATH bin to PATH
-        run: echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
-
       - name: Install packwiz
-        run: go install github.com/packwiz/packwiz@latest
-
-      - name: Export CurseForge pack (produce .zip)
         run: |
-          # adjust flags if your packwiz config requires them
-          packwiz curseforge export --no-confirm
+          cd NTNH
+          go install github.com/packwiz/packwiz@latest
 
-      - name: Locate generated zip
-        id: findzip
+      - name: Run packwiz export
+        id: export
         run: |
-          set -e
-          zipfile=$(find . -type f -name "*.zip" | head -n 1 || true)
-          if [ -z "$zipfile" ]; then
-            echo "No zip file produced" >&2
+          cd NTNH
+          if [ "${{ github.event.inputs.build_type }}" == "curseforge" ]; then
+            packwiz curseforge export
+            export_file=$(ls *.zip | head -1)
+          elif [ "${{ github.event.inputs.build_type }}" == "modrinth" ]; then
+            packwiz modrinth export
+            export_file=$(ls *.zip | head -1)
+          else
+            echo "Invalid build type"
             exit 1
           fi
-          echo "zipfile=$zipfile" >> $GITHUB_OUTPUT
+          echo "export_file=$export_file" >> $GITHUB_OUTPUT
+          echo "Build completed: $export_file"
+        shell: bash
 
-      - name: Create release and upload asset
-        uses: ncipollo/release-action@v1
+      - name: Read CHANGELOG
+        id: changelog
+        run: |
+          cd NTNH
+          if [ -f CHANGELOG ]; then
+            changelog_content=$(cat CHANGELOG)
+            echo "changelog_content<<EOF" >> $GITHUB_OUTPUT
+            echo "$changelog_content" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          else
+            echo "CHANGELOG file not found, using default message"
+            echo "changelog_content=No changelog available for this release." >> $GITHUB_OUTPUT
+          fi
+        shell: bash
+
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
         with:
-          tag: ${{ github.event.inputs.tag_version }}
-          name: ${{ github.event.inputs.tag_version }}
-          files: ${{ steps.findzip.outputs.zipfile }}
-          prerelease: ${{ contains(github.event.inputs.release_type, 'pre') }}
+          tag_name: ${{ github.event.inputs.version }}
+          name: NTNH v${{ github.event.inputs.version }}
+          body: ${{ steps.changelog.outputs.changelog_content }}
           draft: false
+          prerelease: ${{ github.event.inputs.release_type == 'pre-release' }}
+          files: NTNH/${{ steps.export.outputs.export_file }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set latest release if needed
+        if: github.event.inputs.release_type == 'latest'
+        run: |
+          echo "Setting release as latest..."
+          # This is handled automatically by GitHub when creating a non-prerelease
+          # No additional action needed as GitHub will treat the most recent non-prerelease as latest
