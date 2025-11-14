@@ -16,7 +16,7 @@ This guide will walk you through everything you need to know - from understandin
 |------|-------|-------------|
 | ✅ **1** | [Theory](theory.md) | Understand how a Minecraft server works, what components are involved, and what you’ll need before deploying. |
 | ✅ **2** | [Deploying](deploying.md) | Step-by-step instructions to install, configure, and launch your server for the first time. |
-| ✅ **3** | [Configuring](configuring.md) | Customize server settings, plugins, mods, world generation, and performance options to suit your playstyle. |
+| ✅ **3** | [Configuring](configuring.md) | Customize server settings, plugins and mods to call your server yours indeed. |
 
 ---
 
