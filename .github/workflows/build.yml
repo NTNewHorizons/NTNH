@@ -97,10 +97,10 @@ jobs:
           mkdir -p /home/runner/.cache/packwiz/cache/import
           
           echo "Downloading Low On Fire texture pack..."
-          wget -O /home/runner/.cache/packwiz/cache/import/LowOnFire_1.8.zip https://edge.forgecdn.net/files/4307/966/LowOnFire_1.8.zip
+          wget -O /home/runner/.cache/packwiz/cache/import/LowOnFire_1.8.zip https://edge.forgecdn.net/files/4307/966/LowOnFire_1.8.zip  
           
           echo "Downloading Rails of War mod..."
-          wget -O /home/runner/.cache/packwiz/cache/import/RailsOfWar-1.7.10-5.8-RC7.jar https://edge.forgecdn.net/files/2459/153/RailsOfWar-1.7.10-5.8-RC7.jar
+          wget -O /home/runner/.cache/packwiz/cache/import/RailsOfWar-1.7.10-5.8-RC7.jar https://edge.forgecdn.net/files/2459/153/RailsOfWar-1.7.10-5.8-RC7.jar  
           
           echo "Manual downloads prepared successfully"
         shell: bash
@@ -225,19 +225,20 @@ jobs:
           
           # Add CurseForge file if generated
           if [ "${{ github.event.inputs.curseforge_build }}" == "true" ] && [ -n "${{ steps.curseforge_export.outputs.curseforge_file }}" ]; then
-            files="$files NTNH/${{ steps.curseforge_export.outputs.curseforge_file }}"
+            # The files are already in the NTNH directory, so just use the filename
+            files="$files ${{ steps.curseforge_export.outputs.curseforge_file }}"
             echo "Adding CurseForge file: ${{ steps.curseforge_export.outputs.curseforge_file }}"
           fi
           
           # Add Modrinth file if generated
           if [ "${{ github.event.inputs.modrinth_build }}" == "true" ] && [ -n "${{ steps.modrinth_export.outputs.modrinth_file }}" ]; then
-            files="$files NTNH/${{ steps.modrinth_export.outputs.modrinth_file }}"
+            files="$files ${{ steps.modrinth_export.outputs.modrinth_file }}"
             echo "Adding Modrinth file: ${{ steps.modrinth_export.outputs.modrinth_file }}"
           fi
           
           # Always add Mary-TTS.zip if it exists
           if [ "${{ steps.marytts_check.outputs.marytts_exists }}" == "true" ]; then
-            files="$files NTNH/${{ steps.marytts_check.outputs.marytts_file }}"
+            files="$files ${{ steps.marytts_check.outputs.marytts_file }}"
             echo "Adding Mary-TTS.zip to release files"
           fi
           
