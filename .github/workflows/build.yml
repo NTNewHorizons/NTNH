@@ -89,7 +89,7 @@ jobs:
       - name: Run packwiz refresh
         run: |
           cd NTNH
-          echo "Running packwiz refresh to update metadata and download mod files..."
+          echo "Running packwiz refresh to update metadata..."
           packwiz refresh
           echo "Packwiz refresh completed successfully"
         shell: bash
@@ -184,7 +184,6 @@ jobs:
           echo "Modrinth build generated: $new_filename"
         shell: bash
 
-      # --- NEW STEP: Create Native ZIP after packwiz refresh/downloads ---
       - name: Create Native ZIP (if selected)
         id: native_export
         if: ${{ github.event.inputs.native_build == 'true' }}
@@ -196,7 +195,6 @@ jobs:
           native_zip_name="NTNH-${{ github.event.inputs.version }}-Native.zip"
           
           # Check if the mods folder (or other expected folders) exist and contain files
-          # Adjust the list of folders as needed for your modpack (e.g., resourcepacks/, config/, etc.)
           if [ -d "mods" ] && [ -n "$(ls -A mods)" ]; then
             echo "Found files in mods/ directory, adding to ZIP..."
           else
@@ -226,10 +224,7 @@ jobs:
              ls -la
              exit 1
           fi
-          
         shell: bash
-
-      # --- END NEW STEP ---
 
       - name: Check for Mary-TTS.zip
         id: marytts_check
@@ -252,11 +247,7 @@ jobs:
           if [ -f CHANGELOG ]; then
             echo "Reading CHANGELOG file..."
             
-            # Read the CHANGELOG directly without complex escaping
-            # The action-gh-release action can handle markdown content
             changelog_content=$(cat CHANGELOG)
-            
-            # Escape $ characters for GitHub Actions
             escaped_content=$(echo "$changelog_content" | sed 's/\$/\$\$/g')
             
             echo "changelog_content<<EOF" >> $GITHUB_OUTPUT
@@ -277,25 +268,25 @@ jobs:
           
           # Add CurseForge file if generated
           if [ "${{ github.event.inputs.curseforge_build }}" == "true" ] && [ -n "${{ steps.curseforge_export.outputs.curseforge_file }}" ]; then
-            files="$files NTNH/${{ steps.curseforge_export.outputs.curseforge_file }}"
+            files="${files} NTNH/${{ steps.curseforge_export.outputs.curseforge_file }}"
             echo "Adding CurseForge file: NTNH/${{ steps.curseforge_export.outputs.curseforge_file }}"
           fi
           
           # Add Modrinth file if generated
           if [ "${{ github.event.inputs.modrinth_build }}" == "true" ] && [ -n "${{ steps.modrinth_export.outputs.modrinth_file }}" ]; then
-            files="$files NTNH/${{ steps.modrinth_export.outputs.modrinth_file }}"
+            files="${files} NTNH/${{ steps.modrinth_export.outputs.modrinth_file }}"
             echo "Adding Modrinth file: NTNH/${{ steps.modrinth_export.outputs.modrinth_file }}"
           fi
           
           # Add Native file if generated
           if [ "${{ github.event.inputs.native_build }}" == "true" ] && [ -n "${{ steps.native_export.outputs.native_file }}" ]; then
-            files="$files NTNH/${{ steps.native_export.outputs.native_file }}"
+            files="${files} NTNH/${{ steps.native_export.outputs.native_file }}"
             echo "Adding Native file: NTNH/${{ steps.native_export.outputs.native_file }}"
           fi
           
           # Always add Mary-TTS.zip if it exists
           if [ "${{ steps.marytts_check.outputs.marytts_exists }}" == "true" ]; then
-            files="$files NTNH/${{ steps.marytts_check.outputs.marytts_file }}"
+            files="${files} NTNH/${{ steps.marytts_check.outputs.marytts_file }}"
             echo "Adding Mary-TTS.zip to release files"
           fi
           
@@ -308,7 +299,7 @@ jobs:
           fi
           
           echo "release_files=$files" >> $GITHUB_OUTPUT
-          echo "Release files to upload: $files"
+          echo "Release files to copy: $files"
         shell: bash
 
       # NEW STEP: Copy files to the root directory for reliable upload
@@ -318,7 +309,27 @@ jobs:
             echo "Copying $file to root directory..."
             cp "$file" ./
           done
+          echo "Files in root directory:"
           ls -la *.zip *.mrpack || echo "No .zip or .mrpack files found in root."
+
+      # Extract just the filenames from the full paths
+      - name: Prepare filenames for release
+        id: prepare_filenames
+        run: |
+          # Get just the filenames from the paths
+          filenames=""
+          for file in ${{ steps.prepare_files.outputs.release_files }}; do
+            # Extract just the filename without path
+            filename=$(basename "$file")
+            filenames="${filenames} ${filename}"
+          done
+          
+          # Trim leading space
+          filenames=$(echo "$filenames" | sed 's/^ //')
+          
+          echo "release_filenames=$filenames" >> $GITHUB_OUTPUT
+          echo "Release filenames: $filenames"
+        shell: bash
 
       - name: Create Release
         id: create_release
@@ -329,8 +340,8 @@ jobs:
           body: ${{ steps.changelog.outputs.changelog_content }}
           draft: false
           prerelease: ${{ github.event.inputs.release_type == 'pre-release' }}
-          # Point to files in the root directory now
-          files: ${{ steps.prepare_files.outputs.release_files }}
+          # Use the filenames from the root directory
+          files: ${{ steps.prepare_filenames.outputs.release_filenames }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
