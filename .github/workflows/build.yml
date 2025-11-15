@@ -31,6 +31,11 @@ on:
         required: true
         default: 'true'
         type: boolean
+      native_build:
+        description: 'Generate Native build (raw mod files in a ZIP)'
+        required: true
+        default: 'false'
+        type: boolean
 
 jobs:
   build-and-release:
@@ -179,6 +184,71 @@ jobs:
           echo "Modrinth build generated: $new_filename"
         shell: bash
 
+      # --- NEW STEP: Run packwiz-installer for Native build ---
+      - name: Run packwiz-installer for Native build (if selected)
+        id: native_export
+        if: ${{ github.event.inputs.native_build == 'true' }}
+        run: |
+          cd NTNH
+          echo "Preparing for packwiz-installer..."
+          
+          # Download packwiz-installer JAR
+          INSTALLER_URL=$(curl -s https://api.github.com/repos/packwiz/packwiz-installer/releases/latest | grep browser_download_url | grep -E '\.jar$' | cut -d '"' -f 4)
+          if [ -z "$INSTALLER_URL" ]; then
+              echo "Failed to get latest packwiz-installer URL"
+              exit 1
+          fi
+          echo "Downloading packwiz-installer from: $INSTALLER_URL"
+          wget -O packwiz-installer.jar "$INSTALLER_URL"
+          
+          # Create a temporary directory for the native instance
+          NATIVE_INSTANCE_DIR="native_instance"
+          mkdir -p "$NATIVE_INSTANCE_DIR"
+          
+          # Copy essential packwiz files (pack.toml, index.toml, icon.png if it exists) to the instance directory
+          cp pack.toml index.toml "$NATIVE_INSTANCE_DIR/"
+          if [ -f "icon.png" ]; then
+            cp "icon.png" "$NATIVE_INSTANCE_DIR/"
+          fi
+          
+          # Run packwiz-installer inside the temporary directory
+          echo "Running packwiz-installer in $NATIVE_INSTANCE_DIR..."
+          java -jar ../packwiz-installer.jar -g -o .
+          
+          # Check if the instance directory now contains the expected files (e.g., mods folder)
+          if [ -d "$NATIVE_INSTANCE_DIR/mods" ] && [ -n "$(ls -A "$NATIVE_INSTANCE_DIR/mods")" ]; then
+            echo "packwiz-installer completed successfully, found files in $NATIVE_INSTANCE_DIR/mods/"
+          else
+            echo "packwiz-installer failed or $NATIVE_INSTANCE_DIR/mods directory is empty!"
+            ls -la "$NATIVE_INSTANCE_DIR/"
+            exit 1
+          fi
+          
+          # Create the final native zip file name
+          native_zip_name="NTNH-${{ github.event.inputs.version }}-Native.zip"
+          
+          # Zip the *contents* of the native_instance directory (excluding the packwiz metadata files if desired)
+          # Here, we include the metadata files inside the zip for completeness, but they are not needed by the launcher itself.
+          # If you want a zip with *only* the mod files and standard MC folders, you can zip "$NATIVE_INSTANCE_DIR/." instead of "$NATIVE_INSTANCE_DIR"
+          echo "Zipping $NATIVE_INSTANCE_DIR/ directory contents to ${native_zip_name}..."
+          cd "$NATIVE_INSTANCE_DIR"
+          zip -r "../${native_zip_name}" .
+          cd ..
+          
+          # Check if the zip was created in the parent directory (NTNH/)
+          if [ -f "NTNH/${native_zip_name}" ]; then
+             echo "Native build generated: NTNH/${native_zip_name}"
+             echo "native_file=${native_zip_name}" >> $GITHUB_OUTPUT
+          else
+             echo "Failed to create native zip file: NTNH/${native_zip_name}"
+             ls -la NTNH/
+             exit 1
+          fi
+          
+        shell: bash
+
+      # --- END NEW STEP ---
+
       - name: Check for Mary-TTS.zip
         id: marytts_check
         run: |
@@ -225,21 +295,24 @@ jobs:
           
           # Add CurseForge file if generated
           if [ "${{ github.event.inputs.curseforge_build }}" == "true" ] && [ -n "${{ steps.curseforge_export.outputs.curseforge_file }}" ]; then
-            # Prefix the filename with the NTNH directory path
             files="$files NTNH/${{ steps.curseforge_export.outputs.curseforge_file }}"
             echo "Adding CurseForge file: NTNH/${{ steps.curseforge_export.outputs.curseforge_file }}"
           fi
           
           # Add Modrinth file if generated
           if [ "${{ github.event.inputs.modrinth_build }}" == "true" ] && [ -n "${{ steps.modrinth_export.outputs.modrinth_file }}" ]; then
-            # Prefix the filename with the NTNH directory path
             files="$files NTNH/${{ steps.modrinth_export.outputs.modrinth_file }}"
             echo "Adding Modrinth file: NTNH/${{ steps.modrinth_export.outputs.modrinth_file }}"
           fi
           
+          # Add Native file if generated
+          if [ "${{ github.event.inputs.native_build }}" == "true" ] && [ -n "${{ steps.native_export.outputs.native_file }}" ]; then
+            files="$files NTNH/${{ steps.native_export.outputs.native_file }}"
+            echo "Adding Native file: NTNH/${{ steps.native_export.outputs.native_file }}"
+          fi
+          
           # Always add Mary-TTS.zip if it exists
           if [ "${{ steps.marytts_check.outputs.marytts_exists }}" == "true" ]; then
-            # Prefix the filename with the NTNH directory path
             files="$files NTNH/${{ steps.marytts_check.outputs.marytts_file }}"
             echo "Adding Mary-TTS.zip to release files"
           fi
@@ -275,10 +348,7 @@ jobs:
           draft: false
           prerelease: ${{ github.event.inputs.release_type == 'pre-release' }}
           # Point to files in the root directory now
-          files: |
-            NTNH-${{ github.event.inputs.version }}-CurseForge.zip
-            NTNH-${{ github.event.inputs.version }}-Modrinth.mrpack
-            Mary-TTS.zip
+          files: ${{ steps.prepare_files.outputs.release_files }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
