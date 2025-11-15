@@ -97,10 +97,10 @@ jobs:
           mkdir -p /home/runner/.cache/packwiz/cache/import
           
           echo "Downloading Low On Fire texture pack..."
-          wget -O /home/runner/.cache/packwiz/cache/import/LowOnFire_1.8.zip https://edge.forgecdn.net/files/4307/966/LowOnFire_1.8.zip  
+          wget -O /home/runner/.cache/packwiz/cache/import/LowOnFire_1.8.zip https://edge.forgecdn.net/files/4307/966/LowOnFire_1.8.zip    
           
           echo "Downloading Rails of War mod..."
-          wget -O /home/runner/.cache/packwiz/cache/import/RailsOfWar-1.7.10-5.8-RC7.jar https://edge.forgecdn.net/files/2459/153/RailsOfWar-1.7.10-5.8-RC7.jar  
+          wget -O /home/runner/.cache/packwiz/cache/import/RailsOfWar-1.7.10-5.8-RC7.jar https://edge.forgecdn.net/files/2459/153/RailsOfWar-1.7.10-5.8-RC7.jar    
           
           echo "Manual downloads prepared successfully"
         shell: bash
@@ -218,7 +218,7 @@ jobs:
           fi
         shell: bash
 
-            - name: Prepare release files
+      - name: Prepare release files
         id: prepare_files
         run: |
           files=""
@@ -256,6 +256,15 @@ jobs:
           echo "Release files to upload: $files"
         shell: bash
 
+      # NEW STEP: Copy files to the root directory for reliable upload
+      - name: Copy release files to root
+        run: |
+          for file in ${{ steps.prepare_files.outputs.release_files }}; do
+            echo "Copying $file to root directory..."
+            cp "$file" ./
+          done
+          ls -la *.zip *.mrpack || echo "No .zip or .mrpack files found in root."
+
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v1
@@ -265,7 +274,11 @@ jobs:
           body: ${{ steps.changelog.outputs.changelog_content }}
           draft: false
           prerelease: ${{ github.event.inputs.release_type == 'pre-release' }}
-          files: ${{ steps.prepare_files.outputs.release_files }}
+          # Point to files in the root directory now
+          files: |
+            NTNH-${{ github.event.inputs.version }}-CurseForge.zip
+            NTNH-${{ github.event.inputs.version }}-Modrinth.mrpack
+            Mary-TTS.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
