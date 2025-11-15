@@ -31,11 +31,6 @@ on:
         required: true
         default: 'true'
         type: boolean
-      native_build:
-        description: 'Generate Native build (raw mod files in a ZIP)'
-        required: true
-        default: 'false'
-        type: boolean
 
 jobs:
   build-and-release:
@@ -50,6 +45,7 @@ jobs:
         with:
           repository: Nuclear-Tech-New-Horizons/NTNH
           ref: ${{ github.event.inputs.branch }}
+          path: NTNH
           fetch-depth: 0
 
       - name: Set up Go
@@ -69,10 +65,17 @@ jobs:
 
       - name: Update version in pack.toml
         run: |
+          cd NTNH
           echo "Updating pack.toml with version: ${{ github.event.inputs.version }}"
           
           # Update the version field in pack.toml
-          sed -i "s/^version = .*/version = \"${{ github.event.inputs.version }}\"/" pack.toml
+          if [[ "$(uname)" == "Darwin" ]]; then
+            # macOS version of sed
+            sed -i '' "s/^version = .*/version = \"${{ github.event.inputs.version }}\"/" pack.toml
+          else
+            # Linux version of sed
+            sed -i "s/^version = .*/version = \"${{ github.event.inputs.version }}\"/" pack.toml
+          fi
           
           echo "Updated pack.toml:"
           cat pack.toml
@@ -80,6 +83,7 @@ jobs:
 
       - name: Run packwiz refresh
         run: |
+          cd NTNH
           echo "Running packwiz refresh to update metadata..."
           packwiz refresh
           echo "Packwiz refresh completed successfully"
@@ -88,14 +92,15 @@ jobs:
       - name: Prepare manual downloads (required for Modrinth export)
         if: ${{ github.event.inputs.modrinth_build == 'true' }}
         run: |
+          cd NTNH
           echo "Creating cache directory for manual downloads..."
           mkdir -p /home/runner/.cache/packwiz/cache/import
           
           echo "Downloading Low On Fire texture pack..."
-          wget -O /home/runner/.cache/packwiz/cache/import/LowOnFire_1.8.zip https://edge.forgecdn.net/files/4307/966/LowOnFire_1.8.zip     
+          wget -O /home/runner/.cache/packwiz/cache/import/LowOnFire_1.8.zip https://edge.forgecdn.net/files/4307/966/LowOnFire_1.8.zip    
           
           echo "Downloading Rails of War mod..."
-          wget -O /home/runner/.cache/packwiz/cache/import/RailsOfWar-1.7.10-5.8-RC7.jar https://edge.forgecdn.net/files/2459/153/RailsOfWar-1.7.10-5.8-RC7.jar     
+          wget -O /home/runner/.cache/packwiz/cache/import/RailsOfWar-1.7.10-5.8-RC7.jar https://edge.forgecdn.net/files/2459/153/RailsOfWar-1.7.10-5.8-RC7.jar    
           
           echo "Manual downloads prepared successfully"
         shell: bash
@@ -104,12 +109,14 @@ jobs:
         id: curseforge_export
         if: ${{ github.event.inputs.curseforge_build == 'true' }}
         run: |
+          cd NTNH
           echo "Running packwiz curseforge export..."
           packwiz curseforge export
           
-          # Find the generated export file
+          # Find the generated export file - be format-agnostic
           export_file=$(find . -maxdepth 1 -name "*Nuclear Tech: New Horizons*${{ github.event.inputs.version }}*" -print -quit)
           
+          # If not found by name, look for recently modified files with common extensions
           if [ -z "$export_file" ]; then
             echo "Could not find by name, searching by extension and modification time..."
             export_file=$(find . -maxdepth 1 -type f \( -name "*.zip" -o -name "*.jar" -o -name "*.mrpack" \) -mmin -1 -print -quit)
@@ -122,6 +129,7 @@ jobs:
             exit 1
           fi
           
+          # Clean up the filename (remove ./ prefix)
           clean_filename=$(basename "$export_file")
           echo "Found export file: $clean_filename"
           
@@ -138,12 +146,14 @@ jobs:
         id: modrinth_export
         if: ${{ github.event.inputs.modrinth_build == 'true' }}
         run: |
+          cd NTNH
           echo "Running packwiz modrinth export..."
           packwiz modrinth export
           
-          # Find the generated export file
+          # Find the generated export file - be format-agnostic
           export_file=$(find . -maxdepth 1 -name "*Nuclear Tech: New Horizons*${{ github.event.inputs.version }}*" -print -quit)
           
+          # If not found by name, look for recently modified files with common extensions
           if [ -z "$export_file" ]; then
             echo "Could not find by name, searching by extension and modification time..."
             export_file=$(find . -maxdepth 1 -type f \( -name "*.zip" -o -name "*.jar" -o -name "*.mrpack" \) -mmin -1 -print -quit)
@@ -156,6 +166,7 @@ jobs:
             exit 1
           fi
           
+          # Clean up the filename (remove ./ prefix)
           clean_filename=$(basename "$export_file")
           echo "Found export file: $clean_filename"
           
@@ -168,40 +179,10 @@ jobs:
           echo "Modrinth build generated: $new_filename"
         shell: bash
 
-      - name: Create Native ZIP (if selected)
-        id: native_export
-        if: ${{ github.event.inputs.native_build == 'true' }}
-        run: |
-          echo "Creating Native ZIP containing actual mod files..."
-          
-          native_zip_name="NTNH-${{ github.event.inputs.version }}-Native.zip"
-          
-          if [ -d "mods" ] && [ -n "$(ls -A mods)" ]; then
-            echo "Found files in mods/ directory, adding to ZIP..."
-          else
-            echo "mods/ directory is empty or does not exist, checking other directories..."
-            if [ ! -d "mods" ] && [ ! -d "resourcepacks" ] && [ ! -d "config" ]; then
-               echo "No standard directories (mods, resourcepacks, config) found to include in Native ZIP."
-               ls -la
-               exit 1
-            fi
-          fi
-          
-          zip -r "${native_zip_name}" . -x "pack.toml" "index.toml" "icon.png" "*.lock" ".git*" "*/.git*"
-          
-          if [ -f "${native_zip_name}" ]; then
-             echo "Native build generated: ${native_zip_name}"
-             echo "native_file=${native_zip_name}" >> $GITHUB_OUTPUT
-          else
-             echo "Failed to create native zip file: ${native_zip_name}"
-             ls -la
-             exit 1
-          fi
-        shell: bash
-
       - name: Check for Mary-TTS.zip
         id: marytts_check
         run: |
+          cd NTNH
           if [ -f "Mary-TTS.zip" ]; then
             echo "Mary-TTS.zip found in repository"
             echo "marytts_exists=true" >> $GITHUB_OUTPUT
@@ -215,10 +196,15 @@ jobs:
       - name: Read CHANGELOG
         id: changelog
         run: |
+          cd NTNH
           if [ -f CHANGELOG ]; then
             echo "Reading CHANGELOG file..."
             
+            # Read the CHANGELOG directly without complex escaping
+            # The action-gh-release action can handle markdown content
             changelog_content=$(cat CHANGELOG)
+            
+            # Escape $ characters for GitHub Actions
             escaped_content=$(echo "$changelog_content" | sed 's/\$/\$\$/g')
             
             echo "changelog_content<<EOF" >> $GITHUB_OUTPUT
@@ -232,6 +218,53 @@ jobs:
           fi
         shell: bash
 
+      - name: Prepare release files
+        id: prepare_files
+        run: |
+          files=""
+          
+          # Add CurseForge file if generated
+          if [ "${{ github.event.inputs.curseforge_build }}" == "true" ] && [ -n "${{ steps.curseforge_export.outputs.curseforge_file }}" ]; then
+            # Prefix the filename with the NTNH directory path
+            files="$files NTNH/${{ steps.curseforge_export.outputs.curseforge_file }}"
+            echo "Adding CurseForge file: NTNH/${{ steps.curseforge_export.outputs.curseforge_file }}"
+          fi
+          
+          # Add Modrinth file if generated
+          if [ "${{ github.event.inputs.modrinth_build }}" == "true" ] && [ -n "${{ steps.modrinth_export.outputs.modrinth_file }}" ]; then
+            # Prefix the filename with the NTNH directory path
+            files="$files NTNH/${{ steps.modrinth_export.outputs.modrinth_file }}"
+            echo "Adding Modrinth file: NTNH/${{ steps.modrinth_export.outputs.modrinth_file }}"
+          fi
+          
+          # Always add Mary-TTS.zip if it exists
+          if [ "${{ steps.marytts_check.outputs.marytts_exists }}" == "true" ]; then
+            # Prefix the filename with the NTNH directory path
+            files="$files NTNH/${{ steps.marytts_check.outputs.marytts_file }}"
+            echo "Adding Mary-TTS.zip to release files"
+          fi
+          
+          # Trim leading space
+          files=$(echo "$files" | sed 's/^ //')
+          
+          if [ -z "$files" ]; then
+            echo "No build files were generated. At least one build type must be selected."
+            exit 1
+          fi
+          
+          echo "release_files=$files" >> $GITHUB_OUTPUT
+          echo "Release files to upload: $files"
+        shell: bash
+
+      # NEW STEP: Copy files to the root directory for reliable upload
+      - name: Copy release files to root
+        run: |
+          for file in ${{ steps.prepare_files.outputs.release_files }}; do
+            echo "Copying $file to root directory..."
+            cp "$file" ./
+          done
+          ls -la *.zip *.mrpack || echo "No .zip or .mrpack files found in root."
+
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v1
@@ -241,17 +274,18 @@ jobs:
           body: ${{ steps.changelog.outputs.changelog_content }}
           draft: false
           prerelease: ${{ github.event.inputs.release_type == 'pre-release' }}
+          # Point to files in the root directory now
           files: |
-            ${{ steps.curseforge_export.outputs.curseforge_file }}
-            ${{ steps.modrinth_export.outputs.modrinth_file }}
-            ${{ steps.native_export.outputs.native_file }}
-            ${{ steps.marytts_check.outputs.marytts_file }}
+            NTNH-${{ github.event.inputs.version }}-CurseForge.zip
+            NTNH-${{ github.event.inputs.version }}-Modrinth.mrpack
+            Mary-TTS.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit and push version changes (optional)
         if: ${{ github.ref == format('refs/heads/{0}', github.event.inputs.branch) }}
         run: |
+          cd NTNH
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add pack.toml index.toml
