@@ -60,6 +60,12 @@ jobs:
       - name: Install packwiz
         run: |
           go install github.com/packwiz/packwiz@latest
+        env:
+          GOPATH: /home/runner/go
+
+      - name: Add packwiz to PATH
+        run: |
+          echo "/home/runner/go/bin" >> $GITHUB_PATH
 
       - name: Update version in pack.toml
         run: |
@@ -70,26 +76,29 @@ jobs:
           
           echo "Updated pack.toml:"
           cat pack.toml
+        shell: bash
 
       - name: Run packwiz refresh
         run: |
           echo "Running packwiz refresh to update metadata..."
           packwiz refresh
           echo "Packwiz refresh completed successfully"
+        shell: bash
 
       - name: Prepare manual downloads (required for Modrinth export)
         if: ${{ github.event.inputs.modrinth_build == 'true' }}
         run: |
           echo "Creating cache directory for manual downloads..."
-          mkdir -p ~/.cache/packwiz/cache/import
+          mkdir -p /home/runner/.cache/packwiz/cache/import
           
           echo "Downloading Low On Fire texture pack..."
-          wget -O ~/.cache/packwiz/cache/import/LowOnFire_1.8.zip https://edge.forgecdn.net/files/4307/966/LowOnFire_1.8.zip     
+          wget -O /home/runner/.cache/packwiz/cache/import/LowOnFire_1.8.zip https://edge.forgecdn.net/files/4307/966/LowOnFire_1.8.zip     
           
           echo "Downloading Rails of War mod..."
-          wget -O ~/.cache/packwiz/cache/import/RailsOfWar-1.7.10-5.8-RC7.jar https://edge.forgecdn.net/files/2459/153/RailsOfWar-1.7.10-5.8-RC7.jar     
+          wget -O /home/runner/.cache/packwiz/cache/import/RailsOfWar-1.7.10-5.8-RC7.jar https://edge.forgecdn.net/files/2459/153/RailsOfWar-1.7.10-5.8-RC7.jar     
           
           echo "Manual downloads prepared successfully"
+        shell: bash
 
       - name: Run CurseForge export (if selected)
         id: curseforge_export
@@ -98,36 +107,32 @@ jobs:
           echo "Running packwiz curseforge export..."
           packwiz curseforge export
           
-          # Find all potential export files
-          echo "Looking for export files..."
-          ls -la
+          # Find the generated export file
+          export_file=$(find . -maxdepth 1 -name "*Nuclear Tech: New Horizons*${{ github.event.inputs.version }}*" -print -quit)
           
-          # Look for files with the version in the name
-          export_file=$(find . -maxdepth 1 -name "*${{ github.event.inputs.version }}*" -type f -print -quit)
-          
-          # Fallback: look for any recent zip/jar/mrpack files
           if [ -z "$export_file" ]; then
-            echo "No version-specific file found, searching by extension..."
+            echo "Could not find by name, searching by extension and modification time..."
             export_file=$(find . -maxdepth 1 -type f \( -name "*.zip" -o -name "*.jar" -o -name "*.mrpack" \) -mmin -1 -print -quit)
           fi
           
           if [ -z "$export_file" ]; then
             echo "No export file found after CurseForge export"
-            echo "Listing all files for debugging:"
-            ls -laR
+            echo "Listing directory contents for debugging:"
+            ls -la
             exit 1
           fi
           
-          export_file=$(basename "$export_file")
-          echo "Found export file: $export_file"
+          clean_filename=$(basename "$export_file")
+          echo "Found export file: $clean_filename"
           
-          # Rename the file to standard format
+          # Rename the file to NTNH-X.X.X-CurseForge.zip
           new_filename="NTNH-${{ github.event.inputs.version }}-CurseForge.zip"
           mv "$export_file" "$new_filename"
           echo "Renamed file to: $new_filename"
           
           echo "curseforge_file=$new_filename" >> $GITHUB_OUTPUT
           echo "CurseForge build generated: $new_filename"
+        shell: bash
 
       - name: Run Modrinth export (if selected)
         id: modrinth_export
@@ -136,35 +141,32 @@ jobs:
           echo "Running packwiz modrinth export..."
           packwiz modrinth export
           
-          echo "Looking for export files..."
-          ls -la
+          # Find the generated export file
+          export_file=$(find . -maxdepth 1 -name "*Nuclear Tech: New Horizons*${{ github.event.inputs.version }}*" -print -quit)
           
-          # Look for files with the version in the name
-          export_file=$(find . -maxdepth 1 -name "*${{ github.event.inputs.version }}*" -type f -print -quit)
-          
-          # Fallback: look for any recent zip/jar/mrpack files
           if [ -z "$export_file" ]; then
-            echo "No version-specific file found, searching by extension..."
+            echo "Could not find by name, searching by extension and modification time..."
             export_file=$(find . -maxdepth 1 -type f \( -name "*.zip" -o -name "*.jar" -o -name "*.mrpack" \) -mmin -1 -print -quit)
           fi
           
           if [ -z "$export_file" ]; then
             echo "No export file found after Modrinth export"
-            echo "Listing all files for debugging:"
-            ls -laR
+            echo "Listing directory contents for debugging:"
+            ls -la
             exit 1
           fi
           
-          export_file=$(basename "$export_file")
-          echo "Found export file: $export_file"
+          clean_filename=$(basename "$export_file")
+          echo "Found export file: $clean_filename"
           
-          # Rename the file to standard format
+          # Rename the file to NTNH-X.X.X-Modrinth.mrpack
           new_filename="NTNH-${{ github.event.inputs.version }}-Modrinth.mrpack"
           mv "$export_file" "$new_filename"
           echo "Renamed file to: $new_filename"
           
           echo "modrinth_file=$new_filename" >> $GITHUB_OUTPUT
           echo "Modrinth build generated: $new_filename"
+        shell: bash
 
       - name: Create Native ZIP (if selected)
         id: native_export
@@ -174,29 +176,28 @@ jobs:
           
           native_zip_name="NTNH-${{ github.event.inputs.version }}-Native.zip"
           
-          echo "Checking directory structure:"
-          ls -la
-          
-          # Check if we have content to zip
-          if [ ! -d "mods" ] && [ ! -d "resourcepacks" ] && [ ! -d "config" ]; then
-            echo "Warning: No standard directories found, but proceeding with available content"
+          if [ -d "mods" ] && [ -n "$(ls -A mods)" ]; then
+            echo "Found files in mods/ directory, adding to ZIP..."
+          else
+            echo "mods/ directory is empty or does not exist, checking other directories..."
+            if [ ! -d "mods" ] && [ ! -d "resourcepacks" ] && [ ! -d "config" ]; then
+               echo "No standard directories (mods, resourcepacks, config) found to include in Native ZIP."
+               ls -la
+               exit 1
+            fi
           fi
           
-          # Create the native zip
-          echo "Zipping contents to ${native_zip_name}..."
-          zip -r "${native_zip_name}" . \
-            -x "pack.toml" "index.toml" "icon.png" "*.lock" ".git*" "*/.git*" \
-            -x "**/.git/**" "**/.github/**" ".gitignore" "LICENSE" "README.md"
+          zip -r "${native_zip_name}" . -x "pack.toml" "index.toml" "icon.png" "*.lock" ".git*" "*/.git*"
           
           if [ -f "${native_zip_name}" ]; then
-            echo "Native build generated: ${native_zip_name}"
-            echo "native_file=${native_zip_name}" >> $GITHUB_OUTPUT
-            echo "Native ZIP size: $(du -h ${native_zip_name})"
+             echo "Native build generated: ${native_zip_name}"
+             echo "native_file=${native_zip_name}" >> $GITHUB_OUTPUT
           else
-            echo "Failed to create native zip file: ${native_zip_name}"
-            ls -la
-            exit 1
+             echo "Failed to create native zip file: ${native_zip_name}"
+             ls -la
+             exit 1
           fi
+        shell: bash
 
       - name: Check for Mary-TTS.zip
         id: marytts_check
@@ -209,41 +210,30 @@ jobs:
             echo "Mary-TTS.zip not found in repository"
             echo "marytts_exists=false" >> $GITHUB_OUTPUT
           fi
+        shell: bash
 
       - name: Read CHANGELOG
         id: changelog
         run: |
-          if [ -f "CHANGELOG" ]; then
+          if [ -f CHANGELOG ]; then
             echo "Reading CHANGELOG file..."
+            
             changelog_content=$(cat CHANGELOG)
-            # Escape special characters for GitHub Actions
-            changelog_content="${changelog_content//'%'/'%25'}"
-            changelog_content="${changelog_content//'
-'/'%0A'}"
-            changelog_content="${changelog_content//$'\r'/'%0D'}"
-            echo "changelog_content=${changelog_content}" >> $GITHUB_OUTPUT
+            escaped_content=$(echo "$changelog_content" | sed 's/\$/\$\$/g')
+            
+            echo "changelog_content<<EOF" >> $GITHUB_OUTPUT
+            echo "$escaped_content" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+            
             echo "Successfully read CHANGELOG"
           else
             echo "CHANGELOG file not found, using default message"
             echo "changelog_content=No changelog available for this release." >> $GITHUB_OUTPUT
           fi
-
-      - name: Debug file locations before release
-        run: |
-          echo "=== DEBUG: Current directory contents ==="
-          pwd
-          ls -la
-          
-          echo "=== DEBUG: Generated files ==="
-          echo "CurseForge file: ${{ steps.curseforge_export.outputs.curseforge_file }}"
-          echo "Modrinth file: ${{ steps.modrinth_export.outputs.modrinth_file }}"
-          echo "Native file: ${{ steps.native_export.outputs.native_file }}"
-          echo "Mary-TTS exists: ${{ steps.marytts_check.outputs.marytts_exists }}"
-          
-          echo "=== DEBUG: All ZIP/MRPACK files in workspace ==="
-          find . -name "*.zip" -o -name "*.mrpack" | xargs ls -la
+        shell: bash
 
       - name: Create Release
+        id: create_release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ github.event.inputs.version }}
@@ -258,13 +248,8 @@ jobs:
             ${{ steps.marytts_check.outputs.marytts_file }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        if: |
-          (github.event.inputs.curseforge_build == 'true' && steps.curseforge_export.outputs.curseforge_file != '') ||
-          (github.event.inputs.modrinth_build == 'true' && steps.modrinth_export.outputs.modrinth_file != '') ||
-          (github.event.inputs.native_build == 'true' && steps.native_export.outputs.native_file != '') ||
-          (steps.marytts_check.outputs.marytts_exists == 'true')
 
-      - name: Commit and push version changes
+      - name: Commit and push version changes (optional)
         if: ${{ github.ref == format('refs/heads/{0}', github.event.inputs.branch) }}
         run: |
           git config user.name "github-actions"
@@ -272,3 +257,4 @@ jobs:
           git add pack.toml index.toml
           git commit -m "Update version to ${{ github.event.inputs.version }}" || echo "No changes to commit"
           git push origin ${{ github.event.inputs.branch }} || echo "Push failed - might need manual merge"
+        shell: bash
