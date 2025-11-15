@@ -89,7 +89,7 @@ jobs:
       - name: Run packwiz refresh
         run: |
           cd NTNH
-          echo "Running packwiz refresh to update metadata..."
+          echo "Running packwiz refresh to update metadata and download mod files..."
           packwiz refresh
           echo "Packwiz refresh completed successfully"
         shell: bash
@@ -184,64 +184,46 @@ jobs:
           echo "Modrinth build generated: $new_filename"
         shell: bash
 
-      # --- NEW STEP: Run packwiz-installer for Native build ---
-      - name: Run packwiz-installer for Native build (if selected)
+      # --- NEW STEP: Create Native ZIP after packwiz refresh/downloads ---
+      - name: Create Native ZIP (if selected)
         id: native_export
         if: ${{ github.event.inputs.native_build == 'true' }}
         run: |
           cd NTNH
-          echo "Preparing for packwiz-installer..."
+          echo "Creating Native ZIP containing actual mod files..."
           
-          # Download packwiz-installer JAR
-          INSTALLER_URL=$(curl -s https://api.github.com/repos/packwiz/packwiz-installer/releases/latest | grep browser_download_url | grep -E '\.jar$' | cut -d '"' -f 4)
-          if [ -z "$INSTALLER_URL" ]; then
-              echo "Failed to get latest packwiz-installer URL"
-              exit 1
-          fi
-          echo "Downloading packwiz-installer from: $INSTALLER_URL"
-          wget -O packwiz-installer.jar "$INSTALLER_URL"
-          
-          # Create a temporary directory for the native instance
-          NATIVE_INSTANCE_DIR="native_instance"
-          mkdir -p "$NATIVE_INSTANCE_DIR"
-          
-          # Copy essential packwiz files (pack.toml, index.toml, icon.png if it exists) to the instance directory
-          cp pack.toml index.toml "$NATIVE_INSTANCE_DIR/"
-          if [ -f "icon.png" ]; then
-            cp "icon.png" "$NATIVE_INSTANCE_DIR/"
-          fi
-          
-          # Run packwiz-installer inside the temporary directory
-          echo "Running packwiz-installer in $NATIVE_INSTANCE_DIR..."
-          java -jar ../packwiz-installer.jar -g -o .
-          
-          # Check if the instance directory now contains the expected files (e.g., mods folder)
-          if [ -d "$NATIVE_INSTANCE_DIR/mods" ] && [ -n "$(ls -A "$NATIVE_INSTANCE_DIR/mods")" ]; then
-            echo "packwiz-installer completed successfully, found files in $NATIVE_INSTANCE_DIR/mods/"
-          else
-            echo "packwiz-installer failed or $NATIVE_INSTANCE_DIR/mods directory is empty!"
-            ls -la "$NATIVE_INSTANCE_DIR/"
-            exit 1
-          fi
-          
-          # Create the final native zip file name
+          # Define the name for the native zip file
           native_zip_name="NTNH-${{ github.event.inputs.version }}-Native.zip"
           
-          # Zip the *contents* of the native_instance directory (excluding the packwiz metadata files if desired)
-          # Here, we include the metadata files inside the zip for completeness, but they are not needed by the launcher itself.
-          # If you want a zip with *only* the mod files and standard MC folders, you can zip "$NATIVE_INSTANCE_DIR/." instead of "$NATIVE_INSTANCE_DIR"
-          echo "Zipping $NATIVE_INSTANCE_DIR/ directory contents to ${native_zip_name}..."
-          cd "$NATIVE_INSTANCE_DIR"
-          zip -r "../${native_zip_name}" .
-          cd ..
+          # Check if the mods folder (or other expected folders) exist and contain files
+          # Adjust the list of folders as needed for your modpack (e.g., resourcepacks/, config/, etc.)
+          if [ -d "mods" ] && [ -n "$(ls -A mods)" ]; then
+            echo "Found files in mods/ directory, adding to ZIP..."
+          else
+            echo "mods/ directory is empty or does not exist, checking other directories..."
+            # You might want to add checks for other directories like resourcepacks/, config/, etc.
+            # For now, if mods/ is missing, we can still create an empty zip or fail.
+            # Let's fail if there's nothing to zip.
+            if [ ! -d "mods" ] && [ ! -d "resourcepacks" ] && [ ! -d "config" ]; then
+               echo "No standard directories (mods, resourcepacks, config) found to include in Native ZIP."
+               ls -la
+               exit 1
+            fi
+          fi
           
-          # Check if the zip was created in the parent directory (NTNH/)
-          if [ -f "NTNH/${native_zip_name}" ]; then
-             echo "Native build generated: NTNH/${native_zip_name}"
+          # Use zip command to create the native zip file from the contents of the instance directory.
+          # This includes the mods/ folder and any other standard Minecraft directories.
+          # The -r flag makes it recursive, and . includes all contents of the current directory.
+          echo "Zipping contents of NTNH/ directory to ${native_zip_name}..."
+          zip -r "${native_zip_name}" . -x "pack.toml" "index.toml" "icon.png" "*.lock" ".git*" "*/.git*"
+          
+          # Check if the zip was created
+          if [ -f "${native_zip_name}" ]; then
+             echo "Native build generated: ${native_zip_name}"
              echo "native_file=${native_zip_name}" >> $GITHUB_OUTPUT
           else
-             echo "Failed to create native zip file: NTNH/${native_zip_name}"
-             ls -la NTNH/
+             echo "Failed to create native zip file: ${native_zip_name}"
+             ls -la
              exit 1
           fi
           
