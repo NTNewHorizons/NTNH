@@ -36,8 +36,8 @@ on:
         default: 'release'
 
 env:
-  PACK_NAME: 'NTNH'
-  GH_PAT: ${{ secrets.GH_PAT }}
+  PACK_NAME: 'NTNH' 
+  GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
 jobs:
   setup-and-version:
@@ -51,7 +51,6 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch || 'main' }}
           fetch-depth: 0
-          token: ${{ secrets.GH_PAT }}
 
       - name: Set up Go
         uses: actions/setup-go@v4
@@ -73,15 +72,9 @@ jobs:
         run: packwiz refresh
 
       - name: Commit and push version changes
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          
-          # Configure git to use the PAT token for authentication
-          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}.git
-          
           git add pack.toml index.toml
           git commit -m "Update version to ${{ github.event.inputs.version }}"
           git push origin ${{ github.event.inputs.branch || 'main' }}
@@ -100,7 +93,6 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch || 'main' }}
           fetch-depth: 0
-          token: ${{ secrets.GH_PAT }}
 
       - name: Set up Go
         uses: actions/setup-go@v4
@@ -162,7 +154,6 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch || 'main' }}
           fetch-depth: 0
-          token: ${{ secrets.GH_PAT }}
 
       - name: Set up Go
         uses: actions/setup-go@v4
@@ -219,7 +210,6 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch || 'main' }}
           fetch-depth: 0
-          token: ${{ secrets.GH_PAT }}
 
       - name: Set up Go
         uses: actions/setup-go@v4
@@ -279,7 +269,6 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch || 'main' }}
           fetch-depth: 0
-          token: ${{ secrets.GH_PAT }}
 
       - name: Download all artifacts
         uses: actions/download-artifact@v3
@@ -307,8 +296,9 @@ jobs:
           body: ${{ steps.get-changelog.outputs.changelog_content }}
           prerelease: ${{ github.event.inputs.release_type == 'pre-release' }}
           files: |
+            Mary-TTS.zip
             artifacts/native-build/${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Native.zip
             artifacts/curseforge-build/${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-CurseForge.zip
             artifacts/modrinth-build/${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.zip
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
