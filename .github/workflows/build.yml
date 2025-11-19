@@ -211,16 +211,22 @@ jobs:
       - name: Install packwiz
         run: go install github.com/packwiz/packwiz@latest
 
-      - name: Export Modrinth modpack (ignore exit code 1 for manual downloads)
+      - name: Export Modrinth modpack (ignore exit code for manual downloads)
         run: |
+          # Run export and ignore exit code since file is still generated
           packwiz mr export || true
-          # The file still gets generated despite exit code 1
-          if [ -f "export.mrpack" ]; then
-            mv export.mrpack "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.zip"
-          else
-            echo "Modrinth export file not found"
+          
+          # Find the actual exported file with the correct name pattern
+          MODRINTH_FILE=$(find . -name "Nuclear Tech: New Horizons-${{ needs.setup-and-version.outputs.version }}.mrpack" -print -quit)
+          if [ -z "$MODRINTH_FILE" ]; then
+            echo "Could not find Modrinth export file"
+            # Try to list all .mrpack files for debugging
+            echo "Available .mrpack files:"
+            find . -name "*.mrpack"
             exit 1
           fi
+          echo "Found Modrinth export file: $MODRINTH_FILE"
+          mv "$MODRINTH_FILE" "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.zip"
 
       - name: Clean up Modrinth zip (remove duplicate .jar files)
         run: |
