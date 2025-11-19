@@ -37,8 +37,8 @@ on:
         default: 'release'
 
 env:
-  PACK_NAME: 'NTNH' 
-  GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+  PACK_NAME: 'NTNH'
+  # Убираем GITHUB_TOKEN: ${{ secrets.GH_PAT }} из env
 
 jobs:
   setup-and-version:
@@ -52,6 +52,8 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch || 'main' }}
           fetch-depth: 0
+          # Используем PAT для аутентификации при клонировании и пушинге
+          token: ${{ secrets.GH_PAT_FOR_PUSH }}
 
       - name: Set up Go
         uses: actions/setup-go@v4
@@ -72,12 +74,14 @@ jobs:
       - name: Run packwiz refresh
         run: packwiz refresh
 
-      - name: Commit and push version changes
+      - name: Configure git and Commit and push version changes
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
+          # Настройка git с именем и email пользователя, которому принадлежит PAT
+          git config user.name "YOUR_GITHUB_USERNAME" # Замените на свой username
+          git config user.email "YOUR_EMAIL@example.com" # Замените на свой email
           git add pack.toml index.toml
-          git commit -m "Update version to ${{ github.event.inputs.version }}"
+          git status # Для отладки, посмотреть, что добавлено
+          git commit -m "Update version to ${{ github.event.inputs.version }}" || exit 0 # Если нет изменений, exit 0
           git push origin ${{ github.event.inputs.branch || 'main' }}
 
       - name: Get commit hash
@@ -94,6 +98,8 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch || 'main' }}
           fetch-depth: 0
+          # Используем PAT и здесь, если нужно взаимодействовать с репозиторием (например, для получения тегов)
+          token: ${{ secrets.GH_PAT_FOR_PUSH }}
 
       - name: Set up Go
         uses: actions/setup-go@v4
@@ -140,7 +146,7 @@ jobs:
           rm -rf native_temp
 
       - name: Upload Native artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4 # Обнови до v4, если доступно
         with:
           name: native-build
           path: "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Native.zip"
@@ -155,6 +161,7 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch || 'main' }}
           fetch-depth: 0
+          token: ${{ secrets.GH_PAT_FOR_PUSH }}
 
       - name: Set up Go
         uses: actions/setup-go@v4
@@ -196,7 +203,7 @@ jobs:
           rm -rf cf_temp
 
       - name: Upload CurseForge artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: curseforge-build
           path: "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-CurseForge.zip"
@@ -211,6 +218,7 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch || 'main' }}
           fetch-depth: 0
+          token: ${{ secrets.GH_PAT_FOR_PUSH }}
 
       - name: Set up Go
         uses: actions/setup-go@v4
@@ -252,13 +260,13 @@ jobs:
           rm -rf mr_temp
 
       - name: Upload Modrinth artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: modrinth-build
           path: "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.zip"
 
   create-release:
-    needs: 
+    needs:
       - setup-and-version
       - build-native
       - build-curseforge
@@ -272,9 +280,11 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch || 'main' }}
           fetch-depth: 0
+          # Используем встроенный GITHUB_TOKEN для создания релиза
+          # token: ${{ secrets.GITHUB_TOKEN }} # Необязательно, т.к. по умолчанию
 
       - name: Download all artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4 # Обнови до v4
         with:
           path: artifacts
 
@@ -292,7 +302,7 @@ jobs:
 
       - name: Create GitHub Release
         id: create_release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2 # Обнови до v2
         with:
           tag_name: ${{ needs.setup-and-version.outputs.version }}
           name: ${{ needs.setup-and-version.outputs.version }}
@@ -304,4 +314,5 @@ jobs:
             artifacts/curseforge-build/${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-CurseForge.zip
             artifacts/modrinth-build/${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.zip
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Используем встроенный GITHUB_TOKEN для создания релиза
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Встроенный токен
