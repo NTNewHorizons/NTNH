@@ -45,6 +45,7 @@ jobs:
     outputs:
       version: ${{ steps.set-version.outputs.version }}
       commit_hash: ${{ steps.get-commit.outputs.commit_hash }}
+      pack_full_name: ${{ steps.get-pack-name.outputs.pack_full_name }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -53,10 +54,17 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GH_PAT_FOR_PUSH }}
 
-      - name: Set up Go
+      - name: Get pack name from pack.toml
+        id: get-pack-name
+        run: |
+          PACK_FULL_NAME=$(grep -m 1 '^name = ' pack.toml | sed 's/name = "\(.*\)"/\1/')
+          echo "pack_full_name=$PACK_FULL_NAME" >> $GITHUB_OUTPUT
+          echo "Full pack name: $PACK_FULL_NAME"
+
+      - name: Set up Go (minimum 1.23.0 required for packwiz)
         uses: actions/setup-go@v4
         with:
-          go-version: '1.21'
+          go-version: '1.24'  # Use newer version that works with packwiz
 
       - name: Install packwiz
         run: go install github.com/packwiz/packwiz@latest
@@ -104,19 +112,22 @@ jobs:
           mkdir -p native_temp/config
           mkdir -p native_temp/scripts
           
-          # Copy all mods (only .jar files)
-          cp mods/*.jar native_temp/mods/ 2>/dev/null || echo "No mods found"
+          # Copy all mods (only .jar files, no .toml files)
+          find mods -name "*.jar" -exec cp {} native_temp/mods/ \; 2>/dev/null || echo "No mods found"
           
           # Copy config files
-          cp -r config/* native_temp/config/ 2>/dev/null || echo "No config files found"
+          if [ -d "config" ]; then
+            cp -r config/* native_temp/config/ 2>/dev/null || echo "No config files found"
+          fi
           
           # Copy scripts
-          cp -r scripts/* native_temp/scripts/ 2>/dev/null || echo "No scripts found"
+          if [ -d "scripts" ]; then
+            cp -r scripts/* native_temp/scripts/ 2>/dev/null || echo "No scripts found"
+          fi
           
           # Copy other necessary files
           cp pack.png native_temp/ 2>/dev/null || echo "No pack.png found"
           cp options.txt native_temp/ 2>/dev/null || echo "No options.txt found"
-          cp server.properties native_temp/ 2>/dev/null || echo "No server.properties found"
           
           # Create the zip file
           cd native_temp
@@ -147,7 +158,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: '1.21'
+          go-version: '1.24'
 
       - name: Install packwiz
         run: go install github.com/packwiz/packwiz@latest
@@ -155,10 +166,13 @@ jobs:
       - name: Export CurseForge modpack
         run: |
           packwiz cf export
-          # Find the actual exported file (it has the pack name with version)
-          CURSEFORGE_FILE=$(find . -name "Nuclear Tech: New Horizons-${{ needs.setup-and-version.outputs.version }}.zip" -print -quit)
+          # Find the actual exported file using the full pack name
+          PACK_FULL_NAME="${{ needs.setup-and-version.outputs.pack_full_name }}"
+          CURSEFORGE_FILE=$(find . -name "${PACK_FULL_NAME}-${{ needs.setup-and-version.outputs.version }}.zip" -print -quit)
           if [ -z "$CURSEFORGE_FILE" ]; then
             echo "Could not find CurseForge export file"
+            echo "Looking for files matching: ${PACK_FULL_NAME}-${{ needs.setup-and-version.outputs.version }}.zip"
+            find . -name "*.zip"
             exit 1
           fi
           mv "$CURSEFORGE_FILE" "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-CurseForge.zip"
@@ -168,6 +182,7 @@ jobs:
           mkdir cf_temp
           unzip "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-CurseForge.zip" -d cf_temp
           
+          # For each .toml file in mods, delete corresponding .jar if it exists
           for toml_file in cf_temp/mods/*.toml; do
             if [ -f "$toml_file" ]; then
               base_name=$(basename "$toml_file" .toml)
@@ -179,10 +194,12 @@ jobs:
             fi
           done
           
+          # Create cleaned zip
           cd cf_temp
           zip -r "../${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-CurseForge.zip" .
           cd ..
           
+          # Clean up temp directory
           rm -rf cf_temp
 
       - name: Upload CurseForge artifact
@@ -206,55 +223,33 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: '1.21'
+          go-version: '1.24'
 
       - name: Install packwiz
         run: go install github.com/packwiz/packwiz@latest
 
       - name: Export Modrinth modpack (ignore exit code for manual downloads)
         run: |
-          # Run export and ignore exit code since file is still generated
+          # Run export and ignore exit code since file is still generated despite manual download warnings
           packwiz mr export || true
           
-          # Find the actual exported file with the correct name pattern
-          MODRINTH_FILE=$(find . -name "Nuclear Tech: New Horizons-${{ needs.setup-and-version.outputs.version }}.mrpack" -print -quit)
+          # Find the actual exported file using the full pack name
+          PACK_FULL_NAME="${{ needs.setup-and-version.outputs.pack_full_name }}"
+          MODRINTH_FILE=$(find . -name "${PACK_FULL_NAME}-${{ needs.setup-and-version.outputs.version }}.mrpack" -print -quit)
           if [ -z "$MODRINTH_FILE" ]; then
             echo "Could not find Modrinth export file"
-            # Try to list all .mrpack files for debugging
-            echo "Available .mrpack files:"
+            echo "Looking for files matching: ${PACK_FULL_NAME}-${{ needs.setup-and-version.outputs.version }}.mrpack"
             find . -name "*.mrpack"
             exit 1
           fi
           echo "Found Modrinth export file: $MODRINTH_FILE"
-          mv "$MODRINTH_FILE" "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.zip"
-
-      - name: Clean up Modrinth zip (remove duplicate .jar files)
-        run: |
-          mkdir mr_temp
-          unzip "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.zip" -d mr_temp
-          
-          for toml_file in mr_temp/mods/*.toml; do
-            if [ -f "$toml_file" ]; then
-              base_name=$(basename "$toml_file" .toml)
-              jar_file="mr_temp/mods/${base_name}.jar"
-              if [ -f "$jar_file" ]; then
-                echo "Removing duplicate jar: $jar_file"
-                rm "$jar_file"
-              fi
-            fi
-          done
-          
-          cd mr_temp
-          zip -r "../${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.zip" .
-          cd ..
-          
-          rm -rf mr_temp
+          mv "$MODRINTH_FILE" "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.mrpack"
 
       - name: Upload Modrinth artifact
         uses: actions/upload-artifact@v4
         with:
           name: modrinth-build
-          path: "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.zip"
+          path: "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.mrpack"
 
   create-release:
     needs:
@@ -299,6 +294,6 @@ jobs:
             Mary-TTS.zip
             artifacts/native-build/${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Native.zip
             artifacts/curseforge-build/${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-CurseForge.zip
-            artifacts/modrinth-build/${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.zip
+            artifacts/modrinth-build/${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.mrpack
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
