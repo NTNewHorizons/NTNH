@@ -36,7 +36,8 @@ on:
         default: 'release'
 
 env:
-  PACK_NAME: 'NTNH'  # Customize this to your pack name
+  PACK_NAME: 'NTNH' 
+  GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
 jobs:
   setup-and-version:
