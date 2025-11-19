@@ -1,3 +1,9 @@
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+
 # NTNH (Nuclear Tech: New Horizons) 🚀
 
 **A hardcore quest-based modpack for Minecraft 1.7.10**, inspired by the legendary GTNH, but with a unique approach to progression and survival!
