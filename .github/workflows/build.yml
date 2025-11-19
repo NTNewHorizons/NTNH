@@ -5,7 +5,7 @@ on:
     inputs:
       branch:
         description: 'Branch to build from (default: main)'
-        required: true  # Made required as per your note
+        required: true
         default: 'main'
       version:
         description: 'Version number (X.X.X)'
@@ -13,17 +13,17 @@ on:
       build_native:
         description: 'Build Native version'
         type: boolean
-        required: true  # Made required as per your note
+        required: true
         default: true
       build_curseforge:
         description: 'Build CurseForge version'
         type: boolean
-        required: true  # Made required as per your note
+        required: true
         default: true
       build_modrinth:
         description: 'Build Modrinth version'
         type: boolean
-        required: true  # Made required as per your note
+        required: true
         default: true
       release_type:
         description: 'Release type'
@@ -32,7 +32,9 @@ on:
         - release
         - pre-release
         - latest-release
+        - artifact  # Added artifact release type
         required: true
+        default: 'release'
 
 env:
   PACK_NAME: 'NTNH'
@@ -49,7 +51,7 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch }}
           fetch-depth: 0
-          token: ${{ secrets.GH_PAT_FOR_PUSH }}  # Use PAT for push operations
+          token: ${{ secrets.GH_PAT_FOR_PUSH }}
 
       - name: Set up Go
         uses: actions/setup-go@v4
@@ -72,15 +74,11 @@ jobs:
 
       - name: Commit and push version changes
         run: |
-          # Configure git with user info from PAT owner
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           
-          # Add and commit changes
           git add pack.toml index.toml
-          git commit -m "Update modpack version to ${{ github.event.inputs.version }}"
-          
-          # Push changes back to branch
+          git commit -m "Update modpack version to ${{ github.event.inputs.version }}" || echo "No changes to commit"
           git push origin ${{ github.event.inputs.branch }}
 
       - name: Get commit hash
@@ -113,19 +111,15 @@ jobs:
 
       - name: Clean up Native zip (remove ALL .toml files)
         run: |
-          # Extract the zip
           mkdir native_temp
           unzip "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Native.zip" -d native_temp
           
-          # Remove ALL .toml files recursively
           find native_temp -name "*.toml" -type f -delete
           
-          # Recreate the zip
           cd native_temp
           zip -r "../${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Native.zip" .
           cd ..
           
-          # Clean up temp directory
           rm -rf native_temp
 
       - name: Upload Native artifact
@@ -161,11 +155,9 @@ jobs:
 
       - name: Clean up CurseForge zip (remove duplicate .jar files)
         run: |
-          # Extract the zip
           mkdir cf_temp
           unzip "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-CurseForge.zip" -d cf_temp
           
-          # For each .toml file in mods, delete corresponding .jar if it exists
           for toml_file in cf_temp/mods/*.toml; do
             if [ -f "$toml_file" ]; then
               base_name=$(basename "$toml_file" .toml)
@@ -177,12 +169,10 @@ jobs:
             fi
           done
           
-          # Recreate the zip
           cd cf_temp
           zip -r "../${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-CurseForge.zip" .
           cd ..
           
-          # Clean up temp directory
           rm -rf cf_temp
 
       - name: Upload CurseForge artifact
@@ -218,11 +208,9 @@ jobs:
 
       - name: Clean up Modrinth zip (remove duplicate .jar files)
         run: |
-          # Extract the zip
           mkdir mr_temp
           unzip "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.zip" -d mr_temp
           
-          # For each .toml file in mods, delete corresponding .jar if it exists
           for toml_file in mr_temp/mods/*.toml; do
             if [ -f "$toml_file" ]; then
               base_name=$(basename "$toml_file" .toml)
@@ -234,12 +222,10 @@ jobs:
             fi
           done
           
-          # Recreate the zip
           cd mr_temp
           zip -r "../${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.zip" .
           cd ..
           
-          # Clean up temp directory
           rm -rf mr_temp
 
       - name: Upload Modrinth artifact
@@ -255,6 +241,8 @@ jobs:
       - build-curseforge
       - build-modrinth
     runs-on: ubuntu-latest
+    # Only run this job if release_type is NOT "artifact"
+    if: ${{ github.event.inputs.release_type != 'artifact' }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
