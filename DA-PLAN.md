@@ -2,7 +2,9 @@ So I found a solution! We need a workflow that
 
 1. Checkouts selected branch of a repo (default is main)
 2. Downloads packwiz via Go
-3. Opens pack.toml file and changes "version" variable (number is set by a user)
+    2.1. "go install github.com/packwiz/packwiz@latest"
+3. Opens pack.toml file and changes "version" variable (number is set by a user) and then runs "packwiz refresh"
+    3.1. Pushes the changes to the selected branch 'cause why not
 4. Exports Native modpack (Native is just a client for pirated launchers) to ZIP
     4.1. It should remove .toml files from the Native client specificly, to optimize the weight
 5. Then if there is a .toml file of a mod in /mods/ directory it should delete the .jar file of a mod
