@@ -37,8 +37,7 @@ on:
 
 env:
   PACK_NAME: 'NTNH'
-  # Use the PAT for everything that needs write access
-  GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+  GH_PAT: ${{ secrets.GH_PAT }}
 
 jobs:
   setup-and-version:
@@ -52,7 +51,6 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch || 'main' }}
           fetch-depth: 0
-          # Explicitly use the PAT token for checkout to enable push permissions
           token: ${{ secrets.GH_PAT }}
 
       - name: Set up Go
@@ -75,9 +73,15 @@ jobs:
         run: packwiz refresh
 
       - name: Commit and push version changes
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
+          
+          # Configure git to use the PAT token for authentication
+          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}.git
+          
           git add pack.toml index.toml
           git commit -m "Update version to ${{ github.event.inputs.version }}"
           git push origin ${{ github.event.inputs.branch || 'main' }}
@@ -96,7 +100,6 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch || 'main' }}
           fetch-depth: 0
-          # Use PAT for checkout to ensure consistent permissions
           token: ${{ secrets.GH_PAT }}
 
       - name: Set up Go
