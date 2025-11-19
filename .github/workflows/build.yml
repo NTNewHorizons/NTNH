@@ -4,291 +4,300 @@ on:
   workflow_dispatch:
     inputs:
       branch:
-        description: 'Branch to build from'
-        required: true
-        default: 'experiments/packwiz'
-        type: string
+        description: 'Branch to build from (default: main)'
+        required: false
+        default: 'main'
       version:
-        description: 'Version tag (e.g. 2.3.0)'
+        description: 'Version number (X.X.X)'
         required: true
-        type: string
+      build_native:
+        description: 'Build Native version'
+        type: boolean
+        required: false
+        default: true
+      build_curseforge:
+        description: 'Build CurseForge version'
+        type: boolean
+        required: false
+        default: true
+      build_modrinth:
+        description: 'Build Modrinth version'
+        type: boolean
+        required: false
+        default: true
       release_type:
         description: 'Release type'
-        required: true
-        default: 'release'
         type: choice
         options:
-          - release
-          - pre-release
-          - latest
-      curseforge_build:
-        description: 'Generate CurseForge build'
+        - release
+        - pre-release
+        - latest-release
         required: true
-        default: 'true'
-        type: boolean
-      modrinth_build:
-        description: 'Generate Modrinth build'
-        required: true
-        default: 'true'
-        type: boolean
+        default: 'release'
+
+env:
+  PACK_NAME: 'NTNH'  # Customize this to your pack name
 
 jobs:
-  build-and-release:
+  setup-and-version:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      packages: write
-
+    outputs:
+      version: ${{ steps.set-version.outputs.version }}
+      commit_hash: ${{ steps.get-commit.outputs.commit_hash }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          repository: Nuclear-Tech-New-Horizons/NTNH
-          ref: ${{ github.event.inputs.branch }}
-          path: NTNH
+          ref: ${{ github.event.inputs.branch || 'main' }}
           fetch-depth: 0
 
       - name: Set up Go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v4
         with:
-          go-version: '1.23'
+          go-version: '1.21'
 
       - name: Install packwiz
-        run: |
-          go install github.com/packwiz/packwiz@latest
-        env:
-          GOPATH: /home/runner/go
-
-      - name: Add packwiz to PATH
-        run: |
-          echo "/home/runner/go/bin" >> $GITHUB_PATH
+        run: go install github.com/packwiz/packwiz@latest
 
       - name: Update version in pack.toml
+        id: set-version
         run: |
-          cd NTNH
-          echo "Updating pack.toml with version: ${{ github.event.inputs.version }}"
-          
-          # Update the version field in pack.toml
-          if [[ "$(uname)" == "Darwin" ]]; then
-            # macOS version of sed
-            sed -i '' "s/^version = .*/version = \"${{ github.event.inputs.version }}\"/" pack.toml
-          else
-            # Linux version of sed
-            sed -i "s/^version = .*/version = \"${{ github.event.inputs.version }}\"/" pack.toml
-          fi
-          
-          echo "Updated pack.toml:"
-          cat pack.toml
-        shell: bash
+          VERSION="${{ github.event.inputs.version }}"
+          echo "Setting version to: $VERSION"
+          sed -i "s/^version = .*/version = \"$VERSION\"/" pack.toml
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
 
       - name: Run packwiz refresh
-        run: |
-          cd NTNH
-          echo "Running packwiz refresh to update metadata..."
-          packwiz refresh
-          echo "Packwiz refresh completed successfully"
-        shell: bash
+        run: packwiz refresh
 
-      - name: Prepare manual downloads (required for Modrinth export)
-        if: ${{ github.event.inputs.modrinth_build == 'true' }}
+      - name: Commit and push version changes
         run: |
-          cd NTNH
-          echo "Creating cache directory for manual downloads..."
-          mkdir -p /home/runner/.cache/packwiz/cache/import
-          
-          echo "Downloading Low On Fire texture pack..."
-          wget -O /home/runner/.cache/packwiz/cache/import/LowOnFire_1.8.zip https://edge.forgecdn.net/files/4307/966/LowOnFire_1.8.zip    
-          
-          echo "Downloading Rails of War mod..."
-          wget -O /home/runner/.cache/packwiz/cache/import/RailsOfWar-1.7.10-5.8-RC7.jar https://edge.forgecdn.net/files/2459/153/RailsOfWar-1.7.10-5.8-RC7.jar    
-          
-          echo "Manual downloads prepared successfully"
-        shell: bash
-
-      - name: Run CurseForge export (if selected)
-        id: curseforge_export
-        if: ${{ github.event.inputs.curseforge_build == 'true' }}
-        run: |
-          cd NTNH
-          echo "Running packwiz curseforge export..."
-          packwiz curseforge export
-          
-          # Find the generated export file - be format-agnostic
-          export_file=$(find . -maxdepth 1 -name "*Nuclear Tech: New Horizons*${{ github.event.inputs.version }}*" -print -quit)
-          
-          # If not found by name, look for recently modified files with common extensions
-          if [ -z "$export_file" ]; then
-            echo "Could not find by name, searching by extension and modification time..."
-            export_file=$(find . -maxdepth 1 -type f \( -name "*.zip" -o -name "*.jar" -o -name "*.mrpack" \) -mmin -1 -print -quit)
-          fi
-          
-          if [ -z "$export_file" ]; then
-            echo "No export file found after CurseForge export"
-            echo "Listing directory contents for debugging:"
-            ls -la
-            exit 1
-          fi
-          
-          # Clean up the filename (remove ./ prefix)
-          clean_filename=$(basename "$export_file")
-          echo "Found export file: $clean_filename"
-          
-          # Rename the file to NTNH-X.X.X-CurseForge.zip
-          new_filename="NTNH-${{ github.event.inputs.version }}-CurseForge.zip"
-          mv "$export_file" "$new_filename"
-          echo "Renamed file to: $new_filename"
-          
-          echo "curseforge_file=$new_filename" >> $GITHUB_OUTPUT
-          echo "CurseForge build generated: $new_filename"
-        shell: bash
-
-      - name: Run Modrinth export (if selected)
-        id: modrinth_export
-        if: ${{ github.event.inputs.modrinth_build == 'true' }}
-        run: |
-          cd NTNH
-          echo "Running packwiz modrinth export..."
-          packwiz modrinth export
-          
-          # Find the generated export file - be format-agnostic
-          export_file=$(find . -maxdepth 1 -name "*Nuclear Tech: New Horizons*${{ github.event.inputs.version }}*" -print -quit)
-          
-          # If not found by name, look for recently modified files with common extensions
-          if [ -z "$export_file" ]; then
-            echo "Could not find by name, searching by extension and modification time..."
-            export_file=$(find . -maxdepth 1 -type f \( -name "*.zip" -o -name "*.jar" -o -name "*.mrpack" \) -mmin -1 -print -quit)
-          fi
-          
-          if [ -z "$export_file" ]; then
-            echo "No export file found after Modrinth export"
-            echo "Listing directory contents for debugging:"
-            ls -la
-            exit 1
-          fi
-          
-          # Clean up the filename (remove ./ prefix)
-          clean_filename=$(basename "$export_file")
-          echo "Found export file: $clean_filename"
-          
-          # Rename the file to NTNH-X.X.X-Modrinth.mrpack
-          new_filename="NTNH-${{ github.event.inputs.version }}-Modrinth.mrpack"
-          mv "$export_file" "$new_filename"
-          echo "Renamed file to: $new_filename"
-          
-          echo "modrinth_file=$new_filename" >> $GITHUB_OUTPUT
-          echo "Modrinth build generated: $new_filename"
-        shell: bash
-
-      - name: Check for Mary-TTS.zip
-        id: marytts_check
-        run: |
-          cd NTNH
-          if [ -f "Mary-TTS.zip" ]; then
-            echo "Mary-TTS.zip found in repository"
-            echo "marytts_exists=true" >> $GITHUB_OUTPUT
-            echo "marytts_file=Mary-TTS.zip" >> $GITHUB_OUTPUT
-          else
-            echo "Mary-TTS.zip not found in repository"
-            echo "marytts_exists=false" >> $GITHUB_OUTPUT
-          fi
-        shell: bash
-
-      - name: Read CHANGELOG
-        id: changelog
-        run: |
-          cd NTNH
-          if [ -f CHANGELOG ]; then
-            echo "Reading CHANGELOG file..."
-            
-            # Read the CHANGELOG directly without complex escaping
-            # The action-gh-release action can handle markdown content
-            changelog_content=$(cat CHANGELOG)
-            
-            # Escape $ characters for GitHub Actions
-            escaped_content=$(echo "$changelog_content" | sed 's/\$/\$\$/g')
-            
-            echo "changelog_content<<EOF" >> $GITHUB_OUTPUT
-            echo "$escaped_content" >> $GITHUB_OUTPUT
-            echo "EOF" >> $GITHUB_OUTPUT
-            
-            echo "Successfully read CHANGELOG"
-          else
-            echo "CHANGELOG file not found, using default message"
-            echo "changelog_content=No changelog available for this release." >> $GITHUB_OUTPUT
-          fi
-        shell: bash
-
-      - name: Prepare release files
-        id: prepare_files
-        run: |
-          files=""
-          
-          # Add CurseForge file if generated
-          if [ "${{ github.event.inputs.curseforge_build }}" == "true" ] && [ -n "${{ steps.curseforge_export.outputs.curseforge_file }}" ]; then
-            # Prefix the filename with the NTNH directory path
-            files="$files NTNH/${{ steps.curseforge_export.outputs.curseforge_file }}"
-            echo "Adding CurseForge file: NTNH/${{ steps.curseforge_export.outputs.curseforge_file }}"
-          fi
-          
-          # Add Modrinth file if generated
-          if [ "${{ github.event.inputs.modrinth_build }}" == "true" ] && [ -n "${{ steps.modrinth_export.outputs.modrinth_file }}" ]; then
-            # Prefix the filename with the NTNH directory path
-            files="$files NTNH/${{ steps.modrinth_export.outputs.modrinth_file }}"
-            echo "Adding Modrinth file: NTNH/${{ steps.modrinth_export.outputs.modrinth_file }}"
-          fi
-          
-          # Always add Mary-TTS.zip if it exists
-          if [ "${{ steps.marytts_check.outputs.marytts_exists }}" == "true" ]; then
-            # Prefix the filename with the NTNH directory path
-            files="$files NTNH/${{ steps.marytts_check.outputs.marytts_file }}"
-            echo "Adding Mary-TTS.zip to release files"
-          fi
-          
-          # Trim leading space
-          files=$(echo "$files" | sed 's/^ //')
-          
-          if [ -z "$files" ]; then
-            echo "No build files were generated. At least one build type must be selected."
-            exit 1
-          fi
-          
-          echo "release_files=$files" >> $GITHUB_OUTPUT
-          echo "Release files to upload: $files"
-        shell: bash
-
-      # NEW STEP: Copy files to the root directory for reliable upload
-      - name: Copy release files to root
-        run: |
-          for file in ${{ steps.prepare_files.outputs.release_files }}; do
-            echo "Copying $file to root directory..."
-            cp "$file" ./
-          done
-          ls -la *.zip *.mrpack || echo "No .zip or .mrpack files found in root."
-
-      - name: Create Release
-        id: create_release
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: ${{ github.event.inputs.version }}
-          name: v${{ github.event.inputs.version }}
-          body: ${{ steps.changelog.outputs.changelog_content }}
-          draft: false
-          prerelease: ${{ github.event.inputs.release_type == 'pre-release' }}
-          # Point to files in the root directory now
-          files: |
-            NTNH-${{ github.event.inputs.version }}-CurseForge.zip
-            NTNH-${{ github.event.inputs.version }}-Modrinth.mrpack
-            Mary-TTS.zip
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Commit and push version changes (optional)
-        if: ${{ github.ref == format('refs/heads/{0}', github.event.inputs.branch) }}
-        run: |
-          cd NTNH
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add pack.toml index.toml
-          git commit -m "Update version to ${{ github.event.inputs.version }}" || echo "No changes to commit"
-          git push origin ${{ github.event.inputs.branch }} || echo "Push failed - might need manual merge"
-        shell: bash
+          git commit -m "Update version to ${{ github.event.inputs.version }}"
+          git push origin ${{ github.event.inputs.branch || 'main' }}
+
+      - name: Get commit hash
+        id: get-commit
+        run: echo "commit_hash=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+
+  build-native:
+    needs: setup-and-version
+    runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.build_native == 'true' }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch || 'main' }}
+          fetch-depth: 0
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.21'
+
+      - name: Install packwiz
+        run: go install github.com/packwiz/packwiz@latest
+
+      - name: Export Native modpack
+        run: |
+          packwiz export --output "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Native.zip" --format zip
+
+      - name: Clean up Native zip (remove .toml files)
+        run: |
+          # Extract the zip
+          mkdir native_temp
+          unzip "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Native.zip" -d native_temp
+          
+          # Remove all .toml files from mods directory
+          find native_temp/mods -name "*.toml" -type f -delete
+          
+          # For each .toml file in mods, delete corresponding .jar if it exists
+          for toml_file in native_temp/mods/*.toml; do
+            if [ -f "$toml_file" ]; then
+              base_name=$(basename "$toml_file" .toml)
+              jar_file="native_temp/mods/${base_name}.jar"
+              if [ -f "$jar_file" ]; then
+                echo "Removing duplicate jar: $jar_file"
+                rm "$jar_file"
+              fi
+            fi
+          done
+          
+          # Remove .toml files from root and other directories
+          find native_temp -name "*.toml" -type f -delete
+          
+          # Recreate the zip
+          cd native_temp
+          zip -r "../${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Native.zip" .
+          cd ..
+          
+          # Clean up temp directory
+          rm -rf native_temp
+
+      - name: Upload Native artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: native-build
+          path: "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Native.zip"
+
+  build-curseforge:
+    needs: setup-and-version
+    runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.build_curseforge == 'true' }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch || 'main' }}
+          fetch-depth: 0
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.21'
+
+      - name: Install packwiz
+        run: go install github.com/packwiz/packwiz@latest
+
+      - name: Export CurseForge modpack
+        run: |
+          packwiz cf export
+          mv export.zip "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-CurseForge.zip"
+
+      - name: Clean up CurseForge zip (remove duplicate jars)
+        run: |
+          # Extract the zip
+          mkdir cf_temp
+          unzip "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-CurseForge.zip" -d cf_temp
+          
+          # For each .toml file in mods, delete corresponding .jar if it exists
+          for toml_file in cf_temp/mods/*.toml; do
+            if [ -f "$toml_file" ]; then
+              base_name=$(basename "$toml_file" .toml)
+              jar_file="cf_temp/mods/${base_name}.jar"
+              if [ -f "$jar_file" ]; then
+                echo "Removing duplicate jar: $jar_file"
+                rm "$jar_file"
+              fi
+            fi
+          done
+          
+          # Recreate the zip
+          cd cf_temp
+          zip -r "../${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-CurseForge.zip" .
+          cd ..
+          
+          # Clean up temp directory
+          rm -rf cf_temp
+
+      - name: Upload CurseForge artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: curseforge-build
+          path: "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-CurseForge.zip"
+
+  build-modrinth:
+    needs: setup-and-version
+    runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.build_modrinth == 'true' }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch || 'main' }}
+          fetch-depth: 0
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.21'
+
+      - name: Install packwiz
+        run: go install github.com/packwiz/packwiz@latest
+
+      - name: Export Modrinth modpack
+        run: |
+          packwiz mr export
+          mv export.mrpack "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.zip"
+
+      - name: Clean up Modrinth zip (remove duplicate jars)
+        run: |
+          # Extract the zip
+          mkdir mr_temp
+          unzip "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.zip" -d mr_temp
+          
+          # For each .toml file in mods, delete corresponding .jar if it exists
+          for toml_file in mr_temp/mods/*.toml; do
+            if [ -f "$toml_file" ]; then
+              base_name=$(basename "$toml_file" .toml)
+              jar_file="mr_temp/mods/${base_name}.jar"
+              if [ -f "$jar_file" ]; then
+                echo "Removing duplicate jar: $jar_file"
+                rm "$jar_file"
+              fi
+            fi
+          done
+          
+          # Recreate the zip
+          cd mr_temp
+          zip -r "../${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.zip" .
+          cd ..
+          
+          # Clean up temp directory
+          rm -rf mr_temp
+
+      - name: Upload Modrinth artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: modrinth-build
+          path: "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.zip"
+
+  create-release:
+    needs: 
+      - setup-and-version
+      - build-native
+      - build-curseforge
+      - build-modrinth
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch || 'main' }}
+          fetch-depth: 0
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v3
+        with:
+          path: artifacts
+
+      - name: Get changelog content
+        id: get-changelog
+        run: |
+          if [ -f CHANGELOG.md ]; then
+            CHANGELOG_CONTENT=$(cat CHANGELOG.md)
+            echo "changelog_content<<EOF" >> $GITHUB_OUTPUT
+            echo "$CHANGELOG_CONTENT" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          else
+            echo "changelog_content=No changelog available" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create GitHub Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ needs.setup-and-version.outputs.version }}
+          name: ${{ needs.setup-and-version.outputs.version }}
+          body: ${{ steps.get-changelog.outputs.changelog_content }}
+          prerelease: ${{ github.event.inputs.release_type == 'pre-release' }}
+          files: |
+            Mary-TTS.zip
+            artifacts/native-build/${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Native.zip
+            artifacts/curseforge-build/${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-CurseForge.zip
+            artifacts/modrinth-build/${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
