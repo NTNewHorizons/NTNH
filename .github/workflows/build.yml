@@ -5,25 +5,25 @@ on:
     inputs:
       branch:
         description: 'Branch to build from (default: main)'
-        required: false
-        default: 'experiments/packwiz'
+        required: true  # Made required as per your note
+        default: 'main'
       version:
         description: 'Version number (X.X.X)'
         required: true
       build_native:
         description: 'Build Native version'
         type: boolean
-        required: false
+        required: true  # Made required as per your note
         default: true
       build_curseforge:
         description: 'Build CurseForge version'
         type: boolean
-        required: false
+        required: true  # Made required as per your note
         default: true
       build_modrinth:
         description: 'Build Modrinth version'
         type: boolean
-        required: false
+        required: true  # Made required as per your note
         default: true
       release_type:
         description: 'Release type'
@@ -32,13 +32,10 @@ on:
         - release
         - pre-release
         - latest-release
-        - artifact  # Added new artifact release type
         required: true
-        default: 'release'
 
 env:
   PACK_NAME: 'NTNH'
-  # Убираем GITHUB_TOKEN: ${{ secrets.GH_PAT }} из env
 
 jobs:
   setup-and-version:
@@ -50,10 +47,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.inputs.branch || 'main' }}
+          ref: ${{ github.event.inputs.branch }}
           fetch-depth: 0
-          # Используем PAT для аутентификации при клонировании и пушинге
-          token: ${{ secrets.GH_PAT_FOR_PUSH }}
+          token: ${{ secrets.GH_PAT_FOR_PUSH }}  # Use PAT for push operations
 
       - name: Set up Go
         uses: actions/setup-go@v4
@@ -74,15 +70,18 @@ jobs:
       - name: Run packwiz refresh
         run: packwiz refresh
 
-      - name: Configure git and Commit and push version changes
+      - name: Commit and push version changes
         run: |
-          # Настройка git с именем и email пользователя, которому принадлежит PAT
-          git config user.name "YOUR_GITHUB_USERNAME" # Замените на свой username
-          git config user.email "YOUR_EMAIL@example.com" # Замените на свой email
+          # Configure git with user info from PAT owner
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          
+          # Add and commit changes
           git add pack.toml index.toml
-          git status # Для отладки, посмотреть, что добавлено
-          git commit -m "Update version to ${{ github.event.inputs.version }}" || exit 0 # Если нет изменений, exit 0
-          git push origin ${{ github.event.inputs.branch || 'main' }}
+          git commit -m "Update modpack version to ${{ github.event.inputs.version }}"
+          
+          # Push changes back to branch
+          git push origin ${{ github.event.inputs.branch }}
 
       - name: Get commit hash
         id: get-commit
@@ -96,9 +95,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.inputs.branch || 'main' }}
+          ref: ${{ github.event.inputs.branch }}
           fetch-depth: 0
-          # Используем PAT и здесь, если нужно взаимодействовать с репозиторием (например, для получения тегов)
           token: ${{ secrets.GH_PAT_FOR_PUSH }}
 
       - name: Set up Go
@@ -113,28 +111,13 @@ jobs:
         run: |
           packwiz export --output "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Native.zip" --format zip
 
-      - name: Clean up Native zip (remove .toml files)
+      - name: Clean up Native zip (remove ALL .toml files)
         run: |
           # Extract the zip
           mkdir native_temp
           unzip "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Native.zip" -d native_temp
           
-          # Remove all .toml files from mods directory
-          find native_temp/mods -name "*.toml" -type f -delete
-          
-          # For each .toml file in mods, delete corresponding .jar if it exists
-          for toml_file in native_temp/mods/*.toml; do
-            if [ -f "$toml_file" ]; then
-              base_name=$(basename "$toml_file" .toml)
-              jar_file="native_temp/mods/${base_name}.jar"
-              if [ -f "$jar_file" ]; then
-                echo "Removing duplicate jar: $jar_file"
-                rm "$jar_file"
-              fi
-            fi
-          done
-          
-          # Remove .toml files from root and other directories
+          # Remove ALL .toml files recursively
           find native_temp -name "*.toml" -type f -delete
           
           # Recreate the zip
@@ -146,7 +129,7 @@ jobs:
           rm -rf native_temp
 
       - name: Upload Native artifact
-        uses: actions/upload-artifact@v4 # Обнови до v4, если доступно
+        uses: actions/upload-artifact@v4
         with:
           name: native-build
           path: "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Native.zip"
@@ -159,7 +142,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.inputs.branch || 'main' }}
+          ref: ${{ github.event.inputs.branch }}
           fetch-depth: 0
           token: ${{ secrets.GH_PAT_FOR_PUSH }}
 
@@ -176,7 +159,7 @@ jobs:
           packwiz cf export
           mv export.zip "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-CurseForge.zip"
 
-      - name: Clean up CurseForge zip (remove duplicate jars)
+      - name: Clean up CurseForge zip (remove duplicate .jar files)
         run: |
           # Extract the zip
           mkdir cf_temp
@@ -216,7 +199,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.inputs.branch || 'main' }}
+          ref: ${{ github.event.inputs.branch }}
           fetch-depth: 0
           token: ${{ secrets.GH_PAT_FOR_PUSH }}
 
@@ -233,7 +216,7 @@ jobs:
           packwiz mr export
           mv export.mrpack "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.zip"
 
-      - name: Clean up Modrinth zip (remove duplicate jars)
+      - name: Clean up Modrinth zip (remove duplicate .jar files)
         run: |
           # Extract the zip
           mkdir mr_temp
@@ -272,19 +255,15 @@ jobs:
       - build-curseforge
       - build-modrinth
     runs-on: ubuntu-latest
-    # Only run this job if release_type is NOT "artifact"
-    if: ${{ github.event.inputs.release_type != 'artifact' }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.inputs.branch || 'main' }}
+          ref: ${{ github.event.inputs.branch }}
           fetch-depth: 0
-          # Используем встроенный GITHUB_TOKEN для создания релиза
-          # token: ${{ secrets.GITHUB_TOKEN }} # Необязательно, т.к. по умолчанию
 
       - name: Download all artifacts
-        uses: actions/download-artifact@v4 # Обнови до v4
+        uses: actions/download-artifact@v4
         with:
           path: artifacts
 
@@ -297,12 +276,11 @@ jobs:
             echo "$CHANGELOG_CONTENT" >> $GITHUB_OUTPUT
             echo "EOF" >> $GITHUB_OUTPUT
           else
-            echo "changelog_content=No changelog available" >> $GITHUB_OUTPUT
+            echo "changelog_content=No changelog available for version ${{ needs.setup-and-version.outputs.version }}" >> $GITHUB_OUTPUT
           fi
 
       - name: Create GitHub Release
-        id: create_release
-        uses: softprops/action-gh-release@v2 # Обнови до v2
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ needs.setup-and-version.outputs.version }}
           name: ${{ needs.setup-and-version.outputs.version }}
@@ -314,5 +292,4 @@ jobs:
             artifacts/curseforge-build/${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-CurseForge.zip
             artifacts/modrinth-build/${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.zip
         env:
-          # Используем встроенный GITHUB_TOKEN для создания релиза
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Встроенный токен
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
