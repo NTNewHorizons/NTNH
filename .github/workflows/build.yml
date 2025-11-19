@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       branch:
-        description: 'Branch to build from (default: main)'
+        description: 'Branch to build from (default: experiments/packwiz)'
         required: false
         default: 'experiments/packwiz'
       version:
@@ -37,7 +37,7 @@ on:
         default: 'release'
 
 env:
-  PACK_NAME: 'NTNH' 
+  PACK_NAME: 'NTNH'
   GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
 jobs:
@@ -52,6 +52,7 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch || 'main' }}
           fetch-depth: 0
+          token: ${{ secrets.GH_PAT }}  # Critical fix - use PAT for checkout
 
       - name: Set up Go
         uses: actions/setup-go@v4
@@ -94,6 +95,7 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch || 'main' }}
           fetch-depth: 0
+          token: ${{ secrets.GH_PAT }}  # Critical fix - use PAT for checkout
 
       - name: Set up Go
         uses: actions/setup-go@v4
@@ -155,6 +157,7 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch || 'main' }}
           fetch-depth: 0
+          token: ${{ secrets.GH_PAT }}  # Critical fix - use PAT for checkout
 
       - name: Set up Go
         uses: actions/setup-go@v4
@@ -211,6 +214,7 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch || 'main' }}
           fetch-depth: 0
+          token: ${{ secrets.GH_PAT }}  # Critical fix - use PAT for checkout
 
       - name: Set up Go
         uses: actions/setup-go@v4
@@ -272,6 +276,7 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch || 'main' }}
           fetch-depth: 0
+          token: ${{ secrets.GH_PAT }}  # Critical fix - use PAT for checkout
 
       - name: Download all artifacts
         uses: actions/download-artifact@v3
@@ -299,9 +304,8 @@ jobs:
           body: ${{ steps.get-changelog.outputs.changelog_content }}
           prerelease: ${{ github.event.inputs.release_type == 'pre-release' }}
           files: |
-            Mary-TTS.zip
             artifacts/native-build/${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Native.zip
             artifacts/curseforge-build/${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-CurseForge.zip
             artifacts/modrinth-build/${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.zip
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}  # Critical fix - use PAT for release
