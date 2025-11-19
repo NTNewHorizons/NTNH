@@ -32,7 +32,7 @@ on:
         - release
         - pre-release
         - latest-release
-        - artifact  # Added artifact release type
+        - artifact
         required: true
         default: 'release'
 
@@ -97,29 +97,33 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GH_PAT_FOR_PUSH }}
 
-      - name: Set up Go
-        uses: actions/setup-go@v4
-        with:
-          go-version: '1.21'
-
-      - name: Install packwiz
-        run: go install github.com/packwiz/packwiz@latest
-
-      - name: Export Native modpack
+      - name: Create Native modpack zip manually
         run: |
-          packwiz export --output "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Native.zip" --format zip
-
-      - name: Clean up Native zip (remove ALL .toml files)
-        run: |
-          mkdir native_temp
-          unzip "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Native.zip" -d native_temp
+          # Create temp directory structure
+          mkdir -p native_temp/mods
+          mkdir -p native_temp/config
+          mkdir -p native_temp/scripts
           
-          find native_temp -name "*.toml" -type f -delete
+          # Copy all mods (only .jar files)
+          cp mods/*.jar native_temp/mods/ 2>/dev/null || echo "No mods found"
           
+          # Copy config files
+          cp -r config/* native_temp/config/ 2>/dev/null || echo "No config files found"
+          
+          # Copy scripts
+          cp -r scripts/* native_temp/scripts/ 2>/dev/null || echo "No scripts found"
+          
+          # Copy other necessary files
+          cp pack.png native_temp/ 2>/dev/null || echo "No pack.png found"
+          cp options.txt native_temp/ 2>/dev/null || echo "No options.txt found"
+          cp server.properties native_temp/ 2>/dev/null || echo "No server.properties found"
+          
+          # Create the zip file
           cd native_temp
           zip -r "../${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Native.zip" .
           cd ..
           
+          # Clean up temp directory
           rm -rf native_temp
 
       - name: Upload Native artifact
@@ -151,7 +155,13 @@ jobs:
       - name: Export CurseForge modpack
         run: |
           packwiz cf export
-          mv export.zip "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-CurseForge.zip"
+          # Find the actual exported file (it has the pack name with version)
+          CURSEFORGE_FILE=$(find . -name "Nuclear Tech: New Horizons-${{ needs.setup-and-version.outputs.version }}.zip" -print -quit)
+          if [ -z "$CURSEFORGE_FILE" ]; then
+            echo "Could not find CurseForge export file"
+            exit 1
+          fi
+          mv "$CURSEFORGE_FILE" "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-CurseForge.zip"
 
       - name: Clean up CurseForge zip (remove duplicate .jar files)
         run: |
@@ -201,10 +211,16 @@ jobs:
       - name: Install packwiz
         run: go install github.com/packwiz/packwiz@latest
 
-      - name: Export Modrinth modpack
+      - name: Export Modrinth modpack (ignore exit code 1 for manual downloads)
         run: |
-          packwiz mr export
-          mv export.mrpack "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.zip"
+          packwiz mr export || true
+          # The file still gets generated despite exit code 1
+          if [ -f "export.mrpack" ]; then
+            mv export.mrpack "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.zip"
+          else
+            echo "Modrinth export file not found"
+            exit 1
+          fi
 
       - name: Clean up Modrinth zip (remove duplicate .jar files)
         run: |
@@ -241,7 +257,6 @@ jobs:
       - build-curseforge
       - build-modrinth
     runs-on: ubuntu-latest
-    # Only run this job if release_type is NOT "artifact"
     if: ${{ github.event.inputs.release_type != 'artifact' }}
     steps:
       - name: Checkout repository
