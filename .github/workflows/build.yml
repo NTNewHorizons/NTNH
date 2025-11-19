@@ -36,10 +36,7 @@ on:
         default: 'release'
 
 env:
-  PACK_NAME: 'NTNH'  # Pack name prefix for zip files
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Default token has read permissions
-  # For write permissions, you'll need to create a PAT with repo permissions and store it as a secret
-  # PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+  PACK_NAME: 'NTNH'
 
 jobs:
   setup-and-version:
@@ -47,14 +44,14 @@ jobs:
     outputs:
       version: ${{ steps.set-version.outputs.version }}
       commit_hash: ${{ steps.get-commit.outputs.commit_hash }}
+      push_successful: ${{ steps.push-changes.outputs.success }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.inputs.branch || 'main' }}
           fetch-depth: 0
-          # Use personal access token for write permissions if needed
-          # token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          # No token needed - will use permissions from repo settings
 
       - name: Set up Go
         uses: actions/setup-go@v4
@@ -64,52 +61,66 @@ jobs:
       - name: Install packwiz
         run: |
           go install github.com/packwiz/packwiz@latest
-          echo "PATH=$HOME/go/bin:$PATH" >> $GITHUB_ENV
+          echo "${HOME}/go/bin" >> $GITHUB_PATH
 
       - name: Update version in pack.toml
         id: set-version
         run: |
           VERSION="${{ github.event.inputs.version }}"
           echo "Setting version to: $VERSION"
-          # Check if pack.toml exists
+          
+          # Verify pack.toml exists
           if [ ! -f pack.toml ]; then
-            echo "Error: pack.toml not found in repository root"
+            echo "❌ pack.toml not found in repository root!"
             exit 1
           fi
-          # Update version using sed (handles both single and double quotes)
+          
+          # Update version using sed
           sed -i "s/^version\s*=\s*.*/version = \"$VERSION\"/" pack.toml
-          echo "Updated pack.toml:"
-          cat pack.toml
+          echo "✅ Updated pack.toml version to: $VERSION"
+          cat pack.toml | grep version
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
       - name: Run packwiz refresh
         run: |
+          echo "🔄 Refreshing packwiz index..."
           packwiz refresh
-          # Commit the changes made by packwiz
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.toml mods/*.toml 2>/dev/null || true
-          git commit -m "Update index after version change to ${{ github.event.inputs.version }}" || echo "No changes to commit"
+          echo "✅ Index refreshed successfully"
 
       - name: Commit and push version changes
+        id: push-changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add pack.toml
-          git commit -m "Update version to ${{ github.event.inputs.version }}" || echo "No changes to commit"
-          # Only push if we have write permissions
-          if [ -n "${{ secrets.PERSONAL_ACCESS_TOKEN }}" ]; then
-            git push origin ${{ github.event.inputs.branch || 'main' }}
-          else
-            echo "Skipping push - no write permissions available"
+          
+          # Check if there are any changes to commit
+          if git diff --exit-code -- pack.toml index.toml; then
+            echo "⏭️ No changes detected in pack.toml or index.toml"
+            echo "success=false" >> $GITHUB_OUTPUT
+            exit 0
           fi
+          
+          git add pack.toml index.toml
+          git commit -m "Update version to ${{ github.event.inputs.version }}"
+          echo "✅ Changes committed locally"
+          
+          echo "🚀 Attempting to push changes to ${{ github.event.inputs.branch || 'main' }}"
+          if git push origin ${{ github.event.inputs.branch || 'main' }}; then
+            echo "✅ Successfully pushed version changes"
+            echo "success=true" >> $GITHUB_OUTPUT
+          else
+            echo "⚠️ Failed to push changes - continuing workflow anyway"
+            echo "success=false" >> $GITHUB_OUTPUT
+            # Don't fail the job, just continue
+          fi
+        continue-on-error: true
 
       - name: Get commit hash
         id: get-commit
         run: |
           COMMIT_HASH=$(git rev-parse HEAD)
           echo "commit_hash=$COMMIT_HASH" >> $GITHUB_OUTPUT
-          echo "Current commit: $COMMIT_HASH"
+          echo "📄 Current commit hash: $COMMIT_HASH"
 
   build-native:
     needs: setup-and-version
@@ -130,60 +141,52 @@ jobs:
       - name: Install packwiz
         run: |
           go install github.com/packwiz/packwiz@latest
-          echo "PATH=$HOME/go/bin:$PATH" >> $GITHUB_ENV
+          echo "${HOME}/go/bin" >> $GITHUB_PATH
 
-      - name: Export Native modpack
+      - name: Export and clean Native modpack
         run: |
           VERSION="${{ needs.setup-and-version.outputs.version }}"
           OUTPUT_FILE="${{ env.PACK_NAME }}-${VERSION}-Native.zip"
-          echo "Exporting Native modpack to $OUTPUT_FILE"
+          echo "🔧 Building Native modpack: $OUTPUT_FILE"
           
-          # Create a temporary directory for Native build
+          # Create temp directory
           mkdir -p native_build
           
           # Export the modpack
           packwiz export --output "$OUTPUT_FILE" --format zip
           
-          # Extract the zip to clean it up
+          # Extract to clean up
           unzip "$OUTPUT_FILE" -d native_build
           
-          # Remove all .toml files from mods directory and delete corresponding .jar files
-          echo "Cleaning up Native build..."
-          for toml_file in native_build/mods/*.toml; do
-            if [ -f "$toml_file" ]; then
-              base_name=$(basename "$toml_file" .toml)
-              jar_file="native_build/mods/${base_name}.jar"
-              
-              echo "Processing: $base_name"
-              echo "  - Found TOML: $toml_file"
-              
-              # Remove the .toml file
-              rm "$toml_file"
-              echo "  - Removed TOML file"
-              
-              # Remove the corresponding .jar file if it exists
-              if [ -f "$jar_file" ]; then
-                rm "$jar_file"
-                echo "  - Removed duplicate JAR file"
-              else
-                echo "  - No duplicate JAR file found"
-              fi
+          # Remove all .toml files and corresponding .jar files
+          echo "🧹 Cleaning Native build - removing TOML files and duplicates..."
+          find native_build/mods -name "*.toml" | while read toml_file; do
+            base_name=$(basename "$toml_file" .toml)
+            jar_file="native_build/mods/${base_name}.jar"
+            
+            echo "  🗑️  Processing: $base_name"
+            echo "  🗑️  Removing TOML: $toml_file"
+            rm "$toml_file"
+            
+            if [ -f "$jar_file" ]; then
+              echo "  🗑️  Removing duplicate JAR: $jar_file"
+              rm "$jar_file"
             fi
           done
           
           # Remove any remaining .toml files from other directories
           find native_build -name "*.toml" -type f -delete
-          echo "Removed all remaining TOML files"
           
-          # Recreate the cleaned zip
+          # Create optimized zip
           cd native_build
           zip -r "../$OUTPUT_FILE" .
           cd ..
           
-          # Clean up temporary directory
+          # Cleanup
           rm -rf native_build
           
-          echo "Native build cleaned and optimized: $OUTPUT_FILE"
+          echo "✅ Native build completed: $OUTPUT_FILE"
+          ls -lh "$OUTPUT_FILE"
 
       - name: Upload Native artifact
         uses: actions/upload-artifact@v3
@@ -211,49 +214,43 @@ jobs:
       - name: Install packwiz
         run: |
           go install github.com/packwiz/packwiz@latest
-          echo "PATH=$HOME/go/bin:$PATH" >> $GITHUB_ENV
+          echo "${HOME}/go/bin" >> $GITHUB_PATH
 
-      - name: Export CurseForge modpack
+      - name: Export and clean CurseForge modpack
         run: |
           VERSION="${{ needs.setup-and-version.outputs.version }}"
           OUTPUT_FILE="${{ env.PACK_NAME }}-${VERSION}-CurseForge.zip"
-          echo "Exporting CurseForge modpack..."
+          echo "🔧 Building CurseForge modpack: $OUTPUT_FILE"
           
-          # Create temporary directory
           mkdir -p cf_build
           
           # Export for CurseForge
           packwiz cf export
-          
-          # Rename the exported file
           mv export.zip "$OUTPUT_FILE"
           
-          # Extract to clean up duplicate files
+          # Extract and clean duplicates
           unzip "$OUTPUT_FILE" -d cf_build
           
-          # Remove duplicate .jar files when .toml files exist
-          echo "Cleaning up CurseForge build - removing duplicate JARs..."
-          for toml_file in cf_build/mods/*.toml; do
-            if [ -f "$toml_file" ]; then
-              base_name=$(basename "$toml_file" .toml)
-              jar_file="cf_build/mods/${base_name}.jar"
-              
-              if [ -f "$jar_file" ]; then
-                echo "Removing duplicate JAR for: $base_name"
-                rm "$jar_file"
-              fi
+          echo "🧹 Cleaning CurseForge build - removing duplicate JARs..."
+          find cf_build/mods -name "*.toml" | while read toml_file; do
+            base_name=$(basename "$toml_file" .toml)
+            jar_file="cf_build/mods/${base_name}.jar"
+            
+            if [ -f "$jar_file" ]; then
+              echo "  🗑️  Removing duplicate JAR for: $base_name"
+              rm "$jar_file"
             fi
           done
           
-          # Recreate the cleaned zip
+          # Recreate zip
           cd cf_build
           zip -r "../$OUTPUT_FILE" .
           cd ..
           
-          # Clean up
           rm -rf cf_build
           
-          echo "CurseForge build cleaned: $OUTPUT_FILE"
+          echo "✅ CurseForge build completed: $OUTPUT_FILE"
+          ls -lh "$OUTPUT_FILE"
 
       - name: Upload CurseForge artifact
         uses: actions/upload-artifact@v3
@@ -281,49 +278,43 @@ jobs:
       - name: Install packwiz
         run: |
           go install github.com/packwiz/packwiz@latest
-          echo "PATH=$HOME/go/bin:$PATH" >> $GITHUB_ENV
+          echo "${HOME}/go/bin" >> $GITHUB_PATH
 
-      - name: Export Modrinth modpack
+      - name: Export and clean Modrinth modpack
         run: |
           VERSION="${{ needs.setup-and-version.outputs.version }}"
           OUTPUT_FILE="${{ env.PACK_NAME }}-${VERSION}-Modrinth.zip"
-          echo "Exporting Modrinth modpack..."
+          echo "🔧 Building Modrinth modpack: $OUTPUT_FILE"
           
-          # Create temporary directory
           mkdir -p mr_build
           
           # Export for Modrinth
           packwiz mr export
-          
-          # Rename the exported file
           mv export.mrpack "$OUTPUT_FILE"
           
-          # Extract to clean up duplicate files
+          # Extract and clean duplicates
           unzip "$OUTPUT_FILE" -d mr_build
           
-          # Remove duplicate .jar files when .toml files exist
-          echo "Cleaning up Modrinth build - removing duplicate JARs..."
-          for toml_file in mr_build/mods/*.toml; do
-            if [ -f "$toml_file" ]; then
-              base_name=$(basename "$toml_file" .toml)
-              jar_file="mr_build/mods/${base_name}.jar"
-              
-              if [ -f "$jar_file" ]; then
-                echo "Removing duplicate JAR for: $base_name"
-                rm "$jar_file"
-              fi
+          echo "🧹 Cleaning Modrinth build - removing duplicate JARs..."
+          find mr_build/mods -name "*.toml" | while read toml_file; do
+            base_name=$(basename "$toml_file" .toml)
+            jar_file="mr_build/mods/${base_name}.jar"
+            
+            if [ -f "$jar_file" ]; then
+              echo "  🗑️  Removing duplicate JAR for: $base_name"
+              rm "$jar_file"
             fi
           done
           
-          # Recreate the cleaned zip
+          # Recreate zip
           cd mr_build
           zip -r "../$OUTPUT_FILE" .
           cd ..
           
-          # Clean up
           rm -rf mr_build
           
-          echo "Modrinth build cleaned: $OUTPUT_FILE"
+          echo "✅ Modrinth build completed: $OUTPUT_FILE"
+          ls -lh "$OUTPUT_FILE"
 
       - name: Upload Modrinth artifact
         uses: actions/upload-artifact@v3
@@ -357,15 +348,13 @@ jobs:
           CHANGELOG_FILE="CHANGELOG.md"
           if [ -f "$CHANGELOG_FILE" ]; then
             CHANGELOG_CONTENT=$(cat "$CHANGELOG_FILE")
-            # Escape special characters for GitHub Actions
-            CHANGELOG_CONTENT="${CHANGELOG_CONTENT//'%'/'%25'}"
-            CHANGELOG_CONTENT="${CHANGELOG_CONTENT//$'\n'/'%0A'}"
-            CHANGELOG_CONTENT="${CHANGELOG_CONTENT//$'\r'/'%0D'}"
-            echo "changelog_content=$CHANGELOG_CONTENT" >> $GITHUB_OUTPUT
-            echo "Successfully read CHANGELOG.md"
+            echo "changelog_content<<EOF" >> $GITHUB_OUTPUT
+            echo "$CHANGELOG_CONTENT" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+            echo "✅ Successfully read CHANGELOG.md"
           else
-            echo "changelog_content=No changelog available for version ${{ needs.setup-and-version.outputs.version }}" >> $GITHUB_OUTPUT
-            echo "Warning: CHANGELOG.md not found"
+            echo "⚠️ CHANGELOG.md not found - using default message"
+            echo "changelog_content=Release ${{ needs.setup-and-version.outputs.version }}" >> $GITHUB_OUTPUT
           fi
 
       - name: Create GitHub Release
@@ -376,18 +365,16 @@ jobs:
           name: ${{ needs.setup-and-version.outputs.version }}
           body: ${{ steps.get-changelog.outputs.changelog_content }}
           prerelease: ${{ github.event.inputs.release_type == 'pre-release' }}
-          # Files to attach - include Mary-TTS.zip if it exists
           files: |
-            ${{ github.workspace }}/Mary-TTS.zip || true
             artifacts/native-build/${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Native.zip
             artifacts/curseforge-build/${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-CurseForge.zip
             artifacts/modrinth-build/${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Cleanup artifacts
+      - name: Final cleanup
         if: always()
         run: |
-          echo "Cleaning up downloaded artifacts..."
+          echo "🧹 Cleaning up artifacts..."
           rm -rf artifacts
-          echo "Cleanup complete"
+          echo "✅ Workflow completed successfully!"
