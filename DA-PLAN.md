@@ -1,4 +1,4 @@
-So I found a solution! We need a workflow that
+So I found a solution! We need a workflow that:
 
 1. Checkouts selected branch of a repo (default is main)
 2. Downloads packwiz via Go
@@ -18,3 +18,19 @@ So I found a solution! We need a workflow that
 
 (Maybe)
 9. Sends a Discord announcement via Webhook.
+
+
+
+User inputs are:
+1. Branch where we are building from
+2. Version number (X.X.X)
+3. What to build (checkmarks) - Native, CurseForge, Modrinth
+4. Set release type (dropdown list) - pre-release, release and latest release
+
+(Maybe)
+5. Do announcement on Discord (checkmark)
+
+
+
+Notes:
+If it's possible, builds (aka Native, CF and MR) should be done not one by one but everything at one time (a-la multithread). Step 7 should wait while all of them (selected builds) are finished.
