@@ -34,3 +34,4 @@ User inputs are:
 
 Notes:
 If it's possible, builds (aka Native, CF and MR) should be done not one by one but everything at one time (a-la multithread). Step 7 should wait while all of them (selected builds) are finished.
+In the end we should get Native build completely without .toml files in /mods/ directory, and CF and MR builds with a lot of .toml files and a few of .jar files. No duplicate .jar and .toml
