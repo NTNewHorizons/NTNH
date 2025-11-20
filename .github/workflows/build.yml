@@ -1,153 +1,299 @@
-name: Build NTNH Packages
+name: Build and Release Modpack
 
 on:
   workflow_dispatch:
     inputs:
       branch:
+        description: 'Branch to build from (default: main)'
+        required: true
+        default: 'main'
+      version:
+        description: 'Version number (X.X.X)'
+        required: true
+      build_native:
+        description: 'Build Native version'
+        type: boolean
+        required: true
+        default: true
+      build_curseforge:
+        description: 'Build CurseForge version'
+        type: boolean
+        required: true
+        default: true
+      build_modrinth:
+        description: 'Build Modrinth version'
+        type: boolean
+        required: true
+        default: true
+      release_type:
+        description: 'Release type'
         type: choice
-        required: true
-        description: "Which branch you want to build?"
         options:
-          - "main"
-          - "twopointzero"
-      output:
-        type: choice
+        - release
+        - pre-release
+        - latest-release
+        - artifact
         required: true
-        description: "Which one do you want to build?"
-        options:
-          - "artifact"
-          - "release"
-      lwjgl3ify:
-        description: 'Do you want to build lwjfl3ify package?'
-        required: true
-        type: boolean
-        default: true
-      prism:
-        description: 'Do you want to build prism package?'
-        required: true
-        type: boolean
-        default: true
-      native:
-        description: 'Do you want to build native package?'
-        required: true
-        type: boolean
-        default: true
-      release_version:
-        description: 'Release Version'
-        required: true
-        type: string
+        default: 'release'
 
 env:
-  instance.cfg: |
-    [General]
-    name=NTNH-${{ github.event.inputs.release_version }}
-    iconKey=default
-    InstanceType=OneSix
-  mmc-pack.json: |
-    {
-        "components": [
-            {
-                "important": true,
-                "uid": "net.minecraft",
-                "version": "1.7.10"
-            },
-            {
-                "uid": "net.minecraftforge",
-                "version": "10.13.4.1614"
-            }
-        ],
-        "formatVersion": 1
-    }
+  PACK_NAME: 'NTNH'
 
 jobs:
-  package:
+  setup-and-version:
     runs-on: ubuntu-latest
-
+    outputs:
+      version: ${{ steps.set-version.outputs.version }}
+      commit_hash: ${{ steps.get-commit.outputs.commit_hash }}
+      pack_full_name: ${{ steps.get-pack-name.outputs.pack_full_name }}
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          path: ntnh
           ref: ${{ github.event.inputs.branch }}
+          fetch-depth: 0
+          token: ${{ secrets.GH_PAT_FOR_PUSH }}
 
-      - name: Run lwjgl3ify Script
-        if: github.event.inputs.lwjgl3ify == 'true'
+      - name: Get pack name from pack.toml
+        id: get-pack-name
         run: |
-          version=$(curl -s https://api.github.com/repos/GTNewHorizons/lwjgl3ify/releases/latest | jq -r .tag_name)
-          zip_url="https://github.com/GTNewHorizons/lwjgl3ify/releases/download/$version/lwjgl3ify-${version}-multimc.zip"
-          jar_url="https://github.com/GTNewHorizons/lwjgl3ify/releases/download/$version/lwjgl3ify-${version}.jar"
+          PACK_FULL_NAME=$(grep -m 1 '^name = ' pack.toml | sed 's/name = "\(.*\)"/\1/')
+          echo "pack_full_name=$PACK_FULL_NAME" >> $GITHUB_OUTPUT
+          echo "Full pack name: $PACK_FULL_NAME"
 
-          curl -L "$zip_url" -o "lwjgl3ify-${version}-multimc.zip"
-          unzip -q "lwjgl3ify-${version}-multimc.zip" -d lwjgl3ify-multimc
-          curl -L "$jar_url" -o "lwjgl3ify-${version}.jar"
+      - name: Set up Go (minimum 1.23.0 required for packwiz)
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.24'  # Use newer version that works with packwiz
 
-          mkdir -p modpack-lwjgl3ify/.minecraft/mods
-          cp -r ntnh/* modpack-lwjgl3ify/.minecraft/
+      - name: Install packwiz
+        run: go install github.com/packwiz/packwiz@latest
 
-          cat > modpack-lwjgl3ifyinstance.cfg <<< "${{ github.event.inputs.instance.cfg }}"
-          cat > modpack-lwjgl3ify/mmc-pack.json <<< "${{ github.event.inputs.mmc-pack.json }}"
-
-          cp -r lwjgl3ify-multimc/patches modpack-lwjgl3ify/
-          cp -r lwjgl3ify-multimc/libraries modpack-lwjgl3ify/
-          cp -r lwjgl3ify-multimc/mmc-pack.json modpack-lwjgl3ify/
-          cp -r "lwjgl3ify-${version}.jar" modpack-lwjgl3ify/.minecraft/mods/
-
-      - name: Run Prism Script
-        if: github.event.inputs.prism == 'true'
+      - name: Update version in pack.toml
+        id: set-version
         run: |
-          mkdir -p modpack-prism/.minecraft
-          cp -r ntnh/* modpack-prism/.minecraft/
+          VERSION="${{ github.event.inputs.version }}"
+          echo "Setting version to: $VERSION"
+          sed -i "s/^version = .*/version = \"$VERSION\"/" pack.toml
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
 
-          cat > modpack-prism/instance.cfg <<< "${{ github.event.inputs.instance.cfg }}"
-          cat > modpack-prism/mmc-pack.json <<< "${{ github.event.inputs.mmc-pack.json }}"
+      - name: Run packwiz refresh
+        run: packwiz refresh
 
-      - name: Run Native Script
-        if: github.event.inputs.native == 'true'
+      - name: Commit and push version changes
         run: |
-          mkdir -p modpack-native
-          cp -r ntnh/* modpack-native
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          
+          git add pack.toml index.toml
+          git commit -m "Update modpack version to ${{ github.event.inputs.version }}" || echo "No changes to commit"
+          git push origin ${{ github.event.inputs.branch }}
 
-      - name: Upload lwjgl3ify Artifact
-        if: github.event.inputs.lwjgl3ify == 'true' && github.event.inputs.output == 'artifact'
+      - name: Get commit hash
+        id: get-commit
+        run: echo "commit_hash=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+
+  build-native:
+    needs: setup-and-version
+    runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.build_native == 'true' }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch }}
+          fetch-depth: 0
+          token: ${{ secrets.GH_PAT_FOR_PUSH }}
+
+      - name: Create Native modpack zip manually
+        run: |
+          # Create temp directory structure
+          mkdir -p native_temp/mods
+          mkdir -p native_temp/config
+          mkdir -p native_temp/scripts
+          
+          # Copy all mods (only .jar files, no .toml files)
+          find mods -name "*.jar" -exec cp {} native_temp/mods/ \; 2>/dev/null || echo "No mods found"
+          
+          # Copy config files
+          if [ -d "config" ]; then
+            cp -r config/* native_temp/config/ 2>/dev/null || echo "No config files found"
+          fi
+          
+          # Copy scripts
+          if [ -d "scripts" ]; then
+            cp -r scripts/* native_temp/scripts/ 2>/dev/null || echo "No scripts found"
+          fi
+          
+          # Copy other necessary files
+          cp pack.png native_temp/ 2>/dev/null || echo "No pack.png found"
+          cp options.txt native_temp/ 2>/dev/null || echo "No options.txt found"
+          
+          # Create the zip file
+          cd native_temp
+          zip -r "../${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Native.zip" .
+          cd ..
+          
+          # Clean up temp directory
+          rm -rf native_temp
+
+      - name: Upload Native artifact
         uses: actions/upload-artifact@v4
         with:
-          name: NTNH-${{ github.event.inputs.release_version }}-lwjgl3ify
-          path: modpack-lwjgl3ify
-          include-hidden-files: true
+          name: native-build
+          path: "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Native.zip"
 
-      - name: Upload Prism Artifact
-        if: github.event.inputs.prism == 'true' && github.event.inputs.output == 'artifact'
-        uses: actions/upload-artifact@v4
+  build-curseforge:
+    needs: setup-and-version
+    runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.build_curseforge == 'true' }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
-          name: NTNH-${{ github.event.inputs.release_version }}-MMC_Prism
-          path: modpack-prism
-          include-hidden-files: true
+          ref: ${{ github.event.inputs.branch }}
+          fetch-depth: 0
+          token: ${{ secrets.GH_PAT_FOR_PUSH }}
 
-      - name: Upload Native Artifact
-        if: github.event.inputs.native == 'true' && github.event.inputs.output == 'artifact'
-        uses: actions/upload-artifact@v4
+      - name: Set up Go
+        uses: actions/setup-go@v4
         with:
-          name: NTNH-${{ github.event.inputs.release_version }}-Native
-          path: modpack-native
-          include-hidden-files: true
+          go-version: '1.24'
 
-      - name: Zip Files
-        if: github.event.inputs.output == 'release'
-        continue-on-error: true
+      - name: Install packwiz
+        run: go install github.com/packwiz/packwiz@latest
+
+      - name: Export CurseForge modpack
         run: |
-          zip -r "NTNH-${{ github.event.inputs.release_version }}-lwjgl3ify.zip" ntnh/modpack-lwjgl3ify/
-          zip -r "NTNH-${{ github.event.inputs.release_version }}-Prism.zip" ntnh/modpack-prism/
-          zip -r "NTNH-${{ github.event.inputs.release_version }}-Native.zip" ntnh/modpack-native/
+          packwiz cf export
+          # Find the actual exported file using the full pack name
+          PACK_FULL_NAME="${{ needs.setup-and-version.outputs.pack_full_name }}"
+          CURSEFORGE_FILE=$(find . -name "${PACK_FULL_NAME}-${{ needs.setup-and-version.outputs.version }}.zip" -print -quit)
+          if [ -z "$CURSEFORGE_FILE" ]; then
+            echo "Could not find CurseForge export file"
+            echo "Looking for files matching: ${PACK_FULL_NAME}-${{ needs.setup-and-version.outputs.version }}.zip"
+            find . -name "*.zip"
+            exit 1
+          fi
+          mv "$CURSEFORGE_FILE" "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-CurseForge.zip"
+
+      - name: Clean up CurseForge zip (remove duplicate .jar files)
+        run: |
+          mkdir cf_temp
+          unzip "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-CurseForge.zip" -d cf_temp
+          
+          # For each .toml file in mods, delete corresponding .jar if it exists
+          for toml_file in cf_temp/mods/*.toml; do
+            if [ -f "$toml_file" ]; then
+              base_name=$(basename "$toml_file" .toml)
+              jar_file="cf_temp/mods/${base_name}.jar"
+              if [ -f "$jar_file" ]; then
+                echo "Removing duplicate jar: $jar_file"
+                rm "$jar_file"
+              fi
+            fi
+          done
+          
+          # Create cleaned zip
+          cd cf_temp
+          zip -r "../${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-CurseForge.zip" .
+          cd ..
+          
+          # Clean up temp directory
+          rm -rf cf_temp
+
+      - name: Upload CurseForge artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: curseforge-build
+          path: "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-CurseForge.zip"
+
+  build-modrinth:
+    needs: setup-and-version
+    runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.build_modrinth == 'true' }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch }}
+          fetch-depth: 0
+          token: ${{ secrets.GH_PAT_FOR_PUSH }}
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.24'
+
+      - name: Install packwiz
+        run: go install github.com/packwiz/packwiz@latest
+
+      - name: Export Modrinth modpack (ignore exit code for manual downloads)
+        run: |
+          # Run export and ignore exit code since file is still generated despite manual download warnings
+          packwiz mr export || true
+          
+          # Find the actual exported file using the full pack name
+          PACK_FULL_NAME="${{ needs.setup-and-version.outputs.pack_full_name }}"
+          MODRINTH_FILE=$(find . -name "${PACK_FULL_NAME}-${{ needs.setup-and-version.outputs.version }}.mrpack" -print -quit)
+          if [ -z "$MODRINTH_FILE" ]; then
+            echo "Could not find Modrinth export file"
+            echo "Looking for files matching: ${PACK_FULL_NAME}-${{ needs.setup-and-version.outputs.version }}.mrpack"
+            find . -name "*.mrpack"
+            exit 1
+          fi
+          echo "Found Modrinth export file: $MODRINTH_FILE"
+          mv "$MODRINTH_FILE" "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.mrpack"
+
+      - name: Upload Modrinth artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: modrinth-build
+          path: "${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.mrpack"
+
+  create-release:
+    needs:
+      - setup-and-version
+      - build-native
+      - build-curseforge
+      - build-modrinth
+    runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.release_type != 'artifact' }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch }}
+          fetch-depth: 0
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Get changelog content
+        id: get-changelog
+        run: |
+          if [ -f CHANGELOG.md ]; then
+            CHANGELOG_CONTENT=$(cat CHANGELOG.md)
+            echo "changelog_content<<EOF" >> $GITHUB_OUTPUT
+            echo "$CHANGELOG_CONTENT" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          else
+            echo "changelog_content=No changelog available for version ${{ needs.setup-and-version.outputs.version }}" >> $GITHUB_OUTPUT
+          fi
 
       - name: Create GitHub Release
-        if: github.ref_type == 'tag' && github.event.inputs.output == 'release'
         uses: softprops/action-gh-release@v2
         with:
-          name: ${{ github.event.inputs.release_version }}
-          tag_name: ${{ github.event.inputs.release_version }}
-          body: ${{ github.event.inputs.changelog }}
-          token: ${{ secrets.RELEASE_GITHUB_TOKEN }}
+          tag_name: ${{ needs.setup-and-version.outputs.version }}
+          name: ${{ needs.setup-and-version.outputs.version }}
+          body: ${{ steps.get-changelog.outputs.changelog_content }}
+          prerelease: ${{ github.event.inputs.release_type == 'pre-release' }}
           files: |
-            NTNH-${{ github.event.inputs.release_version }}-lwjgl3ify.zip
-            NTNH-${{ github.event.inputs.release_version }}-Prism.zip
-            NTNH-${{ github.event.inputs.release_version }}-Native.zip
+            Mary-TTS.zip
+            artifacts/native-build/${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Native.zip
+            artifacts/curseforge-build/${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-CurseForge.zip
+            artifacts/modrinth-build/${{ env.PACK_NAME }}-${{ needs.setup-and-version.outputs.version }}-Modrinth.mrpack
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
