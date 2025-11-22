@@ -3,16 +3,12 @@
     "0:10": {
       "questIDHigh:4": 0,
       "questIDLow:4": 34
-    },
-    "1:10": {
-      "questIDHigh:4": 0,
-      "questIDLow:4": 26
     }
   },
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "For greater distances, and improved aesthetics, a new distribution node is available, the §3Large Electricity Pylon§r.\n\n§3Substations§r are needed to step up/down the voltage that the line carries.\n\nThese Pylons can prove useful as favorable §eBedrock Ore§r or §eOil deposits§r may be located far away from the main base.\n",
+      "desc:8": "For greater distances, and improved aesthetics, a new distribution node is available, the Large Electricity Pylon.\n\nSubstations are needed to step up/down the voltage that the line carries.\n\nThese Pylons can prove useful as favorable Bedrock Ore or Oil deposits may be located far away from the main base.\n",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -23,7 +19,7 @@
       "isMain:1": 1,
       "isSilent:1": 0,
       "lockedProgress:1": 0,
-      "name:8": "Long Distance Energy Transportation",
+      "name:8": "Long Distance Energy Transportation 2: Longer",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,
@@ -36,7 +32,21 @@
   },
   "questIDHigh:4": -5491768019635254630,
   "questIDLow:4": -8438756366615056717,
-  "rewards:9": {},
+  "rewards:9": {
+    "0:10": {
+      "ignoreDisabled:1": 0,
+      "index:3": 0,
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 2,
+          "OreDict:8": "",
+          "id:8": "enhancedlootbags:lootbag"
+        }
+      }
+    }
+  },
   "tasks:9": {
     "0:10": {
       "autoConsume:1": 0,

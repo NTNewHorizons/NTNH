@@ -1,14 +1,14 @@
 {
   "preRequisites:9": {
     "0:10": {
-      "questIDHigh:4": 3300935411432441238,
-      "questIDLow:4": -5423491499164788343
+      "questIDHigh:4": 0,
+      "questIDLow:4": 30
     }
   },
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "The §6Integrated Circuit Board§r is the first circuit board to use §6Silicon§r, being used extensively in mid game machines, automation devices, missiles, and various small tools such as the §6Geiger Counter§r.",
+      "desc:8": "The Integrated Circuit Board is used extensively in mid game machines, automation devices, missiles, and various small tools such as the geiger counter.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -32,7 +32,21 @@
   },
   "questIDHigh:4": 0,
   "questIDLow:4": 32,
-  "rewards:9": {},
+  "rewards:9": {
+    "0:10": {
+      "ignoreDisabled:1": 0,
+      "index:3": 0,
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 3,
+          "OreDict:8": "",
+          "id:8": "enhancedlootbags:lootbag"
+        }
+      }
+    }
+  },
   "tasks:9": {
     "0:10": {
       "autoConsume:1": 0,

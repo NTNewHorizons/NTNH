@@ -12,7 +12,7 @@
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "§bAntimatter§r is a dangerous substance which can be obtained from a §3Cyclotron§r or a §3Particle Accelerator§r. If dropped on the floor a violent explosion will occur. Antimatter cant be stored in normal tanks, and as such, a §3Magnetic Antimatter Container§r is required.",
+      "desc:8": "Antimatter is a dangerous substance which can be obtained from a Cyclotron,a Particle Accelerator or extracted from duds using a Magnetic Extractor. If dropped on the floor a violent explosion will occur.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -54,23 +54,6 @@
         }
       },
       "taskID:8": "bq_standard:retrieval"
-    },
-    "1:10": {
-      "autoConsume:1": 0,
-      "consume:1": 0,
-      "groupDetect:1": 0,
-      "ignoreNBT:1": 1,
-      "index:3": 1,
-      "partialMatch:1": 1,
-      "requiredItems:9": {
-        "0:10": {
-          "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
-          "id:8": "hbm:tile.barrel_antimatter"
-        }
-      },
-      "taskID:8": "bq_standard:optional_retrieval"
     }
   }
 }

@@ -9,7 +9,7 @@
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "The §3Disk Drive§r can be used to read §6Floppy Disks§r using a computer connected to it.\n\nThis is useful to get started, since the lower tier §3Computer Cases§r do not have a built-in floppy slot, and you\u0027ll need an operating system to boot up the computer.",
+      "desc:8": "The Disk Drive can be used to read Floppy Disks using a computer connected to the Disk Drive. \n\nThis is useful to get started, since the lower tier Computer Cases do not have a built-in floppy slot, and you\u0027ll need an operating system to boot up the computer. An OpenOS disk can be crafted using an empty floppy disk and a manual.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -17,7 +17,7 @@
         "OreDict:8": "",
         "id:8": "OpenComputers:item"
       },
-      "isMain:1": 0,
+      "isMain:1": 1,
       "isSilent:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Floppy Disks and Disk Drive",
@@ -36,8 +36,31 @@
   "rewards:9": {},
   "tasks:9": {
     "0:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
       "index:3": 0,
-      "taskID:8": "bq_standard:checkbox"
+      "partialMatch:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 4,
+          "OreDict:8": "",
+          "id:8": "OpenComputers:item",
+          "tag:10": {
+            "display:10": {
+              "Name:8": "OpenOS (Operating System)"
+            },
+            "oc:color:3": 2,
+            "oc:data:10": {
+              "oc:fs.label:8": "openos"
+            },
+            "oc:lootFactory:8": "OpenComputers:openos"
+          }
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
     },
     "1:10": {
       "autoConsume:1": 0,

@@ -12,7 +12,7 @@
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "The §3Hydraulic Fracking Tower§r is used to extract infinite oil from a §eBedrock Oil Deposit§r. To operate, the machine needs §bFracking Solution§r. During its operation, the surrounding environment will sustain considerable damage. §6Oily Dirt§r and §6Oily Sand§r can be used to create §6Arsenic§r, a substitute of §6Bismuth§r.\n\nOperating the hydraulic fracking tower will consume §e100kHE/s§r.",
+      "desc:8": "The Hydraulic Fracking Tower is used to extract infinite oil from a Bedrock Oil Deposit. To operate, the machine needs fracking solution. While it is operating, the Hydraulic Fracking Tower will destroy the surrounding environment.\n",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -44,11 +44,16 @@
       "rewards:9": {
         "0:10": {
           "Count:3": 1,
-          "Damage:2": 0,
+          "Damage:2": 2,
           "OreDict:8": "",
-          "id:8": "amazingtrophies:trophy",
+          "id:8": "enhancedlootbags:lootbag",
           "tag:10": {
-            "trophyID:8": "fracking"
+            "ench:9": {
+              "0:10": {
+                "id:2": 35,
+                "lvl:2": 3
+              }
+            }
           }
         }
       }

@@ -8,7 +8,7 @@
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "The §3Rotary Furnace§r is a large furnace which is powered by both §bSteam§r and §6§rsolid fuel. §rIt outputs molten material which can be cast similarly to the outputs of the §3Crucible§r and §3Arc Furnace§r. The Rotary Furnace is the only machine that can produce §6Saturnite§r and §6Weapon Steel§r.",
+      "desc:8": "The Rotary Furnace is a large furnace which is powered by both Steam and Solid Fuel. It outputs molten material which can be cast similarly to the outputs of the Crucible and Arc Furnace. The Rotary Furnace is the only machine that can produce Saturnite and Weapon Steel.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -16,7 +16,7 @@
         "OreDict:8": "",
         "id:8": "hbm:tile.machine_rotary_furnace"
       },
-      "isMain:1": 0,
+      "isMain:1": 1,
       "isSilent:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Rotary Furnace",
@@ -32,7 +32,21 @@
   },
   "questIDHigh:4": 0,
   "questIDLow:4": 61,
-  "rewards:9": {},
+  "rewards:9": {
+    "0:10": {
+      "ignoreDisabled:1": 0,
+      "index:3": 0,
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "OreDict:8": "",
+          "id:8": "enhancedlootbags:lootbag"
+        }
+      }
+    }
+  },
   "tasks:9": {
     "0:10": {
       "autoConsume:1": 0,

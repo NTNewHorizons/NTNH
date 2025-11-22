@@ -16,7 +16,7 @@
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "The §6Graphics Card§r is an essential part for most computers and allows the computer to display text on a connected §6Screen§r. \n\nGraphics cards come in several tiers, and like screens, support different resolutions and color depths.",
+      "desc:8": "The Graphics Card is an essential part for most computers and allows the computer to display text on a connected screen. \n\nGraphics Cards come in several tiers, and like screens, support different resolutions and color depths.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -24,7 +24,7 @@
         "OreDict:8": "",
         "id:8": "OpenComputers:item"
       },
-      "isMain:1": 0,
+      "isMain:1": 1,
       "isSilent:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Graphics Cards",
@@ -34,7 +34,7 @@
       "simultaneous:1": 0,
       "snd_complete:8": "random.levelup",
       "snd_update:8": "random.levelup",
-      "taskLogic:8": "OR",
+      "taskLogic:8": "AND",
       "visibility:8": "NORMAL"
     }
   },
@@ -57,7 +57,7 @@
           "id:8": "OpenComputers:item"
         }
       },
-      "taskID:8": "bq_standard:retrieval"
+      "taskID:8": "bq_standard:optional_retrieval"
     },
     "1:10": {
       "autoConsume:1": 0,
@@ -74,7 +74,7 @@
           "id:8": "OpenComputers:item"
         }
       },
-      "taskID:8": "bq_standard:retrieval"
+      "taskID:8": "bq_standard:optional_retrieval"
     },
     "2:10": {
       "autoConsume:1": 0,
@@ -91,7 +91,7 @@
           "id:8": "OpenComputers:item"
         }
       },
-      "taskID:8": "bq_standard:retrieval"
+      "taskID:8": "bq_standard:optional_retrieval"
     }
   }
 }

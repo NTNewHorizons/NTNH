@@ -1,14 +1,14 @@
 {
   "preRequisites:9": {
     "0:10": {
-      "questIDHigh:4": 8162125792545885492,
-      "questIDLow:4": -7464496251550668189
+      "questIDHigh:4": 3815408352937790737,
+      "questIDLow:4": -8419756304778390558
     }
   },
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "The §3Crucible§r is an important machine as it is the central component of metallurgy. It is used as a method of ore processing, alloying, and metal casting. It requires an external heat source to melt the inputs into liquids and when filled, it emits a consistent amount of soot that can cause a fair amount of pollution that cannot be mitigated. Some alloys, as mentioned before, can be made alternatively using a §3Blast Furnace§r, however this is generally slower.\n\n[F1] For more information.",
+      "desc:8": "The crucible is an important machine as it is the central component of metallurgy. It is used as a method of ore processing, alloying, and metal casting. It requires an external heat source to melt the inputs into liquids and when filled, it emits a consistent amount of soot that can cause a fair amount of pollution that cannot be mitigated. Some alloys, as mentioned before, can be made alternatively using a blast furnace, however this is generally slower.\n\n[F1] For more information.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -46,6 +46,12 @@
           "tag:10": {
             "trophyID:8": "crucible"
           }
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "OreDict:8": "",
+          "id:8": "enhancedlootbags:lootbag"
         }
       }
     }
@@ -55,7 +61,7 @@
       "autoConsume:1": 0,
       "consume:1": 0,
       "groupDetect:1": 0,
-      "ignoreNBT:1": 1,
+      "ignoreNBT:1": 0,
       "index:3": 0,
       "partialMatch:1": 1,
       "requiredItems:9": {
@@ -69,15 +75,27 @@
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "hbm:tile.foundry_mold"
+          "id:8": "hbm:tile.foundry_basin"
         },
         "2:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.foundry_mold"
+        },
+        "3:10": {
+          "Count:3": 1,
+          "Damage:2": 12,
+          "OreDict:8": "",
+          "id:8": "hbm:item.mold"
+        },
+        "4:10": {
           "Count:3": 1,
           "Damage:2": 2,
           "OreDict:8": "",
           "id:8": "hbm:item.mold"
         },
-        "3:10": {
+        "5:10": {
           "Count:3": 1,
           "Damage:2": 19,
           "OreDict:8": "",
@@ -85,29 +103,6 @@
         }
       },
       "taskID:8": "bq_standard:retrieval"
-    },
-    "1:10": {
-      "autoConsume:1": 0,
-      "consume:1": 0,
-      "groupDetect:1": 0,
-      "ignoreNBT:1": 1,
-      "index:3": 1,
-      "partialMatch:1": 1,
-      "requiredItems:9": {
-        "0:10": {
-          "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
-          "id:8": "hbm:tile.foundry_basin"
-        },
-        "1:10": {
-          "Count:3": 1,
-          "Damage:2": 12,
-          "OreDict:8": "",
-          "id:8": "hbm:item.mold"
-        }
-      },
-      "taskID:8": "bq_standard:optional_retrieval"
     }
   }
 }

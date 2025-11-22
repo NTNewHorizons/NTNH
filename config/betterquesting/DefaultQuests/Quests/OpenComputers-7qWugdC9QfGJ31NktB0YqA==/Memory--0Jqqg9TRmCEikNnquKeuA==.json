@@ -8,7 +8,7 @@
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "§6Memory§r is like the §6CPU§r, an essential part in all computers.\n\nDepending on the CPU\u0027s architecture, the memory has a very essential effect on what a computer can and cannot do. For the standard Lua architecture, for example, it controls the actual amount of memory Lua scripts can use. This means that to run larger and more memory-intensive programs, you will need more memory.",
+      "desc:8": "Memory is like the CPU, an essential part in all computers.\n\nDepending on the CPU\u0027s architecture, the memory has a very essential effect on what a computer can and cannot do. For the standard Lua architecture, for example, it controls the actual amount of memory Lua scripts can use. This means that to run larger and more memory-intensive programs, you will need more memory.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -16,7 +16,7 @@
         "OreDict:8": "",
         "id:8": "OpenComputers:item"
       },
-      "isMain:1": 0,
+      "isMain:1": 1,
       "isSilent:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Memory",
@@ -73,7 +73,7 @@
       "consume:1": 0,
       "groupDetect:1": 0,
       "ignoreNBT:1": 1,
-      "index:3": 2,
+      "index:3": 3,
       "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {

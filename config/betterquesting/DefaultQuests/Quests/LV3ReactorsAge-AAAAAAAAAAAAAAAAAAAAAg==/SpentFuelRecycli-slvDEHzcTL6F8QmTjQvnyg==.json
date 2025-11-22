@@ -1,0 +1,79 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 0,
+      "questIDLow:4": 114
+    },
+    "1:10": {
+      "questIDHigh:4": 0,
+      "questIDLow:4": 10
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "§0§r§r§rSpent Fuel Pool Drum used to cool §6§4§rdown spent fuel. This block should be surrounded bu water source blocks.§0§r The more water blocks around the Spent Fuel Pool Drum, the faster the fuel cools.\n\nPUREX is a mechanism used in the processing of nuclear fuel from almost all reactors: Zirnox, WWER, Watts, etc. Moreover, PUREX is capable of enriching spent liquid thorium salt, obtaining shrabidium directly from shraranium and depleted WWER fuel based on plutonium and neptunium, and producing vitrified waste. The mechanism requires kerosene and nitric acid to operate. The energy consumption for each process and its duration can be found in the description when going to the recipe selection window.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:tile.machine_waste_drum"
+      },
+      "isMain:1": 1,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Spent Fuel Recycling",
+      "questLogic:8": "OR",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": -5594663636496003906,
+  "questIDLow:4": -8795238067946657846,
+  "rewards:9": {
+    "0:10": {
+      "ignoreDisabled:1": 0,
+      "index:3": 0,
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 3,
+          "OreDict:8": "",
+          "id:8": "enhancedlootbags:lootbag"
+        }
+      }
+    }
+  },
+  "tasks:9": {
+    "0:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 0,
+      "partialMatch:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.machine_waste_drum"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.machine_purex"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

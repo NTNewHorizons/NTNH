@@ -8,7 +8,7 @@
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "The §3Electric Arc Furnace§r is a large automated furnace multiblock machine that can fill the role of §3Crucible§r and automated smelter, and is required for progression as it is the only machine that can produce §6Silicon§r from various sources, such as §6Sand§r, §6Flint§r, §6fiberglass§r, and §6Asbestos§r.\n\nTo operate this machine, it will require both electrical power and crafted §7§6Electrodes§r. In terms of electricity, the machine has a maximum storage capacity of §e2.5MHE§r, and consumes §e20kHE/s§r in operation, making it reasonably power hungry. In terms of the electrodes required for operation, there are four types available, and the machine must have three installed before it can operate.\n\nThis machine can operate in two different modes: Solid mode, which is the easiest to setup and use, great for initial crafting, and Liquid mode, which produces castable molten ores much like the crucible, with a small bonus to output, increasing efficiency of extraction from various ores.",
+      "desc:8": "The Electric Arc Furnace is a giant furnace in which materials can be smelted and poured into molds. It can also be used to create Silicon, an essential part of more powerful circuits. Electrodes are needed for the Electric Arc Furnace to operate.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -46,6 +46,12 @@
           "tag:10": {
             "trophyID:8": "arc_furnace"
           }
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 2,
+          "OreDict:8": "",
+          "id:8": "enhancedlootbags:lootbag"
         }
       }
     }
@@ -67,23 +73,6 @@
         }
       },
       "taskID:8": "bq_standard:retrieval"
-    },
-    "1:10": {
-      "autoConsume:1": 0,
-      "consume:1": 0,
-      "groupDetect:1": 0,
-      "ignoreNBT:1": 1,
-      "index:3": 1,
-      "partialMatch:1": 1,
-      "requiredItems:9": {
-        "0:10": {
-          "Count:3": 3,
-          "Damage:2": 0,
-          "OreDict:8": "",
-          "id:8": "hbm:item.arc_electrode"
-        }
-      },
-      "taskID:8": "bq_standard:optional_retrieval"
     }
   }
 }

@@ -2,13 +2,21 @@
   "preRequisites:9": {
     "0:10": {
       "questIDHigh:4": 0,
+      "questIDLow:4": 96
+    },
+    "1:10": {
+      "questIDHigh:4": 0,
       "questIDLow:4": 82
+    },
+    "2:10": {
+      "questIDHigh:4": 0,
+      "questIDLow:4": 133
     }
   },
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "§eBedrock Ore Deposits§r are an infinite source of resourses which can be obtained by using a §3Large Mining Drill§r and a §3Bedrock Ore Processor§r.\n\nOperating the drill will consume§e 200kHE/s§r.\n\nBefore excavation can happen, the §eDepth Rock§r covering the bedrock ore deposit needs to be removed. An easy way of doing that is blowing up the rock with §6Mining Charges§r.\n\nThe large mining drill is used to excavate §6Raw Bedrock Ores§r from their deposits. The drill requires a §6Drillbit§r to work§r, which can be upgraded to increase the speed at which it operates at. §eFortune§r on a drillbit affects the quality of mined bedrock ore, each level of fortune adds §e10%§r of the value to the item.\n\nThe bedrock ore processor takes §6§rraw bedrock ore obtained from the drill and breaks it down into smaller pieces, each with different products that can be obtained from them. \n§a§bOre Slop§r, which is created when the machine is operating, can be processed into many useful products, especially when it is sent through an §3Electrolysis Machine§r.\n\nThe §6Bedrock Ore Desity Scanner§r shows information on the composition of Bedrock Ore deposits.\n\nBedrock ore processing can be both an energy and resourse expensive operation so it is recommended that it is explored after having good infrastructure.\n\n§2Consider adding a Power Saving Upgrade to the drill as it only reduces power without affecting the mining speed. Additionally, installing an Effectiveness Upgrade on the ore slopper will make it give out more resourses.§r§r",
+      "desc:8": "Bedrock Ore deposits are an infinite source of resourses which can be obtained by using a Large Mining Drill and a Bedrock Ore Processor.\n\nThe Large Mining Drill is used to excavate Raw Bedrock Ores from their deposits. The Drill requires a drillbit to work.\n\nThe Bedrock Ore Processor takes Raw Bedrock Ore obtained from the Large Mining Drill and breaks it down into smaller pieces, each with different products that can be obtained from them. Ore Slop, which is created when the machine is operating, can be processed into many useful products, especially when it is sent through an Electroylysis Machine.\n\nThe Bedrock Ore Desity Scanner shows information on the composition of Bedrock Ore deposits.\n\nBedrock Ore Processing can be both an energy and resourse expensive operation so it is recommended that it is explored after having good infrastructure.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -46,6 +54,12 @@
           "tag:10": {
             "trophyID:8": "excavator"
           }
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 2,
+          "OreDict:8": "",
+          "id:8": "enhancedlootbags:lootbag"
         }
       }
     }
@@ -70,26 +84,15 @@
           "Damage:2": 0,
           "OreDict:8": "",
           "id:8": "hbm:tile.machine_ore_slopper"
-        }
-      },
-      "taskID:8": "bq_standard:retrieval"
-    },
-    "1:10": {
-      "autoConsume:1": 0,
-      "consume:1": 0,
-      "groupDetect:1": 0,
-      "ignoreNBT:1": 1,
-      "index:3": 1,
-      "partialMatch:1": 1,
-      "requiredItems:9": {
-        "0:10": {
+        },
+        "2:10": {
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
           "id:8": "hbm:item.ore_density_scanner"
         }
       },
-      "taskID:8": "bq_standard:optional_retrieval"
+      "taskID:8": "bq_standard:retrieval"
     }
   }
 }

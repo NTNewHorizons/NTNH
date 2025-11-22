@@ -1,8 +1,8 @@
 {
   "preRequisites:9": {
     "0:10": {
-      "questIDHigh:4": 0,
-      "questIDLow:4": 1
+      "questIDHigh:4": -4234283974238320836,
+      "questIDLow:4": -8474188240158341579
     }
   },
   "properties:10": {
@@ -14,14 +14,9 @@
         "Count:3": 1,
         "Damage:2": 0,
         "OreDict:8": "",
-        "id:8": "adventurebackpack:adventureBackpack",
-        "tag:10": {
-          "wearableData:10": {
-            "type:1": 0
-          }
-        }
+        "id:8": "ironbackpacks:basicBackpack"
       },
-      "isMain:1": 0,
+      "isMain:1": 1,
       "isSilent:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Backpacks and Exploration",
@@ -31,7 +26,7 @@
       "simultaneous:1": 0,
       "snd_complete:8": "random.levelup",
       "snd_update:8": "random.levelup",
-      "taskLogic:8": "AND",
+      "taskLogic:8": "OR",
       "visibility:8": "NORMAL"
     }
   },

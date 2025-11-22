@@ -13,7 +13,7 @@
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "The §6Cable§r serves as a way of connecting computers and machines that are far apart. If you have a compact build where all components touch each other (directly or indirectly, most blocks also behave the same way as cables) you will usually not need cables.\n\nThe §3Power Converter§r serves as the fastest way to convert energy from other mods\u0027 power systems to OpenComputers\u0027 internal energy. Placing an §3HE to RF Converter§r next to the PC will also work.\n\nThe §3Capacitor Stores§r energy to be used by the network, acting as an energy buffer when needed. It is very useful for tasks that demand a lot of energy, such as assembling or charging devices such as robots and drones.",
+      "desc:8": "The Cable serves as a way of connecting computers and machines that are far apart. If you have a compact build where all components touch each other (directly or indirectly, most blocks also behave the same way as cables) you will usually not need cables.\n\nThe Power Converter serves as the fastest way to convert energy from other mods\u0027 power systems to OpenComputers\u0027 internal energy. Place an HE to RF converter next to it to obtain OC energy.\n\nThe Capacitor Stores energy to be used by the network, acting as an energy buffer when needed. It is very useful for tasks that demand a lot of energy, such as assembling or charging devices such as robots and drones.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -57,27 +57,16 @@
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
+          "id:8": "OpenComputers:powerConverter"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
           "id:8": "OpenComputers:capacitor"
         }
       },
       "taskID:8": "bq_standard:retrieval"
-    },
-    "1:10": {
-      "autoConsume:1": 0,
-      "consume:1": 0,
-      "groupDetect:1": 0,
-      "ignoreNBT:1": 1,
-      "index:3": 1,
-      "partialMatch:1": 1,
-      "requiredItems:9": {
-        "0:10": {
-          "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
-          "id:8": "OpenComputers:powerConverter"
-        }
-      },
-      "taskID:8": "bq_standard:optional_retrieval"
     }
   }
 }

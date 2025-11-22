@@ -1,0 +1,42 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 1010420867898101172,
+      "questIDLow:4": -6113139617334346026
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "Hey, say hello to the piglins of 1.14! I think you know who they are.\n\nIf not, then listen up. Piglins are very similar to zombie pigmen, but they will be aggressive towards you if you don\u0027t have gold armor on you (that is, they will be aggressive towards you ALWAYS, because I don\u0027t know how you\u0027ll survive in hell wearing gold armor). Also, if you throw them a gold bar, they\u0027ll be willing to trade it for something else.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 17,
+        "OreDict:8": "",
+        "id:8": "netherlicious:NetherSpawnEgg"
+      },
+      "isMain:1": 0,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Piglins?",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": 2733699691540725920,
+  "questIDLow:4": -7682155717714799694,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

@@ -12,7 +12,7 @@
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "A §6Component Bus§r is a server-specific upgrade that allows the server to communicate with more components at the same time, without shutting down. \n\nLike with §6CPUs§r, higher tier buses provide higher component limits. Higher tier servers are also capable of taking more component buses, allowing for communication with many more components.",
+      "desc:8": "A Component Bus is a server-specific upgrade that allows the server to communicate with more components at the same time, without shutting down. \n\nLike with CPUs, higher tier buses provide higher component limits. Higher tier servers are also capable of taking more component buses, allowing for communication with many more components.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -20,7 +20,7 @@
         "OreDict:8": "",
         "id:8": "OpenComputers:item"
       },
-      "isMain:1": 0,
+      "isMain:1": 1,
       "isSilent:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Component Buses",
@@ -30,7 +30,7 @@
       "simultaneous:1": 0,
       "snd_complete:8": "random.levelup",
       "snd_update:8": "random.levelup",
-      "taskLogic:8": "OR",
+      "taskLogic:8": "AND",
       "visibility:8": "NORMAL"
     }
   },
@@ -53,7 +53,7 @@
           "id:8": "OpenComputers:item"
         }
       },
-      "taskID:8": "bq_standard:retrieval"
+      "taskID:8": "bq_standard:optional_retrieval"
     },
     "1:10": {
       "autoConsume:1": 0,
@@ -70,7 +70,7 @@
           "id:8": "OpenComputers:item"
         }
       },
-      "taskID:8": "bq_standard:retrieval"
+      "taskID:8": "bq_standard:optional_retrieval"
     },
     "2:10": {
       "autoConsume:1": 0,
@@ -87,7 +87,7 @@
           "id:8": "OpenComputers:item"
         }
       },
-      "taskID:8": "bq_standard:retrieval"
+      "taskID:8": "bq_standard:optional_retrieval"
     }
   }
 }

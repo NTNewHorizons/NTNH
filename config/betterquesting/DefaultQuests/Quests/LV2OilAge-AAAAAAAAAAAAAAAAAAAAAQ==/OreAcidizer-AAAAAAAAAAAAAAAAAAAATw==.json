@@ -12,7 +12,7 @@
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "The §3Ore Acidizer§r is a useful machine, used for processing various items for utility, ore multiplication, and more. It is powered by electricity and requires various solvents depending on the item. The acidizer is quite the power hungry machine, consuming §e20kHE/s§r. \n\n",
+      "desc:8": "The Ore Acidizer is a very useful machine that dissolves ores into their crystal form, which can then be centrifuged or smelted into their powder or ingot form respectively. It also uses several types of solvents to dissolve ores.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -49,6 +49,20 @@
           "id:8": "amazingtrophies:trophy",
           "tag:10": {
             "trophyID:8": "acidizer"
+          }
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 2,
+          "OreDict:8": "",
+          "id:8": "enhancedlootbags:lootbag",
+          "tag:10": {
+            "ench:9": {
+              "0:10": {
+                "id:2": 35,
+                "lvl:2": 3
+              }
+            }
           }
         }
       }

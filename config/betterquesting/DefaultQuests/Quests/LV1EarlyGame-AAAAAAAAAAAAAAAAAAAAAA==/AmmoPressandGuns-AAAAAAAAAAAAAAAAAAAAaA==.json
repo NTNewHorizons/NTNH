@@ -2,13 +2,13 @@
   "preRequisites:9": {
     "0:10": {
       "questIDHigh:4": 0,
-      "questIDLow:4": 29
+      "questIDLow:4": 61
     }
   },
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "With casting available through the §3Crucible§r, many gun parts can now be created such as §6Barrels§r and §6Grips§r. An §3Ammo Press§r is used to create the various ammunitions guns use.\n\nA §3Weapon Modification Table§r can be used to install weapon mods, such as §6Silencers§r and §6Scopes§r.\n\nThe §6Bullet Casing Bag§r will retrieve some of the casings when guns are fired.",
+      "desc:8": "With Casting available, many gun parts can now be created such as barrels and grips. An Ammo Press is used to create the various ammunitions guns use.\n\nA Weapon Modification Table can be used to install weapon mods, such as silencers and scopes.\n\nThe Bullet Casing Bag will retrieve some of the casings when guns are fired.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -16,7 +16,7 @@
         "OreDict:8": "",
         "id:8": "hbm:item.gun_light_revolver"
       },
-      "isMain:1": 0,
+      "isMain:1": 1,
       "isSilent:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Ammo Press and Guns",
@@ -47,43 +47,21 @@
           "Damage:2": 0,
           "OreDict:8": "",
           "id:8": "hbm:tile.machine_ammo_press"
-        }
-      },
-      "taskID:8": "bq_standard:retrieval"
-    },
-    "1:10": {
-      "autoConsume:1": 0,
-      "consume:1": 0,
-      "groupDetect:1": 0,
-      "ignoreNBT:1": 1,
-      "index:3": 1,
-      "partialMatch:1": 1,
-      "requiredItems:9": {
-        "0:10": {
+        },
+        "1:10": {
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
           "id:8": "hbm:tile.machine_weapon_table"
-        }
-      },
-      "taskID:8": "bq_standard:optional_retrieval"
-    },
-    "2:10": {
-      "autoConsume:1": 0,
-      "consume:1": 0,
-      "groupDetect:1": 0,
-      "ignoreNBT:1": 1,
-      "index:3": 2,
-      "partialMatch:1": 1,
-      "requiredItems:9": {
-        "0:10": {
+        },
+        "2:10": {
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
           "id:8": "hbm:item.casing_bag"
         }
       },
-      "taskID:8": "bq_standard:optional_retrieval"
+      "taskID:8": "bq_standard:retrieval"
     }
   }
 }

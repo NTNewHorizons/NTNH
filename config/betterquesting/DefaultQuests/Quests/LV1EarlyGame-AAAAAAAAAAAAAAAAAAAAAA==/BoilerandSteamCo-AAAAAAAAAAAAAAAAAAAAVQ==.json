@@ -8,7 +8,7 @@
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "The §3Boiler§r, when receiving heat from below, heats up fluids. Two important uses of the boiler are for §bSteam§r and §bOil§r processing which will come later on. The Boiler can explode if its output is full.\n\nSteam, when used by machines, such as reactors sending steam through §3Turbines§r or §3Chemical Factories§r produce §bLow-Pressure Steam§r. The low-pressure steam can be recycled back to retrieve 100% of the water by using a §3Steam Condenser§r. Closed water loops are recommended for reactors.",
+      "desc:8": "The Boiler, when receiving heat from below, heats up fluids. Two important uses of the boiler are for Steam and Oil processing which will come later on. The Boiler can explode if its output is full.\n\nSteam, when used by machines, such as Reactors sending Steam through turbines or Chemical Factories produce Low-Pressure Steam. The Low-Pressure Steam can be recycled back to retrieve 100% of the water by using a Steam Condenser. Closed water loops are recommended for reactors.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -32,7 +32,21 @@
   },
   "questIDHigh:4": 0,
   "questIDLow:4": 85,
-  "rewards:9": {},
+  "rewards:9": {
+    "0:10": {
+      "ignoreDisabled:1": 0,
+      "index:3": 0,
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "OreDict:8": "",
+          "id:8": "enhancedlootbags:lootbag"
+        }
+      }
+    }
+  },
   "tasks:9": {
     "0:10": {
       "autoConsume:1": 0,
@@ -47,23 +61,18 @@
           "Damage:2": 0,
           "OreDict:8": "",
           "id:8": "hbm:tile.machine_boiler"
-        }
-      },
-      "taskID:8": "bq_standard:retrieval"
-    },
-    "1:10": {
-      "autoConsume:1": 0,
-      "consume:1": 0,
-      "groupDetect:1": 0,
-      "ignoreNBT:1": 1,
-      "index:3": 1,
-      "partialMatch:1": 1,
-      "requiredItems:9": {
-        "0:10": {
+        },
+        "1:10": {
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
           "id:8": "hbm:tile.machine_condenser"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.machine_steam_engine"
         }
       },
       "taskID:8": "bq_standard:retrieval"

@@ -8,7 +8,7 @@
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "The §3HE to RF Converter§r will convert energy produced by NTM machines into usuable power for both the §dMatter Energy (ME) Network§r and §dOpenComputers§r. It has a very large internal energy buffer, so it is recommended that a Diode is used to limit throughput.",
+      "desc:8": "The HE to RF Converter will convert energy produced by NTM machines into usuable power for both the Matter Energy Network and OpenComputers.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -32,21 +32,7 @@
   },
   "questIDHigh:4": 2720273598898784049,
   "questIDLow:4": -8747775295999091665,
-  "rewards:9": {
-    "0:10": {
-      "ignoreDisabled:1": 0,
-      "index:3": 0,
-      "rewardID:8": "bq_standard:item",
-      "rewards:9": {
-        "0:10": {
-          "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
-          "id:8": "hbm:tile.cable_diode"
-        }
-      }
-    }
-  },
+  "rewards:9": {},
   "tasks:9": {
     "0:10": {
       "autoConsume:1": 0,

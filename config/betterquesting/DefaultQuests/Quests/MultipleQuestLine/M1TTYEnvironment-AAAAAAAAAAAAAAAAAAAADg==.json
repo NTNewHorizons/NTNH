@@ -5,14 +5,14 @@
       "questIDLow:4": 64
     },
     "1:10": {
-      "questIDHigh:4": 3300935411432441238,
-      "questIDLow:4": -5423491499164788343
+      "questIDHigh:4": 0,
+      "questIDLow:4": 30
     }
   },
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "The §6M1TTY Environment Suit§r is a cheap electric armor set that comes with many abilities. It is an excellent armor set for exploring as it comes with very high speed buffs aswell as fast swimming speed.",
+      "desc:8": "The M1TTY Environment Suit is a cheap electric armor set that comes with many abilities. It is a very good set for exploring as it comes with very high speed buffs aswell as fast swimming speed.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -23,7 +23,7 @@
           "charge:4": 100000
         }
       },
-      "isMain:1": 0,
+      "isMain:1": 1,
       "isSilent:1": 0,
       "lockedProgress:1": 0,
       "name:8": "M1TTY Environment Suit",
@@ -39,7 +39,21 @@
   },
   "questIDHigh:4": 0,
   "questIDLow:4": 14,
-  "rewards:9": {},
+  "rewards:9": {
+    "0:10": {
+      "ignoreDisabled:1": 0,
+      "index:3": 0,
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 2,
+          "OreDict:8": "",
+          "id:8": "enhancedlootbags:lootbag"
+        }
+      }
+    }
+  },
   "tasks:9": {
     "0:10": {
       "autoConsume:1": 0,

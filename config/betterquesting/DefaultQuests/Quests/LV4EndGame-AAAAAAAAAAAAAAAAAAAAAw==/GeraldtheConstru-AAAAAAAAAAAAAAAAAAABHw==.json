@@ -1,0 +1,65 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 0,
+      "questIDLow:4": 22
+    },
+    "1:10": {
+      "questIDHigh:4": 3179189351395904466,
+      "questIDLow:4": -8943356378902868492
+    },
+    "2:10": {
+      "questIDHigh:4": 4882281838826243584,
+      "questIDLow:4": -5314668707019453658
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "Gerald the Construction Android is the most powerful weapon in the mod. Using this has the side effect of setting the world on fire but also getting tektite, which contains Osmiridium.\n\nGerald is the hardest recipe of the mod requiring hundreds of thousands of items, mainly circuit related.\nVast quantities of Bismuth, Tantalium and Silicon are needed, so dont hold back on bedrock ore processing and parallelisation of many processes. If you havent already used AE2, it is highly recommended at this stage of the game.\n\nLaunching Gerald will result in a global firestorm that will decimate all life, including all trees and grass. Make sure to keep a backup of your world before launching him.\n\nThe schematic for gerald is obtained from a Whiskey Drenched Notebook found in structures.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:item.sat_gerald",
+        "tag:10": {}
+      },
+      "isMain:1": 1,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Gerald the Construction Android",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": 0,
+  "questIDLow:4": 287,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 0,
+      "index:3": 0,
+      "partialMatch:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.sat_gerald",
+          "tag:10": {}
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

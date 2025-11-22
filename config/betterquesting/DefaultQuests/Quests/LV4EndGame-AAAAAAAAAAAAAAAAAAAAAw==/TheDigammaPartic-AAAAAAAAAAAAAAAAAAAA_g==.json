@@ -1,0 +1,59 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 0,
+      "questIDLow:4": 240
+    },
+    "1:10": {
+      "questIDHigh:4": 0,
+      "questIDLow:4": 27
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "The Digamma Particle is created by colliding a Sparkticle capsule with a Higgs Boson capsule in a Particle Accelerator. This Particle is deady so it is adviced to be prepared.\n\nThe Digamma Particle emits a different kind of radiation, DRX, which currently can only be counter by the use of digamma medication, most notably Enteramine Pills, which provide full immunity against DRX for 10 minutes. After the DFC, Fau armor can be crafted which provides full resistance against DRX.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:item.particle_digamma"
+      },
+      "isMain:1": 1,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "The Digamma Particle",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": 0,
+  "questIDLow:4": 254,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 0,
+      "index:3": 0,
+      "partialMatch:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.particle_digamma"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

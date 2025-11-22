@@ -1,0 +1,68 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 0,
+      "questIDLow:4": 103
+    },
+    "1:10": {
+      "questIDHigh:4": 0,
+      "questIDLow:4": 73,
+      "type:1": 1
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "The Asteroid Mining Ship needs a cargo landing pad, this rocket periodically (around 10 minutes) will come back to earth and return to space, it will deploy its cargo in the cargo landing pad, the items that it can give are (all in the form of powder, unless otherwise specified):\n\nVanilla materials\nCoal (very common)\nIron (common)\nLapis Lazuli (common)\nRedstone (very common)\nDiamond (common)\n\nMod materials\nFluorite (very common)\nAluminium (very common)\nTitanium (uncommon)\nCopper (very common)\nLead (common)\nDesh Blend (uncommon)\nThorium (common)\nUranium (uncommon)\nPlutonium (uncommon)\nEnergy Powder (uncommon)\nNitanium Blend (uncommon)\n\nCrystals and Misc.\nPhosphorus Crystals (very common)\nAluminium Crystals (uncommon)\nTungsten Crystals (uncommon)\nGold Crystals (uncommon)\nLithium Crystals (semi-rare)\nDiamond Gravel (rare)\nUranium Crystals (rare)\nPlutonium Crystals (rare)\nTrixite Crystals (very rare)\nStarmetal Crystals (very rare)\n\nIt is perhaps the most useful satellite in the mod.\n\n(The landing cargo pad will require a satellite ID-chip with the same frequency as the satellite itself too.) It can be created in an assembly machine. Warning! If it either crashes into something while lowering itself onto the cargo pad, or the cargo pad happens to have a different ID-chip (by, for example, switching it at the last second for whatever reason), then it will explode and the satellite will be lost!",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:item.sat_miner",
+        "tag:10": {}
+      },
+      "isMain:1": 1,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Asteroid Mining Ship",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": -8369254214944403654,
+  "questIDLow:4": -4943027831840676341,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 0,
+      "partialMatch:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.sat_miner",
+          "tag:10": {}
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.sat_dock"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

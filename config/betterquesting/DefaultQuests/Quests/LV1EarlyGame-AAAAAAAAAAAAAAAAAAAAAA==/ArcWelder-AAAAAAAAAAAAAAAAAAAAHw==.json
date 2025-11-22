@@ -1,11 +1,6 @@
 {
   "preRequisites:9": {
     "0:10": {
-      "questIDHigh:4": -1673975787128929701,
-      "questIDLow:4": -6133236837495907717,
-      "type:1": 1
-    },
-    "1:10": {
       "questIDHigh:4": 0,
       "questIDLow:4": 29
     }
@@ -13,7 +8,7 @@
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "The §3Arc Welder§r is a machine needed for the creation of many components, such as §6Welded Plates§r, §6Missile Parts§r and more. Some Recipes will require a fluid inserted into the welder to work.",
+      "desc:8": "The Arc Welder is a machine needed for the creation of many components, such as cast plates, missile parts and more. Some Recipes will require a fluid inserted into the Welder to work.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -37,7 +32,21 @@
   },
   "questIDHigh:4": 0,
   "questIDLow:4": 31,
-  "rewards:9": {},
+  "rewards:9": {
+    "0:10": {
+      "ignoreDisabled:1": 0,
+      "index:3": 0,
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "OreDict:8": "",
+          "id:8": "enhancedlootbags:lootbag"
+        }
+      }
+    }
+  },
   "tasks:9": {
     "0:10": {
       "autoConsume:1": 0,

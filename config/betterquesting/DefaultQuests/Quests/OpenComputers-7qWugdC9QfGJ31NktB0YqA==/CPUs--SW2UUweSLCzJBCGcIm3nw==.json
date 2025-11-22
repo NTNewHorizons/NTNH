@@ -12,7 +12,7 @@
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "The §6Central Processing Unit§r (CPU), is a core part for each computer or §6Server§r. It defines the architecture of the computer, and the number of components that can be connected to the computer before it stops working. \nHigher tier CPUs also provide a higher per-tick direct call limit to the computer - in simpler terms: better CPUs run faster.",
+      "desc:8": "The Central Processing Unit (CPU), is a core part for each computer or server. It defines the architecture of the computer, and the number of components that can be connected to the computer before it stops working. \nHigher tier CPUs also provide a higher per-tick direct call limit to the computer - in simpler terms: better CPUs run faster.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -20,7 +20,7 @@
         "OreDict:8": "",
         "id:8": "OpenComputers:item"
       },
-      "isMain:1": 0,
+      "isMain:1": 1,
       "isSilent:1": 0,
       "lockedProgress:1": 0,
       "name:8": "CPUs",
@@ -30,7 +30,7 @@
       "simultaneous:1": 0,
       "snd_complete:8": "random.levelup",
       "snd_update:8": "random.levelup",
-      "taskLogic:8": "OR",
+      "taskLogic:8": "AND",
       "visibility:8": "NORMAL"
     }
   },
@@ -53,7 +53,7 @@
           "id:8": "OpenComputers:item"
         }
       },
-      "taskID:8": "bq_standard:retrieval"
+      "taskID:8": "bq_standard:optional_retrieval"
     },
     "1:10": {
       "autoConsume:1": 0,
@@ -70,7 +70,7 @@
           "id:8": "OpenComputers:item"
         }
       },
-      "taskID:8": "bq_standard:retrieval"
+      "taskID:8": "bq_standard:optional_retrieval"
     },
     "2:10": {
       "autoConsume:1": 0,
@@ -87,7 +87,7 @@
           "id:8": "OpenComputers:item"
         }
       },
-      "taskID:8": "bq_standard:retrieval"
+      "taskID:8": "bq_standard:optional_retrieval"
     }
   }
 }

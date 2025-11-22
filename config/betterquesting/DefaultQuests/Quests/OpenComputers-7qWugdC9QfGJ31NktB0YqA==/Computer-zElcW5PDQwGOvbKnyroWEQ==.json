@@ -1,23 +1,23 @@
 {
   "preRequisites:9": {
     "0:10": {
-      "questIDHigh:4": 9020305243522809957,
-      "questIDLow:4": -5709433688625897880,
-      "type:1": 1
-    },
-    "1:10": {
-      "questIDHigh:4": 6771452432460498436,
-      "questIDLow:4": -8590192981131725594,
-      "type:1": 1
-    },
-    "2:10": {
       "questIDHigh:4": 8024864612775054616,
       "questIDLow:4": -8661898022086962351,
       "type:1": 1
     },
-    "3:10": {
+    "1:10": {
+      "questIDHigh:4": -5218419935728283670,
+      "questIDLow:4": -8628476707512603286,
+      "type:1": 1
+    },
+    "2:10": {
       "questIDHigh:4": 1285650114769931561,
       "questIDLow:4": -6760479388180782429,
+      "type:1": 1
+    },
+    "3:10": {
+      "questIDHigh:4": 8959640985500008917,
+      "questIDLow:4": -5598690104284152623,
       "type:1": 1
     },
     "4:10": {
@@ -34,7 +34,7 @@
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "A §3Keyboard§r is needed to type text on §3Screens§r, be they in the world or built into devices such as §3Robots§r or §6Tablets§r.\n\nFor the keyboard to work with a screen in the world, it has to be placed next to the screen, facing that screen, or placed directly on the screen (on top or on one of the sides).\n\nThe §6EEPROM§r is what contains the code used to initialize a computer when it is being booted. \n\nThis data is stored as plain byte array, and may mean different things to different §6CPU§r architectures. For example, for Lua it is usually a small script that searches for a file systems with an init script, for other architectures it may be actual machine code.\n\nAn §6OpenOS Disk§r can be crafted using an empty floppy disk and a manual.",
+      "desc:8": "A Keyboard is needed to tyupe text on Screens, be they in the world or built into devices such as Robots or Tablets.\n\nFor the keyboard to work with a screen in the world, it has to be placed next to the screen, facing that screen, or placed directly on the screen (on top or on one of the sides).\n\nThe EEPROM is what contains the code used to initialize a computer when it is being booted. \n\nThis data is stored as plain byte array, and may mean different things to different CPU architectures. For example, for Lua it is usually a small script that searches for a file systems with an init script, for other architectures it may be actual machine code.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -42,7 +42,7 @@
         "OreDict:8": "",
         "id:8": "OpenComputers:case1"
       },
-      "isMain:1": 0,
+      "isMain:1": 1,
       "isSilent:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Computer",
@@ -1881,22 +1881,6 @@
               "oc:label:8": "EEPROM (Lua BIOS)",
               "oc:readonly:1": 0
             }
-          }
-        },
-        "2:10": {
-          "Count:3": 1,
-          "Damage:2": 4,
-          "OreDict:8": "",
-          "id:8": "OpenComputers:item",
-          "tag:10": {
-            "display:10": {
-              "Name:8": "OpenOS (Operating System)"
-            },
-            "oc:color:3": 2,
-            "oc:data:10": {
-              "oc:fs.label:8": "openos"
-            },
-            "oc:lootFactory:8": "OpenComputers:openos"
           }
         }
       },

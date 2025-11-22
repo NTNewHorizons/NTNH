@@ -1,0 +1,104 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 0,
+      "questIDLow:4": 82
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "§c§r§c§lIt\u0027s recommended to complete \"Effective Graphite Production\" quest first.§r\n\nThe Chicago Pile is a crude early-game breeding reactor meant to produce Plutonium for use as reactor fuel.\n\nA pile is composed of drilled graphite which can hold a variety of items in it, including radioisotope rods (uranium, radium, plutonium), lithium rods, and control rods. It does not behave as a unified single block, instead each individual piece of drilled graphite interacts with each other piece in a unique way depending on the rod it contains.\n\nAfter sufficient flux, the uranium rods in the Chicago Pile will transmute into plutonium rods that can be processed in an anvil into Reactor Grade Plutonium which can be used in other reactors such as the ZIRNOX and RBMK.\n\nThe Chicago Pile requires a significant amount of graphite blocks, which once placed can be drilled into with the hand drill to place any rod into. \n\nThe hand drill can be used to drill holes into the graphite or take core samples of the uranium fuel to determine heat, depletion, and neutron flux. Screwdrivers are used to extract rods.\n\nThe Quest asks for a 3x3 Chicago Pile (without the corners) with a Ra226Be Rod in the center surrounded by Uranium Rods.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:tile.block_graphite_fuel"
+      },
+      "isMain:1": 1,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Chicago Pile",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": 8170105500016857047,
+  "questIDLow:4": -8961510023632218044,
+  "rewards:9": {
+    "0:10": {
+      "ignoreDisabled:1": 0,
+      "index:3": 0,
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 3,
+          "OreDict:8": "",
+          "id:8": "enhancedlootbags:lootbag"
+        }
+      }
+    }
+  },
+  "tasks:9": {
+    "0:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 0,
+      "partialMatch:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.hand_drill"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.screwdriver"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "1:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 1,
+      "partialMatch:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 4,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.block_graphite"
+        },
+        "1:10": {
+          "Count:3": 4,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.pile_rod_uranium"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.pile_rod_source"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

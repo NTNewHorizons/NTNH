@@ -2,26 +2,13 @@
   "preRequisites:9": {
     "0:10": {
       "questIDHigh:4": 0,
-      "questIDLow:4": 34
-    },
-    "1:10": {
-      "questIDHigh:4": 0,
-      "questIDLow:4": 85,
-      "type:1": 1
-    },
-    "2:10": {
-      "questIDHigh:4": 0,
-      "questIDLow:4": 26
-    },
-    "3:10": {
-      "questIDHigh:4": 0,
       "questIDLow:4": 31
     }
   },
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "The §3Strand Caster§r is a large basin that can cast items in batches of 9. It also requires §bWater§r in order to cast, where it makes §bLow-Pressure Steam§r that can be turned back into water.",
+      "desc:8": "The strand caster is a large basin that can cast items in batches of 9. It also requires water in order to cast, where it makes low-pressure steam that can be turned back into water.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -45,7 +32,21 @@
   },
   "questIDHigh:4": 0,
   "questIDLow:4": 36,
-  "rewards:9": {},
+  "rewards:9": {
+    "0:10": {
+      "ignoreDisabled:1": 0,
+      "index:3": 0,
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "OreDict:8": "",
+          "id:8": "enhancedlootbags:lootbag"
+        }
+      }
+    }
+  },
   "tasks:9": {
     "0:10": {
       "autoConsume:1": 0,

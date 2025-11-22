@@ -1,14 +1,18 @@
 {
   "preRequisites:9": {
     "0:10": {
-      "questIDHigh:4": 0,
-      "questIDLow:4": 2
+      "questIDHigh:4": -2434090588285350661,
+      "questIDLow:4": -5248772435054660327
     },
     "1:10": {
       "questIDHigh:4": 0,
-      "questIDLow:4": 3
+      "questIDLow:4": 2
     },
     "2:10": {
+      "questIDHigh:4": 0,
+      "questIDLow:4": 3
+    },
+    "3:10": {
       "questIDHigh:4": 0,
       "questIDLow:4": 4
     }
@@ -16,7 +20,7 @@
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "The §3Blast Furnace§r is a solid fuel-powered furnace used to create different alloys out of two inputs. The main starter alloys are: §6Minecraft Grade Copper§r, §6Steel§r and §6Advanced Alloy§r, which is a combination of the former.\n\nAdvanced alloy can be used to construct very durable tools that come with vein mining.\n\nA separate block, the §3Blast Furnace Extension§r, can be placed on top of the blast furnace to make it operate faster. Without the extension, it smelts items at about half the rate of a furnace, the extension triples that rate. Fuel consumption remains constant, meaning the extension also triples the efficiency of fuel consumption. \n\n§2For more advanced tools later on, pressing the ALT key will bring up a menu from which one can select multiple abilities at once.",
+      "desc:8": "The Blast Furnace is a solid fuel-powered furnace used to create different alloys out of two inputs. The main starter alloys are: Minecraft Grade Copper, Steel and Advanced Alloy, which is a combination of the former.\n\nAdvanced alloy can be used to construct very durable tools that come with vein mining. For more advanced tools later on, pressing the ALT key will bring up a menu from which one can select multiple abilities at once.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -40,7 +44,27 @@
   },
   "questIDHigh:4": 0,
   "questIDLow:4": 9,
-  "rewards:9": {},
+  "rewards:9": {
+    "0:10": {
+      "choices:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "OreDict:8": "",
+          "id:8": "enhancedlootbags:lootbag"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.alloy_pickaxe"
+        }
+      },
+      "ignoreDisabled:1": 0,
+      "index:3": 1,
+      "rewardID:8": "bq_standard:choice"
+    }
+  },
   "tasks:9": {
     "0:10": {
       "autoConsume:1": 0,
@@ -55,43 +79,27 @@
           "Damage:2": 0,
           "OreDict:8": "",
           "id:8": "hbm:tile.machine_difurnace_off"
-        }
-      },
-      "taskID:8": "bq_standard:retrieval"
-    },
-    "1:10": {
-      "autoConsume:1": 0,
-      "consume:1": 0,
-      "groupDetect:1": 0,
-      "ignoreNBT:1": 1,
-      "index:3": 1,
-      "partialMatch:1": 1,
-      "requiredItems:9": {
-        "0:10": {
+        },
+        "1:10": {
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "hbm:tile.machine_difurnace_extension"
-        }
-      },
-      "taskID:8": "bq_standard:optional_retrieval"
-    },
-    "2:10": {
-      "autoConsume:1": 0,
-      "consume:1": 0,
-      "groupDetect:1": 0,
-      "ignoreNBT:1": 1,
-      "index:3": 2,
-      "partialMatch:1": 1,
-      "requiredItems:9": {
-        "0:10": {
+          "id:8": "hbm:item.ingot_steel"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.ingot_red_copper"
+        },
+        "3:10": {
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
           "id:8": "hbm:item.ingot_advanced_alloy"
         }
       },
-      "taskID:8": "bq_standard:optional_retrieval"
+      "taskID:8": "bq_standard:retrieval"
     }
   }
 }

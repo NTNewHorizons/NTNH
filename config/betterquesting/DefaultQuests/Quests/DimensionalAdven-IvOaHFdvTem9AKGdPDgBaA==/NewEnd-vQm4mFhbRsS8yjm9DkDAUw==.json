@@ -1,0 +1,54 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": -2671702055749464750,
+      "questIDLow:4": -5908802488176538311
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "desc:8": "Hardcore Ender Expansion (HEE) is a large-scale Minecraft mod that completely overhauls **The End** dimension, making it far more challenging, atmospheric, and rewarding. It introduces new biomes, structures, mobs, and resources, while also reworking the Ender Dragon fight into a much more tactical and difficult encounter.\n\nKey features:\n\n* A fully redesigned End with unique landscapes and biomes.\n* New mobs and bosses that greatly increase the challenge.\n* Expanded and more strategic Ender Dragon battle.\n* Exclusive blocks, items, and resources found only in the End.\n* A true “hardcore” feel — entering the End becomes a real endgame trial.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "minecraft:end_portal"
+      },
+      "isMain:1": 1,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "New End",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": -4825122561293859132,
+  "questIDLow:4": -4842994965132820397,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "biome:3": -1,
+      "dimension:3": 1,
+      "hideInfo:1": 1,
+      "index:3": 0,
+      "invert:1": 0,
+      "name:8": "The End",
+      "posX:3": 0,
+      "posY:3": 0,
+      "posZ:3": 0,
+      "range:3": -1,
+      "structure:8": "",
+      "taskID:8": "bq_standard:location",
+      "taxiCabDist:1": 0,
+      "visible:1": 0
+    }
+  }
+}

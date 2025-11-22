@@ -8,7 +8,7 @@
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
-      "desc:8": "The §6Hard Disk Drives§r are a higher tier storage medium in OC.\n\nAll storage media perform at the same speed: higher tier storage provides more space. There are also some devices that can only use disk drives (although servers could use an external disk drive, for example). Hard drives can be placed inside a §3Raid§r, allowing multiple drives to share the same file system. Note that placing a hard drive in a raid wipes the drive of its contents.",
+      "desc:8": "The Hard Disk Drives are a higher tier storage medium in OpenComputers. \nAll storage media perform at the same speed: higher tier storage provides more space. There are also some devices that can only use disk drives (although servers could use an external disk drive, for example). Hard drives can be placed inside a raid, allowing multiple drives to share the same file system. Note that placing a hard drive in a Raid wipes the drive of its contents.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -16,7 +16,7 @@
         "OreDict:8": "",
         "id:8": "OpenComputers:item"
       },
-      "isMain:1": 0,
+      "isMain:1": 1,
       "isSilent:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Hard Drives",
@@ -26,7 +26,7 @@
       "simultaneous:1": 0,
       "snd_complete:8": "random.levelup",
       "snd_update:8": "random.levelup",
-      "taskLogic:8": "OR",
+      "taskLogic:8": "AND",
       "visibility:8": "NORMAL"
     }
   },
@@ -49,7 +49,7 @@
           "id:8": "OpenComputers:item"
         }
       },
-      "taskID:8": "bq_standard:retrieval"
+      "taskID:8": "bq_standard:optional_retrieval"
     },
     "1:10": {
       "autoConsume:1": 0,
@@ -66,7 +66,7 @@
           "id:8": "OpenComputers:item"
         }
       },
-      "taskID:8": "bq_standard:retrieval"
+      "taskID:8": "bq_standard:optional_retrieval"
     },
     "2:10": {
       "autoConsume:1": 0,
@@ -83,7 +83,7 @@
           "id:8": "OpenComputers:item"
         }
       },
-      "taskID:8": "bq_standard:retrieval"
+      "taskID:8": "bq_standard:optional_retrieval"
     }
   }
 }
