@@ -841,28 +841,28 @@
 
 #### 🔬 [Meta 281] Кейс технолога
 * **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 4` | `CombineTrashGroup="true"`
-* *Лор:* Комплект инженера-технолога нефтехимического комбината.
+* *Лор:* Комплект инженера-технолога нефтехимического комбината и полимерных производств. Содержит боросиликатную мерную пипетку, набор термостойкого стекла, сифон перекачки, полумаску с фильтрами, канистры растворителя и смазки, ртуть, полимерные стержни, парафины, бакелит и брикеты твёрдого топлива.
 * **Содержимое:**
-  * `hbm:item.pipette_boron` (**Борная пипетка 1000 mB**) | Кол-во: 1 | Вес: 60 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.siphon` (**Сифон**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Ручной перекачивающий насос для чанов.
-  * `hbm:item.bottle_mercury` (**Ртуть**) | Кол-во: 1 | Вес: 50 | `RandomAmount="false"`
-  * `hbm:item.stick_pvc` (**ПВХ стержень**) | Кол-во: 2–4 | Вес: 70 | `RandomAmount="true"`
-  * `hbm:item.stick_vinyl` (**Виниловый стержень**) | Кол-во: 2–4 | Вес: 70 | `RandomAmount="true"`
-  * `hbm:item.oil_tar:3` (**Парафин**) | Кол-во: 4–8 | Вес: 70 | `RandomAmount="true"`
-  * `hbm:item.oil_tar:4` (**Хлорированный воск**) | Кол-во: 4–8 | Вес: 70 | `RandomAmount="true"`
-  * `hbm:item.ingot_bakelite` (**Бакелит**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`
-  * `hbm:item.ingot_polymer` (**Полимерный слиток**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`
-  * `hbm:item.ingot_asbestos` (**Асбест**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`
-  * `hbm:item.solid_fuel` (**Твёрдое топливо**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
-  * `hbm:item.solid_fuel_presto` (**Топливо Presto**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`
-  * `hbm:item.rocket_fuel` (**Ракетное топливо**) | Кол-во: 3–6 | Вес: 50 | `RandomAmount="true"`
-  * `hbm:item.bdcl` (**BDCL пластина**) | Кол-во: 1 | Вес: 45 | `RandomAmount="false"`
-  * `hbm:item.filter_coal` (**Угольный фильтр**) | Кол-во: 1–2 | Вес: 55 | `RandomAmount="true"`
-  * `hbm:item.canister_full:111` (**Канистра нефтепродуктов**) | Кол-во: 1–2 | Вес: 50 | `RandomAmount="true"`
+  * `hbm:item.pipette_boron` (**Борная пипетка 1000 mB**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.chemistry_set_boron` (**Боросиликатная лабораторная посуда**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Термостойкое лабораторное стекло для высокотемпературных реакций.
+  * `hbm:item.siphon` (**Сифон**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Ручной перекачивающий насос для чанов.
   * `hbm:item.gas_mask_mono` (**Полумаска**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.powder_copper` (**Медный порошок**) | Кол-во: 3–6 | Вес: 60 | `RandomAmount="true"`
-  * `hbm:item.powder_iron` (**Железный порошок**) | Кол-во: 3–6 | Вес: 60 | `RandomAmount="true"`
-  * `hbm:item.catalytic_converter` (**Катализатор**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.gas_mask_filter_mono` (**Фильтр для полумаски**) | Кол-во: 1–2 | Вес: 50 | `RandomAmount="true"`
+  * `hbm:item.filter_coal` (**Угольный фильтр**) | Кол-во: 1–2 | Вес: 50 | `RandomAmount="true"`
+  * `hbm:item.catalytic_converter` (**Каталитический нейтрализатор**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.canister_empty` (**Пустая канистра для проб**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
+  * `hbm:item.canister_full:111` (**Канистра тех. спирта / растворителя**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.canister_full:74` (**Канистра машинной смазки**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.bottle_mercury` (**Пузырёк ртути**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.stick_pvc` (**ПВХ стержень**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`
+  * `hbm:item.stick_vinyl` (**Виниловый стержень**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`
+  * `hbm:item.oil_tar:3` (**Парафин**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
+  * `hbm:item.oil_tar:4` (**Хлорированный воск**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
+  * `hbm:item.ingot_bakelite` (**Бакелитовый брусок**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`
+  * `hbm:item.ingot_polymer` (**Полимерный слиток**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`
+  * `hbm:item.ingot_asbestos` (**Асбестовый брусок**) | Кол-во: 2–4 | Вес: 55 | `RandomAmount="true"`
+  * `hbm:item.solid_fuel` (**Твёрдое топливо**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`
+  * `hbm:item.solid_fuel_presto` (**Топливо Presto**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`
 
 ---
 

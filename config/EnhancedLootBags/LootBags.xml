@@ -675,26 +675,26 @@
         <Loot Identifier="ch280_salt" ItemName="harvestcraft:saltItem" Amount="6" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="281" GroupName="Кейс технолога" Rarity="1" MinItems="2" MaxItems="4" CombineTrashGroup="true">
-        <Loot Identifier="ch281_pipette_boron" ItemName="hbm:item.pipette_boron" Amount="1" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="ch281_siphon" ItemName="hbm:item.siphon" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="ch281_mercury" ItemName="hbm:item.bottle_mercury" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="ch281_pvc" ItemName="hbm:item.stick_pvc" Amount="4" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ch281_vinyl" ItemName="hbm:item.stick_vinyl" Amount="4" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ch281_paraffin" ItemName="hbm:item.oil_tar:3" Amount="8" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ch281_chlorwax" ItemName="hbm:item.oil_tar:4" Amount="8" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ch281_bakelite" ItemName="hbm:item.ingot_bakelite" Amount="4" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ch281_polymer" ItemName="hbm:item.ingot_polymer" Amount="4" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ch281_asbestos" ItemName="hbm:item.ingot_asbestos" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ch281_solid_fuel" ItemName="hbm:item.solid_fuel" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ch281_solid_presto" ItemName="hbm:item.solid_fuel_presto" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ch281_rocket_fuel" ItemName="hbm:item.rocket_fuel" Amount="6" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ch281_bdcl" ItemName="hbm:item.bdcl" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="ch281_filter_coal" ItemName="hbm:item.filter_coal" Amount="2" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ch281_canister" ItemName="hbm:item.canister_full:111" Amount="2" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ch281_pipette_boron" ItemName="hbm:item.pipette_boron" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ch281_chem_boron" ItemName="hbm:item.chemistry_set_boron" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ch281_siphon" ItemName="hbm:item.siphon" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="ch281_mask_mono" ItemName="hbm:item.gas_mask_mono" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="ch281_powder_copper" ItemName="hbm:item.powder_copper" Amount="6" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ch281_powder_iron" ItemName="hbm:item.powder_iron" Amount="6" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ch281_mask_filter" ItemName="hbm:item.gas_mask_filter_mono" Amount="2" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ch281_filter_coal" ItemName="hbm:item.filter_coal" Amount="2" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="ch281_catalytic" ItemName="hbm:item.catalytic_converter" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ch281_canister_empty" ItemName="hbm:item.canister_empty" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ch281_canister_solvent" ItemName="hbm:item.canister_full:111" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ch281_canister_lube" ItemName="hbm:item.canister_full:74" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ch281_mercury" ItemName="hbm:item.bottle_mercury" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ch281_pvc" ItemName="hbm:item.stick_pvc" Amount="4" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ch281_vinyl" ItemName="hbm:item.stick_vinyl" Amount="4" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ch281_paraffin" ItemName="hbm:item.oil_tar:3" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ch281_chlorwax" ItemName="hbm:item.oil_tar:4" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ch281_bakelite" ItemName="hbm:item.ingot_bakelite" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ch281_polymer" ItemName="hbm:item.ingot_polymer" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ch281_asbestos" ItemName="hbm:item.ingot_asbestos" Amount="4" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ch281_solid_fuel" ItemName="hbm:item.solid_fuel" Amount="8" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ch281_solid_presto" ItemName="hbm:item.solid_fuel_presto" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="310" GroupName="Чёрный ящик шаттла" Rarity="3" MinItems="2" MaxItems="4" CombineTrashGroup="false">
         <Loot Identifier="sp310_circuit_aero" ItemName="hbm:item.circuit:14" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
