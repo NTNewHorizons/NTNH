@@ -205,47 +205,50 @@
         <Loot Identifier="el72_billet_silicon" ItemName="hbm:item.billet_silicon" Amount="8" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="el72_plate_advanced" ItemName="hbm:item.plate_mixed" Amount="2" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
-    <LootGroup GroupMetaID="100" GroupName="Старый подсумок" Rarity="0" MinItems="1" MaxItems="2" CombineTrashGroup="true">
-        <Loot Identifier="wp100_pellet_buckshot" ItemName="hbm:item.pellet_buckshot" Amount="24" NBTTag="" Chance="100" ItemGroup="pack_shotgun" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp100_casing_shotgun" ItemName="hbm:item.casing:4" Amount="16" NBTTag="" Chance="100" ItemGroup="pack_shotgun" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp100_ammo_9mm" ItemName="hbm:item.ammo_standard:21" Amount="32" NBTTag="" Chance="90" ItemGroup="pack_9mm" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp100_casing_small" ItemName="hbm:item.casing:0" Amount="16" NBTTag="" Chance="80" ItemGroup="pack_9mm" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp100_shrapnel" ItemName="hbm:item.debris_shrapnel" Amount="20" NBTTag="" Chance="50" ItemGroup="pack_scraps" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp100_powder_coal" ItemName="hbm:item.powder_coal" Amount="12" NBTTag="" Chance="50" ItemGroup="pack_scraps" LimitedDropCount="0" RandomAmount="true"/>
+    <LootGroup GroupMetaID="100" GroupName="Вскрытый патронный цинк" Rarity="0" MinItems="2" MaxItems="3" CombineTrashGroup="true">
+        <Loot Identifier="wp100_paper" ItemName="minecraft:paper" Amount="4" NBTTag="" Chance="85" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="wp100_rag" ItemName="hbm:item.rag" Amount="4" NBTTag="" Chance="85" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="wp100_casing_small_bronze" ItemName="hbm:item.casing:0" Amount="12" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="wp100_casing_small_steel" ItemName="hbm:item.casing:1" Amount="12" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="wp100_casing_shotgun" ItemName="hbm:item.casing:4" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="wp100_gunpowder" ItemName="minecraft:gunpowder" Amount="8" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp100_iron_ingot" ItemName="minecraft:iron_ingot" Amount="4" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp100_flint" ItemName="minecraft:flint" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp100_feather" ItemName="minecraft:feather" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp100_arrow" ItemName="minecraft:arrow" Amount="16" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp100_bow" ItemName="minecraft:bow" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="wp100_dynamite" ItemName="hbm:item.stick_dynamite" Amount="4" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp100_grenade_lemon" ItemName="hbm:item.grenade_lemon" Amount="2" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp100_clip_revolver" ItemName="hbm:item.ammo_standard:6" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp100_gun_kit" ItemName="hbm:item.gun_kit_1" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="wp100_powder_lead" ItemName="hbm:item.powder_lead" Amount="8" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp100_rag" ItemName="hbm:item.rag" Amount="4" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="wp100_shrapnel" ItemName="hbm:item.debris_shrapnel" Amount="16" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="wp100_ammo_9mm" ItemName="hbm:item.ammo_standard:21" Amount="8" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="wp100_ammo_556" ItemName="hbm:item.ammo_standard:25" Amount="8" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="wp100_ammo_762" ItemName="hbm:item.ammo_standard:29" Amount="8" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="wp100_pellet_buckshot" ItemName="hbm:item.pellet_buckshot" Amount="8" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="wp100_ammo_22lr" ItemName="hbm:item.ammo_standard:1" Amount="16" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="wp100_gun_kit" ItemName="hbm:item.gun_kit_1" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="wp100_casing_bag" ItemName="hbm:item.casing_bag" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="wp100_iron_ingot" ItemName="minecraft:iron_ingot" Amount="2" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="wp100_flint" ItemName="minecraft:flint" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="wp100_dynamite" ItemName="hbm:item.stick_dynamite" Amount="2" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="wp100_grenade_lemon" ItemName="hbm:item.grenade_lemon" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
-    <LootGroup GroupMetaID="101" GroupName="Патронный цинк" Rarity="1" MinItems="2" MaxItems="3" CombineTrashGroup="true">
-        <Loot Identifier="wp101_ammo_762" ItemName="hbm:item.ammo_standard:29" Amount="32" NBTTag="" Chance="80" ItemGroup="pack_762" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp101_ammo_762_ap" ItemName="hbm:item.ammo_standard:31" Amount="12" NBTTag="" Chance="80" ItemGroup="pack_762" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_ammo_556" ItemName="hbm:item.ammo_standard:25" Amount="32" NBTTag="" Chance="80" ItemGroup="pack_556" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp101_casing_steel_small" ItemName="hbm:item.casing:1" Amount="16" NBTTag="" Chance="80" ItemGroup="pack_556" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_casing_bronze_small" ItemName="hbm:item.casing:0" Amount="24" NBTTag="" Chance="50" ItemGroup="pack_casings" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_casing_bronze_large" ItemName="hbm:item.casing:2" Amount="16" NBTTag="" Chance="50" ItemGroup="pack_casings" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_casing_steel_large" ItemName="hbm:item.casing:3" Amount="16" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp101_hacksaw" ItemName="hbm:item.weapon_mod_special:2" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="wp101_casing_bag" ItemName="hbm:item.casing_bag" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="wp101_cordite" ItemName="hbm:item.cordite" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp101_gun_kit" ItemName="hbm:item.gun_kit_1" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="wp101_ammo_9mm_ap" ItemName="hbm:item.ammo_standard:22" Amount="24" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp101_ammo_556_ap" ItemName="hbm:item.ammo_standard:26" Amount="20" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp101_ammo_9mm_hp" ItemName="hbm:item.ammo_standard:23" Amount="24" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp101_ammo_762_hp" ItemName="hbm:item.ammo_standard:30" Amount="20" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp101_plate_steel" ItemName="hbm:item.plate_steel" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp101_plate_kevlar" ItemName="hbm:item.plate_kevlar" Amount="2" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp101_stealth_boy" ItemName="hbm:item.stealth_boy" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="wp101_ammo_50bmg" ItemName="hbm:item.ammo_standard:34" Amount="12" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp101_flame_mix" ItemName="hbm:item.flame_opinion" Amount="2" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+    <LootGroup GroupMetaID="101" GroupName="Запечатанный патронный цинк" Rarity="1" MinItems="1" MaxItems="1" CombineTrashGroup="false">
+        <Loot Identifier="wp101_762_fmj" ItemName="hbm:item.ammo_standard:29" Amount="64" NBTTag="" Chance="85" ItemGroup="pack_762_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_762_ap" ItemName="hbm:item.ammo_standard:31" Amount="16" NBTTag="" Chance="85" ItemGroup="pack_762_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_762_casing" ItemName="hbm:item.casing:1" Amount="32" NBTTag="" Chance="85" ItemGroup="pack_762_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_556_fmj" ItemName="hbm:item.ammo_standard:25" Amount="64" NBTTag="" Chance="85" ItemGroup="pack_556_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_556_ap" ItemName="hbm:item.ammo_standard:26" Amount="16" NBTTag="" Chance="85" ItemGroup="pack_556_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_556_casing" ItemName="hbm:item.casing:1" Amount="32" NBTTag="" Chance="85" ItemGroup="pack_556_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_9mm_fmj" ItemName="hbm:item.ammo_standard:21" Amount="64" NBTTag="" Chance="80" ItemGroup="pack_9mm_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_9mm_ap" ItemName="hbm:item.ammo_standard:22" Amount="32" NBTTag="" Chance="80" ItemGroup="pack_9mm_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_9mm_hp" ItemName="hbm:item.ammo_standard:23" Amount="32" NBTTag="" Chance="80" ItemGroup="pack_9mm_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_9mm_casing" ItemName="hbm:item.casing:0" Amount="48" NBTTag="" Chance="80" ItemGroup="pack_9mm_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_12ga_buck" ItemName="hbm:item.pellet_buckshot" Amount="32" NBTTag="" Chance="75" ItemGroup="pack_12ga_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_12ga_casing" ItemName="hbm:item.casing:4" Amount="24" NBTTag="" Chance="75" ItemGroup="pack_12ga_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_12ga_cordite" ItemName="hbm:item.cordite" Amount="8" NBTTag="" Chance="75" ItemGroup="pack_12ga_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_22lr_fmj" ItemName="hbm:item.ammo_standard:0" Amount="64" NBTTag="" Chance="65" ItemGroup="pack_22lr_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_22lr_ap" ItemName="hbm:item.ammo_standard:1" Amount="32" NBTTag="" Chance="65" ItemGroup="pack_22lr_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_22lr_casing" ItemName="hbm:item.casing:0" Amount="32" NBTTag="" Chance="65" ItemGroup="pack_22lr_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_mag_44" ItemName="hbm:item.ammo_standard:4" Amount="32" NBTTag="" Chance="60" ItemGroup="pack_magnum_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_mag_357" ItemName="hbm:item.ammo_standard:6" Amount="4" NBTTag="" Chance="60" ItemGroup="pack_magnum_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_mag_casing" ItemName="hbm:item.casing:2" Amount="24" NBTTag="" Chance="60" ItemGroup="pack_magnum_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_50bmg_fmj" ItemName="hbm:item.ammo_standard:34" Amount="16" NBTTag="" Chance="40" ItemGroup="pack_50bmg_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_50bmg_ap" ItemName="hbm:item.ammo_standard:35" Amount="8" NBTTag="" Chance="40" ItemGroup="pack_50bmg_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_50bmg_casing" ItemName="hbm:item.casing:5" Amount="12" NBTTag="" Chance="40" ItemGroup="pack_50bmg_zinc" LimitedDropCount="0" RandomAmount="false"/>
     </LootGroup>
     <LootGroup GroupMetaID="102" GroupName="Оружейный кофр" Rarity="2" MinItems="2" MaxItems="4" CombineTrashGroup="false">
         <Loot Identifier="wp102_kevlar" ItemName="hbm:item.plate_kevlar" Amount="2" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
