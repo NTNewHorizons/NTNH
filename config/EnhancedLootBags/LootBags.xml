@@ -15,18 +15,18 @@
         <Loot Identifier="med10_pill_iodine" ItemName="hbm:item.pill_iodine" Amount="6" NBTTag="" Chance="85" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="med10_pill_herbal" ItemName="hbm:item.pill_herbal" Amount="3" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="med10_salt" ItemName="harvestcraft:saltItem" Amount="6" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="med10_pads_rubber" ItemName="hbm:item.pads_rubber" Amount="3" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="med10_pads_rubber" ItemName="hbm:item.pads_rubber" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="med10_rag_damp" ItemName="hbm:item.rag_damp" Amount="3" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="med10_powder_coal" ItemName="hbm:item.powder_coal" Amount="6" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="med10_water_bottle" ItemName="minecraft:potion" Amount="1" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="med10_syringe_empty" ItemName="hbm:item.syringe_empty" Amount="2" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="med10_plastic_bag" ItemName="hbm:item.plastic_bag" Amount="3" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="med10_plastic_bag" ItemName="hbm:item.plastic_bag" Amount="2" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="med10_glass_bottle" ItemName="minecraft:glass_bottle" Amount="2" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="med10_syringe_antidote" ItemName="hbm:item.syringe_antidote" Amount="1" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="med10_ptsd" ItemName="hbm:item.med_ptsd" Amount="2" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="med10_soap" ItemName="cfm:ItemSoap" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="med10_mask_rag" ItemName="hbm:item.mask_rag" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="med10_filter_rag" ItemName="hbm:item.gas_mask_filter_rag" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="med10_mask_rag" ItemName="hbm:item.mask_rag" Amount="1" NBTTag="" Chance="25" ItemGroup="med_rag_mask" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="med10_filter_rag" ItemName="hbm:item.gas_mask_filter_rag" Amount="1" NBTTag="" Chance="25" ItemGroup="med_rag_mask" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="med10_rag_blood" ItemName="hbm:item.rag_blood" Amount="2" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="med10_stimpak" ItemName="hbm:item.syringe_metal_stimpak" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="med10_medx" ItemName="hbm:item.syringe_metal_medx" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
@@ -38,7 +38,7 @@
         <Loot Identifier="med11_powder_calcium" ItemName="hbm:item.powder_calcium" Amount="8" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="med11_filter_coal" ItemName="hbm:item.filter_coal" Amount="3" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="med11_antidote" ItemName="hbm:item.syringe_antidote" Amount="2" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="med11_filter_mono" ItemName="hbm:item.gas_mask_filter_mono" Amount="2" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="med11_filter_mono" ItemName="hbm:item.gas_mask_filter_mono" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="med11_pads_rubber" ItemName="hbm:item.pads_rubber" Amount="4" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="med11_med_bag" ItemName="hbm:item.med_bag" Amount="1" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="med11_medx" ItemName="hbm:item.syringe_metal_medx" Amount="2" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -51,7 +51,7 @@
         <Loot Identifier="med11_five_htp" ItemName="hbm:item.five_htp" Amount="3" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="med11_syringe_metal_empty" ItemName="hbm:item.syringe_metal_empty" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="med11_pipette" ItemName="hbm:item.pipette_laboratory" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="med11_gas_mask_mono" ItemName="hbm:item.gas_mask_mono" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="med11_gas_mask_mono" ItemName="hbm:item.gas_mask_mono" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="med11_goggles" ItemName="hbm:item.goggles" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="med11_gas_mask_olde" ItemName="hbm:item.gas_mask_olde" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="med11_bottle_mercury" ItemName="hbm:item.bottle_mercury" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>

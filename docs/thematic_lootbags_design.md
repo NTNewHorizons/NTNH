@@ -92,18 +92,18 @@
   * `hbm:item.pill_iodine` (**Таблетка йода**) | Кол-во: 1–6 | Вес: 85 | `RandomAmount="true"`. *Смысл:* Профилактика накопления радиации.
   * `hbm:item.pill_herbal` (**Травяная паста**) | Кол-во: 1–3 | Вес: 75 | `RandomAmount="true"`. *Смысл:* Травяная мазь для заживления.
   * `harvestcraft:saltItem` (**Соль**) | Кол-во: 1–6 | Вес: 75 | `RandomAmount="true"`. *Смысл:* Антисептик и физраствор.
-  * `hbm:item.pads_rubber` (**Резиновые прокладки**) | Кол-во: 1–3 | Вес: 75 | `RandomAmount="true"`. *Смысл:* Кровоостанавливающий жгут.
+  * `hbm:item.pads_rubber` (**Резиновые прокладки**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`. *Смысл:* Кровоостанавливающий жгут.
   * `hbm:item.rag_damp` (**Влажная тряпка**) | Кол-во: 1–3 | Вес: 70 | `RandomAmount="true"`. *Смысл:* Антисептическая влажная салфетка.
   * `hbm:item.powder_coal` (**Угольный порошок**) | Кол-во: 1–6 | Вес: 70 | `RandomAmount="true"`. *Смысл:* Активированный уголь при отравлениях.
   * `minecraft:potion` (**Бутылочка воды**) | Кол-во: 1 | Вес: 65 | `RandomAmount="false"`. *Смысл:* Стерильная вода для промывки ран.
   * `hbm:item.syringe_empty` (**Пустой шприц**) | Кол-во: 1–2 | Вес: 65 | `RandomAmount="true"`
-  * `hbm:item.plastic_bag` (**Пакет**) | Кол-во: 1–3 | Вес: 65 | `RandomAmount="true"`. *Смысл:* Герметичный пакет для медикаментов.
+  * `hbm:item.plastic_bag` (**Пакет**) | Кол-во: 1–2 | Вес: 35 | `RandomAmount="true"`. *Смысл:* Герметичный пакет для медикаментов.
   * `minecraft:glass_bottle` (**Колба**) | Кол-во: 1–2 | Вес: 55 | `RandomAmount="true"`
   * `hbm:item.syringe_antidote` (**Антидот**) | Кол-во: 1 | Вес: 55 | `LimitedDropCount="0"` | `RandomAmount="false"`. *Смысл:* Нейтрализация ядов и токсинов.
   * `hbm:item.med_ptsd` (**Облегчение ПТСР**) | Кол-во: 1–2 | Вес: 50 | `RandomAmount="true"`. *Смысл:* Седативное при шоке и контузии.
   * `cfm:ItemSoap` (**Мыло**) | Кол-во: 1 | Вес: 45 | `RandomAmount="false"`. *Смысл:* Гигиена и антисептика.
-  * `hbm:item.mask_rag` (**Грубая защитная маска**) | Кол-во: 1 | Вес: 45 | `RandomAmount="false"`. *Смысл:* Стартовый тканевый респиратор.
-  * `hbm:item.gas_mask_filter_rag` (**Самодельный фильтр**) | Кол-во: 1 | Вес: 45 | `RandomAmount="false"`. *Смысл:* Тканевый фильтр противогаза.
+  * `hbm:item.mask_rag` (**Грубая защитная маска**) | Кол-во: 1 | Вес: 25 | `ItemGroup="med_rag_mask"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Стартовый тканевый респиратор.
+  * `hbm:item.gas_mask_filter_rag` (**Самодельный фильтр**) | Кол-во: 1 | Вес: 25 | `ItemGroup="med_rag_mask"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Тканевый фильтр противогаза.
   * `hbm:item.rag_blood` (**Окровавленная тряпка**) | Кол-во: 1–2 | Вес: 35 | `RandomAmount="true"`. *Смысл:* Атмосферные следы полевой перевязки.
   * `hbm:item.syringe_metal_stimpak` (**Стимулятор**) | Кол-во: 1 | Вес: 35 | `RandomAmount="false"`. *Смысл:* Армейский стимулятор регенерации.
   * `hbm:item.syringe_metal_medx` (**Мед-X**) | Кол-во: 1 | Вес: 25 | `RandomAmount="false"`. *Смысл:* Сильное обезболивающее.
@@ -118,7 +118,7 @@
   * `hbm:item.powder_calcium` (**Карбонат кальция**) | Кол-во: 1–8 | Вес: 70 | `RandomAmount="true"`. *Смысл:* Гипс для фиксации переломов.
   * `hbm:item.filter_coal` (**Угольный фильтр**) | Кол-во: 1–3 | Вес: 70 | `RandomAmount="true"`. *Смысл:* Сменный фильтр для фильтрации промышленных газов.
   * `hbm:item.syringe_antidote` (**Антидот**) | Кол-во: 1–2 | Вес: 65 | `RandomAmount="true"`. *Смысл:* Антидот от кислот и паров.
-  * `hbm:item.gas_mask_filter_mono` (**Каталитический фильтр**) | Кол-во: 1–2 | Вес: 65 | `RandomAmount="true"`. *Смысл:* Фильтр для респиратора-полумаски.
+  * `hbm:item.gas_mask_filter_mono` (**Каталитический фильтр**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Фильтр для респиратора-полумаски.
   * `hbm:item.pads_rubber` (**Резиновые прокладки**) | Кол-во: 1–4 | Вес: 65 | `RandomAmount="true"`. *Смысл:* Жгуты и уплотнители.
   * `hbm:item.med_bag` (**Аптечка первой помощи**) | Кол-во: 1 | Вес: 60 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Полный готовый санитарный чемоданчик.
   * `hbm:item.syringe_metal_medx` (**Мед-X**) | Кол-во: 1–2 | Вес: 60 | `RandomAmount="true"`. *Смысл:* Обезболивающее при травмах.
@@ -131,7 +131,7 @@
   * `hbm:item.five_htp` (**Энтерамин**) | Кол-во: 1–3 | Вес: 50 | `RandomAmount="true"`. *Смысл:* Антидепрессант/нормализация состояния.
   * `hbm:item.syringe_metal_empty` (**Металлический шприц**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Многоразовый шприц.
   * `hbm:item.pipette_laboratory` (**Лабораторная пипетка**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Промывание глаз и точное дозирование.
-  * `hbm:item.gas_mask_mono` (**Полумаска**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Промышленный респиратор.
+  * `hbm:item.gas_mask_mono` (**Полумаска**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Промышленный респиратор.
   * `hbm:item.goggles` (**Защитные очки**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Защита глаз от стружки и брызг.
   * `hbm:item.gas_mask_olde` (**Кожаный противогаз**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Цеховой противогаз.
   * `hbm:item.bottle_mercury` (**Пузырёк ртути**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Разбитые ртутные градусники.
