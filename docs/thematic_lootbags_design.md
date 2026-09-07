@@ -893,26 +893,26 @@
 
 #### 🚀 [Meta 311] Транспортный пенал изотопов
 * **Уровень:** 3 | **Rarity:** 3 (Epic) | **Дроп:** `1 - 3` | `CombineTrashGroup="false"`
-* *Лор:* Тяжёлый радиационно-защищённый пенал транспортировки делящихся материалов и термоядерного топлива челнока.
+* *Лор:* Тяжёлый радиационно-защищённый свинцовый пенал транспортировки делящихся материалов, РИТЭГ-элементов и термоядерного топлива челнока. Оснащён вольфрамовыми щипцами для безопасного извлечения радиоактивных капсул.
 * **Содержимое:**
-  * `hbm:item.cell_deuterium` (**Пробирка с дейтерием**) | Кол-во: 1–4 | Вес: 60 | `RandomAmount="true"`. *Смысл:* Термоядерное топливо.
-  * `hbm:item.cell_tritium` (**Пробирка с тритием**) | Кол-во: 1–4 | Вес: 60 | `RandomAmount="true"`. *Смысл:* Изотоп зажигания плазмы.
-  * `hbm:item.cell_antimatter` (**Пробирка с антиматерией**) | Кол-во: 1 | Вес: 10 | `LimitedDropCount="1"` | `RandomAmount="false"`. `[Маяк прогресса]` (~1.4% шанс на ролл).
-  * `hbm:item.solid_fuel_presto_triplet` (**Топливные поленья**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`
-  * `hbm:item.cell_empty` (**Пустая ячейка**) | Кол-во: 3–6 | Вес: 70 | `RandomAmount="true"`
-  * `hbm:item.pellet_rtg_americium` (**Америциевая РИТЭГ-таблетка**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="2"` | `RandomAmount="false"`
-  * `hbm:item.pellet_rtg_radium` (**Радиевая РИТЭГ-таблетка**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="2"` | `RandomAmount="false"`
-  * `hbm:item.ingot_u235` (**Уран-235**) | Кол-во: 1–2 | Вес: 35 | `RandomAmount="true"`
-  * `hbm:item.ingot_u238` (**Уран-238**) | Кол-во: 3–6 | Вес: 45 | `RandomAmount="true"`
-  * `hbm:item.ingot_pu238` (**Плутоний-238**) | Кол-во: 1–2 | Вес: 30 | `RandomAmount="true"`
-  * `hbm:item.ingot_am241` (**Америций-241**) | Кол-во: 1–2 | Вес: 30 | `RandomAmount="true"`
-  * `hbm:item.ingot_lead` (**Свинцовый слиток**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
-  * `hbm:item.plate_lead` (**Свинцовая пластина**) | Кол-во: 3–6 | Вес: 65 | `RandomAmount="true"`
-  * `hbm:item.hazmat_cloth_grey` (**Ткань химзащиты**) | Кол-во: 2–4 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.reacher` (**Вольфрамовые манипуляторные щипцы**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Безопасная перегрузка высокоактивных изотопов.
+  * `hbm:item.cell_deuterium` (**Пробирка с дейтерием**) | Кол-во: 1–2 | Вес: 55 | `RandomAmount="true"`. *Смысл:* Термоядерное топливо.
+  * `hbm:item.cell_tritium` (**Пробирка с тритием**) | Кол-во: 1–2 | Вес: 55 | `RandomAmount="true"`. *Смысл:* Изотоп зажигания термоядерного синтеза.
+  * `hbm:item.cell_antimatter` (**Пробирка с антиматерией**) | Кол-во: 1 | Вес: 10 | `LimitedDropCount="1"` | `RandomAmount="false"`. `[Маяк прогресса]` (~1.5% шанс на ролл). Ловушка антивещества.
+  * `hbm:item.cell_empty` (**Пустая газовая ячейка**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`
+  * `hbm:item.pellet_rtg_americium` (**Америциевая РИТЭГ-таблетка**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`. Топливный элемент РИТЭГа с износом.
+  * `hbm:item.pellet_rtg_radium` (**Радиевая РИТЭГ-таблетка**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`. Топливный элемент РИТЭГа с износом.
+  * `hbm:item.ingot_u235` (**Обогащённый уран U-235**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.ingot_u238` (**Обеднённый уран U-238**) | Кол-во: 2–4 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.ingot_pu238` (**Плутоний Pu-238**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`. Высокоактивный изотоп для термоэлектрических генераторов.
+  * `hbm:item.ingot_am241` (**Америций Am-241**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`. Изотоп для альфа-источников и РИТЭГов.
+  * `hbm:item.ingot_lead` (**Свинцовый экранирующий слиток**) | Кол-во: 3–6 | Вес: 65 | `RandomAmount="true"`
+  * `hbm:item.plate_lead` (**Свинцовая защитная пластина**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`
+  * `hbm:item.hazmat_cloth_grey` (**Свинцовая ткань химзащиты**) | Кол-во: 2–3 | Вес: 45 | `RandomAmount="true"`
   * `hbm:item.dosimeter` (**Дозиметр**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.radx` (**Рад-X**) | Кол-во: 1–3 | Вес: 55 | `RandomAmount="true"`
-  * `hbm:item.cell_puf6` (**Ячейка с PUF6**) | Кол-во: 1 | Вес: 20 | `RandomAmount="false"`
-  * `hbm:item.cell_uf6` (**Ячейка с UF6**) | Кол-во: 1 | Вес: 25 | `RandomAmount="false"`
+  * `hbm:item.radx` (**Рад-X**) | Кол-во: 1–2 | Вес: 50 | `RandomAmount="true"`
+  * `hbm:item.cell_puf6` (**Ячейка гексафторида плутония PUF6**) | Кол-во: 1 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.cell_uf6` (**Ячейка гексафторида урана UF6**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`
 
 #### 🛡️ [Meta 312] Бортовой ремнабор
 * **Уровень:** 3 | **Rarity:** 2 (Rare) | **Дроп:** `2 - 4` | `CombineTrashGroup="false"`

@@ -717,24 +717,24 @@
         <Loot Identifier="sp310_atomic_clock" ItemName="hbm:item.circuit:21" Amount="1" NBTTag="" Chance="12" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
     <LootGroup GroupMetaID="311" GroupName="Транспортный пенал изотопов" Rarity="3" MinItems="1" MaxItems="3" CombineTrashGroup="false">
-        <Loot Identifier="sp311_cell_deuterium" ItemName="hbm:item.cell_deuterium" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp311_cell_tritium" ItemName="hbm:item.cell_tritium" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp311_reacher" ItemName="hbm:item.reacher" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sp311_cell_deuterium" ItemName="hbm:item.cell_deuterium" Amount="2" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp311_cell_tritium" ItemName="hbm:item.cell_tritium" Amount="2" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sp311_cell_antimatter" ItemName="hbm:item.cell_antimatter" Amount="1" NBTTag="" Chance="10" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sp311_presto_triplet" ItemName="hbm:item.solid_fuel_presto_triplet" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp311_cell_empty" ItemName="hbm:item.cell_empty" Amount="6" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp311_rtg_americium" ItemName="hbm:item.pellet_rtg_americium" Amount="1" NBTTag="{PELLET_DEPLETION:3384000000L}" Chance="25" ItemGroup="" LimitedDropCount="2" RandomAmount="false"/>
-        <Loot Identifier="sp311_rtg_radium" ItemName="hbm:item.pellet_rtg_radium" Amount="1" NBTTag="{PELLET_DEPLETION:11520000000L}" Chance="30" ItemGroup="" LimitedDropCount="2" RandomAmount="false"/>
-        <Loot Identifier="sp311_u235" ItemName="hbm:item.ingot_u235" Amount="2" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp311_u238" ItemName="hbm:item.ingot_u238" Amount="6" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp311_pu238" ItemName="hbm:item.ingot_pu238" Amount="2" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp311_am241" ItemName="hbm:item.ingot_am241" Amount="2" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp311_lead_ingot" ItemName="hbm:item.ingot_lead" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp311_lead_plate" ItemName="hbm:item.plate_lead" Amount="6" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp311_hazmat_grey" ItemName="hbm:item.hazmat_cloth_grey" Amount="4" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp311_cell_empty" ItemName="hbm:item.cell_empty" Amount="4" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp311_rtg_americium" ItemName="hbm:item.pellet_rtg_americium" Amount="1" NBTTag="{PELLET_DEPLETION:3384000000L}" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sp311_rtg_radium" ItemName="hbm:item.pellet_rtg_radium" Amount="1" NBTTag="{PELLET_DEPLETION:11520000000L}" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sp311_u235" ItemName="hbm:item.ingot_u235" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sp311_u238" ItemName="hbm:item.ingot_u238" Amount="4" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp311_pu238" ItemName="hbm:item.ingot_pu238" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sp311_am241" ItemName="hbm:item.ingot_am241" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sp311_lead_ingot" ItemName="hbm:item.ingot_lead" Amount="6" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp311_lead_plate" ItemName="hbm:item.plate_lead" Amount="4" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp311_hazmat_grey" ItemName="hbm:item.hazmat_cloth_grey" Amount="3" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sp311_dosimeter" ItemName="hbm:item.dosimeter" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sp311_radx" ItemName="hbm:item.radx" Amount="3" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp311_cell_puf6" ItemName="hbm:item.cell_puf6" Amount="1" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="sp311_cell_uf6" ItemName="hbm:item.cell_uf6" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="sp311_radx" ItemName="hbm:item.radx" Amount="2" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp311_cell_puf6" ItemName="hbm:item.cell_puf6" Amount="1" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sp311_cell_uf6" ItemName="hbm:item.cell_uf6" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
     <LootGroup GroupMetaID="312" GroupName="Бортовой ремнабор" Rarity="2" MinItems="2" MaxItems="4" CombineTrashGroup="false">
         <Loot Identifier="sp312_block_tungsten" ItemName="hbm:tile.block_tungsten" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
