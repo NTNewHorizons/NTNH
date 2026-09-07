@@ -215,7 +215,7 @@
   * `hbm:item.ball_resin` (**Смола / Латекс**) | Кол-во: 1–3 | Вес: 45 | `RandomAmount="true"`
   * `hbm:item.pads_rubber` (**Резиновые прокладки**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
   * `hbm:item.fuse` (**Электромонтажные предохранители NTM**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`
-  * `hbm:item.piston_set_steel` (**Комплект стальных поршней NTM**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.piston_set:0` (**Комплект стальных поршней NTM**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `ProjRed|Core:projectred.core.part:15` (**Электродвигатель Project Red**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.weapon_mod_special:5` (**Вспомогательный электрический двигатель NTM**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.weapon_mod_special:27` (**Рассеиватель для силового бура NTM**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
