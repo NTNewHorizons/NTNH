@@ -740,29 +740,29 @@
 ### Блок 250–279: Связь, радио и сигнализация
 
 #### 🚩 [Meta 250] Сумка сигнальщика
-* **Уровень:** 1 | **Rarity:** 0 | **Дроп:** `2 - 3` | `CombineTrashGroup="true"`
-* *Лор:* Снаряжение постового-сигнальщика и диспетчера горизонта: навигационные флажки, тонкий провод для растяжек, радиофакелы передачи сигнала, детонатор, мел, компас и предохранители.
+* **Уровень:** 1 | **Rarity:** 0 | **Дроп:** `2 - 4` | `CombineTrashGroup="true"`
+* *Лор:* Снаряжение постового-сигнальщика, часового и диспетчера горизонта. Содержит ручную сирену, звуковые дорожки тревоги, сигнальную ракетницу, семафорные флажки, радиофакелы для беспроводной передачи сигнала, проводные растяжки периметра, таблички, мел, компас и навесной замок сигнального щитка.
 * **Содержимое:**
-  * `OpenBlocks:flag` (**Флаг**) | Кол-во: 1–2 | Вес: 65 | `RandomAmount="true"`. *Смысл:* Маркировочные штыри для разметки путей.
-  * `hbm:item.wire_fine:2900` (**Тонкий провод**) | Кол-во: 6–12 | Вес: 75 | `RandomAmount="true"`
-  * `hbm:tile.radio_torch_sender` (**Радиофакел-передатчик**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Беспроводная передача сигнала по частоте.
-  * `hbm:tile.radio_torch_receiver` (**Радиофакел-приёмник**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Беспроводной приём сигнала (активация сирен/дверей).
-  * `hbm:item.detonator` (**Детонатор**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Дистанционный подрыв зарядов.
-  * `minecraft:redstone` (**Красная пыль**) | Кол-во: 8–16 | Вес: 80 | `RandomAmount="true"`
+  * `hbm:tile.radio_torch_sender` (**Радиофакел-передатчик**) | Кол-во: 1 | Вес: 45 | `ItemGroup="sig_radio"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Беспроводная передача дискретного радиосигнала.
+  * `hbm:tile.radio_torch_receiver` (**Радиофакел-приёмник**) | Кол-во: 1 | Вес: 45 | `ItemGroup="sig_radio"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Беспроводной приём сигнала (активация сирен/гермодверей).
+  * `hbm:tile.machine_siren` (**Промышленная сирена NTM**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Настенное звуковое оповещение базы/шахты.
+  * `hbm:item.siren_track` (**Звуковая дорожка сирены**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Картридж звука тревоги для сирены.
+  * `hbm:item.gun_flaregun` (**Сигнальный пистолет / Ракетница**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Подача световых сигналов бедствия и подсветка.
+  * `OpenBlocks:flag` (**Семафорный сигнальный флаг**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`. *Смысл:* Визуальная маркировка путей и сигнальных постов.
+  * `hbm:item.wire_fine:2900` (**Тонкий медный сигнальный провод**) | Кол-во: 8–16 | Вес: 75 | `RandomAmount="true"`
+  * `minecraft:tripwire_hook` (**Крюк натяжного датчика / растяжки**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`
+  * `minecraft:string` (**Сигнальная нить для растяжек**) | Кол-во: 6–12 | Вес: 70 | `RandomAmount="true"`
+  * `OpenBlocks:generic:5` (**Прочный шнур / верёвка**) | Кол-во: 4–8 | Вес: 55 | `RandomAmount="true"`
+  * `minecraft:redstone` (**Красная пыль**) | Кол-во: 8–16 | Вес: 75 | `RandomAmount="true"`
   * `minecraft:redstone_torch` (**Красный факел**) | Кол-во: 2–4 | Вес: 70 | `RandomAmount="true"`
-  * `minecraft:lever` (**Рычаг**) | Кол-во: 1–2 | Вес: 65 | `RandomAmount="true"`
-  * `minecraft:paper` (**Бумага**) | Кол-во: 4–8 | Вес: 75 | `RandomAmount="true"`
-  * `minecraft:book` (**Книга**) | Кол-во: 1 | Вес: 65 | `RandomAmount="false"`
-  * `modernmarkings:item.chalk` (**Мел**) | Кол-во: 2–4 | Вес: 70 | `RandomAmount="true"`
-  * `minecraft:compass` (**Компас**) | Кол-во: 1 | Вес: 55 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `minecraft:string` (**Нить**) | Кол-во: 4–8 | Вес: 70 | `RandomAmount="true"`
-  * `minecraft:iron_bars` (**Железные прутья**) | Кол-во: 3–6 | Вес: 65 | `RandomAmount="true"`
-  * `hbm:item.fuse` (**Предохранитель**) | Кол-во: 1–2 | Вес: 60 | `RandomAmount="true"`
-  * `hbm:item.siren_track` (**Запись сирены**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `minecraft:tripwire_hook` (**Растяжка**) | Кол-во: 1–2 | Вес: 60 | `RandomAmount="true"`
-  * `hbm:item.padlock` (**Замок**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `minecraft:sign` (**Табличка**) | Кол-во: 1–3 | Вес: 60 | `RandomAmount="true"`
-  * `OpenBlocks:generic:5` (**Шнур**) | Кол-во: 2–4 | Вес: 55 | `RandomAmount="true"`
+  * `minecraft:lever` (**Рычаг включения тревоги**) | Кол-во: 1–2 | Вес: 65 | `RandomAmount="true"`
+  * `hbm:item.fuse` (**Плавкий предохранитель цепи**) | Кол-во: 1–2 | Вес: 55 | `RandomAmount="true"`
+  * `modernmarkings:item.chalk` (**Сигнальный мел**) | Кол-во: 3–6 | Вес: 70 | `RandomAmount="true"`
+  * `minecraft:sign` (**Предупреждающая табличка**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`
+  * `minecraft:paper` (**Бланки журнала тревог**) | Кол-во: 4–8 | Вес: 75 | `RandomAmount="true"`
+  * `minecraft:book` (**Журнал постовой службы**) | Кол-во: 1 | Вес: 55 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `minecraft:compass` (**Компас часового**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.padlock` (**Навесной замок сигнального шкафа**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
 
 #### 📻 [Meta 251] Коробочка радиодеталей
 * **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 3` | `CombineTrashGroup="true"`
@@ -1065,7 +1065,7 @@
 | **220** | Планшет разведчика | 1 | 0 | 2–4 | true | 21 |
 | **221** | Геодезический набор | 2 | 1 | 2–4 | true | 18 |
 | **222** | Ящик шахтной взрывотехники | 3 | 2 | 3–6 | false | 20 |
-| **250** | Сумка сигнальщика | 1 | 0 | 2–3 | true | 20 |
+| **250** | Сумка сигнальщика | 1 | 0 | 2–4 | true | 20 |
 | **251** | Коробочка радиодеталей | 2 | 1 | 2–3 | true | 21 |
 | **252** | Радиоузел связиста | 3 | 2 | 2–4 | false | 19 |
 | **280** | Сумка лаборанта | 1 | 0 | 1–2 | true | 19 |

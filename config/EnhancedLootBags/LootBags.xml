@@ -590,27 +590,27 @@
         <Loot Identifier="geo222_niter" ItemName="hbm:item.niter" Amount="16" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="geo222_redstone" ItemName="minecraft:redstone" Amount="16" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
-    <LootGroup GroupMetaID="250" GroupName="Сумка сигнальщика" Rarity="0" MinItems="2" MaxItems="3" CombineTrashGroup="true">
-        <Loot Identifier="sig250_flag" ItemName="OpenBlocks:flag" Amount="2" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sig250_wire" ItemName="hbm:item.wire_fine:2900" Amount="12" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sig250_rf_sender" ItemName="hbm:tile.radio_torch_sender" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sig250_rf_receiver" ItemName="hbm:tile.radio_torch_receiver" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sig250_detonator" ItemName="hbm:item.detonator" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sig250_redstone" ItemName="minecraft:redstone" Amount="16" NBTTag="" Chance="80" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+    <LootGroup GroupMetaID="250" GroupName="Сумка сигнальщика" Rarity="0" MinItems="2" MaxItems="4" CombineTrashGroup="true">
+        <Loot Identifier="sig250_rf_sender" ItemName="hbm:tile.radio_torch_sender" Amount="1" NBTTag="" Chance="45" ItemGroup="sig_radio" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sig250_rf_receiver" ItemName="hbm:tile.radio_torch_receiver" Amount="1" NBTTag="" Chance="45" ItemGroup="sig_radio" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sig250_siren" ItemName="hbm:tile.machine_siren" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sig250_siren_track" ItemName="hbm:item.siren_track" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sig250_flaregun" ItemName="hbm:item.gun_flaregun" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sig250_flag" ItemName="OpenBlocks:flag" Amount="4" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sig250_wire" ItemName="hbm:item.wire_fine:2900" Amount="16" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sig250_tripwire" ItemName="minecraft:tripwire_hook" Amount="4" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sig250_string" ItemName="minecraft:string" Amount="12" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sig250_cord" ItemName="OpenBlocks:generic:5" Amount="8" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sig250_redstone" ItemName="minecraft:redstone" Amount="16" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sig250_red_torch" ItemName="minecraft:redstone_torch" Amount="4" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sig250_lever" ItemName="minecraft:lever" Amount="2" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sig250_fuse" ItemName="hbm:item.fuse" Amount="2" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sig250_chalk" ItemName="modernmarkings:item.chalk" Amount="6" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sig250_sign" ItemName="minecraft:sign" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sig250_paper" ItemName="minecraft:paper" Amount="8" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sig250_book" ItemName="minecraft:book" Amount="1" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="sig250_chalk" ItemName="modernmarkings:item.chalk" Amount="4" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sig250_compass" ItemName="minecraft:compass" Amount="1" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sig250_string" ItemName="minecraft:string" Amount="8" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sig250_bars" ItemName="minecraft:iron_bars" Amount="6" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sig250_fuse" ItemName="hbm:item.fuse" Amount="2" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sig250_siren_track" ItemName="hbm:item.siren_track" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sig250_tripwire" ItemName="minecraft:tripwire_hook" Amount="2" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sig250_book" ItemName="minecraft:book" Amount="1" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sig250_compass" ItemName="minecraft:compass" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sig250_padlock" ItemName="hbm:item.padlock" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sig250_sign" ItemName="minecraft:sign" Amount="3" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sig250_cord" ItemName="OpenBlocks:generic:5" Amount="4" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="251" GroupName="Коробочка радиодеталей" Rarity="1" MinItems="2" MaxItems="3" CombineTrashGroup="true">
         <Loot Identifier="rad251_rtty_pager" ItemName="hbm:item.rtty_pager" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
