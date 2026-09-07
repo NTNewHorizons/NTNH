@@ -315,6 +315,7 @@
   * `hbm:item.photo_panel` (**Фотоэлемент**) | Кол-во: 1–2 | Вес: 35 | `RandomAmount="true"`
   * `hbm:item.magnetron` (**Магнетрон**) | Кол-во: 1 | Вес: 30 | `RandomAmount="false"`
   * `hbm:item.crt_display` (**ЭЛТ-дисплей**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `OpenComputers:wrench` (**Компьютерный ключ OpenComputers**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Монтаж и демонтаж серверных стоек, компонентов и роботов OC.
   * `hbm:item.circuit:10` (**Военная микросхема**) | Кол-во: 1 | Вес: 15 | `RandomAmount="false"`
 
 #### 🖥️ [Meta 72] Потрёпанный блок стойки ЭВМ
