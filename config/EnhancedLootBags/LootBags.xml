@@ -696,26 +696,25 @@
         <Loot Identifier="ch281_solid_fuel" ItemName="hbm:item.solid_fuel" Amount="8" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="ch281_solid_presto" ItemName="hbm:item.solid_fuel_presto" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
-    <LootGroup GroupMetaID="310" GroupName="Чёрный ящик шаттла" Rarity="3" MinItems="2" MaxItems="4" CombineTrashGroup="false">
-        <Loot Identifier="sp310_circuit_aero" ItemName="hbm:item.circuit:14" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp310_tape_cdvr" ItemName="computronics:computronics.tape:5" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sp310_hard_drive" ItemName="hbm:item.hard_drive" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sp310_oc_disk" ItemName="OpenComputers:item:19" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp310_atomic_clock" ItemName="hbm:item.circuit:21" Amount="1" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sp310_circuit_casing" ItemName="hbm:item.circuit:15" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sp310_circuit_mil" ItemName="hbm:item.circuit:10" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp310_circuit_super" ItemName="hbm:item.circuit:16" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="sp310_crt" ItemName="hbm:item.crt_display" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sp310_radar_linker" ItemName="hbm:item.radar_linker" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sp310_wire_gold" ItemName="hbm:item.wire_fine:7900" Amount="8" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+    <LootGroup GroupMetaID="310" GroupName="Носимый аварийный запас" Rarity="3" MinItems="2" MaxItems="4" CombineTrashGroup="false">
+        <Loot Identifier="sp310_atmo_scanner" ItemName="hbm:item.atmosphere_scanner" Amount="1" NBTTag="" Chance="45" ItemGroup="naz_scanner" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sp310_dosimeter" ItemName="hbm:item.dosimeter" Amount="1" NBTTag="" Chance="40" ItemGroup="naz_scanner" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sp310_geiger" ItemName="hbm:item.geiger_counter" Amount="1" NBTTag="" Chance="35" ItemGroup="naz_scanner" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sp310_canned_tube" ItemName="hbm:item.canned_tube" Amount="4" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp310_pill_iodine" ItemName="hbm:item.pill_iodine" Amount="4" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp310_stimpak" ItemName="hbm:item.syringe_metal_stimpak" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sp310_flaregun" ItemName="hbm:item.gun_flaregun" Amount="1" NBTTag="" Chance="35" ItemGroup="naz_beacon" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sp310_radio_torch" ItemName="hbm:tile.radio_torch_sender" Amount="1" NBTTag="" Chance="35" ItemGroup="naz_beacon" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sp310_radar_linker" ItemName="hbm:item.radar_linker" Amount="1" NBTTag="" Chance="25" ItemGroup="naz_beacon" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sp310_photo_panel" ItemName="hbm:item.photo_panel" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp310_wire_gold" ItemName="hbm:item.wire_fine:7900" Amount="8" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sp310_wire_super" ItemName="hbm:item.wire_fine:38" Amount="4" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp310_battery_cell" ItemName="hbm:item.battery_pack:3" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="sp310_plate_titanium" ItemName="hbm:item.plate_titanium" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp310_launch_code" ItemName="hbm:item.launch_code_piece" Amount="1" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sp310_photo_panel" ItemName="hbm:item.photo_panel" Amount="4" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp310_magnetron" ItemName="hbm:item.magnetron" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="sp310_atmo_scanner" ItemName="hbm:item.atmosphere_scanner" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sp310_silicon" ItemName="hbm:item.billet_silicon" Amount="8" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp310_hard_drive" ItemName="hbm:item.hard_drive" Amount="1" NBTTag="" Chance="35" ItemGroup="naz_data" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sp310_tape_cdvr" ItemName="computronics:computronics.tape:5" Amount="1" NBTTag="" Chance="30" ItemGroup="naz_data" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sp310_oc_disk" ItemName="OpenComputers:item:19" Amount="4" NBTTag="" Chance="40" ItemGroup="naz_data" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp310_circuit_aero" ItemName="hbm:item.circuit:14" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp310_circuit_mil" ItemName="hbm:item.circuit:10" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp310_atomic_clock" ItemName="hbm:item.circuit:21" Amount="1" NBTTag="" Chance="12" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
     <LootGroup GroupMetaID="311" GroupName="Транспортный пенал изотопов" Rarity="3" MinItems="1" MaxItems="3" CombineTrashGroup="false">
         <Loot Identifier="sp311_cell_deuterium" ItemName="hbm:item.cell_deuterium" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>

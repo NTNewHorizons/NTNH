@@ -56,7 +56,7 @@
            └ Резерв 253–279: шифровальные таблицы, полевые радиостанции, радарные маяки
 [280–309]  Химия, полимеры и лабораторная посуда (280: Сумка лаборанта, 281: Кейс технолога)
            └ Резерв 282–309: катализаторы крекинга, пирофорные реагенты, кислотостойкая тара
-[310–339]  Астронавтика и упавший челнок (310: Чёрный ящик шаттла, 311: Транспортный пенал изотопов, 312: Бортовой ремнабор)
+[310–339]  Астронавтика и упавший челнок (310: Носимый аварийный запас, 311: Транспортный пенал изотопов, 312: Бортовой ремнабор)
            └ Резерв 313–339: термозащитные плитки, авионика маневровых двигателей, скафандры
 [340+]     Резерв под будущие расширения
 ```
@@ -868,29 +868,28 @@
 
 ### Блок 310–339: Астронавтика и упавший челнок (`POOL_SPACESHIP`)
 
-#### 🛰️ [Meta 310] Чёрный ящик шаттла
+#### 🛰️ [Meta 310] Носимый аварийный запас
 * **Уровень:** 3 | **Rarity:** 3 (Epic) | **Дроп:** `2 - 4` | `CombineTrashGroup="false"`
-* *Лор:* Несгораемый аварийный регистратор телеметрии челнока.
+* *Лор:* Ударопрочный опечатанный гермоконтейнер автономного жизнеобеспечения, приборов первичного анализа среды и аварийной навигации космического челнока. Рассчитан на автономное выживание экипажа в условиях неизведанной планеты после аварийной посадки.
 * **Содержимое:**
-  * `hbm:item.circuit:14` (**Плата авионики**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
-  * `computronics:computronics.tape:5` (**Межгалактический CDVR**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.hard_drive` (**Ударопрочный жёсткий диск**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `OpenComputers:item:19` (**Металлический диск**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`
-  * `hbm:item.circuit:21` (**Атомные часы**) | Кол-во: 1 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.circuit:15` (**Корпус блока управления**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.circuit:10` (**Военная микросхема**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
-  * `hbm:item.circuit:16` (**Интерфейсная суперплата**) | Кол-во: 1 | Вес: 25 | `RandomAmount="false"`
-  * `hbm:item.crt_display` (**ЭЛТ-дисплей**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.radar_linker` (**Радарный соединитель**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.wire_fine:7900` (**Золотой провод**) | Кол-во: 4–8 | Вес: 55 | `RandomAmount="true"`
-  * `hbm:item.wire_fine:38` (**Сверхпроводящий кабель**) | Кол-во: 2–4 | Вес: 35 | `RandomAmount="true"`
-  * `hbm:item.battery_pack:3` (**Энергетическая ячейка**) | Кол-во: 1 | Вес: 30 | `RandomAmount="false"`
-  * `hbm:item.plate_titanium` (**Титановая пластина**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`
-  * `hbm:item.launch_code_piece` (**Фрагмент кода запуска**) | Кол-во: 1 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.photo_panel` (**Фотоэлемент**) | Кол-во: 2–4 | Вес: 40 | `RandomAmount="true"`
-  * `hbm:item.magnetron` (**Магнетрон**) | Кол-во: 1 | Вес: 35 | `RandomAmount="false"`
-  * `hbm:item.atmosphere_scanner` (**Анализатор атмосферы**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.billet_silicon` (**Кремниевая подложка**) | Кол-во: 4–8 | Вес: 50 | `RandomAmount="true"`
+  * `hbm:item.atmosphere_scanner` (**Анализатор атмосферы**) | Кол-во: 1 | Вес: 45 | `ItemGroup="naz_scanner"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Первичная проверка пригодности атмосферы для дыхания.
+  * `hbm:item.dosimeter` (**Бортовой дозиметр**) | Кол-во: 1 | Вес: 40 | `ItemGroup="naz_scanner"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Контроль накопленной радиационной дозы.
+  * `hbm:item.geiger_counter` (**Счётчик Гейгера**) | Кол-во: 1 | Вес: 35 | `ItemGroup="naz_scanner"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Измерение текущего радиационного фона планеты.
+  * `hbm:item.canned_tube` (**Тюбик космического питания**) | Кол-во: 2–4 | Вес: 70 | `RandomAmount="true"`. *Смысл:* Сбалансированный рацион космического пайка.
+  * `hbm:item.pill_iodine` (**Таблетки йода**) | Кол-во: 2–4 | Вес: 55 | `RandomAmount="true"`. *Смысл:* Профилактика радиационного поражения.
+  * `hbm:item.syringe_metal_stimpak` (**Армейский стимулятор**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Экстренная медпомощь при травмах посадки.
+  * `hbm:item.gun_flaregun` (**Ракетница сигнала бедствия**) | Кол-во: 1 | Вес: 35 | `ItemGroup="naz_beacon"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Визуальная подача аварийного сигнала.
+  * `hbm:tile.radio_torch_sender` (**Радиоизотопный маяк**) | Кол-во: 1 | Вес: 35 | `ItemGroup="naz_beacon"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Непрерывный радиосигнал бедствия.
+  * `hbm:item.radar_linker` (**Радарный координатный линкер**) | Кол-во: 1 | Вес: 25 | `ItemGroup="naz_beacon"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Привязка координат точки высадки.
+  * `hbm:item.photo_panel` (**Компактный фотоэлемент**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`. *Смысл:* Подзарядка аккумуляторов приборов на поверхности.
+  * `hbm:item.wire_fine:7900` (**Тонкий золотой провод**) | Кол-во: 4–8 | Вес: 50 | `RandomAmount="true"`
+  * `hbm:item.wire_fine:38` (**Тонкий сверхпроводящий провод**) | Кол-во: 2–4 | Вес: 35 | `RandomAmount="true"`
+  * `hbm:item.hard_drive` (**Ударопрочный накопитель данных**) | Кол-во: 1 | Вес: 35 | `ItemGroup="naz_data"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Базы данных карт и логов корабля.
+  * `computronics:computronics.tape:5` (**Бортовая CDVR-кассета**) | Кол-во: 1 | Вес: 30 | `ItemGroup="naz_data"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Аудио- и видеозаписи полёта.
+  * `OpenComputers:item:19` (**Металлические дискеты**) | Кол-во: 2–4 | Вес: 40 | `ItemGroup="naz_data"` | `RandomAmount="true"`
+  * `hbm:item.circuit:14` (**Плата авионики**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`. *Смысл:* Навигационный микрокомпьютер.
+  * `hbm:item.circuit:10` (**Военная защищённая микросхема**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
+  * `hbm:item.circuit:21` (**Атомные часы**) | Кол-во: 1 | Вес: 12 | `LimitedDropCount="1"` | `RandomAmount="false"`. `[Маяк прогресса]` (~1.8% шанс на ролл). Высокоточный квантовый хронометр синхронизации спутниковых сетей.
 
 #### 🚀 [Meta 311] Транспортный пенал изотопов
 * **Уровень:** 3 | **Rarity:** 3 (Epic) | **Дроп:** `1 - 3` | `CombineTrashGroup="false"`
