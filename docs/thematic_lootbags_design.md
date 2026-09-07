@@ -518,18 +518,23 @@
   * `minecraft:pumpkin_seeds` (**Семена тыквы**) | Кол-во: 16–32 | Вес: 35 | `RandomAmount="true"`
   * `minecraft:melon_seeds` (**Семена арбуза**) | Кол-во: 16–32 | Вес: 35 | `RandomAmount="true"`
 
-#### 🎒 [Meta 161] Садовой рюкзак
-* **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 4` | `CombineTrashGroup="false"`
-* *Лор:* Полевой рюкзак садовника-тепличника. Снабжён химическими удобрениями, известью для раскисления почвы, костной мукой, подвязочным шпагатом, банками для рассады и инструментами ухода за посадками.
+#### 🎒 [Meta 161] Садовый рюкзак
+* **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `3 - 5` | `CombineTrashGroup="false"`
+* *Лор:* Полевой рюкзак садовника-селекционера. Снабжён специальным инвентарём AgriCraft (жёрдочки для посадки и скрещивания, садовый совок для пересадки, секатор, лупа селекционера и агрономический журнал), минеральными удобрениями NTM, известью, костной мукой, подвязочным шпагатом и рассадной тарой.
 * **Содержимое:**
+  * `AgriCraft:cropsItem` (**Жёрдочки для растений AgriCraft**) | Кол-во: 8–16 | Вес: 70 | `RandomAmount="true"`. *Смысл:* Базовый каркас для посадки культур и селекции.
+  * `AgriCraft:trowel` (**Садовый совок**) | Кол-во: 1 | Вес: 55 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Бережная пересадка растений без уничтожения куста.
+  * `AgriCraft:clipper` (**Садовый секатор**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Срезка черенков и сорняков.
+  * `AgriCraft:magnifyingGlass` (**Лупа селекционера**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Определение статов семян (Growth/Gain/Strength).
+  * `AgriCraft:journal` (**Агрономический журнал**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Учёт открытых мутаций семян.
   * `hbm:item.powder_fertilizer` (**Химические удобрения NTM**) | Кол-во: 8–16 | Вес: 75 | `RandomAmount="true"`
   * `hbm:item.powder_calcium` (**Известь/кальций NTM для почвы**) | Кол-во: 8–16 | Вес: 70 | `RandomAmount="true"`
   * `minecraft:dye:15` (**Костная мука**) | Кол-во: 16–32 | Вес: 80 | `RandomAmount="true"`
-  * `minecraft:string` (**Подвязочный шпагат**) | Кол-во: 16–32 | Вес: 80 | `RandomAmount="true"`
-  * `OpenBlocks:generic:5` (**Строительно-садовый шнур**) | Кол-во: 8–16 | Вес: 70 | `RandomAmount="true"`
-  * `hbm:item.can_empty` (**Пустые жестяные банки NTM под рассаду**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
-  * `exnihilo:crook` (**Садовый посох**) | Кол-во: 1 | Вес: 60 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `minecraft:shears` (**Садовые ножницы**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `minecraft:string` (**Подвязочный шпагат**) | Кол-во: 16–32 | Вес: 75 | `RandomAmount="true"`
+  * `OpenBlocks:generic:5` (**Строительно-садовый шнур**) | Кол-во: 8–16 | Вес: 65 | `RandomAmount="true"`
+  * `hbm:item.can_empty` (**Пустые жестяные банки NTM под рассаду**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`
+  * `exnihilo:crook` (**Садовый посох**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `minecraft:shears` (**Садовые ножницы**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `minecraft:flower_pot` (**Глиняный горшок под рассаду**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`
 
 #### 🧪 [Meta 162] Пенал редких семян
