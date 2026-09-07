@@ -813,28 +813,31 @@
 ### Блок 280–309: Химия, полимеры и лабораторная посуда
 
 #### 🧪 [Meta 280] Сумка лаборанта
-* **Уровень:** 1 | **Rarity:** 0 | **Дроп:** `1 - 2` | `CombineTrashGroup="true"`
-* *Лор:* Походный кейс лаборанта полевого анализа и синтеза полимеров.
+* **Уровень:** 1 | **Rarity:** 0 | **Дроп:** `3 - 4` | `CombineTrashGroup="true"`
+* *Лор:* Походный кейс лаборанта полевого анализа, титрования и первичного синтеза. Содержит прецизионную пипетку, набор лабораторного стекла и пробирок, вольфрамовые щипцы-манипулятор, стерильные шприцы, лабораторный карандаш для склянок, защитные очки, дезактивирующее мыло, зип-пакеты, основы полимеров и калиброванные минеральные соли.
 * **Содержимое:**
-  * `hbm:item.pipette_laboratory` (**Лабораторная пипетка 50 mB**) | Кол-во: 1 | Вес: 80 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `exnihilo:porcelain` (**Фарфоровая глина**) | Кол-во: 3–6 | Вес: 80 | `RandomAmount="true"`
-  * `hbm:item.ball_resin` (**Латекс/Смола**) | Кол-во: 2–4 | Вес: 70 | `RandomAmount="true"`
-  * `hbm:item.ingot_biorubber` (**Брусок биорезины**) | Кол-во: 1–3 | Вес: 60 | `RandomAmount="true"`
-  * `minecraft:glass_bottle` (**Колба**) | Кол-во: 1–3 | Вес: 70 | `RandomAmount="true"`
-  * `minecraft:clay_ball` (**Глина**) | Кол-во: 3–6 | Вес: 70 | `RandomAmount="true"`
-  * `minecraft:potion` (**Бутылка с водой**) | Кол-во: 1 | Вес: 75 | `RandomAmount="false"`
-  * `hbm:item.powder_calcium` (**Карбонат кальция**) | Кол-во: 3–6 | Вес: 65 | `RandomAmount="true"`
-  * `hbm:item.powder_coal` (**Угольный порошок**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
-  * `harvestcraft:saltItem` (**Соль**) | Кол-во: 4–8 | Вес: 70 | `RandomAmount="true"`
-  * `hbm:item.sulfur` (**Сера**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`
-  * `hbm:item.niter` (**Селитра**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`
-  * `hbm:item.fluorite` (**Флюорит**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`
-  * `hbm:item.oil_tar` (**Каменноугольный деготь**) | Кол-во: 2–4 | Вес: 55 | `RandomAmount="true"`
-  * `hbm:item.pads_rubber` (**Резиновые прокладки**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`
-  * `hbm:item.plastic_bag` (**Пакет**) | Кол-во: 1–2 | Вес: 60 | `RandomAmount="true"`
-  * `hbm:item.goggles` (**Защитные очки**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `cfm:ItemSoap` (**Мыло**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.debris_metal` (**Металлолом**) | Кол-во: 1–2 | Вес: 50 | `RandomAmount="true"`
+  * `hbm:item.pipette_laboratory` (**Лабораторная пипетка 50 mB**) | Кол-во: 1 | Вес: 75 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Дозирование малых порций реактивов и кислот.
+  * `hbm:item.chemistry_set` (**Лабораторная стеклянная посуда**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Набор пробирок, мензурок и колб для химического стола NTM.
+  * `hbm:item.reacher` (**Вольфрамовые лабораторные щипцы / манипулятор**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Безопасная работа с едкими и горячими тиглями.
+  * `hbm:item.syringe_empty` (**Стерильные шприцы**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`. *Смысл:* Забор жидких проб.
+  * `OpenBlocks:generic:11` (**Лабораторный карандаш для маркировки**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `minecraft:glass_bottle` (**Стеклянные колбы**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`
+  * `minecraft:potion` (**Дистиллированная вода**) | Кол-во: 1 | Вес: 70 | `RandomAmount="false"`. *Смысл:* Промывка посуды и приготовление растворов.
+  * `hbm:item.goggles` (**Защитные лабораторные очки**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `cfm:ItemSoap` (**Мыло дезактивации**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.plastic_bag` (**Зип-пакеты для проб**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`
+  * `hbm:item.ball_resin` (**Латекс / сырая смола**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`
+  * `hbm:item.ingot_biorubber` (**Брусок биорезины**) | Кол-во: 1–3 | Вес: 55 | `RandomAmount="true"`
+  * `hbm:item.pads_rubber` (**Резиновые прокладки для шлифов**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`
+  * `hbm:item.oil_tar` (**Каменноугольный деготь**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`
+  * `exnihilo:porcelain` (**Фарфоровая глина для тиглей**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
+  * `minecraft:clay_ball` (**Очищенная глина**) | Кол-во: 4–8 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.sulfur` (**Сера (осаждённая)**) | Кол-во: 2–4 | Вес: 35 | `RandomAmount="true"`
+  * `hbm:item.niter` (**Калиевая селитра**) | Кол-во: 2–4 | Вес: 35 | `RandomAmount="true"`
+  * `hbm:item.fluorite` (**Флюорит**) | Кол-во: 2–4 | Вес: 30 | `RandomAmount="true"`
+  * `hbm:item.powder_calcium` (**Карбонат кальция**) | Кол-во: 2–4 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.powder_coal` (**Активированный уголь**) | Кол-во: 3–6 | Вес: 45 | `RandomAmount="true"`
+  * `harvestcraft:saltItem` (**Чистый хлорид натрия**) | Кол-во: 3–6 | Вес: 50 | `RandomAmount="true"`
 
 #### 🔬 [Meta 281] Кейс технолога
 * **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 4` | `CombineTrashGroup="true"`
@@ -1062,7 +1065,7 @@
 | **250** | Сумка сигнальщика | 1 | 0 | 2–4 | true | 20 |
 | **251** | Коробочка радиодеталей | 2 | 1 | 2–4 | true | 17 |
 | **252** | Радиоузел связиста | 3 | 2 | 2–4 | false | 17 |
-| **280** | Сумка лаборанта | 1 | 0 | 1–2 | true | 19 |
+| **280** | Сумка лаборанта | 1 | 0 | 3–4 | true | 22 |
 | **281** | Кейс технолога | 2 | 1 | 2–4 | true | 20 |
 | **310** | Чёрный ящик шаттла | 3 | 3 | 2–4 | false | 19 |
 | **311** | Транспортный пенал изотопов | 3 | 3 | 1–3 | false | 18 |
