@@ -48,7 +48,7 @@
            └ Резерв 133–159: специи, консервированные рационы экспедиций, полевая стерилизация
 [160–189]  Агрономия, оранжерея и банк семян (160: Семена с огорода, 161: Посевной мешок, 162: Банк семян)
            └ Резерв 163–189: гидропонные культуры, стимуляторы роста, мутагенные саженцы
-[190–219]  Строительство, отделка и чертежи (190: Мешок плотника, 191: Ящик отделочника, 192: Кейс проектировщика)
+[190–219]  Строительство, отделка и чертежи (190: Мешок плотника, 191: Сумка маляра, 192: Кейс проектировщика)
            └ Резерв 193–219: трафареты, архитектурные резцы, монолитная опалубка
 [220–249]  Геологоразведка и горное дело (220: Планшет разведчика, 221: Геодезический набор, 222: Спектрометр недр)
            └ Резерв 223–249: глубинное бурение, маркшейдерские метки, керны пород
@@ -565,33 +565,44 @@
   * `hbm:item.pin` (**Шпилька/Отмычка**) | Кол-во: 3–6 | Вес: 70 | `RandomAmount="true"`
   * `hbm:item.padlock_rusty` (**Ржавый замок**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="2"` | `RandomAmount="false"`
 
-#### 🔨 [Meta 191] Ящик отделочника
-* **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 3` | `CombineTrashGroup="true"`
-* *Лор:* Набор мастера декоративной отделки, резьбы по камню и конфигурации хранилищ.
+#### 🎨 [Meta 191] Сумка маляра
+* **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 4` | `CombineTrashGroup="true"`
+* *Лор:* Походная холщовая сумка промышленного маляра-оформителя. Забита базовыми и химическими красителями для сигнальной разметки цехов, полос опасности и труб, трафаретной бумагой, чистящей ветошью, банками и инструментами для быстрой окраски и декорирования базы.
 * **Содержимое:**
-  * `chisel:chisel` (**Стамеска Chisel**) | Кол-во: 1 | Вес: 70 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `OpenBlocks:squeegee` (**Резиновая швабра**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Смывает краску со стен.
-  * `OpenBlocks:generic:11` (**Графитовый карандаш**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `CarpentersBlocks:itemCarpentersHammer` (**Молоток плотника**) | Кол-во: 1 | Вес: 60 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `CarpentersBlocks:itemCarpentersChisel` (**Стамеска Carpenter's**) | Кол-во: 1 | Вес: 60 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `StorageDrawers:quantifyKey` (**Quantify Key**) | Кол-во: 1 | Вес: 55 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Отображение точного числа предметов на ящике.
-  * `StorageDrawers:upgrade:2` (**Железный апгрейд ящика x4**) | Кол-во: 1–2 | Вес: 50 | `RandomAmount="true"`
-  * `StorageDrawers:upgradeVoid` (**Апгрейд пустоты**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Удаление излишков на автоматических фермах.
-  * `BiblioCraft:item.PaintingCanvas` (**Холст для картин**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
-  * `BiblioCraft:item.BiblioDrill` (**Шуруповёрт**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `OpenBlocks:paintcan` (**Банка с краской**) | Кол-во: 1 | Вес: 45 | `RandomAmount="false"`
-  * `OpenBlocks:paintbrush` (**Малярная кисть**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `modernmarkings:item.chalk` (**Мел**) | Кол-во: 3–6 | Вес: 65 | `RandomAmount="true"`
-  * `chisel:cloud` (**Облачный блок**) | Кол-во: 8–16 | Вес: 40 | `RandomAmount="true"`
-  * `chisel:holystone` (**Священный камень**) | Кол-во: 16–32 | Вес: 50 | `RandomAmount="true"`
-  * `chisel:marble` (**Мрамор**) | Кол-во: 16–32 | Вес: 55 | `RandomAmount="true"`
-  * `chisel:limestone` (**Известняк**) | Кол-во: 16–32 | Вес: 55 | `RandomAmount="true"`
-  * `BiblioCraft:item.tapeMeasure` (**Мерная лента**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `minecraft:dye:0` (**Чёрный краситель**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`
-  * `minecraft:dye:1` (**Красный краситель**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`
-  * `minecraft:dye:4` (**Лазурит**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`
-  * `minecraft:dye:11` (**Жёлтый краситель**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`
-  * `minecraft:dye:15` (**Костная мука**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`
+  * `etfuturum:dye:0` (**Белый краситель**) | Кол-во: 16–32 | Вес: 85 | `RandomAmount="true"`
+  * `etfuturum:dye:3` (**Чёрный краситель**) | Кол-во: 16–32 | Вес: 85 | `RandomAmount="true"`
+  * `hbm:item.chemical_dye:11` (**Хим. краситель: жёлтый / полосы опасности**) | Кол-во: 16–32 | Вес: 80 | `RandomAmount="true"`
+  * `hbm:item.chemical_dye:1` (**Хим. краситель: сигнальный красный**) | Кол-во: 16–32 | Вес: 80 | `RandomAmount="true"`
+  * `hbm:item.chemical_dye:0` (**Хим. краситель: чёрный**) | Кол-во: 16–32 | Вес: 75 | `RandomAmount="true"`
+  * `hbm:item.chemical_dye:15` (**Хим. краситель: белый**) | Кол-во: 16–32 | Вес: 75 | `RandomAmount="true"`
+  * `hbm:item.chemical_dye:4` (**Хим. краситель: синий**) | Кол-во: 12–24 | Вес: 70 | `RandomAmount="true"`
+  * `etfuturum:dye:1` (**Синий краситель EtFuturum**) | Кол-во: 12–24 | Вес: 70 | `RandomAmount="true"`
+  * `etfuturum:dye:2` (**Коричневый краситель EtFuturum**) | Кол-во: 12–24 | Вес: 60 | `RandomAmount="true"`
+  * `hbm:item.chemical_dye:2` (**Хим. краситель: зелёный**) | Кол-во: 8–16 | Вес: 55 | `RandomAmount="true"`
+  * `hbm:item.chemical_dye:14` (**Хим. краситель: оранжевый**) | Кол-во: 8–16 | Вес: 55 | `RandomAmount="true"`
+  * `hbm:item.chemical_dye:10` (**Хим. краситель: лаймовый**) | Кол-во: 8–16 | Вес: 50 | `RandomAmount="true"`
+  * `hbm:item.chemical_dye:6` (**Хим. краситель: бирюзовый / Cyan**) | Кол-во: 8–16 | Вес: 50 | `RandomAmount="true"`
+  * `hbm:item.chemical_dye:8` (**Хим. краситель: серый**) | Кол-во: 8–16 | Вес: 50 | `RandomAmount="true"`
+  * `hbm:item.chemical_dye:5` (**Хим. краситель: фиолетовый**) | Кол-во: 8–16 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.chemical_dye:13` (**Хим. краситель: пурпурный**) | Кол-во: 8–16 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.chemical_dye:9` (**Хим. краситель: розовый**) | Кол-во: 8–16 | Вес: 40 | `RandomAmount="true"`
+  * `hbm:item.rag` (**Ветошь для затирки**) | Кол-во: 4–8 | Вес: 75 | `RandomAmount="true"`
+  * `hbm:item.can_empty` (**Пустая жестяная банка**) | Кол-во: 2–4 | Вес: 70 | `RandomAmount="true"`
+  * `modernmarkings:item.chalk` (**Разметочный мел**) | Кол-во: 4–8 | Вес: 70 | `RandomAmount="true"`
+  * `hbm:item.crayon` (**Маркировочные мелки NTM**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`
+  * `minecraft:paper` (**Трафаретная бумага**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
+  * `minecraft:book` (**Журнал палитр**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `BiblioCraft:item.PaintingCanvas` (**Холст для картин/вывесок**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`
+  * `OpenBlocks:paintbrush` (**Малярная кисть**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `OpenBlocks:paintcan` (**Банка с краской**) | Кол-во: 1–2 | Вес: 50 | `RandomAmount="true"`
+  * `OpenBlocks:squeegee` (**Резиновая швабра**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `ProjectBlue:emptySprayCan` (**Баллончик-распылитель**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `chisel:chisel` (**Стамеска Chisel**) | Кол-во: 1 | Вес: 55 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `BiblioCraft:item.BiblioDrill` (**Аккумуляторный шуруповёрт**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `OpenBlocks:generic:11` (**Графитовый карандаш**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `OpenBlocks:crayonGlasses` (**Цветные очки для мелков**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `ArchitectureCraft:hammer` (**Молоток ArchitectureCraft**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `ArchitectureCraft:chisel` (**Резец ArchitectureCraft**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
 
 #### 🏛️ [Meta 192] Кейс проектировщика
 * **Уровень:** 3 | **Rarity:** 2 | **Дроп:** `3 - 5` | `CombineTrashGroup="false"`
@@ -911,7 +922,7 @@
 | **`POOL_SILO`** | Ракетная шахта | Оружейный кофр (102), Сумка электрика (71), Кейс РХБЗ (12) | 2 |
 | **`POOL_OIL_RIG`** | Нефтяная вышка | Геодезический набор (221), Кейс технолога (281), Сумка механика (41), Походный кухонник (131) | 2 |
 | **`POOL_SUBMARINE`** | Затонувшая подлодка | Кейс РХБЗ (12), Коробочка радиодеталей (251), Сумка механика (41) | 2 |
-| **`POOL_MACHINE_PARTS`** | Заводские цеха и станки | Ящик слесаря (40), Сумка механика (41), Ящик отделочника (191) | 2–3 |
+| **`POOL_MACHINE_PARTS`** | Заводские цеха и станки | Ящик слесаря (40), Сумка механика (41), Сумка маляра (191) | 2–3 |
 | **`POOL_OFFICE_TRASH`** | Офисный мусор и корзины | Рваная аптечка (10), Скрутка проводов (70), Планшет разведчика (220), Сумка сигнальщика (250) | 2 |
 | **`POOL_FILING_CABINET`** | Картотечные шкафы контор | Рваная аптечка (10), Скрутка проводов (70), Планшет разведчика (220), Сумка сигнальщика (250) | 20 |
 | **`POOL_SUPPLIES`** | Ящики снабжения | Котелок бродяги (130), Семена с огорода (160), Посевной мешок (161), Рваная аптечка (10) | 3–4 |
@@ -1014,7 +1025,7 @@
 | **161** | Посевной мешок | 2 | 1 | 2–4 | true | 20 |
 | **162** | Банк семян | 3 | 2 | 1 (опт x32) | false | 20 |
 | **190** | Мешок плотника | 1 | 0 | 1–2 | true | 21 |
-| **191** | Ящик отделочника | 2 | 1 | 2–3 | true | 23 |
+| **191** | Сумка маляра | 2 | 1 | 2–4 | true | 34 |
 | **192** | Кейс проектировщика | 3 | 2 | 3–5 | false | 21 |
 | **220** | Планшет разведчика | 1 | 0 | 1–2 | true | 19 |
 | **221** | Геодезический набор | 2 | 1 | 2–3 | true | 20 |
@@ -1027,7 +1038,7 @@
 | **310** | Чёрный ящик шаттла | 3 | 3 | 2–4 | false | 19 |
 | **311** | Транспортный пенал изотопов | 3 | 3 | 1–3 | false | 18 |
 | **312** | Бортовой ремнабор | 3 | 2 | 2–4 | false | 20 |
-| **ИТОГО** | **33 группы** | — | — | — | — | **641 позиция** |
+| **ИТОГО** | **33 группы** | — | — | — | — | **653 позиции** |
 
 ---
 

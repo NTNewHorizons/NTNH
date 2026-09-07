@@ -424,30 +424,41 @@
         <Loot Identifier="cr190_pin" ItemName="hbm:item.pin" Amount="6" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr190_padlock_rusty" ItemName="hbm:item.padlock_rusty" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="2" RandomAmount="false"/>
     </LootGroup>
-    <LootGroup GroupMetaID="191" GroupName="Ящик отделочника" Rarity="1" MinItems="2" MaxItems="3" CombineTrashGroup="true">
-        <Loot Identifier="cr191_chisel" ItemName="chisel:chisel" Amount="1" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr191_squeegee" ItemName="OpenBlocks:squeegee" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr191_pencil" ItemName="OpenBlocks:generic:11" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr191_carp_hammer" ItemName="CarpentersBlocks:itemCarpentersHammer" Amount="1" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr191_carp_chisel" ItemName="CarpentersBlocks:itemCarpentersChisel" Amount="1" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr191_quantify_key" ItemName="StorageDrawers:quantifyKey" Amount="1" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr191_upgrade_iron" ItemName="StorageDrawers:upgrade:2" Amount="2" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr191_upgrade_void" ItemName="StorageDrawers:upgradeVoid" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr191_canvas" ItemName="BiblioCraft:item.PaintingCanvas" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+    <LootGroup GroupMetaID="191" GroupName="Сумка маляра" Rarity="1" MinItems="2" MaxItems="4" CombineTrashGroup="true">
+        <Loot Identifier="cr191_dye_ef_white" ItemName="etfuturum:dye:0" Amount="32" NBTTag="" Chance="85" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr191_dye_ef_black" ItemName="etfuturum:dye:3" Amount="32" NBTTag="" Chance="85" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr191_dye_chem_yellow" ItemName="hbm:item.chemical_dye:11" Amount="32" NBTTag="" Chance="80" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr191_dye_chem_red" ItemName="hbm:item.chemical_dye:1" Amount="32" NBTTag="" Chance="80" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr191_dye_chem_black" ItemName="hbm:item.chemical_dye:0" Amount="32" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr191_dye_chem_white" ItemName="hbm:item.chemical_dye:15" Amount="32" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr191_dye_chem_blue" ItemName="hbm:item.chemical_dye:4" Amount="24" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr191_dye_ef_blue" ItemName="etfuturum:dye:1" Amount="24" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr191_dye_ef_brown" ItemName="etfuturum:dye:2" Amount="24" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr191_dye_chem_green" ItemName="hbm:item.chemical_dye:2" Amount="16" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr191_dye_chem_orange" ItemName="hbm:item.chemical_dye:14" Amount="16" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr191_dye_chem_lime" ItemName="hbm:item.chemical_dye:10" Amount="16" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr191_dye_chem_cyan" ItemName="hbm:item.chemical_dye:6" Amount="16" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr191_dye_chem_gray" ItemName="hbm:item.chemical_dye:8" Amount="16" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr191_dye_chem_purple" ItemName="hbm:item.chemical_dye:5" Amount="16" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr191_dye_chem_magenta" ItemName="hbm:item.chemical_dye:13" Amount="16" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr191_dye_chem_pink" ItemName="hbm:item.chemical_dye:9" Amount="16" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr191_rag" ItemName="hbm:item.rag" Amount="8" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr191_can_empty" ItemName="hbm:item.can_empty" Amount="4" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr191_chalk" ItemName="modernmarkings:item.chalk" Amount="8" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr191_crayon" ItemName="hbm:item.crayon" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr191_paper" ItemName="minecraft:paper" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr191_book" ItemName="minecraft:book" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr191_canvas" ItemName="BiblioCraft:item.PaintingCanvas" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr191_paintbrush" ItemName="OpenBlocks:paintbrush" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr191_paintcan" ItemName="OpenBlocks:paintcan" Amount="2" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr191_squeegee" ItemName="OpenBlocks:squeegee" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr191_spraycan" ItemName="ProjectBlue:emptySprayCan" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr191_chisel" ItemName="chisel:chisel" Amount="1" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="cr191_drill" ItemName="BiblioCraft:item.BiblioDrill" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr191_paintcan" ItemName="OpenBlocks:paintcan" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="cr191_paintbrush" ItemName="OpenBlocks:paintbrush" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr191_chalk" ItemName="modernmarkings:item.chalk" Amount="6" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr191_cloud" ItemName="chisel:cloud" Amount="16" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr191_holystone" ItemName="chisel:holystone" Amount="32" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr191_marble" ItemName="chisel:marble" Amount="32" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr191_limestone" ItemName="chisel:limestone" Amount="32" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr191_tape" ItemName="BiblioCraft:item.tapeMeasure" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr191_dye_black" ItemName="minecraft:dye:0" Amount="8" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr191_dye_red" ItemName="minecraft:dye:1" Amount="8" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr191_dye_blue" ItemName="minecraft:dye:4" Amount="8" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr191_dye_yellow" ItemName="minecraft:dye:11" Amount="8" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr191_dye_white" ItemName="minecraft:dye:15" Amount="8" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr191_pencil" ItemName="OpenBlocks:generic:11" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr191_glasses_crayon" ItemName="OpenBlocks:crayonGlasses" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr191_arch_hammer" ItemName="ArchitectureCraft:hammer" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr191_arch_chisel" ItemName="ArchitectureCraft:chisel" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
     <LootGroup GroupMetaID="192" GroupName="Кейс проектировщика" Rarity="2" MinItems="3" MaxItems="5" CombineTrashGroup="false">
         <Loot Identifier="cr192_folder" ItemName="hbm:item.blueprint_folder" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
