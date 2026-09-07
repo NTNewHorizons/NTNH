@@ -680,27 +680,34 @@
   * `hbm:item.geiger_counter` (**Счётчик Гейгера**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.bottle_mercury` (**Ртуть**) | Кол-во: 1–2 | Вес: 45 | `RandomAmount="true"`
 
-#### 💎 [Meta 222] Спектрометр недр
-* **Уровень:** 3 | **Rarity:** 2 | **Дроп:** `2 - 4` | `CombineTrashGroup="false"`
-* *Лор:* Глубинная станция обнаружения неисчерпаемых рудных жил коренной породы.
+#### 💥 [Meta 222] Ящик шахтной взрывотехники
+* **Уровень:** 3 | **Rarity:** 2 | **Дроп:** `3 - 6` | `CombineTrashGroup="false"`
+* *Лор:* Защищённый расходный рундук горного взрывника и проходчика штреков. Содержит сертифицированные заряды для дробления пластов (динамит, ТНТ, пластид, С-4 и кумулятивный заряд N2), бочки с промышленным взрывчатым веществом и керосином, детонаторы, проводные линии подрыва, каску с фонарём, защитную оптику и замки запирания склада ВВ.
 * **Содержимое:**
-  * `hbm:item.ore_density_scanner` (**Сканер плотности бедроковой руды**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.bobmazon` (**Устройство Бобмазон**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Орбитальный заказ снабжения Боба.
-  * `hbm:item.drill_titanium` (**Титановый бур**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.drillbit:4` (**Деш-коронка**) | Кол-во: 1 | Вес: 30 | `RandomAmount="false"`
-  * `hbm:item.drillbit:3` (**HSS-алмазная коронка**) | Кол-во: 1 | Вес: 25 | `RandomAmount="false"`
-  * `hbm:item.chunk_ore`..`:2` (**Рудно-минеральные друзы**) | Кол-во: 1–2 | Вес: 45 | `RandomAmount="true"`
-  * `hbm:item.crystal_iron` (**Железный кристалл**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`
-  * `hbm:item.gem_volcanic` (**Вулканический кристалл**) | Кол-во: 1 | Вес: 15 | `LimitedDropCount="2"` | `RandomAmount="false"`
-  * `hbm:item.black_diamond` (**Чёрный алмаз**) | Кол-во: 1 | Вес: 15 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.powder_titanium` (**Титановый порошок**) | Кол-во: 2–4 | Вес: 45 | `RandomAmount="true"`
-  * `hbm:item.powder_diamond` (**Алмазная пыль**) | Кол-во: 1–2 | Вес: 35 | `RandomAmount="true"`
-  * `hbm:item.powder_gold` (**Золотой порошок**) | Кол-во: 2–4 | Вес: 45 | `RandomAmount="true"`
-  * `hbm:item.ingot_tungsten` (**Вольфрам**) | Кол-во: 2–4 | Вес: 45 | `RandomAmount="true"`
-  * `hbm:item.plate_armor_titanium` (**Титановая броня**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
-  * `hbm:item.motor_desh` (**Деш-мотор**) | Кол-во: 1 | Вес: 25 | `RandomAmount="false"`
-  * `hbm:item.circuit:10` (**Военный чип**) | Кол-во: 1 | Вес: 25 | `RandomAmount="false"`
-  * `minecraft:diamond` (**Алмазы**) | Кол-во: 1–2 | Вес: 30 | `RandomAmount="true"`
+  * `hbm:item.stick_dynamite` (**Динамит**) | Кол-во: 4–8 | Вес: 85 | `RandomAmount="true"`
+  * `hbm:item.stick_tnt` (**Тротиловая шашка**) | Кол-во: 3–6 | Вес: 75 | `RandomAmount="true"`
+  * `hbm:item.stick_semtex` (**Семтекс**) | Кол-во: 2–4 | Вес: 55 | `RandomAmount="true"`
+  * `hbm:item.stick_c4` (**Пластид C-4**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
+  * `hbm:item.n2_charge` (**Кумулятивный заряд N2**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:tile.red_barrel` (**Взрывная бочка**) | Кол-во: 1–2 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:tile.pink_barrel` (**Керосиновая бочка**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
+  * `hbm:item.safety_fuse` (**Огнепроводный шнур**) | Кол-во: 4–8 | Вес: 80 | `RandomAmount="true"`
+  * `hbm:item.detonator` (**Детонатор**) | Кол-во: 1 | Вес: 55 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.detonator_multi` (**Многоканальный детонатор**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.detonator_laser` (**Лазерный детонатор**) | Кол-во: 1 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.matchstick` (**Спички**) | Кол-во: 4–8 | Вес: 70 | `RandomAmount="true"`
+  * `hbm:item.wire_fine:2900` (**Медный тонкий провод для подрывной линии**) | Кол-во: 8–16 | Вес: 80 | `RandomAmount="true"`
+  * `hbm:item.goggles` (**Защитные очки**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.no9` (**Шахтёрская каска «№9»**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.gas_mask_mono` (**Однофильтровый противогаз**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.gas_mask_filter_mono` (**Фильтр противогаза**) | Кол-во: 1–2 | Вес: 60 | `RandomAmount="true"`
+  * `hbm:item.defuser` (**Сапёрный набор / обезвреживатель**) | Кол-во: 1 | Вес: 15 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.padlock_reinforced` (**Усиленный навесной замок склада ВВ**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.key` (**Ключ от склада**) | Кол-во: 1–2 | Вес: 50 | `RandomAmount="true"`
+  * `hbm:item.pin` (**Шплинт / отмычка**) | Кол-во: 3–6 | Вес: 65 | `RandomAmount="true"`
+  * `hbm:item.sulfur` (**Сера**) | Кол-во: 8–16 | Вес: 70 | `RandomAmount="true"`
+  * `hbm:item.niter` (**Селитра**) | Кол-во: 8–16 | Вес: 70 | `RandomAmount="true"`
+  * `minecraft:redstone` (**Красная пыль**) | Кол-во: 8–16 | Вес: 75 | `RandomAmount="true"`
 
 ---
 
