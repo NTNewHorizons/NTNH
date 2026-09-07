@@ -187,29 +187,38 @@
   * `hbm:item.wire_fine:2900` (**Медная проволока**) | Кол-во: 3–6 | Вес: 75 | `RandomAmount="true"`
 
 #### 🔧 [Meta 41] Сумка механика
-* **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 3` | `CombineTrashGroup="true"`
-* *Лор:* Кожаная инструментальная сумка дежурного слесаря машинного отделения.
+* **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `3 - 5` | `CombineTrashGroup="true"`
+* *Лор:* Инструментальная сумка дежурного механика машинного отделения. Содержит сантехнические и гидравлические трубы, тонкую электропроводку из различных металлов, смазочные материалы, прокладки, ремни, электродвигатели и монтажный инструмент для ремонта заводского оборудования.
 * **Содержимое:**
-  * `hbm:item.wd40` (**VT-40**) | Кол-во: 1 | Вес: 80 | `LimitedDropCount="2"` | `RandomAmount="false"`. *Смысл:* Проникающая смазка NTM.
-  * `OpenBlocks:spongeonastick` (**Губка на палочке**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Аварийный сбор разливов жидкостей и кислот.
+  * `hbm:item.wd40` (**VT-40**) | Кол-во: 1 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Редкая проникающая смазка / модуль для брони NTM.
+  * `hbm:item.ducttape` (**Синяя изолента / скотч NTM**) | Кол-во: 1–2 | Вес: 65 | `RandomAmount="true"`. *Смысл:* Монтажная герметизация и полевой ремонт.
+  * `OpenBlocks:spongeonastick` (**Губка на палочке**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Аварийный сбор разливов жидкостей и кислот.
   * `hbm:item.padlock` (**Стальной замок**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="2"` | `RandomAmount="false"`
   * `hbm:item.key_kit` (**Слепки для ключей**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.key_fake` (**Поддельный ключ**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.mirror_tool` (**Юстировочный ключ зеркал**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `vending:vendingMachineWrench` (**Ключ обменного блока**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.wrench` (**Универсальный гаечный ключ NTM**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.screwdriver_steel` (**Стальная отвёртка монтажника**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.plate_steel` (**Стальная пластина**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`
-  * `hbm:item.pipe:1300` (**Алюминиевая труба**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`
-  * `hbm:item.screwdriver_steel` (**Стальная отвёртка**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.drillbit:0` (**Стальное сверло**) | Кол-во: 1 | Вес: 50 | `RandomAmount="false"`
-  * `hbm:item.blades_steel` (**Стальные лезвия шредера**) | Кол-во: 1 | Вес: 40 | `RandomAmount="false"`
-  * `hbm:item.pipes_steel` (**Стальные трубы**) | Кол-во: 1 | Вес: 35 | `RandomAmount="false"`
-  * `hbm:item.ingot_steel` (**Стальной слиток**) | Кол-во: 3–6 | Вес: 65 | `RandomAmount="true"`
   * `hbm:item.plate_copper` (**Медная пластина**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`
   * `hbm:item.plate_aluminium` (**Алюминиевая пластина**) | Кол-во: 2–4 | Вес: 55 | `RandomAmount="true"`
-  * `hbm:item.wire_fine:8` (**Алюминиевый провод**) | Кол-во: 3–6 | Вес: 55 | `RandomAmount="true"`
-  * `hbm:item.ball_resin` (**Смола / Латекс**) | Кол-во: 1–3 | Вес: 50 | `RandomAmount="true"`
-  * `hbm:item.pads_rubber` (**Резиновые прокладки**) | Кол-во: 2–4 | Вес: 70 | `RandomAmount="true"`
-  * `hbm:item.motor_desh` (**Деш-мотор**) | Кол-во: 1 | Вес: 15 | `RandomAmount="false"`
+  * `hbm:item.pipe:1300` (**Алюминиевая труба**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
+  * `hbm:item.pipe:2600` (**Железная труба**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
+  * `hbm:item.pipe:30` (**Стальная труба**) | Кол-во: 3–6 | Вес: 55 | `RandomAmount="true"`
+  * `hbm:item.pipes_steel` (**Комплект стальных гидравлических трубок**) | Кол-во: 1 | Вес: 40 | `RandomAmount="false"`
+  * `hbm:item.wire_fine:1300` (**Тонкий алюминиевый провод**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`. *Смысл:* Валидный Mats ID 1300.
+  * `hbm:item.wire_fine:2900` (**Тонкий медный провод**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
+  * `hbm:item.wire_fine:30` (**Тонкий стальной провод / тросик**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`
+  * `hbm:item.canister_full:70` (**Канистра промышленного масла NTM**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.canister_full:74` (**Канистра машинной смазки / лубриканта NTM**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.ball_resin` (**Смола / Латекс**) | Кол-во: 1–3 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.pads_rubber` (**Резиновые прокладки**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
+  * `hbm:item.fuse` (**Электромонтажные предохранители NTM**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`
+  * `hbm:item.piston_set_steel` (**Комплект стальных поршней NTM**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `ProjRed|Core:projectred.core.part:15` (**Электродвигатель Project Red**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.weapon_mod_special:5` (**Вспомогательный электрический двигатель NTM**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.weapon_mod_special:27` (**Рассеиватель для силового бура NTM**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
 
 #### ⚙️ [Meta 42] Инженерный ЗИП
 * **Уровень:** 3 | **Rarity:** 2 | **Дроп:** `3 - 4` | `CombineTrashGroup="false"`

@@ -95,27 +95,36 @@
         <Loot Identifier="sec40_tripwire" ItemName="minecraft:tripwire_hook" Amount="2" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sec40_wire_copper" ItemName="hbm:item.wire_fine:2900" Amount="6" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
-    <LootGroup GroupMetaID="41" GroupName="Сумка механика" Rarity="1" MinItems="2" MaxItems="3" CombineTrashGroup="true">
-        <Loot Identifier="sec41_wd40" ItemName="hbm:item.wd40" Amount="1" NBTTag="" Chance="80" ItemGroup="" LimitedDropCount="2" RandomAmount="false"/>
-        <Loot Identifier="sec41_sponge" ItemName="OpenBlocks:spongeonastick" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+    <LootGroup GroupMetaID="41" GroupName="Сумка механика" Rarity="1" MinItems="3" MaxItems="5" CombineTrashGroup="true">
+        <Loot Identifier="sec41_wd40" ItemName="hbm:item.wd40" Amount="1" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sec41_ducttape" ItemName="hbm:item.ducttape" Amount="2" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sec41_sponge" ItemName="OpenBlocks:spongeonastick" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sec41_padlock" ItemName="hbm:item.padlock" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="2" RandomAmount="false"/>
         <Loot Identifier="sec41_key_kit" ItemName="hbm:item.key_kit" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sec41_key_fake" ItemName="hbm:item.key_fake" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sec41_mirror_tool" ItemName="hbm:item.mirror_tool" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sec41_vending_wrench" ItemName="vending:vendingMachineWrench" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sec41_plate_steel" ItemName="hbm:item.plate_steel" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sec41_pipe_alum" ItemName="hbm:item.pipe:1300" Amount="8" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sec41_wrench" ItemName="hbm:item.wrench" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sec41_screwdriver_steel" ItemName="hbm:item.screwdriver_steel" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sec41_drillbit_steel" ItemName="hbm:item.drillbit:0" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="sec41_blades_steel" ItemName="hbm:item.blades_steel" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="sec41_pipes_steel" ItemName="hbm:item.pipes_steel" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="sec41_ingot_steel" ItemName="hbm:item.ingot_steel" Amount="6" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sec41_plate_steel" ItemName="hbm:item.plate_steel" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sec41_plate_copper" ItemName="hbm:item.plate_copper" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sec41_plate_aluminium" ItemName="hbm:item.plate_aluminium" Amount="4" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sec41_wire_aluminium" ItemName="hbm:item.wire_fine:8" Amount="6" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sec41_ball_resin" ItemName="hbm:item.ball_resin" Amount="3" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sec41_pads_rubber" ItemName="hbm:item.pads_rubber" Amount="4" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sec41_motor_desh" ItemName="hbm:item.motor_desh" Amount="1" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="sec41_pipe_alum" ItemName="hbm:item.pipe:1300" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sec41_pipe_iron" ItemName="hbm:item.pipe:2600" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sec41_pipe_steel" ItemName="hbm:item.pipe:30" Amount="6" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sec41_pipes_steel" ItemName="hbm:item.pipes_steel" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="sec41_wire_aluminium" ItemName="hbm:item.wire_fine:1300" Amount="8" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sec41_wire_copper" ItemName="hbm:item.wire_fine:2900" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sec41_wire_steel" ItemName="hbm:item.wire_fine:30" Amount="8" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sec41_oil_smear" ItemName="hbm:item.canister_full:70" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sec41_oil_lube" ItemName="hbm:item.canister_full:74" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sec41_ball_resin" ItemName="hbm:item.ball_resin" Amount="3" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sec41_pads_rubber" ItemName="hbm:item.pads_rubber" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sec41_fuse" ItemName="hbm:item.fuse" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sec41_piston_steel" ItemName="hbm:item.piston_set_steel" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sec41_pr_motor" ItemName="ProjRed|Core:projectred.core.part:15" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sec41_aux_motor" ItemName="hbm:item.weapon_mod_special:5" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sec41_sifter" ItemName="hbm:item.weapon_mod_special:27" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
     <LootGroup GroupMetaID="42" GroupName="Инженерный ЗИП" Rarity="2" MinItems="3" MaxItems="4" CombineTrashGroup="false">
         <Loot Identifier="sec42_wrench_archineer" ItemName="hbm:item.wrench_archineer" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
