@@ -230,29 +230,38 @@
   * `hbm:item.weapon_mod_special:27` (**Рассеиватель для силового бура NTM**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
 
 #### ⚙️ [Meta 42] Инженерный ЗИП
-* **Уровень:** 3 | **Rarity:** 2 | **Дроп:** `3 - 4` | `CombineTrashGroup="false"`
-* *Лор:* Опечатанный ящик ЗИП из кабинета главного инженера обогатительного комбината.
+* **Уровень:** 3 | **Rarity:** 2 | **Дроп:** `3 - 5` | `CombineTrashGroup="false"`
+* *Лор:* Опечатанный ящик ЗИП главного инженера машинного цеха. Комплект для капитального ремонта заводских многоблоков, узловой сборки и регламентного обслуживания: ключ Archineer, вольфрамовый термо-манипулятор, сварочный автоген, прецизионные поршни и электромоторы, листовой прокат (сталь, алюминий, медь, дюрасталь), трубы высокого давления, тонкая кабельная разводка (включая золотую), катализаторы, промышленные магниты, лезвия станков, смазка VT-40 и силовые предохранители.
 * **Содержимое:**
   * `hbm:item.wrench_archineer` (**Гаечный ключ инженера**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Монтаж тяжёлых многоблоков NTM.
-  * `hbm:item.reacher` (**Вольфрамовые хваталки**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.padlock_reinforced` (**Защищённый замок**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.drill_titanium` (**Титановый бур**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.motor_desh` (**Деш-мотор**) | Кол-во: 1–2 | Вес: 35 | `RandomAmount="true"`
-  * `hbm:item.screwdriver_desh` (**Деш-отвёртка**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.drillbit:2` (**HSS-сверло**) | Кол-во: 1 | Вес: 35 | `RandomAmount="false"`
-  * `hbm:item.drillbit:1` (**Алмазное сверло**) | Кол-во: 1 | Вес: 30 | `RandomAmount="false"`
-  * `hbm:item.blade_titanium` (**Титановые лезвия**) | Кол-во: 1 | Вес: 35 | `RandomAmount="false"`
-  * `hbm:item.blade_tungsten` (**Вольфрамовые лезвия**) | Кол-во: 1 | Вес: 30 | `RandomAmount="false"`
-  * `hbm:item.plate_armor_titanium` (**Титановая бронепластина**) | Кол-во: 1–3 | Вес: 45 | `RandomAmount="true"`
-  * `hbm:item.plate_dura_steel` (**Пластина дюрастали**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`
-  * `hbm:item.plate_mixed` (**Пластина улучшенного сплава**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
-  * `hbm:item.ingot_tungsten` (**Вольфрамовый слиток**) | Кол-во: 2–4 | Вес: 45 | `RandomAmount="true"`
-  * `hbm:item.ingot_titanium` (**Титановый слиток**) | Кол-во: 2–4 | Вес: 45 | `RandomAmount="true"`
-  * `hbm:item.powder_titanium` (**Титановый порошок**) | Кол-во: 3–6 | Вес: 50 | `RandomAmount="true"`
-  * `hbm:item.hard_drive` (**Жёсткий диск**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.industrial_magnet` (**Промышленный магнит**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.catalytic_converter` (**Каталитический нейтрализатор**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.cladding_desh` (**Деш-оболочка**) | Кол-во: 1–2 | Вес: 30 | `RandomAmount="true"`
+  * `hbm:item.reacher` (**Вольфрамовый манипулятор / захват**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.blowtorch` (**Сварочный автоген / резак**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.screwdriver_steel` (**Стальная отвёртка монтажника**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.padlock_reinforced` (**Усиленный замок щитовой**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.key` (**Ключ от щитовой**) | Кол-во: 1–2 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.plate_steel` (**Стальная пластина**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
+  * `hbm:item.plate_aluminium` (**Алюминиевая пластина**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`
+  * `hbm:item.plate_dura_steel` (**Пластина дюрастали**) | Кол-во: 2–4 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.plate_copper` (**Медная шина/пластина**) | Кол-во: 3–6 | Вес: 55 | `RandomAmount="true"`
+  * `hbm:item.pipes_steel` (**Связка стальных гидравлических трубок**) | Кол-во: 1–2 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.pipe:30` (**Стальная труба**) | Кол-во: 6–12 | Вес: 60 | `RandomAmount="true"`
+  * `hbm:item.pipe:1300` (**Алюминиевая труба**) | Кол-во: 6–12 | Вес: 60 | `RandomAmount="true"`
+  * `hbm:item.pipe:2900` (**Медная труба охлаждения**) | Кол-во: 4–8 | Вес: 55 | `RandomAmount="true"`
+  * `hbm:item.wire_fine:30` (**Тонкий стальной провод / тросик**) | Кол-во: 8–16 | Вес: 65 | `RandomAmount="true"`
+  * `hbm:item.wire_fine:2900` (**Тонкий медный провод**) | Кол-во: 8–16 | Вес: 70 | `RandomAmount="true"`
+  * `hbm:item.wire_fine:1300` (**Тонкий алюминиевый провод**) | Кол-во: 8–16 | Вес: 65 | `RandomAmount="true"`
+  * `hbm:item.wire_fine:79` (**Тонкий золотой провод датчиков**) | Кол-во: 4–8 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.motor` (**Электродвигатель NTM**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.piston_set:0` (**Комплект стальных поршней**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.blade_titanium` (**Титановое сменное лезвие**) | Кол-во: 1 | Вес: 30 | `RandomAmount="false"`
+  * `hbm:item.blade_tungsten` (**Вольфрамовое сменное лезвие**) | Кол-во: 1 | Вес: 25 | `RandomAmount="false"`
+  * `hbm:item.catalytic_converter` (**Промышленный нейтрализатор/катализатор**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.industrial_magnet` (**Промышленный электромагнит**) | Кол-во: 1 | Вес: 15 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.wd40` (**VT-40**) | Кол-во: 1 | Вес: 15 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Редкая смазка / улучшение для брони.
+  * `hbm:item.canister_full:74` (**Канистра машинного лубриканта**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.ducttape` (**Армированная ремонтная лента**) | Кол-во: 1–2 | Вес: 60 | `RandomAmount="true"`
+  * `hbm:item.pads_rubber` (**Резиновые уплотнительные прокладки**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`
+  * `hbm:item.fuse` (**Силовые плавкие предохранители**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`
 
 ---
 
