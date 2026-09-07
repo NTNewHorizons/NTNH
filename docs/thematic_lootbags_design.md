@@ -21,8 +21,8 @@
    * 🥈 **Tier 2: Штатный / Производственный** (`2–3 предмета`, расширенный — до `2–4`). Шкафчики заводских цехов, бытовки, лаборатории. Профильный инструмент, приборы и качественные расходники (`CombineTrashGroup="true"`).
    * 🥇 **Tier 3: Опечатанный / Военный / Заводской** (`2–5 предметов`, либо целевой оптовый стек). Сейфы бункеров NTM, закрытые лаборатории, место крушения челнока. Высокотехнологичное оборудование и чистые материалы без примеси хлама (`CombineTrashGroup="false"`).
 
-4. **Механика группировки лута (`ItemGroup`):**
-   В моде Enhanced LootBags атрибут `ItemGroup="имя_группы"` связывает связанные предметы в неделимый бандл. При выпадении позиции с данным тегом игрок гарантированно получает весь комплект (например, калибр патронов вместе с гильзами), что считается за один ролл из общего лимита `MinItems`–`MaxItems`.
+4. **Механика группировки и взаимоисключения лута (`ItemGroup`):**
+   В моде Enhanced LootBags атрибут `ItemGroup="имя_группы"` используется для логического объединения предметов. Если нескольким позициям внутри одного лутбэга задан одинаковый `ItemGroup` (например, `ItemGroup="carp_tools"`, `ItemGroup="arch_glasses"`, `ItemGroup="geo_compass"`), движок рассматривает их как **взаимоисключающую группу**: за одно открытие лутбэга игроку может выпасть **не более одного** предмета из этой категории. Это предотвращает выпадение дубликатов инструментов одного назначения (несколько молотков, разные пары очков, несколько компасов) за одно открытие, сохраняя при этом вариативность находок от мешка к мешку.
 
 5. **Модульная архитектура с запасом (шаг в 30 ID):**
    Каждая специализация занимает диапазон из 30 номеров (10–39, 40–69 и т.д.). Первые номера отданы под базовые тиры (Tier 1–3), а остальные зарезервированы под узкопрофильные расширения (моно-лутбеки конкретных калибров, специализированные ЗИП, химреактивы).
@@ -657,28 +657,31 @@
 ### Блок 220–249: Геологоразведка и горное дело
 
 #### 🧭 [Meta 220] Планшет разведчика
-* **Уровень:** 1 | **Rarity:** 0 | **Дроп:** `1 - 2` | `CombineTrashGroup="true"`
-* *Лор:* Полевой планшет маркшейдера и картографа штолен.
+* **Уровень:** 1 | **Rarity:** 0 | **Дроп:** `2 - 4` | `CombineTrashGroup="true"`
+* *Лор:* Полевой планшет маркшейдера и картографа штолен. Содержит инструменты ориентирования, чертёжные принадлежности для составления схем выработок, снаряжение для спуска/подъёма в забои, аварийный паёк и средства образцового скалывания пород.
 * **Содержимое:**
   * `OpenBlocks:pedometer` (**Шагомер**) | Кол-во: 1 | Вес: 60 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `OpenBlocks:flag` (**Сигнальный флаг**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`. *Смысл:* Маркировка маршрута в шахтах.
+  * `OpenBlocks:flag` (**Сигнальный флаг**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`. *Смысл:* Маркировка маршрута и ориентиров в штольнях.
   * `minecraft:map` (**Карта**) | Кол-во: 1 | Вес: 80 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `BiblioCraft:item.BiblioWayPointCompass` (**Координатный компас**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `BiblioCraft:item.BigBook` (**Большая письменная книга**) | Кол-во: 1 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `minecraft:compass` (**Компас**) | Кол-во: 1 | Вес: 70 | `ItemGroup="geo_compass"` | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `BiblioCraft:item.BiblioWayPointCompass` (**Координатный компас**) | Кол-во: 1 | Вес: 50 | `ItemGroup="geo_compass"` | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `BiblioCraft:item.BiblioClipboard` (**Планшет с зажимом**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `minecraft:compass` (**Компас**) | Кол-во: 1 | Вес: 70 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `minecraft:clock` (**Часы**) | Кол-во: 1 | Вес: 60 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `minecraft:paper` (**Бумага**) | Кол-во: 4–8 | Вес: 75 | `RandomAmount="true"`
-  * `minecraft:feather` (**Перо**) | Кол-во: 2–4 | Вес: 70 | `RandomAmount="true"`
-  * `minecraft:torch` (**Факелы**) | Кол-во: 8–16 | Вес: 85 | `RandomAmount="true"`
-  * `exnihilo:stone` (**Камни**) | Кол-во: 4–8 | Вес: 80 | `RandomAmount="true"`
-  * `hbm:item.dust_tiny` (**Пыль**) | Кол-во: 4–8 | Вес: 75 | `RandomAmount="true"`
-  * `minecraft:coal` (**Уголь**) | Кол-во: 3–6 | Вес: 75 | `RandomAmount="true"`
-  * `minecraft:iron_ore` (**Железная руда**) | Кол-во: 1–2 | Вес: 60 | `RandomAmount="true"`
-  * `minecraft:gold_nugget` (**Самородок золота**) | Кол-во: 2–4 | Вес: 55 | `RandomAmount="true"`
-  * `minecraft:bucket` (**Ведро**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `modernmarkings:item.chalk` (**Мел**) | Кол-во: 2–4 | Вес: 70 | `RandomAmount="true"`
-  * `hbm:item.pin` (**Отмычка**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`
+  * `minecraft:clock` (**Часы**) | Кол-во: 1 | Вес: 55 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `minecraft:paper` (**Бумага для схем выработок**) | Кол-во: 4–8 | Вес: 75 | `RandomAmount="true"`
+  * `minecraft:feather` (**Перо**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`
+  * `modernmarkings:item.chalk` (**Маркировочный мел**) | Кол-во: 2–4 | Вес: 70 | `RandomAmount="true"`
+  * `minecraft:ladder` (**Лестницы для спуска в выработки**) | Кол-во: 12–24 | Вес: 75 | `RandomAmount="true"`
+  * `OpenBlocks:generic:5` (**Шнур / верёвка**) | Кол-во: 6–12 | Вес: 70 | `RandomAmount="true"`
+  * `hbm:item.hammer_iron` (**Железный геологический молоток**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Отбор образцов породы и керна.
+  * `minecraft:flint_and_steel` (**Огниво**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.canteen_vodka` (**Фляга с согревающим алкоголем**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.stick_dynamite` (**Динамитная шашка для вскрытия шпуров**) | Кол-во: 1–3 | Вес: 50 | `RandomAmount="true"`
+  * `hbm:item.safety_fuse` (**Огнепроводный шнур**) | Кол-во: 3–6 | Вес: 55 | `RandomAmount="true"`
+  * `harvestcraft:trailmixItem` (**Сухофрукты с орехами (Trail Mix)**) | Кол-во: 1–3 | Вес: 65 | `RandomAmount="true"`
+  * `hbm:item.canned_conserve:0` (**Армейские консервы**) | Кол-во: 1 | Вес: 35 | `RandomAmount="false"`
+  * `hbm:item.pin` (**Шплинт / отмычка**) | Кол-во: 3–6 | Вес: 65 | `RandomAmount="true"`
+  * `exnihilo:stone` (**Образцы камней**) | Кол-во: 4–8 | Вес: 75 | `RandomAmount="true"`
+  * `hbm:item.dust_tiny` (**Каменная/рудная крошка**) | Кол-во: 4–8 | Вес: 70 | `RandomAmount="true"`
 
 #### 🛢️ [Meta 221] Геодезический набор
 * **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 3` | `CombineTrashGroup="true"`
@@ -1061,7 +1064,7 @@
 | **190** | Мешок плотника | 1 | 0 | 2–4 | true | 24 |
 | **191** | Сумка маляра | 2 | 1 | 2–4 | true | 34 |
 | **192** | Кейс проектировщика | 3 | 2 | 3–5 | false | 21 |
-| **220** | Планшет разведчика | 1 | 0 | 1–2 | true | 19 |
+| **220** | Планшет разведчика | 1 | 0 | 2–4 | true | 21 |
 | **221** | Геодезический набор | 2 | 1 | 2–3 | true | 20 |
 | **222** | Спектрометр недр | 3 | 2 | 2–4 | false | 19 |
 | **250** | Сумка сигнальщика | 1 | 0 | 2–3 | true | 20 |
