@@ -183,27 +183,28 @@
         <Loot Identifier="el71_crt_display" ItemName="hbm:item.crt_display" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="el71_circuit_10" ItemName="hbm:item.circuit:10" Amount="1" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
     </LootGroup>
-    <LootGroup GroupMetaID="72" GroupName="Серверный блок" Rarity="2" MinItems="3" MaxItems="5" CombineTrashGroup="false">
-        <Loot Identifier="el72_rbmk_tool" ItemName="hbm:item.rbmk_tool" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="el72_crt_display" ItemName="hbm:item.crt_display" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+    <LootGroup GroupMetaID="72" GroupName="Потрёпанный блок стойки ЭВМ" Rarity="2" MinItems="3" MaxItems="5" CombineTrashGroup="false">
+        <Loot Identifier="el72_plate_steel" ItemName="hbm:item.plate_steel" Amount="4" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="el72_plate_aluminium" ItemName="hbm:item.plate_aluminium" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="el72_plate_copper" ItemName="hbm:item.plate_copper" Amount="3" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="el72_wire_copper" ItemName="hbm:item.wire_fine:2900" Amount="12" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="el72_wire_gold" ItemName="hbm:item.wire_fine:7900" Amount="6" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="el72_wire_super" ItemName="hbm:item.wire_fine:38" Amount="4" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="el72_crt_display" ItemName="hbm:item.crt_display" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="el72_circuit_casing" ItemName="hbm:item.circuit:15" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="el72_circuit_10" ItemName="hbm:item.circuit:10" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="el72_circuit_11" ItemName="hbm:item.circuit:11" Amount="2" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="el72_circuit_12" ItemName="hbm:item.circuit:12" Amount="2" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="el72_circuit_12" ItemName="hbm:item.circuit:12" Amount="2" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="el72_circuit_16" ItemName="hbm:item.circuit:16" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="el72_circuit_13" ItemName="hbm:item.circuit:13" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="el72_circuit_chip" ItemName="hbm:item.circuit:6" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="el72_billet_silicon" ItemName="hbm:item.billet_silicon" Amount="6" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="el72_oc_disk" ItemName="OpenComputers:item:19" Amount="2" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="el72_comp_tape" ItemName="computronics:computronics.tape:2" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="el72_pr_plan" ItemName="ProjRed|Expansion:projectred.expansion.plan" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="el72_hard_drive" ItemName="hbm:item.hard_drive" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="el72_wire_super" ItemName="hbm:item.wire_fine:38" Amount="4" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="el72_circuit_16" ItemName="hbm:item.circuit:16" Amount="1" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="el72_circuit_13" ItemName="hbm:item.circuit:13" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="el72_circuit_chip" ItemName="hbm:item.circuit:6" Amount="4" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="el72_hard_drive" ItemName="hbm:item.hard_drive" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="el72_coil_advanced" ItemName="hbm:item.coil_gold" Amount="4" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="el72_coil_torus" ItemName="hbm:item.coil_gold_torus" Amount="3" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="el72_atomic_clock" ItemName="hbm:item.circuit:21" Amount="1" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="el72_battery_cell" ItemName="hbm:item.battery_pack:3" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="el72_billet_silicon" ItemName="hbm:item.billet_silicon" Amount="8" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="el72_plate_advanced" ItemName="hbm:item.plate_mixed" Amount="2" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="100" GroupName="Вскрытый патронный цинк" Rarity="0" MinItems="2" MaxItems="3" CombineTrashGroup="true">
         <Loot Identifier="wp100_paper" ItemName="minecraft:paper" Amount="4" NBTTag="" Chance="85" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
