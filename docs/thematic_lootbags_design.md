@@ -568,7 +568,9 @@
   * `hbm:item.pin` (**Шпильки / штифты NTM**) | Кол-во: 8–16 | Вес: 75 | `RandomAmount="true"`
   * `minecraft:torch` (**Факелы**) | Кол-во: 16–32 | Вес: 75 | `RandomAmount="true"`
   * `OpenBlocks:generic:5` (**Строительный шнур**) | Кол-во: 8–16 | Вес: 70 | `RandomAmount="true"`
-  * `StorageDrawers:upgradeTemplate` (**Шаблон улучшения ящика**) | Кол-во: 8–16 | Вес: 70 | `RandomAmount="true"`
+  * `BiblioCraft:item.FramingBoard` (**Каркасная доска**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
+  * `BiblioCraft:item.FramingSheet` (**Каркасный лист**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
+  * `StorageDrawers:upgradeTemplate` (**Шаблон улучшения ящика**) | Кол-во: 1–4 | Вес: 65 | `RandomAmount="true"`
   * `minecraft:ladder` (**Лестница**) | Кол-во: 8–16 | Вес: 70 | `RandomAmount="true"`
   * `minecraft:sign` (**Табличка**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
   * `hbm:item.crayon` (**Строительные восковые мелки NTM**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
@@ -577,10 +579,10 @@
   * `exnihilo:crook` (**Посох плотника**) | Кол-во: 1 | Вес: 60 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `CarpentersBlocks:blockCarpentersButton` (**Кнопка плотника**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`
   * `CarpentersBlocks:blockCarpentersTorch` (**Факел плотника**) | Кол-во: 4–8 | Вес: 50 | `RandomAmount="true"`
-  * `CarpentersBlocks:itemCarpentersHammer` (**Молоток плотника**) | Кол-во: 1 | Вес: 55 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `CarpentersBlocks:itemCarpentersChisel` (**Стамеска Carpenter's**) | Кол-во: 1 | Вес: 55 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `cfm:ItemHammer` (**Столярный молоток**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `BiblioCraft:item.FramingSaw` (**Каркасная пила**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `CarpentersBlocks:itemCarpentersHammer` (**Молоток плотника**) | Кол-во: 1 | Вес: 55 | `ItemGroup="carp_tools"` | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `CarpentersBlocks:itemCarpentersChisel` (**Стамеска Carpenter's**) | Кол-во: 1 | Вес: 55 | `ItemGroup="carp_tools"` | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `cfm:ItemHammer` (**Столярный молоток**) | Кол-во: 1 | Вес: 50 | `ItemGroup="carp_tools"` | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `BiblioCraft:item.FramingSaw` (**Каркасная пила**) | Кол-во: 1 | Вес: 50 | `ItemGroup="carp_tools"` | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.screwdriver` (**Отвёртка NTM**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `BiblioCraft:item.PlumbLine` (**Строительный отвес**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `BiblioCraft:item.tapeMeasure` (**Мерная лента**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`

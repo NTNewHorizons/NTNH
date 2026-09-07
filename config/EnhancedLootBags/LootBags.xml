@@ -437,7 +437,9 @@
         <Loot Identifier="cr190_pin" ItemName="hbm:item.pin" Amount="16" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr190_torch" ItemName="minecraft:torch" Amount="32" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr190_string_cord" ItemName="OpenBlocks:generic:5" Amount="16" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr190_drawer_template" ItemName="StorageDrawers:upgradeTemplate" Amount="16" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr190_framing_board" ItemName="BiblioCraft:item.FramingBoard" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr190_framing_sheet" ItemName="BiblioCraft:item.FramingSheet" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr190_drawer_template" ItemName="StorageDrawers:upgradeTemplate" Amount="4" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr190_ladder" ItemName="minecraft:ladder" Amount="16" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr190_sign" ItemName="minecraft:sign" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr190_crayon" ItemName="hbm:item.crayon" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -446,10 +448,10 @@
         <Loot Identifier="cr190_crook" ItemName="exnihilo:crook" Amount="1" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="cr190_carp_button" ItemName="CarpentersBlocks:blockCarpentersButton" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr190_carp_torch" ItemName="CarpentersBlocks:blockCarpentersTorch" Amount="8" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr190_carp_hammer" ItemName="CarpentersBlocks:itemCarpentersHammer" Amount="1" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr190_carp_chisel" ItemName="CarpentersBlocks:itemCarpentersChisel" Amount="1" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr190_hammer" ItemName="cfm:ItemHammer" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr190_saw" ItemName="BiblioCraft:item.FramingSaw" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr190_carp_hammer" ItemName="CarpentersBlocks:itemCarpentersHammer" Amount="1" NBTTag="" Chance="55" ItemGroup="carp_tools" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr190_carp_chisel" ItemName="CarpentersBlocks:itemCarpentersChisel" Amount="1" NBTTag="" Chance="55" ItemGroup="carp_tools" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr190_hammer" ItemName="cfm:ItemHammer" Amount="1" NBTTag="" Chance="50" ItemGroup="carp_tools" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr190_saw" ItemName="BiblioCraft:item.FramingSaw" Amount="1" NBTTag="" Chance="50" ItemGroup="carp_tools" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="cr190_screwdriver" ItemName="hbm:item.screwdriver" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="cr190_plumb" ItemName="BiblioCraft:item.PlumbLine" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="cr190_tape" ItemName="BiblioCraft:item.tapeMeasure" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
