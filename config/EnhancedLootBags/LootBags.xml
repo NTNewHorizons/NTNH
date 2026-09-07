@@ -315,26 +315,38 @@
         <Loot Identifier="ck131_can_creature" ItemName="hbm:item.can_creature" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="ck131_oliveoil" ItemName="harvestcraft:oliveoilItem" Amount="2" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
-    <LootGroup GroupMetaID="132" GroupName="Офицерский паёк" Rarity="2" MinItems="3" MaxItems="4" CombineTrashGroup="false">
-        <Loot Identifier="ck132_recipebook" ItemName="cookingforblockheads:recipebook:3" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="ck132_canned_beef" ItemName="hbm:item.canned_conserve:0" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ck132_canned_stew" ItemName="hbm:item.canned_conserve:16" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ck132_sugar" ItemName="minecraft:sugar" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ck132_salt" ItemName="harvestcraft:saltItem" Amount="24" NBTTag="" Chance="80" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+    <LootGroup GroupMetaID="132" GroupName="Офицерский провиант" Rarity="2" MinItems="3" MaxItems="5" CombineTrashGroup="false">
+        <Loot Identifier="ck132_recipebook" ItemName="cookingforblockheads:recipebook:3" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ck132_canned_beef" ItemName="hbm:item.canned_conserve:0" Amount="4" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck132_conserve_fish" ItemName="hbm:item.canned_conserve:1" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck132_canned_mystery" ItemName="hbm:item.canned_conserve:2" Amount="2" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck132_canned_pashtet" ItemName="hbm:item.canned_conserve:3" Amount="3" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck132_canned_cheese" ItemName="hbm:item.canned_conserve:4" Amount="3" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck132_canned_milk" ItemName="hbm:item.canned_conserve:6" Amount="3" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck132_canned_tube" ItemName="hbm:item.canned_conserve:9" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck132_canned_tomato" ItemName="hbm:item.canned_conserve:10" Amount="3" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck132_canned_hotdogs" ItemName="hbm:item.canned_conserve:13" Amount="3" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck132_canned_yogurt" ItemName="hbm:item.canned_conserve:15" Amount="2" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck132_canned_stew" ItemName="hbm:item.canned_conserve:16" Amount="4" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck132_canned_chinese" ItemName="hbm:item.canned_conserve:17" Amount="2" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck132_canned_spam" ItemName="hbm:item.canned_conserve:20" Amount="3" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck132_canned_fried" ItemName="hbm:item.canned_conserve:21" Amount="2" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck132_sugar" ItemName="minecraft:sugar" Amount="8" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck132_salt" ItemName="harvestcraft:saltItem" Amount="16" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck132_crackers" ItemName="harvestcraft:crackerItem" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck132_chocolate" ItemName="hbm:item.chocolate" Amount="2" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck132_powder_coffee" ItemName="hbm:item.powder_coffee" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck132_tea_leaf" ItemName="hbm:item.tea_leaf" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="ck132_flask_vodka" ItemName="hbm:item.canteen_vodka" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="ck132_conserve_fish" ItemName="hbm:item.canned_conserve:1" Amount="3" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ck132_chocolate" ItemName="hbm:item.chocolate" Amount="2" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ck132_powder_coffee" ItemName="hbm:item.powder_coffee" Amount="4" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ck132_tea_leaf" ItemName="hbm:item.tea_leaf" Amount="4" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ck132_can_breen" ItemName="hbm:item.can_breen" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ck132_bottle_nuka" ItemName="hbm:item.bottle_nuka" Amount="4" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="2" RandomAmount="true"/>
-        <Loot Identifier="ck132_bottle_opener" ItemName="hbm:item.bottle_opener" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="ck132_beef_jerky" ItemName="harvestcraft:beefjerkyItem" Amount="4" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ck132_can_key" ItemName="hbm:item.can_key" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ck132_can_breen" ItemName="hbm:item.can_breen" Amount="2" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck132_can_mug" ItemName="hbm:item.can_mug" Amount="2" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="ck132_can_smart" ItemName="hbm:item.can_smart" Amount="2" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ck132_crackers" ItemName="harvestcraft:crackerItem" Amount="6" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ck132_twinkie" ItemName="hbm:item.twinkie" Amount="2" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="ck132_can_redbomb" ItemName="hbm:item.can_redbomb" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck132_can_luna" ItemName="hbm:item.can_luna" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck132_can_mrsugar" ItemName="hbm:item.can_mrsugar" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck132_bottle_nuka" ItemName="hbm:item.bottle_nuka" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="true"/>
+        <Loot Identifier="ck132_bottle_opener" ItemName="hbm:item.bottle_opener" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ck132_can_key" ItemName="hbm:item.can_key" Amount="1" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
     <LootGroup GroupMetaID="160" GroupName="Семена с огорода" Rarity="0" MinItems="1" MaxItems="1" CombineTrashGroup="false">
         <Loot Identifier="agr160_garlic_base" ItemName="harvestcraft:garlicseedItem" Amount="80" NBTTag="" Chance="80" ItemGroup="pack_garlic" LimitedDropCount="0" RandomAmount="false"/>

@@ -433,29 +433,41 @@
   * `harvestcraft:oliveoilItem` (**Оливковое масло**) | Кол-во: 1–2 | Вес: 55 | `RandomAmount="true"`
   * `hbm:item.canned_conserve:0` (**Армейская тушёнка**) | Кол-во: 1–2 | Вес: 55 | `RandomAmount="true"`
 
-#### 🍽️ [Meta 132] Офицерский паёк
-* **Уровень:** 3 | **Rarity:** 2 | **Дроп:** `3 - 4` | `CombineTrashGroup="false"`
-* *Лор:* Неприкосновенный запас провизии командного состава из защищённого бункера ГО: элитные консервы, концентрат кофе и чая, чистый спирт, шоколад и руководство шеф-повара.
+#### 🍽️ [Meta 132] Офицерский провиант
+* **Уровень:** 3 | **Rarity:** 2 | **Дроп:** `3 - 5` | `CombineTrashGroup="false"`
+* *Лор:* Неприкосновенный запас провизии высшего командного состава из защищённых правительственных бункеров ГО. Содержит широчайший ассортимент деликатесных консервов NTM длительного хранения, рационы космонавтов, элитный кофе и чай, армейский шоколад, редкие газировки довоенных брендов, квас и поварское руководство. Исключены скоропортящиеся суррогаты и дешёвое вяленое мясо.
 * **Содержимое:**
-  * `cookingforblockheads:recipebook:3` (**Кулинарная книга II**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Автокрафт рецептов кухни.
-  * `hbm:item.canned_conserve:0` (**Говядина высшего сорта**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`
-  * `hbm:item.canned_conserve:16` (**Тушеные грибы**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`
-  * `minecraft:sugar` (**Сахар**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
-  * `harvestcraft:saltItem` (**Соль**) | Кол-во: 12–24 | Вес: 80 | `RandomAmount="true"`
-  * `hbm:item.canteen_vodka` (**Фляга с водкой**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.canned_conserve:1` (**Консервированная рыба**) | Кол-во: 1–3 | Вес: 55 | `RandomAmount="true"`
-  * `hbm:item.chocolate` (**Шоколад**) | Кол-во: 1–2 | Вес: 50 | `RandomAmount="true"`
-  * `hbm:item.powder_coffee` (**Растворимый кофе**) | Кол-во: 2–4 | Вес: 55 | `RandomAmount="true"`
-  * `hbm:item.tea_leaf` (**Чайный лист**) | Кол-во: 2–4 | Вес: 55 | `RandomAmount="true"`
-  * `hbm:item.can_breen` (**Вода Брина**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
-  * `hbm:item.bottle_nuka` (**Ядер-Кола**) | Кол-во: 2–4 | Вес: 45 | `LimitedDropCount="2"` | `RandomAmount="true"`
-  * `hbm:item.bottle_opener` (**Открывашка**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `harvestcraft:beefjerkyItem` (**Вяленая говядина**) | Кол-во: 2–4 | Вес: 55 | `RandomAmount="true"`
-  * `hbm:item.can_key` (**Консервный ключ**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.can_smart` (**Умная кола**) | Кол-во: 1–2 | Вес: 45 | `RandomAmount="true"`
-  * `harvestcraft:crackerItem` (**Крекер**) | Кол-во: 3–6 | Вес: 55 | `RandomAmount="true"`
-  * `hbm:item.twinkie` (**Твинки**) | Кол-во: 1–2 | Вес: 45 | `RandomAmount="true"`
-  * `hbm:item.can_redbomb` (**Энергетик Red Bomb**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
+  * `cookingforblockheads:recipebook:3` (**Кулинарная книга II**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Автокрафт рецептов кухни.
+  * `hbm:item.canned_conserve:0` (**Армейская тушёнка высшего сорта**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`
+  * `hbm:item.canned_conserve:1` (**Консервированный тунец**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`
+  * `hbm:item.canned_conserve:2` (**Консервы "Тайна Мяса"**) | Кол-во: 1–2 | Вес: 35 | `RandomAmount="true"`
+  * `hbm:item.canned_conserve:3` (**Паштет**) | Кол-во: 1–3 | Вес: 55 | `RandomAmount="true"`
+  * `hbm:item.canned_conserve:4` (**Консервированный плавленый сыр**) | Кол-во: 1–3 | Вес: 55 | `RandomAmount="true"`
+  * `hbm:item.canned_conserve:6` (**Консервированная сгущёнка**) | Кол-во: 1–3 | Вес: 50 | `RandomAmount="true"`
+  * `hbm:item.canned_conserve:9` (**Пищевой тюбик космонавта**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`. *Смысл:* Высокотехнологичная питательная смесь.
+  * `hbm:item.canned_conserve:10` (**Консервированный томатный суп**) | Кол-во: 1–3 | Вес: 50 | `RandomAmount="true"`
+  * `hbm:item.canned_conserve:13` (**Консервированные сосиски**) | Кол-во: 1–3 | Вес: 50 | `RandomAmount="true"`
+  * `hbm:item.canned_conserve:15` (**Консервированный йогурт**) | Кол-во: 1–2 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.canned_conserve:16` (**Тушёные грибы**) | Кол-во: 2–4 | Вес: 55 | `RandomAmount="true"`
+  * `hbm:item.canned_conserve:17` (**Консервированная китайская еда**) | Кол-во: 1–2 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.canned_conserve:20` (**Консервы "Спам"**) | Кол-во: 1–3 | Вес: 55 | `RandomAmount="true"`
+  * `hbm:item.canned_conserve:21` (**Жареная курица в банке**) | Кол-во: 1–2 | Вес: 45 | `RandomAmount="true"`
+  * `minecraft:sugar` (**Сахар**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`
+  * `harvestcraft:saltItem` (**Соль**) | Кол-во: 8–16 | Вес: 70 | `RandomAmount="true"`
+  * `harvestcraft:crackerItem` (**Армейские крекеры / галеты**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
+  * `hbm:item.chocolate` (**Шоколад**) | Кол-во: 1–2 | Вес: 55 | `RandomAmount="true"`
+  * `hbm:item.powder_coffee` (**Растворимый кофе высшего сорта**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`
+  * `hbm:item.tea_leaf` (**Чайный лист**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`
+  * `hbm:item.canteen_vodka` (**Стильная армейская фляга**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.can_breen` (**Личный резерв др. Брина**) | Кол-во: 1–2 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.can_mug` (**Квас "Царские Припасы"**) | Кол-во: 1–2 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.can_smart` (**Энергетик “Смарт”**) | Кол-во: 1–2 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.can_redbomb` (**Энергетик "Красная Бомба"**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
+  * `hbm:item.can_luna` (**Тёмная кола "Чёрная Меза Луна"**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
+  * `hbm:item.can_mrsugar` (**Газировка "Доктор Сахар"**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
+  * `hbm:item.bottle_nuka` (**Ядер-Кола**) | Кол-во: 1–2 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="true"`
+  * `hbm:item.bottle_opener` (**Открывашка**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.can_key` (**Винтовой ключ**) | Кол-во: 1 | Вес: 55 | `LimitedDropCount="1"` | `RandomAmount="false"`
 
 ---
 
