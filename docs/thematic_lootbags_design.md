@@ -500,7 +500,7 @@
   * `harvestcraft:teaseedItem` (**Семя чая**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
   * `harvestcraft:chilipepperseedItem` (**Семя перца чили**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`
   * `harvestcraft:mustardseedItem` (**Семя горчицы**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`
-  * `harvestcraft:sunflowerseedItem` (**Семя подсолнуха**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
+  * `harvestcraft:sunflowerseedsItem` (**Семя подсолнуха**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
   * `harvestcraft:soybeanseedItem` (**Семя сои**) | Кол-во: 8–16 | Вес: 70 | `RandomAmount="true"`. *Смысл:* Масло, соевое молоко, тофу.
   * `hbm:item.plant_item:2` (**Лист горчичной ивы NTM**) | Кол-во: 2–4 | Вес: 45 | `RandomAmount="true"`. *Смысл:* Компонент армейских стимуляторов и антидотов.
 
