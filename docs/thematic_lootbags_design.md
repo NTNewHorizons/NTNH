@@ -788,27 +788,25 @@
 
 #### 📡 [Meta 252] Радиоузел связиста
 * **Уровень:** 3 | **Rarity:** 2 | **Дроп:** `2 - 4` | `CombineTrashGroup="false"`
-* *Лор:* Блок координации ПВО, шифрования и радарного наведения командного бункера.
+* *Лор:* Защищённый блок координации ПВО, спутниковой телеметрии и дистанционного наведения командного бункера. Содержит взаимоисключающие пульты боевого управления (лазерный целеуказатель, линкер ПВО/РЛС, контроллер логистических дронов, датчик реактора), спутниковый ID-чип, RTTY-пейджер, твердотельный накопитель, кассеты Computronics, магнитные головки, военные микросхемы и высокочастотные СВЧ-компоненты.
 * **Содержимое:**
-  * `hbm:item.radar_linker` (**Радарный соединитель**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Привязка радаров к пусковым установкам.
-  * `computronics:computronics.tape:5` (**CDVR кассета данных**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `computronics:computronics.tape:2` (**Алмазная кассета**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `OpenComputers:item:19` (**Металлический диск**) | Кол-во: 2–4 | Вес: 45 | `RandomAmount="true"`
-  * `hbm:item.circuit:21` (**Атомные часы**) | Кол-во: 1 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.circuit:14` (**Плата авионики**) | Кол-во: 1–2 | Вес: 35 | `RandomAmount="true"`
-  * `hbm:item.circuit:10` (**Военная схема**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
-  * `hbm:item.circuit:15` (**Корпус блока управления**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.hard_drive` (**Жёсткий диск**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.wire_fine:38` (**Сверхпроводник**) | Кол-во: 2–4 | Вес: 35 | `RandomAmount="true"`
-  * `hbm:item.wire_fine:7900` (**Золотой провод**) | Кол-во: 3–6 | Вес: 45 | `RandomAmount="true"`
-  * `hbm:item.pa_coil` (**PA-катушка**) | Кол-во: 1 | Вес: 30 | `RandomAmount="false"`
-  * `hbm:item.magnetron` (**Магнетрон**) | Кол-во: 1–2 | Вес: 45 | `RandomAmount="true"`
-  * `hbm:item.coil_gold_torus` (**Тороид**) | Кол-во: 1–3 | Вес: 35 | `RandomAmount="true"`
-  * `hbm:item.battery_pack:3` (**Энергоячейка**) | Кол-во: 1 | Вес: 30 | `RandomAmount="false"`
-  * `hbm:item.plate_mixed` (**Пластина сплава**) | Кол-во: 1–2 | Вес: 35 | `RandomAmount="true"`
-  * `hbm:item.launch_code_piece` (**Фрагмент кода запуска**) | Кол-во: 1 | Вес: 15 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.rtty_pager` (**RTTY Пейджер**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `computronics:computronics.parts:0` (**Магнитная головка**) | Кол-во: 1–2 | Вес: 35 | `RandomAmount="true"`
+  * `hbm:item.radar_linker` (**Радарный линкер ЗРК**) | Кол-во: 1 | Вес: 30 | `ItemGroup="rad_control"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Привязка радаров к пусковым установкам и турелям ПВО.
+  * `hbm:item.designator` (**Лазерный целеуказатель ракетных ударов**) | Кол-во: 1 | Вес: 15 | `ItemGroup="rad_control"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Редчайший ручной прибор для наведения ракет.
+  * `hbm:item.drone_linker` (**Линкер транспортных дронов**) | Кол-во: 1 | Вес: 30 | `ItemGroup="rad_control"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Маркировка станций и маршрутизация логистических дронов NTM.
+  * `hbm:item.reactor_sensor` (**Дистанционный датчик реактора**) | Кол-во: 1 | Вес: 20 | `ItemGroup="rad_control"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Телеметрия температуры и активной зоны реактора.
+  * `hbm:item.sat_chip` (**Спутниковый ID-чип**) | Кол-во: 1 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Редкий чип привязки наземных терминалов к спутникам на орбите.
+  * `hbm:item.rtty_pager` (**RTTY Пейджер**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Приём текстовых радиосообщений и тревожных кодов.
+  * `hbm:item.hard_drive` (**Твердотельный накопитель (SSD)**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `computronics:computronics.tape:5` (**CDVR кассета данных**) | Кол-во: 1 | Вес: 20 | `ItemGroup="rad_tape"` | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `computronics:computronics.tape:2` (**Алмазная кассета высокой ёмкости**) | Кол-во: 1 | Вес: 20 | `ItemGroup="rad_tape"` | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `computronics:computronics.parts:0` (**Магнитная головка**) | Кол-во: 1 | Вес: 25 | `RandomAmount="false"`
+  * `OpenComputers:item:19` (**Металлические дискеты OpenComputers**) | Кол-во: 1–2 | Вес: 30 | `RandomAmount="true"`
+  * `hbm:item.circuit:10` (**Военная защищённая микросхема**) | Кол-во: 1–2 | Вес: 30 | `RandomAmount="true"`. *Смысл:* Крафт военной авионики и систем наведения.
+  * `hbm:item.circuit:14` (**Бортовой компьютер / Авионика**) | Кол-во: 1–2 | Вес: 30 | `RandomAmount="true"`. *Смысл:* Управление полётом ракет и дронов.
+  * `hbm:item.magnetron` (**СВЧ-магнетрон**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`. *Смысл:* Излучающий контур радаров и радиостанций.
+  * `hbm:item.coil_gold_torus` (**Золотая тороидальная катушка**) | Кол-во: 2–3 | Вес: 35 | `RandomAmount="true"`
+  * `hbm:item.wire_fine:7900` (**Тонкий золотой высокочастотный провод**) | Кол-во: 4–6 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.wire_fine:38` (**Тонкий сверхпроводящий провод**) | Кол-во: 2–4 | Вес: 30 | `RandomAmount="true"`
 
 ---
 
@@ -1063,7 +1061,7 @@
 | **222** | Ящик шахтной взрывотехники | 3 | 2 | 3–6 | false | 20 |
 | **250** | Сумка сигнальщика | 1 | 0 | 2–4 | true | 20 |
 | **251** | Коробочка радиодеталей | 2 | 1 | 2–4 | true | 17 |
-| **252** | Радиоузел связиста | 3 | 2 | 2–4 | false | 19 |
+| **252** | Радиоузел связиста | 3 | 2 | 2–4 | false | 17 |
 | **280** | Сумка лаборанта | 1 | 0 | 1–2 | true | 19 |
 | **281** | Кейс технолога | 2 | 1 | 2–4 | true | 20 |
 | **310** | Чёрный ящик шаттла | 3 | 3 | 2–4 | false | 19 |

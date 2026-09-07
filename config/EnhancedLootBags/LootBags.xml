@@ -632,25 +632,23 @@
         <Loot Identifier="rad251_tape_head" ItemName="computronics:computronics.parts:0" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
     </LootGroup>
     <LootGroup GroupMetaID="252" GroupName="Радиоузел связиста" Rarity="2" MinItems="2" MaxItems="4" CombineTrashGroup="false">
-        <Loot Identifier="rad252_radar_linker" ItemName="hbm:item.radar_linker" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="rad252_tape_cdvr" ItemName="computronics:computronics.tape:5" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="rad252_tape_dia" ItemName="computronics:computronics.tape:2" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="rad252_oc_disk" ItemName="OpenComputers:item:19" Amount="4" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="rad252_atomic_clock" ItemName="hbm:item.circuit:21" Amount="1" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="rad252_circuit_aero" ItemName="hbm:item.circuit:14" Amount="2" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="rad252_circuit_mil" ItemName="hbm:item.circuit:10" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="rad252_circuit_chassis" ItemName="hbm:item.circuit:15" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="rad252_radar_linker" ItemName="hbm:item.radar_linker" Amount="1" NBTTag="" Chance="30" ItemGroup="rad_control" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="rad252_designator" ItemName="hbm:item.designator" Amount="1" NBTTag="" Chance="15" ItemGroup="rad_control" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="rad252_drone_linker" ItemName="hbm:item.drone_linker" Amount="1" NBTTag="" Chance="30" ItemGroup="rad_control" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="rad252_reactor_sensor" ItemName="hbm:item.reactor_sensor" Amount="1" NBTTag="" Chance="20" ItemGroup="rad_control" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="rad252_sat_chip" ItemName="hbm:item.sat_chip" Amount="1" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="rad252_rtty_pager" ItemName="hbm:item.rtty_pager" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="rad252_hard_drive" ItemName="hbm:item.hard_drive" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="rad252_wire_super" ItemName="hbm:item.wire_fine:38" Amount="4" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="rad252_wire_gold" ItemName="hbm:item.wire_fine:7900" Amount="6" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="rad252_pa_coil" ItemName="hbm:item.pa_coil" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="rad252_magnetron" ItemName="hbm:item.magnetron" Amount="2" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="rad252_tape_cdvr" ItemName="computronics:computronics.tape:5" Amount="1" NBTTag="" Chance="20" ItemGroup="rad_tape" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="rad252_tape_dia" ItemName="computronics:computronics.tape:2" Amount="1" NBTTag="" Chance="20" ItemGroup="rad_tape" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="rad252_comp_parts" ItemName="computronics:computronics.parts:0" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="rad252_oc_disk" ItemName="OpenComputers:item:19" Amount="2" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="rad252_circuit_mil" ItemName="hbm:item.circuit:10" Amount="2" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="rad252_circuit_aero" ItemName="hbm:item.circuit:14" Amount="2" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="rad252_magnetron" ItemName="hbm:item.magnetron" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="rad252_coil_torus" ItemName="hbm:item.coil_gold_torus" Amount="3" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="rad252_battery_cell" ItemName="hbm:item.battery_pack:3" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="rad252_plate_advanced" ItemName="hbm:item.plate_mixed" Amount="2" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="rad252_launch_code" ItemName="hbm:item.launch_code_piece" Amount="1" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="rad252_rtty_pager" ItemName="hbm:item.rtty_pager" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="rad252_comp_parts" ItemName="computronics:computronics.parts:0" Amount="2" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="rad252_wire_gold" ItemName="hbm:item.wire_fine:7900" Amount="6" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="rad252_wire_super" ItemName="hbm:item.wire_fine:38" Amount="4" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="280" GroupName="Сумка лаборанта" Rarity="0" MinItems="1" MaxItems="2" CombineTrashGroup="true">
         <Loot Identifier="ch280_pipette" ItemName="hbm:item.pipette_laboratory" Amount="1" NBTTag="" Chance="80" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
