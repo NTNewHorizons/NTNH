@@ -401,28 +401,31 @@
         <Loot Identifier="agr162_beet_bulk" ItemName="harvestcraft:beetseedItem" Amount="32" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr162_coffee_bulk" ItemName="harvestcraft:coffeeseedItem" Amount="32" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
-    <LootGroup GroupMetaID="190" GroupName="Мешок плотника" Rarity="0" MinItems="1" MaxItems="2" CombineTrashGroup="true">
-        <Loot Identifier="cr190_chalk" ItemName="modernmarkings:item.chalk" Amount="4" NBTTag="" Chance="80" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr190_hammer" ItemName="cfm:ItemHammer" Amount="1" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr190_string_cord" ItemName="OpenBlocks:generic:5" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr190_saw" ItemName="BiblioCraft:item.FramingSaw" Amount="1" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr190_plumb" ItemName="BiblioCraft:item.PlumbLine" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr190_tape" ItemName="BiblioCraft:item.tapeMeasure" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr190_drawer_template" ItemName="StorageDrawers:upgradeTemplate" Amount="4" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr190_drawer_tape" ItemName="StorageDrawers:tape" Amount="1" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr190_drawer_lock" ItemName="StorageDrawers:upgradeLock" Amount="2" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr190_catalog" ItemName="BiblioCraft:item.StockroomCatalog" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr190_crook" ItemName="exnihilo:crook" Amount="1" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr190_string" ItemName="minecraft:string" Amount="6" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr190_ladder" ItemName="minecraft:ladder" Amount="8" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr190_torch" ItemName="minecraft:torch" Amount="16" NBTTag="" Chance="80" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr190_sign" ItemName="minecraft:sign" Amount="3" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr190_bars" ItemName="minecraft:iron_bars" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr190_glass" ItemName="minecraft:glass" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr190_brick" ItemName="minecraft:brick" Amount="12" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr190_bucket" ItemName="minecraft:bucket" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr190_pin" ItemName="hbm:item.pin" Amount="6" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr190_padlock_rusty" ItemName="hbm:item.padlock_rusty" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="2" RandomAmount="false"/>
+    <LootGroup GroupMetaID="190" GroupName="Мешок плотника" Rarity="0" MinItems="2" MaxItems="4" CombineTrashGroup="true">
+        <Loot Identifier="cr190_string" ItemName="minecraft:string" Amount="32" NBTTag="" Chance="85" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr190_chalk" ItemName="modernmarkings:item.chalk" Amount="16" NBTTag="" Chance="80" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr190_bolt" ItemName="hbm:item.bolt" Amount="32" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr190_pin" ItemName="hbm:item.pin" Amount="16" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr190_torch" ItemName="minecraft:torch" Amount="32" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr190_string_cord" ItemName="OpenBlocks:generic:5" Amount="16" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr190_drawer_template" ItemName="StorageDrawers:upgradeTemplate" Amount="16" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr190_ladder" ItemName="minecraft:ladder" Amount="16" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr190_sign" ItemName="minecraft:sign" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr190_crayon" ItemName="hbm:item.crayon" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr190_drawer_tape" ItemName="StorageDrawers:tape" Amount="1" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr190_drawer_lock" ItemName="StorageDrawers:upgradeLock" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr190_crook" ItemName="exnihilo:crook" Amount="1" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr190_carp_button" ItemName="CarpentersBlocks:blockCarpentersButton" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr190_carp_torch" ItemName="CarpentersBlocks:blockCarpentersTorch" Amount="8" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr190_carp_hammer" ItemName="CarpentersBlocks:itemCarpentersHammer" Amount="1" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr190_carp_chisel" ItemName="CarpentersBlocks:itemCarpentersChisel" Amount="1" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr190_hammer" ItemName="cfm:ItemHammer" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr190_saw" ItemName="BiblioCraft:item.FramingSaw" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr190_screwdriver" ItemName="hbm:item.screwdriver" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr190_plumb" ItemName="BiblioCraft:item.PlumbLine" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr190_tape" ItemName="BiblioCraft:item.tapeMeasure" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr190_catalog" ItemName="BiblioCraft:item.StockroomCatalog" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr190_padlock_rusty" ItemName="hbm:item.padlock_rusty" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
     <LootGroup GroupMetaID="191" GroupName="Сумка маляра" Rarity="1" MinItems="2" MaxItems="4" CombineTrashGroup="true">
         <Loot Identifier="cr191_dye_ef_white" ItemName="etfuturum:dye:0" Amount="32" NBTTag="" Chance="85" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>

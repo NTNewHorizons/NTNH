@@ -540,30 +540,33 @@
 ### Блок 190–219: Строительство, отделка и чертежи
 
 #### 🪚 [Meta 190] Мешок плотника
-* **Уровень:** 1 | **Rarity:** 0 | **Дроп:** `1 - 2` | `CombineTrashGroup="true"`
-* *Лор:* Инструменты артели плотников-каркасников и первичного обустройства хранилищ.
+* **Уровень:** 1 | **Rarity:** 0 | **Дроп:** `2 - 4` | `CombineTrashGroup="true"`
+* *Лор:* Походный холщовый мешок столяра-каркасника. Содержит солидный запас крепёжных метизов, строительных шнуров и нитей, мелков для разметки, шаблонов ящиков, деревянной фурнитуры Carpenter's и ручных инструментов для возведения каркасов и первичного обустройства склада.
 * **Содержимое:**
-  * `modernmarkings:item.chalk` (**Разметочный мел**) | Кол-во: 2–4 | Вес: 80 | `RandomAmount="true"`. *Смысл:* Разметка цехов и путей.
-  * `cfm:ItemHammer` (**Столярный молоток**) | Кол-во: 1 | Вес: 60 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `OpenBlocks:generic:5` (**Шнур**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`. *Смысл:* Отбивка горизонталей.
-  * `BiblioCraft:item.FramingSaw` (**Каркасная пила**) | Кол-во: 1 | Вес: 60 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Обработка блоков BiblioCraft.
-  * `BiblioCraft:item.PlumbLine` (**Строительный отвес**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `BiblioCraft:item.tapeMeasure` (**Мерная лента**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `StorageDrawers:upgradeTemplate` (**Шаблон улучшения**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`. *Смысл:* Основа апгрейдов ящиков.
-  * `StorageDrawers:tape` (**Упаковочный скотч**) | Кол-во: 1 | Вес: 55 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Переноска сундуков и ящиков без сброса лута.
-  * `StorageDrawers:upgradeLock` (**Ключ блокировки ящика**) | Кол-во: 1–2 | Вес: 60 | `RandomAmount="true"`
-  * `BiblioCraft:item.StockroomCatalog` (**Складской каталог**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Быстрый поиск предметов по сундукам.
-  * `exnihilo:crook` (**Посох**) | Кол-во: 1 | Вес: 70 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `minecraft:string` (**Нить**) | Кол-во: 3–6 | Вес: 75 | `RandomAmount="true"`
-  * `minecraft:ladder` (**Лестница**) | Кол-во: 4–8 | Вес: 70 | `RandomAmount="true"`
-  * `minecraft:torch` (**Факелы**) | Кол-во: 8–16 | Вес: 80 | `RandomAmount="true"`
-  * `minecraft:sign` (**Табличка**) | Кол-во: 1–3 | Вес: 60 | `RandomAmount="true"`
-  * `minecraft:iron_bars` (**Железные прутья**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
-  * `minecraft:glass` (**Стекло**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
-  * `minecraft:brick` (**Кирпич**) | Кол-во: 6–12 | Вес: 65 | `RandomAmount="true"`
-  * `minecraft:bucket` (**Ведро**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.pin` (**Шпилька/Отмычка**) | Кол-во: 3–6 | Вес: 70 | `RandomAmount="true"`
-  * `hbm:item.padlock_rusty` (**Ржавый замок**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="2"` | `RandomAmount="false"`
+  * `minecraft:string` (**Крепкая нить / дратва**) | Кол-во: 16–32 | Вес: 85 | `RandomAmount="true"`
+  * `modernmarkings:item.chalk` (**Разметочный мел**) | Кол-во: 8–16 | Вес: 80 | `RandomAmount="true"`
+  * `hbm:item.bolt` (**Строительные болты / метизы NTM**) | Кол-во: 16–32 | Вес: 75 | `RandomAmount="true"`
+  * `hbm:item.pin` (**Шпильки / штифты NTM**) | Кол-во: 8–16 | Вес: 75 | `RandomAmount="true"`
+  * `minecraft:torch` (**Факелы**) | Кол-во: 16–32 | Вес: 75 | `RandomAmount="true"`
+  * `OpenBlocks:generic:5` (**Строительный шнур**) | Кол-во: 8–16 | Вес: 70 | `RandomAmount="true"`
+  * `StorageDrawers:upgradeTemplate` (**Шаблон улучшения ящика**) | Кол-во: 8–16 | Вес: 70 | `RandomAmount="true"`
+  * `minecraft:ladder` (**Лестница**) | Кол-во: 8–16 | Вес: 70 | `RandomAmount="true"`
+  * `minecraft:sign` (**Табличка**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
+  * `hbm:item.crayon` (**Строительные восковые мелки NTM**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
+  * `StorageDrawers:tape` (**Упаковочный скотч**) | Кол-во: 1 | Вес: 60 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `StorageDrawers:upgradeLock` (**Ключ блокировки ящика**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`
+  * `exnihilo:crook` (**Посох плотника**) | Кол-во: 1 | Вес: 60 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `CarpentersBlocks:blockCarpentersButton` (**Кнопка плотника**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`
+  * `CarpentersBlocks:blockCarpentersTorch` (**Факел плотника**) | Кол-во: 4–8 | Вес: 50 | `RandomAmount="true"`
+  * `CarpentersBlocks:itemCarpentersHammer` (**Молоток плотника**) | Кол-во: 1 | Вес: 55 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `CarpentersBlocks:itemCarpentersChisel` (**Стамеска Carpenter's**) | Кол-во: 1 | Вес: 55 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `cfm:ItemHammer` (**Столярный молоток**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `BiblioCraft:item.FramingSaw` (**Каркасная пила**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.screwdriver` (**Отвёртка NTM**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `BiblioCraft:item.PlumbLine` (**Строительный отвес**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `BiblioCraft:item.tapeMeasure` (**Мерная лента**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `BiblioCraft:item.StockroomCatalog` (**Складской каталог**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.padlock_rusty` (**Ржавый замок**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
 
 #### 🎨 [Meta 191] Сумка маляра
 * **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 4` | `CombineTrashGroup="true"`
@@ -1024,7 +1027,7 @@
 | **160** | Семена с огорода | 1 | 0 | 2–3 | true | 19 |
 | **161** | Посевной мешок | 2 | 1 | 2–4 | true | 20 |
 | **162** | Банк семян | 3 | 2 | 1 (опт x32) | false | 20 |
-| **190** | Мешок плотника | 1 | 0 | 1–2 | true | 21 |
+| **190** | Мешок плотника | 1 | 0 | 2–4 | true | 24 |
 | **191** | Сумка маляра | 2 | 1 | 2–4 | true | 34 |
 | **192** | Кейс проектировщика | 3 | 2 | 3–5 | false | 21 |
 | **220** | Планшет разведчика | 1 | 0 | 1–2 | true | 19 |
@@ -1038,7 +1041,7 @@
 | **310** | Чёрный ящик шаттла | 3 | 3 | 2–4 | false | 19 |
 | **311** | Транспортный пенал изотопов | 3 | 3 | 1–3 | false | 18 |
 | **312** | Бортовой ремнабор | 3 | 2 | 2–4 | false | 20 |
-| **ИТОГО** | **33 группы** | — | — | — | — | **653 позиции** |
+| **ИТОГО** | **33 группы** | — | — | — | — | **656 позиций** |
 
 ---
 
