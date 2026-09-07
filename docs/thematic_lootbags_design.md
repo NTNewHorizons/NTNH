@@ -684,29 +684,27 @@
   * `hbm:item.dust_tiny` (**Каменная/рудная крошка**) | Кол-во: 4–8 | Вес: 70 | `RandomAmount="true"`
 
 #### 🛢️ [Meta 221] Геодезический набор
-* **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 3` | `CombineTrashGroup="true"`
-* *Лор:* Комплект партии полевой геологоразведки стратегических ископаемых.
+* **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 4` | `CombineTrashGroup="true"`
+* *Лор:* Комплект партии полевой геологоразведки стратегических ископаемых. Включает приборы поиска подземных резервуаров углеводородов и сканирования рудных пластов, средства радиационной разведки, документационный планшет с зажимом, маркировочные материалы, прочную верёвку для шахтных спусков, стальной молоток для колки керна, СИЗ и редкие образцы природных минералов.
 * **Содержимое:**
-  * `hbm:item.oil_detector` (**Детектор нефти**) | Кол-во: 1 | Вес: 60 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Поиск подземных нефтяных линз и сланцевого газа NTM.
-  * `hbm:item.survey_scanner` (**Спектральный сканер руд**) | Кол-во: 1 | Вес: 55 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Определение рудных жил чанка.
-  * `BiblioCraft:item.BiblioGlasses` (**Очки монокль**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `OpenBlocks:infoBook` (**Справочник OpenBlocks**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.drillbit:0` (**Стальное сверло**) | Кол-во: 1 | Вес: 50 | `RandomAmount="false"`
-  * `hbm:item.pipes_steel` (**Стальные трубы**) | Кол-во: 1 | Вес: 40 | `RandomAmount="false"`
-  * `hbm:item.stick_dynamite` (**Динамит**) | Кол-во: 3–6 | Вес: 60 | `RandomAmount="true"`
-  * `hbm:item.fluorite` (**Флюорит**) | Кол-во: 8–16 | Вес: 65 | `RandomAmount="true"`
-  * `hbm:item.sulfur` (**Сера**) | Кол-во: 8–16 | Вес: 65 | `RandomAmount="true"`
-  * `hbm:item.niter` (**Селитра**) | Кол-во: 8–16 | Вес: 65 | `RandomAmount="true"`
-  * `hbm:item.powder_coal` (**Угольная пыль**) | Кол-во: 6–12 | Вес: 70 | `RandomAmount="true"`
-  * `hbm:item.powder_iron` (**Железный порошок**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
-  * `hbm:item.powder_copper` (**Медный порошок**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
-  * `hbm:item.powder_lead` (**Свинцовый порошок**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`
-  * `hbm:item.gem_sodalite` (**Содалит**) | Кол-во: 3–6 | Вес: 55 | `RandomAmount="true"`
-  * `hbm:item.coal_infernal` (**Инфернальный уголь**) | Кол-во: 4–8 | Вес: 55 | `RandomAmount="true"`
-  * `minecraft:redstone` (**Редстоун**) | Кол-во: 8–16 | Вес: 75 | `RandomAmount="true"`
-  * `minecraft:diamond` (**Алмаз**) | Кол-во: 1 | Вес: 20 | `RandomAmount="false"`
-  * `hbm:item.geiger_counter` (**Счётчик Гейгера**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.bottle_mercury` (**Ртуть**) | Кол-во: 1–2 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.oil_detector` (**Детектор нефтяных резервуаров**) | Кол-во: 1 | Вес: 55 | `ItemGroup="geo_scanner"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Поиск подземных нефтяных линз и природного газа.
+  * `hbm:item.survey_scanner` (**Спектральный сканер руд**) | Кол-во: 1 | Вес: 50 | `ItemGroup="geo_scanner"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Определение рудных жил чанка.
+  * `hbm:item.geiger_counter` (**Полевой счётчик Гейгера**) | Кол-во: 1 | Вес: 45 | `ItemGroup="geo_scanner"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Замер радиационного фона в шахтах.
+  * `BiblioCraft:item.BiblioGlasses` (**Очки-монокль геолога**) | Кол-во: 1 | Вес: 40 | `ItemGroup="geo_scanner"` | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `BiblioCraft:item.BiblioClipboard` (**Планшет с зажимом для записей**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `minecraft:paper` (**Плотная чертёжная бумага**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
+  * `modernmarkings:item.chalk` (**Маркировочный мел для шурфов**) | Кол-во: 3–6 | Вес: 60 | `RandomAmount="true"`
+  * `OpenBlocks:generic:5` (**Прочная верёвка / шнур**) | Кол-во: 8–16 | Вес: 70 | `RandomAmount="true"`. *Смысл:* Спуски в разломы и промеры глубин.
+  * `hbm:item.hammer_steel` (**Стальной геологический молоток**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Снятие образцов и раскалывание твёрдого керна.
+  * `hbm:item.gas_mask_filter_mono` (**Каталитический фильтр противогаза**) | Кол-во: 1–2 | Вес: 45 | `RandomAmount="true"`. *Смысл:* Защита дыхания от рудничного и угарного газа.
+  * `hbm:item.stick_dynamite` (**Динамитные шашки**) | Кол-во: 2–4 | Вес: 55 | `RandomAmount="true"`. *Смысл:* Вскрытие пробных шпуров.
+  * `hbm:item.safety_fuse` (**Огнепроводный шнур**) | Кол-во: 3–6 | Вес: 60 | `RandomAmount="true"`
+  * `hbm:item.fluorite` (**Флюорит (образец породы)**) | Кол-во: 2–4 | Вес: 25 | `RandomAmount="true"`. *Смысл:* Редкая минеральная проба.
+  * `hbm:item.sulfur` (**Самородная сера**) | Кол-во: 3–6 | Вес: 30 | `RandomAmount="true"`. *Смысл:* Редкая минеральная проба.
+  * `hbm:item.niter` (**Калиевая селитра**) | Кол-во: 3–6 | Вес: 30 | `RandomAmount="true"`. *Смысл:* Редкая минеральная проба.
+  * `hbm:item.gem_sodalite` (**Содалит**) | Кол-во: 1–2 | Вес: 20 | `RandomAmount="true"`. *Смысл:* Редкий драгоценный минерал.
+  * `minecraft:redstone` (**Красный камень**) | Кол-во: 4–8 | Вес: 40 | `RandomAmount="true"`
+  * `hbm:item.bottle_mercury` (**Склянка ртути**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Реагент для полевого шлихового анализа и амальгамации.
 
 #### 💥 [Meta 222] Ящик шахтной взрывотехники
 * **Уровень:** 3 | **Rarity:** 2 | **Дроп:** `3 - 6` | `CombineTrashGroup="false"`
@@ -1065,8 +1063,8 @@
 | **191** | Сумка маляра | 2 | 1 | 2–4 | true | 34 |
 | **192** | Кейс проектировщика | 3 | 2 | 3–5 | false | 21 |
 | **220** | Планшет разведчика | 1 | 0 | 2–4 | true | 21 |
-| **221** | Геодезический набор | 2 | 1 | 2–3 | true | 20 |
-| **222** | Спектрометр недр | 3 | 2 | 2–4 | false | 19 |
+| **221** | Геодезический набор | 2 | 1 | 2–4 | true | 18 |
+| **222** | Ящик шахтной взрывотехники | 3 | 2 | 3–6 | false | 20 |
 | **250** | Сумка сигнальщика | 1 | 0 | 2–3 | true | 20 |
 | **251** | Коробочка радиодеталей | 2 | 1 | 2–3 | true | 21 |
 | **252** | Радиоузел связиста | 3 | 2 | 2–4 | false | 19 |
