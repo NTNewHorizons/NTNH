@@ -612,28 +612,24 @@
         <Loot Identifier="sig250_compass" ItemName="minecraft:compass" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sig250_padlock" ItemName="hbm:item.padlock" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
-    <LootGroup GroupMetaID="251" GroupName="Коробочка радиодеталей" Rarity="1" MinItems="2" MaxItems="3" CombineTrashGroup="true">
-        <Loot Identifier="rad251_rtty_pager" ItemName="hbm:item.rtty_pager" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="rad251_tuner" ItemName="openfm:RadioTuner" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="rad251_memory" ItemName="openfm:MemoryCard" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="rad251_tape_drive" ItemName="computronics:computronics.portableTapeDrive" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="rad251_tape_iron" ItemName="computronics:computronics.tape:0" Amount="1" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="rad251_tape_gold" ItemName="computronics:computronics.tape:1" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="rad251_tape_head" ItemName="computronics:computronics.parts:0" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="rad251_detonator" ItemName="hbm:item.detonator" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="rad251_rf_sender" ItemName="hbm:tile.radio_torch_sender" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="rad251_rf_receiver" ItemName="hbm:tile.radio_torch_receiver" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+    <LootGroup GroupMetaID="251" GroupName="Коробочка радиодеталей" Rarity="1" MinItems="2" MaxItems="4" CombineTrashGroup="true">
+        <Loot Identifier="rad251_rtty_pager" ItemName="hbm:item.rtty_pager" Amount="1" NBTTag="" Chance="50" ItemGroup="rad_gadget" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="rad251_tuner" ItemName="openfm:RadioTuner" Amount="1" NBTTag="" Chance="45" ItemGroup="rad_gadget" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="rad251_memory" ItemName="openfm:MemoryCard" Amount="1" NBTTag="" Chance="45" ItemGroup="rad_gadget" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="rad251_power_net" ItemName="hbm:item.power_net_tool" Amount="1" NBTTag="" Chance="40" ItemGroup="rad_gadget" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="rad251_rf_sender" ItemName="hbm:tile.radio_torch_sender" Amount="1" NBTTag="" Chance="50" ItemGroup="rad_torch" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="rad251_rf_receiver" ItemName="hbm:tile.radio_torch_receiver" Amount="1" NBTTag="" Chance="50" ItemGroup="rad_torch" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="rad251_circuit_tube" ItemName="hbm:item.circuit:0" Amount="4" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="rad251_circuit_cap" ItemName="hbm:item.circuit:1" Amount="3" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="rad251_circuit_analog" ItemName="hbm:item.circuit:2" Amount="2" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="rad251_wire_fine" ItemName="hbm:item.wire_fine:2900" Amount="12" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="rad251_pr_coil" ItemName="ProjRed|Core:projectred.core.part:16" Amount="3" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="rad251_pr_ferrite" ItemName="ProjRed|Core:projectred.core.part:17" Amount="3" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="rad251_circuit_cap" ItemName="hbm:item.circuit:1" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="rad251_circuit_analog" ItemName="hbm:item.circuit:2" Amount="2" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="rad251_wire_fine" ItemName="hbm:item.wire_fine:2900" Amount="16" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="rad251_pr_coil" ItemName="ProjRed|Core:projectred.core.part:16" Amount="4" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="rad251_pr_ferrite" ItemName="ProjRed|Core:projectred.core.part:17" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="rad251_fuse" ItemName="hbm:item.fuse" Amount="3" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="rad251_quartz" ItemName="minecraft:quartz" Amount="6" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="rad251_iron_bars" ItemName="minecraft:iron_bars" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="rad251_power_net" ItemName="hbm:item.power_net_tool" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="rad251_redstone" ItemName="minecraft:redstone" Amount="12" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="rad251_quartz" ItemName="minecraft:quartz" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="rad251_redstone" ItemName="minecraft:redstone" Amount="16" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="rad251_screwdriver" ItemName="hbm:item.screwdriver" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="rad251_tape_head" ItemName="computronics:computronics.parts:0" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
     </LootGroup>
     <LootGroup GroupMetaID="252" GroupName="Радиоузел связиста" Rarity="2" MinItems="2" MaxItems="4" CombineTrashGroup="false">
         <Loot Identifier="rad252_radar_linker" ItemName="hbm:item.radar_linker" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>

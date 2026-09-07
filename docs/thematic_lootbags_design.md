@@ -765,30 +765,26 @@
   * `hbm:item.padlock` (**Навесной замок сигнального шкафа**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
 
 #### 📻 [Meta 251] Коробочка радиодеталей
-* **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 3` | `CombineTrashGroup="true"`
-* *Лор:* Коробочка радиолюбителя или техника узла связи: лампы, конденсаторы, аналоговые микросхемы, кварц, ферриты, индуктивности, карманный кассетник и радио-пейджер. Никаких тяжёлых промышленных аккумуляторов.
+* **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 4` | `CombineTrashGroup="true"`
+* *Лор:* Коробочка радиолюбителя и наладчика узла связи. Содержит радиоприёмные и контрольные гаджеты (пейджер, тюнер OpenFM, карту памяти, тестер энергосети), радиофакелы передачи команд, электронные лампы, конденсаторы, аналоговые платы, индуктивные катушки и ферриты, тонкий провод, кварцевые резонаторы, предохранители, монтажную отвёртку и магнитную головку.
 * **Содержимое:**
-  * `hbm:item.rtty_pager` (**RTTY Пейджер**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Беспроводной приём цифровых радиокоманд.
-  * `openfm:RadioTuner` (**Radio Tuner**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Поиск радиостанций OpenFM.
-  * `openfm:MemoryCard` (**Карта памяти OpenFM**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `computronics:computronics.portableTapeDrive` (**Кассетный плеер**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Воспроизведение аудиокассет на ходу.
-  * `computronics:computronics.tape:0` (**Железная кассета**) | Кол-во: 1 | Вес: 60 | `RandomAmount="false"`
-  * `computronics:computronics.tape:1` (**Золотая кассета**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `computronics:computronics.parts:0` (**Магнитная головка**) | Кол-во: 1 | Вес: 50 | `RandomAmount="false"`
-  * `hbm:item.detonator` (**Детонатор**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:tile.radio_torch_sender` (**Радиофакел-передатчик**) | Кол-во: 1 | Вес: 50 | `RandomAmount="true"`
-  * `hbm:tile.radio_torch_receiver` (**Радиофакел-приёмник**) | Кол-во: 1 | Вес: 50 | `RandomAmount="true"`
-  * `hbm:item.circuit:0` (**Вакуумная лампа**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`
-  * `hbm:item.circuit:1` (**Конденсатор**) | Кол-во: 1–3 | Вес: 60 | `RandomAmount="true"`
-  * `hbm:item.circuit:2` (**Аналоговая плата**) | Кол-во: 1–2 | Вес: 45 | `RandomAmount="true"`
-  * `hbm:item.wire_fine:2900` (**Медный провод**) | Кол-во: 6–12 | Вес: 75 | `RandomAmount="true"`
-  * `ProjRed|Core:projectred.core.part:16` (**Индукционная катушка**) | Кол-во: 1–3 | Вес: 55 | `RandomAmount="true"`
-  * `ProjRed|Core:projectred.core.part:17` (**Ферритовый сердечник**) | Кол-во: 1–3 | Вес: 50 | `RandomAmount="true"`
-  * `hbm:item.fuse` (**Предохранитель**) | Кол-во: 1–3 | Вес: 60 | `RandomAmount="true"`
-  * `minecraft:quartz` (**Кварц**) | Кол-во: 3–6 | Вес: 70 | `RandomAmount="true"`. *Смысл:* Кварцевый стабилизатор частоты.
-  * `minecraft:iron_bars` (**Железные прутья**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`
-  * `hbm:item.power_net_tool` (**Тестер электросети**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `minecraft:redstone` (**Красная пыль**) | Кол-во: 6–12 | Вес: 70 | `RandomAmount="true"`
+  * `hbm:item.rtty_pager` (**RTTY Пейджер**) | Кол-во: 1 | Вес: 50 | `ItemGroup="rad_gadget"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Беспроводной приём текстовых и числовых команд по радиоканалу.
+  * `openfm:RadioTuner` (**Radio Tuner**) | Кол-во: 1 | Вес: 45 | `ItemGroup="rad_gadget"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Поиск и настройка радиостанций OpenFM.
+  * `openfm:MemoryCard` (**Карта памяти OpenFM**) | Кол-во: 1 | Вес: 45 | `ItemGroup="rad_gadget"` | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.power_net_tool` (**Тестер электросети**) | Кол-во: 1 | Вес: 40 | `ItemGroup="rad_gadget"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Диагностика радиоузлов и линий питания.
+  * `hbm:tile.radio_torch_sender` (**Радиофакел-передатчик**) | Кол-во: 1 | Вес: 50 | `ItemGroup="rad_torch"` | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:tile.radio_torch_receiver` (**Радиофакел-приёмник**) | Кол-во: 1 | Вес: 50 | `ItemGroup="rad_torch"` | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.circuit:0` (**Вакуумные радиолампы**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`
+  * `hbm:item.circuit:1` (**Конденсаторы**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`
+  * `hbm:item.circuit:2` (**Аналоговые печатные платы**) | Кол-во: 1–2 | Вес: 50 | `RandomAmount="true"`
+  * `hbm:item.wire_fine:2900` (**Тонкий медный монтажный провод**) | Кол-во: 8–16 | Вес: 75 | `RandomAmount="true"`
+  * `ProjRed|Core:projectred.core.part:16` (**Индукционная катушка ProjectRed**) | Кол-во: 2–4 | Вес: 55 | `RandomAmount="true"`
+  * `ProjRed|Core:projectred.core.part:17` (**Ферритовый сердечник ProjectRed**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`
+  * `hbm:item.fuse` (**Предохранитель цепи**) | Кол-во: 2–3 | Вес: 60 | `RandomAmount="true"`
+  * `minecraft:quartz` (**Пьезокварц**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`. *Смысл:* Кварцевый стабилизатор частоты генератора.
+  * `minecraft:redstone` (**Красная пыль**) | Кол-во: 8–16 | Вес: 70 | `RandomAmount="true"`
+  * `hbm:item.screwdriver` (**Монтажная отвёртка наладчика**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Подстройка подстроечных резисторов и контуров.
+  * `computronics:computronics.parts:0` (**Магнитная звуковая головка**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="0"` | `RandomAmount="false"`
 
 #### 📡 [Meta 252] Радиоузел связиста
 * **Уровень:** 3 | **Rarity:** 2 | **Дроп:** `2 - 4` | `CombineTrashGroup="false"`
@@ -1066,7 +1062,7 @@
 | **221** | Геодезический набор | 2 | 1 | 2–4 | true | 18 |
 | **222** | Ящик шахтной взрывотехники | 3 | 2 | 3–6 | false | 20 |
 | **250** | Сумка сигнальщика | 1 | 0 | 2–4 | true | 20 |
-| **251** | Коробочка радиодеталей | 2 | 1 | 2–3 | true | 21 |
+| **251** | Коробочка радиодеталей | 2 | 1 | 2–4 | true | 17 |
 | **252** | Радиоузел связиста | 3 | 2 | 2–4 | false | 19 |
 | **280** | Сумка лаборанта | 1 | 0 | 1–2 | true | 19 |
 | **281** | Кейс технолога | 2 | 1 | 2–4 | true | 20 |
