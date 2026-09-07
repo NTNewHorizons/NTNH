@@ -630,24 +630,27 @@
 
 #### 🏛️ [Meta 192] Кейс проектировщика
 * **Уровень:** 3 | **Rarity:** 2 | **Дроп:** `3 - 5` | `CombineTrashGroup="false"`
-* *Лор:* Комплект главного архитектора (система пространственного CAD-прототипирования).
+* *Лор:* Инженерно-архитектурный кейс главного конструктора и проектировщика комплексов: буклет чертежей NTM, запас чертёжной бумаги, разметочные шнуры и нити, керамическая кружка для кофе, система пространственного CAD-прототипирования OpenBlocks (магические мелки и ластик, взаимоисключающий пул специализированных очков), профессиональный инструментарий ArchitectureCraft (станок распиловки, молот, резец, светящаяся кисть), рецептурные планы ProjectRed и редкие красители.
 * **Содержимое:**
-  * `hbm:item.blueprint_folder` (**Буклет чертежей**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `OpenBlocks:imaginary:0` (**Магический карандаш**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Рисование временных блоков-лесов в воздухе.
-  * `OpenBlocks:imaginary:1` (**Цветной карандаш**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `OpenBlocks:pencilGlasses` (**Очки чертёжника**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Делают нарисованные блоки твёрдыми для ходьбы.
-  * `OpenBlocks:crayonGlasses` (**Цветные очки**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `OpenBlocks:epicEraser` (**Epic Eraser**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Моментальное стирание блоков-лесов.
+  * `hbm:item.blueprint_folder` (**Буклет чертежей NTM**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `minecraft:paper` (**Чертёжная бумага / ватман**) | Кол-во: 8–16 | Вес: 75 | `RandomAmount="true"`
+  * `OpenBlocks:generic:5` (**Строительно-разметочный шнур**) | Кол-во: 8–16 | Вес: 70 | `RandomAmount="true"`
+  * `minecraft:string` (**Нить / бечёвка**) | Кол-во: 16–32 | Вес: 75 | `RandomAmount="true"`
+  * `hbm:item.cmug_empty` (**Керамическая кофейная кружка**) | Кол-во: 1 | Вес: 45 | `RandomAmount="false"`. *Смысл:* Неотъемлемый спутник затяжных ночных чертёжных работ.
+  * `OpenBlocks:imaginary:0` (**Магический карандаш**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Рисование временных блоков-лесов в воздухе.
+  * `OpenBlocks:imaginary:1` (**Цветной карандаш**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `OpenBlocks:pencilGlasses` (**Очки чертёжника**) | Кол-во: 1 | Вес: 30 | `ItemGroup="arch_glasses"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Делают нарисованные блоки твёрдыми для ходьбы.
+  * `OpenBlocks:crayonGlasses` (**Цветные очки**) | Кол-во: 1 | Вес: 30 | `ItemGroup="arch_glasses"` | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `OpenBlocks:sonicglasses` (**Звуковые очки**) | Кол-во: 1 | Вес: 25 | `ItemGroup="arch_glasses"` | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `OpenBlocks:epicEraser` (**Epic Eraser**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Моментальное стирание блоков-лесов.
   * `ArchitectureCraft:hammer` (**Молоток архитектора**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `ArchitectureCraft:chisel` (**Резец архитектора**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `ArchitectureCraft:glowbrush` (**Светящаяся кисть**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Скрытая люминесцентная подсветка блоков.
   * `ProjectBlue:emptySprayCan` (**Баллончик распылителя**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `ArchitectureCraft:sawbench` (**Распиловочный верстак**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `ArchitectureCraft:sawbench` (**Распиловочный верстак**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `minecraft:dye:8`..`:14` (**Набор редких красителей**) | Кол-во: 6–12 | Вес: 70 | `RandomAmount="true"`
-  * `OpenBlocks:sonicglasses` (**Звуковые очки**) | Кол-во: 1 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `OpenBlocks:heightMap` (**Карта высот**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.crt_display` (**ЭЛТ-дисплей**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `ProjRed|Expansion:projectred.expansion.plan` (**Recipe Plan**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `ProjRed|Expansion:projectred.expansion.plan` (**Recipe Plan ProjectRed**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
 
 ---
 

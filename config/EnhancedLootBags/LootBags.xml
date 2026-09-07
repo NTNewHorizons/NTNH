@@ -495,27 +495,30 @@
         <Loot Identifier="cr191_arch_chisel" ItemName="ArchitectureCraft:chisel" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
     <LootGroup GroupMetaID="192" GroupName="Кейс проектировщика" Rarity="2" MinItems="3" MaxItems="5" CombineTrashGroup="false">
-        <Loot Identifier="cr192_folder" ItemName="hbm:item.blueprint_folder" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr192_pencil_magic" ItemName="OpenBlocks:imaginary:0" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr192_crayon_magic" ItemName="OpenBlocks:imaginary:1" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr192_glasses_pencil" ItemName="OpenBlocks:pencilGlasses" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr192_glasses_crayon" ItemName="OpenBlocks:crayonGlasses" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr192_eraser" ItemName="OpenBlocks:epicEraser" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr192_folder" ItemName="hbm:item.blueprint_folder" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr192_paper" ItemName="minecraft:paper" Amount="16" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr192_string_cord" ItemName="OpenBlocks:generic:5" Amount="16" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr192_string" ItemName="minecraft:string" Amount="32" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr192_cmug_empty" ItemName="hbm:item.cmug_empty" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="cr192_pencil_magic" ItemName="OpenBlocks:imaginary:0" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr192_crayon_magic" ItemName="OpenBlocks:imaginary:1" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr192_glasses_pencil" ItemName="OpenBlocks:pencilGlasses" Amount="1" NBTTag="" Chance="30" ItemGroup="arch_glasses" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr192_glasses_crayon" ItemName="OpenBlocks:crayonGlasses" Amount="1" NBTTag="" Chance="30" ItemGroup="arch_glasses" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr192_sonicglasses" ItemName="OpenBlocks:sonicglasses" Amount="1" NBTTag="" Chance="25" ItemGroup="arch_glasses" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr192_eraser" ItemName="OpenBlocks:epicEraser" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="cr192_arch_hammer" ItemName="ArchitectureCraft:hammer" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="cr192_arch_chisel" ItemName="ArchitectureCraft:chisel" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="cr192_glowbrush" ItemName="ArchitectureCraft:glowbrush" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="cr192_spray" ItemName="ProjectBlue:emptySprayCan" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr192_sawbench" ItemName="ArchitectureCraft:sawbench" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr192_sawbench" ItemName="ArchitectureCraft:sawbench" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="cr192_dye_gray" ItemName="minecraft:dye:8" Amount="12" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr192_dye_pink" ItemName="minecraft:dye:9" Amount="12" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr192_dye_lime" ItemName="minecraft:dye:10" Amount="12" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr192_dye_cyan" ItemName="minecraft:dye:12" Amount="12" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr192_dye_purple" ItemName="minecraft:dye:13" Amount="12" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr192_dye_orange" ItemName="minecraft:dye:14" Amount="12" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr192_sonicglasses" ItemName="OpenBlocks:sonicglasses" Amount="1" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="cr192_heightmap" ItemName="OpenBlocks:heightMap" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr192_crt" ItemName="hbm:item.crt_display" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr192_plan" ItemName="ProjRed|Expansion:projectred.expansion.plan" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr192_plan" ItemName="ProjRed|Expansion:projectred.expansion.plan" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
     <LootGroup GroupMetaID="220" GroupName="Планшет разведчика" Rarity="0" MinItems="1" MaxItems="2" CombineTrashGroup="true">
         <Loot Identifier="geo220_pedometer" ItemName="OpenBlocks:pedometer" Amount="1" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
