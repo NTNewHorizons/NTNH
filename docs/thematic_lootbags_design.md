@@ -916,28 +916,27 @@
 
 #### 🛡️ [Meta 312] Бортовой ремнабор
 * **Уровень:** 3 | **Rarity:** 2 (Rare) | **Дроп:** `2 - 4` | `CombineTrashGroup="false"`
-* *Лор:* Аварийный ЗИП шлюзового отсека для экстренной заделки пробоин обшивки шаттла и ремонта в открытом космосе.
+* *Лор:* Аварийный ЗИП шлюзового отсека для экстренной заделки пробоин обшивки шаттла, монтажа тугоплавких щитов и ремонта двигателей в открытом космосе.
 * **Содержимое:**
-  * `hbm:tile.block_tungsten` (**Вольфрамовый блок**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`. *Смысл:* Сверхтугоплавкий тепловой щит.
-  * `hbm:item.wire_dense:31` (**Плотный кабель 31**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`
-  * `hbm:item.powder_niobium` (**Ниобиевый порошок**) | Кол-во: 1–2 | Вес: 30 | `RandomAmount="true"`
-  * `hbm:item.powder_neodymium` (**Неодимовый порошок**) | Кол-во: 1–2 | Вес: 30 | `RandomAmount="true"`
-  * `hbm:item.plate_titanium` (**Титановая пластина**) | Кол-во: 4–8 | Вес: 70 | `RandomAmount="true"`
-  * `hbm:item.plate_saturnite` (**Пластина сатурнита**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`
-  * `hbm:item.plate_mixed` (**Улучшенный сплав**) | Кол-во: 1–3 | Вес: 45 | `RandomAmount="true"`
-  * `hbm:item.plate_armor_titanium` (**Титановая бронеплита**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`
-  * `hbm:item.plate_armor_lunar` (**Лунная бронеплита**) | Кол-во: 2–4 | Вес: 40 | `RandomAmount="true"`
-  * `hbm:item.ingot_desh` (**Слиток деша**) | Кол-во: 2–4 | Вес: 45 | `RandomAmount="true"`
-  * `hbm:item.plate_desh` (**Пластина деша**) | Кол-во: 1–3 | Вес: 45 | `RandomAmount="true"`
-  * `hbm:item.motor_desh` (**Деш-мотор**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
-  * `hbm:item.blade_tungsten` (**Вольфрамовые лезвия**) | Кол-во: 1 | Вес: 35 | `RandomAmount="false"`
-  * `hbm:item.blade_titanium` (**Титановые лезвия**) | Кол-во: 1 | Вес: 35 | `RandomAmount="false"`
-  * `hbm:item.wrench_archineer` (**Гаечный ключ инженера**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.drill_titanium` (**Титановый бур**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.reacher` (**Вольфрамовые хваталки**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.pipes_steel` (**Стальные трубы**) | Кол-во: 1 | Вес: 35 | `RandomAmount="false"`
-  * `hbm:item.cladding_desh` (**Деш-оболочка**) | Кол-во: 1–2 | Вес: 35 | `RandomAmount="true"`
-  * `hbm:item.tank_steel` (**Стальной резервуар**) | Кол-во: 3–6 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.blowtorch` (**Сварочный автоген / резак NTM**) | Кол-во: 1 | Вес: 35 | `ItemGroup="shuttle_repair_tool"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Вакуумная резка и заварка титановых листов.
+  * `hbm:item.wrench_archineer` (**Гаечный ключ инженера**) | Кол-во: 1 | Вес: 35 | `ItemGroup="shuttle_repair_tool"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Монтаж силовых агрегатов челнока.
+  * `hbm:item.reacher` (**Вольфрамовый захват / манипулятор**) | Кол-во: 1 | Вес: 30 | `ItemGroup="shuttle_repair_tool"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Работа с раскалёнными деталями дюз.
+  * `hbm:item.cladding_desh` (**Обшивка из деша**) | Кол-во: 1 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`. Экзотическая внешняя противометеоритная броня.
+  * `hbm:item.plate_saturnite` (**Пластина сатурнита**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`. Сверхпрочный сплав внешнего контура.
+  * `hbm:item.plate_armor_lunar` (**Лунная бронеплита**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.motor_desh` (**Высокооборотистый деш-мотор**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`. Привод рулевых закрылков и гидравлики.
+  * `hbm:item.ingot_tungsten` (**Вольфрамовые слитки**) | Кол-во: 2–4 | Вес: 45 | `RandomAmount="true"`. *Смысл:* Тугоплавкий металл жаровых труб.
+  * `hbm:item.plate_titanium` (**Титановая пластина**) | Кол-во: 3–6 | Вес: 65 | `RandomAmount="true"`
+  * `hbm:item.plate_armor_titanium` (**Титановая бронеплита**) | Кол-во: 1–2 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.plate_mixed` (**Улучшенный сплав / Advanced Alloy**) | Кол-во: 1–2 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.plate_desh` (**Пластина деша**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
+  * `hbm:item.ingot_desh` (**Слиток деша**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
+  * `hbm:item.wire_dense:31` (**Плотный силовой кабель 31**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`
+  * `hbm:item.pipes_steel` (**Стальные трубы высокого давления**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
+  * `hbm:item.blade_tungsten` (**Вольфрамовые лезвия резака**) | Кол-во: 1 | Вес: 35 | `RandomAmount="false"`
+  * `hbm:item.blade_titanium` (**Титановые лезвия резака**) | Кол-во: 1 | Вес: 35 | `RandomAmount="false"`
+  * `hbm:item.tank_steel` (**Стальной резервуар/баллон**) | Кол-во: 2–4 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.canister_NITAN` (**Канистра топлива NITAN 100-Octane**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`. Топливо импульсных маневровых двигателей челнока.
 
 ---
 
@@ -945,7 +944,7 @@
 
 | Пул HBM (`_hbmItemPools.json`) | Назначение / Структура в мире | Интегрированные контейнеры (Meta ID) | Вес |
 | :--- | :--- | :--- | :---: |
-| **`POOL_SPACESHIP`** | Разбившийся звездолёт | Чёрный ящик шаттла (310), Транспортный пенал изотопов (311), Бортовой ремнабор (312) | 3 |
+| **`POOL_SPACESHIP`** | Разбившийся звездолёт | Носимый аварийный запас (310), Транспортный пенал изотопов (311), Бортовой ремнабор (312) | 3 |
 | **`POOL_VERTIBIRD`** | Упавший винтокрыл | Патронный цинк (101), Коробочка радиодеталей (251), Цеховая аптечка (11) | 4 |
 | **`POOL_VAULT_LAB`** | Лабораторное хранилище | Инженерный ЗИП (42), Потрёпанный блок стойки ЭВМ (72), Кейс технолога (281), Пенал редких семян (162) | 2 |
 | **`POOL_VAULT_REINFORCED`** | Укреплённый бункер | Кейс РХБЗ (12), Оружейный кофр (102), Кейс проектировщика (192) | 1 |

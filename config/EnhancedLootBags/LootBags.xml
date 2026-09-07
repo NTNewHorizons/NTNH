@@ -737,25 +737,24 @@
         <Loot Identifier="sp311_cell_uf6" ItemName="hbm:item.cell_uf6" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
     <LootGroup GroupMetaID="312" GroupName="Бортовой ремнабор" Rarity="2" MinItems="2" MaxItems="4" CombineTrashGroup="false">
-        <Loot Identifier="sp312_block_tungsten" ItemName="hbm:tile.block_tungsten" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp312_blowtorch" ItemName="hbm:item.blowtorch" Amount="1" NBTTag="" Chance="35" ItemGroup="shuttle_repair_tool" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sp312_wrench_arch" ItemName="hbm:item.wrench_archineer" Amount="1" NBTTag="" Chance="35" ItemGroup="shuttle_repair_tool" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sp312_reacher" ItemName="hbm:item.reacher" Amount="1" NBTTag="" Chance="30" ItemGroup="shuttle_repair_tool" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sp312_cladding_desh" ItemName="hbm:item.cladding_desh" Amount="1" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sp312_saturnite" ItemName="hbm:item.plate_saturnite" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sp312_armor_lunar" ItemName="hbm:item.plate_armor_lunar" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sp312_desh_motor" ItemName="hbm:item.motor_desh" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sp312_ingot_tungsten" ItemName="hbm:item.ingot_tungsten" Amount="4" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp312_titanium_plate" ItemName="hbm:item.plate_titanium" Amount="6" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp312_armor_titanium" ItemName="hbm:item.plate_armor_titanium" Amount="2" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp312_advanced_alloy" ItemName="hbm:item.plate_mixed" Amount="2" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp312_desh_plate" ItemName="hbm:item.plate_desh" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp312_desh_ingot" ItemName="hbm:item.ingot_desh" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sp312_wire_dense" ItemName="hbm:item.wire_dense:31" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp312_niobium" ItemName="hbm:item.powder_niobium" Amount="2" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp312_neodymium" ItemName="hbm:item.powder_neodymium" Amount="2" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp312_titanium_plate" ItemName="hbm:item.plate_titanium" Amount="8" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp312_saturnite" ItemName="hbm:item.plate_saturnite" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp312_advanced_alloy" ItemName="hbm:item.plate_mixed" Amount="3" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp312_armor_titanium" ItemName="hbm:item.plate_armor_titanium" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp312_armor_lunar" ItemName="hbm:item.plate_armor_lunar" Amount="4" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp312_desh_ingot" ItemName="hbm:item.ingot_desh" Amount="4" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp312_desh_plate" ItemName="hbm:item.plate_desh" Amount="3" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp312_desh_motor" ItemName="hbm:item.motor_desh" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp312_pipes_steel" ItemName="hbm:item.pipes_steel" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sp312_blade_tungsten" ItemName="hbm:item.blade_tungsten" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="sp312_blade_titanium" ItemName="hbm:item.blade_titanium" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="sp312_wrench_arch" ItemName="hbm:item.wrench_archineer" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sp312_drill_titanium" ItemName="hbm:item.drill_titanium" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sp312_reacher" ItemName="hbm:item.reacher" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sp312_pipes_steel" ItemName="hbm:item.pipes_steel" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="sp312_cladding_desh" ItemName="hbm:item.cladding_desh" Amount="2" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp312_tank_steel" ItemName="hbm:item.tank_steel" Amount="6" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp312_tank_steel" ItemName="hbm:item.tank_steel" Amount="4" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp312_canister_nitan" ItemName="hbm:item.canister_NITAN" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
 </LootGroups>
