@@ -6,6 +6,7 @@
         <Loot Identifier="trash_stone" ItemName="exnihilo:stone" Amount="6" NBTTag="" Chance="80" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="trash_stick" ItemName="minecraft:stick" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="trash_debris_metal" ItemName="hbm:item.debris_metal" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="trash_ring_pull" ItemName="hbm:item.ring_pull" Amount="3" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="trash_mask_piss" ItemName="hbm:item.mask_piss" Amount="1" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
     </LootGroup>
     <LootGroup GroupMetaID="10" GroupName="Полевой санитарный подсумок" Rarity="0" MinItems="2" MaxItems="4" CombineTrashGroup="false">
@@ -319,7 +320,9 @@
         <Loot Identifier="ck130_trailmix" ItemName="harvestcraft:trailmixItem" Amount="3" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="ck130_canned_beef" ItemName="hbm:item.canned_conserve:0" Amount="1" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="ck130_can_mug" ItemName="hbm:item.can_mug" Amount="1" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="ck130_glass_empty" ItemName="hbm:item.glass_empty" Amount="2" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="ck130_can_empty" ItemName="hbm:item.can_empty" Amount="2" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck130_ring_pull" ItemName="hbm:item.ring_pull" Amount="3" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="131" GroupName="Походный кухонник" Rarity="1" MinItems="2" MaxItems="3" CombineTrashGroup="true">
         <Loot Identifier="ck131_knife" ItemName="cfm:ItemKnife" Amount="1" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
@@ -342,6 +345,8 @@
         <Loot Identifier="ck131_can_smart" ItemName="hbm:item.can_smart" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="ck131_can_creature" ItemName="hbm:item.can_creature" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="ck131_oliveoil" ItemName="harvestcraft:oliveoilItem" Amount="2" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck131_cmug_empty" ItemName="hbm:item.cmug_empty" Amount="2" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck131_glass_empty" ItemName="hbm:item.glass_empty" Amount="2" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="132" GroupName="Офицерский провиант" Rarity="2" MinItems="3" MaxItems="5" CombineTrashGroup="false">
         <Loot Identifier="ck132_recipebook" ItemName="cookingforblockheads:recipebook:3" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
@@ -375,6 +380,8 @@
         <Loot Identifier="ck132_bottle_nuka" ItemName="hbm:item.bottle_nuka" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="true"/>
         <Loot Identifier="ck132_bottle_opener" ItemName="hbm:item.bottle_opener" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="ck132_can_key" ItemName="hbm:item.can_key" Amount="1" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ck132_cmug_empty" ItemName="hbm:item.cmug_empty" Amount="2" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck132_teacup_empty" ItemName="hbm:item.teacup_empty" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="160" GroupName="Семена с огорода" Rarity="0" MinItems="1" MaxItems="1" CombineTrashGroup="false">
         <Loot Identifier="agr160_garlic_base" ItemName="harvestcraft:garlicseedItem" Amount="80" NBTTag="" Chance="80" ItemGroup="pack_garlic" LimitedDropCount="0" RandomAmount="false"/>
