@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <LootGroups>
-    <LootGroup GroupMetaID="0" GroupName="Trash" Rarity="0" MinItems="1" MaxItems="1" CombineTrashGroup="false">
+    <LootGroup GroupMetaID="0" GroupName="enhancedlootbags.group.0" Rarity="0" MinItems="1" MaxItems="1" CombineTrashGroup="false">
         <Loot Identifier="trash_rag" ItemName="hbm:item.rag" Amount="3" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="trash_dust_tiny" ItemName="hbm:item.dust_tiny" Amount="6" NBTTag="" Chance="80" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="trash_stone" ItemName="exnihilo:stone" Amount="6" NBTTag="" Chance="80" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -9,7 +9,7 @@
         <Loot Identifier="trash_ring_pull" ItemName="hbm:item.ring_pull" Amount="3" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="trash_mask_piss" ItemName="hbm:item.mask_piss" Amount="1" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
     </LootGroup>
-    <LootGroup GroupMetaID="10" GroupName="Полевой санитарный подсумок" Rarity="0" MinItems="2" MaxItems="4" CombineTrashGroup="false">
+    <LootGroup GroupMetaID="10" GroupName="enhancedlootbags.group.10" Rarity="0" MinItems="2" MaxItems="4" CombineTrashGroup="false">
         <Loot Identifier="med10_rag" ItemName="hbm:item.rag" Amount="6" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="med10_cotton" ItemName="harvestcraft:wovencottonItem" Amount="4" NBTTag="" Chance="90" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="med10_pill_iodine" ItemName="hbm:item.pill_iodine" Amount="6" NBTTag="" Chance="85" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -31,7 +31,7 @@
         <Loot Identifier="med10_stimpak" ItemName="hbm:item.syringe_metal_stimpak" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="med10_medx" ItemName="hbm:item.syringe_metal_medx" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
     </LootGroup>
-    <LootGroup GroupMetaID="11" GroupName="Настенная цеховая аптечка" Rarity="1" MinItems="3" MaxItems="5" CombineTrashGroup="false">
+    <LootGroup GroupMetaID="11" GroupName="enhancedlootbags.group.11" Rarity="1" MinItems="3" MaxItems="5" CombineTrashGroup="false">
         <Loot Identifier="med11_cotton" ItemName="harvestcraft:wovencottonItem" Amount="8" NBTTag="" Chance="85" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="med11_pill_iodine" ItemName="hbm:item.pill_iodine" Amount="12" NBTTag="" Chance="80" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="med11_stimpak" ItemName="hbm:item.syringe_metal_stimpak" Amount="2" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -57,7 +57,7 @@
         <Loot Identifier="med11_bottle_mercury" ItemName="hbm:item.bottle_mercury" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="med11_super_stimpak" ItemName="hbm:item.syringe_metal_super" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
-    <LootGroup GroupMetaID="12" GroupName="Герметичный чемодан РХБЗ" Rarity="2" MinItems="3" MaxItems="6" CombineTrashGroup="false">
+    <LootGroup GroupMetaID="12" GroupName="enhancedlootbags.group.12" Rarity="2" MinItems="3" MaxItems="6" CombineTrashGroup="false">
         <Loot Identifier="med12_pill_iodine" ItemName="hbm:item.pill_iodine" Amount="24" NBTTag="" Chance="85" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="med12_radx" ItemName="hbm:item.radx" Amount="6" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="med12_gas_mask_filter" ItemName="hbm:item.gas_mask_filter" Amount="3" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -84,7 +84,7 @@
         <Loot Identifier="med12_pill_red" ItemName="hbm:item.pill_red" Amount="1" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="med12_syringe_awesome" ItemName="hbm:item.syringe_awesome" Amount="1" NBTTag="" Chance="10" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
-    <LootGroup GroupMetaID="40" GroupName="Ящик слесаря" Rarity="0" MinItems="1" MaxItems="2" CombineTrashGroup="true">
+    <LootGroup GroupMetaID="40" GroupName="enhancedlootbags.group.40" Rarity="0" MinItems="1" MaxItems="2" CombineTrashGroup="true">
         <Loot Identifier="sec40_pin" ItemName="hbm:item.pin" Amount="6" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sec40_wrench" ItemName="OpenBlocks:wrench" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sec40_pads_rubber" ItemName="hbm:item.pads_rubber" Amount="4" NBTTag="" Chance="90" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -105,7 +105,7 @@
         <Loot Identifier="sec40_tripwire" ItemName="minecraft:tripwire_hook" Amount="2" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sec40_wire_copper" ItemName="hbm:item.wire_fine:2900" Amount="6" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
-    <LootGroup GroupMetaID="41" GroupName="Сумка механика" Rarity="1" MinItems="3" MaxItems="5" CombineTrashGroup="true">
+    <LootGroup GroupMetaID="41" GroupName="enhancedlootbags.group.41" Rarity="1" MinItems="3" MaxItems="5" CombineTrashGroup="true">
         <Loot Identifier="sec41_wd40" ItemName="hbm:item.wd40" Amount="1" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sec41_ducttape" ItemName="hbm:item.ducttape" Amount="2" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sec41_sponge" ItemName="OpenBlocks:spongeonastick" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
@@ -136,7 +136,7 @@
         <Loot Identifier="sec41_aux_motor" ItemName="hbm:item.weapon_mod_special:5" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sec41_sifter" ItemName="hbm:item.weapon_mod_special:27" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
-    <LootGroup GroupMetaID="42" GroupName="Инженерный ЗИП" Rarity="2" MinItems="3" MaxItems="5" CombineTrashGroup="false">
+    <LootGroup GroupMetaID="42" GroupName="enhancedlootbags.group.42" Rarity="2" MinItems="3" MaxItems="5" CombineTrashGroup="false">
         <Loot Identifier="sec42_wrench_archineer" ItemName="hbm:item.wrench_archineer" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sec42_reacher" ItemName="hbm:item.reacher" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sec42_blowtorch" ItemName="hbm:item.blowtorch" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
@@ -167,7 +167,7 @@
         <Loot Identifier="sec42_pads_rubber" ItemName="hbm:item.pads_rubber" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sec42_fuse" ItemName="hbm:item.fuse" Amount="8" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
-    <LootGroup GroupMetaID="70" GroupName="Скрутка проводов" Rarity="0" MinItems="2" MaxItems="3" CombineTrashGroup="true">
+    <LootGroup GroupMetaID="70" GroupName="enhancedlootbags.group.70" Rarity="0" MinItems="2" MaxItems="3" CombineTrashGroup="true">
         <Loot Identifier="el70_wire_copper" ItemName="hbm:item.wire_fine:2900" Amount="12" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="el70_red_cable_classic" ItemName="hbm:tile.red_cable_classic" Amount="8" NBTTag="" Chance="80" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="el70_quartz" ItemName="minecraft:quartz" Amount="6" NBTTag="" Chance="80" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -188,7 +188,7 @@
         <Loot Identifier="el70_iron_ingot" ItemName="minecraft:iron_ingot" Amount="3" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="el70_debris_metal" ItemName="hbm:item.debris_metal" Amount="2" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
-    <LootGroup GroupMetaID="71" GroupName="Сумка электрика" Rarity="1" MinItems="2" MaxItems="4" CombineTrashGroup="true">
+    <LootGroup GroupMetaID="71" GroupName="enhancedlootbags.group.71" Rarity="1" MinItems="2" MaxItems="4" CombineTrashGroup="true">
         <Loot Identifier="el71_power_net_tool" ItemName="hbm:item.power_net_tool" Amount="1" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="el71_analysis_tool" ItemName="hbm:item.analysis_tool" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="el71_settings_tool" ItemName="hbm:item.settings_tool" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
@@ -212,7 +212,7 @@
         <Loot Identifier="el71_oc_wrench" ItemName="OpenComputers:wrench" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="el71_circuit_10" ItemName="hbm:item.circuit:10" Amount="1" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
     </LootGroup>
-    <LootGroup GroupMetaID="72" GroupName="Потрёпанный блок стойки ЭВМ" Rarity="2" MinItems="3" MaxItems="5" CombineTrashGroup="false">
+    <LootGroup GroupMetaID="72" GroupName="enhancedlootbags.group.72" Rarity="2" MinItems="3" MaxItems="5" CombineTrashGroup="false">
         <Loot Identifier="el72_plate_steel" ItemName="hbm:item.plate_steel" Amount="4" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="el72_plate_aluminium" ItemName="hbm:item.plate_aluminium" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="el72_plate_copper" ItemName="hbm:item.plate_copper" Amount="3" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -235,7 +235,7 @@
         <Loot Identifier="el72_coil_torus" ItemName="hbm:item.coil_gold_torus" Amount="3" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="el72_atomic_clock" ItemName="hbm:item.circuit:21" Amount="1" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
-    <LootGroup GroupMetaID="100" GroupName="Вскрытый патронный цинк" Rarity="0" MinItems="2" MaxItems="3" CombineTrashGroup="true">
+    <LootGroup GroupMetaID="100" GroupName="enhancedlootbags.group.100" Rarity="0" MinItems="2" MaxItems="3" CombineTrashGroup="true">
         <Loot Identifier="wp100_paper" ItemName="minecraft:paper" Amount="4" NBTTag="" Chance="85" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="wp100_rag" ItemName="hbm:item.rag" Amount="4" NBTTag="" Chance="85" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="wp100_casing_small_bronze" ItemName="hbm:item.casing:0" Amount="12" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -256,7 +256,7 @@
         <Loot Identifier="wp100_dynamite" ItemName="hbm:item.stick_dynamite" Amount="2" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="wp100_grenade_lemon" ItemName="hbm:item.grenade_lemon" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
-    <LootGroup GroupMetaID="101" GroupName="Запечатанный патронный цинк" Rarity="1" MinItems="1" MaxItems="1" CombineTrashGroup="false">
+    <LootGroup GroupMetaID="101" GroupName="enhancedlootbags.group.101" Rarity="1" MinItems="1" MaxItems="1" CombineTrashGroup="false">
         <Loot Identifier="wp101_762_fmj" ItemName="hbm:item.ammo_standard:29" Amount="64" NBTTag="" Chance="85" ItemGroup="pack_762_zinc" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="wp101_762_ap" ItemName="hbm:item.ammo_standard:31" Amount="16" NBTTag="" Chance="85" ItemGroup="pack_762_zinc" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="wp101_762_casing" ItemName="hbm:item.casing:1" Amount="32" NBTTag="" Chance="85" ItemGroup="pack_762_zinc" LimitedDropCount="0" RandomAmount="false"/>
@@ -280,7 +280,7 @@
         <Loot Identifier="wp101_50bmg_ap" ItemName="hbm:item.ammo_standard:35" Amount="8" NBTTag="" Chance="40" ItemGroup="pack_50bmg_zinc" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="wp101_50bmg_casing" ItemName="hbm:item.casing:5" Amount="12" NBTTag="" Chance="40" ItemGroup="pack_50bmg_zinc" LimitedDropCount="0" RandomAmount="false"/>
     </LootGroup>
-    <LootGroup GroupMetaID="102" GroupName="Оружейный кофр" Rarity="2" MinItems="2" MaxItems="4" CombineTrashGroup="false">
+    <LootGroup GroupMetaID="102" GroupName="enhancedlootbags.group.102" Rarity="2" MinItems="2" MaxItems="4" CombineTrashGroup="false">
         <Loot Identifier="wp102_kevlar" ItemName="hbm:item.plate_kevlar" Amount="2" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="wp102_silencer" ItemName="hbm:item.weapon_mod_special:0" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="wp102_scope" ItemName="hbm:item.weapon_mod_special:1" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
@@ -301,7 +301,7 @@
         <Loot Identifier="wp102_laser_crystal" ItemName="hbm:item.laser_crystal_co2" Amount="1" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="wp102_ammo_50bmg_inc" ItemName="hbm:item.ammo_standard:36" Amount="12" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
-    <LootGroup GroupMetaID="130" GroupName="Котелок бродяги" Rarity="0" MinItems="1" MaxItems="3" CombineTrashGroup="true">
+    <LootGroup GroupMetaID="130" GroupName="enhancedlootbags.group.130" Rarity="0" MinItems="1" MaxItems="3" CombineTrashGroup="true">
         <Loot Identifier="ck130_salt" ItemName="harvestcraft:saltItem" Amount="8" NBTTag="" Chance="90" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="ck130_flint_steel" ItemName="minecraft:flint_and_steel" Amount="1" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="ck130_soap" ItemName="cfm:ItemSoap" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
@@ -324,7 +324,7 @@
         <Loot Identifier="ck130_can_empty" ItemName="hbm:item.can_empty" Amount="2" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="ck130_ring_pull" ItemName="hbm:item.ring_pull" Amount="3" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
-    <LootGroup GroupMetaID="131" GroupName="Походный кухонник" Rarity="1" MinItems="2" MaxItems="3" CombineTrashGroup="true">
+    <LootGroup GroupMetaID="131" GroupName="enhancedlootbags.group.131" Rarity="1" MinItems="2" MaxItems="3" CombineTrashGroup="true">
         <Loot Identifier="ck131_knife" ItemName="cfm:ItemKnife" Amount="1" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="ck131_pot" ItemName="harvestcraft:potItem" Amount="1" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="ck131_skillet" ItemName="harvestcraft:skilletItem" Amount="1" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
@@ -348,7 +348,7 @@
         <Loot Identifier="ck131_cmug_empty" ItemName="hbm:item.cmug_empty" Amount="2" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="ck131_glass_empty" ItemName="hbm:item.glass_empty" Amount="2" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
-    <LootGroup GroupMetaID="132" GroupName="Офицерский провиант" Rarity="2" MinItems="3" MaxItems="5" CombineTrashGroup="false">
+    <LootGroup GroupMetaID="132" GroupName="enhancedlootbags.group.132" Rarity="2" MinItems="3" MaxItems="5" CombineTrashGroup="false">
         <Loot Identifier="ck132_recipebook" ItemName="cookingforblockheads:recipebook:3" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="ck132_canned_beef" ItemName="hbm:item.canned_conserve:0" Amount="4" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="ck132_conserve_fish" ItemName="hbm:item.canned_conserve:1" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -383,7 +383,7 @@
         <Loot Identifier="ck132_cmug_empty" ItemName="hbm:item.cmug_empty" Amount="2" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="ck132_teacup_empty" ItemName="hbm:item.teacup_empty" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
-    <LootGroup GroupMetaID="160" GroupName="Семена с огорода" Rarity="0" MinItems="1" MaxItems="1" CombineTrashGroup="false">
+    <LootGroup GroupMetaID="160" GroupName="enhancedlootbags.group.160" Rarity="0" MinItems="1" MaxItems="1" CombineTrashGroup="false">
         <Loot Identifier="agr160_garlic_base" ItemName="harvestcraft:garlicseedItem" Amount="80" NBTTag="" Chance="80" ItemGroup="pack_garlic" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="agr160_garlic_extra" ItemName="harvestcraft:garlicseedItem" Amount="20" NBTTag="" Chance="80" ItemGroup="pack_garlic" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr160_tomato_base" ItemName="harvestcraft:tomatoseedItem" Amount="80" NBTTag="" Chance="80" ItemGroup="pack_tomato" LimitedDropCount="0" RandomAmount="false"/>
@@ -405,7 +405,7 @@
         <Loot Identifier="agr160_pumpkin" ItemName="minecraft:pumpkin_seeds" Amount="32" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr160_melon" ItemName="minecraft:melon_seeds" Amount="32" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
-    <LootGroup GroupMetaID="161" GroupName="Садовый рюкзак" Rarity="1" MinItems="3" MaxItems="5" CombineTrashGroup="false">
+    <LootGroup GroupMetaID="161" GroupName="enhancedlootbags.group.161" Rarity="1" MinItems="3" MaxItems="5" CombineTrashGroup="false">
         <Loot Identifier="agr161_crops" ItemName="AgriCraft:cropsItem" Amount="16" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr161_trowel" ItemName="AgriCraft:trowel" Amount="1" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="agr161_clipper" ItemName="AgriCraft:clipper" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
@@ -421,7 +421,7 @@
         <Loot Identifier="agr161_shears" ItemName="minecraft:shears" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="agr161_flower_pot" ItemName="minecraft:flower_pot" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
-    <LootGroup GroupMetaID="162" GroupName="Пенал редких семян" Rarity="2" MinItems="2" MaxItems="3" CombineTrashGroup="false">
+    <LootGroup GroupMetaID="162" GroupName="enhancedlootbags.group.162" Rarity="2" MinItems="2" MaxItems="3" CombineTrashGroup="false">
         <Loot Identifier="agr162_coffee" ItemName="harvestcraft:coffeeseedItem" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr162_tea" ItemName="harvestcraft:teaseedItem" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr162_chili" ItemName="harvestcraft:chilipepperseedItem" Amount="8" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -430,7 +430,7 @@
         <Loot Identifier="agr162_soybean" ItemName="harvestcraft:soybeanseedItem" Amount="16" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr162_plant_2" ItemName="hbm:item.plant_item:2" Amount="4" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
-    <LootGroup GroupMetaID="190" GroupName="Мешок плотника" Rarity="0" MinItems="2" MaxItems="4" CombineTrashGroup="true">
+    <LootGroup GroupMetaID="190" GroupName="enhancedlootbags.group.190" Rarity="0" MinItems="2" MaxItems="4" CombineTrashGroup="true">
         <Loot Identifier="cr190_string" ItemName="minecraft:string" Amount="32" NBTTag="" Chance="85" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr190_chalk" ItemName="modernmarkings:item.chalk" Amount="16" NBTTag="" Chance="80" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr190_bolt" ItemName="hbm:item.bolt" Amount="32" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -458,7 +458,7 @@
         <Loot Identifier="cr190_catalog" ItemName="BiblioCraft:item.StockroomCatalog" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="cr190_padlock_rusty" ItemName="hbm:item.padlock_rusty" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
-    <LootGroup GroupMetaID="191" GroupName="Сумка маляра" Rarity="1" MinItems="2" MaxItems="4" CombineTrashGroup="true">
+    <LootGroup GroupMetaID="191" GroupName="enhancedlootbags.group.191" Rarity="1" MinItems="2" MaxItems="4" CombineTrashGroup="true">
         <Loot Identifier="cr191_dye_ef_white" ItemName="etfuturum:dye:0" Amount="32" NBTTag="" Chance="85" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr191_dye_ef_black" ItemName="etfuturum:dye:3" Amount="32" NBTTag="" Chance="85" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr191_dye_chem_yellow" ItemName="hbm:item.chemical_dye:11" Amount="32" NBTTag="" Chance="80" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -494,7 +494,7 @@
         <Loot Identifier="cr191_arch_hammer" ItemName="ArchitectureCraft:hammer" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="cr191_arch_chisel" ItemName="ArchitectureCraft:chisel" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
-    <LootGroup GroupMetaID="192" GroupName="Кейс проектировщика" Rarity="2" MinItems="3" MaxItems="5" CombineTrashGroup="false">
+    <LootGroup GroupMetaID="192" GroupName="enhancedlootbags.group.192" Rarity="2" MinItems="3" MaxItems="5" CombineTrashGroup="false">
         <Loot Identifier="cr192_folder" ItemName="hbm:item.blueprint_folder" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="cr192_paper" ItemName="minecraft:paper" Amount="16" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr192_string_cord" ItemName="OpenBlocks:generic:5" Amount="16" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -520,7 +520,7 @@
         <Loot Identifier="cr192_heightmap" ItemName="OpenBlocks:heightMap" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="cr192_plan" ItemName="ProjRed|Expansion:projectred.expansion.plan" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
-    <LootGroup GroupMetaID="220" GroupName="Планшет разведчика" Rarity="0" MinItems="2" MaxItems="4" CombineTrashGroup="true">
+    <LootGroup GroupMetaID="220" GroupName="enhancedlootbags.group.220" Rarity="0" MinItems="2" MaxItems="4" CombineTrashGroup="true">
         <Loot Identifier="geo220_pedometer" ItemName="OpenBlocks:pedometer" Amount="1" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="geo220_flag" ItemName="OpenBlocks:flag" Amount="4" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="geo220_map" ItemName="minecraft:map" Amount="1" NBTTag="" Chance="80" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
@@ -544,7 +544,7 @@
         <Loot Identifier="geo220_stone" ItemName="exnihilo:stone" Amount="8" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="geo220_dust_tiny" ItemName="hbm:item.dust_tiny" Amount="8" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
-    <LootGroup GroupMetaID="221" GroupName="Геодезический набор" Rarity="1" MinItems="2" MaxItems="4" CombineTrashGroup="true">
+    <LootGroup GroupMetaID="221" GroupName="enhancedlootbags.group.221" Rarity="1" MinItems="2" MaxItems="4" CombineTrashGroup="true">
         <Loot Identifier="geo221_oil_detector" ItemName="hbm:item.oil_detector" Amount="1" NBTTag="" Chance="55" ItemGroup="geo_scanner" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="geo221_survey_scanner" ItemName="hbm:item.survey_scanner" Amount="1" NBTTag="" Chance="50" ItemGroup="geo_scanner" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="geo221_geiger" ItemName="hbm:item.geiger_counter" Amount="1" NBTTag="" Chance="45" ItemGroup="geo_scanner" LimitedDropCount="1" RandomAmount="false"/>
@@ -564,7 +564,7 @@
         <Loot Identifier="geo221_redstone" ItemName="minecraft:redstone" Amount="8" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="geo221_mercury" ItemName="hbm:item.bottle_mercury" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
-    <LootGroup GroupMetaID="222" GroupName="Ящик шахтной взрывотехники" Rarity="2" MinItems="3" MaxItems="6" CombineTrashGroup="false">
+    <LootGroup GroupMetaID="222" GroupName="enhancedlootbags.group.222" Rarity="2" MinItems="3" MaxItems="6" CombineTrashGroup="false">
         <Loot Identifier="geo222_dynamite" ItemName="hbm:item.stick_dynamite" Amount="8" NBTTag="" Chance="85" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="geo222_tnt" ItemName="hbm:item.stick_tnt" Amount="6" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="geo222_semtex" ItemName="hbm:item.stick_semtex" Amount="4" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -590,7 +590,7 @@
         <Loot Identifier="geo222_niter" ItemName="hbm:item.niter" Amount="16" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="geo222_redstone" ItemName="minecraft:redstone" Amount="16" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
-    <LootGroup GroupMetaID="250" GroupName="Сумка сигнальщика" Rarity="0" MinItems="2" MaxItems="4" CombineTrashGroup="true">
+    <LootGroup GroupMetaID="250" GroupName="enhancedlootbags.group.250" Rarity="0" MinItems="2" MaxItems="4" CombineTrashGroup="true">
         <Loot Identifier="sig250_rf_sender" ItemName="hbm:tile.radio_torch_sender" Amount="1" NBTTag="" Chance="45" ItemGroup="sig_radio" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sig250_rf_receiver" ItemName="hbm:tile.radio_torch_receiver" Amount="1" NBTTag="" Chance="45" ItemGroup="sig_radio" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sig250_siren" ItemName="hbm:tile.machine_siren" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
@@ -612,7 +612,7 @@
         <Loot Identifier="sig250_compass" ItemName="minecraft:compass" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sig250_padlock" ItemName="hbm:item.padlock" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
-    <LootGroup GroupMetaID="251" GroupName="Коробочка радиодеталей" Rarity="1" MinItems="2" MaxItems="4" CombineTrashGroup="true">
+    <LootGroup GroupMetaID="251" GroupName="enhancedlootbags.group.251" Rarity="1" MinItems="2" MaxItems="4" CombineTrashGroup="true">
         <Loot Identifier="rad251_rtty_pager" ItemName="hbm:item.rtty_pager" Amount="1" NBTTag="" Chance="50" ItemGroup="rad_gadget" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="rad251_tuner" ItemName="openfm:RadioTuner" Amount="1" NBTTag="" Chance="45" ItemGroup="rad_gadget" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="rad251_memory" ItemName="openfm:MemoryCard" Amount="1" NBTTag="" Chance="45" ItemGroup="rad_gadget" LimitedDropCount="1" RandomAmount="false"/>
@@ -631,7 +631,7 @@
         <Loot Identifier="rad251_screwdriver" ItemName="hbm:item.screwdriver" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="rad251_tape_head" ItemName="computronics:computronics.parts:0" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
     </LootGroup>
-    <LootGroup GroupMetaID="252" GroupName="Радиоузел связиста" Rarity="2" MinItems="2" MaxItems="4" CombineTrashGroup="false">
+    <LootGroup GroupMetaID="252" GroupName="enhancedlootbags.group.252" Rarity="2" MinItems="2" MaxItems="4" CombineTrashGroup="false">
         <Loot Identifier="rad252_radar_linker" ItemName="hbm:item.radar_linker" Amount="1" NBTTag="" Chance="30" ItemGroup="rad_control" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="rad252_designator" ItemName="hbm:item.designator" Amount="1" NBTTag="" Chance="15" ItemGroup="rad_control" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="rad252_drone_linker" ItemName="hbm:item.drone_linker" Amount="1" NBTTag="" Chance="30" ItemGroup="rad_control" LimitedDropCount="1" RandomAmount="false"/>
@@ -650,7 +650,7 @@
         <Loot Identifier="rad252_wire_gold" ItemName="hbm:item.wire_fine:7900" Amount="6" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="rad252_wire_super" ItemName="hbm:item.wire_fine:38" Amount="4" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
-    <LootGroup GroupMetaID="280" GroupName="Сумка лаборанта" Rarity="0" MinItems="3" MaxItems="4" CombineTrashGroup="true">
+    <LootGroup GroupMetaID="280" GroupName="enhancedlootbags.group.280" Rarity="0" MinItems="3" MaxItems="4" CombineTrashGroup="true">
         <Loot Identifier="ch280_pipette" ItemName="hbm:item.pipette_laboratory" Amount="1" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="ch280_chem_set" ItemName="hbm:item.chemistry_set" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="ch280_reacher" ItemName="hbm:item.reacher" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
@@ -674,7 +674,7 @@
         <Loot Identifier="ch280_powder_coal" ItemName="hbm:item.powder_coal" Amount="6" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="ch280_salt" ItemName="harvestcraft:saltItem" Amount="6" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
-    <LootGroup GroupMetaID="281" GroupName="Кейс технолога" Rarity="1" MinItems="2" MaxItems="4" CombineTrashGroup="true">
+    <LootGroup GroupMetaID="281" GroupName="enhancedlootbags.group.281" Rarity="1" MinItems="2" MaxItems="4" CombineTrashGroup="true">
         <Loot Identifier="ch281_pipette_boron" ItemName="hbm:item.pipette_boron" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="ch281_chem_boron" ItemName="hbm:item.chemistry_set_boron" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="ch281_siphon" ItemName="hbm:item.siphon" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
@@ -696,7 +696,7 @@
         <Loot Identifier="ch281_solid_fuel" ItemName="hbm:item.solid_fuel" Amount="8" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="ch281_solid_presto" ItemName="hbm:item.solid_fuel_presto" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
-    <LootGroup GroupMetaID="310" GroupName="Носимый аварийный запас" Rarity="3" MinItems="2" MaxItems="4" CombineTrashGroup="false">
+    <LootGroup GroupMetaID="310" GroupName="enhancedlootbags.group.310" Rarity="3" MinItems="2" MaxItems="4" CombineTrashGroup="false">
         <Loot Identifier="sp310_atmo_scanner" ItemName="hbm:item.atmosphere_scanner" Amount="1" NBTTag="" Chance="45" ItemGroup="naz_scanner" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sp310_dosimeter" ItemName="hbm:item.dosimeter" Amount="1" NBTTag="" Chance="40" ItemGroup="naz_scanner" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sp310_geiger" ItemName="hbm:item.geiger_counter" Amount="1" NBTTag="" Chance="35" ItemGroup="naz_scanner" LimitedDropCount="1" RandomAmount="false"/>
@@ -716,7 +716,7 @@
         <Loot Identifier="sp310_circuit_mil" ItemName="hbm:item.circuit:10" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sp310_atomic_clock" ItemName="hbm:item.circuit:21" Amount="1" NBTTag="" Chance="12" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
-    <LootGroup GroupMetaID="311" GroupName="Транспортный пенал изотопов" Rarity="3" MinItems="1" MaxItems="3" CombineTrashGroup="false">
+    <LootGroup GroupMetaID="311" GroupName="enhancedlootbags.group.311" Rarity="3" MinItems="1" MaxItems="3" CombineTrashGroup="false">
         <Loot Identifier="sp311_reacher" ItemName="hbm:item.reacher" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sp311_cell_deuterium" ItemName="hbm:item.cell_deuterium" Amount="2" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sp311_cell_tritium" ItemName="hbm:item.cell_tritium" Amount="2" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -736,7 +736,7 @@
         <Loot Identifier="sp311_cell_puf6" ItemName="hbm:item.cell_puf6" Amount="1" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sp311_cell_uf6" ItemName="hbm:item.cell_uf6" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
-    <LootGroup GroupMetaID="312" GroupName="Бортовой ремнабор" Rarity="2" MinItems="2" MaxItems="4" CombineTrashGroup="false">
+    <LootGroup GroupMetaID="312" GroupName="enhancedlootbags.group.312" Rarity="2" MinItems="2" MaxItems="4" CombineTrashGroup="false">
         <Loot Identifier="sp312_blowtorch" ItemName="hbm:item.blowtorch" Amount="1" NBTTag="" Chance="35" ItemGroup="shuttle_repair_tool" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sp312_wrench_arch" ItemName="hbm:item.wrench_archineer" Amount="1" NBTTag="" Chance="35" ItemGroup="shuttle_repair_tool" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sp312_reacher" ItemName="hbm:item.reacher" Amount="1" NBTTag="" Chance="30" ItemGroup="shuttle_repair_tool" LimitedDropCount="1" RandomAmount="false"/>

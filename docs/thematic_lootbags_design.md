@@ -965,15 +965,17 @@
 
 ## 5. Архитектура локализации
 
-1. Русские названия мешков берутся напрямую из атрибута `GroupName="..."` файла `config/EnhancedLootBags/LootBags.xml`.
-2. Мод форматирует отображаемое имя предмета через шаблон в языковом файле:
-   * Путь загрузки TxLoader: `config/txloader/forceload/enhancedlootbags/lang/ru_RU.lang`
-   * Путь ресурспака: `resourcepacks/NTNH-Modernity-2.1/assets/enhancedlootbags/lang/ru_RU.lang`
-3. Строка конфигурации:
+1. Названия мешков задаются через ключи локализации в атрибуте `GroupName="enhancedlootbags.group.<ID>"` файла `config/EnhancedLootBags/LootBags.xml`.
+2. Мод форматирует отображаемое имя предмета через вызов `StatCollector.translateToLocal(group.getGroupName())` и подставляет в шаблон:
+   * Пути языковых файлов TxLoader:
+     - `config/txloader/forceload/enhancedlootbags/lang/ru_RU.lang` (русский)
+     - `config/txloader/forceload/enhancedlootbags/lang/en_US.lang` (английский)
+3. Строка шаблона:
    ```properties
    enhancedlootbags.string.lootbag_templatename=%s
    ```
-   Благодаря подстановке `%s` мешки отображаются в инвентаре чистым названием без технических префиксов (например, *«Патронный цинк»*, а не *«LootBag: Патронный цинк»*).
+   Благодаря подстановке `%s` мешки отображаются в инвентаре чистым названием без технических префиксов (например, *«Патронный цинк»* в русской локализации и *«Sealed Ammo Can»* в английской).
+4. В качестве резервной защиты (fail-safe) в `en_US.lang` также добавлены прямые алиасы вида `Полевой санитарный подсумок=Field Medic Pouch` на случай прямого обращения по старому строковому имени.
 
 ---
 
