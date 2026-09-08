@@ -17,17 +17,28 @@
    Лут либо решает насущные задачи выживания (патроны, чистая вода, бинты, фильтры противогазов), либо существенно экономит время и ресурсы крафта (мультиметры, геосканеры, сортовые семена).
 
 3. **Трёхступенчатая шкала сохранности и объёма дропа:**
-   * 🥉 **Tier 1: Потрёпанный / Вскрытый** (`1–2 предмета`, расходники — до `2–3`). Найден на поверхности и в открытых заброшках. Содержит умеренную примесь мусора группы 0 (`CombineTrashGroup="true"`). Механика зачарования на Удачу отключена (`AllowFortuneBags=false`) для сохранения баланса.
-   * 🥈 **Tier 2: Штатный / Производственный** (`2–3 предмета`, расширенный — до `2–4`). Шкафчики заводских цехов, бытовки, лаборатории. Профильный инструмент, приборы и качественные расходники (`CombineTrashGroup="true"`).
-   * 🥇 **Tier 3: Опечатанный / Военный / Заводской** (`2–5 предметов`, либо целевой оптовый стек). Сейфы бункеров NTM, закрытые лаборатории, место крушения челнока. Высокотехнологичное оборудование и чистые материалы без примеси хлама (`CombineTrashGroup="false"`).
+   *Важное примечание по механике:* Параметры `MinItems` и `MaxItems` в моде Enhanced LootBags определяют количество **независимых типов предметов / слотов дропа** (роллов из таблицы лута), а не суммарную численность единиц в стаках. В каждом выпавшем слоте размер стака генерируется отдельно согласно параметрам `Amount` и `RandomAmount`. При этом если итоговое количество единиц одного предмета превышает размер максимального стака (например, > 64 для семян или патронов), движок `ItemLootBag` автоматически расщепляет дроп на несколько стаков через встроенный цикл `splitStack`.
+   * 🥉 **Tier 1: Потрёпанный / Вскрытый** (`2–4 типа/слота предметов`, отдельные профили — `1–3` или `2–3`). Найден на поверхности и в открытых заброшках. Содержит умеренную примесь мусора группы 0 (`CombineTrashGroup="true"`). Механика зачарования на Удачу отключена (`AllowFortuneBags=false`) для сохранения баланса.
+   * 🥈 **Tier 2: Штатный / Производственный** (`2–4 типа/слота предметов`, расширенный — `3–5` слотов). Шкафчики заводских цехов, бытовки, лаборатории. Профильный инструмент, приборы и качественные расходники (`CombineTrashGroup="true"`).
+   * 🥇 **Tier 3: Опечатанный / Военный / Заводской** (`2–5 типов/слотов предметов`, моно-наборы — `1–3` слота, либо монолитный целевой оптовый стек). Сейфы бункеров NTM, закрытые лаборатории, место крушения челнока. Высокотехнологичное оборудование и чистые материалы без примеси хлама (`CombineTrashGroup="false"`).
 
-4. **Механика группировки и взаимоисключения лута (`ItemGroup`):**
-   В моде Enhanced LootBags атрибут `ItemGroup="имя_группы"` используется для логического объединения предметов. Если нескольким позициям внутри одного лутбэга задан одинаковый `ItemGroup` (например, `ItemGroup="carp_tools"`, `ItemGroup="arch_glasses"`, `ItemGroup="geo_compass"`), движок рассматривает их как **взаимоисключающую группу**: за одно открытие лутбэга игроку может выпасть **не более одного** предмета из этой категории. Это предотвращает выпадение дубликатов инструментов одного назначения (несколько молотков, разные пары очков, несколько компасов) за одно открытие, сохраняя при этом вариативность находок от мешка к мешку.
+4. **Механика связанных комплектов (`ItemGroup` — Bundle / Неделимый набор):**
+   В моде Enhanced LootBags атрибут `ItemGroup="имя_группы"` работает как **гарантированный связанный бандл (комплект)**: при выпадении любого предмета из группы движок (`LootGroupsHandler.getItemGroupDrops`) извлекает и добавляет в дроп **абсолютно все** предметы с данным `ItemGroup` одновременно.
+   * *Применение бандлов:* Механика используется строго там, где предметы должны выпадать неразлучной связкой:
+     - Патронные комплекты в цинке Meta 101 (`pack_762_zinc` и др. — пули + гильзы + порох/доп. патроны);
+     - Сортовые комплекты семян Meta 160 (`pack_garlic` и др. — базовый стек + бонусный стек);
+     - Парные приборы (Meta 250/251: передатчик `radio_torch_sender` + приёмник `radio_torch_receiver`);
+     - Защитный комплект (Meta 10: тряпичная маска + тряпичный фильтр).
+   * *Одиночные инструменты и приборы:* Для вариативного выпадения отдельных инструментов, оптики, сканеров и накопителей атрибут `ItemGroup` **не используется** (`ItemGroup=""`), а ограничение на повторы регулируется параметром `LimitedDropCount="1"` (не более 1 копии за открытие) и весами шансов (`Chance`).
 
-5. **Модульная архитектура с запасом (шаг в 30 ID):**
+5. **Ограничение выпадения (`LimitedDropCount`):**
+   * `LimitedDropCount="1"`: предмет может выпасть максимум 1 раз (1 слот/стек) за одно открытие мешка. Используется для уникального инструмента, брони, оружия и редких приборов, чтобы исключить дубликаты.
+   * `LimitedDropCount="0"`: в коде Enhanced LootBags проверка `count <= 0` всегда возвращает `true`, что означает **неограниченное число выпадений** (предмет может быть выбран повторно в разных слотах одного открытия). Используется для базовых расходников, патронов и сырья.
+
+6. **Модульная архитектура с запасом (шаг в 30 ID):**
    Каждая специализация занимает диапазон из 30 номеров (10–39, 40–69 и т.д.). Первые номера отданы под базовые тиры (Tier 1–3), а остальные зарезервированы под узкопрофильные расширения (моно-лутбеки конкретных калибров, специализированные ЗИП, химреактивы).
 
-6. **«Маяки прогресса» (Curiosity Hooks):**
+7. **«Маяки прогресса» (Curiosity Hooks):**
    Редкие находки компонентов старших технологических эпох с низким шансом (3–8% на ролл, строго по 1 шт., без возможности немедленного использования без инфраструктуры). Подробное геймдизайнерское обоснование приведено в **разделе 7**.
 
 ---
@@ -365,7 +376,7 @@
   * `hbm:item.ammo_standard:29` (**Патрон 7.62мм FMJ**) | Кол-во: 4–8 | Вес: 45 | `RandomAmount="true"`
   * `hbm:item.pellet_buckshot` (**Картечь 12k**) | Кол-во: 4–8 | Вес: 50 | `RandomAmount="true"`
   * `hbm:item.ammo_standard:1` (**Патрон .22 LR AP**) | Кол-во: 8–16 | Вес: 40 | `RandomAmount="true"`
-  * `hbm:item.gun_kit_1` (**Оружейный набор чистки**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.gun_kit_1` (**Оружейное масло**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.casing_bag` (**Сумка гильзоулавливателя**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `minecraft:iron_ingot` (**Обрезок жестяной крышки**) | Кол-во: 1–2 | Вес: 65 | `RandomAmount="true"`
   * `minecraft:flint` (**Кремень**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`
@@ -389,9 +400,9 @@
 * *Лор:* Бронированный армейский оружейный кофр спецподразделений.
 * **Содержимое:**
   * `hbm:item.plate_kevlar` (**Лист кевлара**) | Кол-во: 1–2 | Вес: 50 | `RandomAmount="true"`
-  * `hbm:item.weapon_mod_special:0` (**Тактический глушитель**) | Кол-во: 1 | Вес: 30 | `ItemGroup="wp_attachment"` | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.weapon_mod_special:1` (**Оптический прицел**) | Кол-во: 1 | Вес: 25 | `ItemGroup="wp_attachment"` | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.weapon_mod_special:11` (**Двухрядный магазин**) | Кол-во: 1 | Вес: 25 | `ItemGroup="wp_attachment"` | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.weapon_mod_special:0` (**Тактический глушитель**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.weapon_mod_special:1` (**Оптический прицел**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.weapon_mod_special:11` (**Двухрядный магазин**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.ammo_standard:34` (**Патрон .50 BMG FMJ**) | Кол-во: 12–24 | Вес: 40 | `RandomAmount="true"`
   * `hbm:item.ammo_standard:35` (**Патрон .50 BMG AP**) | Кол-во: 8–16 | Вес: 35 | `RandomAmount="true"`
   * `hbm:item.ammo_standard:36` (**Патрон .50 BMG Зажигательный**) | Кол-во: 6–12 | Вес: 30 | `RandomAmount="true"`
@@ -403,12 +414,12 @@
   * `hbm:item.grenade_shell` (**Корпус гранаты**) | Кол-во: 1–2 | Вес: 35 | `RandomAmount="true"`
   * `hbm:item.grenade_fuze` (**Взрыватель гранаты**) | Кол-во: 1–2 | Вес: 35 | `RandomAmount="true"`
   * `hbm:item.casing:5` (**Гильза .50 BMG**) | Кол-во: 6–12 | Вес: 45 | `RandomAmount="true"`
-  * `hbm:item.stealth_boy` (**Стелс-Бой**) | Кол-во: 1 | Вес: 30 | `ItemGroup="wp_special_gear"` | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.night_vision` (**Прибор ночного видения**) | Кол-во: 1 | Вес: 20 | `ItemGroup="wp_special_gear"` | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.stealth_boy` (**Стелс-Бой**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.night_vision` (**Прибор ночного видения**) | Кол-во: 1 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.cordite` (**Кордит**) | Кол-во: 6–12 | Вес: 55 | `RandomAmount="true"`
   * `hbm:item.ammo_container` (**Патронный ящик**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.gun_kit_1` (**Оружейное масло**) | Кол-во: 1 | Вес: 35 | `ItemGroup="wp_maintenance"` | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.gun_kit_2` (**Оружейный ремнабор**) | Кол-во: 1 | Вес: 25 | `ItemGroup="wp_maintenance"` | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.gun_kit_1` (**Оружейное масло**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.gun_kit_2` (**Оружейный ремнабор**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`
 
 ---
 
@@ -581,10 +592,10 @@
   * `exnihilo:crook` (**Посох плотника**) | Кол-во: 1 | Вес: 60 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `CarpentersBlocks:blockCarpentersButton` (**Кнопка плотника**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`
   * `CarpentersBlocks:blockCarpentersTorch` (**Факел плотника**) | Кол-во: 4–8 | Вес: 50 | `RandomAmount="true"`
-  * `CarpentersBlocks:itemCarpentersHammer` (**Молоток плотника**) | Кол-во: 1 | Вес: 55 | `ItemGroup="carp_tools"` | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `CarpentersBlocks:itemCarpentersChisel` (**Стамеска Carpenter's**) | Кол-во: 1 | Вес: 55 | `ItemGroup="carp_tools"` | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `cfm:ItemHammer` (**Столярный молоток**) | Кол-во: 1 | Вес: 50 | `ItemGroup="carp_tools"` | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `BiblioCraft:item.FramingSaw` (**Каркасная пила**) | Кол-во: 1 | Вес: 50 | `ItemGroup="carp_tools"` | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `CarpentersBlocks:itemCarpentersHammer` (**Молоток плотника**) | Кол-во: 1 | Вес: 55 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `CarpentersBlocks:itemCarpentersChisel` (**Стамеска Carpenter's**) | Кол-во: 1 | Вес: 55 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `cfm:ItemHammer` (**Столярный молоток**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `BiblioCraft:item.FramingSaw` (**Каркасная пила**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.screwdriver` (**Отвёртка NTM**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `BiblioCraft:item.PlumbLine` (**Строительный отвес**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `BiblioCraft:item.tapeMeasure` (**Мерная лента**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
@@ -632,7 +643,7 @@
 
 #### 🏛️ [Meta 192] Кейс проектировщика
 * **Уровень:** 3 | **Rarity:** 2 | **Дроп:** `3 - 5` | `CombineTrashGroup="false"`
-* *Лор:* Инженерно-архитектурный кейс главного конструктора и проектировщика комплексов: буклет чертежей NTM, запас чертёжной бумаги, разметочные шнуры и нити, керамическая кружка для кофе, система пространственного CAD-прототипирования OpenBlocks (магические мелки и ластик, взаимоисключающий пул специализированных очков), профессиональный инструментарий ArchitectureCraft (станок распиловки, молот, резец, светящаяся кисть), рецептурные планы ProjectRed и редкие красители.
+* *Лор:* Инженерно-архитектурный кейс главного конструктора и проектировщика комплексов: буклет чертежей NTM, запас чертёжной бумаги, разметочные шнуры и нити, керамическая кружка для кофе, система пространственного CAD-прототипирования OpenBlocks (магические мелки и ластик, специализированные очки), профессиональный инструментарий ArchitectureCraft (станок распиловки, молот, резец, светящаяся кисть), рецептурные планы ProjectRed и редкие красители.
 * **Содержимое:**
   * `hbm:item.blueprint_folder` (**Буклет чертежей NTM**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `minecraft:paper` (**Чертёжная бумага / ватман**) | Кол-во: 8–16 | Вес: 75 | `RandomAmount="true"`
@@ -641,9 +652,9 @@
   * `hbm:item.cmug_empty` (**Керамическая кофейная кружка**) | Кол-во: 1 | Вес: 45 | `RandomAmount="false"`. *Смысл:* Неотъемлемый спутник затяжных ночных чертёжных работ.
   * `OpenBlocks:imaginary:0` (**Магический карандаш**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Рисование временных блоков-лесов в воздухе.
   * `OpenBlocks:imaginary:1` (**Цветной карандаш**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `OpenBlocks:pencilGlasses` (**Очки чертёжника**) | Кол-во: 1 | Вес: 30 | `ItemGroup="arch_glasses"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Делают нарисованные блоки твёрдыми для ходьбы.
-  * `OpenBlocks:crayonGlasses` (**Цветные очки**) | Кол-во: 1 | Вес: 30 | `ItemGroup="arch_glasses"` | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `OpenBlocks:sonicglasses` (**Звуковые очки**) | Кол-во: 1 | Вес: 25 | `ItemGroup="arch_glasses"` | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `OpenBlocks:pencilGlasses` (**Очки чертёжника**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Делают нарисованные блоки твёрдыми для ходьбы.
+  * `OpenBlocks:crayonGlasses` (**Цветные очки**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `OpenBlocks:sonicglasses` (**Звуковые очки**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `OpenBlocks:epicEraser` (**Epic Eraser**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Моментальное стирание блоков-лесов.
   * `ArchitectureCraft:hammer` (**Молоток архитектора**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `ArchitectureCraft:chisel` (**Резец архитектора**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
@@ -665,8 +676,8 @@
   * `OpenBlocks:pedometer` (**Шагомер**) | Кол-во: 1 | Вес: 60 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `OpenBlocks:flag` (**Сигнальный флаг**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`. *Смысл:* Маркировка маршрута и ориентиров в штольнях.
   * `minecraft:map` (**Карта**) | Кол-во: 1 | Вес: 80 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `minecraft:compass` (**Компас**) | Кол-во: 1 | Вес: 70 | `ItemGroup="geo_compass"` | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `BiblioCraft:item.BiblioWayPointCompass` (**Координатный компас**) | Кол-во: 1 | Вес: 50 | `ItemGroup="geo_compass"` | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `minecraft:compass` (**Компас**) | Кол-во: 1 | Вес: 70 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `BiblioCraft:item.BiblioWayPointCompass` (**Координатный компас**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `BiblioCraft:item.BiblioClipboard` (**Планшет с зажимом**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `minecraft:clock` (**Часы**) | Кол-во: 1 | Вес: 55 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `minecraft:paper` (**Бумага для схем выработок**) | Кол-во: 4–8 | Вес: 75 | `RandomAmount="true"`
@@ -689,10 +700,10 @@
 * **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 4` | `CombineTrashGroup="true"`
 * *Лор:* Комплект партии полевой геологоразведки стратегических ископаемых. Включает приборы поиска подземных резервуаров углеводородов и сканирования рудных пластов, средства радиационной разведки, документационный планшет с зажимом, маркировочные материалы, прочную верёвку для шахтных спусков, стальной молоток для колки керна, СИЗ и редкие образцы природных минералов.
 * **Содержимое:**
-  * `hbm:item.oil_detector` (**Детектор нефтяных резервуаров**) | Кол-во: 1 | Вес: 55 | `ItemGroup="geo_scanner"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Поиск подземных нефтяных линз и природного газа.
-  * `hbm:item.survey_scanner` (**Спектральный сканер руд**) | Кол-во: 1 | Вес: 50 | `ItemGroup="geo_scanner"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Определение рудных жил чанка.
-  * `hbm:item.geiger_counter` (**Полевой счётчик Гейгера**) | Кол-во: 1 | Вес: 45 | `ItemGroup="geo_scanner"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Замер радиационного фона в шахтах.
-  * `BiblioCraft:item.BiblioGlasses` (**Очки-монокль геолога**) | Кол-во: 1 | Вес: 40 | `ItemGroup="geo_scanner"` | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.oil_detector` (**Детектор нефтяных резервуаров**) | Кол-во: 1 | Вес: 55 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Поиск подземных нефтяных линз и природного газа.
+  * `hbm:item.survey_scanner` (**Спектральный сканер руд**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Определение рудных жил чанка.
+  * `hbm:item.geiger_counter` (**Полевой счётчик Гейгера**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Замер радиационного фона в шахтах.
+  * `BiblioCraft:item.BiblioGlasses` (**Очки-монокль геолога**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `BiblioCraft:item.BiblioClipboard` (**Планшет с зажимом для записей**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `minecraft:paper` (**Плотная чертёжная бумага**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
   * `modernmarkings:item.chalk` (**Маркировочный мел для шурфов**) | Кол-во: 3–6 | Вес: 60 | `RandomAmount="true"`
@@ -770,10 +781,10 @@
 * **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 4` | `CombineTrashGroup="true"`
 * *Лор:* Коробочка радиолюбителя и наладчика узла связи. Содержит радиоприёмные и контрольные гаджеты (пейджер, тюнер OpenFM, карту памяти, тестер энергосети), радиофакелы передачи команд, электронные лампы, конденсаторы, аналоговые платы, индуктивные катушки и ферриты, тонкий провод, кварцевые резонаторы, предохранители, монтажную отвёртку и магнитную головку.
 * **Содержимое:**
-  * `hbm:item.rtty_pager` (**RTTY Пейджер**) | Кол-во: 1 | Вес: 50 | `ItemGroup="rad_gadget"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Беспроводной приём текстовых и числовых команд по радиоканалу.
-  * `openfm:RadioTuner` (**Radio Tuner**) | Кол-во: 1 | Вес: 45 | `ItemGroup="rad_gadget"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Поиск и настройка радиостанций OpenFM.
-  * `openfm:MemoryCard` (**Карта памяти OpenFM**) | Кол-во: 1 | Вес: 45 | `ItemGroup="rad_gadget"` | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.power_net_tool` (**Тестер электросети**) | Кол-во: 1 | Вес: 40 | `ItemGroup="rad_gadget"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Диагностика радиоузлов и линий питания.
+  * `hbm:item.rtty_pager` (**RTTY Пейджер**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Беспроводной приём текстовых и числовых команд по радиоканалу.
+  * `openfm:RadioTuner` (**Radio Tuner**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Поиск и настройка радиостанций OpenFM.
+  * `openfm:MemoryCard` (**Карта памяти OpenFM**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.power_net_tool` (**Тестер электросети**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Диагностика радиоузлов и линий питания.
   * `hbm:tile.radio_torch_sender` (**Радиофакел-передатчик**) | Кол-во: 1 | Вес: 50 | `ItemGroup="rad_torch"` | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:tile.radio_torch_receiver` (**Радиофакел-приёмник**) | Кол-во: 1 | Вес: 50 | `ItemGroup="rad_torch"` | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.circuit:0` (**Вакуумные радиолампы**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`
@@ -790,17 +801,17 @@
 
 #### 📡 [Meta 252] Радиоузел связиста
 * **Уровень:** 3 | **Rarity:** 2 | **Дроп:** `2 - 4` | `CombineTrashGroup="false"`
-* *Лор:* Защищённый блок координации ПВО, спутниковой телеметрии и дистанционного наведения командного бункера. Содержит взаимоисключающие пульты боевого управления (лазерный целеуказатель, линкер ПВО/РЛС, контроллер логистических дронов, датчик реактора), спутниковый ID-чип, RTTY-пейджер, твердотельный накопитель, кассеты Computronics, магнитные головки, военные микросхемы и высокочастотные СВЧ-компоненты.
+* *Лор:* Защищённый блок координации ПВО, спутниковой телеметрии и дистанционного наведения командного бункера. Содержит пульты боевого управления (лазерный целеуказатель, линкер ПВО/РЛС, контроллер логистических дронов, датчик реактора), спутниковый ID-чип, RTTY-пейджер, твердотельный накопитель, кассеты Computronics, магнитные головки, военные микросхемы и высокочастотные СВЧ-компоненты.
 * **Содержимое:**
-  * `hbm:item.radar_linker` (**Радарный линкер ЗРК**) | Кол-во: 1 | Вес: 30 | `ItemGroup="rad_control"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Привязка радаров к пусковым установкам и турелям ПВО.
-  * `hbm:item.designator` (**Лазерный целеуказатель ракетных ударов**) | Кол-во: 1 | Вес: 15 | `ItemGroup="rad_control"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Редчайший ручной прибор для наведения ракет.
-  * `hbm:item.drone_linker` (**Линкер транспортных дронов**) | Кол-во: 1 | Вес: 30 | `ItemGroup="rad_control"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Маркировка станций и маршрутизация логистических дронов NTM.
-  * `hbm:item.reactor_sensor` (**Дистанционный датчик реактора**) | Кол-во: 1 | Вес: 20 | `ItemGroup="rad_control"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Телеметрия температуры и активной зоны реактора.
+  * `hbm:item.radar_linker` (**Радарный линкер ЗРК**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Привязка радаров к пусковым установкам и турелям ПВО.
+  * `hbm:item.designator` (**Лазерный целеуказатель ракетных ударов**) | Кол-во: 1 | Вес: 15 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Редчайший ручной прибор для наведения ракет.
+  * `hbm:item.drone_linker` (**Линкер транспортных дронов**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Маркировка станций и маршрутизация логистических дронов NTM.
+  * `hbm:item.reactor_sensor` (**Дистанционный датчик реактора**) | Кол-во: 1 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Телеметрия температуры и активной зоны реактора.
   * `hbm:item.sat_chip` (**Спутниковый ID-чип**) | Кол-во: 1 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Редкий чип привязки наземных терминалов к спутникам на орбите.
   * `hbm:item.rtty_pager` (**RTTY Пейджер**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Приём текстовых радиосообщений и тревожных кодов.
   * `hbm:item.hard_drive` (**Твердотельный накопитель (SSD)**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `computronics:computronics.tape:5` (**CDVR кассета данных**) | Кол-во: 1 | Вес: 20 | `ItemGroup="rad_tape"` | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `computronics:computronics.tape:2` (**Алмазная кассета высокой ёмкости**) | Кол-во: 1 | Вес: 20 | `ItemGroup="rad_tape"` | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `computronics:computronics.tape:5` (**CDVR кассета данных**) | Кол-во: 1 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `computronics:computronics.tape:2` (**Алмазная кассета высокой ёмкости**) | Кол-во: 1 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `computronics:computronics.parts:0` (**Магнитная головка**) | Кол-во: 1 | Вес: 25 | `RandomAmount="false"`
   * `OpenComputers:item:19` (**Металлические дискеты OpenComputers**) | Кол-во: 1–2 | Вес: 30 | `RandomAmount="true"`
   * `hbm:item.circuit:10` (**Военная защищённая микросхема**) | Кол-во: 1–2 | Вес: 30 | `RandomAmount="true"`. *Смысл:* Крафт военной авионики и систем наведения.
@@ -874,21 +885,21 @@
 * **Уровень:** 3 | **Rarity:** 3 (Epic) | **Дроп:** `2 - 4` | `CombineTrashGroup="false"`
 * *Лор:* Ударопрочный опечатанный гермоконтейнер автономного жизнеобеспечения, приборов первичного анализа среды и аварийной навигации космического челнока. Рассчитан на автономное выживание экипажа в условиях неизведанной планеты после аварийной посадки.
 * **Содержимое:**
-  * `hbm:item.atmosphere_scanner` (**Анализатор атмосферы**) | Кол-во: 1 | Вес: 45 | `ItemGroup="naz_scanner"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Первичная проверка пригодности атмосферы для дыхания.
-  * `hbm:item.dosimeter` (**Бортовой дозиметр**) | Кол-во: 1 | Вес: 40 | `ItemGroup="naz_scanner"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Контроль накопленной радиационной дозы.
-  * `hbm:item.geiger_counter` (**Счётчик Гейгера**) | Кол-во: 1 | Вес: 35 | `ItemGroup="naz_scanner"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Измерение текущего радиационного фона планеты.
+  * `hbm:item.atmosphere_scanner` (**Анализатор атмосферы**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Первичная проверка пригодности атмосферы для дыхания.
+  * `hbm:item.dosimeter` (**Бортовой дозиметр**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Контроль накопленной радиационной дозы.
+  * `hbm:item.geiger_counter` (**Счётчик Гейгера**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Измерение текущего радиационного фона планеты.
   * `hbm:item.canned_tube` (**Тюбик космического питания**) | Кол-во: 2–4 | Вес: 70 | `RandomAmount="true"`. *Смысл:* Сбалансированный рацион космического пайка.
   * `hbm:item.pill_iodine` (**Таблетки йода**) | Кол-во: 2–4 | Вес: 55 | `RandomAmount="true"`. *Смысл:* Профилактика радиационного поражения.
   * `hbm:item.syringe_metal_stimpak` (**Армейский стимулятор**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Экстренная медпомощь при травмах посадки.
-  * `hbm:item.gun_flaregun` (**Ракетница сигнала бедствия**) | Кол-во: 1 | Вес: 35 | `ItemGroup="naz_beacon"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Визуальная подача аварийного сигнала.
-  * `hbm:tile.radio_torch_sender` (**Радиоизотопный маяк**) | Кол-во: 1 | Вес: 35 | `ItemGroup="naz_beacon"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Непрерывный радиосигнал бедствия.
-  * `hbm:item.radar_linker` (**Радарный координатный линкер**) | Кол-во: 1 | Вес: 25 | `ItemGroup="naz_beacon"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Привязка координат точки высадки.
+  * `hbm:item.gun_flaregun` (**Ракетница сигнала бедствия**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Визуальная подача аварийного сигнала.
+  * `hbm:tile.radio_torch_sender` (**Радиоизотопный маяк**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Непрерывный радиосигнал бедствия.
+  * `hbm:item.radar_linker` (**Радарный координатный линкер**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Привязка координат точки высадки.
   * `hbm:item.photo_panel` (**Компактный фотоэлемент**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`. *Смысл:* Подзарядка аккумуляторов приборов на поверхности.
   * `hbm:item.wire_fine:7900` (**Тонкий золотой провод**) | Кол-во: 4–8 | Вес: 50 | `RandomAmount="true"`
   * `hbm:item.wire_fine:38` (**Тонкий сверхпроводящий провод**) | Кол-во: 2–4 | Вес: 35 | `RandomAmount="true"`
-  * `hbm:item.hard_drive` (**Ударопрочный накопитель данных**) | Кол-во: 1 | Вес: 35 | `ItemGroup="naz_data"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Базы данных карт и логов корабля.
-  * `computronics:computronics.tape:5` (**Бортовая CDVR-кассета**) | Кол-во: 1 | Вес: 30 | `ItemGroup="naz_data"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Аудио- и видеозаписи полёта.
-  * `OpenComputers:item:19` (**Металлические дискеты**) | Кол-во: 2–4 | Вес: 40 | `ItemGroup="naz_data"` | `RandomAmount="true"`
+  * `hbm:item.hard_drive` (**Ударопрочный накопитель данных**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Базы данных карт и логов корабля.
+  * `computronics:computronics.tape:5` (**Бортовая CDVR-кассета**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Аудио- и видеозаписи полёта.
+  * `OpenComputers:item:19` (**Металлические дискеты**) | Кол-во: 2–4 | Вес: 40 | `RandomAmount="true"`
   * `hbm:item.circuit:14` (**Плата авионики**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`. *Смысл:* Навигационный микрокомпьютер.
   * `hbm:item.circuit:10` (**Военная защищённая микросхема**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
   * `hbm:item.circuit:21` (**Атомные часы**) | Кол-во: 1 | Вес: 12 | `LimitedDropCount="1"` | `RandomAmount="false"`. `[Маяк прогресса]` (~1.8% шанс на ролл). Высокоточный квантовый хронометр синхронизации спутниковых сетей.
@@ -920,9 +931,9 @@
 * **Уровень:** 3 | **Rarity:** 2 (Rare) | **Дроп:** `2 - 4` | `CombineTrashGroup="false"`
 * *Лор:* Аварийный ЗИП шлюзового отсека для экстренной заделки пробоин обшивки шаттла, монтажа тугоплавких щитов и ремонта двигателей в открытом космосе.
 * **Содержимое:**
-  * `hbm:item.blowtorch` (**Сварочный автоген / резак NTM**) | Кол-во: 1 | Вес: 35 | `ItemGroup="shuttle_repair_tool"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Вакуумная резка и заварка титановых листов.
-  * `hbm:item.wrench_archineer` (**Гаечный ключ инженера**) | Кол-во: 1 | Вес: 35 | `ItemGroup="shuttle_repair_tool"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Монтаж силовых агрегатов челнока.
-  * `hbm:item.reacher` (**Вольфрамовый захват / манипулятор**) | Кол-во: 1 | Вес: 30 | `ItemGroup="shuttle_repair_tool"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Работа с раскалёнными деталями дюз.
+  * `hbm:item.blowtorch` (**Сварочный автоген / резак NTM**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Вакуумная резка и заварка титановых листов.
+  * `hbm:item.wrench_archineer` (**Гаечный ключ инженера**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Монтаж силовых агрегатов челнока.
+  * `hbm:item.reacher` (**Вольфрамовый захват / манипулятор**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Работа с раскалёнными деталями дюз.
   * `hbm:item.cladding_desh` (**Обшивка из деша**) | Кол-во: 1 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`. Экзотическая внешняя противометеоритная броня.
   * `hbm:item.plate_saturnite` (**Пластина сатурнита**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`. Сверхпрочный сплав внешнего контура.
   * `hbm:item.plate_armor_lunar` (**Лунная бронеплита**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`
