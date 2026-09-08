@@ -389,24 +389,26 @@
 * *Лор:* Бронированный армейский оружейный кофр спецподразделений.
 * **Содержимое:**
   * `hbm:item.plate_kevlar` (**Лист кевлара**) | Кол-во: 1–2 | Вес: 50 | `RandomAmount="true"`
-  * `hbm:item.weapon_mod_special:0` (**Тактический глушитель**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.weapon_mod_special:1` (**Оптический прицел**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.weapon_mod_special:0` (**Тактический глушитель**) | Кол-во: 1 | Вес: 30 | `ItemGroup="wp_attachment"` | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.weapon_mod_special:1` (**Оптический прицел**) | Кол-во: 1 | Вес: 25 | `ItemGroup="wp_attachment"` | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.weapon_mod_special:11` (**Двухрядный магазин**) | Кол-во: 1 | Вес: 25 | `ItemGroup="wp_attachment"` | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.ammo_standard:34` (**Патрон .50 BMG FMJ**) | Кол-во: 12–24 | Вес: 40 | `RandomAmount="true"`
   * `hbm:item.ammo_standard:35` (**Патрон .50 BMG AP**) | Кол-во: 8–16 | Вес: 35 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:36` (**Патрон .50 BMG Зажигательный**) | Кол-во: 6–12 | Вес: 30 | `RandomAmount="true"`
   * `hbm:item.ammo_standard:53` (**40-мм граната HE**) | Кол-во: 2–4 | Вес: 35 | `RandomAmount="true"`
   * `hbm:item.ammo_standard:54` (**40-мм кумулятивная граната**) | Кол-во: 1–3 | Вес: 30 | `RandomAmount="true"`
   * `hbm:item.plate_armor_hev` (**Бронеплита HEV**) | Кол-во: 1–2 | Вес: 35 | `RandomAmount="true"`
   * `hbm:item.plate_armor_titanium` (**Титановая бронеплита**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
+  * `hbm:item.plate_combine_steel` (**Пластина стали Альянса**) | Кол-во: 1–2 | Вес: 30 | `RandomAmount="true"`
   * `hbm:item.grenade_shell` (**Корпус гранаты**) | Кол-во: 1–2 | Вес: 35 | `RandomAmount="true"`
   * `hbm:item.grenade_fuze` (**Взрыватель гранаты**) | Кол-во: 1–2 | Вес: 35 | `RandomAmount="true"`
   * `hbm:item.casing:5` (**Гильза .50 BMG**) | Кол-во: 6–12 | Вес: 45 | `RandomAmount="true"`
-  * `hbm:item.stealth_boy` (**Стелс-Бой**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.stealth_boy` (**Стелс-Бой**) | Кол-во: 1 | Вес: 30 | `ItemGroup="wp_special_gear"` | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.night_vision` (**Прибор ночного видения**) | Кол-во: 1 | Вес: 20 | `ItemGroup="wp_special_gear"` | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.cordite` (**Кордит**) | Кол-во: 6–12 | Вес: 55 | `RandomAmount="true"`
   * `hbm:item.ammo_container` (**Патронный ящик**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.gun_kit_1` (**Оружейный набор I**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.plate_combine_steel` (**Пластина стали Альянса**) | Кол-во: 1–2 | Вес: 30 | `RandomAmount="true"`
-  * `hbm:item.laser_crystal_co2` (**CO2 лазерный кристалл**) | Кол-во: 1 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.ammo_standard:36` (**Патрон .50 BMG Зажигательный**) | Кол-во: 6–12 | Вес: 30 | `RandomAmount="true"`
+  * `hbm:item.gun_kit_1` (**Оружейное масло**) | Кол-во: 1 | Вес: 35 | `ItemGroup="wp_maintenance"` | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.gun_kit_2` (**Оружейный ремнабор**) | Кол-во: 1 | Вес: 25 | `ItemGroup="wp_maintenance"` | `LimitedDropCount="1"` | `RandomAmount="false"`
 
 ---
 
