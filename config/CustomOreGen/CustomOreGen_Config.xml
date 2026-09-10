@@ -67,7 +67,12 @@
 
     </ConfigSection>
 
-    <!-- ******************** Import Custom Modules ******************** -->
-    <OptionalImport file="modules/custom/*.xml" />
+    <!-- ******************** Import Custom Modules (Strict Load Order) ******************** -->
+    <!-- ValidatorImport in COG 1.2.26 calls File.listFiles() without sorting.
+         Sequential explicit imports guarantee deterministic preset inheritance across all filesystems. -->
+    <Import file="modules/custom/00_Presets.xml" />
+    <Import file="modules/custom/01_Overworld.xml" />
+    <Import file="modules/custom/02_Space_Moons.xml" />
+    <Import file="modules/custom/03_Space_Planets.xml" />
 
 </Config>
