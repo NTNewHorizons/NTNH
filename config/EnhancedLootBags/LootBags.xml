@@ -106,6 +106,7 @@
         <Loot Identifier="sec40_tripwire" ItemName="minecraft:tripwire_hook" Amount="2" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sec40_wire_copper" ItemName="hbm:item.wire_fine:2900" Amount="6" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sec40_web" ItemName="minecraft:web" Amount="2" NBTTag="" Chance="10" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sec40_bolt_steel" ItemName="hbm:item.bolt:30" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="41" GroupName="enhancedlootbags.group.41" Rarity="1" MinItems="3" MaxItems="5" CombineTrashGroup="false">
         <Loot Identifier="sec41_wd40" ItemName="hbm:item.wd40" Amount="1" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
@@ -137,6 +138,8 @@
         <Loot Identifier="sec41_pr_motor" ItemName="ProjRed|Core:projectred.core.part:15" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sec41_aux_motor" ItemName="hbm:item.weapon_mod_special:5" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sec41_sifter" ItemName="hbm:item.weapon_mod_special:27" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sec41_motor" ItemName="hbm:item.motor" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sec41_bolt_steel" ItemName="hbm:item.bolt:30" Amount="8" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="42" GroupName="enhancedlootbags.group.42" Rarity="2" MinItems="3" MaxItems="5" CombineTrashGroup="false">
         <Loot Identifier="sec42_wrench_archineer" ItemName="hbm:item.wrench_archineer" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
@@ -168,6 +171,7 @@
         <Loot Identifier="sec42_ducttape" ItemName="hbm:item.ducttape" Amount="2" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sec42_pads_rubber" ItemName="hbm:item.pads_rubber" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sec42_fuse" ItemName="hbm:item.fuse" Amount="8" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sec42_bolt_steel" ItemName="hbm:item.bolt:30" Amount="8" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="70" GroupName="enhancedlootbags.group.70" Rarity="0" MinItems="2" MaxItems="3" CombineTrashGroup="false">
         <Loot Identifier="el70_wire_copper" ItemName="hbm:item.wire_fine:2900" Amount="12" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -232,6 +236,8 @@
         <Loot Identifier="el71_pr_wire_ins_14" ItemName="ProjRed|Transmission:projectred.transmission.wire:14" Amount="24" NBTTag="" Chance="5" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="el71_pr_wire_ins_15" ItemName="ProjRed|Transmission:projectred.transmission.wire:15" Amount="24" NBTTag="" Chance="5" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="el71_pr_wire_ins_16" ItemName="ProjRed|Transmission:projectred.transmission.wire:16" Amount="24" NBTTag="" Chance="5" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="el71_motor" ItemName="hbm:item.motor" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="el71_circuit_base" ItemName="hbm:item.circuit" Amount="2" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="72" GroupName="enhancedlootbags.group.72" Rarity="2" MinItems="3" MaxItems="5" CombineTrashGroup="false">
         <Loot Identifier="el72_plate_steel" ItemName="hbm:item.plate_steel" Amount="4" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -327,27 +333,30 @@
         <Loot Identifier="wp102_gun_kit_2" ItemName="hbm:item.gun_kit_2" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
     </LootGroup>
     <LootGroup GroupMetaID="130" GroupName="enhancedlootbags.group.130" Rarity="0" MinItems="1" MaxItems="3" CombineTrashGroup="false">
-        <Loot Identifier="ck130_salt" ItemName="harvestcraft:saltItem" Amount="8" NBTTag="" Chance="90" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ck130_flint_steel" ItemName="minecraft:flint_and_steel" Amount="1" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="ck130_soap" ItemName="cfm:ItemSoap" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="ck130_recipe_book" ItemName="cfm:ItemRecipeBook" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="ck130_sol_journal" ItemName="SpiceOfLife:bookfoodjournal" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="ck130_water_bottle" ItemName="minecraft:potion" Amount="1" NBTTag="" Chance="80" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="ck130_sunflower_seeds" ItemName="harvestcraft:saltedsunflowerseedsItem" Amount="4" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ck130_crackers" ItemName="harvestcraft:crackerItem" Amount="6" NBTTag="" Chance="80" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ck130_conserve_fish" ItemName="hbm:item.canned_conserve:1" Amount="1" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="ck130_beef_jerky" ItemName="harvestcraft:beefjerkyItem" Amount="3" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ck130_conserve_pashtet" ItemName="hbm:item.canned_conserve:3" Amount="1" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="ck130_bowl" ItemName="minecraft:bowl" Amount="2" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ck130_sugar" ItemName="minecraft:sugar" Amount="6" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ck130_coal" ItemName="minecraft:coal" Amount="6" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ck130_flour" ItemName="hbm:item.flour" Amount="4" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ck130_trailmix" ItemName="harvestcraft:trailmixItem" Amount="3" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ck130_canned_beef" ItemName="hbm:item.canned_conserve:0" Amount="1" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="ck130_can_mug" ItemName="hbm:item.can_mug" Amount="1" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="ck130_glass_empty" ItemName="hbm:item.glass_empty" Amount="2" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck130_salt" ItemName="harvestcraft:saltItem" Amount="8" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck130_crackers" ItemName="harvestcraft:crackerItem" Amount="6" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck130_sugar" ItemName="minecraft:sugar" Amount="6" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck130_matches" ItemName="hbm:item.matchstick" Amount="16" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="ck130_can_empty" ItemName="hbm:item.can_empty" Amount="2" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="ck130_ring_pull" ItemName="hbm:item.ring_pull" Amount="3" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck130_ring_pull" ItemName="hbm:item.ring_pull" Amount="3" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck130_can_key" ItemName="hbm:item.can_key" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="3" RandomAmount="false"/>
+        <Loot Identifier="ck130_filter_coal" ItemName="hbm:item.filter_coal" Amount="2" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck130_knife" ItemName="cfm:ItemKnife" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ck130_flint_steel" ItemName="minecraft:flint_and_steel" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ck130_bowl" ItemName="minecraft:bowl" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="3" RandomAmount="false"/>
+        <Loot Identifier="ck130_glass_empty" ItemName="hbm:item.glass_empty" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="3" RandomAmount="false"/>
+        <Loot Identifier="ck130_plate" ItemName="cfm:ItemPlate" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="3" RandomAmount="false"/>
+        <Loot Identifier="ck130_cup" ItemName="cfm:ItemCup" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="3" RandomAmount="false"/>
+        <Loot Identifier="ck130_cmug" ItemName="hbm:item.cmug_empty" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="3" RandomAmount="false"/>
+        <Loot Identifier="ck130_wire_zinc" ItemName="hbm:item.wire_fine:3000" Amount="2" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ck130_iron_ingot" ItemName="minecraft:iron_ingot" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="ck130_recipe_book" ItemName="cfm:ItemRecipeBook" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ck130_sol_journal" ItemName="SpiceOfLife:bookfoodjournal" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ck130_soap" ItemName="cfm:ItemSoap" Amount="1" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ck130_water_bottle" ItemName="minecraft:potion" Amount="1" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ck130_canned_beef" ItemName="hbm:item.canned_conserve:0" Amount="1" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ck130_conserve_fish" ItemName="hbm:item.canned_conserve:1" Amount="1" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ck130_mre" ItemName="hbm:item.definitelyfood" Amount="1" NBTTag="" Chance="10" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="ck130_web" ItemName="minecraft:web" Amount="2" NBTTag="" Chance="10" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="131" GroupName="enhancedlootbags.group.131" Rarity="1" MinItems="2" MaxItems="3" CombineTrashGroup="false">
@@ -450,7 +459,24 @@
         <Loot Identifier="agr161_can_empty" ItemName="hbm:item.can_empty" Amount="8" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr161_crook" ItemName="exnihilo:crook" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="agr161_shears" ItemName="minecraft:shears" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="agr161_flower_pot" ItemName="minecraft:flower_pot" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr161_flower_pot" ItemName="minecraft:flower_pot" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="agr161_paper" ItemName="minecraft:paper" Amount="4" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr161_pot_0" ItemName="imc:item_colored_flower_pot:0" Amount="1" NBTTag="" Chance="2" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="agr161_pot_1" ItemName="imc:item_colored_flower_pot:1" Amount="1" NBTTag="" Chance="2" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="agr161_pot_2" ItemName="imc:item_colored_flower_pot:2" Amount="1" NBTTag="" Chance="2" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="agr161_pot_3" ItemName="imc:item_colored_flower_pot:3" Amount="1" NBTTag="" Chance="2" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="agr161_pot_4" ItemName="imc:item_colored_flower_pot:4" Amount="1" NBTTag="" Chance="2" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="agr161_pot_5" ItemName="imc:item_colored_flower_pot:5" Amount="1" NBTTag="" Chance="2" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="agr161_pot_6" ItemName="imc:item_colored_flower_pot:6" Amount="1" NBTTag="" Chance="2" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="agr161_pot_7" ItemName="imc:item_colored_flower_pot:7" Amount="1" NBTTag="" Chance="2" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="agr161_pot_8" ItemName="imc:item_colored_flower_pot:8" Amount="1" NBTTag="" Chance="2" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="agr161_pot_9" ItemName="imc:item_colored_flower_pot:9" Amount="1" NBTTag="" Chance="2" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="agr161_pot_10" ItemName="imc:item_colored_flower_pot:10" Amount="1" NBTTag="" Chance="2" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="agr161_pot_11" ItemName="imc:item_colored_flower_pot:11" Amount="1" NBTTag="" Chance="2" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="agr161_pot_12" ItemName="imc:item_colored_flower_pot:12" Amount="1" NBTTag="" Chance="2" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="agr161_pot_13" ItemName="imc:item_colored_flower_pot:13" Amount="1" NBTTag="" Chance="2" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="agr161_pot_14" ItemName="imc:item_colored_flower_pot:14" Amount="1" NBTTag="" Chance="2" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="agr161_pot_15" ItemName="imc:item_colored_flower_pot:15" Amount="1" NBTTag="" Chance="2" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="agr161_mesh" ItemName="exnihilo:mesh" Amount="4" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="162" GroupName="enhancedlootbags.group.162" Rarity="2" MinItems="2" MaxItems="3" CombineTrashGroup="false">
@@ -672,6 +698,7 @@
         <Loot Identifier="rad251_tape_head" ItemName="computronics:computronics.parts:0" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="rad251_pr_wire_red" ItemName="ProjRed|Transmission:projectred.transmission.wire:0" Amount="16" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="rad251_pr_cable_bundled" ItemName="ProjRed|Transmission:projectred.transmission.wire:17" Amount="8" NBTTag="" Chance="12" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="rad251_circuit_base" ItemName="hbm:item.circuit" Amount="2" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="252" GroupName="enhancedlootbags.group.252" Rarity="2" MinItems="2" MaxItems="4" CombineTrashGroup="false">
         <Loot Identifier="rad252_radar_linker" ItemName="hbm:item.radar_linker" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
@@ -786,18 +813,21 @@
         <Loot Identifier="sp312_saturnite" ItemName="hbm:item.plate_saturnite" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sp312_armor_lunar" ItemName="hbm:item.plate_armor_lunar" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sp312_desh_motor" ItemName="hbm:item.motor_desh" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sp312_ingot_tungsten" ItemName="hbm:item.ingot_tungsten" Amount="4" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sp312_titanium_plate" ItemName="hbm:item.plate_titanium" Amount="6" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sp312_armor_titanium" ItemName="hbm:item.plate_armor_titanium" Amount="2" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sp312_advanced_alloy" ItemName="hbm:item.plate_mixed" Amount="2" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sp312_desh_plate" ItemName="hbm:item.plate_desh" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sp312_desh_ingot" ItemName="hbm:item.ingot_desh" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp312_wire_dense" ItemName="hbm:item.wire_dense:31" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp312_wire_dense_mingrade" ItemName="hbm:item.wire_dense:31" Amount="4" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp312_wire_dense_gold" ItemName="hbm:item.wire_dense:7900" Amount="4" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp312_wire_dense_titanium" ItemName="hbm:item.wire_dense:2200" Amount="4" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp312_wire_dense_tungsten" ItemName="hbm:item.wire_dense:7400" Amount="4" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp312_wire_dense_magtung" ItemName="hbm:item.wire_dense:38" Amount="2" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sp312_wire_dense_bscco" ItemName="hbm:item.wire_dense:48" Amount="2" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sp312_pipes_steel" ItemName="hbm:item.pipes_steel" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sp312_blade_tungsten" ItemName="hbm:item.blade_tungsten" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="sp312_blade_titanium" ItemName="hbm:item.blade_titanium" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="sp312_tank_steel" ItemName="hbm:item.tank_steel" Amount="4" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sp312_canister_nitan" ItemName="hbm:item.canister_NITAN" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sp312_ae2_cable_anchor" ItemName="appliedenergistics2:item.ItemMultiPart:120" Amount="16" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sp312_ae2_quartz_torch" ItemName="appliedenergistics2:tile.BlockQuartzTorch" Amount="8" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sp312_ae2_toggle_bus" ItemName="appliedenergistics2:item.ItemMultiPart:140" Amount="8" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
