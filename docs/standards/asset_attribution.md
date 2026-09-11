@@ -97,6 +97,14 @@
 | `config/txloader/forceload/bibliocraft/textures/items/tapemeasure.png` | `BIBLIO_LEGACY` | `textures/item/tape_measure.png` | Рулетка (16x16) | 🔵 OPEN_LICENSE |
 | `config/txloader/forceload/bibliocraft/textures/items/tape.png` | `BIBLIO_LEGACY` | `textures/item/tape_reel.png` | Катушка мерной ленты (16x16) | 🔵 OPEN_LICENSE |
 
+### 4.5. 3D Модели и текстуры моделей (Models & Model Textures)
+
+| Путь в NTNH (`config/txloader/...` или `assets/...`) | ID донора | Оригинальный файл/пак | Описание / Изменения NTNH | Статус |
+| :--- | :--- | :--- | :--- | :---: |
+| `config/txloader/forceload/bibliocraft/models/OBJModelLantern.obj` | `BIBLIO_LEGACY` | `blockbench/fancy_lantern.bbmodel` | Современная 3D OBJ-модель золотого/железного фонаря, оптимизированная под координаты и группы BiblioCraft 1.7.10 (`lamp`, `lampHanger`, `wallPlate`, `topPlate`, `candle`, `glass`) | 🔵 OPEN_LICENSE |
+| `config/txloader/forceload/bibliocraft/textures/models/lantern.png` | `BIBLIO_LEGACY` | `textures/block/gold_block.png`, `chain.png` | 64x64 текстурный атлас для золотого фонаря в современной палитре Jappa Gold с поддержкой анимации пламени и цветных витражей | 🔵 OPEN_LICENSE |
+| `config/txloader/forceload/bibliocraft/textures/models/lantern_iron.png` | `BIBLIO_LEGACY` | `textures/block/gold_block.png`, `chain.png` | 64x64 текстурный атлас для железного фонаря в современной палитре Jappa Iron с поддержкой анимации пламени и цветных витражей | 🔵 OPEN_LICENSE |
+
 ---
 
 ## 5. Шаблоны писем для запроса разрешений
