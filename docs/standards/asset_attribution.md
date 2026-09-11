@@ -102,8 +102,9 @@
 | Путь в NTNH (`config/txloader/...` или `assets/...`) | ID донора | Оригинальный файл/пак | Описание / Изменения NTNH | Статус |
 | :--- | :--- | :--- | :--- | :---: |
 | `config/txloader/forceload/bibliocraft/models/OBJModelLantern.obj` | `BIBLIO_LEGACY` | `blockbench/fancy_lantern.bbmodel` | Современная 3D OBJ-модель золотого/железного фонаря, оптимизированная под координаты и группы BiblioCraft 1.7.10 (`lamp`, `lampHanger`, `wallPlate`, `topPlate`, `candle`, `glass`) | 🔵 OPEN_LICENSE |
-| `config/txloader/forceload/bibliocraft/textures/models/lantern.png` | `BIBLIO_LEGACY` | `textures/block/gold_block.png`, `chain.png` | 64x64 текстурный атлас для золотого фонаря в современной палитре Jappa Gold с поддержкой анимации пламени и цветных витражей | 🔵 OPEN_LICENSE |
-| `config/txloader/forceload/bibliocraft/textures/models/lantern_iron.png` | `BIBLIO_LEGACY` | `textures/block/gold_block.png`, `chain.png` | 64x64 текстурный атлас для железного фонаря в современной палитре Jappa Iron с поддержкой анимации пламени и цветных витражей | 🔵 OPEN_LICENSE |
+| `config/txloader/forceload/bibliocraft/textures/models/lantern.png` | `BIBLIO_LEGACY` | `textures/block/gold_block.png`, `chain.png`, `fancy_lantern_glass.png` | 64x64 текстурный атлас для золотого фонаря в палитре Jappa Gold с чистым рамным стеклом без царапин | 🔵 OPEN_LICENSE |
+| `config/txloader/forceload/bibliocraft/textures/models/lantern_iron.png` | `BIBLIO_LEGACY` | `textures/block/gold_block.png`, `chain.png`, `fancy_lantern_glass.png` | 64x64 текстурный атлас для железного фонаря в палитре Jappa Iron с чистым рамным стеклом без царапин | 🔵 OPEN_LICENSE |
+| `config/txloader/forceload/bibliocraft/textures/models/lanternCandle*.png` | `BIBLIO_LEGACY` | `candle_lit.png` | 16x16 текстуры свечи (0-15) для фонарей: воск в 16 цветах красителей, чёрный фитиль и яркое горящее пламя | 🔵 OPEN_LICENSE |
 
 ---
 
