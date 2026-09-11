@@ -9,6 +9,30 @@
         <Loot Identifier="trash_ring_pull" ItemName="hbm:item.ring_pull" Amount="3" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="trash_mask_piss" ItemName="hbm:item.mask_piss" Amount="1" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
     </LootGroup>
+    <LootGroup GroupMetaID="1" GroupName="enhancedlootbags.group.1" Rarity="0" MinItems="1" MaxItems="2" CombineTrashGroup="false">
+        <Loot Identifier="legacy1_iron" ItemName="minecraft:iron_ingot" Amount="2" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="legacy1_bread" ItemName="minecraft:bread" Amount="2" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+    </LootGroup>
+    <LootGroup GroupMetaID="2" GroupName="enhancedlootbags.group.2" Rarity="1" MinItems="1" MaxItems="2" CombineTrashGroup="false">
+        <Loot Identifier="legacy2_iron" ItemName="minecraft:iron_ingot" Amount="4" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="legacy2_gold" ItemName="minecraft:gold_ingot" Amount="2" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+    </LootGroup>
+    <LootGroup GroupMetaID="3" GroupName="enhancedlootbags.group.3" Rarity="2" MinItems="1" MaxItems="2" CombineTrashGroup="false">
+        <Loot Identifier="legacy3_iron" ItemName="minecraft:iron_ingot" Amount="6" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="legacy3_gold" ItemName="minecraft:gold_ingot" Amount="4" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+    </LootGroup>
+    <LootGroup GroupMetaID="4" GroupName="enhancedlootbags.group.4" Rarity="3" MinItems="1" MaxItems="2" CombineTrashGroup="false">
+        <Loot Identifier="legacy4_gold" ItemName="minecraft:gold_ingot" Amount="6" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="legacy4_diamond" ItemName="minecraft:diamond" Amount="2" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+    </LootGroup>
+    <LootGroup GroupMetaID="5" GroupName="enhancedlootbags.group.5" Rarity="4" MinItems="1" MaxItems="2" CombineTrashGroup="false">
+        <Loot Identifier="legacy5_diamond" ItemName="minecraft:diamond" Amount="4" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="legacy5_gold" ItemName="minecraft:gold_ingot" Amount="8" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+    </LootGroup>
+    <LootGroup GroupMetaID="999" GroupName="enhancedlootbags.group.999" Rarity="2" MinItems="1" MaxItems="2" CombineTrashGroup="false">
+        <Loot Identifier="legacy999_iron" ItemName="minecraft:iron_ingot" Amount="6" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="legacy999_gold" ItemName="minecraft:gold_ingot" Amount="4" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+    </LootGroup>
     <LootGroup GroupMetaID="10" GroupName="enhancedlootbags.group.10" Rarity="0" MinItems="2" MaxItems="4" CombineTrashGroup="false">
         <Loot Identifier="med10_rag" ItemName="hbm:item.rag" Amount="6" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="med10_cotton" ItemName="harvestcraft:wovencottonItem" Amount="4" NBTTag="" Chance="90" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>

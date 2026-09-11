@@ -1,134 +1,134 @@
-{
-  "preRequisites:9": {
-    "0:10": {
-      "questIDHigh:4": 0,
-      "questIDLow:4": 58
-    }
-  },
-  "properties:10": {
-    "betterquesting:10": {
-      "autoClaim:1": 0,
-      "completion_animation:8": "default",
-      "completion_particle:8": "default",
-      "confetti_icon:10": {
-        "Count:3": 0,
-        "Damage:2": 0,
-        "OreDict:8": "",
-        "id:8": "minecraft:stick"
-      },
-      "countAsQuest:1": 1,
-      "desc:8": "The §3Electric Arc Furnace§r is a large automated furnace multiblock machine that can fill the role of §3Crucible§r and automated smelter, and is required for progression as it is the only machine that can produce §6Silicon§r from various sources, such as §6Sand§r, §6Flint§r, §6fiberglass§r, and §6Asbestos§r.\n\nTo operate this machine, it will require both electrical power and crafted §7§6Electrodes§r. In terms of electricity, the machine has a maximum storage capacity of §e2.5MHE§r, and consumes §e20kHE/s§r in operation, making it reasonably power hungry. In terms of the electrodes required for operation, there are four types available, and the machine must have three installed before it can operate.\n\nThis machine can operate in two different modes: Solid mode, which is the easiest to setup and use, great for initial crafting, and Liquid mode, which produces castable molten ores much like the crucible, with a small bonus to output, increasing efficiency of extraction from various ores.",
-      "globalShare:1": 0,
-      "icon:10": {
-        "Count:3": 1,
-        "Damage:2": 0,
-        "OreDict:8": "",
-        "id:8": "hbm:tile.machine_arc_furnace"
-      },
-      "isMain:1": 1,
-      "isSilent:1": 0,
-      "lockedProgress:1": 0,
-      "name:8": "Electric Arc Furnace",
-      "notification_duration:5": -1.0,
-      "notification_effect:3": -1,
-      "notification_fade_in:5": -1.0,
-      "notification_fade_out:5": -1.0,
-      "notification_icon_offset_y:3": -2147483648,
-      "notification_icon_scale:5": -1.0,
-      "notification_pos_x:3": -2147483648,
-      "notification_pos_y:3": -2147483648,
-      "notification_show_icon:8": "default",
-      "notification_style:8": "default",
-      "notification_subtitle:8": "",
-      "notification_subtitle_scale:5": -1.0,
-      "notification_title:8": "",
-      "notification_title_scale:5": -1.0,
-      "particle_count:3": -1,
-      "questLogic:8": "AND",
-      "repeatTime:3": -1,
-      "repeat_relative:1": 1,
-      "simultaneous:1": 0,
-      "snd_complete:8": "random.levelup",
-      "snd_update:8": "random.levelup",
-      "taskLogic:8": "AND",
-      "visibility:8": "NORMAL"
-    }
-  },
-  "questIDHigh:4": 0,
-  "questIDLow:4": 30,
-  "rewards:9": {
-    "0:10": {
-      "ignoreDisabled:1": 0,
-      "index:3": 0,
-      "rewardID:8": "bq_standard:item",
-      "rewards:9": {
-        "0:10": {
-          "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
-          "id:8": "amazingtrophies:trophy",
-          "tag:10": {
-            "trophyID:8": "arc_furnace"
-          }
-        }
-      }
-    },
-    "1:10": {
-      "choices:9": {
-        "0:10": {
-          "Count:3": 16,
-          "Damage:2": 0,
-          "OreDict:8": "",
-          "id:8": "hbm:item.billet_silicon"
-        },
-        "1:10": {
-          "Count:3": 1,
-          "Damage:2": 2,
-          "OreDict:8": "",
-          "id:8": "enhancedlootbags:lootbag"
-        }
-      },
-      "ignoreDisabled:1": 0,
-      "index:3": 1,
-      "rewardID:8": "bq_standard:choice"
-    }
-  },
-  "tasks:9": {
-    "0:10": {
-      "autoConsume:1": 0,
-      "consume:1": 0,
-      "groupDetect:1": 0,
-      "ignoreNBT:1": 0,
-      "index:3": 0,
-      "partialMatch:1": 1,
-      "requireOnlyOneItem:1": 0,
-      "requiredItems:9": {
-        "0:10": {
-          "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
-          "id:8": "hbm:tile.machine_arc_furnace"
-        }
-      },
-      "taskID:8": "bq_standard:retrieval"
-    },
-    "1:10": {
-      "autoConsume:1": 0,
-      "consume:1": 0,
-      "groupDetect:1": 0,
-      "ignoreNBT:1": 1,
-      "index:3": 1,
-      "partialMatch:1": 1,
-      "requireOnlyOneItem:1": 0,
-      "requiredItems:9": {
-        "0:10": {
-          "Count:3": 3,
-          "Damage:2": 0,
-          "OreDict:8": "",
-          "id:8": "hbm:item.arc_electrode"
-        }
-      },
-      "taskID:8": "bq_standard:optional_retrieval"
-    }
-  }
+﻿{
+    "preRequisites:9":  {
+                            "0:10":  {
+                                         "questIDHigh:4":  0,
+                                         "questIDLow:4":  58
+                                     }
+                        },
+    "properties:10":  {
+                          "betterquesting:10":  {
+                                                    "autoClaim:1":  0,
+                                                    "completion_animation:8":  "default",
+                                                    "completion_particle:8":  "default",
+                                                    "confetti_icon:10":  {
+                                                                             "Count:3":  0,
+                                                                             "Damage:2":  0,
+                                                                             "OreDict:8":  "",
+                                                                             "id:8":  "minecraft:stick"
+                                                                         },
+                                                    "countAsQuest:1":  1,
+                                                    "desc:8":  "The §3Electric Arc Furnace§r is a large automated furnace multiblock machine that can fill the role of §3Crucible§r and automated smelter, and is required for progression as it is the only machine that can produce §6Silicon§r from various sources, such as §6Sand§r, §6Flint§r, §6fiberglass§r, and §6Asbestos§r.\n\nTo operate this machine, it will require both electrical power and crafted §7§6Electrodes§r. In terms of electricity, the machine has a maximum storage capacity of §e2.5MHE§r, and consumes §e20kHE/s§r in operation, making it reasonably power hungry. In terms of the electrodes required for operation, there are four types available, and the machine must have three installed before it can operate.\n\nThis machine can operate in two different modes: Solid mode, which is the easiest to setup and use, great for initial crafting, and Liquid mode, which produces castable molten ores much like the crucible, with a small bonus to output, increasing efficiency of extraction from various ores.",
+                                                    "globalShare:1":  0,
+                                                    "icon:10":  {
+                                                                    "Count:3":  1,
+                                                                    "Damage:2":  0,
+                                                                    "OreDict:8":  "",
+                                                                    "id:8":  "hbm:tile.machine_arc_furnace"
+                                                                },
+                                                    "isMain:1":  1,
+                                                    "isSilent:1":  0,
+                                                    "lockedProgress:1":  0,
+                                                    "name:8":  "Electric Arc Furnace",
+                                                    "notification_duration:5":  -1.0,
+                                                    "notification_effect:3":  -1,
+                                                    "notification_fade_in:5":  -1.0,
+                                                    "notification_fade_out:5":  -1.0,
+                                                    "notification_icon_offset_y:3":  -2147483648,
+                                                    "notification_icon_scale:5":  -1.0,
+                                                    "notification_pos_x:3":  -2147483648,
+                                                    "notification_pos_y:3":  -2147483648,
+                                                    "notification_show_icon:8":  "default",
+                                                    "notification_style:8":  "default",
+                                                    "notification_subtitle:8":  "",
+                                                    "notification_subtitle_scale:5":  -1.0,
+                                                    "notification_title:8":  "",
+                                                    "notification_title_scale:5":  -1.0,
+                                                    "particle_count:3":  -1,
+                                                    "questLogic:8":  "AND",
+                                                    "repeatTime:3":  -1,
+                                                    "repeat_relative:1":  1,
+                                                    "simultaneous:1":  0,
+                                                    "snd_complete:8":  "random.levelup",
+                                                    "snd_update:8":  "random.levelup",
+                                                    "taskLogic:8":  "AND",
+                                                    "visibility:8":  "NORMAL"
+                                                }
+                      },
+    "questIDHigh:4":  0,
+    "questIDLow:4":  30,
+    "rewards:9":  {
+                      "0:10":  {
+                                   "ignoreDisabled:1":  0,
+                                   "index:3":  0,
+                                   "rewardID:8":  "bq_standard:item",
+                                   "rewards:9":  {
+                                                     "0:10":  {
+                                                                  "Count:3":  1,
+                                                                  "Damage:2":  0,
+                                                                  "OreDict:8":  "",
+                                                                  "id:8":  "amazingtrophies:trophy",
+                                                                  "tag:10":  {
+                                                                                 "trophyID:8":  "arc_furnace"
+                                                                             }
+                                                              }
+                                                 }
+                               },
+                      "1:10":  {
+                                   "choices:9":  {
+                                                     "0:10":  {
+                                                                  "Count:3":  16,
+                                                                  "Damage:2":  0,
+                                                                  "OreDict:8":  "",
+                                                                  "id:8":  "hbm:item.billet_silicon"
+                                                              },
+                                                     "1:10":  {
+                                                                  "Count:3":  1,
+                                                                  "Damage:2":  71,
+                                                                  "OreDict:8":  "",
+                                                                  "id:8":  "enhancedlootbags:lootbag"
+                                                              }
+                                                 },
+                                   "ignoreDisabled:1":  0,
+                                   "index:3":  1,
+                                   "rewardID:8":  "bq_standard:choice"
+                               }
+                  },
+    "tasks:9":  {
+                    "0:10":  {
+                                 "autoConsume:1":  0,
+                                 "consume:1":  0,
+                                 "groupDetect:1":  0,
+                                 "ignoreNBT:1":  0,
+                                 "index:3":  0,
+                                 "partialMatch:1":  1,
+                                 "requireOnlyOneItem:1":  0,
+                                 "requiredItems:9":  {
+                                                         "0:10":  {
+                                                                      "Count:3":  1,
+                                                                      "Damage:2":  0,
+                                                                      "OreDict:8":  "",
+                                                                      "id:8":  "hbm:tile.machine_arc_furnace"
+                                                                  }
+                                                     },
+                                 "taskID:8":  "bq_standard:retrieval"
+                             },
+                    "1:10":  {
+                                 "autoConsume:1":  0,
+                                 "consume:1":  0,
+                                 "groupDetect:1":  0,
+                                 "ignoreNBT:1":  1,
+                                 "index:3":  1,
+                                 "partialMatch:1":  1,
+                                 "requireOnlyOneItem:1":  0,
+                                 "requiredItems:9":  {
+                                                         "0:10":  {
+                                                                      "Count:3":  3,
+                                                                      "Damage:2":  0,
+                                                                      "OreDict:8":  "",
+                                                                      "id:8":  "hbm:item.arc_electrode"
+                                                                  }
+                                                     },
+                                 "taskID:8":  "bq_standard:optional_retrieval"
+                             }
+                }
 }
