@@ -45,6 +45,7 @@
 | `MOD_EXTRA` | **Modernity Extra (Unofficial)** | margatroidu | [CurseForge Project](https://www.curseforge.com/minecraft/texture-packs/unofficial-modernity-extra/) | 🔵 Open / Mentioned | Указан в титрах пака |
 | `NTM_VANIL` | **NTM Vanilled** | TheVitya2127 | [Modrinth Project](https://modrinth.com/resourcepack/ntm-vanilled) | 🔵 Open / Mentioned | Указан в титрах пака |
 | `BIBLIO_LEGACY` | **Bibliocraft-Legacy** | MinecraftschurliMods | [GitHub Repository](https://github.com/MinecraftschurliMods/Bibliocraft-Legacy) | 🔵 OPEN_LICENSE (MIT) | [MIT License](https://github.com/MinecraftschurliMods/Bibliocraft-Legacy/blob/main/LICENSE) |
+| `COLOURFUL_GUI` | **Colourful Containers** | psdKingybu | [CurseForge Project](https://www.curseforge.com/minecraft/texture-packs/colourful-containers-gui) | 🟡 PENDING (Local/Dev) | [GitHub Source](https://github.com/psdKingybu/colourful-containers) |
 
 *(При добавлении новых авторов вносите новую строку с уникальным `ID донора`).*
 
@@ -72,6 +73,17 @@
 | `config/txloader/forceload/bibliocraft/textures/gui/genericshelfGUI.png` | `BIBLIO_LEGACY` | `textures/gui/shelf.png` | Интерфейс обычной настенной полки | 🔵 OPEN_LICENSE |
 | `config/txloader/forceload/bibliocraft/textures/gui/slottedbookGUI.png` | `BIBLIO_LEGACY` | `textures/gui/slotted_book.png` | Интерфейс книги-тайника | 🔵 OPEN_LICENSE |
 | `config/txloader/forceload/bibliocraft/textures/gui/stockcatalogGUI.png` | `BIBLIO_LEGACY` | `textures/gui/stockroom_catalog.png` | Интерфейс каталога склада | 🔵 OPEN_LICENSE |
+| `resourcepacks/NTNH-Modernity-2.1/assets/minecraft/textures/gui/container/crafting_table.png` | `COLOURFUL_GUI` | `crafting_table.png` | Тематический интерфейс верстака с инструментами | 🟡 PENDING |
+| `resourcepacks/NTNH-Modernity-2.1/assets/minecraft/textures/gui/container/furnace.png` | `COLOURFUL_GUI` | `furnace.png` | Тематический интерфейс печи | 🟡 PENDING |
+| `resourcepacks/NTNH-Modernity-2.1/assets/minecraft/textures/gui/container/blast_furnace.png` | `COLOURFUL_GUI` | `blast_furnace.png` | Тематический интерфейс плавильни с решетками | 🟡 PENDING |
+| `resourcepacks/NTNH-Modernity-2.1/assets/minecraft/textures/gui/container/smoker.png` | `COLOURFUL_GUI` | `smoker.png` | Тематический интерфейс коптильни | 🟡 PENDING |
+| `resourcepacks/NTNH-Modernity-2.1/assets/minecraft/textures/gui/container/brewing_stand.png` | `COLOURFUL_GUI` | `brewing_stand.png` | Интерфейс варочной стойки с индикатором зелий | 🟡 PENDING |
+| `resourcepacks/NTNH-Modernity-2.1/assets/minecraft/textures/gui/container/enchanting_table.png` | `COLOURFUL_GUI` | `enchanting_table.png` | Интерфейс стола зачарований с книгой и лазуритом | 🟡 PENDING |
+| `resourcepacks/NTNH-Modernity-2.1/assets/minecraft/textures/gui/container/anvil.png` | `COLOURFUL_GUI` | `anvil.png` | Тематический интерфейс наковальни | 🟡 PENDING |
+| `resourcepacks/NTNH-Modernity-2.1/assets/minecraft/textures/gui/container/dispenser.png` | `COLOURFUL_GUI` | `dispenser.png` | Тематический интерфейс раздатчика/выбрасывателя | 🟡 PENDING |
+| `resourcepacks/NTNH-Modernity-2.1/assets/minecraft/textures/gui/container/hopper.png` | `COLOURFUL_GUI` | `hopper.png` | Тематический интерфейс воронки | 🟡 PENDING |
+| `resourcepacks/NTNH-Modernity-2.1/assets/minecraft/textures/gui/container/beacon.png` | `COLOURFUL_GUI` | `beacon.png` | Интерфейс маяка со свитком | 🟡 PENDING |
+| `resourcepacks/NTNH-Modernity-2.1/assets/etfuturum/textures/gui/container/smithing.png` | `COLOURFUL_GUI` | `legacy_smithing.png` | Тематический интерфейс кузнечного стола Et Futurum (2-slot) | 🟡 PENDING |
 
 ### 4.2. Руды и материалы (Ores & Materials)
 
