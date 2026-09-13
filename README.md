@@ -137,6 +137,13 @@
         <sub><b>2739 words</b></sub>
       </td>
       <td align="center" valign="top">
+        <a href="https://crowdin.com/profile/Othix"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17820091/medium/0ed3b80276aa1d1bfc486c608420f120.png" />
+          <br />
+          <sub><b>Othix</b></sub></a>
+        <br />
+        <sub><b>5236 words</b></sub>
+      </td>
+      <td align="center" valign="top">
         <a href="https://crowdin.com/profile/1595942365"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17677480/medium/851fca91ce277a6af2f84455764457bd.jpeg" />
           <br />
           <sub><b>night star</b></sub>
@@ -144,13 +151,6 @@
           <sub><b>(1595942365)</b></sub></a>
         <br />
         <sub><b>2352 words</b></sub>
-      </td>
-      <td align="center" valign="top">
-        <a href="https://crowdin.com/profile/Othix"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17820091/medium/0ed3b80276aa1d1bfc486c608420f120.png" />
-          <br />
-          <sub><b>Othix</b></sub></a>
-        <br />
-        <sub><b>4177 words</b></sub>
       </td>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/Scumbrt"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17781689/medium/803ed2c55c1f11c1bbce3631395beea0.png" />
