@@ -2,7 +2,8 @@
 
 ## What's changed?
 **Added**
-* 
+* Armor sets have descriptions saying if they protect from Nether heat
+* Paniclecraft
 
 
 
@@ -12,7 +13,10 @@
 
 
 **Changed**
-* Reworked ore generation making it MUCH MORE STABLE
+* Reworked ore generation making it MUCH MORE STABLE (as far as we tested it)
+* Now bedrock ore has oredict
+* No more cosmetic burning
+* Optimized background images in the loading screen and main menu, saving WHOLE 7MB
 
 
 
