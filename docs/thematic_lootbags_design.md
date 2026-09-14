@@ -385,11 +385,11 @@
   * `minecraft:gunpowder` (**Порох**) | Кол-во: 4–8 | Вес: 70 | `RandomAmount="true"`
   * `hbm:item.powder_lead` (**Свинцовый порошок**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`
   * `hbm:item.debris_shrapnel` (**Шрапнель / картечь**) | Кол-во: 8–16 | Вес: 60 | `RandomAmount="true"`
-  * `hbm:item.ammo_standard:21` (**Патрон 9мм FMJ**) | Кол-во: 4–8 | Вес: 50 | `RandomAmount="true"`
-  * `hbm:item.ammo_standard:25` (**Патрон 5.56мм FMJ**) | Кол-во: 4–8 | Вес: 45 | `RandomAmount="true"`
-  * `hbm:item.ammo_standard:29` (**Патрон 7.62мм FMJ**) | Кол-во: 4–8 | Вес: 45 | `RandomAmount="true"`
-  * `hbm:item.pellet_buckshot` (**Картечь 12k**) | Кол-во: 4–8 | Вес: 50 | `RandomAmount="true"`
-  * `hbm:item.ammo_standard:1` (**Патрон .22 LR AP**) | Кол-во: 8–16 | Вес: 40 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:23` (**Патрон 9мм FMJ**) | Кол-во: 4–8 | Вес: 50 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:27` (**Патрон 5.56мм FMJ**) | Кол-во: 4–8 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:31` (**Патрон 7.62мм FMJ**) | Кол-во: 4–8 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:46` (**Патрон 12k Картечь**) | Кол-во: 4–8 | Вес: 50 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:19` (**Патрон .22 LR FMJ**) | Кол-во: 8–16 | Вес: 40 | `RandomAmount="true"`
   * `hbm:item.gun_kit_1` (**Оружейное масло**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.casing_bag` (**Сумка гильзоулавливателя**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `minecraft:iron_ingot` (**Обрезок жестяной крышки**) | Кол-во: 1–2 | Вес: 65 | `RandomAmount="true"`
@@ -400,36 +400,55 @@
 #### 🎖️ [Meta 101] Запечатанный патронный цинк
 * **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `1` (Моно-навал) | `CombineTrashGroup="false"`
 * *Лор:* Заводской оцинкованный ящик в консервационной пушечной смазке, герметично запаянный на оборонном заводе. Вскрывается со скрежетом и гарантированно выдаёт полноценную заводскую укладку боеприпасов строго одного калибра — без примеси постороннего хлама.
-* **Калиберные комплекты (`ItemGroup`):** Ровно один гарантированный ролл (`MinItems="1" MaxItems="1"`) выбирает один из 7 калибров, а движок через `getItemGroupDrops` выдаёт абсолютно все связанные компоненты выбранной партии:
+* **Калиберные комплекты (`ItemGroup`):** Ровно один гарантированный ролл (`MinItems="1" MaxItems="1"`) выбирает один из 9 калибров, а движок через `getItemGroupDrops` выдаёт абсолютно все связанные компоненты выбранной партии:
   * **Партия 7.62×39 мм (`pack_762_zinc`, Вес: 85):**
-    * `hbm:item.ammo_standard:29` (**7.62мм FMJ**) | Кол-во: 64 | Вес: 85 | `ItemGroup="pack_762_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:31` (**7.62мм AP**) | Кол-во: 16 | Вес: 85 | `ItemGroup="pack_762_zinc"` | `RandomAmount="false"`
-    * `hbm:item.casing:1` (**Малая стальная гильза**) | Кол-во: 32 | Вес: 85 | `ItemGroup="pack_762_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:31` (**7.62мм FMJ**) | Кол-во: 64 | Вес: 85 | `ItemGroup="pack_762_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:33` (**7.62мм AP**) | Кол-во: 16 | Вес: 85 | `ItemGroup="pack_762_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:32` (**7.62мм JHP**) | Кол-во: 16 | Вес: 85 | `ItemGroup="pack_762_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:84` (**7.62мм Разрывной HE**) | Кол-во: 8 | Вес: 85 | `ItemGroup="pack_762_zinc"` | `RandomAmount="false"`
+    * `hbm:item.casing:2` (**Малая стальная гильза**) | Кол-во: 32 | Вес: 85 | `ItemGroup="pack_762_zinc"` | `RandomAmount="false"`
   * **Партия 5.56×45 мм (`pack_556_zinc`, Вес: 85):**
-    * `hbm:item.ammo_standard:25` (**5.56мм FMJ**) | Кол-во: 64 | Вес: 85 | `ItemGroup="pack_556_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:26` (**5.56мм AP**) | Кол-во: 16 | Вес: 85 | `ItemGroup="pack_556_zinc"` | `RandomAmount="false"`
-    * `hbm:item.casing:1` (**Малая стальная гильза**) | Кол-во: 32 | Вес: 85 | `ItemGroup="pack_556_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:27` (**5.56мм FMJ**) | Кол-во: 64 | Вес: 85 | `ItemGroup="pack_556_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:29` (**5.56мм AP**) | Кол-во: 16 | Вес: 85 | `ItemGroup="pack_556_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:28` (**5.56мм JHP**) | Кол-во: 16 | Вес: 85 | `ItemGroup="pack_556_zinc"` | `RandomAmount="false"`
+    * `hbm:item.casing:2` (**Малая стальная гильза**) | Кол-во: 32 | Вес: 85 | `ItemGroup="pack_556_zinc"` | `RandomAmount="false"`
   * **Партия 9×19 мм Parabellum (`pack_9mm_zinc`, Вес: 80):**
-    * `hbm:item.ammo_standard:21` (**9мм FMJ**) | Кол-во: 64 | Вес: 80 | `ItemGroup="pack_9mm_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:22` (**9мм AP**) | Кол-во: 32 | Вес: 80 | `ItemGroup="pack_9mm_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:23` (**9мм HP**) | Кол-во: 32 | Вес: 80 | `ItemGroup="pack_9mm_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:23` (**9мм FMJ**) | Кол-во: 64 | Вес: 80 | `ItemGroup="pack_9mm_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:25` (**9мм AP**) | Кол-во: 32 | Вес: 80 | `ItemGroup="pack_9mm_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:24` (**9мм JHP**) | Кол-во: 32 | Вес: 80 | `ItemGroup="pack_9mm_zinc"` | `RandomAmount="false"`
     * `hbm:item.casing:0` (**Малая бронзовая гильза**) | Кол-во: 48 | Вес: 80 | `ItemGroup="pack_9mm_zinc"` | `RandomAmount="false"`
   * **Партия 12 Gauge (`pack_12ga_zinc`, Вес: 75):**
-    * `hbm:item.pellet_buckshot` (**Картечь**) | Кол-во: 32 | Вес: 75 | `ItemGroup="pack_12ga_zinc"` | `RandomAmount="false"`
-    * `hbm:item.casing:4` (**Пластиковая гильза 12k**) | Кол-во: 24 | Вес: 75 | `ItemGroup="pack_12ga_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:46` (**12k Картечь**) | Кол-во: 32 | Вес: 75 | `ItemGroup="pack_12ga_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:47` (**12k Пуля Slug**) | Кол-во: 16 | Вес: 75 | `ItemGroup="pack_12ga_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:48` (**12k Флешетты**) | Кол-во: 16 | Вес: 75 | `ItemGroup="pack_12ga_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:49` (**12k Магнум**) | Кол-во: 16 | Вес: 75 | `ItemGroup="pack_12ga_zinc"` | `RandomAmount="false"`
+    * `hbm:item.casing:5` (**Пластиковая гильза 12k**) | Кол-во: 24 | Вес: 75 | `ItemGroup="pack_12ga_zinc"` | `RandomAmount="false"`
     * `hbm:item.cordite` (**Кордит**) | Кол-во: 8 | Вес: 75 | `ItemGroup="pack_12ga_zinc"` | `RandomAmount="false"`
   * **Партия .22 LR (`pack_22lr_zinc`, Вес: 65):**
-    * `hbm:item.ammo_standard:0` (**.22 LR FMJ**) | Кол-во: 64 | Вес: 65 | `ItemGroup="pack_22lr_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:1` (**.22 LR AP**) | Кол-во: 32 | Вес: 65 | `ItemGroup="pack_22lr_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:19` (**.22 LR FMJ**) | Кол-во: 64 | Вес: 65 | `ItemGroup="pack_22lr_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:21` (**.22 LR AP**) | Кол-во: 32 | Вес: 65 | `ItemGroup="pack_22lr_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:20` (**.22 LR JHP**) | Кол-во: 32 | Вес: 65 | `ItemGroup="pack_22lr_zinc"` | `RandomAmount="false"`
     * `hbm:item.casing:0` (**Малая бронзовая гильза**) | Кол-во: 32 | Вес: 65 | `ItemGroup="pack_22lr_zinc"` | `RandomAmount="false"`
   * **Партия .44 / .357 Magnum (`pack_magnum_zinc`, Вес: 60):**
-    * `hbm:item.ammo_standard:4` (**.44 Magnum**) | Кол-во: 32 | Вес: 60 | `ItemGroup="pack_magnum_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:6` (**.357 Magnum обойма**) | Кол-во: 4 | Вес: 60 | `ItemGroup="pack_magnum_zinc"` | `RandomAmount="false"`
-    * `hbm:item.casing:2` (**Большая бронзовая гильза**) | Кол-во: 24 | Вес: 60 | `ItemGroup="pack_magnum_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:14` (**.44 Magnum FMJ**) | Кол-во: 32 | Вес: 60 | `ItemGroup="pack_magnum_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:16` (**.44 Magnum AP**) | Кол-во: 16 | Вес: 60 | `ItemGroup="pack_magnum_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:8` (**.357 Magnum FMJ**) | Кол-во: 32 | Вес: 60 | `ItemGroup="pack_magnum_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:10` (**.357 Magnum AP**) | Кол-во: 16 | Вес: 60 | `ItemGroup="pack_magnum_zinc"` | `RandomAmount="false"`
+    * `hbm:item.casing:1` (**Большая бронзовая гильза**) | Кол-во: 24 | Вес: 60 | `ItemGroup="pack_magnum_zinc"` | `RandomAmount="false"`
+  * **Партия .45 ACP (`pack_45acp_zinc`, Вес: 70):**
+    * `hbm:item.ammo_standard:88` (**.45 ACP FMJ**) | Кол-во: 64 | Вес: 70 | `ItemGroup="pack_45acp_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:90` (**.45 ACP AP**) | Кол-во: 16 | Вес: 70 | `ItemGroup="pack_45acp_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:89` (**.45 ACP JHP**) | Кол-во: 16 | Вес: 70 | `ItemGroup="pack_45acp_zinc"` | `RandomAmount="false"`
+    * `hbm:item.casing:0` (**Малая бронзовая гильза**) | Кол-во: 32 | Вес: 70 | `ItemGroup="pack_45acp_zinc"` | `RandomAmount="false"`
+  * **Партия 10 Gauge (`pack_10ga_zinc`, Вес: 55):**
+    * `hbm:item.ammo_standard:80` (**10k Картечь**) | Кол-во: 24 | Вес: 55 | `ItemGroup="pack_10ga_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:81` (**10k Шрапнель**) | Кол-во: 16 | Вес: 55 | `ItemGroup="pack_10ga_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:83` (**10k Пуля Slug**) | Кол-во: 16 | Вес: 55 | `ItemGroup="pack_10ga_zinc"` | `RandomAmount="false"`
+    * `hbm:item.casing:6` (**Продвинутая гильза дробовика**) | Кол-во: 16 | Вес: 55 | `ItemGroup="pack_10ga_zinc"` | `RandomAmount="false"`
   * **Партия .50 BMG (`pack_50bmg_zinc`, Вес: 40):**
-    * `hbm:item.ammo_standard:34` (**.50 BMG FMJ**) | Кол-во: 16 | Вес: 40 | `ItemGroup="pack_50bmg_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:35` (**.50 BMG AP**) | Кол-во: 8 | Вес: 40 | `ItemGroup="pack_50bmg_zinc"` | `RandomAmount="false"`
-    * `hbm:item.casing:5` (**Гильза .50 BMG**) | Кол-во: 12 | Вес: 40 | `ItemGroup="pack_50bmg_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:36` (**.50 BMG FMJ**) | Кол-во: 16 | Вес: 40 | `ItemGroup="pack_50bmg_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:38` (**.50 BMG AP**) | Кол-во: 8 | Вес: 40 | `ItemGroup="pack_50bmg_zinc"` | `RandomAmount="false"`
+    * `hbm:item.casing:3` (**Большая стальная гильза .50 BMG**) | Кол-во: 12 | Вес: 40 | `ItemGroup="pack_50bmg_zinc"` | `RandomAmount="false"`
 
 #### 🪖 [Meta 102] Оружейный кофр
 * **Уровень:** 3 | **Rarity:** 2 | **Дроп:** `2 - 4` | `CombineTrashGroup="false"`
@@ -439,17 +458,30 @@
   * `hbm:item.weapon_mod_special:0` (**Тактический глушитель**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.weapon_mod_special:1` (**Оптический прицел**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.weapon_mod_special:11` (**Двухрядный магазин**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.ammo_standard:34` (**Патрон .50 BMG FMJ**) | Кол-во: 12–24 | Вес: 40 | `RandomAmount="true"`
-  * `hbm:item.ammo_standard:35` (**Патрон .50 BMG AP**) | Кол-во: 8–16 | Вес: 35 | `RandomAmount="true"`
-  * `hbm:item.ammo_standard:36` (**Патрон .50 BMG Зажигательный**) | Кол-во: 6–12 | Вес: 30 | `RandomAmount="true"`
-  * `hbm:item.ammo_standard:53` (**40-мм граната HE**) | Кол-во: 2–4 | Вес: 35 | `RandomAmount="true"`
-  * `hbm:item.ammo_standard:54` (**40-мм кумулятивная граната**) | Кол-во: 1–3 | Вес: 30 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:36` (**Патрон .50 BMG FMJ**) | Кол-во: 12–24 | Вес: 40 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:38` (**Патрон .50 BMG AP**) | Кол-во: 8–16 | Вес: 35 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:39` (**Патрон .50 BMG с обеднённым ураном DU**) | Кол-во: 4–8 | Вес: 20 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:85` (**Патрон .50 BMG Разрывной HE**) | Кол-во: 4–8 | Вес: 25 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:55` (**40-мм граната HE**) | Кол-во: 2–4 | Вес: 35 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:56` (**40-мм кумулятивная граната HEAT**) | Кол-во: 1–3 | Вес: 30 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:58` (**40-мм зажигательная граната**) | Кол-во: 1–3 | Вес: 25 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:60` (**Ракета осколочно-фугасная HE**) | Кол-во: 1–2 | Вес: 20 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:61` (**Ракета кумулятивная HEAT**) | Кол-во: 1–2 | Вес: 20 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:63` (**Ракета зажигательная Incendiary**) | Кол-во: 1–2 | Вес: 20 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:40` (**.75 Болт стандартный**) | Кол-во: 4–8 | Вес: 25 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:42` (**.75 Болт взрывной**) | Кол-во: 3–6 | Вес: 20 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:41` (**.75 Болт зажигательный**) | Кол-во: 3–6 | Вес: 20 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:34` (**7.62мм с обеднённым ураном DU**) | Кол-во: 8–16 | Вес: 25 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:73` (**Вольфрамовый шарик гаусс-пушки**) | Кол-во: 4–8 | Вес: 20 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:74` (**Ферроурановый шарик гаусс-пушки**) | Кол-во: 3–6 | Вес: 15 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:50` (**12k Разрывной патрон**) | Кол-во: 4–8 | Вес: 25 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:51` (**12k Зажигательный с белым фосфором**) | Кол-во: 4–8 | Вес: 20 | `RandomAmount="true"`
   * `hbm:item.plate_armor_hev` (**Бронеплита HEV**) | Кол-во: 1–2 | Вес: 35 | `RandomAmount="true"`
   * `hbm:item.plate_armor_titanium` (**Титановая бронеплита**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
   * `hbm:item.plate_combine_steel` (**Пластина стали Альянса**) | Кол-во: 1–2 | Вес: 30 | `RandomAmount="true"`
   * `hbm:item.grenade_shell` (**Корпус гранаты**) | Кол-во: 1–2 | Вес: 35 | `RandomAmount="true"`
   * `hbm:item.grenade_fuze` (**Взрыватель гранаты**) | Кол-во: 1–2 | Вес: 35 | `RandomAmount="true"`
-  * `hbm:item.casing:5` (**Гильза .50 BMG**) | Кол-во: 6–12 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.casing:3` (**Большая стальная гильза .50 BMG**) | Кол-во: 6–12 | Вес: 45 | `RandomAmount="true"`
   * `hbm:item.stealth_boy` (**Стелс-Бой**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.night_vision` (**Прибор ночного видения**) | Кол-во: 1 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.cordite` (**Кордит**) | Кол-во: 6–12 | Вес: 55 | `RandomAmount="true"`
