@@ -339,7 +339,6 @@
   * `ProjRed|Transmission:projectred.transmission.wire:17` (**Шина ProjectRed**) | Кол-во: 6–12 | Вес: 30 | `RandomAmount="true"`. *Смысл:* 16-канальный редстоун-кабель.
   * `ProjRed|Transmission:projectred.transmission.wire:1`..`:16` (**Изолированные провода 16 цветов ProjectRed**) | Развёрнуто в XML на 16 отдельных записей (по одной на каждый цвет `meta:1..16`): Кол-во: 12–24 | Вес: по 1 на каждый цвет (редкий фоновый декоративный довесок) | `RandomAmount="true"`.
   * `hbm:item.motor` (**Электродвигатель NTM**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Базовый электромотор NTM.
-  * `hbm:item.circuit` (**Печатная плата NTM**) | Кол-во: 1–2 | Вес: 30 | `RandomAmount="true"`. *Смысл:* Текстолитовая основа для пайки схем.
   * `hbm:item.fuse` (**Плавкие предохранители NTM**) | Кол-во: 2–4 | Вес: 45 | `RandomAmount="true"`. *Смысл:* Защита цепей.
 
 #### 🖥️ [Meta 72] Потрёпанный блок стойки ЭВМ
@@ -877,7 +876,7 @@
   * `computronics:computronics.parts:0` (**Магнитная звуковая головка**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="0"` | `RandomAmount="false"`
   * `ProjRed|Transmission:projectred.transmission.wire:0` (**Провод из красного сплава**) | Кол-во: 8–16 | Вес: 20 | `RandomAmount="true"`. *Смысл:* Сигнальный монтажный провод ProjectRed.
   * `ProjRed|Transmission:projectred.transmission.wire:17` (**Шина ProjectRed**) | Кол-во: 4–8 | Вес: 12 | `RandomAmount="true"`. *Смысл:* Многожильная шина радиотрактов.
-  * `hbm:item.circuit` (**Печатная плата NTM**) | Кол-во: 1–2 | Вес: 30 | `RandomAmount="true"`. *Смысл:* Текстолитовая плата-заготовка под радиомонтаж.
+  * `hbm:item.circuit:3` (**Печатная плата NTM**) | Кол-во: 1–2 | Вес: 30 | `RandomAmount="true"`. *Смысл:* Текстолитовая плата-заготовка под радиомонтаж.
 
 #### 📡 [Meta 252] Радиоузел связиста
 * **Уровень:** 3 | **Rarity:** 2 | **Дроп:** `2 - 4` | `CombineTrashGroup="false"`
