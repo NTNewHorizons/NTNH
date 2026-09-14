@@ -206,6 +206,8 @@
   * `minecraft:tripwire_hook` (**Натяжной крюк**) | Кол-во: 1–2 | Вес: 45 | `RandomAmount="true"`
   * `hbm:item.wire_fine:2900` (**Медная проволока**) | Кол-во: 3–6 | Вес: 75 | `RandomAmount="true"`
   * `hbm:item.bolt:30` (**Стальной болт**) | Кол-во: 1–8 | Вес: 65 | `RandomAmount="true"`. *Смысл:* Высокопрочный стальной крепёж NTM.
+  * `hbm:item.wd40` (**VT-40**) | Кол-во: 1 | Вес: 2 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Ультраредкий ценный модуль/смазка.
+  * `hbm:item.piston_set:0` (**Комплект поршней**) | Кол-во: 1 | Вес: 15 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Механика приводов.
 
 #### 🔧 [Meta 41] Сумка механика
 * **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `3 - 5` | `CombineTrashGroup="true"`
@@ -333,11 +335,12 @@
   * `hbm:item.crt_display` (**ЭЛТ-дисплей**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `OpenComputers:wrench` (**Компьютерный ключ OpenComputers**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Монтаж и демонтаж серверных стоек, компонентов и роботов OC.
   * `hbm:item.circuit:10` (**Военная микросхема**) | Кол-во: 1 | Вес: 15 | `RandomAmount="false"`
-  * `ProjRed|Transmission:projectred.transmission.wire:0` (**Провод из красного сплава**) | Кол-во: 12–24 | Вес: 25 | `RandomAmount="true"`. *Смысл:* Неизолированная редстоун-разводка.
-  * `ProjRed|Transmission:projectred.transmission.wire:17` (**Шина ProjectRed**) | Кол-во: 6–12 | Вес: 15 | `RandomAmount="true"`. *Смысл:* 16-канальный редстоун-кабель.
-  * `ProjRed|Transmission:projectred.transmission.wire:1`..`:16` (**Изолированные провода 16 цветов ProjectRed**) | Развёрнуто в XML на 16 отдельных записей (по одной на каждый цвет `meta:1..16`): Кол-во: 12–24 | Вес: по 5 на каждый цвет (суммарный вес блока цветов: 80 из 1130 ~ 7.08% на ролл) | `RandomAmount="true"`. *Смысл:* Цветовая кодировка сигналов ProjectRed без забивания луттейбла однотипными дропами.
+  * `ProjRed|Transmission:projectred.transmission.wire:0` (**Провод из красного сплава**) | Кол-во: 12–24 | Вес: 45 | `RandomAmount="true"`. *Смысл:* Неизолированная редстоун-разводка.
+  * `ProjRed|Transmission:projectred.transmission.wire:17` (**Шина ProjectRed**) | Кол-во: 6–12 | Вес: 30 | `RandomAmount="true"`. *Смысл:* 16-канальный редстоун-кабель.
+  * `ProjRed|Transmission:projectred.transmission.wire:1`..`:16` (**Изолированные провода 16 цветов ProjectRed**) | Развёрнуто в XML на 16 отдельных записей (по одной на каждый цвет `meta:1..16`): Кол-во: 12–24 | Вес: по 1 на каждый цвет (редкий фоновый декоративный довесок) | `RandomAmount="true"`.
   * `hbm:item.motor` (**Электродвигатель NTM**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Базовый электромотор NTM.
   * `hbm:item.circuit` (**Печатная плата NTM**) | Кол-во: 1–2 | Вес: 30 | `RandomAmount="true"`. *Смысл:* Текстолитовая основа для пайки схем.
+  * `hbm:item.fuse` (**Плавкие предохранители NTM**) | Кол-во: 2–4 | Вес: 45 | `RandomAmount="true"`. *Смысл:* Защита цепей.
 
 #### 🖥️ [Meta 72] Потрёпанный блок стойки ЭВМ
 * **Уровень:** 3 | **Rarity:** 2 | **Дроп:** `3 - 5` | `CombineTrashGroup="false"`
@@ -587,9 +590,9 @@
   * `AgriCraft:clipper` (**Садовый секатор**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Срезка черенков и сорняков.
   * `AgriCraft:magnifyingGlass` (**Лупа селекционера**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Определение статов семян (Growth/Gain/Strength).
   * `AgriCraft:journal` (**Агрономический журнал**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Учёт открытых мутаций семян.
-  * `hbm:item.powder_fertilizer` (**Химические удобрения NTM**) | Кол-во: 8–16 | Вес: 75 | `RandomAmount="true"`
+  * `hbm:item.powder_fertilizer` (**Химические удобрения NTM**) | Кол-во: 12–24 | Вес: 85 | `RandomAmount="true"`
   * `hbm:item.powder_calcium` (**Известь/кальций NTM для почвы**) | Кол-во: 8–16 | Вес: 70 | `RandomAmount="true"`
-  * `minecraft:dye:15` (**Костная мука**) | Кол-во: 16–32 | Вес: 80 | `RandomAmount="true"`
+  * `minecraft:dye:15` (**Костная мука**) | Кол-во: 24–48 | Вес: 85 | `RandomAmount="true"`
   * `minecraft:string` (**Подвязочный шпагат**) | Кол-во: 16–32 | Вес: 75 | `RandomAmount="true"`
   * `OpenBlocks:generic:5` (**Строительно-садовый шнур**) | Кол-во: 8–16 | Вес: 65 | `RandomAmount="true"`
   * `hbm:item.can_empty` (**Пустые жестяные банки NTM под рассаду**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`
@@ -597,7 +600,11 @@
   * `minecraft:shears` (**Садовые ножницы**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `minecraft:flower_pot` (**Глиняный горшок под рассаду**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `minecraft:paper` (**Упаковочная бумага для семян**) | Кол-во: 2–4 | Вес: 45 | `RandomAmount="true"`
-  * `imc:item_colored_flower_pot:0..15` (**Цветные керамические горшки IMC, 16 цветов**) | Кол-во: 1 | Вес: 2 (на каждый цвет, суммарно 32) | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Редкая декоративная тара для комнатных растений.
+  * `AgriCraft:waterChannel` (**Оросительный деревянный канал**) | Кол-во: 3–6 | Вес: 45 | `RandomAmount="true"`. *Смысл:* Самотечный подвод воды к грядкам.
+  * `AgriCraft:waterTank` (**Деревянный резервуар для воды**) | Кол-во: 1–2 | Вес: 35 | `RandomAmount="true"`. *Смысл:* Накопитель дождевой воды.
+  * `AgriCraft:channelValve` (**Вентиль канала**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Редстоун-управление потоком.
+  * `AgriCraft:sprinkler` (**Спринклер-разбрызгиватель**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Автополив и ускорение роста культур.
+  * `imc:item_colored_flower_pot:0..15` (**Цветные керамические горшки IMC, 16 цветов**) | Кол-во: 1 | Вес: 0.5 (на каждый цвет, суммарно 8) | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Редкий декоративный бонус для любителей комнатного цветоводства.
   * `exnihilo:mesh` (**Ситовая сетка**) | Кол-во: 2–4 | Вес: 25 | `RandomAmount="true"`
 
 #### 🧪 [Meta 162] Спецконтейнер семян
@@ -637,23 +644,28 @@
   * `minecraft:sign` (**Табличка**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
   * `hbm:item.crayon` (**Строительные восковые мелки NTM**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
   * `StorageDrawers:tape` (**Упаковочный скотч**) | Кол-во: 1 | Вес: 60 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `StorageDrawers:upgradeLock` (**Ключ блокировки ящика**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`
+  * `StorageDrawers:upgradeLock` (**Ключ блокировки ящика**) | Кол-во: 1–2 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `StorageDrawers:upgrade:1` (**Железное улучшение ящика (II)**) | Кол-во: 1 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `StorageDrawers:upgrade:2` (**Золотое улучшение ящика (III)**) | Кол-во: 1 | Вес: 12 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `StorageDrawers:upgradeVoid` (**Улучшение уничтожения излишков**) | Кол-во: 1 | Вес: 10 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:tile.wood_structure` (**Деревянные строительные балки**) | Кол-во: 4–8 | Вес: 25 | `RandomAmount="true"`
+  * `hbm:item.ball_resin` (**Древесная смола / клей**) | Кол-во: 2–4 | Вес: 35 | `RandomAmount="true"`
   * `exnihilo:crook` (**Посох плотника**) | Кол-во: 1 | Вес: 60 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `CarpentersBlocks:blockCarpentersButton` (**Кнопка плотника**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`
+  * `CarpentersBlocks:blockCarpentersButton` (**Кнопка плотника**) | Кол-во: 2–4 | Вес: 20 | `RandomAmount="true"`
   * `CarpentersBlocks:blockCarpentersTorch` (**Факел плотника**) | Кол-во: 4–8 | Вес: 50 | `RandomAmount="true"`
   * `CarpentersBlocks:itemCarpentersHammer` (**Молоток плотника**) | Кол-во: 1 | Вес: 55 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `CarpentersBlocks:itemCarpentersChisel` (**Стамеска Carpenter's**) | Кол-во: 1 | Вес: 55 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `cfm:ItemHammer` (**Столярный молоток**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `BiblioCraft:item.FramingSaw` (**Каркасная пила**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.screwdriver` (**Отвёртка NTM**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `BiblioCraft:item.PlumbLine` (**Строительный отвес**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `BiblioCraft:item.tapeMeasure` (**Мерная лента**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `BiblioCraft:item.StockroomCatalog` (**Складской каталог**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `BiblioCraft:item.PlumbLine` (**Строительный отвес**) | Кол-во: 1 | Вес: 15 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `BiblioCraft:item.tapeMeasure` (**Мерная лента**) | Кол-во: 1 | Вес: 15 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `BiblioCraft:item.StockroomCatalog` (**Складской каталог**) | Кол-во: 1 | Вес: 15 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.padlock_rusty` (**Ржавый замок**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
 
 #### 🎨 [Meta 191] Сумка маляра
 * **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 4` | `CombineTrashGroup="true"`
-* *Лор:* Походная холщовая сумка промышленного маляра-оформителя. Забита базовыми и химическими красителями для сигнальной разметки цехов, полос опасности и труб, трафаретной бумагой, чистящей ветошью, банками и инструментами для быстрой окраски и декорирования базы.
+* *Лор:* Походная холщовая сумка промышленного маляра-оформителя. Забита базовыми и химическими красителями для сигнальной разметки цехов, полос опасности и труб, трафаретной бумагой, чистящей ветошью, банками, защитными смолами, дегтем и изолентой.
 * **Содержимое:**
   * `etfuturum:dye:0` (**Белый краситель**) | Кол-во: 16–32 | Вес: 85 | `RandomAmount="true"`
   * `etfuturum:dye:3` (**Чёрный краситель**) | Кол-во: 16–32 | Вес: 85 | `RandomAmount="true"`
@@ -689,10 +701,13 @@
   * `OpenBlocks:crayonGlasses` (**Цветные очки для мелков**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `ArchitectureCraft:hammer` (**Молоток ArchitectureCraft**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `ArchitectureCraft:chisel` (**Резец ArchitectureCraft**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:item.ball_resin` (**Смола / Латекс**) | Кол-во: 2–4 | Вес: 40 | `RandomAmount="true"`
+  * `hbm:item.oil_tar` (**Дёготь / минеральный пек**) | Кол-во: 2–4 | Вес: 35 | `RandomAmount="true"`
+  * `hbm:item.ducttape` (**Изолента NTM**) | Кол-во: 1 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`
 
 #### 🏛️ [Meta 192] Кейс проектировщика
 * **Уровень:** 3 | **Rarity:** 2 | **Дроп:** `3 - 5` | `CombineTrashGroup="false"`
-* *Лор:* Инженерно-архитектурный кейс главного конструктора и проектировщика комплексов: буклет чертежей NTM, запас чертёжной бумаги, разметочные шнуры и нити, керамическая кружка для кофе, система пространственного CAD-прототипирования OpenBlocks (магические мелки и ластик, специализированные очки), профессиональный инструментарий ArchitectureCraft (станок распиловки, молот, резец, светящаяся кисть), рецептурные планы ProjectRed и редкие красители.
+* *Лор:* Инженерно-архитектурный кейс главного конструктора и проектировщика комплексов: буклет чертежей NTM, запас чертёжной бумаги, разметочные шнуры и нити, керамическая кружка для кофе, система пространственного CAD-прототипирования OpenBlocks, профессиональный инструментарий ArchitectureCraft, рецептурные планы, каркасные шины и монтажные платы ProjectRed, кремниевые заготовки и тонкий золотой провод.
 * **Содержимое:**
   * `hbm:item.blueprint_folder` (**Буклет чертежей NTM**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `minecraft:paper` (**Чертёжная бумага / ватман**) | Кол-во: 8–16 | Вес: 75 | `RandomAmount="true"`
@@ -713,8 +728,11 @@
   * `minecraft:dye:8`..`:14` (**Набор редких красителей**) | Кол-во: 6–12 | Вес: 70 | `RandomAmount="true"`
   * `OpenBlocks:heightMap` (**Карта высот**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `ProjRed|Expansion:projectred.expansion.plan` (**Recipe Plan ProjectRed**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `ProjRed|Transmission:projectred.transmission.framewire:0` (**Провод из красного сплава в каркасе/оболочке**) | Кол-во: 8–16 | Вес: 18 | `RandomAmount="true"`. *Смысл:* Прокладка жестких монтажных сигнальных трасс.
-  * `ProjRed|Transmission:projectred.transmission.wire:17` (**Шина ProjectRed**) | Кол-во: 4–8 | Вес: 15 | `RandomAmount="true"`. *Смысл:* Многоканальная шина коммуникаций проекта.
+  * `ProjRed|Transmission:projectred.transmission.framewire:0` (**Провод из красного сплава в каркасе/оболочке**) | Кол-во: 8–16 | Вес: 25 | `RandomAmount="true"`. *Смысл:* Прокладка жестких монтажных сигнальных трасс.
+  * `ProjRed|Transmission:projectred.transmission.wire:17` (**Шина ProjectRed**) | Кол-во: 4–8 | Вес: 20 | `RandomAmount="true"`. *Смысл:* Многоканальная шина коммуникаций проекта.
+  * `ProjRed|Core:projectred.core.part:0` (**Монтажная плата с дорожками**) | Кол-во: 2–4 | Вес: 30 | `RandomAmount="true"`
+  * `hbm:item.billet_silicon` (**Кремниевая заготовка**) | Кол-во: 2–4 | Вес: 35 | `RandomAmount="true"`
+  * `hbm:item.wire_fine:7900` (**Тонкий золотой провод**) | Кол-во: 2–4 | Вес: 30 | `RandomAmount="true"`
 
 ---
 
@@ -722,22 +740,25 @@
 
 #### 🧭 [Meta 220] Планшет разведчика
 * **Уровень:** 1 | **Rarity:** 0 | **Дроп:** `2 - 4` | `CombineTrashGroup="true"`
-* *Лор:* Полевой планшет маркшейдера и картографа штолен. Содержит инструменты ориентирования, чертёжные принадлежности для составления схем выработок, снаряжение для спуска/подъёма в забои, аварийный паёк и средства образцового скалывания пород.
+* *Лор:* Полевой планшет маркшейдера и картографа штолен. Содержит инструменты ориентирования, чертёжные принадлежности для составления схем выработок, снаряжение для спуска/подъёма в забои (включая веревочные лестницы и портативный дельтаплан), спальный мешок, аварийный паёк и средства образцового скалывания пород.
 * **Содержимое:**
-  * `OpenBlocks:pedometer` (**Шагомер**) | Кол-во: 1 | Вес: 60 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `OpenBlocks:flag` (**Сигнальный флаг**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`. *Смысл:* Маркировка маршрута и ориентиров в штольнях.
+  * `OpenBlocks:pedometer` (**Шагомер**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `OpenBlocks:flag` (**Сигнальный флаг**) | Кол-во: 2–4 | Вес: 15 | `RandomAmount="true"`. *Смысл:* Редкая маркировка маршрута.
   * `minecraft:map` (**Карта**) | Кол-во: 1 | Вес: 80 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `minecraft:compass` (**Компас**) | Кол-во: 1 | Вес: 70 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `BiblioCraft:item.BiblioWayPointCompass` (**Координатный компас**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `BiblioCraft:item.BiblioClipboard` (**Планшет с зажимом**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `minecraft:clock` (**Часы**) | Кол-во: 1 | Вес: 55 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `minecraft:paper` (**Бумага для схем выработок**) | Кол-во: 4–8 | Вес: 75 | `RandomAmount="true"`
-  * `minecraft:feather` (**Перо**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`
+  * `minecraft:feather` (**Перо**) | Кол-во: 2–4 | Вес: 15 | `RandomAmount="true"`
   * `modernmarkings:item.chalk` (**Маркировочный мел**) | Кол-во: 2–4 | Вес: 70 | `RandomAmount="true"`
   * `minecraft:ladder` (**Лестницы для спуска в выработки**) | Кол-во: 12–24 | Вес: 75 | `RandomAmount="true"`
+  * `OpenBlocks:ropeladder` (**Веревочная лестница**) | Кол-во: 6–12 | Вес: 30 | `RandomAmount="true"`. *Смысл:* Разворачивается на всю глубину забоя.
   * `OpenBlocks:generic:5` (**Шнур / верёвка**) | Кол-во: 6–12 | Вес: 70 | `RandomAmount="true"`
   * `hbm:item.hammer_iron` (**Железный геологический молоток**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Отбор образцов породы и керна.
   * `minecraft:flint_and_steel` (**Огниво**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `OpenBlocks:hangglider` (**Дельтаплан**) | Кол-во: 1 | Вес: 5 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Топовая редкая полевая находка для быстрого и безопасного перемещения по горам и каньонам.
+  * `OpenBlocks:sleepingbag` (**Спальный мешок**) | Кол-во: 1 | Вес: 10 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Ночёвка в полевых условиях без перезаписи точки спавна.
   * `hbm:item.canteen_vodka` (**Фляга с согревающим алкоголем**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.stick_dynamite` (**Динамитная шашка для вскрытия шпуров**) | Кол-во: 1–3 | Вес: 50 | `RandomAmount="true"`
   * `hbm:item.safety_fuse` (**Огнепроводный шнур**) | Кол-во: 3–6 | Вес: 55 | `RandomAmount="true"`
@@ -746,6 +767,7 @@
   * `hbm:item.pin` (**Шплинт / отмычка**) | Кол-во: 3–6 | Вес: 65 | `RandomAmount="true"`
   * `exnihilo:stone` (**Образцы камней**) | Кол-во: 4–8 | Вес: 75 | `RandomAmount="true"`
   * `hbm:item.dust_tiny` (**Каменная/рудная крошка**) | Кол-во: 4–8 | Вес: 70 | `RandomAmount="true"`
+  * `minecraft:web` (**Паутина**) | Кол-во: 1–2 | Вес: 2 | `RandomAmount="true"`
 
 #### 🛢️ [Meta 221] Геодезический набор
 * **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 4` | `CombineTrashGroup="true"`
