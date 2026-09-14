@@ -172,7 +172,7 @@
   * `hbm:item.atmosphere_scanner` (**Анализатор атмосферы**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Полный газовый спектрометр воздуха.
   * `hbm:item.serum` (**Сыворотка**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Сыворотка детоксикации организма.
   * `hbm:item.hazmat_helmet` (**Шлем костюма химзащиты**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Головной модуль костюма РХБЗ.
-  * `hbm:item.med_schiziphrenia` (**Антипсихотик**) | Кол-во: 1–2 | Вес: 30 | `RandomAmount="true"`. *Смысл:* Нейролептик при психических поражениях.
+  * `hbm:item.med_schizophrenia` (**Антипсихотик**) | Кол-во: 1–2 | Вес: 30 | `RandomAmount="true"`. *Смысл:* Нейролептик при психических поражениях.
   * `hbm:item.reacher` (**Вольфрамовый захватчик**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Дистанционный манипулятор для изотопов.
   * `hbm:item.digamma_diagnostic` (**Диагностика дигаммы**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Обнаружение дигамма-излучения.
   * `hbm:item.pill_red` (**Красная таблетка**) | Кол-во: 1 | Вес: 15 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Спецпрепарат.
