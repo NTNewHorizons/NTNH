@@ -676,8 +676,8 @@
   * `hbm:item.crayon` (**Строительные восковые мелки NTM**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
   * `StorageDrawers:tape` (**Упаковочный скотч**) | Кол-во: 1 | Вес: 60 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `StorageDrawers:upgradeLock` (**Ключ блокировки ящика**) | Кол-во: 1–2 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `StorageDrawers:upgrade:1` (**Железное улучшение ящика (II)**) | Кол-во: 1 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `StorageDrawers:upgrade:2` (**Золотое улучшение ящика (III)**) | Кол-во: 1 | Вес: 12 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `StorageDrawers:upgrade:2` (**Железное улучшение ящика (II)**) | Кол-во: 1 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `StorageDrawers:upgrade:3` (**Золотое улучшение ящика (III)**) | Кол-во: 1 | Вес: 12 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `StorageDrawers:upgradeVoid` (**Улучшение уничтожения излишков**) | Кол-во: 1 | Вес: 10 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:tile.wood_structure` (**Деревянные строительные балки**) | Кол-во: 4–8 | Вес: 25 | `RandomAmount="true"`
   * `hbm:item.ball_resin` (**Древесная смола / клей**) | Кол-во: 2–4 | Вес: 35 | `RandomAmount="true"`
