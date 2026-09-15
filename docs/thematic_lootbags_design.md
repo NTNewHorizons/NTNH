@@ -631,10 +631,7 @@
   * `minecraft:shears` (**Садовые ножницы**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `minecraft:flower_pot` (**Глиняный горшок под рассаду**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `minecraft:paper` (**Упаковочная бумага для семян**) | Кол-во: 2–4 | Вес: 45 | `RandomAmount="true"`
-  * `AgriCraft:waterChannel` (**Оросительный деревянный канал**) | Кол-во: 3–6 | Вес: 45 | `RandomAmount="true"`. *Смысл:* Самотечный подвод воды к грядкам.
-  * `AgriCraft:waterTank` (**Деревянный резервуар для воды**) | Кол-во: 1–2 | Вес: 35 | `RandomAmount="true"`. *Смысл:* Накопитель дождевой воды.
-  * `AgriCraft:channelValve` (**Вентиль канала**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Редстоун-управление потоком.
-  * `AgriCraft:sprinkler` (**Спринклер-разбрызгиватель**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Автополив и ускорение роста культур.
+  * `AgriCraft:handRake` (**Садовые грабли для прополки сорняков**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `imc:item_colored_flower_pot:0..15` (**Цветные керамические горшки IMC, 16 цветов**) | Кол-во: 1 | Вес: 1 (на каждый цвет, суммарно 16) | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Редкий декоративный бонус для любителей комнатного цветоводства.
   * `exnihilo:mesh` (**Ситовая сетка**) | Кол-во: 2–4 | Вес: 25 | `RandomAmount="true"`
 
