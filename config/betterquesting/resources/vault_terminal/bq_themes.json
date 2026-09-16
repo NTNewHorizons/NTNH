@@ -109,6 +109,14 @@
         "padding": [1, 1, 1, 1],
         "sliceMode": 2
       },
+      "betterquesting:panel_inner":
+      {
+        "textureType": "betterquesting:texture_sliced",
+        "atlas": "vault_terminal:textures/gui/vault_gui.png",
+        "bounds": [128, 128, 64, 64],
+        "padding": [8, 8, 8, 8],
+        "sliceMode": 1
+      },
       "betterquesting:quest_norm_0":
       {
         "textureType": "betterquesting:texture_sliced",
@@ -194,12 +202,12 @@
       "betterquesting:grid_major":
       {
         "colorType": "betterquesting:color_static",
-        "color": "FF121A14"
+        "color": "FF1A2A1D"
       },
       "betterquesting:grid_minor":
       {
         "colorType": "betterquesting:color_static",
-        "color": "FF0C120D"
+        "color": "FF101E13"
       },
       "betterquesting:quest_line_locked":
       {
@@ -308,8 +316,8 @@
       "betterquesting:grid_minor":
       {
         "lineType": "betterquesting:line_simple",
-        "stippleScale": 2,
-        "stippleMask": "1010101010101010"
+        "stippleScale": 1,
+        "stippleMask": "1000100010001000"
       },
       "betterquesting:quest_locked":
       {
