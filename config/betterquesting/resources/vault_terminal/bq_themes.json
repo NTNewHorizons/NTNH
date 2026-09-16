@@ -74,7 +74,7 @@
         "textureType": "betterquesting:texture_sliced",
         "atlas": "vault_terminal:textures/gui/vault_gui.png",
         "bounds": [248, 60, 8, 20],
-        "padding": [1, 1, 1, 1],
+        "padding": [1, 6, 1, 6],
         "sliceMode": 2
       },
       "betterquesting:scroll_v_1":
@@ -82,7 +82,7 @@
         "textureType": "betterquesting:texture_sliced",
         "atlas": "vault_terminal:textures/gui/vault_gui.png",
         "bounds": [248, 80, 8, 20],
-        "padding": [1, 1, 1, 1],
+        "padding": [1, 6, 1, 6],
         "sliceMode": 2
       },
       "betterquesting:scroll_v_2":
@@ -90,8 +90,72 @@
         "textureType": "betterquesting:texture_sliced",
         "atlas": "vault_terminal:textures/gui/vault_gui.png",
         "bounds": [248, 100, 8, 20],
+        "padding": [1, 6, 1, 6],
+        "sliceMode": 2
+      },
+      "betterquesting:scroll_h_bg":
+      {
+        "textureType": "betterquesting:texture_sliced",
+        "atlas": "vault_terminal:textures/gui/vault_gui.png",
+        "bounds": [128, 64, 60, 8],
         "padding": [1, 1, 1, 1],
         "sliceMode": 2
+      },
+      "betterquesting:scroll_h_0":
+      {
+        "textureType": "betterquesting:texture_sliced",
+        "atlas": "vault_terminal:textures/gui/vault_gui.png",
+        "bounds": [128, 72, 20, 8],
+        "padding": [6, 1, 6, 1],
+        "sliceMode": 2
+      },
+      "betterquesting:scroll_h_1":
+      {
+        "textureType": "betterquesting:texture_sliced",
+        "atlas": "vault_terminal:textures/gui/vault_gui.png",
+        "bounds": [148, 72, 20, 8],
+        "padding": [6, 1, 6, 1],
+        "sliceMode": 2
+      },
+      "betterquesting:scroll_h_2":
+      {
+        "textureType": "betterquesting:texture_sliced",
+        "atlas": "vault_terminal:textures/gui/vault_gui.png",
+        "bounds": [168, 72, 20, 8],
+        "padding": [6, 1, 6, 1],
+        "sliceMode": 2
+      },
+      "betterquesting:text_box_0":
+      {
+        "textureType": "betterquesting:texture_sliced",
+        "atlas": "vault_terminal:textures/gui/vault_gui.png",
+        "bounds": [48, 64, 16, 16],
+        "padding": [3, 3, 3, 3],
+        "sliceMode": 1
+      },
+      "betterquesting:text_box_1":
+      {
+        "textureType": "betterquesting:texture_sliced",
+        "atlas": "vault_terminal:textures/gui/vault_gui.png",
+        "bounds": [64, 64, 16, 16],
+        "padding": [3, 3, 3, 3],
+        "sliceMode": 1
+      },
+      "betterquesting:text_box_2":
+      {
+        "textureType": "betterquesting:texture_sliced",
+        "atlas": "vault_terminal:textures/gui/vault_gui.png",
+        "bounds": [80, 64, 16, 16],
+        "padding": [3, 3, 3, 3],
+        "sliceMode": 1
+      },
+      "betterquesting:panel_dark":
+      {
+        "textureType": "betterquesting:texture_sliced",
+        "atlas": "vault_terminal:textures/gui/vault_gui.png",
+        "bounds": [96, 64, 32, 32],
+        "padding": [8, 8, 8, 8],
+        "sliceMode": 1
       },
       "betterquesting:item_frame":
       {
@@ -190,6 +254,21 @@
         "color": "FF2FFF21"
       },
       "betterquesting:text_main":
+      {
+        "colorType": "betterquesting:color_static",
+        "color": "FFF0F4F0"
+      },
+      "betterquesting:text_watermark":
+      {
+        "colorType": "betterquesting:color_static",
+        "color": "FF4A6E50"
+      },
+      "betterquesting:text_highlight":
+      {
+        "colorType": "betterquesting:color_static",
+        "color": "FF144820"
+      },
+      "betterquesting:text_aux_0":
       {
         "colorType": "betterquesting:color_static",
         "color": "FFF0F4F0"
