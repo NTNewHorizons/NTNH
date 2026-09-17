@@ -28,11 +28,9 @@ public class BuildAtlasTemplate {
         int width = 256;
         int height = 256;
         BufferedImage atlas = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
-        Graphics2D g = atlas.createGraphics();
-        g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);
 
         // 1. Основное окно (48x48 при bounds [0, 0, 48, 48], padding 16)
-        drawChassisPanel(atlas, 0, 0, 48, 48, 16);
+        drawChassisPanel(atlas, 0, 0, 48, 48);
 
         // 2. Карточка квеста с монтажными скобами [128, 128, 64, 64]
         drawInnerCard(atlas, 128, 128, 64, 64, new Color(0x1E, 0x5E, 0x2E));
@@ -41,10 +39,8 @@ public class BuildAtlasTemplate {
         drawItemSocket(atlas, 0, 48, 18, 18);
 
         // 4. Системные иконки чекбоксов 16x16
-        drawCheckmark(atlas, 208, 64, 16, 16);
-        drawCross(atlas, 224, 64, 16, 16);
-
-        g.dispose();
+        drawCheckmark(atlas, 208, 64);
+        drawCross(atlas, 224, 64);
 
         // Сохранение готового атласа
         File outFile = new File("textures/gui/atlas.png");
@@ -53,8 +49,8 @@ public class BuildAtlasTemplate {
         System.out.println("Atlas generated: " + outFile.getAbsolutePath());
     }
 
-    /** Отрисовка базового окна с 9-slice паддингом */
-    public static void drawChassisPanel(BufferedImage img, int x0, int y0, int w, int h, int pad) {
+    /** Отрисовка базового окна с металлической рамкой */
+    public static void drawChassisPanel(BufferedImage img, int x0, int y0, int w, int h) {
         int x1 = x0 + w - 1, y1 = y0 + h - 1;
         // Заливка фона
         for (int y = y0; y <= y1; y++) {
@@ -116,8 +112,8 @@ public class BuildAtlasTemplate {
         img.setRGB(x0 + 2, y1 - 2, cPin); img.setRGB(x1 - 2, y1 - 2, cPin);
     }
 
-    /** Белая галочка для цветового умножения Better Questing */
-    public static void drawCheckmark(BufferedImage img, int x0, int y0, int w, int h) {
+    /** Белая галочка для цветового умножения Better Questing (16x16) */
+    public static void drawCheckmark(BufferedImage img, int x0, int y0) {
         int shadow = new Color(0, 0, 0, 128).getRGB();
         int white  = Color.WHITE.getRGB();
         int[][] pts = {
@@ -129,8 +125,8 @@ public class BuildAtlasTemplate {
         for (int[] p : pts) img.setRGB(x0 + p[0], y0 + p[1], white);
     }
 
-    /** Белый крестик для цветового умножения Better Questing */
-    public static void drawCross(BufferedImage img, int x0, int y0, int w, int h) {
+    /** Белый крестик для цветового умножения Better Questing (16x16) */
+    public static void drawCross(BufferedImage img, int x0, int y0) {
         int shadow = new Color(0, 0, 0, 128).getRGB();
         int white  = Color.WHITE.getRGB();
         int[][] pts = {

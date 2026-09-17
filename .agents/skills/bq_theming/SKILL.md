@@ -204,6 +204,7 @@ This ensures:
 
 1. Validate JSON syntax:
    ```powershell
+   # (Silent on success. If malformed, throws an exception with the exact error line)
    Get-Content config/betterquesting/resources/<theme_id>/bq_themes.json -Raw | ConvertFrom-Json | Out-Null
    ```
 2. Re-bake atlas if code modified:
