@@ -162,7 +162,7 @@
         "textureType": "betterquesting:texture_sliced",
         "atlas": "vault_terminal:textures/gui/vault_gui.png",
         "bounds": [0, 48, 18, 18],
-        "padding": [1, 1, 1, 1],
+        "padding": [2, 2, 2, 2],
         "sliceMode": 2
       },
       "betterquesting:aux_frame_0":
@@ -180,6 +180,18 @@
         "bounds": [128, 128, 64, 64],
         "padding": [8, 8, 8, 8],
         "sliceMode": 1
+      },
+      "betterquesting:icon_tick":
+      {
+        "textureType": "betterquesting:texture_simple",
+        "atlas": "vault_terminal:textures/gui/vault_gui.png",
+        "bounds": [208, 64, 16, 16]
+      },
+      "betterquesting:icon_cross":
+      {
+        "textureType": "betterquesting:texture_simple",
+        "atlas": "vault_terminal:textures/gui/vault_gui.png",
+        "bounds": [224, 64, 16, 16]
       },
       "betterquesting:quest_norm_0":
       {
@@ -291,7 +303,7 @@
       "betterquesting:quest_line_locked":
       {
         "colorType": "betterquesting:color_static",
-        "color": "FF202A22"
+        "color": "FF18221B"
       },
       "betterquesting:quest_line_unlocked":
       {
@@ -301,12 +313,12 @@
         "color1":
         {
           "colorType": "betterquesting:color_static",
-          "color": "FF9BC600"
+          "color": "FFFFB830"
         },
         "color2":
         {
           "colorType": "betterquesting:color_static",
-          "color": "FF408300"
+          "color": "FF7A5210"
         }
       },
       "betterquesting:quest_line_pending":
@@ -317,12 +329,28 @@
       "betterquesting:quest_line_complete":
       {
         "colorType": "betterquesting:color_static",
-        "color": "FF64DC64"
+        "color": "FF1E5E2E"
+      },
+      "betterquesting:quest_line_repeatable":
+      {
+        "colorType": "betterquesting:color_pulse",
+        "period": 1.5,
+        "phase": 0.0,
+        "color1":
+        {
+          "colorType": "betterquesting:color_static",
+          "color": "FFFF9520"
+        },
+        "color2":
+        {
+          "colorType": "betterquesting:color_static",
+          "color": "FF94500C"
+        }
       },
       "betterquesting:quest_icon_locked":
       {
         "colorType": "betterquesting:color_static",
-        "color": "FF5A7060"
+        "color": "FF354238"
       },
       "betterquesting:quest_icon_unlocked":
       {
@@ -332,28 +360,28 @@
         "color1":
         {
           "colorType": "betterquesting:color_static",
-          "color": "FF9BC600"
+          "color": "FFFFB830"
         },
         "color2":
         {
           "colorType": "betterquesting:color_static",
-          "color": "FF408300"
+          "color": "FF8F5E12"
         }
       },
       "betterquesting:quest_icon_pending":
       {
         "colorType": "betterquesting:color_pulse",
-        "period": 1.0,
+        "period": 1.2,
         "phase": 0.0,
         "color1":
         {
           "colorType": "betterquesting:color_static",
-          "color": "FF00FFCC"
+          "color": "FF55FF48"
         },
         "color2":
         {
           "colorType": "betterquesting:color_static",
-          "color": "FF008066"
+          "color": "FF124E20"
         }
       },
       "betterquesting:quest_icon_complete":
@@ -364,17 +392,17 @@
       "betterquesting:quest_icon_repeatable":
       {
         "colorType": "betterquesting:color_pulse",
-        "period": 1.0,
+        "period": 1.5,
         "phase": 0.0,
         "color1":
         {
           "colorType": "betterquesting:color_static",
-          "color": "FFFFB020"
+          "color": "FFFF9520"
         },
         "color2":
         {
           "colorType": "betterquesting:color_static",
-          "color": "FFC07010"
+          "color": "FF94500C"
         }
       }
     },
