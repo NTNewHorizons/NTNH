@@ -1,25 +1,43 @@
 ---
 name: bq_theming
-description: "Вёрстка, стилизация и калибровка тем для Better Questing 3.8.74 (GTNH). Активируй при разработке, настройке или исправлении тем BQ (bq_themes.json), атласов GUI (9-slice нарезка, bounds, padding, sliceMode), линий связей (line_directional), палитр, пульсаций color_pulse, кнопок и элементов управления квестов."
+description: Use when designing, customizing, calibrating, or troubleshooting Better Questing (GTNH 3.8.74) themes, bq_themes.json configurations, GUI atlas layouts, 9-slice sliced textures, scale-invariant quest lines, color pulse animations, or quest interface controls.
 ---
 
-# Руководство по разработке и калибровке тем Better Questing (`bq_theming`)
+# Better Questing Theme Engineering (`bq_theming`)
 
-Данный навык содержит полный технический регламент, архитектурные правила и рецепты кастомизации визуальных тем для **Better Questing 3.8.74-GTNH** (Minecraft 1.7.10).
+## Overview
+A comprehensive technical reference for authoring, styling, and calibrating visual themes for **Better Questing 3.8.74-GTNH** (Minecraft 1.7.10). Covers atlas layout, 9-slice slicing mathematics, hardware-scaled quad lines, color pulse timing, and checkbox icon tinting.
 
 ---
 
-## 1. Архитектура и размещение ресурсов темы
+## When to Use
 
-Каждая тема Better Questing изолирована в собственной директории ресурсов:
+### Triggers & Symptoms:
+- Creating a new visual theme or redesigning an existing one (`vault_terminal`, `midnight`, etc.).
+- Quest dependency lines scale incorrectly (becoming excessively thick when zooming out or invisible when zooming in).
+- 9-slice frames stretch or repeat decorative corner brackets along borders.
+- Buttons, text boxes, scrollbars, or quest nodes have incorrect padding, slice modes, or contrast.
+- Configuring status indicators (`locked`, `unlocked`, `pending`, `complete`, `repeatable`) with static or pulsating colors.
+- Customizing task checkboxes (`icon_tick`, `icon_cross`) for quest objectives.
+
+### When NOT to Use:
+- Modifying standard item tooltips across the modpack (managed globally outside BQ).
+- Writing quest tasks, prerequisite trees, or reward tables (`DefaultQuests.json`) without changing GUI styles.
+- Creating or editing container GUIs for non-BQ mods (use `gui_styling`).
+
+---
+
+## 1. Directory Structure & Registration
+
+Themes reside in `config/betterquesting/resources/<theme_id>/`:
 ```
 config/betterquesting/resources/<theme_id>/
-├── bq_themes.json              # Декларация темы, нарезка текстур, палитры и шейдеры
+├── bq_themes.json              # Main theme definition, textures, colors, lines
 └── textures/gui/
-    └── <atlas_name>.png        # Графический атлас (обычно 256×256 ARGB PNG)
+    └── <atlas_name>.png        # 256x256 ARGB atlas containing all GUI elements
 ```
 
-### Базовая декларация темы (`bq_themes.json`):
+### Registration Syntax (`bq_themes.json`):
 ```json
 [
   {
@@ -32,16 +50,15 @@ config/betterquesting/resources/<theme_id>/
   }
 ]
 ```
-- `themeParent`: при указании `"none"` тема автономна; при наследовании можно переопределять только часть ключей родителя.
+- `themeParent`: Set to `"none"` for standalone themes, or specify a parent theme ID to inherit undefined properties.
 
 ---
 
-## 2. Анатомия атласа и 9-Slice нарезка (Sliced Textures)
+## 2. Atlas Layout & 9-Slice Geometry
 
-Движок BQ использует 9-секционную нарезку (`betterquesting:texture_sliced`):
-4 угла фиксированного размера, 4 ребра и центральная область.
+The UI renderer relies on 9-slice textures (`betterquesting:texture_sliced`) split into 4 corners, 4 edges, and a center.
 
-### Спецификация секции текстуры:
+### Texture Definition Format:
 ```json
 "betterquesting:panel_main": {
   "textureType": "betterquesting:texture_sliced",
@@ -52,42 +69,45 @@ config/betterquesting/resources/<theme_id>/
 }
 ```
 
-### Параметры нарезки:
-1. **`bounds`**: `[x, y, width, height]` — абсолютные пиксельные координаты области на атласе.
-2. **`padding`**: `[left, top, right, bottom]` — размеры полей нарезки в пикселях.
-   - Задают размеры 4 углов: `Top-Left = left × top`, `Bottom-Right = right × bottom` и т.д.
-3. **`sliceMode`**:
-   - `1` (**Tiled / Замощение**): Рёбра и центр многократно повторяются (тайлятся) при масштабировании. Рекомендуется для оконных панелей (`panel_main`, `panel_inner`), чтобы не растягивать фаски.
-   - `2` (**Stretched / Растяжение**): Рёбра и центр растягиваются интерполяцией. Рекомендуется для тонких элементов, бегунков скролла и слотов предметов (`item_frame`, `scroll_v_*`).
+### Parameter Reference:
+- **`bounds`**: `[x, y, width, height]` — Pixel coordinates on the 256×256 atlas.
+- **`padding`**: `[left, top, right, bottom]` — Slice boundary insets. Corner size equals `left × top`.
+- **`sliceMode`**:
+  - `1` (**Tiled**): Repeated pattern along edges and center. Ideal for structured chassis panels (`panel_main`, `panel_inner`) to prevent blurry borders.
+  - `2` (**Stretched**): Bilinear stretch along edges and center. Ideal for scrollbars, progress tracks, and item slot sockets (`item_frame`, `scroll_v_*`).
 
-### Правило изоляции угловых декоративных элементов:
-> [!IMPORTANT]
-> Если в углах рамки рисуются акцентные скобы, заклёпки или метки (например, скобы 4px), они обязаны **целиком помещаться внутрь угловой зоны `left × top`**.
-> Если угол выходит за границу паддинга (например, скоба заходит на `x >= left`), фрагмент скобы попадёт на растягиваемое/тайлируемое ребро и продублируется по всей длине панели!
+### Corner Isolation Rule:
+> [!CRITICAL]
+> Any decorative corner elements (such as 4px mounting brackets, rivets, or corner notches) **MUST stay strictly within the `left × top` corner region** (e.g., within `x ∈ [0..left-1], y ∈ [0..top-1]`).
+> If a corner feature extends past the padding boundary, that pixel column/row will tile or stretch across the entire panel edge.
 
-### Разметка стандартных компонентов на атласе:
-| Элемент темы | Типовой размер на атласе | Рекомендуемый `padding` | `sliceMode` | Описание |
+### Component Atlas Reference:
+| Texture Key | Atlas Bounds | Padding `[L, T, R, B]` | Slice Mode | Visual Purpose |
 | :--- | :---: | :---: | :---: | :--- |
-| `panel_main` | 48×48 px | `[16, 16, 16, 16]` | `1` | Основное фоновое окно темы |
-| `panel_inner` | 64×64 px | `[8, 8, 8, 8]` | `1` | Карточка описания квеста с монтажными скобами |
-| `panel_dark` | 32×32 px | `[8, 8, 8, 8]` | `1` | Модальные диалоги подтверждения |
-| `btn_normal_0..2` | 200×20 px | `[2, 2, 2, 3]` | `1` | Кнопки (0: Disabled, 1: Idle, 2: Hover) |
-| `item_frame` | 18×18 px | `[2, 2, 2, 2]` | `2` | Утопленный сокет наградного слота |
-| `text_box_0..2` | 16×16 px | `[3, 3, 3, 3]` | `1` | Поля ввода и поиска |
-| `scroll_v_bg` | 8×60 px | `[1, 1, 1, 1]` | `2` | Направляющий желоб вертикального скролла |
-| `scroll_v_0..2` | 8×20 px | `[1, 6, 1, 6]` | `2` | Рифлёный бегунок скролла |
+| `betterquesting:panel_main` | `[0, 0, 48, 48]` | `[16, 16, 16, 16]` | `1` (Tiled) | Main window frame with phosphor corner accents |
+| `betterquesting:btn_normal_0` | `[48, 0, 200, 20]` | `[2, 2, 2, 3]` | `1` (Tiled) | Disabled button state |
+| `betterquesting:btn_normal_1` | `[48, 20, 200, 20]` | `[2, 2, 2, 3]` | `1` (Tiled) | Idle button state (deep emerald fill, subdued frame) |
+| `betterquesting:btn_normal_2` | `[48, 40, 200, 20]` | `[2, 2, 2, 3]` | `1` (Tiled) | Hover/Active button state (phosphor green border) |
+| `betterquesting:item_frame` | `[0, 48, 18, 18]` | `[2, 2, 2, 2]` | `2` (Stretched)| Recessed item socket with shadow and bevel |
+| `betterquesting:text_box_0..2`| `[48..80, 64, 16, 16]`| `[3, 3, 3, 3]`| `1` (Tiled) | Text input / Search field states |
+| `betterquesting:panel_dark` | `[96, 64, 32, 32]` | `[8, 8, 8, 8]` | `1` (Tiled) | Modal confirmation popups (5px corner brackets) |
+| `betterquesting:scroll_v_bg` | `[248, 0, 8, 60]` | `[1, 1, 1, 1]` | `2` (Stretched)| Vertical scroll track groove |
+| `betterquesting:scroll_v_0..2`| `[248, 60..100, 8, 20]`| `[1, 6, 1, 6]`| `2` (Stretched)| Tactile grooved scroll thumb |
+| `betterquesting:panel_inner` | `[128, 128, 64, 64]` | `[8, 8, 8, 8]` | `1` (Tiled) | Quest card panel with 4px corner tick brackets |
+| `betterquesting:icon_tick` | `[208, 64, 16, 16]` | — | Simple Texture | Checkmark for task checkbox |
+| `betterquesting:icon_cross` | `[224, 64, 16, 16]` | — | Simple Texture | X-mark for task checkbox |
 
 ---
 
-## 3. Масштабируемые линии квестов (Scale-Invariant Quad Lines)
+## 3. Scale-Invariant Quad Lines (`line_directional`)
 
-### Проблема устаревшего рендерера `line_simple`:
-По умолчанию Better Questing часто использует `line_simple`. Он вызывает команду OpenGL `glLineWidth()`, которая работает в **физических пикселях монитора**.  
-- При отдалении холста (Zoom Out) иконки квестов уменьшаются, а линии остаются прежней экранной толщины, превращаясь в гигантские перекрывающие брёвна.
-- При приближении (Zoom In) линии становятся тоньше волоса.
+### The `glLineWidth` Engine Flaw:
+`line_simple` invokes OpenGL `glLineWidth()`, rendering lines in **fixed monitor pixels**:
+- **Zoom Out**: Quest nodes shrink, but lines stay at fixed screen pixels, turning into massive thick bars that obscure icons.
+- **Zoom In**: Lines become hairline thin.
 
-### Решение: Полигональный рендерер `line_directional`
-Для всех типов соединений в секции `"lines"` необходимо переключаться на `line_directional`:
+### Solution: Hardware-Scaled GL Quads
+Replace all line entries in `lines` with `betterquesting:line_directional`:
 ```json
 "betterquesting:quest_unlocked": {
   "lineType": "betterquesting:line_directional",
@@ -97,22 +117,20 @@ config/betterquesting/resources/<theme_id>/
   "widthScale": 0.75
 }
 ```
-- **Как это работает:** Линии строятся как **четырёхугольники (Quads) в мировой координатной сетке самого холста квестов**. Видеокарта масштабирует их синхронно с узлами при любом масштабировании.
-- `"arrowOpacity": 0.0` — отключает стрелки-указатели, делая линии чистыми и минималистичными.
-- `"widthScale": 0.75` — идеальный коэффициент толщины для иконок 24×24.
-
-Необходимо настроить все 5 состояний: `quest_locked`, `quest_unlocked`, `quest_pending`, `quest_complete`, `quest_repeatable`.
+- Lines are rendered as **quad polygons directly in world-canvas coordinates**. The GPU scales them proportionally with quest icons at every zoom level.
+- `"arrowOpacity": 0.0` removes distracting chevron arrows, providing clean technical lines.
+- `"widthScale": 0.75` provides optimal visual weight for standard 24×24 quest nodes.
+- Apply to all 5 keys: `quest_locked`, `quest_unlocked`, `quest_pending`, `quest_complete`, `quest_repeatable`.
 
 ---
 
-## 4. Светосигнальная колористика и синусоидальные пульсации
+## 4. Color Physics & Pulse Signaling
 
-### Принцип функционального контраста (Contrast-First):
-- **Пассивные фоны и кнопки:** Глубокие тёмные тона (тёмный графит `#0E110F`, воронёный металл `#242E27`, тёмный изумруд `#0E2716`). Глаза игрока не должны уставать от ярких сеток при многочасовом чтении квестов.
-- **Интерактивные вспышки:** Яркий фосфор `#2FFF21` включается только при наведении курсора (`btn_normal_2`, `scroll_*_1`) или активном наборе текста (`text_box_2`).
+### Design Principle: Contrast-First (No Neon Glare):
+- Keep backgrounds and passive borders dark (graphite `#0E110F`, dark slate `#242E27`, deep emerald `#0E2716`).
+- Reserve high-intensity phosphor green (`#2FFF21`) strictly for active input, mouse hover, and actionable rewards.
 
-### Настройка динамических пульсаций (`color_pulse`):
-Движок поддерживает плавное синусоидальное переливание между двумя цветами:
+### Color Pulse Syntax (`color_pulse`):
 ```json
 "betterquesting:quest_icon_unlocked": {
   "colorType": "betterquesting:color_pulse",
@@ -129,79 +147,69 @@ config/betterquesting/resources/<theme_id>/
 }
 ```
 
-### Стандартная семантика сигналов статуса квестов:
-1. **`quest_icon_locked` (Заблокирован):**  
-   Статический спокойный сланец (`#FF354238`), линии — глубокий графит (`#FF18221B`). Не отвлекает от текущих доступных целей.
-2. **`quest_icon_unlocked` (Доступен для выполнения):**  
-   **Тёплая янтарная лампа** (`#FFFFB830` ⇄ `#FF8F5E12`, период: `2.0` с). Интуитивный сигнал «квест открыт». Линии `quest_line_unlocked` пульсируют синхронно (`#FFFFB830` ⇄ `#FF7A5210`).
-3. **`quest_icon_pending` (Задачи выполнены, ожидает сдачи награды):**  
-   **Высокочастотный фосфорный маяк** (`#FF55FF48` ⇄ `#FF124E20`, динамичный период: `1.2` с), линии: `#FF2FFF21`. Яркая пульсация привлекает внимание игрока.
-4. **`quest_icon_complete` (Награда забрана, сдан):**  
-   Статический чистый фосфорный зелёный (`#FF2FFF21`), линии: спокойный тёмный изумруд (`#FF1E5E2E`).
-5. **`quest_icon_repeatable` (Повторяемый / циклический):**  
-   Бронзово-янтарная пульсация (`#FFFF9520` ⇄ `#FF94500C`, период: `1.5` с).
+### Standard Status Signal Map:
+| Quest State | Node Color (`quest_icon_*`) | Line Color (`quest_line_*`) | Signal Semantics |
+| :--- | :---: | :---: | :--- |
+| **Locked** | `#FF354238` (static gunmetal) | `#FF18221B` (static graphite) | Inactive; blends into canvas to prevent distraction |
+| **Unlocked** | Pulse `FFFFB830` ⇄ `FF8F5E12` (2.0s) | Pulse `FFFFB830` ⇄ `FF7A5210` (2.0s) | **Warm amber lamp**: signals "Available to begin" |
+| **Pending** | Pulse `FF55FF48` ⇄ `FF124E20` (1.2s) | `#FF2FFF21` (static phosphor) | **High-frequency beacon**: signals "Claim reward!" |
+| **Complete** | `#FF2FFF21` (static phosphor) | `#FF1E5E2E` (static dark emerald) | Solid stable green: completed and archived |
+| **Repeatable**| Pulse `FFFF9520` ⇄ `FF94500C` (1.5s) | Pulse `FFFF9520` ⇄ `FF94500C` (1.5s) | Warm bronze/amber indicator for repeatable quests |
 
 ---
 
-## 5. Системные иконки чекбоксов (`PresetIcon`)
+## 5. Checkbox Icons & Color Tinting
 
-В заданиях типа «Чекбокс» (`TaskCheckbox`) движок Better Questing накладывает поверх кнопки текстуры `betterquesting:icon_tick` (выполнено) и `betterquesting:icon_cross` (не выполнено).
+`PanelTaskCheckbox` applies dynamic OpenGL color multiplication to checkbox icons:
+- Incomplete: tinted by `0xFFFF0000` (pure red).
+- Complete: tinted by `0xFF00FF00` (pure green).
 
-### Переопределение через тему:
-В `bq_themes.json` в секции `"textures"` зарегистрируйте их как `texture_simple`:
-```json
-"betterquesting:icon_tick": {
-  "textureType": "betterquesting:texture_simple",
-  "atlas": "my_theme:textures/gui/atlas.png",
-  "bounds": [208, 64, 16, 16]
-},
-"betterquesting:icon_cross": {
-  "textureType": "betterquesting:texture_simple",
-  "atlas": "my_theme:textures/gui/atlas.png",
-  "bounds": [224, 64, 16, 16]
-}
-```
-
-### Правило цветового умножения (Color Tinting):
-`PanelTaskCheckbox` программно умножает цвет текстуры на зелёный (`0xFF00FF00`) или красный (`0xFFFF0000`).
-- **Следствие:** На самом атласе иконка должна быть нарисована **в чистом белом цвете (`#FFFFFF`)**. Белый цвет идеально принимает зелёный и красный оттенок.
-- **Объёмная тень:** Тень под иконкой рисуется полупрозрачным чёрным цветом (`0x80000000`). Чёрный цвет при умножении на любой оттенок остаётся чёрным, сохраняя чёткий контраст на любом фоне кнопки.
+### Rules for Atlas Drawing:
+1. **Draw foreground strokes in pure white (`0xFFFFFFFF`)**: `(1, 1, 1) * tint = tint`. The icon becomes vivid red or green.
+2. **Draw drop shadow in semi-transparent black (`0x80000000`)**: `(0, 0, 0) * tint = (0, 0, 0)`. The shadow stays black regardless of color tint, preserving depth and contrast on dark buttons.
+3. Register as `betterquesting:texture_simple` in `bq_themes.json`:
+   ```json
+   "betterquesting:icon_tick": {
+     "textureType": "betterquesting:texture_simple",
+     "atlas": "my_theme:textures/gui/atlas.png",
+     "bounds": [208, 64, 16, 16]
+   }
+   ```
 
 ---
 
-## 6. Процедурная генерация атласа на чистой Java
+## 6. Procedural Atlas Generation
 
-Ручное редактирование атласа 256×256 в Photoshop/GIMP часто приводит к сдвигам на 1 пиксель, смазыванию полутонов и невозможности быстрой пакетной калибровки цветов.  
-**Стандарт NTNH:** Генерация атласа через чистый Java-скрипт (`BufferedImage` + `Graphics2D` с выключенным сглаживанием).
-
-### Шаблон генератора:
-Смотри подробный мастер-скрипт генератора в `references/BuildAtlasTemplate.java`.
-Ключевые требования:
-```java
-BufferedImage atlas = new BufferedImage(256, 256, BufferedImage.TYPE_INT_ARGB);
-Graphics2D g = atlas.createGraphics();
-g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);
-// Отрисовка элементов попиксельно
-```
+Avoid editing 256×256 atlases manually in raster image editors. Use an automated Java builder (`references/BuildAtlasTemplate.java`) with `BufferedImage` and `Graphics2D` (`VALUE_ANTIALIAS_OFF`).  
+This ensures:
+- Sub-pixel alignment accuracy (no off-by-one errors).
+- Clean mathematical bevels and drop shadows.
+- Instant batch export to both target instances.
 
 ---
 
-## 7. Пошаговый пайплайн разработки и тестирования темы
+## 7. Common Pitfalls & Solutions
 
-1. **Правка параметров в `bq_themes.json`**:
-   - Настройте координаты `bounds`, паддинги `padding` и цветовые ключи.
-2. **Валидация JSON-синтаксиса**:
-   - Обязательно выполните проверку перед запуском клиента:
-     ```powershell
-     Get-Content config/betterquesting/resources/<theme_id>/bq_themes.json -Raw | ConvertFrom-Json | Out-Null
-     ```
-3. **Синхронизация инстанций**:
-   - Скопируйте изменённые файлы темы (`bq_themes.json` и `atlas.png`) в тестовую инстанцию (`DEV_NTNH`) и сверьте хэши `Get-FileHash`.
-4. **Горячая перезагрузка в игре**:
-   - В запущенном клиенте Minecraft нажмите **`F3 + T`** — текстуры и JSON темы перезагрузятся на лету без перезапуска игры.
-5. **Проверка ключевых сценариев в GUI**:
-   - Читаемость шрифтов в карточке квеста.
-   - Отсутствие искажения рамок при растягивании окон.
-   - Сохранение пропорций линий при зумировании холста.
-   - Свечение кнопок при наведении курсора и клике.
-   - Отработка иконок чекбоксов в невыполненном и выполненном состоянии.
+| Pitfall | Cause | Solution |
+| :--- | :--- | :--- |
+| **Lines become massive bars on zoom out** | Theme uses `line_simple` (`glLineWidth`) | Switch all line definitions to `line_directional` with `arrowOpacity: 0.0` and `widthScale: 0.75`. |
+| **Corner brackets repeating along panel edges** | Insets in `padding` are smaller than corner feature dimensions | Ensure padding values `[L, T, R, B]` are strictly larger than the drawn corner decorations. |
+| **Checkbox icons render in muddy/dark colors** | Icon on atlas was drawn in gray/green instead of white | Redraw icon strokes in pure `0xFFFFFFFF` so OpenGL color multiplication works cleanly. |
+| **Broken JSON crashing theme load** | Trailing comma or syntax error | Run PowerShell JSON validation: `Get-Content bq_themes.json -Raw \| ConvertFrom-Json` before launching. |
+| **Textures look blurry / interpolated** | Sliced texture mode set to `2` (Stretched) on pixel-art borders | Set `sliceMode: 1` (Tiled) for window panels and buttons. |
+
+---
+
+## 8. Verification & Sync Workflow
+
+1. Validate JSON syntax:
+   ```powershell
+   Get-Content config/betterquesting/resources/<theme_id>/bq_themes.json -Raw | ConvertFrom-Json | Out-Null
+   ```
+2. Re-bake atlas if code modified:
+   ```powershell
+   javac -encoding UTF-8 references/BuildAtlasTemplate.java
+   java -cp references BuildAtlasTemplate
+   ```
+3. Sync files to both instances (`NTNH_tx_bcraft` and `DEV_NTNH`) and verify SHA-256 match.
+4. Press **`F3 + T`** in the running Minecraft client to hot-reload textures and JSON instantly without restarting the game.

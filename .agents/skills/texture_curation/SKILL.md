@@ -1,120 +1,142 @@
 ---
 name: texture_curation
-description: "Кураторство, адаптация и внедрение текстур игрового мира (мобы, блоки, руды, предметы, броня, CTM) в NTNH. Активируй при добавлении или обновлении текстур мобов (включая Special Mobs и UV 64x32 vs 64x64), адаптации блоков и руд под стиль HBM/Modernity, настройке анимаций .mcmeta, связанных текстур (CTM через Angelica) и внесении ассетов в asset_attribution.md."
+description: Use when adding, curating, or modifying in-game world textures (mob entities, blocks, ores, items, connected textures CTM, .mcmeta animations) or recording assets in asset_attribution.md.
 ---
 
-# Регламент кураторства и адаптации текстур игрового мира (`texture_curation`)
+# In-Game World Texture Curation (`texture_curation`)
 
-Данный навык содержит архитектурные стандарты, технические спецификации и регламент авторского права при внедрении и модификации текстур игрового мира (сущности/мобы, блоки, руды, предметы, броня, CTM) в **Nuclear Tech New Horizons (NTNH)** на базе Minecraft 1.7.10.
-
----
-
-## 1. Визуальная философия и стилистика мира NTNH
-
-Мир NTNH строится на стыке **современного детализированного пиксель-арта (JAPPA Modernity)** и **брутального индустриально-постапокалиптического стиля HBM's Nuclear Tech Mod**:
-1. **Разрешение strictly 16×16:** Все блоки и предметы строго выдержаны в нативной сетке 16×16. Никаких HD-текстур (32×32, 64×64), разрушающих целостность воксельного мира и снижающих производительность.
-2. **Глубокий объём и читаемость:** Использование глубоких полутонов, контрастных фасок и рельефных теней вместо плоских закрасок старого Minecraft.
-3. **Атмосферная гармония:** Мобы, руды и окружение должны органично смотреться рядом с бетонными бункерами, промышленными реакторами, заражёнными пустошами и кратерами.
+## Overview
+A technical reference and protocol for integrating, adapting, and curating 3D/world textures (mobs, blocks, ores, items, and connected textures) in **Nuclear Tech New Horizons (NTNH)** for Minecraft 1.7.10. Enforces the strict 16×16 resolution rule, 1.7.10 UV mapping compatibility, and ethical asset governance.
 
 ---
 
-## 2. Текстуры мобов и сущностей (Entities & Mobs)
+## When to Use
 
-### 2.1. Специфика UV-развёрток в Minecraft 1.7.10:
-В версии 1.7.10 сосуществуют два стандарта развёртки скинов и мобов:
-- **Классический формат `64×32` пикселя:**  
-  Используется большинством ванильных мобов (зомби, скелеты, криперы, пауки). Левые и правые конечности зеркально отображают одну и ту же область текстуры.
-- **Расширенный формат `64×64` пикселя:**  
-  Используется в Et Futurum, кастомных мобах и обновлённых моделях игроков (Alex/Steve). Имеет независимые UV-координаты для левых и правых рук/ног и внешние оверлейные слои (куртка, рукава, штанины).
+### Triggers & Symptoms:
+- Adding or replacing mob textures (vanilla mobs, Et Futurum models, or Special Mobs variants).
+- Mob limbs appear black, transparent, or scrambled due to UV mapping format mismatch (64×32 vs 64×64).
+- Creating or adapting block textures that need seamless 4-way tiling.
+- Modernizing ore blocks to fit JAPPA/Modernity depth and HBM industrial stone palettes.
+- Configuring animated block/item textures via `.mcmeta`.
+- Setting up connected textures (CTM) via Angelica (OptiFine CTM format).
+- Recording borrowed or modified community textures in [`docs/standards/asset_attribution.md`](file:///C:/Users/S_N_A/AppData/Roaming/PrismLauncher/instances/NTNH_tx_bcraft/minecraft/docs/standards/asset_attribution.md).
+
+### When NOT to Use:
+- Designing or modifying Better Questing theme atlases, buttons, or lines (use `bq_theming`).
+- Adapting 2D container interfaces, furnaces, or machine inventories (use `gui_styling`).
+
+---
+
+## 1. Aesthetic Standards & Resolution Discipline
+
+1. **Strict 16×16 Native Resolution**:
+   All blocks and items MUST use native 16×16 pixel resolution. HD textures (32×32, 64×64) destroy Minecraft's voxel visual cohesion and cause performance penalties.
+2. **Deep Shading & Volume (JAPPA Modernity Style)**:
+   Avoid flat, unshaded surfaces from early Minecraft. Use directional highlights (top-left) and deep shadow bevels (bottom-right).
+3. **Atmospheric Harmony with HBM Nuclear Tech**:
+   Textures must visually integrate with industrial machinery, concrete bunkers, radiation hazmats, and devastated wasteland biomes.
+
+---
+
+## 2. Entity & Mob Textures
+
+### 2.1. 1.7.10 UV Mapping Compatibility (64×32 vs 64×64):
+Minecraft 1.7.10 utilizes two distinct entity model formats:
+- **Classic 64×32 Format**:
+  Used by vanilla 1.7.10 mobs (zombies, skeletons, creepers, spiders). Left and right arms/legs mirror the exact same UV coordinates.
+- **Modern 64×64 Format**:
+  Used by Et Futurum, modern player skins, and specialized mob renderers. Features distinct UV islands for left/right limbs and outer jacket/layer meshes.
 
 > [!WARNING]
-> Перед заменой текстуры моба **всегда проверяйте размер оригинального файла**: попытка наложить текстуру `64×64` на классическую модель `64×32` без специального рендера приведёт к искажению нижней половины текстуры (ноги станут чёрными или полупрозрачными).
+> Applying a modern `64×64` texture to a classic `64×32` model will cause severe rendering artifacts (bottom half ignored, black limbs, broken leg geometry). Always inspect the original entity texture in the mod jar first.
 
-### 2.2. Светящиеся оверлеи глаз (`_eyes.png` / `_glow.png`):
-- Для мобов со светящимися в темноте глазами (эндермены, пауки, кастомные мутанты HBM) используется отдельный слой текстуры с суффиксом `_eyes.png`.
-- **Правило прорисовки:** Всё тело моба заливается абсолютно прозрачным чёрным цветом (`#00000000`), а пиксели глаз рисуются чистым непрозрачным цветом. Движок рендерит этот слой поверх модели с полным игнорированием освещения мира (Fullbright).
+### 2.2. Glowing Eye Overlays (`_eyes.png`):
+- For mobs with night-visible eyes (endermen, spiders, radioactive mutants), provide a separate texture with suffix `_eyes.png`.
+- **Canvas Rule**: The entire body must be 100% transparent (`#00000000`). Only the glowing eye pixels contain color. The engine renders this overlay at full brightness regardless of ambient light level.
 
-### 2.3. Интеграция с модом Special Mobs:
-Мод `SpecialMobs` добавляет десятки подвидов ванильных мобов. Их текстуры размещаются по путям:
+### 2.3. Special Mobs Integration:
+Textures for Special Mobs variants are located in:
 ```
-resourcepacks/NTNH-Modernity-2.1/assets/specialmobs/textures/entity/<mob_type>/<variant_name>.png
+resourcepacks/NTNH-Modernity-2.1/assets/specialmobs/textures/entity/<mob_type>/<variant>.png
 ```
-*Пример:* `.../specialmobs/textures/entity/creeper/death.png` (Creeper Смерти), `.../entity/zombie/fire.png`.
+*(e.g., `creeper/death.png`, `zombie/fire.png`, `ghast/fighter.png`).*
 
 ---
 
-## 3. Текстуры блоков и руд (Blocks & Ores)
+## 3. Block & Ore Textures
 
-### 3.1. Бесшовное тайлирование (Seamless Tiling):
-Текстура любого строительного или природного блока обязана бесшовно стыковаться сама с собой по всем четырём сторонам.  
-*Метод проверки:* Разложите текстуру в тестовом поле 3×3 (48×48 px) и проверьте стыки на отсутствие резких обрывов линий, паразитных тёмных границ или повторяющихся навязчивых пятен.
+### 3.1. Seamless 4-Way Tiling:
+Every terrain block must tile seamlessly in a 3×3 grid (48×48 px) with zero visible boundary seams, harsh edges, or repetitive repeating artifacts.
 
-### 3.2. Руды и интеграция с Geologia / Custom Ore Gen:
-- В NTNH рудные вкрапления должны иметь выраженный 3D-рельеф: верхний край жилы светлее, нижний край заглублён в тень на фоне базового камня (`stone.png`).
-- Базовый камень под рудой обязан пиксель-в-пиксель соответствовать текстуре камня в используемом ресурспаке (Modernity Stone), иначе вокруг руды будет виден неестественный прямоугольный контур.
+### 3.2. Ore Design & Stone Consistency:
+- Mineral crystals require high-contrast specular highlights and deep shadow crevasses.
+- **Base Stone Rule**: The background stone behind ore pixels MUST exactly match the active pack's `stone.png` pixel-for-pixel. A mismatch creates a visible square bounding box around the ore deposit in-game.
 
-### 3.3. Анимированные текстуры (`.mcmeta`):
-Для блоков с динамическим эффектом (течение лавы, пламя, пульсация ядерных элементов, радиоактивное свечение):
-1. Сама текстура создаётся как вертикальная полоса шириной 16px и высотой `16 × N` пикселей (где N — число кадров).
-2. Рядом создаётся файл с тем же именем и расширением `.png.mcmeta`:
-```json
-{
-  "animation": {
-    "frametime": 2,
-    "interpolate": true
-  }
-}
-```
-- `frametime`: длительность кадра в тиках (1 тик = 1/20 сек).
-- `interpolate: true`: включает аппаратную билинейную интерполяцию между кадрами (плавный морфинг вместо ступенчатого переключения).
+### 3.3. Texture Animation (`.mcmeta`):
+For pulsing, glowing, or flowing textures:
+1. Stack animation frames vertically: width = 16px, height = `16 × N` px.
+2. Place a matching `<texture_name>.png.mcmeta` alongside the PNG:
+   ```json
+   {
+     "animation": {
+       "frametime": 2,
+       "interpolate": true
+     }
+   }
+   ```
+   - `frametime`: Frame duration in game ticks (1 tick = 0.05s).
+   - `interpolate: true`: Enables hardware bilinear interpolation between frames for smooth transitions.
 
-### 3.4. Связанные текстуры CTM (Connected Textures via Angelica):
-В NTNH установлен мод **Angelica**, полностью поддерживающий стандарт OptiFine CTM.
-- **Путь размещения:** `resourcepacks/NTNH-Modernity-2.1/assets/<modid>/mcpatcher/ctm/<block_name>/`
-- **Файл свойств:** `<block_name>.properties`
-- **Популярные методы:**
-  - `method=ctm_compact` (47 состояний соединения для стекол, лаб-панелей, решёток).
-  - `method=horizontal` (соединение только по горизонтали, например для книжных полок или бордюров).
-  - `method=random` (случайная вариативность текстур для камня, земли, кирпичей).
+### 3.4. Connected Textures (CTM via Angelica):
+Angelica supports the OptiFine CTM format in 1.7.10:
+- **Directory**: `resourcepacks/NTNH-Modernity-2.1/assets/<modid>/mcpatcher/ctm/<block>/`
+- **Configuration**: `<block>.properties`
+  - `method=ctm_compact`: Standard 47-tile seamless texture connection (glass, lab panels).
+  - `method=horizontal`: Horizontal-only connection (bookshelves, lab counters).
+  - `method=random`: Natural random variant rotation (stone, dirt, gravel).
 
 ---
 
-## 4. Текстуры предметов (Items)
+## 4. Item Textures
 
-- **Разрешение:** Строго `16×16` пикселей.
-- **Контур и распознаваемость:** Предмет должен мгновенно идентифицироваться в слоте 16×16 даже боковым зрением. Рекомендуется тёмно-серый или акцентный контур толщиной в 1 пиксель с верхне-левым световым бликом.
-- **Размещение:**  
-  `resourcepacks/NTNH-Modernity-2.1/assets/<modid>/textures/items/<item_name>.png`
-
----
-
-## 5. Юридический регламент и реестр ассетов (`asset_attribution.md`)
-
-В NTNH действует строгий стандарт авторского права (**Ethical Curation**).  
-Ни один заимствованный ассет не попадает в сборку анонимно.
-
-### Статусы разрешений:
-- `APPROVED` (🟢): Получено прямое согласие автора. Скриншот сохраняется в `docs/assets/proofs/<author_or_pack>.png`.
-- `OPEN_LICENSE` (🔵): Свободная лицензия (CC-BY, MIT, Public Domain). Требуется указание автора в титрах.
-- `PENDING` (🟡): Запрос отправлен. Разрешено использовать только локально в dev-ветках; релиз в прод запрещён.
-- `DENIED` (🔴): Отказ автора. Текстуры удаляются немедленно.
-
-### Процедура фиксации:
-При добавлении любой новой текстуры или пака **обязательно внесите запись** в мастер-реестр:
-[`docs/standards/asset_attribution.md`](file:///C:/Users/S_N_A/AppData/Roaming/PrismLauncher/instances/NTNH_tx_bcraft/minecraft/docs/standards/asset_attribution.md):
-1. Раздел 3: Реестр авторов и паков-доноров (если пак новый).
-2. Раздел 4: Пофайловый реестр по категориям (4.2 «Руды», 4.3 «Блоки», 4.4 «Предметы», 4.5 «Мобы»).
+- Dimensions: Exactly **16×16 pixels**.
+- Readability: Silhouettes must be instantly identifiable at small inventory scales. Use a 1px dark perimeter outline with an upper-left specular rim.
+- Path: `resourcepacks/NTNH-Modernity-2.1/assets/<modid>/textures/items/<item>.png`
 
 ---
 
-## 6. Пошаговый пайплайн интеграции нового ассета
+## 5. Asset Attribution & Governance (`asset_attribution.md`)
 
-1. **Подготовка файла:** Проверьте разрешение (16×16 для блоков/предметов, соответствие UV 64×32/64×64 для мобов).
-2. **Размещение в ресурспаке:** Скопируйте файл в соответствующую подпапку `resourcepacks/NTNH-Modernity-2.1/assets/<modid>/...`.
-3. **Синхронизация инстанций:** Скопируйте файл в `DEV_NTNH` и `NTNH_tx_bcraft`.
-4. **Горячая перезагрузка:** В клиенте нажмите **`F3 + T`** для обновления ресурспака.
-5. **Тестирование в игре:**
-   - Осмотрите объект при разном освещении (день, ночь, свет факела).
-   - Для мобов — заспавните моба через яйцо призыва и проверьте конечности в движении (отсутствие артефактов UV).
-   - Для блоков — постройте стену 5×5 и проверьте тайлинг швов.
-6. **Фиксация в `asset_attribution.md`**: добавьте запись об источнике и лицензии.
+In NTNH, all borrowed or modified community assets must be legally documented per [`docs/standards/asset_attribution.md`](file:///C:/Users/S_N_A/AppData/Roaming/PrismLauncher/instances/NTNH_tx_bcraft/minecraft/docs/standards/asset_attribution.md):
+
+| Permission Status | Symbol | Meaning | Action |
+| :--- | :---: | :--- | :--- |
+| **APPROVED** | 🟢 | Direct permission granted by author | Screenshot stored in `docs/assets/proofs/<name>.png` |
+| **OPEN_LICENSE** | 🔵 | CC-BY, MIT, CC0, Public Domain | Include author link and license name in registry |
+| **PENDING** | 🟡 | Request sent, waiting for reply | Restricted to local dev branches; release forbidden |
+| **DENIED** | 🔴 | Author refused permission | Remove texture immediately |
+
+---
+
+## 6. Step-by-Step Integration Workflow
+
+1. **Verify Dimensions**: Confirm 16×16 for blocks/items or verify UV dimensions (64×32 vs 64×64) for entities.
+2. **Deploy to Resource Pack**: Copy to `resourcepacks/NTNH-Modernity-2.1/assets/<modid>/...`.
+3. **Synchronize Instances**: Mirror the file to the secondary dev instance and verify hash match.
+4. **Hot-Reload In-Game**: Press **`F3 + T`** in the running Minecraft client.
+5. **Multi-Condition Inspection**:
+   - Inspect blocks in day, night, and torchlight.
+   - Spawn mobs via eggs and verify limb animations for UV tearing.
+   - Test seamless tiling by placing a 5×5 block wall.
+6. **Log Attribution**: Add entry to [`docs/standards/asset_attribution.md`](file:///C:/Users/S_N_A/AppData/Roaming/PrismLauncher/instances/NTNH_tx_bcraft/minecraft/docs/standards/asset_attribution.md).
+
+---
+
+## 7. Common Pitfalls & Solutions
+
+| Pitfall | Cause | Solution |
+| :--- | :--- | :--- |
+| **Mob limbs render black or mirrored incorrectly** | 64×64 texture placed on a 64×32 classic model | Re-map texture to classic 64×32 layout or convert model renderer. |
+| **Ore has visible rectangular boundary in rock** | Background stone pixels differ from active pack's `stone.png` | Sample the exact stone texture from Modernity and re-bake background pixels. |
+| **CTM glass/blocks do not connect** | Missing Angelica or misnamed `.properties` file | Check `mcpatcher/ctm/` path and confirm `matchBlocks=<id>` is correctly specified. |
+| **Animated texture appears as a static tall column** | `.mcmeta` file missing or invalid JSON syntax | Ensure file is named `<texture>.png.mcmeta` with valid JSON brackets. |

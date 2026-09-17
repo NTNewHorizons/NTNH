@@ -1,128 +1,122 @@
 ---
 name: gui_styling
-description: "Адаптация, редизайн и вёрстка интерфейсов контейнеров (GUI) модов для Minecraft 1.7.10. Активируй при работе с текстурами инвентарей, верстаков, печей, механизмов через TxLoader (config/txloader/forceload/<modid>/textures/gui/) или ресурспаки, калибровке слотов 18x18, индикаторов прогресса, баров энергии/жидкостей и интеграции темы Modernity."
+description: Use when adapting, redesigning, or troubleshooting container GUIs, inventory slot alignments, progress indicators, or machine interfaces in Minecraft 1.7.10 via TxLoader or resource packs.
 ---
 
-# Регламент адаптации и вёрстки интерфейсов контейнеров (`gui_styling`)
+# Container GUI Adaptation & Engineering (`gui_styling`)
 
-Данный навык определяет стандарт модернизации и вёрстки двумерных графических интерфейсов (GUI) для модов и механизмов сборки **Nuclear Tech New Horizons (NTNH)** на базе Minecraft 1.7.10.
+## Overview
+A technical specification and procedure for adapting, reskinning, and aligning 2D container interfaces (GUIs) in **Minecraft 1.7.10**. Enforces strict slot coordinate matching with Forge/mod `Container` Java classes, TxLoader override rules, and Modernity dark-slate aesthetics.
 
 ---
 
-## 1. Миссия и визуальный стандарт Modernity GUI
+## When to Use
 
-Оригинальные интерфейсы Minecraft 1.7.10 и сторонних модов 2013-2015 годов страдают от плоских светло-серых фонов (`#C6C6C6`), плохой контрастности и визуальной разрозненности.  
-**Цель NTNH:** Привести все интерфейсы к единому стилю **Modernity / Dark Industrial**:
-- Благородная металлическая основа (тёмное железо, матовый сланец, глубокий графит).
-- Чёткие фаски света и тени (объёмные утопленные сокеты слотов).
-- Гармония с брутальной индустриальной эстетикой HBM Nuclear Tech Mod.
+### Triggers & Symptoms:
+- Modernizing outdated, flat-gray (`#C6C6C6`) container GUIs from 2013-era mods.
+- Reskinning furnaces, crafting tables, chests, Bibliocraft workstations, or custom machine containers.
+- Items in a container appear misaligned, floating outside slot frames, or clipping into borders.
+- Progress bars, burn flames, or energy/fluid tank overlays fail to align with container textures.
+- Overriding mod GUIs without modifying or unpacking mod `.jar` files.
 
-### Золотое правило координатной инженерии:
+### When NOT to Use:
+- Modifying Better Questing windows, quest nodes, or lines (use `bq_theming`).
+- Editing world textures: mob skins, block models, or item icons (use `texture_curation`).
+
+---
+
+## 1. Container Anatomy & Coordinate Locking
+
+### The Golden Coordinate Invariant:
 > [!CRITICAL]
-> В Minecraft 1.7.10 позиции слотов предметов, индикаторов плавки и баров энергии **жёстко закодированы в Java-классах `Container` и `GuiContainer` модов**.
-> При редизайне интерфейса **строго запрещено сдвигать координаты слотов даже на 1 пиксель** относительно оригинальной текстуры мода! Иначе в игре предмет будет «висеть в воздухе» мимо рамки ячейки.
+> In Minecraft 1.7.10, slot positions, progress arrow bounds, and gauge overlays are **hardcoded in Java classes (`Container` and `GuiContainer`)**.
+> **NEVER shift slot or indicator positions by even a single pixel relative to the original mod texture.** Any displacement causes items to float outside their slots in-game.
+
+### Standard Layout Dimensions:
+- Canvas: **256×256 pixels** (ARGB).
+- Active Container Frame: typically **176×166 pixels** (standard) or **176×184 pixels** (extended).
+- Player Inventory Grid:
+  - Main inventory (3 rows of 9 slots): typically starts at `x = 8, y = 84`.
+  - Hotbar (1 row of 9 slots): typically starts at `x = 8, y = 142`.
+  - Grid step: strictly **18 pixels** horizontal and vertical.
+
+### Single Slot Micro-Geometry (18×18 px):
+```
+ (0,0) +------------------+ (17,0)
+       | Outer Contour    |  <- 1px dark border (#141A16 or #373737)
+       | +--------------+ |
+       | | Inset Shadow | |  <- Top & Left: 1px deep shadow (#040605 or #181818)
+       | |   16x16      | |
+       | |  Item Well   | |  <- Center: 16x16 flat dark fill (#0A100C or #202020)
+       | |              | |
+       | | Bevel Light  | |  <- Bottom & Right: 1px light rim (#26362C or #555555)
+       | +--------------+ |
+(0,17) +------------------+ (17,17)
+```
 
 ---
 
-## 2. Анатомия стандартного контейнера Minecraft
+## 2. Override Pipelines
 
-Текстура типового контейнера имеет размер **256×256 пикселей** (активная область обычно составляет `176×166` или `176×184` px).
-
-```
-(0,0)  +-------------------------------------------------------+ (256,0)
-       |  Заголовок окна (текст в координатах x=8, y=6)         |
-       |  [Слоты механизма / верстака / рецепта]                |
-       |                                                       |
-       |  ---------------------------------------------------  |
-       |  Инвентарь игрока (3 ряда по 9 слотов, x=8..169, y=84)|
-       |  [ ][ ][ ][ ][ ][ ][ ][ ][ ]                          |
-       |  [ ][ ][ ][ ][ ][ ][ ][ ][ ]                          |
-       |  [ ][ ][ ][ ][ ][ ][ ][ ][ ]                          |
-       |  Хотбар игрока (1 ряд по 9 слотов, x=8..169, y=142)   |
-       |  [ ][ ][ ][ ][ ][ ][ ][ ][ ]                          |
-(0,166)+-------------------------------------------------------+
-       |  (Запасная область для спрайтов огня, стрелок, баров) |
-(0,256)+-------------------------------------------------------+ (256,256)
-```
-
-### Спецификация слота предмета (Slot Grid Math):
-- **Габариты ячейки:** Ровно **`18×18` пикселей**.
-- **Шаг между слотами:** Ровно **18 пикселей** по горизонтали и вертикали (слоты стыкуются ребро-к-ребру).
-- **Внутреннее поле под предмет:** Ровно **`16×16` пикселей**.
-- **Слои рельефа сокета слота:**
-  - Внешний контур: `1px` тёмного цвета границы (`#373737` или `#141A16`).
-  - Тень заглубления (верх и лево): `1px` тёмной фаски (`#181818` или `#040605`).
-  - Световой скос (низ и право): `1px` светлой фаски (`#555555` или `#26362C`).
-  - Дно слота: нейтральный глубокий фон (`#202020` или `#0A100C`).
-
-### Спецификация подвижных индикаторов (Progress Indicators):
-Индикаторы рисуются в нижней/правой свободной части листа `256×256` и программно копируются поверх основы:
-- **Стрелка плавки (Furnace Arrow):** Обычно `24×17` px. На текстуре размещается пустая стрелка-подложка в рабочем поле и заполненная стрелка в зоне спрайтов.
-- **Огонёк горения топлива (Flame):** Обычно `14×14` px.
-- **Бары энергии / жидкостей:** Шкалы `16×50..60` px с вертикальным или горизонтальным наполнением.
-
----
-
-## 3. Технический пайплайн подмены текстур
-
-### Метод 1: TxLoader Forceload (Приоритетный для модов)
-TxLoader переопределяет текстуры на самом низком уровне загрузки ресурсов Forge без распаковки `.jar` файлов модов.
-
-- **Каталог размещения:**
-  ```
-  config/txloader/forceload/<modid>/textures/gui/<filename>.png
-  ```
-- **Примеры:**
+### Pipeline A: TxLoader Forceload (Preferred for Mods)
+TxLoader intercepts and replaces mod textures at early Forge initialization without unpacking mod archives.
+- **Path**: `config/txloader/forceload/<modid>/textures/gui/<filename>.png`
+- **Examples**:
   - `config/txloader/forceload/bibliocraft/textures/gui/bigbookGUI.png`
   - `config/txloader/forceload/hbm/textures/gui/gui_reactor.png`
 
-### Метод 2: Ресурспак `NTNH-Modernity-2.1` (Для ванильных контейнеров)
-Для контейнеров Minecraft и модов, штатно поддерживающих ресурспаки:
-- **Каталог размещения:**
-  ```
-  resourcepacks/NTNH-Modernity-2.1/assets/<modid>/textures/gui/container/<filename>.png
-  ```
-- **Примеры:**
+### Pipeline B: Resource Pack (Vanilla & Compatible Mods)
+For vanilla containers or mods supporting standard resource pack asset loading.
+- **Path**: `resourcepacks/NTNH-Modernity-2.1/assets/<modid>/textures/gui/container/<filename>.png`
+- **Examples**:
   - `.../assets/minecraft/textures/gui/container/crafting_table.png`
   - `.../assets/minecraft/textures/gui/container/furnace.png`
   - `.../assets/etfuturum/textures/gui/container/smithing.png`
 
 ---
 
-## 4. Пошаговый алгоритм адаптации интерфейса
+## 3. Step-by-Step Adaptation Procedure
 
-### Шаг 1: Извлечение и исследование оригинала
-1. Найдите оригинальный jar-файл мода в папке `mods/`.
-2. Извлеките оригинальную текстуру GUI с помощью PowerShell:
-   ```powershell
-   Add-Type -AssemblyName System.IO.Compression.FileSystem
-   $zip = [System.IO.Compression.ZipFile]::OpenRead("mods/<Mod_File>.jar")
-   $entry = $zip.GetEntry("assets/<modid>/textures/gui/<gui_name>.png")
-   [System.IO.Compression.ZipFileExtensions]::ExtractToFile($entry, "scratch/original_<gui_name>.png", $true)
-   $zip.Dispose()
-   ```
-3. Откройте оригинальный файл и зафиксируйте:
-   - Точные размеры активной зоны (например, `176×166`).
-   - Координаты левого верхнего угла сетки инвентаря игрока (стандарт: `x=8, y=84`).
-   - Координаты специализированных слотов и индикаторов прогресса.
+### Step 1: Extract Original Texture
+Inspect the mod jar to obtain the exact file name and reference coordinates:
+```powershell
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+$zip = [System.IO.Compression.ZipFile]::OpenRead("mods/<Mod_File>.jar")
+$entry = $zip.GetEntry("assets/<modid>/textures/gui/<gui_name>.png")
+[System.IO.Compression.ZipFileExtensions]::ExtractToFile($entry, "scratch/ref_<gui_name>.png", $true)
+$zip.Dispose()
+```
 
-### Шаг 2: Вёрстка модернизированной текстуры
-1. Наложите оригинальный файл как опорный слой (полупрозрачный шаблон с сеткой).
-2. Отрисуйте новую панель в палитре Modernity:
-   - Основная база корпуса: матовая плита тёмного железа.
-   - Слоты предметов: утопленные сокеты с пиксельным совпадением 1:1 с оригиналом.
-   - Индикаторы: чёткие спрайты с контрастной заливкой.
-3. Сохраните результат в 32-bit ARGB PNG без сжатия с потерями.
+### Step 2: Overlay Alignment Verification
+1. Import `ref_<gui_name>.png` into your editor as a semi-transparent background guide layer.
+2. Align the new Modernity dark-slate chassis:
+   - Match outer window dimensions (`176×166`, etc.).
+   - Align every 18×18 slot socket exactly over the reference slot.
+   - Keep progress arrow / gauge backgrounds at identical pixel positions.
+3. Export as 32-bit ARGB PNG.
 
-### Шаг 3: Тестирование в реальном контейнере
-1. Поместите файл в `config/txloader/forceload/<modid>/...` или ресурспак.
-2. Синхронизируйте файл между инстанциями (`NTNH_tx_bcraft` и `DEV_NTNH`).
-3. Запустите игру или нажмите **`F3 + T`** (для ресурспака) / перезапустите игру (если TxLoader требует инициализации).
-4. Откройте целевой блок/контейнер в игре и заполните тестовыми предметами:
-   - Поместите предмет в крайний верхний левый слот (`0, 0`), в крайний правый (`8, 0`), в хотбар (`0, 3`) и (`8, 3`).
-   - Убедитесь, что рамка подсветки предмета (16×16) ложится строго по центру сокета с отступом ровно в 1 пиксель от фасок.
+### Step 3: Deployment & Synchronization
+1. Copy the adapted texture to `config/txloader/forceload/<modid>/textures/gui/` or the resource pack.
+2. Mirror the file to the secondary instance (`DEV_NTNH` / `NTNH_tx_bcraft`) and confirm hash match via `Get-FileHash`.
 
-### Шаг 4: Фиксация в реестре ассетов
-Внесите запись о новом или изменённом GUI в таблицу реестра:
-[`docs/standards/asset_attribution.md`](file:///C:/Users/S_N_A/AppData/Roaming/PrismLauncher/instances/NTNH_tx_bcraft/minecraft/docs/standards/asset_attribution.md) (Раздел 4.1 «Интерфейсы и контейнеры»).
-Обязательно укажите ID донора, оригинального автора и лицензионный статус (`APPROVED`, `OPEN_LICENSE` или `PENDING`).
+### Step 4: In-Game Verification
+1. Open the container in a running test client.
+2. Place items in the four extreme corners of the inventory grid:
+   - Slot (0, 0), slot (8, 0), hotbar (0, 0), hotbar (8, 0).
+3. Hover mouse cursor over each slot:
+   - Confirm the 16×16 white selection highlight is centered within the 18×18 socket with exactly 1px padding on all four sides.
+4. If animated (furnace, smelter): smelt an item and ensure the fill sprite does not leak outside the arrow track.
+
+### Step 5: Asset Attribution Record
+Record the modified/borrowed asset in [`docs/standards/asset_attribution.md`](file:///C:/Users/S_N_A/AppData/Roaming/PrismLauncher/instances/NTNH_tx_bcraft/minecraft/docs/standards/asset_attribution.md) Section 4.1 with author, license status, and file path.
+
+---
+
+## 4. Common Pitfalls & Solutions
+
+| Pitfall | Cause | Solution |
+| :--- | :--- | :--- |
+| **Hover highlight displaced by 1px** | New slot frame was drawn at an offset from original reference | Re-overlay the extracted jar texture and snap slot frames to original pixel coordinates. |
+| **TxLoader not loading modified GUI** | Incorrect directory tree inside `forceload` | Ensure the relative path strictly follows `<modid>/textures/gui/<name>.png`. |
+| **Black silhouettes or lost transparency** | Saved as 24-bit RGB instead of 32-bit ARGB | Export with an alpha channel enabled. |
+| **Progress arrow clipped or desynced** | The empty track and filled sprite in sprite sheet have different dimensions | Measure original sprite bounds in jar and match pixel-for-pixel. |
