@@ -3,7 +3,14 @@
 ## What's changed?
 **Added**
 * Armor sets have descriptions saying if they protect from Nether heat
-* Paniclecraft
+* PanicleCraft
+* Made upright steel scaffold variants climbable while preserving horizontal scaffold placements as platforms
+* New depletable "rich ore" system
+  * Multi‑unit ore blocks that deplete to stone and drop "rich chunks"
+  * Spawns in big patches
+  * Can be found using Neutrino Lens or Survey Scanner
+  * Used to automate mining in the midgame
+  * Factorio reference
 
 
 
