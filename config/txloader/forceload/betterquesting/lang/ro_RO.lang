@@ -237,9 +237,9 @@ betterquesting.quest.ItX_qnZpQCuDSxSoHuKmsA.desc=§6Wood§r obtained from a tree
 betterquesting.quest.JcBabPI8RzGGmai3SwlcLw.name=HE to RF Converter
 betterquesting.quest.JcBabPI8RzGGmai3SwlcLw.desc=The §3HE to RF Converter§r will convert energy produced by NTM machines into usuable power for both the §dMatter Energy Network§r and §dOpenComputers§r. It has a very large internal energy buffer, so it is recommended that a Diode is used to limit throughput.
 
-# Quest: Multi Fluid Identifier
-betterquesting.quest.M3mauW7uTCej4mql-Wnhqg.name=Multi Fluid Identifier
-betterquesting.quest.M3mauW7uTCej4mql-Wnhqg.desc=The §6Multi Fluid Identifier§r is used to select the type of fluid one needs. Shift-Click while holding it to select a fluid.
+# Quest: Fluids
+betterquesting.quest.K-eTce6PTLGe1htaZlPiHg.name=Fluids
+betterquesting.quest.K-eTce6PTLGe1htaZlPiHg.desc=Fluids are measured in §emB§r (§emilli-Buckets§r) and §eB§r (§eBuckets§r).%n%n1 bucket = 1000mB.%n%nThere are two fluid systems that are currently barely incompatible between each other - §6Forge Fluids§r, which is the system that most of the mods are using, and §6NTM Fluids§r, which is the fluid system that is exclusive to NTM.%n%nThe §6Multi Fluid Identifier§r is used to select the type of NTM fluid one needs. Shift-Click while holding it to select a fluid.%n%nThose two systems are not compatible directly, however there is a solution called §3Bob Fluid Translator§r. This machine allows to convert NTM Fluids into Forge Fluids. Simply put an universal identifier at the top slot of the machine and then input the desired fluid.%n%nAE2 is only compatible with Forge Fluids.
 
 # Quest: Known Issues
 betterquesting.quest.MNH6qakfTrC7Jbky4i_Epw.name=Known Issues
@@ -1111,7 +1111,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8A.desc=Particles are important items r
 
 # Quest: Quantum Computer
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAFg.name=Quantum Computer
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAFg.desc=The §6Quantum Computer§r is the most powerful out of any other control unit. It currently only used to build §6Gerald§r. %n%n§2A whole stack of them will be required, so now would be the time to upgrade circuit crafting infrastructure.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAFg.desc=The §6Quantum Computer§r is the most powerful out of any other control unit. It currently only used to build §6Gerald§r and §6DFC§r.%n%n§2A whole stack of them will be required, so now would be the time to upgrade circuit crafting infrastructure.
 
 # Quest: Solid State Quantum Processor
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAGA.name=Solid State Quantum Processor
@@ -1733,3 +1733,7 @@ betterquesting.quest.qxRS5162RCW1IG--2Ibg7g.desc=While the §6Quest Book§r trie
 # Quest: Additional Fluid Tools
 betterquesting.quest.dIUUo_wJTR6juTJGlEfuBQ.name=Additional Fluid Tools
 betterquesting.quest.dIUUo_wJTR6juTJGlEfuBQ.desc=The §6Siphon§r is a tool used to extract input fluids from a machine. Right-clicking a machine with content in it's input tanks will fill any fluid barrels, universal tanks or pipettes (if the fluid amount cannot fill any of the previous options).%n%n§6Pipettes§r can be used to input specific amounts of fluids. Right-clicking or Shift-Right-clicking will increase or decrease the fluid amount.
+
+# Quest: Brine Processing
+betterquesting.quest.yi8dF0M0QNC7loTi7LDKDw.name=Brine Processing
+betterquesting.quest.yi8dF0M0QNC7loTi7LDKDw.desc=§bBrine§r, which is found in deposits similar to oil ones on earth, can be processed to obtain materials such as §6Nickel§r, §6Copper§r and §6Sulfur§r, and fluids such as §bHydrogen§r and §bOxygen§r.

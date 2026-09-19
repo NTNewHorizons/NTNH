@@ -1,58 +1,42 @@
-# 2.14.0 Release
+# 2.15.0 Release
 
 ## What's changed?
 **Added**
-* Eggman's announcement
-* Curvy Pipes
-* Full Forge Fluids <-> NTM Fluids compat
-    * NTM fluids can be imported and exported into/out of ME system
-    * All the mods that use Forge Fluids see and use NTM fluids
-    * Fluid tanks are recognized as fluid storage
-        * Just like the water bucket
-    * Use universal fluid identifier or a fluid container to set the ID
-    * Pippetes also work!
-    * Containers can be refilled/emptiet too
+* Made upright steel scaffold variants climbable while preserving horizontal scaffold placements as platforms
+* New depletable "rich ore" system
+  * Multi‑unit ore blocks that deplete to stone and drop "rich chunks"
+  * Spawns in big patches
+  * Can be found using Neutrino Lens or Survey Scanner
+  * Used to automate mining in the midgame
+  * Factorio reference
+* Armors that fully protect from fire/nether heat now say so in the tooltip
+* PanicleCraft
 
 
 
 **Fixed**
-* Fixed a crash caused by upgrading the second half of a double Re:Chest
-* Fixed squashed GUIs
-* Fixed a crash caused by placing down Et Futurum shulker boxes
-* Fixed nether quartz and lapis generation
-* Fixed missing measure tape recipe
-* Fixed weird-ass hopper crafting recipes
-* Fixed an exploit that allowed cheaters to grab items out of nowhere using Mass Storage Units
-* Fixed tileentity wobbling caused by nausea
+* 
 
 
 
 **Changed**
-* Removed Lumy Skin Patch due to incompatibility w/ Et Futurum Requiem
-* Changed the behavior of the siphon
-    * Previously only worked when completely filling a single empty container, failing silently otherwise
-    * Now tops up compatible partially filled barrels first
-    * Then selects the largest compatible empty barrel and fills it completely or partially
-    * Continues through additional containers until the source is depleted
-    * Respects barrel restrictions, fluid type, pressure, and exact remaining amounts
-    * Safely separates stacked empty barrels when filling one
-    * Preserves existing registered-container and pipette behavior
-* Reverted Gergification until proper implementation
-    * Will probably come with the Stone Age update and/or Factorization update
-* Reworked Geological Surveyor
-    * 3 tiers available - Iron, Steel, Desh
-    * Different tiers have different accuracy
-    * The ores show on Journey/Xaero map, instead of creating an unreadable map item
-    * Ore overlay can be toggled
-    * Ore selection included
-* Added "High" effect caused by "spongeboy me bob i am overdosing on ketamine agagagaga"
+* Reworked ore generation making it MUCH MORE STABLE (as far as we tested it)
+* Now bedrock ore has oredict so you can sort it with ae2
+* No more cosmetic burning (having armor that fully protects from fire will extingish you)
+* Conveyors no longer explode with 25+ items and instead just stop moving the items until the path ahead is clear
+* Conveyor related blocks no longer spew items when full
+* Conveyor inserters no longer defaults to destroying items
+* Compat between backhand and ntm (chargers and refueler now affect offhand)
+* Compat between baubles and ntm (chargers and refueler now affect baubles and some ntm items can be put in baubles)
+* Compat between ae2 and ntm (chargers can now directly charge ae2 items)
+* Optimized background images in the loading screen and main menu, saving WHOLE 7MB
 
 
 
-[Full Changelog](https://github.com/Nuclear-Tech-New-Horizons/NTNH/compare/2.13.0...2.14.0)
+[Full Changelog](https://github.com/Nuclear-Tech-New-Horizons/NTNH/compare/2.14.0...2.15.0)
 
 ## Download
-[GitGub](https://github.com/Nuclear-Tech-New-Horizons/NTNH/releases/tag/2.14.0)
+[GitGub](https://github.com/Nuclear-Tech-New-Horizons/NTNH/releases/tag/2.15.0)
 [CurseForge](https://www.curseforge.com/minecraft/modpacks/ntnewhorizons)
 [Website](https://ntnewhorizons.com/download)
 [Technic](https://www.technicpack.net/modpack/nuclear-tech-new-horizons)

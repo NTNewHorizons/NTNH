@@ -237,9 +237,9 @@ betterquesting.quest.ItX_qnZpQCuDSxSoHuKmsA.desc=从林木农场获得的§6原�
 betterquesting.quest.JcBabPI8RzGGmai3SwlcLw.name=HE→RF转换器
 betterquesting.quest.JcBabPI8RzGGmai3SwlcLw.desc=§3HE→RF转换器§r可将 NTM 设备产生的能量转化为适用于§d应用能源§r和§3%nd开放式计算机§r可用的RF能量。该转换器拥有超大容量内部能量缓冲，因此建议使用二极管限制能量通量。可将 NTM 设备产生的能量转化为适用于物质能源网络和开放式计算机的可用能量。
 
-# Quest: Multi Fluid Identifier
-betterquesting.quest.M3mauW7uTCej4mql-Wnhqg.name=多类型流体识别码
-betterquesting.quest.M3mauW7uTCej4mql-Wnhqg.desc=§6多类型流体识别码§r用于选择所需的流体类型。按住Shift点击来选择相应的流体。
+# Quest: Fluids
+betterquesting.quest.K-eTce6PTLGe1htaZlPiHg.name=Fluids
+betterquesting.quest.K-eTce6PTLGe1htaZlPiHg.desc=Fluids are measured in §emB§r (§emilli-Buckets§r) and §eB§r (§eBuckets§r).%n%n1 bucket = 1000mB.%n%nThere are two fluid systems that are currently barely incompatible between each other - §6Forge Fluids§r, which is the system that most of the mods are using, and §6NTM Fluids§r, which is the fluid system that is exclusive to NTM.%n%nThe §6Multi Fluid Identifier§r is used to select the type of NTM fluid one needs. Shift-Click while holding it to select a fluid.%n%nThose two systems are not compatible directly, however there is a solution called §3Bob Fluid Translator§r. This machine allows to convert NTM Fluids into Forge Fluids. Simply put an universal identifier at the top slot of the machine and then input the desired fluid.%n%nAE2 is only compatible with Forge Fluids.
 
 # Quest: Known Issues
 betterquesting.quest.MNH6qakfTrC7Jbky4i_Epw.name=已知问题
@@ -1111,7 +1111,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8A.desc=粒子是制造特殊材料所�
 
 # Quest: Quantum Computer
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAFg.name=量子计算机
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAFg.desc=§6量子计算机§r是目前所有控制单元中功能最强大的一个，它被用于制造§6Gerald建筑机器人§r和§3DFC反应堆§r组件。
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAFg.desc=The §6Quantum Computer§r is the most powerful out of any other control unit. It currently only used to build §6Gerald§r and §6DFC§r.%n%n§2A whole stack of them will be required, so now would be the time to upgrade circuit crafting infrastructure.
 
 # Quest: Solid State Quantum Processor
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAGA.name=固态量子处理器
@@ -1733,3 +1733,7 @@ betterquesting.quest.qxRS5162RCW1IG--2Ibg7g.desc=While the §6Quest Book§r trie
 # Quest: Additional Fluid Tools
 betterquesting.quest.dIUUo_wJTR6juTJGlEfuBQ.name=流体工具
 betterquesting.quest.dIUUo_wJTR6juTJGlEfuBQ.desc=§6虹吸管§r是一种用于从机器中抽取流体的工具。潜行右键点击那些输入槽中有流体的机器，可以将流体倒入转移至你物品栏内相应的的通用流体罐、流体桶或移液管中（当然，前提是所抽取的流体量不足以填满这些容器）。%n%n而§6移液管§r则可用于精确地注入特定量的流体。通过右键点击或按住Shift键后右键点击，可以增加或减少注入流体的量。
+
+# Quest: Brine Processing
+betterquesting.quest.yi8dF0M0QNC7loTi7LDKDw.name=Brine Processing
+betterquesting.quest.yi8dF0M0QNC7loTi7LDKDw.desc=§b卤水§r在地球上的矿床类似于石油矿床，可以加工获得§6镍§r、§6铜§r和§6硫§r等材料，以及§b氢§r和§b氧§r等流体。

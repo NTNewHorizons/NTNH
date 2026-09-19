@@ -1,0 +1,234 @@
+<!-- =================================================================
+     NTNH Custom Ore Generation: Space Planets Module
+     Duna (16), Ike (17), Laythe (22), Eve (18), Dres (19), Moho (20), Tekto (24).
+     ================================================================= -->
+<ConfigSection>
+
+    <!-- === Duna (Dimension 16, Host Rock: duna_rock, Ore Meta :4) === -->
+        <VeinsPreset name="PresetDuna" branchType="Bezier">
+            <Setting name="MotherlodeFrequency" avg=":= 0.04 * oreFreq" />
+            <Setting name="MotherlodeHeight" avg="35" range="20" type="uniform" />
+            <Setting name="BranchLength" avg=":= 60 * oreSize" range=":= 15 * oreSize" />
+            <Setting name="BranchInclination" avg="0" range="0.1" />
+            <Setting name="SegmentAngle" avg="0.7" range="0.3" />
+            <!-- Thin sinuous hydrothermal vein threads (thickness ~2-3 blocks) -->
+            <Setting name="SegmentRadius" avg="1.4" range="0.4" />
+            <Setting name="OreDensity" avg="0.9" />
+            <Replaces block="hbm:tile.duna_rock:0" />
+            <Biome name="Weathered Dunaian Hills" />
+            <Biome name="Dunaian Polar Mountains" />
+            <Biome name="Dunaian Plains" />
+            <Biome name="Dunaian Lowland Plains" />
+            <Biome name="Dunaian Ice Sheet" />
+        </VeinsPreset>
+
+        <Substitute name="Duna_Cleanup" block="hbm:tile.duna_rock:0">
+            <Replaces block="hbm:tile.ore_iron:4" />
+            <Replaces block="hbm:tile.ore_gold:4" />
+            <Replaces block="hbm:tile.ore_diamond:4" />
+            <Replaces block="hbm:tile.ore_redstone:4" />
+        </Substitute>
+
+        <Veins name="Duna_Redstone" block="hbm:tile.ore_redstone:4" inherits="PresetDuna" />
+        <Veins name="Duna_Titanium" block="hbm:tile.ore_titanium:4" inherits="PresetDuna" />
+        <Veins name="Duna_RareEarth" block="hbm:tile.ore_rare:4" inherits="PresetDuna" />
+        <Veins name="Duna_beryllium" block="hbm:tile.ore_beryllium:4" inherits="PresetDuna" />
+        <Veins name="Duna_zinc" block="hbm:tile.ore_zinc:4" inherits="PresetDuna" />
+        <Veins name="Duna_Aluminium" block="hbm:tile.ore_aluminium:4" inherits="PresetDuna" />
+
+    <!-- === Ike (Dimension 17, Host Rock: ike_stone, Ore Meta :8) === -->
+        <VeinsPreset name="PresetIke" branchType="Bezier">
+            <Setting name="MotherlodeFrequency" avg=":= 0.05 * oreFreq" />
+            <Setting name="MotherlodeHeight" avg="35" range="20" type="uniform" />
+            <Setting name="BranchLength" avg=":= 60 * oreSize" range=":= 15 * oreSize" />
+            <Setting name="SegmentRadius" avg="4" range="1" />
+            <Setting name="OreDensity" avg="0.9" />
+            <Replaces block="hbm:tile.ike_stone:0" />
+            <Biome name="Ike" />
+        </VeinsPreset>
+
+        <Substitute name="Ike_Cleanup" block="hbm:tile.ike_stone:0">
+            <Replaces block="hbm:tile.ore_iron:8" />
+            <Replaces block="hbm:tile.ore_gold:8" />
+            <Replaces block="hbm:tile.ore_diamond:8" />
+            <Replaces block="hbm:tile.ore_redstone:8" />
+            <Replaces block="hbm:tile.ore_cinnebar:8" />
+        </Substitute>
+
+        <Veins name="Ike_Uranium" block="hbm:tile.ore_uranium:8" inherits="PresetIke" />
+        <Veins name="Ike_Plutonium" block="hbm:tile.ore_plutonium:8" inherits="PresetIke" />
+        <Veins name="Ike_lanthanium" block="hbm:tile.ore_lanthanium:8" inherits="PresetIke" />
+
+    <!-- === Laythe (Dimension 22, Host Rock: stone_laythe / stone, Ore Meta :9) === -->
+        <CloudPreset name="PresetLaythe">
+            <Setting name="DistributionFrequency" avg=":= 0.02 * oreFreq" />
+            <!-- Safe radius <= 28 (was 40 range 20) -->
+            <Setting name="CloudRadius" avg=":= 24 * oreSize" range=":= 4 * oreSize" />
+            <Setting name="CloudThickness" avg=":= 3 * oreSize" range=":= 1 * oreSize" />
+            <Setting name="OreDensity" avg="0.85" />
+            <Replaces block="hbm:tile.stone_laythe:0" />
+            <Replaces block="minecraft:stone:0" />
+            <Biome name="Laythe Islands" />
+            <Biome name="Laythe Poles" />
+            <Biome name="Laythe Reef" />
+            <Biome name="Sagan Sea" />
+        </CloudPreset>
+
+        <Substitute name="Laythe_Cleanup" block="minecraft:stone:0">
+            <Replaces block="hbm:tile.ore_cinnebar:9" />
+        </Substitute>
+
+        <Cloud name="Laythe_Aluminium" block="hbm:tile.ore_aluminium:9" inherits="PresetLaythe">
+            <Setting name="CloudHeight" avg="40" range="15" type="uniform" />
+        </Cloud>
+        <Cloud name="Laythe_Asbestos" block="hbm:tile.ore_asbestos:9" inherits="PresetLaythe">
+            <Setting name="CloudHeight" avg="50" range="10" type="uniform" />
+        </Cloud>
+        <Cloud name="Laythe_Tungsten" block="hbm:tile.ore_tungsten:9" inherits="PresetLaythe">
+            <Setting name="CloudHeight" avg="15" range="5" type="uniform" />
+        </Cloud>
+
+    <!-- === Eve (Dimension 18, Host Rock: eve_rock, Ore Meta :7) === -->
+        <CloudPreset name="PresetEve">
+            <!-- Rebalanced frequency (was 0.8 * oreFreq!) -->
+            <Setting name="DistributionFrequency" avg=":= 0.03 * oreFreq" />
+            <Setting name="CloudRadius" avg=":= 12 * oreSize" range=":= 4 * oreSize" />
+            <Setting name="CloudThickness" avg=":= 8 * oreSize" range=":= 3 * oreSize" />
+            <Setting name="OreDensity" avg="0.8" />
+            <Replaces block="hbm:tile.eve_rock:0" />
+            <Biome name="Eve Mountains" />
+            <Biome name="Eve Plains" />
+            <Biome name="Eve Seismic Plains" />
+            <Biome name="Explodium Ocean" />
+        </CloudPreset>
+
+        <Substitute name="Eve_Cleanup" block="hbm:tile.eve_rock:0">
+            <Replaces block="hbm:tile.ore_iron:7" />
+            <Replaces block="hbm:tile.ore_gold:7" />
+            <Replaces block="hbm:tile.ore_diamond:7" />
+            <Replaces block="hbm:tile.ore_schrabidium:7" />
+            <Replaces block="hbm:tile.ore_niobium:7" />
+            <Replaces block="hbm:tile.ore_cobalt:7" />
+            <Replaces block="hbm:tile.ore_iodine:7" />
+            <Replaces block="hbm:tile.ore_redstone:7" />
+            <Replaces block="hbm:tile.ore_cinnebar:7" />
+        </Substitute>
+
+        <!-- Bedrock safety: Height avg 16 range 9 -> Y=7..25 (strictly >= 6) -->
+        <Cloud name="Eve_Schrabidium" block="hbm:tile.ore_schrabidium:7" inherits="PresetEve">
+            <Setting name="CloudHeight" avg="16" range="9" type="uniform" />
+        </Cloud>
+        <Cloud name="Eve_Niobium" block="hbm:tile.ore_niobium:7" inherits="PresetEve">
+            <Setting name="CloudHeight" avg="35" range="15" type="uniform" />
+        </Cloud>
+        <Cloud name="Eve_Cobalt" block="hbm:tile.ore_cobalt:7" inherits="PresetEve">
+            <Setting name="CloudHeight" avg="55" range="15" type="uniform" />
+        </Cloud>
+        <!-- Bedrock safety: Height avg 34 range 28 -> Y=6..62 (strictly >= 6) -->
+        <Cloud name="Eve_Iodine" block="hbm:tile.ore_iodine:7" inherits="PresetEve">
+            <Setting name="CloudHeight" avg="34" range="28" type="uniform" />
+        </Cloud>
+
+    <!-- === Dres (Dimension 19, Host Rock: dres_rock, Ore Meta :6) === -->
+        <CloudPreset name="PresetDres">
+            <!-- Rebalanced frequency (was 2.5 * oreFreq!) -->
+            <Setting name="DistributionFrequency" avg=":= 0.03 * oreFreq" />
+            <Setting name="CloudRadius" avg=":= 12 * oreSize" range=":= 4 * oreSize" />
+            <Setting name="CloudThickness" avg=":= 8 * oreSize" range=":= 3 * oreSize" />
+            <Setting name="OreDensity" avg="0.8" />
+            <Replaces block="hbm:tile.dres_rock:0" />
+            <Biome name="Dres Large Basins" />
+            <Biome name="Dresian Flains" />
+        </CloudPreset>
+
+        <Substitute name="Dres_Cleanup" block="hbm:tile.dres_rock:0">
+            <Replaces block="hbm:tile.ore_iron:6" />
+            <Replaces block="hbm:tile.ore_gold:6" />
+            <Replaces block="hbm:tile.ore_diamond:6" />
+            <Replaces block="hbm:tile.ore_coltan:6" />
+            <Replaces block="hbm:tile.ore_redstone:6" />
+            <Replaces block="hbm:tile.ore_cinnebar:6" />
+            <Replaces block="hbm:tile.ore_niobium:6" />
+        </Substitute>
+
+        <!-- Bedrock safety: Height avg 13 range 7 -> Y=6..20 (strictly >= 6) -->
+        <Cloud name="Dres_Diamond" block="hbm:tile.ore_diamond:6" inherits="PresetDres">
+            <Setting name="CloudHeight" avg="13" range="7" type="uniform" />
+        </Cloud>
+        <Cloud name="Dres_Coltan" block="hbm:tile.ore_coltan:6" inherits="PresetDres">
+            <Setting name="CloudHeight" avg="30" range="15" type="uniform" />
+        </Cloud>
+        <Cloud name="Dres_lanthanium" block="hbm:tile.ore_lanthanium:6" inherits="PresetDres">
+            <Setting name="CloudHeight" avg="25" range="15" type="uniform" />
+        </Cloud>
+        <Cloud name="Dres_Niobium" block="hbm:tile.ore_niobium:6" inherits="PresetDres">
+            <Setting name="CloudHeight" avg="35" range="15" type="uniform" />
+        </Cloud>
+
+    <!-- === Moho (Dimension 20, Host Rock: moho_stone, Ore Meta :5) === -->
+        <CloudPreset name="PresetMoho">
+            <Setting name="DistributionFrequency" avg=":= 0.01 * oreFreq" />
+            <!-- Cascading worldgen fix: CloudRadius reduced from 100 to safe 22 (<= 28) -->
+            <Setting name="CloudRadius" avg=":= 22 * oreSize" range=":= 4 * oreSize" />
+            <Setting name="CloudThickness" avg=":= 8 * oreSize" range=":= 2 * oreSize" />
+            <Setting name="OreDensity" avg="0.75" />
+            <Replaces block="hbm:tile.moho_stone:0" />
+            <Biome name="Moho Lava Sea" />
+            <Biome name="Moho Crag" />
+            <Biome name="Moho Plateau" />
+        </CloudPreset>
+
+        <Substitute name="Moho_Cleanup" block="hbm:tile.moho_stone:0">
+            <Replaces block="hbm:tile.ore_iron:5" />
+            <Replaces block="hbm:tile.ore_gold:5" />
+            <Replaces block="hbm:tile.ore_diamond:5" />
+            <Replaces block="hbm:tile.ore_australium:5" />
+            <Replaces block="hbm:tile.ore_redstone:5" />
+        </Substitute>
+
+        <Cloud name="Moho_Australium" block="hbm:tile.ore_australium:5" inherits="PresetMoho">
+            <Setting name="CloudHeight" avg="12" range="4" type="uniform" />
+        </Cloud>
+        <Cloud name="Moho_Cinnabar" block="hbm:tile.ore_cinnebar:5" inherits="PresetMoho">
+            <Setting name="CloudHeight" avg="30" range="10" type="uniform" />
+        </Cloud>
+        <Cloud name="Moho_Phosphorus" block="hbm:tile.ore_fire:5" inherits="PresetMoho">
+            <Setting name="CloudHeight" avg="50" range="10" type="uniform" />
+        </Cloud>
+
+    <!-- === Tekto (Dimension 24, Host Rock: basalt, Ore Meta :10) === -->
+        <VeinsPreset name="PresetTekto" branchType="Bezier">
+            <Setting name="MotherlodeFrequency" avg=":= 0.05 * oreFreq" />
+            <Setting name="MotherlodeHeight" avg="32" range="25" type="uniform" />
+            <!-- Cascading worldgen fix: BranchLength reduced from 120 to safe 60 -->
+            <Setting name="BranchLength" avg=":= 60 * oreSize" range=":= 15 * oreSize" />
+            <Setting name="SegmentAngle" avg="0.0" range="0.0" />
+            <Setting name="BranchInclination" avg="0.0" range="0.0" />
+            <!-- Safe SegmentRadius strictly 3..5 blocks -->
+            <Setting name="SegmentRadius" avg="4" range="1" />
+            <Setting name="OreDensity" avg="0.9" />
+            <Replaces block="hbm:tile.basalt:0" />
+            <Biome name="Halogen Hills" />
+            <Biome name="Polyvinyl Plains" />
+            <Biome name="Vinyl Desert" />
+            <Biome name="Tekto Forest" />
+        </VeinsPreset>
+
+        <Substitute name="Tekto_Cleanup" block="hbm:tile.basalt:0">
+            <Replaces block="hbm:tile.ore_iron:10" />
+            <Replaces block="hbm:tile.ore_gold:10" />
+            <Replaces block="hbm:tile.ore_diamond:10" />
+            <Replaces block="hbm:tile.ore_redstone:10" />
+        </Substitute>
+
+        <Veins name="Tekto_Lithium" block="hbm:tile.ore_lithium:10" inherits="PresetTekto">
+            <Setting name="MotherlodeHeight" avg="39" range="10" type="uniform" />
+        </Veins>
+        <Veins name="Tekto_Plutonium" block="hbm:tile.ore_plutonium:10" inherits="PresetTekto">
+            <Setting name="MotherlodeHeight" avg="15" range="5" type="uniform" />
+        </Veins>
+        <Veins name="Tekto_Beryllium" block="hbm:tile.ore_beryllium:10" inherits="PresetTekto">
+            <Setting name="MotherlodeHeight" avg="55" range="10" type="uniform" />
+        </Veins>
+
+</ConfigSection>

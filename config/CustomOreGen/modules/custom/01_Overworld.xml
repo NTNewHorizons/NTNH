@@ -1,0 +1,227 @@
+<!-- =================================================================
+     NTNH Custom Ore Generation: Overworld Module
+     Balanced, performant geological biome distribution.
+     ================================================================= -->
+<ConfigSection>
+
+    <!-- Rare Earth ONLY in Graphite Gneiss (stone_gneiss and stone_gneiss_var) -->
+    <StandardGen name="RareEarthInGneiss" block="hbm:tile.ore_gneiss_rare:0">
+        <Setting name="Size" avg=":= 22 * oreSize" />
+        <Setting name="Frequency" avg=":= 22.0 * oreFreq" />
+        <Setting name="Height" avg="36" range="30" type="uniform" />
+        <Biome name=".*" />
+        <Replaces block="hbm:tile.stone_gneiss:0" />
+        <Replaces block="hbm:tile.stone_gneiss_var:0" />
+    </StandardGen>
+
+    <!-- === HILLS / MOUNTAINS: coal, hard-rock ores === -->
+    <Cloud name="CoalSeamExtremeHills"
+           block="minecraft:coal_ore:0" inherits="PresetCoalSeamCloud">
+        <Biome name="Extreme Hills.*" />
+        <Biome name="Stone Beach" />
+        <Biome name="Ice Mountains" />
+    </Cloud>
+
+    <Cloud name="CloudVerySmalltungsten"
+           block="hbm:tile.ore_tungsten:0" inherits="PresetBiomeCloudSmall">
+        <Biome name="Extreme Hills.*" />
+        <Biome name="Ice Mountains" />
+    </Cloud>
+
+    <Cloud name="CloudVerySmallberyllium"
+           block="hbm:tile.ore_beryllium:0" inherits="PresetBiomeCloudVerySmall">
+        <Biome name="Extreme Hills.*" />
+        <Biome name="Ice Mountains" />
+    </Cloud>
+
+    <StandardGen name="DiamondHills"
+                 block="minecraft:diamond_ore:0">
+        <Setting name="Size" avg=":= 6 * oreSize" />
+        <Setting name="Frequency" avg=":= 0.08 * oreFreq" />
+        <Setting name="Height" avg="11" range="5" type="uniform" />
+        <Biome name="Extreme Hills.*" />
+        <Biome name="Ice Mountains" />
+        <ReplacesOre block="stone" />
+    </StandardGen>
+
+    <!-- === DESERT: evaporites & heavy sands === -->
+    <Cloud name="NiterDesert"
+           block="hbm:tile.ore_niter:0" inherits="PresetBiomeCloudSmall">
+        <Biome name="Desert.*" />
+    </Cloud>
+
+    <Cloud name="TitaniumDesert"
+           block="hbm:tile.ore_titanium:0" inherits="PresetBiomeCloudVerySmall">
+        <Biome name="Desert.*" />
+    </Cloud>
+
+    <Cloud name="GoldDesert"
+           block="minecraft:gold_ore:0" inherits="PresetBiomeCloudVerySmall">
+        <Biome name="Desert.*" />
+    </Cloud>
+
+    <!-- === MESA: pegmatite, lithium & hydrothermal deposits === -->
+    <Cloud name="LithiumMesa"
+           block="hbm:tile.ore_lithium:0" inherits="PresetBiomeCloudSmall">
+        <Biome name="Mesa.*" />
+    </Cloud>
+
+    <Cloud name="SulfurMesa"
+           block="hbm:tile.ore_sulfur:0" inherits="PresetBiomeCloudMedium">
+        <Biome name="Mesa.*" />
+    </Cloud>
+
+    <Cloud name="TitaniumMesa"
+           block="hbm:tile.ore_titanium:0" inherits="PresetBiomeCloudVerySmall">
+        <Biome name="Mesa.*" />
+    </Cloud>
+
+    <Cloud name="RedstoneCloudMesa"
+           block="minecraft:redstone_ore:0" inherits="PresetBiomeCloudVerySmall">
+        <Biome name="Mesa.*" />
+    </Cloud>
+
+    <!-- === SAVANNA: ancient cratonic shield ores === -->
+    <Cloud name="IronCloudPlainsSavanna"
+           block="minecraft:iron_ore:0" inherits="PresetBiomeCloudLarge">
+        <Biome name="Savanna.*" />
+    </Cloud>
+
+    <Cloud name="ThoriumSavanna"
+           block="hbm:tile.ore_thorium:0" inherits="PresetBiomeCloudVerySmall">
+        <Biome name="Savanna.*" />
+    </Cloud>
+
+    <Cloud name="CobaltSavanna"
+           block="hbm:tile.ore_cobalt:0" inherits="PresetBiomeCloudVerySmall">
+        <Biome name="Savanna.*" />
+    </Cloud>
+
+    <Cloud name="RedstoneCloudSavanna"
+           block="minecraft:redstone_ore:0" inherits="PresetBiomeCloudSmall">
+        <Biome name="Savanna.*" />
+    </Cloud>
+
+    <!-- === SWAMPLAND: biogenic deposits === -->
+    <StandardGen name="LigniteSwampland"
+                 block="hbm:tile.ore_lignite:0">
+        <Setting name="Size" avg=":= 30 * oreSize" />
+        <Setting name="Frequency" avg=":= 0.05 * oreFreq" />
+        <Setting name="Height" avg="40" range="14" type="uniform" />
+        <Biome name="Swampland.*" />
+        <ReplacesOre block="stone" />
+    </StandardGen>
+
+    <StandardGen name="SulfurSwampland"
+                 block="hbm:tile.ore_sulfur:0">
+        <Setting name="Size" avg=":= 20 * oreSize" />
+        <Setting name="Frequency" avg=":= 0.06 * oreFreq" />
+        <Setting name="Height" avg="30" range="20" type="uniform" />
+        <Biome name="Swampland.*" />
+        <ReplacesOre block="stone" />
+    </StandardGen>
+
+    <!-- === PLAINS: alluvial & sedimentary iron / copper === -->
+    <Cloud name="IronCloudPlains"
+           block="minecraft:iron_ore:0" inherits="PresetBiomeCloudMedium">
+        <Biome name="Plains" />
+        <Biome name="Sunflower Plains" />
+        <Biome name="Ice Plains.*" />
+    </Cloud>
+
+    <Cloud name="CopperCloudPlains"
+           block="hbm:tile.ore_copper:0" inherits="PresetBiomeCloudMedium">
+        <Biome name="Plains" />
+        <Biome name="Sunflower Plains" />
+        <Biome name="Ice Plains.*" />
+    </Cloud>
+
+    <!-- === FOREST: base industrial metals === -->
+    <Cloud name="ZincCloudForest"
+           block="hbm:tile.ore_zinc:0" inherits="PresetBiomeCloudVerySmall">
+        <Biome name="Forest.*" />
+        <Biome name="Roofed Forest.*" />
+    </Cloud>
+
+    <Cloud name="LeadCloudForest"
+           block="hbm:tile.ore_lead:0" inherits="PresetBiomeCloudSmall">
+        <Biome name="Forest.*" />
+        <Biome name="Roofed Forest.*" />
+    </Cloud>
+
+    <Cloud name="RedstoneCloudForest"
+           block="minecraft:redstone_ore:0" inherits="PresetBiomeCloudMedium">
+        <Biome name="Forest.*" />
+        <Biome name="Roofed Forest.*" />
+    </Cloud>
+
+    <!-- === TAIGA: radiogenic & asbestos deposits === -->
+    <Cloud name="CloudVerySmallUraniumColdTaiga"
+           block="hbm:tile.ore_uranium:0" inherits="PresetBiomeCloudVerySmall">
+        <Biome name=".*Taiga.*" />
+    </Cloud>
+
+    <StandardGen name="DiamondTaiga"
+                 block="minecraft:diamond_ore:0">
+        <Setting name="Size" avg=":= 6 * oreSize" />
+        <Setting name="Frequency" avg=":= 0.06 * oreFreq" />
+        <Setting name="Height" avg="11" range="5" type="uniform" />
+        <Biome name=".*Taiga.*" />
+        <ReplacesOre block="stone" />
+    </StandardGen>
+
+    <Cloud name="CloudVerySmallAsbestosTaiga"
+           block="hbm:tile.ore_asbestos:0" inherits="PresetBiomeCloudSmall">
+        <Biome name=".*Taiga.*" />
+    </Cloud>
+
+    <Cloud name="CloudSmallAluminiumTaiga"
+           block="hbm:tile.ore_aluminium:0" inherits="PresetBiomeCloudMedium">
+        <Biome name=".*Taiga.*" />
+    </Cloud>
+
+    <!-- === JUNGLE: bauxite & rare coltan === -->
+    <StandardGen name="AluminiumJungle"
+                 block="hbm:tile.ore_aluminium:0">
+        <Setting name="Size" avg=":= 25 * oreSize" />
+        <Setting name="Frequency" avg=":= 0.06 * oreFreq" />
+        <Setting name="Height" avg="33" range="26" type="uniform" />
+        <Biome name="Jungle.*" />
+        <ReplacesOre block="stone" />
+    </StandardGen>
+
+    <StandardGen name="ColtanJungle"
+                 block="hbm:tile.ore_coltan:0">
+        <Setting name="Size" avg=":= 16 * oreSize" />
+        <Setting name="Frequency" avg=":= 0.04 * oreFreq" />
+        <Setting name="Height" avg="20" range="10" type="uniform" />
+        <Biome name="Jungle.*" />
+        <ReplacesOre block="stone" />
+    </StandardGen>
+
+    <StandardGen name="GoldJungle"
+                 block="minecraft:gold_ore:0">
+        <Setting name="Size" avg=":= 14 * oreSize" />
+        <Setting name="Frequency" avg=":= 0.06 * oreFreq" />
+        <Setting name="Height" avg="26" range="12" type="uniform" />
+        <Biome name="Jungle.*" />
+        <ReplacesOre block="stone" />
+    </StandardGen>
+
+    <Cloud name="TitaniumJungle"
+           block="hbm:tile.ore_titanium:0" inherits="PresetBiomeCloudVerySmall">
+        <Biome name="Jungle.*" />
+    </Cloud>
+
+    <!-- === OCEAN: pegmatitic quartz & fluorite veins === -->
+    <Cloud name="QuartzOcean"
+           block="appliedenergistics2:tile.OreQuartz:0" inherits="PresetBiomeCloudSmall">
+        <Biome name=".*Ocean.*" />
+    </Cloud>
+
+    <Cloud name="FluoriteOcean"
+           block="hbm:tile.ore_fluorite:0" inherits="PresetBiomeCloudMedium">
+        <Biome name=".*Ocean.*" />
+    </Cloud>
+
+</ConfigSection>

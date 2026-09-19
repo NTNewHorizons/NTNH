@@ -2,9 +2,10 @@
   "quality": {
     "grass_quality": "DEFAULT",
     "use_celeritas_smooth_lighting": true,
-    "texture_filter_mode": "RGSS"
+    "texture_filter_mode": "ANISOTROPIC"
   },
   "advanced": {
+    "vsync_mode": "OFF",
     "use_vertex_array_objects": true,
     "use_chunk_multidraw": true,
     "multi_draw_mode": "DIRECT",
@@ -22,6 +23,7 @@
     "use_occlusion_culling": true,
     "animate_only_visible_textures": true,
     "use_entity_culling": true,
+    "section_gated_tesr_culling": true,
     "use_fog_occlusion": false,
     "use_block_face_culling": true,
     "use_compact_vertex_format": true,
