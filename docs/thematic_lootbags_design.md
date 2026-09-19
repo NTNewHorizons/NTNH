@@ -11,15 +11,16 @@
 ## 1. Философия и стандарты геймдизайна
 
 ### 1.1. «Формула 4 слоёв» содержимого (Content Layer Formula)
-Каждая таблица лута тематического контейнера формируется не из случайного набора предметов, а строго по сбалансированной 4-слойной структуре:
+Каждая таблица лута тематического контейнера формируется не из случайного набора предметов, а строго по сбалансированной 4-слойной структуре. Процентные диапазоны обозначают ориентировочную **долю весового бюджета** слоя от суммарного веса пула ($\sum \text{Chance}$), а не фиксированную вероятность выпадения в каждом слоте. Вероятность выпадения конкретного предмета в каждом ролле рассчитывается по стандартной формуле рулетки:
+$$P_i = \frac{\text{Chance}_i}{\sum_{k=1}^M \text{Chance}_k}$$
 
-1. **Слой 1: Утилитарный базис (30–40% пула, Chance 70–85)**
+1. **Слой 1: Утилитарный базис (30–40% весового бюджета пула, Chance 70–85)**
    Повсеместно применимые расходники и материалы, которые гарантированно нужны игроку в любой момент игры и исключают ощущение «бесполезного лутбега»: бинты, нити/дратва, факелы, лестницы, угольные брикеты, растворители, чистая вода, порох, метизы. Даже если игрок не развивает профильное направление сумки прямо сейчас, утилитарный базис находит применение на базе или в походе.
-2. **Слой 2: Профильный тематический стержень (40–50% пула, Chance 40–60)**
+2. **Слой 2: Профильный тематический стержень (40–50% весового бюджета пула, Chance 40–60)**
    Предметы, формирующие ключевую идентичность сумки: семена и удобрения для агронома, химические красители и трафареты для маляра, аналоговые схемы и радиодетали для связиста, взрывчатка и детонаторы для горняка, консервированные рационы для полевой кухни.
-3. **Слой 3: Флагманский инструмент и экипировка (10–15% пула, Chance 20–35, `LimitedDropCount="1"`)**
+3. **Слой 3: Флагманский инструмент и экипировка (10–15% весового бюджета пула, Chance 20–35, `LimitedDropCount="1"`)**
    Долговечный специализированный инструмент или прибор, существенно экономящий ресурсы крафта: секатор AgriCraft, геологический молоток, армейская фляга, сигнальный пистолет, РЛС-линкер, дозиметр, тестер электросети. Выпадает с персистентным глобальным лимитом на игрока в данном мире (см. раздел 1.6).
-4. **Слой 4: «Маяк прогресса» и диковинки (5–10% пула, Chance 1–15, `LimitedDropCount="1"`)**
+4. **Слой 4: «Маяк прогресса» и диковинки (5–10% весового бюджета пула, Chance 1–15, `LimitedDropCount="1"`)**
    Редкие находки компонентов старших технологических эпох (атомные часы, ловушка антиматерии, редкие семена Незера, кассеты данных) либо редкие аутентичные декоративные элементы (цветные керамические горшки IMC, цветные очки OpenBlocks, каталоги BiblioCraft). Создают интригу и долгосрочную цель без поломки текущего баланса.
 
 ---
@@ -29,7 +30,7 @@
 
 | Параметр | 🥉 Tier 1: Потрёпанный / Бытовой | 🥈 Tier 2: Штатный / Профессиональный | 🥇 Tier 3: Опечатанный / Военный / Заводской |
 | :--- | :--- | :--- | :--- |
-| **Rarity (ELB)** | `0` (Common) | `1` (Uncommon) | `2`–`3` (Rare / Epic) |
+| **Rarity (ELB)** | `0` (Common) | `1` (Uncommon) | `2` (Rare; `3` Epic для аварийных сумок шаттла Meta 310, 311) |
 | **Слоты дропа** | `1–4` слота (специальные/малые: `1–2` или `1–3`, стандарт: `2–4`) | `2–4` или `3–5` слотов | `2–5` или `3–6` слотов (спец: `1–3`) |
 | **Сохранность** | Следы износа, открытые заброшки, чердаки | Заводские шкафчики, бытовки, лаборатории | Опечатанные сейфы ГО, бункеры NTM, капсулы шаттлов |
 | **Инструмент** | Кустарный / железный (молотки, отмычки, мелки) | Промышленный / стальной (тестеры, сканеры, секаторы) | Высокоточный / электронный (РЛС-линкеры, дозиметры) |
@@ -39,7 +40,7 @@
 ---
 
 ### 1.3. Шкала стандартизации весов (Chance Standards)
-Веса выпадения (`Chance`) в `LootBags.xml` стандартизированы по фиксированным диапазонам для предотвращения субъективного перекоса:
+Веса выпадения (`Chance`) в `LootBags.xml` стандартизированы по фиксированным диапазонам целых чисел для предотвращения субъективного перекоса:
 
 * **`70–85` (Гарантированная база):** Расходники первой необходимости и массовое сырьё (бинты, нить, болты, бумага, соль, базовые красители).
 * **`40–60` (Штатный профиль):** Основные тематические предметы, рабочие реактивы, платы, стандартные консервы, рабочий инструмент среднего уровня.
@@ -151,7 +152,7 @@
   * `hbm:item.pads_rubber` (**Резиновые прокладки**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`. *Смысл:* Кровоостанавливающий жгут.
   * `hbm:item.rag_damp` (**Влажная тряпка**) | Кол-во: 1–3 | Вес: 70 | `RandomAmount="true"`. *Смысл:* Антисептическая влажная салфетка.
   * `hbm:item.powder_coal` (**Угольный порошок**) | Кол-во: 1–6 | Вес: 70 | `RandomAmount="true"`. *Смысл:* Активированный уголь при отравлениях.
-  * `minecraft:potion` (**Бутылочка воды**) | Кол-во: 1 | Вес: 65 | `RandomAmount="false"`. *Смысл:* Стерильная вода для промывки ран.
+  * `minecraft:potion:0` (**Бутылочка воды**) | Кол-во: 1 | Вес: 65 | `RandomAmount="false"`. *Смысл:* Стерильная вода для промывки ран.
   * `hbm:item.syringe_empty` (**Пустой шприц**) | Кол-во: 1–2 | Вес: 65 | `RandomAmount="true"`
   * `hbm:item.plastic_bag` (**Пакет**) | Кол-во: 1–2 | Вес: 35 | `RandomAmount="true"`. *Смысл:* Герметичный пакет для медикаментов.
   * `minecraft:glass_bottle` (**Колба**) | Кол-во: 1–2 | Вес: 55 | `RandomAmount="true"`
@@ -159,7 +160,7 @@
   * `hbm:item.med_ptsd` (**Облегчение ПТСР**) | Кол-во: 1–2 | Вес: 50 | `RandomAmount="true"`. *Смысл:* Седативное при шоке и контузии.
   * `cfm:ItemSoap` (**Мыло**) | Кол-во: 1 | Вес: 45 | `RandomAmount="false"`. *Смысл:* Гигиена и антисептика.
   * `hbm:item.mask_rag` (**Грубая защитная маска**) | Кол-во: 1 | Вес: 25 | `ItemGroup="med_rag_mask"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Стартовый тканевый респиратор.
-  * `hbm:item.gas_mask_filter_rag` (**Самодельный фильтр**) | Кол-во: 1 | Вес: 25 | `ItemGroup="med_rag_mask"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Тканевый фильтр противогаза.
+  * `hbm:item.gas_mask_filter_rag` (**Самодельный фильтр**) | Кол-во: 1 | Вес: 1 (сателлит) | `ItemGroup="med_rag_mask"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Тканевый фильтр противогаза.
   * `hbm:item.rag_blood` (**Окровавленная тряпка**) | Кол-во: 1–2 | Вес: 35 | `RandomAmount="true"`. *Смысл:* Атмосферные следы полевой перевязки.
   * `hbm:item.syringe_metal_stimpak` (**Стимулятор**) | Кол-во: 1 | Вес: 35 | `RandomAmount="false"`. *Смысл:* Армейский стимулятор регенерации.
   * `hbm:item.syringe_metal_medx` (**Мед-X**) | Кол-во: 1 | Вес: 25 | `RandomAmount="false"`. *Смысл:* Сильное обезболивающее.
@@ -228,7 +229,7 @@
 ### Блок 40–69: Слесарка, механизмы и взлом
 
 #### 🧰 [Meta 40] Ящик слесаря
-* **Уровень:** 1 | **Rarity:** 0 | **Дроп:** `1 - 2` | `CombineTrashGroup="true"`
+* **Уровень:** 1 | **Rarity:** 0 | **Дроп:** `1 - 2` | `CombineTrashGroup="false"`
 * *Лор:* Переносной слесарный ящик для сантехнических работ и взлома дверей.
 * **Содержимое:**
   * `hbm:item.pin` (**Отмычка**) | Кол-во: 3–6 | Вес: 100 | `RandomAmount="true"`. *Смысл:* Взлом замков дверей и сейфов NTM.
@@ -255,7 +256,7 @@
   * `hbm:item.piston_set:0` (**Комплект поршней**) | Кол-во: 1 | Вес: 15 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Механика приводов.
 
 #### 🔧 [Meta 41] Сумка механика
-* **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `3 - 5` | `CombineTrashGroup="true"`
+* **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `3 - 5` | `CombineTrashGroup="false"`
 * *Лор:* Инструментальная сумка дежурного механика машинного отделения. Содержит сантехнические и гидравлические трубы, тонкую электропроводку из различных металлов, смазочные материалы, прокладки, ремни, электродвигатели и монтажный инструмент для ремонта заводского оборудования.
 * **Содержимое:**
   * `hbm:item.wd40` (**VT-40**) | Кол-во: 1 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Редкая проникающая смазка / модуль для брони NTM.
@@ -311,7 +312,7 @@
   * `hbm:item.wire_fine:30` (**Тонкий стальной провод / тросик**) | Кол-во: 8–16 | Вес: 65 | `RandomAmount="true"`
   * `hbm:item.wire_fine:2900` (**Тонкий медный провод**) | Кол-во: 8–16 | Вес: 70 | `RandomAmount="true"`
   * `hbm:item.wire_fine:1300` (**Тонкий алюминиевый провод**) | Кол-во: 8–16 | Вес: 65 | `RandomAmount="true"`
-  * `hbm:item.wire_fine:79` (**Тонкий золотой провод датчиков**) | Кол-во: 4–8 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.wire_fine:7900` (**Тонкий золотой провод датчиков**) | Кол-во: 4–8 | Вес: 45 | `RandomAmount="true"`
   * `hbm:item.motor` (**Электродвигатель NTM**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.piston_set:0` (**Комплект стальных поршней**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.blade_titanium` (**Титановое сменное лезвие**) | Кол-во: 1 | Вес: 30 | `RandomAmount="false"`
@@ -355,7 +356,7 @@
   * `ProjRed|Transmission:projectred.transmission.wire:0` (**Провод из красного сплава**) | Кол-во: 8–16 | Вес: 25 | `RandomAmount="true"`. *Смысл:* Базовый сигнальный проводник ProjectRed.
 
 #### ⚡ [Meta 71] Сумка электрика
-* **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 4` | `CombineTrashGroup="true"`
+* **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 4` | `CombineTrashGroup="false"`
 * *Лор:* Рабочий набор наладчика контрольно-измерительных приборов и автоматики (КИПиА).
 * **Содержимое:**
   * `hbm:item.power_net_tool` (**Анализатор электросети**) | Кол-во: 1 | Вес: 55 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Замер напряжения и сопротивления кабельной сети.
@@ -419,14 +420,14 @@
 ### Блок 100–129: Оружие, патроны и обвесы
 
 #### 🎒 [Meta 100] Вскрытый патронный цинк
-* **Уровень:** 1 | **Rarity:** 0 | **Дроп:** `2 - 3` | `CombineTrashGroup="true"`
+* **Уровень:** 1 | **Rarity:** 0 | **Дроп:** `2 - 3` | `CombineTrashGroup="false"`
 * *Лор:* Вскрытая консервным ножом оцинкованная коробка, валявшаяся на полу заброшенного караульного помещения. Патроны почти полностью выгребли до нас: внутри осталась промасленная упаковочная бумага, ветошь для чистки стволов, стреляные гильзы, щепотка пороха и считанные патроны на донышке.
 * **Содержимое:**
   * `minecraft:paper` (**Промасленная упаковочная бумага**) | Кол-во: 2–4 | Вес: 85 | `RandomAmount="true"`
   * `hbm:item.rag` (**Ветошь для чистки стволов**) | Кол-во: 2–4 | Вес: 85 | `RandomAmount="true"`
   * `hbm:item.casing:0` (**Малая бронзовая гильза**) | Кол-во: 6–12 | Вес: 75 | `RandomAmount="true"`
   * `hbm:item.casing:1` (**Малая стальная гильза**) | Кол-во: 6–12 | Вес: 75 | `RandomAmount="true"`
-  * `hbm:item.casing:4` (**Пластиковая гильза 12k**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
+  * `hbm:item.casing:5` (**Пластиковая гильза 12k**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
   * `minecraft:gunpowder` (**Порох**) | Кол-во: 4–8 | Вес: 70 | `RandomAmount="true"`
   * `hbm:item.powder_lead` (**Свинцовый порошок**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`
   * `hbm:item.debris_shrapnel` (**Шрапнель / картечь**) | Кол-во: 8–16 | Вес: 60 | `RandomAmount="true"`
@@ -446,54 +447,54 @@
 * **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `1` (Моно-навал) | `CombineTrashGroup="false"`
 * *Лор:* Заводской оцинкованный ящик в консервационной пушечной смазке, герметично запаянный на оборонном заводе. Вскрывается со скрежетом и гарантированно выдаёт полноценную заводскую укладку боеприпасов строго одного калибра — без примеси постороннего хлама.
 * **Калиберные комплекты (`ItemGroup`):** Ровно один гарантированный ролл (`MinItems="1" MaxItems="1"`) выбирает один из 9 калибров, а движок через `getItemGroupDrops` выдаёт абсолютно все связанные компоненты выбранной партии (ведущий патрон несёт номинальный вес партии, сателлиты — технический вес `Chance="1"` согласно разделу 1.4):
-  * **Партия 7.62×39 мм (`pack_762_zinc`, Вес: 85):**
+  * **Партия 7.62×39 мм (`pack_762_zinc`, Вес ведущего: 85):**
     * `hbm:item.ammo_standard:31` (**7.62мм FMJ**) | Кол-во: 64 | Вес: 85 | `ItemGroup="pack_762_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:33` (**7.62мм AP**) | Кол-во: 16 | Вес: 85 | `ItemGroup="pack_762_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:32` (**7.62мм JHP**) | Кол-во: 16 | Вес: 85 | `ItemGroup="pack_762_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:84` (**7.62мм Разрывной HE**) | Кол-во: 8 | Вес: 85 | `ItemGroup="pack_762_zinc"` | `RandomAmount="false"`
-    * `hbm:item.casing:2` (**Малая стальная гильза**) | Кол-во: 32 | Вес: 85 | `ItemGroup="pack_762_zinc"` | `RandomAmount="false"`
-  * **Партия 5.56×45 мм (`pack_556_zinc`, Вес: 85):**
+    * `hbm:item.ammo_standard:33` (**7.62мм AP**) | Кол-во: 16 | Вес: 1 (сателлит) | `ItemGroup="pack_762_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:32` (**7.62мм JHP**) | Кол-во: 16 | Вес: 1 (сателлит) | `ItemGroup="pack_762_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:84` (**7.62мм Разрывной HE**) | Кол-во: 8 | Вес: 1 (сателлит) | `ItemGroup="pack_762_zinc"` | `RandomAmount="false"`
+    * `hbm:item.casing:1` (**Малая стальная гильза**) | Кол-во: 32 | Вес: 1 (сателлит) | `ItemGroup="pack_762_zinc"` | `RandomAmount="false"`
+  * **Партия 5.56×45 мм (`pack_556_zinc`, Вес ведущего: 85):**
     * `hbm:item.ammo_standard:27` (**5.56мм FMJ**) | Кол-во: 64 | Вес: 85 | `ItemGroup="pack_556_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:29` (**5.56мм AP**) | Кол-во: 16 | Вес: 85 | `ItemGroup="pack_556_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:28` (**5.56мм JHP**) | Кол-во: 16 | Вес: 85 | `ItemGroup="pack_556_zinc"` | `RandomAmount="false"`
-    * `hbm:item.casing:2` (**Малая стальная гильза**) | Кол-во: 32 | Вес: 85 | `ItemGroup="pack_556_zinc"` | `RandomAmount="false"`
-  * **Партия 9×19 мм Parabellum (`pack_9mm_zinc`, Вес: 80):**
+    * `hbm:item.ammo_standard:29` (**5.56мм AP**) | Кол-во: 16 | Вес: 1 (сателлит) | `ItemGroup="pack_556_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:28` (**5.56мм JHP**) | Кол-во: 16 | Вес: 1 (сателлит) | `ItemGroup="pack_556_zinc"` | `RandomAmount="false"`
+    * `hbm:item.casing:1` (**Малая стальная гильза**) | Кол-во: 32 | Вес: 1 (сателлит) | `ItemGroup="pack_556_zinc"` | `RandomAmount="false"`
+  * **Партия 9×19 мм Parabellum (`pack_9mm_zinc`, Вес ведущего: 80):**
     * `hbm:item.ammo_standard:23` (**9мм FMJ**) | Кол-во: 64 | Вес: 80 | `ItemGroup="pack_9mm_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:25` (**9мм AP**) | Кол-во: 32 | Вес: 80 | `ItemGroup="pack_9mm_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:24` (**9мм JHP**) | Кол-во: 32 | Вес: 80 | `ItemGroup="pack_9mm_zinc"` | `RandomAmount="false"`
-    * `hbm:item.casing:0` (**Малая бронзовая гильза**) | Кол-во: 48 | Вес: 80 | `ItemGroup="pack_9mm_zinc"` | `RandomAmount="false"`
-  * **Партия 12 Gauge (`pack_12ga_zinc`, Вес: 75):**
+    * `hbm:item.ammo_standard:25` (**9мм AP**) | Кол-во: 32 | Вес: 1 (сателлит) | `ItemGroup="pack_9mm_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:24` (**9мм JHP**) | Кол-во: 32 | Вес: 1 (сателлит) | `ItemGroup="pack_9mm_zinc"` | `RandomAmount="false"`
+    * `hbm:item.casing:0` (**Малая бронзовая гильза**) | Кол-во: 48 | Вес: 1 (сателлит) | `ItemGroup="pack_9mm_zinc"` | `RandomAmount="false"`
+  * **Партия 12 Gauge (`pack_12ga_zinc`, Вес ведущего: 75):**
     * `hbm:item.ammo_standard:46` (**12k Картечь**) | Кол-во: 32 | Вес: 75 | `ItemGroup="pack_12ga_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:47` (**12k Пуля Slug**) | Кол-во: 16 | Вес: 75 | `ItemGroup="pack_12ga_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:48` (**12k Флешетты**) | Кол-во: 16 | Вес: 75 | `ItemGroup="pack_12ga_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:49` (**12k Магнум**) | Кол-во: 16 | Вес: 75 | `ItemGroup="pack_12ga_zinc"` | `RandomAmount="false"`
-    * `hbm:item.casing:5` (**Пластиковая гильза 12k**) | Кол-во: 24 | Вес: 75 | `ItemGroup="pack_12ga_zinc"` | `RandomAmount="false"`
-    * `hbm:item.cordite` (**Кордит**) | Кол-во: 8 | Вес: 75 | `ItemGroup="pack_12ga_zinc"` | `RandomAmount="false"`
-  * **Партия .22 LR (`pack_22lr_zinc`, Вес: 65):**
+    * `hbm:item.ammo_standard:47` (**12k Пуля Slug**) | Кол-во: 16 | Вес: 1 (сателлит) | `ItemGroup="pack_12ga_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:48` (**12k Флешетты**) | Кол-во: 16 | Вес: 1 (сателлит) | `ItemGroup="pack_12ga_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:49` (**12k Магнум**) | Кол-во: 16 | Вес: 1 (сателлит) | `ItemGroup="pack_12ga_zinc"` | `RandomAmount="false"`
+    * `hbm:item.casing:5` (**Пластиковая гильза 12k**) | Кол-во: 24 | Вес: 1 (сателлит) | `ItemGroup="pack_12ga_zinc"` | `RandomAmount="false"`
+    * `hbm:item.cordite` (**Кордит**) | Кол-во: 8 | Вес: 1 (сателлит) | `ItemGroup="pack_12ga_zinc"` | `RandomAmount="false"`
+  * **Партия .22 LR (`pack_22lr_zinc`, Вес ведущего: 65):**
     * `hbm:item.ammo_standard:19` (**.22 LR FMJ**) | Кол-во: 64 | Вес: 65 | `ItemGroup="pack_22lr_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:21` (**.22 LR AP**) | Кол-во: 32 | Вес: 65 | `ItemGroup="pack_22lr_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:20` (**.22 LR JHP**) | Кол-во: 32 | Вес: 65 | `ItemGroup="pack_22lr_zinc"` | `RandomAmount="false"`
-    * `hbm:item.casing:0` (**Малая бронзовая гильза**) | Кол-во: 32 | Вес: 65 | `ItemGroup="pack_22lr_zinc"` | `RandomAmount="false"`
-  * **Партия .44 / .357 Magnum (`pack_magnum_zinc`, Вес: 60):**
+    * `hbm:item.ammo_standard:21` (**.22 LR AP**) | Кол-во: 32 | Вес: 1 (сателлит) | `ItemGroup="pack_22lr_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:20` (**.22 LR JHP**) | Кол-во: 32 | Вес: 1 (сателлит) | `ItemGroup="pack_22lr_zinc"` | `RandomAmount="false"`
+    * `hbm:item.casing:0` (**Малая бронзовая гильза**) | Кол-во: 32 | Вес: 1 (сателлит) | `ItemGroup="pack_22lr_zinc"` | `RandomAmount="false"`
+  * **Партия .44 / .357 Magnum (`pack_magnum_zinc`, Вес ведущего: 60):**
     * `hbm:item.ammo_standard:14` (**.44 Magnum FMJ**) | Кол-во: 32 | Вес: 60 | `ItemGroup="pack_magnum_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:16` (**.44 Magnum AP**) | Кол-во: 16 | Вес: 60 | `ItemGroup="pack_magnum_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:8` (**.357 Magnum FMJ**) | Кол-во: 32 | Вес: 60 | `ItemGroup="pack_magnum_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:10` (**.357 Magnum AP**) | Кол-во: 16 | Вес: 60 | `ItemGroup="pack_magnum_zinc"` | `RandomAmount="false"`
-    * `hbm:item.casing:1` (**Большая бронзовая гильза**) | Кол-во: 24 | Вес: 60 | `ItemGroup="pack_magnum_zinc"` | `RandomAmount="false"`
-  * **Партия .45 ACP (`pack_45acp_zinc`, Вес: 70):**
+    * `hbm:item.ammo_standard:16` (**.44 Magnum AP**) | Кол-во: 16 | Вес: 1 (сателлит) | `ItemGroup="pack_magnum_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:8` (**.357 Magnum FMJ**) | Кол-во: 32 | Вес: 1 (сателлит) | `ItemGroup="pack_magnum_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:10` (**.357 Magnum AP**) | Кол-во: 16 | Вес: 1 (сателлит) | `ItemGroup="pack_magnum_zinc"` | `RandomAmount="false"`
+    * `hbm:item.casing:1` (**Большая бронзовая гильза**) | Кол-во: 24 | Вес: 1 (сателлит) | `ItemGroup="pack_magnum_zinc"` | `RandomAmount="false"`
+  * **Партия .45 ACP (`pack_45acp_zinc`, Вес ведущего: 70):**
     * `hbm:item.ammo_standard:88` (**.45 ACP FMJ**) | Кол-во: 64 | Вес: 70 | `ItemGroup="pack_45acp_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:90` (**.45 ACP AP**) | Кол-во: 16 | Вес: 70 | `ItemGroup="pack_45acp_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:89` (**.45 ACP JHP**) | Кол-во: 16 | Вес: 70 | `ItemGroup="pack_45acp_zinc"` | `RandomAmount="false"`
-    * `hbm:item.casing:0` (**Малая бронзовая гильза**) | Кол-во: 32 | Вес: 70 | `ItemGroup="pack_45acp_zinc"` | `RandomAmount="false"`
-  * **Партия 10 Gauge (`pack_10ga_zinc`, Вес: 55):**
+    * `hbm:item.ammo_standard:90` (**.45 ACP AP**) | Кол-во: 16 | Вес: 1 (сателлит) | `ItemGroup="pack_45acp_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:89` (**.45 ACP JHP**) | Кол-во: 16 | Вес: 1 (сателлит) | `ItemGroup="pack_45acp_zinc"` | `RandomAmount="false"`
+    * `hbm:item.casing:0` (**Малая бронзовая гильза**) | Кол-во: 32 | Вес: 1 (сателлит) | `ItemGroup="pack_45acp_zinc"` | `RandomAmount="false"`
+  * **Партия 10 Gauge (`pack_10ga_zinc`, Вес ведущего: 55):**
     * `hbm:item.ammo_standard:80` (**10k Картечь**) | Кол-во: 24 | Вес: 55 | `ItemGroup="pack_10ga_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:81` (**10k Шрапнель**) | Кол-во: 16 | Вес: 55 | `ItemGroup="pack_10ga_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:83` (**10k Пуля Slug**) | Кол-во: 16 | Вес: 55 | `ItemGroup="pack_10ga_zinc"` | `RandomAmount="false"`
-    * `hbm:item.casing:6` (**Продвинутая гильза дробовика**) | Кол-во: 16 | Вес: 55 | `ItemGroup="pack_10ga_zinc"` | `RandomAmount="false"`
-  * **Партия .50 BMG (`pack_50bmg_zinc`, Вес: 40):**
+    * `hbm:item.ammo_standard:81` (**10k Шрапнель**) | Кол-во: 16 | Вес: 1 (сателлит) | `ItemGroup="pack_10ga_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:83` (**10k Пуля Slug**) | Кол-во: 16 | Вес: 1 (сателлит) | `ItemGroup="pack_10ga_zinc"` | `RandomAmount="false"`
+    * `hbm:item.casing:6` (**Продвинутая гильза дробовика**) | Кол-во: 16 | Вес: 1 (сателлит) | `ItemGroup="pack_10ga_zinc"` | `RandomAmount="false"`
+  * **Партия .50 BMG (`pack_50bmg_zinc`, Вес ведущего: 40):**
     * `hbm:item.ammo_standard:36` (**.50 BMG FMJ**) | Кол-во: 16 | Вес: 40 | `ItemGroup="pack_50bmg_zinc"` | `RandomAmount="false"`
-    * `hbm:item.ammo_standard:38` (**.50 BMG AP**) | Кол-во: 8 | Вес: 40 | `ItemGroup="pack_50bmg_zinc"` | `RandomAmount="false"`
-    * `hbm:item.casing:3` (**Большая стальная гильза .50 BMG**) | Кол-во: 12 | Вес: 40 | `ItemGroup="pack_50bmg_zinc"` | `RandomAmount="false"`
+    * `hbm:item.ammo_standard:38` (**.50 BMG AP**) | Кол-во: 8 | Вес: 1 (сателлит) | `ItemGroup="pack_50bmg_zinc"` | `RandomAmount="false"`
+    * `hbm:item.casing:3` (**Большая стальная гильза .50 BMG**) | Кол-во: 12 | Вес: 1 (сателлит) | `ItemGroup="pack_50bmg_zinc"` | `RandomAmount="false"`
 
 #### 🪖 [Meta 102] Оружейный кофр
 * **Уровень:** 3 | **Rarity:** 2 | **Дроп:** `2 - 4` | `CombineTrashGroup="false"`
@@ -519,8 +520,8 @@
   * `hbm:item.ammo_standard:34` (**7.62мм с обеднённым ураном DU**) | Кол-во: 8–16 | Вес: 25 | `RandomAmount="true"`
   * `hbm:item.ammo_standard:73` (**Вольфрамовый шарик гаусс-пушки**) | Кол-во: 4–8 | Вес: 20 | `RandomAmount="true"`
   * `hbm:item.ammo_standard:74` (**Ферроурановый шарик гаусс-пушки**) | Кол-во: 3–6 | Вес: 15 | `RandomAmount="true"`
-  * `hbm:item.ammo_standard:50` (**12k Разрывной патрон**) | Кол-во: 4–8 | Вес: 25 | `RandomAmount="true"`
-  * `hbm:item.ammo_standard:51` (**12k Зажигательный с белым фосфором**) | Кол-во: 4–8 | Вес: 20 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:48` (**12k Разрывной патрон**) | Кол-во: 4–8 | Вес: 25 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:49` (**12k Зажигательный с белым фосфором**) | Кол-во: 4–8 | Вес: 20 | `RandomAmount="true"`
   * `hbm:item.plate_armor_hev` (**Бронеплита HEV**) | Кол-во: 1–2 | Вес: 35 | `RandomAmount="true"`
   * `hbm:item.plate_armor_titanium` (**Титановая бронеплита**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
   * `hbm:item.plate_combine_steel` (**Пластина стали Альянса**) | Кол-во: 1–2 | Вес: 30 | `RandomAmount="true"`
@@ -539,7 +540,7 @@
 ### Блок 130–159: Кулинария, провизия и быт
 
 #### 🥫 [Meta 130] Котелок бродяги
-* **Уровень:** 1 | **Rarity:** 0 | **Дроп:** `1 - 3` | `CombineTrashGroup="true"`
+* **Уровень:** 1 | **Rarity:** 0 | **Дроп:** `1 - 3` | `CombineTrashGroup="false"`
 * *Лор:* Скромные пожитки скитальца пустошей. Упор сделан на полевую утварь и расходники (походные спички, пустые банки под кипячение, кольца-язычки, винтовой консервный ключ, тарелки, чашки, кружки, стаканы, миски, нож), а также сорбенты (угольный фильтр для очистки воды). Мыло, колба с чистой водой, редкие запечатанные консервы и армейский сухпаёк MRE падают редко.
 * **Содержимое:**
   * `harvestcraft:saltItem` (**Соль**) | Кол-во: 4–8 | Вес: 70 | `RandomAmount="true"`
@@ -562,14 +563,14 @@
   * `cfm:ItemRecipeBook` (**Книга рецептов**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `SpiceOfLife:bookfoodjournal` (**Дневник питания**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `cfm:ItemSoap` (**Кусок мыла CFM**) | Кол-во: 1 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`. `[Редкий предмет гигиены]`
-  * `minecraft:potion` (**Колба с чистой водой**) | Кол-во: 1 | Вес: 15 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.canned_conserve:0` (**Армейская тушёнка NTM**) | Кол-во: 1 | Вес: 15 | `LimitedDropCount="1"` | `RandomAmount="false"`. `[Редкий паёк]`
-  * `hbm:item.canned_conserve:1` (**Рыбные консервы NTM**) | Кол-во: 1 | Вес: 15 | `LimitedDropCount="1"` | `RandomAmount="false"`. `[Редкий паёк]`
-  * `hbm:item.definitelyfood` (**Армейский сухпаёк MRE**) | Кол-во: 1 | Вес: 10 | `LimitedDropCount="1"` | `RandomAmount="false"`. `[Очень редкий паёк]`
-  * `minecraft:web` (**Паутина на дне котелка**) | Кол-во: 1–2 | Вес: 10 | `RandomAmount="true"`
+  * `minecraft:potion:0` (**Колба с чистой водой**) | Кол-во: 1 | Вес: 15 | `LimitedDropCount="0"` | `RandomAmount="false"`
+  * `hbm:item.canned_conserve:0` (**Армейская тушёнка NTM**) | Кол-во: 1 | Вес: 15 | `LimitedDropCount="0"` | `RandomAmount="false"`. `[Редкий паёк]`
+  * `hbm:item.canned_conserve:1` (**Рыбные консервы NTM**) | Кол-во: 1 | Вес: 15 | `LimitedDropCount="0"` | `RandomAmount="false"`. `[Редкий паёк]`
+  * `hbm:item.definitelyfood` (**Армейский сухпаёк MRE**) | Кол-во: 1 | Вес: 10 | `LimitedDropCount="0"` | `RandomAmount="false"`. `[Очень редкий паёк]`
+  * `minecraft:web` (**Паутина на дне котелка**) | Кол-во: 1–4 | Вес: 10 | `RandomAmount="true"`
 
 #### 🍳 [Meta 131] Полевой пищеблок
-* **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 3` | `CombineTrashGroup="true"`
+* **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 3` | `CombineTrashGroup="false"`
 * *Лор:* Поварская утварь из армейского полевого пищеблока.
 * **Содержимое:**
   * `cfm:ItemKnife` (**Кухонный нож**) | Кол-во: 1 | Вес: 55 | `LimitedDropCount="1"` | `RandomAmount="false"`
@@ -599,10 +600,10 @@
 * *Лор:* Неприкосновенный запас провизии высшего командного состава из защищённых правительственных бункеров ГО. Содержит сбалансированные неделимые армейские рационы (сухпайки / MRE), рационы космонавтов, элитный кофе и чай, армейский шоколад, редкие довоенные газировки, квас, посуду (фарфоровые чайные чашки, керамические кружки), приборы вскрытия и поварское руководство. Исключены скоропортящиеся суррогаты.
 * **Неделимые армейские рационы питания (`ItemGroup`):**
   При выпадении рациона игрок гарантированно получает полноценный армейский обед в полной комплектации:
-  * `mre_beef` (Вес: 65): Тушёнка говяжья (`canned_conserve:0`) 3 шт. + Крекеры 8 шт. + Соль 8 шт. + Консервный ключ (`can_key`) 1 шт. + Кружка (`cmug_empty`) 1 шт.
-  * `mre_stew` (Вес: 60): Мясное рагу с грибами (`canned_conserve:16`) 3 шт. + Крекеры 8 шт. + Соль 8 шт. + Консервный ключ (`can_key`) 1 шт. + Кружка (`cmug_empty`) 1 шт.
-  * `mre_spam` (Вес: 55): Ветчина SPAM (`canned_conserve:20`) 3 шт. + Крекеры 8 шт. + Соль 8 шт. + Консервный ключ (`can_key`) 1 шт. + Кружка (`cmug_empty`) 1 шт.
-  * `mre_fish` (Вес: 55): Консервированный тунец (`canned_conserve:1`) 3 шт. + Крекеры 8 шт. + Соль 8 шт. + Консервный ключ (`can_key`) 1 шт. + Кружка (`cmug_empty`) 1 шт.
+  * `mre_beef` (Вес ведущего: 65): Тушёнка говяжья (`canned_conserve:0`, Вес: 65) 3 шт. + Крекеры 8 шт. (Вес: 1 сателлит) + Соль 8 шт. (Вес: 1 сателлит) + Консервный ключ (`can_key`, `LimitedDropCount="0"`, Вес: 1 сателлит) 1 шт. + Кружка (`cmug_empty`, `LimitedDropCount="0"`, Вес: 1 сателлит) 1 шт.
+  * `mre_stew` (Вес ведущего: 60): Мясное рагу с грибами (`canned_conserve:16`, Вес: 60) 3 шт. + Крекеры 8 шт. (Вес: 1 сателлит) + Соль 8 шт. (Вес: 1 сателлит) + Консервный ключ (`can_key`, `LimitedDropCount="0"`, Вес: 1 сателлит) 1 шт. + Кружка (`cmug_empty`, `LimitedDropCount="0"`, Вес: 1 сателлит) 1 шт.
+  * `mre_spam` (Вес ведущего: 55): Ветчина SPAM (`canned_conserve:20`, Вес: 55) 3 шт. + Крекеры 8 шт. (Вес: 1 сателлит) + Соль 8 шт. (Вес: 1 сателлит) + Консервный ключ (`can_key`, `LimitedDropCount="0"`, Вес: 1 сателлит) 1 шт. + Кружка (`cmug_empty`, `LimitedDropCount="0"`, Вес: 1 сателлит) 1 шт.
+  * `mre_fish` (Вес ведущего: 55): Консервированный тунец (`canned_conserve:1`, Вес: 55) 3 шт. + Крекеры 8 шт. (Вес: 1 сателлит) + Соль 8 шт. (Вес: 1 сателлит) + Консервный ключ (`can_key`, `LimitedDropCount="0"`, Вес: 1 сателлит) 1 шт. + Кружка (`cmug_empty`, `LimitedDropCount="0"`, Вес: 1 сателлит) 1 шт.
 * **Дополнительные деликатесные консервы и рационы:**
   * `hbm:item.canned_conserve:3` (**Паштет**) | Кол-во: 1–2 | Вес: 50 | `RandomAmount="true"`
   * `hbm:item.canned_conserve:4` (**Консервированный плавленый сыр**) | Кол-во: 1–2 | Вес: 50 | `RandomAmount="true"`
@@ -642,19 +643,19 @@
 #### 🌾 [Meta 160] Складской мешок семян
 * **Уровень:** 1 | **Rarity:** 0 | **Дроп:** `1` (Моно-партия на поле 9x9: 81–100 шт.) | `CombineTrashGroup="false"`
 * *Лор:* Полноценная посевная укладка семян из складских запасов агрокомплексов, дачных кооперативов и семенных фондов. При открытии выдаёт гарантированный запас семян одной конкретной культуры в объёме 81–100 штук (80 базы + 1–20 бонуса), достаточный для немедленного засева стандартной гидропонной грядки 9×9 с центральным источником воды (80 блоков вспаханной земли).
-* *Реализация механики бандла:* Каждый сорт в XML реализован как неделимый `ItemGroup`-бандл из 2 записей: фиксированный базовый стек на 80 шт. (`Amount="80" RandomAmount="false"`) + случайный бонусный стек на 1–20 шт. (`Amount="20" RandomAmount="true"`). Движок `Enhanced LootBags` автоматически объединяет их и при превышении лимита стака (64 шт.) расщепляет через `splitStack` на два слота в инвентаре (64 + 17–36 шт.).
+* *Реализация механики бандла:* Каждый сорт в XML реализован как неделимый `ItemGroup`-бандл из 2 записей: фиксированный базовый стек на 80 шт. (`Amount="80" RandomAmount="false"`, номинальный вес сорта) + случайный бонусный стек на 1–20 шт. (`Amount="20" RandomAmount="true"`, технический вес `Chance="1"` сателлита). Движок `Enhanced LootBags` автоматически объединяет их и при превышении лимита стака (64 шт.) расщепляет через `splitStack` на два слота в инвентаре (64 + 17–36 шт.).
 * **Моно-комплекты культур (`ItemGroup`):**
-  * `pack_garlic`: `harvestcraft:garlicseedItem` (**Семя чеснока**) | База: 80 шт. + Бонус: 1–20 шт. | Вес: 80
-  * `pack_tomato`: `harvestcraft:tomatoseedItem` (**Семя помидора**) | База: 80 шт. + Бонус: 1–20 шт. | Вес: 80
-  * `pack_corn`: `harvestcraft:cornseedItem` (**Семя кукурузы**) | База: 80 шт. + Бонус: 1–20 шт. | Вес: 80
-  * `pack_cabbage`: `harvestcraft:cabbageseedItem` (**Семя капусты**) | База: 80 шт. + Бонус: 1–20 шт. | Вес: 75
-  * `pack_cucumber`: `harvestcraft:cucumberseedItem` (**Семя огурца**) | База: 80 шт. + Бонус: 1–20 шт. | Вес: 75
-  * `pack_peas`: `harvestcraft:peasseedItem` (**Семя гороха**) | База: 80 шт. + Бонус: 1–20 шт. | Вес: 75
-  * `pack_bean`: `harvestcraft:beanseedItem` (**Семя бобов**) | База: 80 шт. + Бонус: 1–20 шт. | Вес: 75
-  * `pack_beet`: `harvestcraft:beetseedItem` (**Семя свёклы**) | База: 80 шт. + Бонус: 1–20 шт. | Вес: 70
-  * `pack_onion`: `harvestcraft:onionseedItem` (**Семя лука**) | База: 80 шт. + Бонус: 1–20 шт. | Вес: 75
-  * `pack_potato`: `AgriCraft:seedPotato` (**Семя картофеля AgriCraft**) | База: 80 шт. + Бонус: 1–20 шт. | Вес: 30. *Смысл:* Базовый корнеплод, намеренно заниженный шанс.
-  * `pack_carrot`: `AgriCraft:seedCarrot` (**Семя моркови AgriCraft**) | База: 80 шт. + Бонус: 1–20 шт. | Вес: 30. *Смысл:* Базовый корнеплод, намеренно заниженный шанс.
+  * `pack_garlic`: `harvestcraft:garlicseedItem` (**Семя чеснока**) | База: 80 шт. (Вес: 80) + Бонус: 1–20 шт. (Вес: 1 сателлит)
+  * `pack_tomato`: `harvestcraft:tomatoseedItem` (**Семя помидора**) | База: 80 шт. (Вес: 80) + Бонус: 1–20 шт. (Вес: 1 сателлит)
+  * `pack_corn`: `harvestcraft:cornseedItem` (**Семя кукурузы**) | База: 80 шт. (Вес: 80) + Бонус: 1–20 шт. (Вес: 1 сателлит)
+  * `pack_cabbage`: `harvestcraft:cabbageseedItem` (**Семя капусты**) | База: 80 шт. (Вес: 75) + Бонус: 1–20 шт. (Вес: 1 сателлит)
+  * `pack_cucumber`: `harvestcraft:cucumberseedItem` (**Семя огурца**) | База: 80 шт. (Вес: 75) + Бонус: 1–20 шт. (Вес: 1 сателлит)
+  * `pack_peas`: `harvestcraft:peasseedItem` (**Семя гороха**) | База: 80 шт. (Вес: 75) + Бонус: 1–20 шт. (Вес: 1 сателлит)
+  * `pack_bean`: `harvestcraft:beanseedItem` (**Семя бобов**) | База: 80 шт. (Вес: 75) + Бонус: 1–20 шт. (Вес: 1 сателлит)
+  * `pack_beet`: `harvestcraft:beetseedItem` (**Семя свёклы**) | База: 80 шт. (Вес: 70) + Бонус: 1–20 шт. (Вес: 1 сателлит)
+  * `pack_onion`: `harvestcraft:onionseedItem` (**Семя лука**) | База: 80 шт. (Вес: 75) + Бонус: 1–20 шт. (Вес: 1 сателлит)
+  * `pack_potato`: `AgriCraft:seedPotato` (**Семя картофеля AgriCraft**) | База: 80 шт. (Вес: 30) + Бонус: 1–20 шт. (Вес: 1 сателлит). *Смысл:* Базовый корнеплод, намеренно заниженный шанс.
+  * `pack_carrot`: `AgriCraft:seedCarrot` (**Семя моркови AgriCraft**) | База: 80 шт. (Вес: 30) + Бонус: 1–20 шт. (Вес: 1 сателлит). *Смысл:* Базовый корнеплод, намеренно заниженный шанс.
 * **Редкие бахчевые и технические (штучно):**
   * `AgriCraft:seedSugarcane` (**Семена сахарного тростника AgriCraft**) | Кол-во: 16–32 | Вес: 25 | `RandomAmount="true"`. *Смысл:* Сахар, органика, биомасса, бумага.
   * `minecraft:pumpkin_seeds` (**Семена тыквы**) | Кол-во: 16–32 | Вес: 35 | `RandomAmount="true"`
@@ -706,12 +707,12 @@
 ### Блок 190–219: Строительство, отделка и чертежи
 
 #### 🪚 [Meta 190] Мешок плотника
-* **Уровень:** 1 | **Rarity:** 0 | **Дроп:** `2 - 4` | `CombineTrashGroup="true"`
+* **Уровень:** 1 | **Rarity:** 0 | **Дроп:** `2 - 4` | `CombineTrashGroup="false"`
 * *Лор:* Походный холщовый мешок столяра-каркасника. Содержит солидный запас крепёжных метизов, строительных шнуров и нитей, мелков для разметки, шаблонов ящиков, деревянной фурнитуры Carpenter's и ручных инструментов для возведения каркасов и первичного обустройства склада.
 * **Содержимое:**
   * `minecraft:string` (**Крепкая нить / дратва**) | Кол-во: 16–32 | Вес: 85 | `RandomAmount="true"`
   * `modernmarkings:item.chalk` (**Разметочный мел**) | Кол-во: 8–16 | Вес: 80 | `RandomAmount="true"`
-  * `hbm:item.bolt` (**Строительные болты / метизы NTM**) | Кол-во: 16–32 | Вес: 75 | `RandomAmount="true"`
+  * `hbm:item.bolt:30` (**Строительные болты / метизы NTM**) | Кол-во: 16–32 | Вес: 75 | `RandomAmount="true"`
   * `hbm:item.pin` (**Шпильки / штифты NTM**) | Кол-во: 8–16 | Вес: 75 | `RandomAmount="true"`
   * `minecraft:torch` (**Факелы**) | Кол-во: 16–32 | Вес: 75 | `RandomAmount="true"`
   * `OpenBlocks:generic:5` (**Строительный шнур**) | Кол-во: 8–16 | Вес: 70 | `RandomAmount="true"`
@@ -742,7 +743,7 @@
   * `hbm:item.padlock_rusty` (**Ржавый замок**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
 
 #### 🎨 [Meta 191] Сумка маляра
-* **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 4` | `CombineTrashGroup="true"`
+* **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 4` | `CombineTrashGroup="false"`
 * *Лор:* Походная холщовая сумка промышленного маляра-оформителя. Забита базовыми и химическими красителями для сигнальной разметки цехов, полос опасности и труб, трафаретной бумагой, чистящей ветошью, банками, защитными смолами, дегтем и изолентой.
 * **Содержимое:**
   * `etfuturum:dye:0` (**Белый краситель**) | Кол-во: 16–32 | Вес: 85 | `RandomAmount="true"`
@@ -780,7 +781,7 @@
   * `ArchitectureCraft:hammer` (**Молоток ArchitectureCraft**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `ArchitectureCraft:chisel` (**Резец ArchitectureCraft**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.ball_resin` (**Смола / Латекс**) | Кол-во: 2–4 | Вес: 40 | `RandomAmount="true"`
-  * `hbm:item.oil_tar` (**Дёготь / минеральный пек**) | Кол-во: 2–4 | Вес: 35 | `RandomAmount="true"`
+  * `hbm:item.oil_tar:0` (**Дёготь / минеральный пек**) | Кол-во: 2–4 | Вес: 35 | `RandomAmount="true"`
   * `hbm:item.ducttape` (**Изолента NTM**) | Кол-во: 1 | Вес: 20 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.canteen_vodka` (**Спирт / техническая фляга**) | Кол-во: 1 | Вес: 30 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Обезжиривание поверхностей и смывка старой краски.
   * `hbm:item.canister_full:111` (**Канистра растворителя**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Промышленный растворитель для эмалей и лаков.
@@ -826,7 +827,7 @@
 ### Блок 220–249: Геологоразведка и горное дело
 
 #### 🧭 [Meta 220] Планшет разведчика
-* **Уровень:** 1 | **Rarity:** 0 | **Дроп:** `2 - 4` | `CombineTrashGroup="true"`
+* **Уровень:** 1 | **Rarity:** 0 | **Дроп:** `2 - 4` | `CombineTrashGroup="false"`
 * *Лор:* Полевой планшет маркшейдера и картографа штолен. Содержит инструменты ориентирования, чертёжные принадлежности для составления схем выработок, снаряжение для спуска/подъёма в забои (включая веревочные лестницы и портативный дельтаплан), спальный мешок, аварийный паёк и средства образцового скалывания пород.
 * **Содержимое:**
   * `OpenBlocks:pedometer` (**Шагомер**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
@@ -854,12 +855,12 @@
   * `hbm:item.pin` (**Шплинт / отмычка**) | Кол-во: 3–6 | Вес: 65 | `RandomAmount="true"`
   * `exnihilo:stone` (**Образцы камней**) | Кол-во: 4–8 | Вес: 75 | `RandomAmount="true"`
   * `hbm:item.dust_tiny` (**Каменная/рудная крошка**) | Кол-во: 4–8 | Вес: 70 | `RandomAmount="true"`
-  * `minecraft:web` (**Паутина**) | Кол-во: 1–2 | Вес: 2 | `RandomAmount="true"`
+  * `minecraft:web` (**Паутина**) | Кол-во: 1–4 | Вес: 2 | `RandomAmount="true"`
   * `hbm:item.ammo_standard:50` (**Сигнальные ракеты**) | Кол-во: 2 | Вес: 25 | `RandomAmount="true"`. *Смысл:* Быстрая подсветка глубоких разломов и отпугивание хищников.
   * `hbm:item.briquette:0` (**Угольные брикеты**) | Кол-во: 4 | Вес: 35 | `RandomAmount="true"`. *Смысл:* Высококалорийное компактное топливо для костра и печей.
 
 #### 🛢️ [Meta 221] Геодезический набор
-* **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 4` | `CombineTrashGroup="true"`
+* **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 4` | `CombineTrashGroup="false"`
 * *Лор:* Комплект партии полевой геологоразведки стратегических ископаемых. Включает приборы поиска подземных резервуаров углеводородов и сканирования рудных пластов, средства радиационной разведки, документационный планшет с зажимом, маркировочные материалы, прочную верёвку для шахтных спусков, стальной молоток для колки керна, СИЗ, шахтные лестницы, сигнальные ракеты, калорийное топливо и редкие образцы природных минералов.
 * **Содержимое:**
   * `hbm:item.oil_detector` (**Детектор нефтяных резервуаров**) | Кол-во: 1 | Вес: 55 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Поиск подземных нефтяных линз и природного газа.
@@ -918,11 +919,11 @@
 ### Блок 250–279: Связь, радио и сигнализация
 
 #### 🚩 [Meta 250] Сумка сигнальщика
-* **Уровень:** 1 | **Rarity:** 0 | **Дроп:** `2 - 4` | `CombineTrashGroup="true"`
+* **Уровень:** 1 | **Rarity:** 0 | **Дроп:** `2 - 4` | `CombineTrashGroup="false"`
 * *Лор:* Снаряжение постового-сигнальщика, часового и диспетчера горизонта. Содержит ручную сирену, звуковые дорожки тревоги, сигнальную ракетницу, семафорные флажки, радиофакелы для беспроводной передачи сигнала, проводные растяжки периметра, таблички, мел, компас и навесной замок сигнального щитка.
 * **Содержимое:**
   * `hbm:tile.radio_torch_sender` (**Радиофакел-передатчик**) | Кол-во: 1 | Вес: 45 | `ItemGroup="sig_radio"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Беспроводная передача дискретного радиосигнала.
-  * `hbm:tile.radio_torch_receiver` (**Радиофакел-приёмник**) | Кол-во: 1 | Вес: 45 | `ItemGroup="sig_radio"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Беспроводной приём сигнала (активация сирен/гермодверей).
+  * `hbm:tile.radio_torch_receiver` (**Радиофакел-приёмник**) | Кол-во: 1 | Вес: 1 (сателлит) | `ItemGroup="sig_radio"` | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Беспроводной приём сигнала (активация сирен/гермодверей).
   * `hbm:tile.machine_siren` (**Промышленная сирена NTM**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Настенное звуковое оповещение базы/шахты.
   * `hbm:item.siren_track` (**Звуковая дорожка сирены**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Картридж звука тревоги для сирены.
   * `hbm:item.gun_flaregun` (**Сигнальный пистолет / Ракетница**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Подача световых сигналов бедствия и подсветка.
@@ -930,7 +931,7 @@
   * `OpenBlocks:flag` (**Семафорный сигнальный флаг**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`. *Смысл:* Визуальная маркировка путей и сигнальных постов.
   * `hbm:item.wire_fine:2900` (**Тонкий медный сигнальный провод**) | Кол-во: 8–16 | Вес: 75 | `RandomAmount="true"`
   * `minecraft:tripwire_hook` (**Крюк натяжного датчика / растяжки**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`
-  * `minecraft:string` (**Сигнальная нить для растяжек**) | Кол-во: 6–12 | Вес: 70 | `RandomAmount="true"`
+  * `minecraft:string` (**Сигнальная нить для растяжек**) | Кол-во: 8–16 | Вес: 70 | `RandomAmount="true"`
   * `OpenBlocks:generic:5` (**Прочный шнур / верёвка**) | Кол-во: 4–8 | Вес: 55 | `RandomAmount="true"`
   * `minecraft:redstone` (**Красная пыль**) | Кол-во: 8–16 | Вес: 75 | `RandomAmount="true"`
   * `minecraft:redstone_torch` (**Красный факел**) | Кол-во: 2–4 | Вес: 70 | `RandomAmount="true"`
@@ -951,7 +952,7 @@
   * `minecraft:gold_nugget` (**Золотые самородки**) | Кол-во: 2 | Вес: 25 | `RandomAmount="true"`. *Смысл:* Контакты реле и радиодетали.
 
 #### 📻 [Meta 251] Радиоукладка
-* **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 4` | `CombineTrashGroup="true"`
+* **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 4` | `CombineTrashGroup="false"`
 * *Лор:* Радиоукладка наладчика узла связи. Содержит радиоприёмные и контрольные гаджеты (пейджер, тюнер OpenFM, карту памяти, тестер энергосети), свинцовый аккумулятор, радиофакелы передачи команд, электронные лампы, конденсаторы, аналоговые платы, индуктивные катушки и ферриты, тонкий провод, повторители, компараторы, золотые контакты, кварцевые резонаторы, предохранители, монтажную отвёртку и магнитную головку.
 * **Содержимое:**
   * `hbm:item.rtty_pager` (**RTTY Пейджер**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Беспроводной приём текстовых и числовых команд по радиоканалу.
@@ -959,7 +960,7 @@
   * `openfm:MemoryCard` (**Карта памяти OpenFM**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.power_net_tool` (**Тестер электросети**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Диагностика радиоузлов и линий питания.
   * `hbm:tile.radio_torch_sender` (**Радиофакел-передатчик**) | Кол-во: 1 | Вес: 50 | `ItemGroup="rad_torch"` | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:tile.radio_torch_receiver` (**Радиофакел-приёмник**) | Кол-во: 1 | Вес: 50 | `ItemGroup="rad_torch"` | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `hbm:tile.radio_torch_receiver` (**Радиофакел-приёмник**) | Кол-во: 1 | Вес: 1 (сателлит) | `ItemGroup="rad_torch"` | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.circuit:0` (**Вакуумные радиолампы**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`
   * `hbm:item.circuit:1` (**Конденсаторы**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`
   * `hbm:item.circuit:2` (**Аналоговые печатные платы**) | Кол-во: 1–2 | Вес: 50 | `RandomAmount="true"`
@@ -1009,7 +1010,7 @@
 ### Блок 280–309: Химия, полимеры и лабораторная посуда
 
 #### 🧪 [Meta 280] Сумка лаборанта
-* **Уровень:** 1 | **Rarity:** 0 | **Дроп:** `3 - 4` | `CombineTrashGroup="true"`
+* **Уровень:** 1 | **Rarity:** 0 | **Дроп:** `3 - 4` | `CombineTrashGroup="false"`
 * *Лор:* Походный кейс лаборанта полевого анализа, титрования и первичного синтеза. Содержит прецизионную пипетку, набор лабораторного стекла и пробирок, вольфрамовые щипцы-манипулятор, стерильные шприцы, лабораторный карандаш для склянок, защитные очки, дезактивирующее мыло, зип-пакеты, основы полимеров и калиброванные минеральные соли.
 * **Содержимое:**
   * `hbm:item.pipette_laboratory` (**Лабораторная пипетка 50 mB**) | Кол-во: 1 | Вес: 75 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Дозирование малых порций реактивов и кислот.
@@ -1018,14 +1019,14 @@
   * `hbm:item.syringe_empty` (**Стерильные шприцы**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`. *Смысл:* Забор жидких проб.
   * `OpenBlocks:generic:11` (**Лабораторный карандаш для маркировки**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `minecraft:glass_bottle` (**Стеклянные колбы**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`
-  * `minecraft:potion` (**Дистиллированная вода**) | Кол-во: 1 | Вес: 70 | `RandomAmount="false"`. *Смысл:* Промывка посуды и приготовление растворов.
+  * `minecraft:potion:0` (**Дистиллированная вода**) | Кол-во: 1 | Вес: 70 | `RandomAmount="false"`. *Смысл:* Промывка посуды и приготовление растворов.
   * `hbm:item.goggles` (**Защитные лабораторные очки**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `cfm:ItemSoap` (**Мыло дезактивации**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.plastic_bag` (**Зип-пакеты для проб**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`
   * `hbm:item.ball_resin` (**Латекс / сырая смола**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`
   * `hbm:item.ingot_biorubber` (**Брусок биорезины**) | Кол-во: 1–3 | Вес: 55 | `RandomAmount="true"`
   * `hbm:item.pads_rubber` (**Резиновые прокладки для шлифов**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`
-  * `hbm:item.oil_tar` (**Каменноугольный деготь**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`
+  * `hbm:item.oil_tar:0` (**Каменноугольный деготь**) | Кол-во: 2–4 | Вес: 50 | `RandomAmount="true"`
   * `exnihilo:porcelain` (**Фарфоровая глина для тиглей**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
   * `minecraft:clay_ball` (**Очищенная глина**) | Кол-во: 4–8 | Вес: 45 | `RandomAmount="true"`
   * `hbm:item.sulfur` (**Сера (осаждённая)**) | Кол-во: 2–4 | Вес: 35 | `RandomAmount="true"`
@@ -1036,7 +1037,7 @@
   * `harvestcraft:saltItem` (**Чистый хлорид натрия**) | Кол-во: 3–6 | Вес: 50 | `RandomAmount="true"`
 
 #### 🔬 [Meta 281] Кейс технолога
-* **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 4` | `CombineTrashGroup="true"`
+* **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 4` | `CombineTrashGroup="false"`
 * *Лор:* Комплект инженера-технолога нефтехимического комбината и полимерных производств. Содержит боросиликатную мерную пипетку, набор термостойкого стекла, сифон перекачки, полумаску с фильтрами, канистры растворителя и смазки, ртуть, полимерные стержни, парафины, бакелит и брикеты твёрдого топлива.
 * **Содержимое:**
   * `hbm:item.pipette_boron` (**Борная пипетка 1000 mB**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
@@ -1147,24 +1148,24 @@
 
 ## 4. Карта привязки к структурам NTM (`_hbmItemPools.json`)
 
-| Пул HBM (`hbmItemPools.json`) | Назначение / Структура в мире | Интегрированные контейнеры (Meta ID) | Вес |
+| Пул HBM (`hbmItemPools.json`) | Назначение / Структура в мире | Интегрированные контейнеры (Meta ID) и точные веса | Вес в пуле |
 | :--- | :--- | :--- | :---: |
-| **`POOL_SPACESHIP`** | Разбившийся звездолёт | Носимый аварийный запас (310), Транспортный пенал изотопов (311), Бортовой ремнабор (312) | 3 |
-| **`POOL_VERTIBIRD`** | Упавший винтокрыл | Запечатанный патронный цинк (101), Коробочка радиодеталей (251), Настенная цеховая аптечка (11) | 4 |
-| **`POOL_VAULT_LAB`** | Лабораторное хранилище | Инженерный ЗИП (42), Потрёпанный блок стойки ЭВМ (72), Кейс технолога (281), Пенал редких семян (162) | 2 |
-| **`POOL_VAULT_REINFORCED`** | Укреплённый бункер | Герметичный чемодан РХБЗ (12), Оружейный кофр (102), Кейс проектировщика (192), Ящик шахтной взрывотехники (222) | 1 |
-| **`POOL_VAULT_STANDARD`** | Стандартный бункер | Настенная цеховая аптечка (11), Сумка механика (41), Запечатанный патронный цинк (101), Офицерский провиант (132) | 1 |
-| **`POOL_SILO`** | Ракетная шахта | Оружейный кофр (102), Сумка электрика (71), Герметичный чемодан РХБЗ (12), Радиоузел связиста (252) | 2 |
-| **`POOL_OIL_RIG`** | Нефтяная вышка | Геодезический набор (221), Кейс технолога (281), Сумка механика (41), Походный кухонник (131) | 2 |
-| **`POOL_SUBMARINE`** | Затонувшая подлодка | Герметичный чемодан РХБЗ (12), Коробочка радиодеталей (251), Сумка механика (41) | 2 |
-| **`POOL_MACHINE_PARTS`** | Заводские цеха и станки | Ящик слесаря (40), Сумка механика (41), Сумка маляра (191) | 2–3 |
-| **`POOL_OFFICE_TRASH`** | Офисный мусор и корзины | Полевой санитарный подсумок (10), Скрутка проводов (70), Планшет разведчика (220), Сумка сигнальщика (250) | 2 |
-| **`POOL_FILING_CABINET`** | Картотечные шкафы контор | Полевой санитарный подсумок (10), Скрутка проводов (70), Планшет разведчика (220), Сумка сигнальщика (250) | 20 |
-| **`POOL_SUPPLIES`** | Ящики снабжения | Котелок бродяги (130), Складской мешок семян (160), Садовый рюкзак (161), Полевой санитарный подсумок (10) | 3–4 |
-| **`POOL_SNACKS`** | Автоматы с едой и кухни | Котелок бродяги (130), Походный кухонник (131) | 2–3 |
-| **`POOL_WEAPONS`** | Оружейные пирамиды | Вскрытый патронный цинк (100), Запечатанный патронный цинк (101) | 15–25 |
-| **`POOL_AMMO`** | Армейские боеприпасы | Вскрытый патронный цинк (100), Запечатанный патронный цинк (101) | 3–5 |
-| **`POOL_GENERIC`** | Базовые тайники заброшек | Полевой санитарный подсумок (10), Ящик слесаря (40), Скрутка проводов (70), Котелок бродяги (130), Складской мешок семян (160), Мешок плотника (190), Планшет разведчика (220), Сумка сигнальщика (250), Сумка лаборанта (280) | 2–3 |
+| **`POOL_SPACESHIP`** | Разбившийся звездолёт | Носимый аварийный запас (310) [3], Транспортный пенал изотопов (311) [3], Бортовой ремнабор (312) [3] | 3 |
+| **`POOL_VERTIBIRD`** | Упавший винтокрыл | Запечатанный патронный цинк (101) [4], Коробочка радиодеталей (251) [4], Настенная цеховая аптечка (11) [4] | 4 |
+| **`POOL_VAULT_LAB`** | Лабораторное хранилище | Инженерный ЗИП (42) [2], Потрёпанный блок стойки ЭВМ (72) [2], Кейс технолога (281) [2], Пенал редких семян (162) [2] | 2 |
+| **`POOL_VAULT_REINFORCED`** | Укреплённый бункер | Герметичный чемодан РХБЗ (12) [1], Оружейный кофр (102) [1], Кейс проектировщика (192) [1], Ящик шахтной взрывотехники (222) [1] | 1 |
+| **`POOL_VAULT_STANDARD`** | Стандартный бункер | Настенная цеховая аптечка (11) [1], Сумка механика (41) [1], Запечатанный патронный цинк (101) [1], Офицерский провиант (132) [1] | 1 |
+| **`POOL_SILO`** | Ракетная шахта | Оружейный кофр (102) [2], Сумка электрика (71) [2], Герметичный чемодан РХБЗ (12) [2], Радиоузел связиста (252) [2] | 2 |
+| **`POOL_OIL_RIG`** | Нефтяная вышка | Геодезический набор (221) [2], Кейс технолога (281) [2], Сумка механика (41) [2], Походный кухонник (131) [2] | 2 |
+| **`POOL_SUBMARINE`** | Затонувшая подлодка | Герметичный чемодан РХБЗ (12) [2], Коробочка радиодеталей (251) [2], Сумка механика (41) [2] | 2 |
+| **`POOL_MACHINE_PARTS`** | Заводские цеха и станки | Ящик слесаря (40) [3], Сумка механика (41) [2], Сумка маляра (191) [2] | 2, 3 |
+| **`POOL_OFFICE_TRASH`** | Офисный мусор и корзины | Полевой санитарный подсумок (10) [2], Скрутка проводов (70) [2], Планшет разведчика (220) [2], Сумка сигнальщика (250) [2] | 2 |
+| **`POOL_FILING_CABINET`** | Картотечные шкафы контор | Полевой санитарный подсумок (10) [20], Скрутка проводов (70) [20], Планшет разведчика (220) [20], Сумка сигнальщика (250) [20] | 20 |
+| **`POOL_SUPPLIES`** | Ящики снабжения | Котелок бродяги (130) [4], Складской мешок семян (160) [4], Садовый рюкзак (161) [3], Полевой санитарный подсумок (10) [3] | 3, 4 |
+| **`POOL_SNACKS`** | Автоматы с едой и кухни | Котелок бродяги (130) [3], Походный кухонник (131) [2] | 2, 3 |
+| **`POOL_WEAPONS`** | Оружейные пирамиды | Вскрытый патронный цинк (100) [25], Запечатанный патронный цинк (101) [15] | 15, 25 |
+| **`POOL_AMMO`** | Армейские боеприпасы | Вскрытый патронный цинк (100) [5], Запечатанный патронный цинк (101) [3] | 3, 5 |
+| **`POOL_GENERIC`** | Базовые тайники заброшек | Полевой санитарный подсумок (10) [3], Ящик слесаря (40) [3], Скрутка проводов (70) [3], Котелок бродяги (130) [3], Складской мешок семян (160) [2], Мешок плотника (190) [2], Планшет разведчика (220) [2], Сумка сигнальщика (250) [2], Сумка лаборанта (280) [2] | 2, 3 |
 
 *Примечание по распределению пулов:* Все 32 тематические группы гарантированно интегрированы в генерацию структур мира NTM. Высокоуровневые контейнеры Tier 3 (162, 192, 222, 252, 281, 310–312) намеренно исключены из простых офисных и поверхностных пулов и привязаны строго к редким высокотехнологичным объектам (бункеры, радары, шахты, космические капсулы).
 
@@ -1193,7 +1194,7 @@
 4. [x] Выделены отдельные группы: «Агрономия и семена», «Геологоразведка».
 5. [x] Названия избавлены от канцелярита и сокращены до ёмких и живых.
 6. [x] Генерация XML-конфигурации `config/EnhancedLootBags/LootBags.xml`.
-7. [x] Привязка пулов в `config/hbmConfig/_hbmItemPools.json` (57 вхождений в 16 пулов структур).
+7. [x] Привязка пулов в `config/hbmConfig/hbmItemPools.json` (59 вхождений в 16 пулов структур).
 8. [x] Настройка локализации и чистого отображения названий без префиксов через TxLoader (`config/txloader/forceload/enhancedlootbags/lang/`).
 9. [x] Удалены устаревшие легаси-группы (1–6, 999), сохранён чистый пул из 32 тематических групп и технической группы хлама.
 
@@ -1211,7 +1212,7 @@
    * Очки, каталоги, книги рецептов и планшеты.
    * *Вес и вероятность:* Вес позиций составляет 25–50, что при типичной сумме весов группы ~350–500 соответствует **~8–12% вероятности на ролл**.
    * *Механика:* Мод Enhanced LootBags фиксирует выпадение в NBT/файле `LootBags.dat` мира. По достижении лимита предмет исключается из будущих роллов для игрока.
-2. **«Маяки прогресса» и технологические тизеры (Вес 10–25, ~2–5% на ролл, без лимита):**
+2. **«Маяки прогресса» и технологические тизеры (Вес 10–25, ~2–5% на ролл, с лимитом `LimitedDropCount="1"` на уникальные штучные образцы):**
    * Редкие компоненты старших технологических эпох (авионика, антиматерия, тритий, сверхпроводники, титановые бронеплиты, зашифрованные кассеты данных).
    * *Назначение:* Служат исследовательским триггером. Игрок видит в NEI грандиозные технологические деревья и ставит долгосрочные производственные цели.
 3. **Востребованные расходники и крафт-компоненты (70–75% объёма, шанс 50–85%):**
@@ -1236,28 +1237,28 @@
 | **10** | Полевой санитарный подсумок | 1 | 0 | 2–4 | false | 21 |
 | **11** | Настенная цеховая аптечка | 2 | 1 | 3–5 | false | 24 |
 | **12** | Герметичный чемодан РХБЗ | 3 | 2 | 3–6 | false | 25 |
-| **40** | Ящик слесаря | 1 | 0 | 1–2 | false | 21 |
+| **40** | Ящик слесаря | 1 | 0 | 1–2 | false | 23 |
 | **41** | Сумка механика | 2 | 1 | 3–5 | false | 31 |
 | **42** | Инженерный ЗИП | 3 | 2 | 3–5 | false | 30 |
 | **70** | Скрутка проводов | 1 | 0 | 2–3 | false | 20 |
 | **71** | Сумка электрика | 2 | 1 | 2–4 | false | 42 |
 | **72** | Потрёпанный блок стойки ЭВМ | 3 | 2 | 3–5 | false | 23 |
 | **100** | Вскрытый патронный цинк | 1 | 0 | 2–3 | false | 19 |
-| **101** | Запечатанный патронный цинк | 2 | 1 | 1 (моно-навал) | false | 22 |
-| **102** | Оружейный кофр | 3 | 2 | 2–4 | false | 21 |
+| **101** | Запечатанный патронный цинк | 2 | 1 | 1 (моно-навал) | false | 39 |
+| **102** | Оружейный кофр | 3 | 2 | 2–4 | false | 34 |
 | **130** | Котелок бродяги | 1 | 0 | 1–3 | false | 25 |
 | **131** | Полевой пищеблок | 2 | 1 | 2–3 | false | 22 |
-| **132** | Офицерский провиант | 3 | 2 | 3–6 | false | 48 |
+| **132** | Офицерский провиант | 3 | 2 | 3–6 | false | 42 |
 | **160** | Складской мешок семян | 1 | 0 | 1 (база 81–100) | false | 25 |
-| **161** | Садовый рюкзак | 2 | 1 | 3–5 | false | 34 |
+| **161** | Садовый рюкзак | 2 | 1 | 3–5 | false | 35 |
 | **162** | Спецконтейнер семян | 3 | 2 | 2–3 | false | 11 |
-| **190** | Мешок плотника | 1 | 0 | 2–4 | false | 27 |
-| **191** | Сумка маляра | 2 | 1 | 2–4 | false | 37 |
-| **192** | Кейс проектировщика | 3 | 2 | 3–5 | false | 32 |
-| **220** | Планшет разведчика | 1 | 0 | 2–4 | false | 25 |
+| **190** | Мешок плотника | 1 | 0 | 2–4 | false | 32 |
+| **191** | Сумка маляра | 2 | 1 | 2–4 | false | 40 |
+| **192** | Кейс проектировщика | 3 | 2 | 3–5 | false | 35 |
+| **220** | Планшет разведчика | 1 | 0 | 2–4 | false | 28 |
 | **221** | Геодезический набор | 2 | 1 | 2–4 | false | 21 |
 | **222** | Ящик шахтной взрывотехники | 3 | 2 | 3–6 | false | 24 |
-| **250** | Сумка сигнальщика | 1 | 0 | 2–4 | false | 24 |
+| **250** | Сумка сигнальщика | 1 | 0 | 2–4 | false | 28 |
 | **251** | Радиоукладка | 2 | 1 | 2–4 | false | 24 |
 | **252** | Радиоузел связиста | 3 | 2 | 2–4 | false | 20 |
 | **280** | Сумка лаборанта | 1 | 0 | 3–4 | false | 22 |
@@ -1265,7 +1266,7 @@
 | **310** | Носимый аварийный запас | 3 | 3 | 2–4 | false | 18 |
 | **311** | Транспортный пенал изотопов | 3 | 3 | 1–3 | false | 18 |
 | **312** | Бортовой ремнабор | 3 | 2 | 2–4 | false | 28 |
-| **ИТОГО** | **33 группы** | — | — | — | — | **811 позиций** |
+| **ИТОГО** | **33 группы** | — | — | — | — | **856 позиций** (868 в XML с 6 дефолтными группами) |
 
 ---
 
@@ -1295,7 +1296,7 @@
   * В Enhanced LootBags для гарантированного сопутствующего дропа можно использовать механизм связывания через `ItemGroup` с весом 100% либо регистрацию рецептов разборки пустых сумок через MineTweaker / NTM шредер.
 * **Статус:** Зафиксировано в бэклоге для этапа добавления предметов тары и рецептов утилизации.
 
-### 10.4. Критический баг мода Enhanced LootBags: утечка состояния лимитов (`LimitedDropCount`) между мирами
+### 10.4. [Блокирующий релиз техдолг] Критический баг мода Enhanced LootBags: утечка состояния лимитов (`LimitedDropCount`) между мирами
 * **Суть проблемы:**
   * В классе `eu.usrv.enhancedlootbags.core.LootGroupsHandler` ссылка на базу данных счетчиков лимитов `_mPersistedDB` хранится в поле синглтона и инициализируется только при первом вызове `InitStorage()`:
     ```java
