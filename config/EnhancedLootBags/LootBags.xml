@@ -50,7 +50,7 @@
         <Loot Identifier="med10_ptsd" ItemName="hbm:item.med_ptsd" Amount="2" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="med10_soap" ItemName="cfm:ItemSoap" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="med10_mask_rag" ItemName="hbm:item.mask_rag" Amount="1" NBTTag="" Chance="25" ItemGroup="med_rag_mask" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="med10_filter_rag" ItemName="hbm:item.gas_mask_filter_rag" Amount="1" NBTTag="" Chance="25" ItemGroup="med_rag_mask" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="med10_filter_rag" ItemName="hbm:item.gas_mask_filter_rag" Amount="1" NBTTag="" Chance="1" ItemGroup="med_rag_mask" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="med10_rag_blood" ItemName="hbm:item.rag_blood" Amount="2" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="med10_stimpak" ItemName="hbm:item.syringe_metal_stimpak" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="med10_medx" ItemName="hbm:item.syringe_metal_medx" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
@@ -204,7 +204,7 @@
         <Loot Identifier="el70_red_cable_classic" ItemName="hbm:tile.red_cable_classic" Amount="8" NBTTag="" Chance="80" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="el70_quartz" ItemName="minecraft:quartz" Amount="6" NBTTag="" Chance="80" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="el70_redstone" ItemName="minecraft:redstone" Amount="8" NBTTag="" Chance="80" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="el70_battery_potato" ItemName="hbm:item.battery_potato" Amount="1" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="el70_fuse" ItemName="hbm:item.fuse" Amount="2" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="el70_battery_generic" ItemName="hbm:item.battery_pack:0" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="el70_repeater" ItemName="minecraft:repeater" Amount="2" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="el70_comparator" ItemName="minecraft:comparator" Amount="2" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -313,44 +313,44 @@
     </LootGroup>
     <LootGroup GroupMetaID="101" GroupName="enhancedlootbags.group.101" Rarity="1" MinItems="1" MaxItems="1" CombineTrashGroup="false">
         <Loot Identifier="wp101_762_fmj" ItemName="hbm:item.ammo_standard:31" Amount="64" NBTTag="" Chance="85" ItemGroup="pack_762_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_762_ap" ItemName="hbm:item.ammo_standard:33" Amount="16" NBTTag="" Chance="85" ItemGroup="pack_762_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_762_jhp" ItemName="hbm:item.ammo_standard:32" Amount="16" NBTTag="" Chance="85" ItemGroup="pack_762_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_762_he" ItemName="hbm:item.ammo_standard:84" Amount="8" NBTTag="" Chance="85" ItemGroup="pack_762_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_762_casing" ItemName="hbm:item.casing:2" Amount="32" NBTTag="" Chance="85" ItemGroup="pack_762_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_762_ap" ItemName="hbm:item.ammo_standard:33" Amount="16" NBTTag="" Chance="1" ItemGroup="pack_762_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_762_jhp" ItemName="hbm:item.ammo_standard:32" Amount="16" NBTTag="" Chance="1" ItemGroup="pack_762_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_762_he" ItemName="hbm:item.ammo_standard:84" Amount="8" NBTTag="" Chance="1" ItemGroup="pack_762_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_762_casing" ItemName="hbm:item.casing:2" Amount="32" NBTTag="" Chance="1" ItemGroup="pack_762_zinc" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="wp101_556_fmj" ItemName="hbm:item.ammo_standard:27" Amount="64" NBTTag="" Chance="85" ItemGroup="pack_556_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_556_ap" ItemName="hbm:item.ammo_standard:29" Amount="16" NBTTag="" Chance="85" ItemGroup="pack_556_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_556_jhp" ItemName="hbm:item.ammo_standard:28" Amount="16" NBTTag="" Chance="85" ItemGroup="pack_556_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_556_casing" ItemName="hbm:item.casing:2" Amount="32" NBTTag="" Chance="85" ItemGroup="pack_556_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_556_ap" ItemName="hbm:item.ammo_standard:29" Amount="16" NBTTag="" Chance="1" ItemGroup="pack_556_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_556_jhp" ItemName="hbm:item.ammo_standard:28" Amount="16" NBTTag="" Chance="1" ItemGroup="pack_556_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_556_casing" ItemName="hbm:item.casing:2" Amount="32" NBTTag="" Chance="1" ItemGroup="pack_556_zinc" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="wp101_9mm_fmj" ItemName="hbm:item.ammo_standard:23" Amount="64" NBTTag="" Chance="80" ItemGroup="pack_9mm_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_9mm_ap" ItemName="hbm:item.ammo_standard:25" Amount="32" NBTTag="" Chance="80" ItemGroup="pack_9mm_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_9mm_jhp" ItemName="hbm:item.ammo_standard:24" Amount="32" NBTTag="" Chance="80" ItemGroup="pack_9mm_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_9mm_casing" ItemName="hbm:item.casing:0" Amount="48" NBTTag="" Chance="80" ItemGroup="pack_9mm_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_9mm_ap" ItemName="hbm:item.ammo_standard:25" Amount="32" NBTTag="" Chance="1" ItemGroup="pack_9mm_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_9mm_jhp" ItemName="hbm:item.ammo_standard:24" Amount="32" NBTTag="" Chance="1" ItemGroup="pack_9mm_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_9mm_casing" ItemName="hbm:item.casing:0" Amount="48" NBTTag="" Chance="1" ItemGroup="pack_9mm_zinc" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="wp101_12ga_buck" ItemName="hbm:item.ammo_standard:46" Amount="32" NBTTag="" Chance="75" ItemGroup="pack_12ga_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_12ga_slug" ItemName="hbm:item.ammo_standard:47" Amount="16" NBTTag="" Chance="75" ItemGroup="pack_12ga_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_12ga_flechette" ItemName="hbm:item.ammo_standard:48" Amount="16" NBTTag="" Chance="75" ItemGroup="pack_12ga_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_12ga_magnum" ItemName="hbm:item.ammo_standard:49" Amount="16" NBTTag="" Chance="75" ItemGroup="pack_12ga_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_12ga_casing" ItemName="hbm:item.casing:5" Amount="24" NBTTag="" Chance="75" ItemGroup="pack_12ga_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_12ga_cordite" ItemName="hbm:item.cordite" Amount="8" NBTTag="" Chance="75" ItemGroup="pack_12ga_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_12ga_slug" ItemName="hbm:item.ammo_standard:47" Amount="16" NBTTag="" Chance="1" ItemGroup="pack_12ga_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_12ga_flechette" ItemName="hbm:item.ammo_standard:48" Amount="16" NBTTag="" Chance="1" ItemGroup="pack_12ga_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_12ga_magnum" ItemName="hbm:item.ammo_standard:49" Amount="16" NBTTag="" Chance="1" ItemGroup="pack_12ga_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_12ga_casing" ItemName="hbm:item.casing:5" Amount="24" NBTTag="" Chance="1" ItemGroup="pack_12ga_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_12ga_cordite" ItemName="hbm:item.cordite" Amount="8" NBTTag="" Chance="1" ItemGroup="pack_12ga_zinc" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="wp101_22lr_fmj" ItemName="hbm:item.ammo_standard:19" Amount="64" NBTTag="" Chance="65" ItemGroup="pack_22lr_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_22lr_ap" ItemName="hbm:item.ammo_standard:21" Amount="32" NBTTag="" Chance="65" ItemGroup="pack_22lr_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_22lr_jhp" ItemName="hbm:item.ammo_standard:20" Amount="32" NBTTag="" Chance="65" ItemGroup="pack_22lr_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_22lr_casing" ItemName="hbm:item.casing:0" Amount="32" NBTTag="" Chance="65" ItemGroup="pack_22lr_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_22lr_ap" ItemName="hbm:item.ammo_standard:21" Amount="32" NBTTag="" Chance="1" ItemGroup="pack_22lr_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_22lr_jhp" ItemName="hbm:item.ammo_standard:20" Amount="32" NBTTag="" Chance="1" ItemGroup="pack_22lr_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_22lr_casing" ItemName="hbm:item.casing:0" Amount="32" NBTTag="" Chance="1" ItemGroup="pack_22lr_zinc" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="wp101_mag_44_fmj" ItemName="hbm:item.ammo_standard:14" Amount="32" NBTTag="" Chance="60" ItemGroup="pack_magnum_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_mag_44_ap" ItemName="hbm:item.ammo_standard:16" Amount="16" NBTTag="" Chance="60" ItemGroup="pack_magnum_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_mag_357_fmj" ItemName="hbm:item.ammo_standard:8" Amount="32" NBTTag="" Chance="60" ItemGroup="pack_magnum_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_mag_357_ap" ItemName="hbm:item.ammo_standard:10" Amount="16" NBTTag="" Chance="60" ItemGroup="pack_magnum_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_mag_casing" ItemName="hbm:item.casing:1" Amount="24" NBTTag="" Chance="60" ItemGroup="pack_magnum_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_mag_44_ap" ItemName="hbm:item.ammo_standard:16" Amount="16" NBTTag="" Chance="1" ItemGroup="pack_magnum_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_mag_357_fmj" ItemName="hbm:item.ammo_standard:8" Amount="32" NBTTag="" Chance="1" ItemGroup="pack_magnum_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_mag_357_ap" ItemName="hbm:item.ammo_standard:10" Amount="16" NBTTag="" Chance="1" ItemGroup="pack_magnum_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_mag_casing" ItemName="hbm:item.casing:1" Amount="24" NBTTag="" Chance="1" ItemGroup="pack_magnum_zinc" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="wp101_45_fmj" ItemName="hbm:item.ammo_standard:88" Amount="64" NBTTag="" Chance="70" ItemGroup="pack_45acp_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_45_ap" ItemName="hbm:item.ammo_standard:90" Amount="16" NBTTag="" Chance="70" ItemGroup="pack_45acp_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_45_jhp" ItemName="hbm:item.ammo_standard:89" Amount="16" NBTTag="" Chance="70" ItemGroup="pack_45acp_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_45_casing" ItemName="hbm:item.casing:0" Amount="32" NBTTag="" Chance="70" ItemGroup="pack_45acp_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_45_ap" ItemName="hbm:item.ammo_standard:90" Amount="16" NBTTag="" Chance="1" ItemGroup="pack_45acp_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_45_jhp" ItemName="hbm:item.ammo_standard:89" Amount="16" NBTTag="" Chance="1" ItemGroup="pack_45acp_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_45_casing" ItemName="hbm:item.casing:0" Amount="32" NBTTag="" Chance="1" ItemGroup="pack_45acp_zinc" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="wp101_10ga_buck" ItemName="hbm:item.ammo_standard:80" Amount="24" NBTTag="" Chance="55" ItemGroup="pack_10ga_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_10ga_shrapnel" ItemName="hbm:item.ammo_standard:81" Amount="16" NBTTag="" Chance="55" ItemGroup="pack_10ga_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_10ga_slug" ItemName="hbm:item.ammo_standard:83" Amount="16" NBTTag="" Chance="55" ItemGroup="pack_10ga_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_10ga_casing" ItemName="hbm:item.casing:6" Amount="16" NBTTag="" Chance="55" ItemGroup="pack_10ga_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_10ga_shrapnel" ItemName="hbm:item.ammo_standard:81" Amount="16" NBTTag="" Chance="1" ItemGroup="pack_10ga_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_10ga_slug" ItemName="hbm:item.ammo_standard:83" Amount="16" NBTTag="" Chance="1" ItemGroup="pack_10ga_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_10ga_casing" ItemName="hbm:item.casing:6" Amount="16" NBTTag="" Chance="1" ItemGroup="pack_10ga_zinc" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="wp101_50bmg_fmj" ItemName="hbm:item.ammo_standard:36" Amount="16" NBTTag="" Chance="40" ItemGroup="pack_50bmg_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_50bmg_ap" ItemName="hbm:item.ammo_standard:38" Amount="8" NBTTag="" Chance="40" ItemGroup="pack_50bmg_zinc" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="wp101_50bmg_casing" ItemName="hbm:item.casing:3" Amount="12" NBTTag="" Chance="40" ItemGroup="pack_50bmg_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_50bmg_ap" ItemName="hbm:item.ammo_standard:38" Amount="8" NBTTag="" Chance="1" ItemGroup="pack_50bmg_zinc" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="wp101_50bmg_casing" ItemName="hbm:item.casing:3" Amount="12" NBTTag="" Chance="1" ItemGroup="pack_50bmg_zinc" LimitedDropCount="0" RandomAmount="false"/>
     </LootGroup>
     <LootGroup GroupMetaID="102" GroupName="enhancedlootbags.group.102" Rarity="2" MinItems="2" MaxItems="4" CombineTrashGroup="false">
         <Loot Identifier="wp102_kevlar" ItemName="hbm:item.plate_kevlar" Amount="2" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -443,28 +443,28 @@
         <Loot Identifier="ck132_recipebook" ItemName="cookingforblockheads:recipebook:3" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <!-- РАЦИОН 1: Армейская тушёнка -->
         <Loot Identifier="ck132_mre_beef" ItemName="hbm:item.canned_conserve:0" Amount="3" NBTTag="" Chance="65" ItemGroup="mre_beef" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="ck132_mre_beef_crak" ItemName="harvestcraft:crackerItem" Amount="8" NBTTag="" Chance="65" ItemGroup="mre_beef" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="ck132_mre_beef_salt" ItemName="harvestcraft:saltItem" Amount="8" NBTTag="" Chance="65" ItemGroup="mre_beef" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="ck132_mre_beef_key" ItemName="hbm:item.can_key" Amount="1" NBTTag="" Chance="65" ItemGroup="mre_beef" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="ck132_mre_beef_mug" ItemName="hbm:item.cmug_empty" Amount="1" NBTTag="" Chance="65" ItemGroup="mre_beef" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ck132_mre_beef_crak" ItemName="harvestcraft:crackerItem" Amount="8" NBTTag="" Chance="1" ItemGroup="mre_beef" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="ck132_mre_beef_salt" ItemName="harvestcraft:saltItem" Amount="8" NBTTag="" Chance="1" ItemGroup="mre_beef" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="ck132_mre_beef_key" ItemName="hbm:item.can_key" Amount="1" NBTTag="" Chance="1" ItemGroup="mre_beef" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ck132_mre_beef_mug" ItemName="hbm:item.cmug_empty" Amount="1" NBTTag="" Chance="1" ItemGroup="mre_beef" LimitedDropCount="1" RandomAmount="false"/>
         <!-- РАЦИОН 2: Мясное рагу -->
         <Loot Identifier="ck132_mre_stew" ItemName="hbm:item.canned_conserve:16" Amount="3" NBTTag="" Chance="60" ItemGroup="mre_stew" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="ck132_mre_stew_crak" ItemName="harvestcraft:crackerItem" Amount="8" NBTTag="" Chance="60" ItemGroup="mre_stew" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="ck132_mre_stew_salt" ItemName="harvestcraft:saltItem" Amount="8" NBTTag="" Chance="60" ItemGroup="mre_stew" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="ck132_mre_stew_key" ItemName="hbm:item.can_key" Amount="1" NBTTag="" Chance="60" ItemGroup="mre_stew" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="ck132_mre_stew_mug" ItemName="hbm:item.cmug_empty" Amount="1" NBTTag="" Chance="60" ItemGroup="mre_stew" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ck132_mre_stew_crak" ItemName="harvestcraft:crackerItem" Amount="8" NBTTag="" Chance="1" ItemGroup="mre_stew" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="ck132_mre_stew_salt" ItemName="harvestcraft:saltItem" Amount="8" NBTTag="" Chance="1" ItemGroup="mre_stew" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="ck132_mre_stew_key" ItemName="hbm:item.can_key" Amount="1" NBTTag="" Chance="1" ItemGroup="mre_stew" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ck132_mre_stew_mug" ItemName="hbm:item.cmug_empty" Amount="1" NBTTag="" Chance="1" ItemGroup="mre_stew" LimitedDropCount="1" RandomAmount="false"/>
         <!-- РАЦИОН 3: Ветчина SPAM -->
         <Loot Identifier="ck132_mre_spam" ItemName="hbm:item.canned_conserve:20" Amount="3" NBTTag="" Chance="55" ItemGroup="mre_spam" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="ck132_mre_spam_crak" ItemName="harvestcraft:crackerItem" Amount="8" NBTTag="" Chance="55" ItemGroup="mre_spam" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="ck132_mre_spam_salt" ItemName="harvestcraft:saltItem" Amount="8" NBTTag="" Chance="55" ItemGroup="mre_spam" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="ck132_mre_spam_key" ItemName="hbm:item.can_key" Amount="1" NBTTag="" Chance="55" ItemGroup="mre_spam" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="ck132_mre_spam_mug" ItemName="hbm:item.cmug_empty" Amount="1" NBTTag="" Chance="55" ItemGroup="mre_spam" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ck132_mre_spam_crak" ItemName="harvestcraft:crackerItem" Amount="8" NBTTag="" Chance="1" ItemGroup="mre_spam" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="ck132_mre_spam_salt" ItemName="harvestcraft:saltItem" Amount="8" NBTTag="" Chance="1" ItemGroup="mre_spam" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="ck132_mre_spam_key" ItemName="hbm:item.can_key" Amount="1" NBTTag="" Chance="1" ItemGroup="mre_spam" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ck132_mre_spam_mug" ItemName="hbm:item.cmug_empty" Amount="1" NBTTag="" Chance="1" ItemGroup="mre_spam" LimitedDropCount="1" RandomAmount="false"/>
         <!-- РАЦИОН 4: Рыбный паёк -->
         <Loot Identifier="ck132_mre_fish" ItemName="hbm:item.canned_conserve:1" Amount="3" NBTTag="" Chance="55" ItemGroup="mre_fish" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="ck132_mre_fish_crak" ItemName="harvestcraft:crackerItem" Amount="8" NBTTag="" Chance="55" ItemGroup="mre_fish" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="ck132_mre_fish_salt" ItemName="harvestcraft:saltItem" Amount="8" NBTTag="" Chance="55" ItemGroup="mre_fish" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="ck132_mre_fish_key" ItemName="hbm:item.can_key" Amount="1" NBTTag="" Chance="55" ItemGroup="mre_fish" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="ck132_mre_fish_mug" ItemName="hbm:item.cmug_empty" Amount="1" NBTTag="" Chance="55" ItemGroup="mre_fish" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ck132_mre_fish_crak" ItemName="harvestcraft:crackerItem" Amount="8" NBTTag="" Chance="1" ItemGroup="mre_fish" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="ck132_mre_fish_salt" ItemName="harvestcraft:saltItem" Amount="8" NBTTag="" Chance="1" ItemGroup="mre_fish" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="ck132_mre_fish_key" ItemName="hbm:item.can_key" Amount="1" NBTTag="" Chance="1" ItemGroup="mre_fish" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="ck132_mre_fish_mug" ItemName="hbm:item.cmug_empty" Amount="1" NBTTag="" Chance="1" ItemGroup="mre_fish" LimitedDropCount="1" RandomAmount="false"/>
         <!-- Дополнительные консервы и деликатесы -->
         <Loot Identifier="ck132_canned_pashtet" ItemName="hbm:item.canned_conserve:3" Amount="2" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="ck132_canned_cheese" ItemName="hbm:item.canned_conserve:4" Amount="2" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -491,27 +491,27 @@
     </LootGroup>
     <LootGroup GroupMetaID="160" GroupName="enhancedlootbags.group.160" Rarity="0" MinItems="1" MaxItems="1" CombineTrashGroup="false">
         <Loot Identifier="agr160_garlic_base" ItemName="harvestcraft:garlicseedItem" Amount="80" NBTTag="" Chance="80" ItemGroup="pack_garlic" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="agr160_garlic_extra" ItemName="harvestcraft:garlicseedItem" Amount="20" NBTTag="" Chance="80" ItemGroup="pack_garlic" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr160_garlic_extra" ItemName="harvestcraft:garlicseedItem" Amount="20" NBTTag="" Chance="1" ItemGroup="pack_garlic" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr160_tomato_base" ItemName="harvestcraft:tomatoseedItem" Amount="80" NBTTag="" Chance="80" ItemGroup="pack_tomato" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="agr160_tomato_extra" ItemName="harvestcraft:tomatoseedItem" Amount="20" NBTTag="" Chance="80" ItemGroup="pack_tomato" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr160_tomato_extra" ItemName="harvestcraft:tomatoseedItem" Amount="20" NBTTag="" Chance="1" ItemGroup="pack_tomato" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr160_corn_base" ItemName="harvestcraft:cornseedItem" Amount="80" NBTTag="" Chance="80" ItemGroup="pack_corn" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="agr160_corn_extra" ItemName="harvestcraft:cornseedItem" Amount="20" NBTTag="" Chance="80" ItemGroup="pack_corn" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr160_corn_extra" ItemName="harvestcraft:cornseedItem" Amount="20" NBTTag="" Chance="1" ItemGroup="pack_corn" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr160_cabbage_base" ItemName="harvestcraft:cabbageseedItem" Amount="80" NBTTag="" Chance="75" ItemGroup="pack_cabbage" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="agr160_cabbage_extra" ItemName="harvestcraft:cabbageseedItem" Amount="20" NBTTag="" Chance="75" ItemGroup="pack_cabbage" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr160_cabbage_extra" ItemName="harvestcraft:cabbageseedItem" Amount="20" NBTTag="" Chance="1" ItemGroup="pack_cabbage" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr160_cucumber_base" ItemName="harvestcraft:cucumberseedItem" Amount="80" NBTTag="" Chance="75" ItemGroup="pack_cucumber" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="agr160_cucumber_extra" ItemName="harvestcraft:cucumberseedItem" Amount="20" NBTTag="" Chance="75" ItemGroup="pack_cucumber" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr160_cucumber_extra" ItemName="harvestcraft:cucumberseedItem" Amount="20" NBTTag="" Chance="1" ItemGroup="pack_cucumber" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr160_peas_base" ItemName="harvestcraft:peasseedItem" Amount="80" NBTTag="" Chance="75" ItemGroup="pack_peas" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="agr160_peas_extra" ItemName="harvestcraft:peasseedItem" Amount="20" NBTTag="" Chance="75" ItemGroup="pack_peas" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr160_peas_extra" ItemName="harvestcraft:peasseedItem" Amount="20" NBTTag="" Chance="1" ItemGroup="pack_peas" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr160_bean_base" ItemName="harvestcraft:beanseedItem" Amount="80" NBTTag="" Chance="75" ItemGroup="pack_bean" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="agr160_bean_extra" ItemName="harvestcraft:beanseedItem" Amount="20" NBTTag="" Chance="75" ItemGroup="pack_bean" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr160_bean_extra" ItemName="harvestcraft:beanseedItem" Amount="20" NBTTag="" Chance="1" ItemGroup="pack_bean" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr160_beet_base" ItemName="harvestcraft:beetseedItem" Amount="80" NBTTag="" Chance="70" ItemGroup="pack_beet" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="agr160_beet_extra" ItemName="harvestcraft:beetseedItem" Amount="20" NBTTag="" Chance="70" ItemGroup="pack_beet" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr160_beet_extra" ItemName="harvestcraft:beetseedItem" Amount="20" NBTTag="" Chance="1" ItemGroup="pack_beet" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr160_onion_base" ItemName="harvestcraft:onionseedItem" Amount="80" NBTTag="" Chance="75" ItemGroup="pack_onion" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="agr160_onion_extra" ItemName="harvestcraft:onionseedItem" Amount="20" NBTTag="" Chance="75" ItemGroup="pack_onion" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr160_onion_extra" ItemName="harvestcraft:onionseedItem" Amount="20" NBTTag="" Chance="1" ItemGroup="pack_onion" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr160_potato_base" ItemName="AgriCraft:seedPotato" Amount="80" NBTTag="" Chance="30" ItemGroup="pack_potato" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="agr160_potato_extra" ItemName="AgriCraft:seedPotato" Amount="20" NBTTag="" Chance="30" ItemGroup="pack_potato" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr160_potato_extra" ItemName="AgriCraft:seedPotato" Amount="20" NBTTag="" Chance="1" ItemGroup="pack_potato" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr160_carrot_base" ItemName="AgriCraft:seedCarrot" Amount="80" NBTTag="" Chance="30" ItemGroup="pack_carrot" LimitedDropCount="0" RandomAmount="false"/>
-        <Loot Identifier="agr160_carrot_extra" ItemName="AgriCraft:seedCarrot" Amount="20" NBTTag="" Chance="30" ItemGroup="pack_carrot" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr160_carrot_extra" ItemName="AgriCraft:seedCarrot" Amount="20" NBTTag="" Chance="1" ItemGroup="pack_carrot" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr160_sugarcane" ItemName="AgriCraft:seedSugarcane" Amount="32" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr160_pumpkin" ItemName="minecraft:pumpkin_seeds" Amount="32" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr160_melon" ItemName="minecraft:melon_seeds" Amount="32" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -760,7 +760,7 @@
     </LootGroup>
     <LootGroup GroupMetaID="250" GroupName="enhancedlootbags.group.250" Rarity="0" MinItems="2" MaxItems="4" CombineTrashGroup="false">
         <Loot Identifier="sig250_rf_sender" ItemName="hbm:tile.radio_torch_sender" Amount="1" NBTTag="" Chance="45" ItemGroup="sig_radio" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sig250_rf_receiver" ItemName="hbm:tile.radio_torch_receiver" Amount="1" NBTTag="" Chance="45" ItemGroup="sig_radio" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sig250_rf_receiver" ItemName="hbm:tile.radio_torch_receiver" Amount="1" NBTTag="" Chance="1" ItemGroup="sig_radio" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sig250_siren" ItemName="hbm:tile.machine_siren" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sig250_siren_track" ItemName="hbm:item.siren_track" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sig250_flaregun" ItemName="hbm:item.gun_flaregun" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
@@ -794,7 +794,7 @@
         <Loot Identifier="rad251_memory" ItemName="openfm:MemoryCard" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="rad251_power_net" ItemName="hbm:item.power_net_tool" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="rad251_rf_sender" ItemName="hbm:tile.radio_torch_sender" Amount="1" NBTTag="" Chance="50" ItemGroup="rad_torch" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="rad251_rf_receiver" ItemName="hbm:tile.radio_torch_receiver" Amount="1" NBTTag="" Chance="50" ItemGroup="rad_torch" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="rad251_rf_receiver" ItemName="hbm:tile.radio_torch_receiver" Amount="1" NBTTag="" Chance="1" ItemGroup="rad_torch" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="rad251_circuit_tube" ItemName="hbm:item.circuit:0" Amount="4" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="rad251_circuit_cap" ItemName="hbm:item.circuit:1" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="rad251_circuit_analog" ItemName="hbm:item.circuit:2" Amount="2" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
