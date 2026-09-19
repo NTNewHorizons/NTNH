@@ -257,6 +257,15 @@
         <sub><b>759 words</b></sub>
       </td>
       <td align="center" valign="top">
+        <a href="https://crowdin.com/profile/CommandNinja"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17833459/medium/f9a02e0a97ff98dd703fee1ed5949bda.png" />
+          <br />
+          <sub><b>Max Mustermann</b></sub>
+          <br />
+          <sub><b>(CommandNinja)</b></sub></a>
+        <br />
+        <sub><b>704 words</b></sub>
+      </td>
+      <td align="center" valign="top">
         <a href="https://crowdin.com/profile/Q-Cold"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17768555/medium/db0502d3deb1defd7d857d2244fe79a7.png" />
           <br />
           <sub><b>Gey</b></sub>
@@ -279,6 +288,8 @@
         <br />
         <sub><b>595 words</b></sub>
       </td>
+    </tr>
+    <tr>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/pilorama9a"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17747437/medium/1d9b08201861e1fb77456b9e257d8f8b.png" />
           <br />
@@ -287,17 +298,6 @@
           <sub><b>(pilorama9a)</b></sub></a>
         <br />
         <sub><b>588 words</b></sub>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" valign="top">
-        <a href="https://crowdin.com/profile/CommandNinja"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17833459/medium/f9a02e0a97ff98dd703fee1ed5949bda.png" />
-          <br />
-          <sub><b>Max Mustermann</b></sub>
-          <br />
-          <sub><b>(CommandNinja)</b></sub></a>
-        <br />
-        <sub><b>557 words</b></sub>
       </td>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/Svetozaavr"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17848899/medium/a64896ccc48192a01f0290f7dbc6db63_default.png" />
