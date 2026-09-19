@@ -2,10 +2,10 @@
   "description": "Format is as follows: First object is an array representing the itemstack in question, same rules apply here as they do for recipe configs but with one difference: Stacks accept NBT. NBT is contained in {curly brackets}, the format is the same as it is for the /give command. After the stack comes the minimum amount of items, then the maximum (the stack's own stacksize value is ignored). The final number is the weight, an item with a weight of 3 is 3x as likely to appear than an item with a weight of 1.",
   "pools": {
     "POOL_OFFICE_TRASH": [
-      [["enhancedlootbags:lootbag",1,10],1,1,2],
-      [["enhancedlootbags:lootbag",1,70],1,1,2],
-      [["enhancedlootbags:lootbag",1,220],1,1,2],
-      [["enhancedlootbags:lootbag",1,250],1,1,2],
+      [["enhancedlootbags:lootbag",1,10],1,1,1],
+      [["enhancedlootbags:lootbag",1,70],1,1,1],
+      [["enhancedlootbags:lootbag",1,220],1,1,1],
+      [["enhancedlootbags:lootbag",1,250],1,1,1],
       [["minecraft:paper"],1,12,10],
       [["minecraft:book"],1,3,4],
       [["hbm:item.twinkie"],1,2,6],
@@ -47,6 +47,9 @@
       [["hbm:item.blueprint_folder"],1,1,1]
     ],
     "POOL_VAULT_RUSTY": [
+      [["enhancedlootbags:lootbag",1,40],1,1,1],
+      [["enhancedlootbags:lootbag",1,70],1,1,1],
+      [["enhancedlootbags:lootbag",1,190],1,1,1],
       [["minecraft:gold_ingot"],3,14,1],
       [["hbm:item.gun_heavy_revolver"],1,1,2],
       [["hbm:item.pin"],8,8,1],
@@ -83,10 +86,10 @@
       [["hbm:item.niter"],1,3,1]
     ],
     "POOL_FILING_CABINET": [
-      [["enhancedlootbags:lootbag",1,10],1,1,20],
-      [["enhancedlootbags:lootbag",1,70],1,1,20],
-      [["enhancedlootbags:lootbag",1,220],1,1,20],
-      [["enhancedlootbags:lootbag",1,250],1,1,20],
+      [["enhancedlootbags:lootbag",1,10],1,1,5],
+      [["enhancedlootbags:lootbag",1,70],1,1,5],
+      [["enhancedlootbags:lootbag",1,220],1,1,5],
+      [["enhancedlootbags:lootbag",1,250],1,1,5],
       [["minecraft:paper"],1,12,240],
       [["minecraft:book"],1,3,90],
       [["minecraft:map"],1,1,50],
@@ -144,10 +147,10 @@
       [["hbm:item.screwdriver"],1,1,2]
     ],
     "POOL_VAULT_LAB": [
-      [["enhancedlootbags:lootbag",1,42],1,1,2],
-      [["enhancedlootbags:lootbag",1,72],1,1,2],
-      [["enhancedlootbags:lootbag",1,281],1,1,2],
-      [["enhancedlootbags:lootbag",1,162],1,1,2],
+      [["enhancedlootbags:lootbag",1,42],1,1,4],
+      [["enhancedlootbags:lootbag",1,72],1,1,4],
+      [["enhancedlootbags:lootbag",1,281],1,1,4],
+      [["enhancedlootbags:lootbag",1,162],1,1,4],
       [["hbm:item.blowtorch",1,0,"{23:0}"],1,1,4],
       [["hbm:item.chemistry_set"],1,1,15],
       [["hbm:item.screwdriver"],1,1,10],
@@ -174,10 +177,10 @@
       [["hbm:item.circuit",1,10],6,12,1]
     ],
     "POOL_SUPPLIES": [
-      [["enhancedlootbags:lootbag",1,130],1,1,4],
-      [["enhancedlootbags:lootbag",1,160],1,1,4],
-      [["enhancedlootbags:lootbag",1,161],1,1,3],
-      [["enhancedlootbags:lootbag",1,10],1,1,3],
+      [["enhancedlootbags:lootbag",1,130],1,1,2],
+      [["enhancedlootbags:lootbag",1,160],1,1,2],
+      [["enhancedlootbags:lootbag",1,161],1,1,2],
+      [["enhancedlootbags:lootbag",1,10],1,1,2],
       [["hbm:item.definitelyfood"],3,10,25],
       [["hbm:item.syringe_metal_stimpak"],1,3,10],
       [["hbm:item.pill_iodine"],1,2,2],
@@ -205,6 +208,9 @@
       [["hbm:item.cap_sparkle"],4,4,1]
     ],
     "POOL_ANTENNA": [
+      [["enhancedlootbags:lootbag",1,250],1,1,4],
+      [["enhancedlootbags:lootbag",1,251],1,1,4],
+      [["enhancedlootbags:lootbag",1,252],1,1,3],
       [["hbm:item.twinkie"],1,3,4],
       [["hbm:item.ingot_steel"],1,2,7],
       [["hbm:item.ingot_red_copper"],1,1,4],
@@ -230,15 +236,15 @@
       [["hbm:item.gas_mask_filter"],1,1,2]
     ],
     "POOL_GENERIC": [
-      [["enhancedlootbags:lootbag",1,10],1,1,3],
-      [["enhancedlootbags:lootbag",1,40],1,1,3],
-      [["enhancedlootbags:lootbag",1,70],1,1,3],
-      [["enhancedlootbags:lootbag",1,130],1,1,3],
-      [["enhancedlootbags:lootbag",1,160],1,1,2],
-      [["enhancedlootbags:lootbag",1,190],1,1,2],
-      [["enhancedlootbags:lootbag",1,220],1,1,2],
-      [["enhancedlootbags:lootbag",1,250],1,1,2],
-      [["enhancedlootbags:lootbag",1,280],1,1,2],
+      [["enhancedlootbags:lootbag",1,10],1,1,1],
+      [["enhancedlootbags:lootbag",1,40],1,1,1],
+      [["enhancedlootbags:lootbag",1,70],1,1,1],
+      [["enhancedlootbags:lootbag",1,130],1,1,1],
+      [["enhancedlootbags:lootbag",1,160],1,1,1],
+      [["enhancedlootbags:lootbag",1,190],1,1,1],
+      [["enhancedlootbags:lootbag",1,220],1,1,1],
+      [["enhancedlootbags:lootbag",1,250],1,1,1],
+      [["enhancedlootbags:lootbag",1,280],1,1,1],
       [["minecraft:bread"],1,5,8],
       [["hbm:item.twinkie"],1,3,6],
       [["minecraft:iron_ingot"],2,6,10],
@@ -327,6 +333,10 @@
       [["minecraft:experience_bottle"],1,3,5]
     ],
     "POOL_EXPENSIVE": [
+      [["enhancedlootbags:lootbag",1,12],1,1,2],
+      [["enhancedlootbags:lootbag",1,102],1,1,2],
+      [["enhancedlootbags:lootbag",1,192],1,1,2],
+      [["enhancedlootbags:lootbag",1,281],1,1,2],
       [["hbm:item.chlorine_pinwheel"],1,1,1],
       [["hbm:item.circuit"],1,1,4],
       [["hbm:item.circuit",1,8],1,1,3],
@@ -383,9 +393,9 @@
       [["hbm:item.circuit",1,6],2,6,1]
     ],
     "POOL_SPACESHIP": [
-      [["enhancedlootbags:lootbag",1,310],1,1,3],
-      [["enhancedlootbags:lootbag",1,311],1,1,3],
-      [["enhancedlootbags:lootbag",1,312],1,1,3],
+      [["enhancedlootbags:lootbag",1,310],1,1,4],
+      [["enhancedlootbags:lootbag",1,311],1,1,4],
+      [["enhancedlootbags:lootbag",1,312],1,1,4],
       [["hbm:item.battery_pack",1,1],1,1,2],
       [["hbm:item.coil_copper"],2,16,5],
       [["hbm:item.wire_fine",1,31],8,32,5],
@@ -499,10 +509,10 @@
       [["hbm:item.siox"],1,1,5]
     ],
     "POOL_OIL_RIG": [
-      [["enhancedlootbags:lootbag",1,221],1,1,2],
-      [["enhancedlootbags:lootbag",1,281],1,1,2],
-      [["enhancedlootbags:lootbag",1,41],1,1,2],
-      [["enhancedlootbags:lootbag",1,131],1,1,2],
+      [["enhancedlootbags:lootbag",1,221],1,1,1],
+      [["enhancedlootbags:lootbag",1,281],1,1,1],
+      [["enhancedlootbags:lootbag",1,41],1,1,1],
+      [["enhancedlootbags:lootbag",1,131],1,1,1],
       [["hbm:item.oil_detector"],1,1,1],
       [["hbm:item.canister_full",1,10],1,4,5],
       [["hbm:item.canister_empty"],4,16,10],
@@ -538,9 +548,10 @@
       [["hbm:item.crystal_lithium"],2,2,4]
     ],
     "POOL_SUBMARINE": [
-      [["enhancedlootbags:lootbag",1,12],1,1,2],
-      [["enhancedlootbags:lootbag",1,251],1,1,2],
-      [["enhancedlootbags:lootbag",1,41],1,1,2],
+      [["enhancedlootbags:lootbag",1,12],1,1,5],
+      [["enhancedlootbags:lootbag",1,102],1,1,3],
+      [["enhancedlootbags:lootbag",1,251],1,1,3],
+      [["enhancedlootbags:lootbag",1,41],1,1,3],
       [["hbm:item.nugget_u235"],3,12,5],
       [["hbm:item.nugget_pu238"],3,12,5],
       [["hbm:item.nugget_ra226"],3,6,5],
@@ -595,10 +606,10 @@
       [["hbm:item.taurun_boots"],1,1,20]
     ],
     "POOL_SILO": [
-      [["enhancedlootbags:lootbag",1,102],1,1,2],
-      [["enhancedlootbags:lootbag",1,71],1,1,2],
-      [["enhancedlootbags:lootbag",1,12],1,1,2],
-      [["enhancedlootbags:lootbag",1,252],1,1,2],
+      [["enhancedlootbags:lootbag",1,102],1,1,3],
+      [["enhancedlootbags:lootbag",1,71],1,1,3],
+      [["enhancedlootbags:lootbag",1,12],1,1,3],
+      [["enhancedlootbags:lootbag",1,252],1,1,3],
       [["hbm:item.missile_generic"],1,1,4],
       [["hbm:item.missile_incendiary"],1,1,4],
       [["hbm:item.gas_mask_m65"],1,1,5],
@@ -704,6 +715,10 @@
       [["hbm:item.coil_tungsten"],2,5,40]
     ],
     "POOL_VAULT_LOCKERS": [
+      [["enhancedlootbags:lootbag",1,11],1,1,3],
+      [["enhancedlootbags:lootbag",1,41],1,1,3],
+      [["enhancedlootbags:lootbag",1,131],1,1,3],
+      [["enhancedlootbags:lootbag",1,132],1,1,2],
       [["hbm:item.robes_helmet"],1,1,1],
       [["hbm:item.robes_plate"],1,1,1],
       [["hbm:item.robes_legs"],1,1,1],
