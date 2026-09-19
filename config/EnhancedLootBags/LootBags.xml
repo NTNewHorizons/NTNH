@@ -512,6 +512,28 @@
         <Loot Identifier="agr160_potato_extra" ItemName="AgriCraft:seedPotato" Amount="20" NBTTag="" Chance="1" ItemGroup="pack_potato" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr160_carrot_base" ItemName="AgriCraft:seedCarrot" Amount="80" NBTTag="" Chance="30" ItemGroup="pack_carrot" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="agr160_carrot_extra" ItemName="AgriCraft:seedCarrot" Amount="20" NBTTag="" Chance="1" ItemGroup="pack_carrot" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr160_rice_base" ItemName="harvestcraft:riceseedItem" Amount="80" NBTTag="" Chance="80" ItemGroup="pack_rice" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="agr160_rice_extra" ItemName="harvestcraft:riceseedItem" Amount="20" NBTTag="" Chance="1" ItemGroup="pack_rice" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr160_bellpepper_base" ItemName="harvestcraft:bellpepperseedItem" Amount="80" NBTTag="" Chance="75" ItemGroup="pack_bellpepper" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="agr160_bellpepper_extra" ItemName="harvestcraft:bellpepperseedItem" Amount="20" NBTTag="" Chance="1" ItemGroup="pack_bellpepper" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr160_eggplant_base" ItemName="harvestcraft:eggplantseedItem" Amount="80" NBTTag="" Chance="75" ItemGroup="pack_eggplant" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="agr160_eggplant_extra" ItemName="harvestcraft:eggplantseedItem" Amount="20" NBTTag="" Chance="1" ItemGroup="pack_eggplant" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr160_broccoli_base" ItemName="harvestcraft:broccoliseedItem" Amount="80" NBTTag="" Chance="75" ItemGroup="pack_broccoli" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="agr160_broccoli_extra" ItemName="harvestcraft:broccoliseedItem" Amount="20" NBTTag="" Chance="1" ItemGroup="pack_broccoli" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr160_cauliflower_base" ItemName="harvestcraft:cauliflowerseedItem" Amount="80" NBTTag="" Chance="75" ItemGroup="pack_cauliflower" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="agr160_cauliflower_extra" ItemName="harvestcraft:cauliflowerseedItem" Amount="20" NBTTag="" Chance="1" ItemGroup="pack_cauliflower" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr160_leek_base" ItemName="harvestcraft:leekseedItem" Amount="80" NBTTag="" Chance="75" ItemGroup="pack_leek" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="agr160_leek_extra" ItemName="harvestcraft:leekseedItem" Amount="20" NBTTag="" Chance="1" ItemGroup="pack_leek" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr160_lettuce_base" ItemName="harvestcraft:lettuceseedItem" Amount="80" NBTTag="" Chance="75" ItemGroup="pack_lettuce" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="agr160_lettuce_extra" ItemName="harvestcraft:lettuceseedItem" Amount="20" NBTTag="" Chance="1" ItemGroup="pack_lettuce" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr160_spinach_base" ItemName="harvestcraft:spinachseedItem" Amount="80" NBTTag="" Chance="75" ItemGroup="pack_spinach" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="agr160_spinach_extra" ItemName="harvestcraft:spinachseedItem" Amount="20" NBTTag="" Chance="1" ItemGroup="pack_spinach" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr160_brusselsprout_base" ItemName="harvestcraft:brusselsproutseedItem" Amount="80" NBTTag="" Chance="70" ItemGroup="pack_brusselsprout" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="agr160_brusselsprout_extra" ItemName="harvestcraft:brusselsproutseedItem" Amount="20" NBTTag="" Chance="1" ItemGroup="pack_brusselsprout" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr160_scallion_base" ItemName="harvestcraft:scallionseedItem" Amount="80" NBTTag="" Chance="75" ItemGroup="pack_scallion" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="agr160_scallion_extra" ItemName="harvestcraft:scallionseedItem" Amount="20" NBTTag="" Chance="1" ItemGroup="pack_scallion" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr160_celery_base" ItemName="harvestcraft:celeryseedItem" Amount="80" NBTTag="" Chance="70" ItemGroup="pack_celery" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="agr160_celery_extra" ItemName="harvestcraft:celeryseedItem" Amount="20" NBTTag="" Chance="1" ItemGroup="pack_celery" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr160_sugarcane" ItemName="AgriCraft:seedSugarcane" Amount="32" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr160_pumpkin" ItemName="minecraft:pumpkin_seeds" Amount="32" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr160_melon" ItemName="minecraft:melon_seeds" Amount="32" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -561,6 +583,17 @@
         <Loot Identifier="agr162_sunflower" ItemName="harvestcraft:sunflowerseedsItem" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr162_soybean" ItemName="harvestcraft:soybeanseedItem" Amount="16" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr162_plant_2" ItemName="hbm:item.plant_item:2" Amount="4" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr162_sesame" ItemName="harvestcraft:sesameseedseedItem" Amount="8" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr162_ginger" ItemName="harvestcraft:gingerseedItem" Amount="8" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr162_curryleaf" ItemName="harvestcraft:curryleafseedItem" Amount="8" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr162_spiceleaf" ItemName="harvestcraft:spiceleafseedItem" Amount="8" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr162_artichoke" ItemName="harvestcraft:artichokeseedItem" Amount="8" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr162_okra" ItemName="harvestcraft:okraseedItem" Amount="8" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr162_kiwi" ItemName="harvestcraft:kiwiseedItem" Amount="8" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr162_cranberry" ItemName="harvestcraft:cranberryseedItem" Amount="8" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr162_pineapple" ItemName="harvestcraft:pineappleseedItem" Amount="8" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr162_seaweed" ItemName="harvestcraft:seaweedseedItem" Amount="8" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="agr162_waterchestnut" ItemName="harvestcraft:waterchestnutseedItem" Amount="8" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="agr162_fleshroot" ItemName="harvestthenether:fleshrootseedItem" Amount="1" NBTTag="" Chance="10" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="agr162_marrowberry" ItemName="harvestthenether:marrowberryseedItem" Amount="1" NBTTag="" Chance="10" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="agr162_glowflower" ItemName="harvestthenether:glowflowerseedItem" Amount="1" NBTTag="" Chance="10" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
