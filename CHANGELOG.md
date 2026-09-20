@@ -50,6 +50,11 @@
 * Added new structures
   * Abandoned house with shelter (plains)
   * Military base (snowy biomes)
+* Added the ability to hold backspace in the qb search bar
+* Added colored interfaces textures
+* Added fishing handler to NEI
+* Added new barrel recipes and upgrades
+* Backported modern wither spawning behavior
 
 
 
@@ -90,6 +95,14 @@
 * Fixed rotary furnace consuming the fuel WITH the bucket (#204)
 * Fixed a bug that caused flux scraps being unable to be put back into the crucible (#117)
 * Fixed a bug that caused the quests to break an not complete when hosting a LAN game (#199)
+* Fixed kitchen door hinges ending up on the wrong side
+* Fixed baby Enderman item duplication
+* Fixed world progress loss from backups in singleplayer
+* Fixed hungry mob crash when eating items from lunchbags that dont extend ItemFood
+* Fixed protected drawer extraction
+* Fixed wireless level terminal bauble navigation
+* Fixed single-fluid cell contents tooltip
+* Fixed a **long-standing** issue with shadow distortion / self-shadowing (dark spots) on large machines
 
 
 
@@ -184,6 +197,8 @@
   * Added CMB steel tubes as an upgraded version of bronze tubes
   * All expensive mode items from the assembler can now also be made in the plasma forge, with a higher energy demand but 5x base speed (not counting booster isotopes)
   * The ICF, all endgame recipes that used to use bismuth tubes and the particle accelerator now use CMB tubes
+* Hungry mob variant behaviour change/fix
+* Updateed trophy pedestal model and texture
 
 
 
