@@ -22,5 +22,13 @@ for file in mods/**/*.jar resourcepacks/*.zip; do
 done
 
 "$PACKWIZ_BIN" refresh
-"$PACKWIZ_BIN" curseforge export -o "$OUTPUT_DIR/NTNH-$VERSION-CurseForge.zip"
-"$PACKWIZ_BIN" modrinth export --restrictDomains=false -o "$OUTPUT_DIR/NTNH-$VERSION-Modrinth.mrpack"
+CURSEFORGE="$OUTPUT_DIR/NTNH-$VERSION-CurseForge.zip"
+MODRINTH="$OUTPUT_DIR/NTNH-$VERSION-Modrinth.mrpack"
+NATIVE="$OUTPUT_DIR/NTNH-$VERSION-Native.zip"
+
+"$PACKWIZ_BIN" curseforge export -o "$CURSEFORGE"
+"$PACKWIZ_BIN" modrinth export --restrictDomains=false -o "$MODRINTH"
+python3 dev/package-release.py \
+  --curseforge "$CURSEFORGE" \
+  --modrinth "$MODRINTH" \
+  --native "$NATIVE"

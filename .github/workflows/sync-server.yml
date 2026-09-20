@@ -47,6 +47,14 @@ jobs:
             --exclude='SECURITY.md' \
             --exclude='.gitattributes' \
             --exclude='.gitignore' \
+            --exclude='.packwizignore' \
+            --exclude='*.pw.toml' \
+            --exclude='pack.toml' \
+            --exclude='index.toml' \
+            --exclude='packwiz-sources.json' \
+            --exclude='MOD_UPDATE_CHANGELOG.md' \
+            --exclude='build-packwiz.sh' \
+            --exclude='dev/' \
             --exclude-from="${{ github.workspace }}/server/client-only.txt" \
             "${{ github.workspace }}/" /tmp/server-repo/
 
