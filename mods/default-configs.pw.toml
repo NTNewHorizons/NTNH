@@ -1,9 +1,14 @@
-name = "defaultkeys-1.3.1"
-filename = "defaultkeys-1.3.1.jar"
+name = "defaultkeys-1.3.2"
+filename = "defaultkeys-1.3.2.jar"
 side = "client"
 pin = true
 
 [download]
 hash-format = "sha256"
-hash = "34beab4a67af22f3b020c2f566482db551ee4e205e6254557f5ac02bdaab6521"
-url = "https://github.com/GTNewHorizons/Default-Configs/releases/download/1.3.1/defaultkeys-1.3.1.jar"
+hash = "e7009545ee4d275355a88dd8b1a0c9871213c281a9d87d509f22b3eb23242dd7"
+url = "https://github.com/GTNewHorizons/Default-Configs/releases/download/1.3.2/defaultkeys-1.3.2.jar"
+
+[update.github]
+slug = "GTNewHorizons/Default-Configs"
+tag = "1.3.2"
+regex = "^defaultkeys\\-.+\\.jar$"

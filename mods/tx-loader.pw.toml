@@ -1,9 +1,14 @@
-name = "txloader-1.9"
-filename = "txloader-1.9.jar"
+name = "txloader-1.9.1"
+filename = "txloader-1.9.1.jar"
 side = "both"
 pin = true
 
 [download]
 hash-format = "sha256"
-hash = "de46473f88fef773ceb7c4c0616574161313d43d974d25b7251b88cd2e8b630b"
-url = "https://github.com/GTNewHorizons/TX-Loader/releases/download/1.9/txloader-1.9.jar"
+hash = "f07a4cf1b4c100cd6a3147d727d7bb821be682c4bc6273b80f412f1913855701"
+url = "https://github.com/GTNewHorizons/TX-Loader/releases/download/1.9.1/txloader-1.9.1.jar"
+
+[update.github]
+slug = "GTNewHorizons/TX-Loader"
+tag = "1.9.1"
+regex = "^txloader\\-.+\\.jar$"

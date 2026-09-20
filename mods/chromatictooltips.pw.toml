@@ -1,9 +1,14 @@
-name = "chromatictooltips-1.0.18"
-filename = "chromatictooltips-1.0.18.jar"
+name = "chromatictooltips-1.0.22"
+filename = "chromatictooltips-1.0.22.jar"
 side = "client"
 pin = true
 
 [download]
 hash-format = "sha256"
-hash = "72dc60c0cbf57260fb8bb023c63dba0afb8270b63852e74ec04f371daa7131ff"
-url = "https://github.com/slprime/ChromaticTooltips/releases/download/1.0.18/chromatictooltips-1.0.18.jar"
+hash = "276d1e87b7057ad957f24d5f99473e4906f631c39f53fe3cccf745b360ce967b"
+url = "https://github.com/slprime/ChromaticTooltips/releases/download/1.0.22/chromatictooltips-1.0.22.jar"
+
+[update.github]
+slug = "slprime/ChromaticTooltips"
+tag = "1.0.22"
+regex = "^chromatictooltips\\-.+\\.jar$"

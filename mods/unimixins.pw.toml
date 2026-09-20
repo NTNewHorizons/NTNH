@@ -1,9 +1,14 @@
-name = "+unimixins-all-1.7.10-0.3.0"
-filename = "+unimixins-all-1.7.10-0.3.0.jar"
+name = "+unimixins-all-1.7.10-0.3.2"
+filename = "+unimixins-all-1.7.10-0.3.2.jar"
 side = "both"
 pin = true
 
 [download]
 hash-format = "sha256"
-hash = "1cb351ed49fdd81a478bf4b8727daabf292ca43dad6398e36b0f593061dc6811"
-url = "https://github.com/LegacyModdingMC/UniMixins/releases/download/0.3.0/%2Bunimixins-all-1.7.10-0.3.0.jar"
+hash = "2687b776c8503e0b60cd8413cf70eaabb836c19f9fc726280ef61d6612257034"
+url = "https://github.com/LegacyModdingMC/UniMixins/releases/download/0.3.2/%2Bunimixins-all-1.7.10-0.3.2.jar"
+
+[update.github]
+slug = "LegacyModdingMC/UniMixins"
+tag = "0.3.2"
+regex = "^\\+unimixins\\-all\\-1\\.7\\.10\\-.+\\.jar$"

@@ -1,9 +1,14 @@
-name = "OpenBlocks-1.12.21-GTNH"
-filename = "OpenBlocks-1.12.21-GTNH.jar"
+name = "OpenBlocks-1.12.22-GTNH"
+filename = "OpenBlocks-1.12.22-GTNH.jar"
 side = "both"
 pin = true
 
 [download]
 hash-format = "sha256"
-hash = "59814b40fc581235ddaca8fdda7487c0c51c4312158f9a11f1ac173fb4ea6aee"
-url = "https://github.com/GTNewHorizons/OpenBlocks/releases/download/1.12.21-GTNH/OpenBlocks-1.12.21-GTNH.jar"
+hash = "bf7dc845b023e72ea6df24b70557cd42d6f3df91c5bc978d2561c711c963cb52"
+url = "https://github.com/GTNewHorizons/OpenBlocks/releases/download/1.12.22-GTNH/OpenBlocks-1.12.22-GTNH.jar"
+
+[update.github]
+slug = "GTNewHorizons/OpenBlocks"
+tag = "1.12.22-GTNH"
+regex = "^OpenBlocks\\-.+\\.jar$"

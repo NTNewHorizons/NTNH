@@ -1,9 +1,14 @@
-name = "SpecialMobs-3.7.5"
-filename = "SpecialMobs-3.7.5.jar"
+name = "SpecialMobs-3.7.7"
+filename = "SpecialMobs-3.7.7.jar"
 side = "both"
 pin = true
 
 [download]
 hash-format = "sha256"
-hash = "d638be22cb7f92c53475c641ceb915a106783d7df96358d5fd42f11140b1e8fc"
-url = "https://github.com/GTNewHorizons/SpecialMobs/releases/download/3.7.5/SpecialMobs-3.7.5.jar"
+hash = "2ad434495521f63f0629893c63b96b68eb4fd302af9f162d76c2dbdfe1277fb2"
+url = "https://github.com/GTNewHorizons/SpecialMobs/releases/download/3.7.7/SpecialMobs-3.7.7.jar"
+
+[update.github]
+slug = "GTNewHorizons/SpecialMobs"
+tag = "3.7.7"
+regex = "^SpecialMobs\\-.+\\.jar$"

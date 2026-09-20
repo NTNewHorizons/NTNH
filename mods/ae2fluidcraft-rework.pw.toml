@@ -1,9 +1,14 @@
-name = "ae2fc-1.5.106-gtnh"
-filename = "ae2fc-1.5.106-gtnh.jar"
+name = "ae2fc-1.5.110-gtnh"
+filename = "ae2fc-1.5.110-gtnh.jar"
 side = "both"
 pin = true
 
 [download]
 hash-format = "sha256"
-hash = "2c1473503b7243d5acbccbf9eedddb3ad1a33536204a06f5429fd5c13a7e1e2a"
-url = "https://github.com/GTNewHorizons/AE2FluidCraft-Rework/releases/download/1.5.106-gtnh/ae2fc-1.5.106-gtnh.jar"
+hash = "b24e7bf4189fa01812f005ae66ffad2b470c788d3f02bf7630a5db1168fdde7c"
+url = "https://github.com/GTNewHorizons/AE2FluidCraft-Rework/releases/download/1.5.110-gtnh/ae2fc-1.5.110-gtnh.jar"
+
+[update.github]
+slug = "GTNewHorizons/AE2FluidCraft-Rework"
+tag = "1.5.110-gtnh"
+regex = "^ae2fc\\-.+\\.jar$"

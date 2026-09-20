@@ -1,9 +1,14 @@
-name = "navigator-1.1.9"
-filename = "navigator-1.1.9.jar"
+name = "navigator-1.1.10"
+filename = "navigator-1.1.10.jar"
 side = "both"
 pin = true
 
 [download]
 hash-format = "sha256"
-hash = "4ec8bf3ff815b31715692839e81838c339fa0465916188cef5108f7107ba6dd5"
-url = "https://github.com/GTNewHorizons/Navigator/releases/download/1.1.9/navigator-1.1.9.jar"
+hash = "fab10ecae96449a75d3049cdd8d12cbf1fb7883763d7b29bdc30e40590227543"
+url = "https://github.com/GTNewHorizons/Navigator/releases/download/1.1.10/navigator-1.1.10.jar"
+
+[update.github]
+slug = "GTNewHorizons/Navigator"
+tag = "1.1.10"
+regex = "^navigator\\-.+\\.jar$"
