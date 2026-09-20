@@ -164,6 +164,7 @@ $$P_i = \frac{\text{Chance}_i}{\sum_{k=1}^M \text{Chance}_k}$$
   * `hbm:item.rag_blood` (**Окровавленная тряпка**) | Кол-во: 1–2 | Вес: 35 | `RandomAmount="true"`. *Смысл:* Атмосферные следы полевой перевязки.
   * `hbm:item.syringe_metal_stimpak` (**Стимулятор**) | Кол-во: 1 | Вес: 35 | `RandomAmount="false"`. *Смысл:* Армейский стимулятор регенерации.
   * `hbm:item.syringe_metal_medx` (**Мед-X**) | Кол-во: 1 | Вес: 25 | `RandomAmount="false"`. *Смысл:* Сильное обезболивающее.
+  * `minecraft:web` (**Паутина**) | Кол-во: 1–2 | Вес: 8 | `RandomAmount="true"`. *Смысл:* Редкий атмосферный мусор в заброшенном подсумке.
 
 #### 🩺 [Meta 11] Настенная цеховая аптечка
 * **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `3 - 5` | `CombineTrashGroup="false"`
@@ -254,6 +255,7 @@ $$P_i = \frac{\text{Chance}_i}{\sum_{k=1}^M \text{Chance}_k}$$
   * `hbm:item.bolt:30` (**Стальной болт**) | Кол-во: 1–8 | Вес: 65 | `RandomAmount="true"`. *Смысл:* Высокопрочный стальной крепёж NTM.
   * `hbm:item.wd40` (**VT-40**) | Кол-во: 1 | Вес: 2 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Ультраредкий ценный модуль/смазка.
   * `hbm:item.piston_set:0` (**Комплект поршней**) | Кол-во: 1 | Вес: 15 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Механика приводов.
+  * `minecraft:web` (**Паутина**) | Кол-во: 1–2 | Вес: 10 | `RandomAmount="true"`. *Смысл:* Редкий атмосферный мусор на дне ящика.
 
 #### 🔧 [Meta 41] Сумка механика
 * **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `3 - 5` | `CombineTrashGroup="false"`
@@ -600,10 +602,10 @@ $$P_i = \frac{\text{Chance}_i}{\sum_{k=1}^M \text{Chance}_k}$$
 * *Лор:* Неприкосновенный запас провизии высшего командного состава из защищённых правительственных бункеров ГО. Содержит сбалансированные неделимые армейские рационы (сухпайки / MRE), рационы космонавтов, элитный кофе и чай, армейский шоколад, редкие довоенные газировки, квас, посуду (фарфоровые чайные чашки, керамические кружки), приборы вскрытия и поварское руководство. Исключены скоропортящиеся суррогаты.
 * **Неделимые армейские рационы питания (`ItemGroup`):**
   При выпадении рациона игрок гарантированно получает полноценный армейский обед в полной комплектации:
-  * `mre_beef` (Вес ведущего: 65): Тушёнка говяжья (`canned_conserve:0`, Вес: 65) 3 шт. + Крекеры 8 шт. (Вес: 1 сателлит) + Соль 8 шт. (Вес: 1 сателлит) + Консервный ключ (`can_key`, `LimitedDropCount="0"`, Вес: 1 сателлит) 1 шт. + Кружка (`cmug_empty`, `LimitedDropCount="0"`, Вес: 1 сателлит) 1 шт.
-  * `mre_stew` (Вес ведущего: 60): Мясное рагу с грибами (`canned_conserve:16`, Вес: 60) 3 шт. + Крекеры 8 шт. (Вес: 1 сателлит) + Соль 8 шт. (Вес: 1 сателлит) + Консервный ключ (`can_key`, `LimitedDropCount="0"`, Вес: 1 сателлит) 1 шт. + Кружка (`cmug_empty`, `LimitedDropCount="0"`, Вес: 1 сателлит) 1 шт.
-  * `mre_spam` (Вес ведущего: 55): Ветчина SPAM (`canned_conserve:20`, Вес: 55) 3 шт. + Крекеры 8 шт. (Вес: 1 сателлит) + Соль 8 шт. (Вес: 1 сателлит) + Консервный ключ (`can_key`, `LimitedDropCount="0"`, Вес: 1 сателлит) 1 шт. + Кружка (`cmug_empty`, `LimitedDropCount="0"`, Вес: 1 сателлит) 1 шт.
-  * `mre_fish` (Вес ведущего: 55): Консервированный тунец (`canned_conserve:1`, Вес: 55) 3 шт. + Крекеры 8 шт. (Вес: 1 сателлит) + Соль 8 шт. (Вес: 1 сателлит) + Консервный ключ (`can_key`, `LimitedDropCount="0"`, Вес: 1 сателлит) 1 шт. + Кружка (`cmug_empty`, `LimitedDropCount="0"`, Вес: 1 сателлит) 1 шт.
+  * `mre_beef` (Вес ведущего: 65): Тушёнка говяжья (`hbm:item.canned_conserve:0`, Вес: 65) 3 шт. + Крекеры 8 шт. (`harvestcraft:crackerItem`, Вес: 1 сателлит) + Соль 8 шт. (`harvestcraft:saltItem`, Вес: 1 сателлит) + Консервный ключ (`hbm:item.can_key`, `LimitedDropCount="0"`, Вес: 1 сателлит) 1 шт. + Кружка (`hbm:item.cmug_empty`, `LimitedDropCount="0"`, Вес: 1 сателлит) 1 шт.
+  * `mre_stew` (Вес ведущего: 60): Мясное рагу с грибами (`hbm:item.canned_conserve:16`, Вес: 60) 3 шт. + Крекеры 8 шт. (`harvestcraft:crackerItem`, Вес: 1 сателлит) + Соль 8 шт. (`harvestcraft:saltItem`, Вес: 1 сателлит) + Консервный ключ (`hbm:item.can_key`, `LimitedDropCount="0"`, Вес: 1 сателлит) 1 шт. + Кружка (`hbm:item.cmug_empty`, `LimitedDropCount="0"`, Вес: 1 сателлит) 1 шт.
+  * `mre_spam` (Вес ведущего: 55): Ветчина SPAM (`hbm:item.canned_conserve:20`, Вес: 55) 3 шт. + Крекеры 8 шт. (`harvestcraft:crackerItem`, Вес: 1 сателлит) + Соль 8 шт. (`harvestcraft:saltItem`, Вес: 1 сателлит) + Консервный ключ (`hbm:item.can_key`, `LimitedDropCount="0"`, Вес: 1 сателлит) 1 шт. + Кружка (`hbm:item.cmug_empty`, `LimitedDropCount="0"`, Вес: 1 сателлит) 1 шт.
+  * `mre_fish` (Вес ведущего: 55): Консервированный тунец (`hbm:item.canned_conserve:1`, Вес: 55) 3 шт. + Крекеры 8 шт. (`harvestcraft:crackerItem`, Вес: 1 сателлит) + Соль 8 шт. (`harvestcraft:saltItem`, Вес: 1 сателлит) + Консервный ключ (`hbm:item.can_key`, `LimitedDropCount="0"`, Вес: 1 сателлит) 1 шт. + Кружка (`hbm:item.cmug_empty`, `LimitedDropCount="0"`, Вес: 1 сателлит) 1 шт.
 * **Дополнительные деликатесные консервы и рационы:**
   * `hbm:item.canned_conserve:3` (**Паштет**) | Кол-во: 1–2 | Вес: 50 | `RandomAmount="true"`
   * `hbm:item.canned_conserve:4` (**Консервированный плавленый сыр**) | Кол-во: 1–2 | Вес: 50 | `RandomAmount="true"`
@@ -618,8 +620,6 @@ $$P_i = \frac{\text{Chance}_i}{\sum_{k=1}^M \text{Chance}_k}$$
 * **Напитки, сладости, посуда и руководство:**
   * `cookingforblockheads:recipebook:3` (**Кулинарная книга II**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Автокрафт рецептов кухни.
   * `minecraft:sugar` (**Сахар**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`
-  * `harvestcraft:saltItem` (**Соль**) | Кол-во: 8–16 | Вес: 60 | `RandomAmount="true"`
-  * `harvestcraft:crackerItem` (**Армейские крекеры / галеты**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`
   * `hbm:item.chocolate` (**Шоколад**) | Кол-во: 1–2 | Вес: 55 | `RandomAmount="true"`
   * `hbm:item.powder_coffee` (**Растворимый кофе высшего сорта**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`
   * `hbm:item.tea_leaf` (**Чайный лист**) | Кол-во: 2–4 | Вес: 60 | `RandomAmount="true"`
@@ -627,13 +627,8 @@ $$P_i = \frac{\text{Chance}_i}{\sum_{k=1}^M \text{Chance}_k}$$
   * `hbm:item.can_breen` (**Личный резерв др. Брина**) | Кол-во: 1–2 | Вес: 45 | `RandomAmount="true"`
   * `hbm:item.can_mug` (**Квас "Царские Припасы"**) | Кол-во: 1–2 | Вес: 45 | `RandomAmount="true"`
   * `hbm:item.can_smart` (**Энергетик “Смарт”**) | Кол-во: 1–2 | Вес: 45 | `RandomAmount="true"`
-  * `hbm:item.can_redbomb` (**Энергетик "Красная Бомба"**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
-  * `hbm:item.can_luna` (**Тёмная кола "Чёрная Меза Луна"**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
-  * `hbm:item.can_mrsugar` (**Газировка "Доктор Сахар"**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
-  * `hbm:item.bottle_nuka` (**Ядер-Кола**) | Кол-во: 1–2 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="true"`
-  * `hbm:item.bottle_opener` (**Открывашка**) | Кол-во: 1 | Вес: 45 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.can_key` (**Винтовой ключ**) | Кол-во: 1 | Вес: 50 | `LimitedDropCount="1"` | `RandomAmount="false"`
-  * `hbm:item.cmug_empty` (**Керамическая кофейная кружка**) | Кол-во: 1–2 | Вес: 45 | `RandomAmount="true"`
+  * `hbm:item.bottle_nuka` (**Ядер-Кола**) | Кол-во: 1–2 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="true"`
+  * `hbm:item.bottle_opener` (**Открывашка**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.teacup_empty` (**Фарфоровая чайная чашка**) | Кол-во: 1–2 | Вес: 40 | `RandomAmount="true"`
 
 ---
@@ -667,6 +662,17 @@ $$P_i = \frac{\text{Chance}_i}{\sum_{k=1}^M \text{Chance}_k}$$
   * `pack_brusselsprout`: `harvestcraft:brusselsproutseedItem` (**Семя брюссельской капусты**) | База: 80 шт. (Вес: 70) + Бонус: 1–20 шт. (Вес: 1 сателлит). *Смысл:* Миниатюрные кочанчики для рагу и гарниров.
   * `pack_scallion`: `harvestcraft:scallionseedItem` (**Семя зелёного лука / шалота**) | База: 80 шт. (Вес: 75) + Бонус: 1–20 шт. (Вес: 1 сателлит). *Смысл:* Универсальная столовая огородная зелень.
   * `pack_celery`: `harvestcraft:celeryseedItem` (**Семя сельдерея**) | База: 80 шт. (Вес: 70) + Бонус: 1–20 шт. (Вес: 1 сателлит). *Смысл:* Пряные стебли для мясных и овощных бульонов.
+  * `pack_barley`: `harvestcraft:barleyseedItem` (**Семя ячменя**) | База: 80 шт. (Вес: 80) + Бонус: 1–20 шт. (Вес: 1 сателлит). *Смысл:* Пивоварение, ячменная мука, каши, фураж.
+  * `pack_oats`: `harvestcraft:oatsseedItem` (**Семя овса**) | База: 80 шт. (Вес: 80) + Бонус: 1–20 шт. (Вес: 1 сателлит). *Смысл:* Овсяные хлопья, геркулес, каши, диетическое питание.
+  * `pack_rye`: `harvestcraft:ryeseedItem` (**Семя ржи**) | База: 80 шт. (Вес: 80) + Бонус: 1–20 шт. (Вес: 1 сателлит). *Смысл:* Ржаной хлеб, бородинские сухари, основа для кваса.
+  * `pack_rutabaga`: `harvestcraft:rutabagaseedItem` (**Семя брюквы**) | База: 80 шт. (Вес: 75) + Бонус: 1–20 шт. (Вес: 1 сателлит). *Смысл:* Неприхотливый северный корнеплод долгого зимнего хранения.
+  * `pack_turnip`: `harvestcraft:turnipseedItem` (**Семя репы**) | База: 80 шт. (Вес: 75) + Бонус: 1–20 шт. (Вес: 1 сателлит). *Смысл:* Традиционный сытный корнеплод, похлёбки и овощные рагу.
+  * `pack_parsnip`: `harvestcraft:parsnipseedItem` (**Семя пастернака**) | База: 80 шт. (Вес: 75) + Бонус: 1–20 шт. (Вес: 1 сателлит). *Смысл:* Пряный белый корень для наваристых мясных супов.
+  * `pack_radish`: `harvestcraft:radishseedItem` (**Семя редиса**) | База: 80 шт. (Вес: 75) + Бонус: 1–20 шт. (Вес: 1 сателлит). *Смысл:* Скороспелый корнеплод, весенние салаты.
+  * `pack_sweetpotato`: `harvestcraft:sweetpotatoseedItem` (**Семя батата**) | База: 80 шт. (Вес: 75) + Бонус: 1–20 шт. (Вес: 1 сателлит). *Смысл:* Высококалорийный сладкий картофель, запекание, пюре.
+  * `pack_zucchini`: `harvestcraft:zucchiniseedItem` (**Семя цукини / кабачка**) | База: 80 шт. (Вес: 75) + Бонус: 1–20 шт. (Вес: 1 сателлит). *Смысл:* Массовый огородный кабачок, икра, овощные рагу.
+  * `pack_wintersquash`: `harvestcraft:wintersquashseedItem` (**Семя зимней тыквы**) | База: 80 шт. (Вес: 75) + Бонус: 1–20 шт. (Вес: 1 сателлит). *Смысл:* Лёжкая мускатная тыква, запекание, тыквенные каши.
+  * `pack_asparagus`: `harvestcraft:asparagusseedItem` (**Семя спаржи**) | База: 80 шт. (Вес: 70) + Бонус: 1–20 шт. (Вес: 1 сателлит). *Смысл:* Деликатесные ранние побеги, ресторанные гарниры.
 * **Редкие бахчевые и технические (штучно):**
   * `AgriCraft:seedSugarcane` (**Семена сахарного тростника AgriCraft**) | Кол-во: 16–32 | Вес: 25 | `RandomAmount="true"`. *Смысл:* Сахар, органика, биомасса, бумага.
   * `minecraft:pumpkin_seeds` (**Семена тыквы**) | Кол-во: 16–32 | Вес: 35 | `RandomAmount="true"`
@@ -719,6 +725,17 @@ $$P_i = \frac{\text{Chance}_i}{\sum_{k=1}^M \text{Chance}_k}$$
   * `harvestcraft:pineappleseedItem` (**Семя ананаса**) | Кол-во: 4–8 | Вес: 55 | `RandomAmount="true"`. *Смысл:* Тропический фрукт для десертов, соков и пиццы.
   * `harvestcraft:seaweedseedItem` (**Семя морских водорослей**) | Кол-во: 4–8 | Вес: 50 | `RandomAmount="true"`. *Смысл:* Аквакультура для прибрежных гидропонных установок, суши, биомасса.
   * `harvestcraft:waterchestnutseedItem` (**Семя водяного ореха**) | Кол-во: 4–8 | Вес: 50 | `RandomAmount="true"`. *Смысл:* Водная прибрежная культура, азиатская кулинария.
+  * `harvestcraft:blackberryseedItem` (**Семя ежевики**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`. *Смысл:* Садовые кустарники, джемы, начинка для пирогов.
+  * `harvestcraft:blueberryseedItem` (**Семя голубики**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`. *Смысл:* Лесная/садовая ягода, кексы, панкейки, морсы.
+  * `harvestcraft:raspberryseedItem` (**Семя малины**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`. *Смысл:* Чай, малинное варенье, природное жаропонижающее.
+  * `harvestcraft:strawberryseedItem` (**Семя клубники**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`. *Смысл:* Десертная садовая ягода, мороженое, смузи, торты.
+  * `harvestcraft:grapeseedItem` (**Семя винограда**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`. *Смысл:* Виноделие, виноградный сок, изюм.
+  * `harvestcraft:cantaloupeseedItem` (**Семя канталупы**) | Кол-во: 4–8 | Вес: 55 | `RandomAmount="true"`. *Смысл:* Мускусная десертная дыня, фруктовые салаты.
+  * `harvestcraft:candleberryseedItem` (**Семя восковницы**) | Кол-во: 4–8 | Вес: 55 | `RandomAmount="true"`. *Смысл:* Из ягод варят растительный воск для свечей (альтернатива пчелиному воску).
+  * `harvestcraft:peanutseedItem` (**Семя арахиса**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`. *Смысл:* Арахисовая паста, снеки, кулинарное масло.
+  * `harvestcraft:bambooshootseedItem` (**Семя побегов бамбука**) | Кол-во: 4–8 | Вес: 55 | `RandomAmount="true"`. *Смысл:* Побеги в вок / азиатские блюда, строительный бамбук.
+  * `harvestcraft:cactusfruitseedItem` (**Семя кактусового плода**) | Кол-во: 4–8 | Вес: 50 | `RandomAmount="true"`. *Смысл:* Плод опунции/питахайя, засухоустойчивый сочный плод.
+  * `harvestcraft:rhubarbseedItem` (**Семя ревеня**) | Кол-во: 4–8 | Вес: 55 | `RandomAmount="true"`. *Смысл:* Кисло-сладкие черешки для начинки пирогов и киселей.
   * `harvestthenether:fleshrootseedItem` (**Семя мясокорня (Flesh Root)**) | Кол-во: 1 | Вес: 10 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Редчайшая экзотическая культура Незера (штучный образец).
   * `harvestthenether:marrowberryseedItem` (**Семя костяники (Marrow Berry)**) | Кол-во: 1 | Вес: 10 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Редчайшая экзотическая культура Незера (штучный образец).
   * `harvestthenether:glowflowerseedItem` (**Семя светоцвета (Glow Flower)**) | Кол-во: 1 | Вес: 10 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Редчайшая люминесцентная культура Незера (штучный образец).
@@ -763,6 +780,7 @@ $$P_i = \frac{\text{Chance}_i}{\sum_{k=1}^M \text{Chance}_k}$$
   * `BiblioCraft:item.tapeMeasure` (**Мерная лента**) | Кол-во: 1 | Вес: 15 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `BiblioCraft:item.StockroomCatalog` (**Складской каталог**) | Кол-во: 1 | Вес: 15 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `hbm:item.padlock_rusty` (**Ржавый замок**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
+  * `minecraft:web` (**Паутина**) | Кол-во: 1–2 | Вес: 8 | `RandomAmount="true"`. *Смысл:* Редкий атмосферный мусор в заброшенном мешке плотника.
 
 #### 🎨 [Meta 191] Сумка маляра
 * **Уровень:** 2 | **Rarity:** 1 | **Дроп:** `2 - 4` | `CombineTrashGroup="false"`
@@ -949,7 +967,7 @@ $$P_i = \frac{\text{Chance}_i}{\sum_{k=1}^M \text{Chance}_k}$$
   * `hbm:tile.machine_siren` (**Промышленная сирена NTM**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Настенное звуковое оповещение базы/шахты.
   * `hbm:item.siren_track` (**Звуковая дорожка сирены**) | Кол-во: 1 | Вес: 40 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Картридж звука тревоги для сирены.
   * `hbm:item.gun_flaregun` (**Сигнальный пистолет / Ракетница**) | Кол-во: 1 | Вес: 25 | `LimitedDropCount="1"` | `RandomAmount="false"`. *Смысл:* Подача световых сигналов бедствия и подсветка.
-  * `hbm:item.ammo_standard:50` (**Сигнальные ракеты**) | Кол-во: 8–16 | Вес: 40 | `RandomAmount="true"`
+  * `hbm:item.ammo_standard:50` (**Сигнальные ракеты**) | Кол-во: 2–4 | Вес: 35 | `RandomAmount="true"`
   * `OpenBlocks:flag` (**Семафорный сигнальный флаг**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`. *Смысл:* Визуальная маркировка путей и сигнальных постов.
   * `hbm:item.wire_fine:2900` (**Тонкий медный сигнальный провод**) | Кол-во: 8–16 | Вес: 75 | `RandomAmount="true"`
   * `minecraft:tripwire_hook` (**Крюк натяжного датчика / растяжки**) | Кол-во: 2–4 | Вес: 65 | `RandomAmount="true"`
@@ -957,9 +975,9 @@ $$P_i = \frac{\text{Chance}_i}{\sum_{k=1}^M \text{Chance}_k}$$
   * `OpenBlocks:generic:5` (**Прочный шнур / верёвка**) | Кол-во: 4–8 | Вес: 55 | `RandomAmount="true"`
   * `minecraft:redstone` (**Красная пыль**) | Кол-во: 8–16 | Вес: 75 | `RandomAmount="true"`
   * `minecraft:redstone_torch` (**Красный факел**) | Кол-во: 2–4 | Вес: 70 | `RandomAmount="true"`
-  * `minecraft:redstone_lamp` (**Лампа**) | Кол-во: 1–2 | Вес: 60 | `RandomAmount="true"`
+  * `minecraft:redstone_lamp` (**Лампа**) | Кол-во: 1–2 | Вес: 50 | `RandomAmount="true"`
   * `minecraft:repeater` (**Повторитель**) | Кол-во: 1–2 | Вес: 55 | `RandomAmount="true"`
-  * `minecraft:daylight_detector` (**Датчик дневного света**) | Кол-во: 1 | Вес: 50 | `RandomAmount="false"`
+  * `minecraft:daylight_detector` (**Датчик дневного света**) | Кол-во: 1 | Вес: 35 | `LimitedDropCount="1"` | `RandomAmount="false"`
   * `minecraft:lever` (**Рычаг включения тревоги**) | Кол-во: 1–2 | Вес: 65 | `RandomAmount="true"`
   * `hbm:item.fuse` (**Плавкий предохранитель цепи**) | Кол-во: 1–2 | Вес: 55 | `RandomAmount="true"`
   * `modernmarkings:item.chalk` (**Сигнальный мел**) | Кол-во: 3–6 | Вес: 70 | `RandomAmount="true"`
@@ -1326,11 +1344,11 @@ $$P_{\text{roll}} = \frac{\text{Weight}_{\text{bag}}}{\sum \text{Weight}_{\text{
 | **101** | Запечатанный патронный цинк | 2 | 1 | 1 (моно-навал) | false | 39 |
 | **102** | Оружейный кофр | 3 | 2 | 2–4 | false | 34 |
 | **130** | Котелок бродяги | 1 | 0 | 1–3 | false | 25 |
-| **131** | Полевой пищеблок | 2 | 1 | 2–3 | false | 22 |
+| **131** | Полевой пищеблок | 2 | 1 | 2–3 | false | 21 |
 | **132** | Офицерский провиант | 3 | 2 | 3–6 | false | 42 |
-| **160** | Складской мешок семян | 1 | 0 | 1 (база 81–100) | false | 47 |
+| **160** | Складской мешок семян | 1 | 0 | 1 (база 81–100) | false | 69 |
 | **161** | Садовый рюкзак | 2 | 1 | 3–5 | false | 35 |
-| **162** | Спецконтейнер семян | 3 | 2 | 2–3 | false | 22 |
+| **162** | Спецконтейнер семян | 3 | 2 | 2–3 | false | 33 |
 | **190** | Мешок плотника | 1 | 0 | 2–4 | false | 32 |
 | **191** | Сумка маляра | 2 | 1 | 2–4 | false | 40 |
 | **192** | Кейс проектировщика | 3 | 2 | 3–5 | false | 35 |
@@ -1345,7 +1363,7 @@ $$P_{\text{roll}} = \frac{\text{Weight}_{\text{bag}}}{\sum \text{Weight}_{\text{
 | **310** | Носимый аварийный запас | 3 | 3 | 2–4 | false | 18 |
 | **311** | Транспортный пенал изотопов | 3 | 3 | 1–3 | false | 18 |
 | **312** | Бортовой ремнабор | 3 | 2 | 2–4 | false | 28 |
-| **ИТОГО** | **33 группы** | — | — | — | — | **889 позиций** (901 в XML с 6 дефолтными группами) |
+| **ИТОГО** | **33 группы** | — | — | — | — | **921 позиция** (933 в XML с 6 дефолтными группами) |
 
 ---
 
