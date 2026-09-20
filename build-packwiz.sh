@@ -27,6 +27,10 @@ MODRINTH="$OUTPUT_DIR/NTNH-$VERSION-Modrinth.mrpack"
 NATIVE="$OUTPUT_DIR/NTNH-$VERSION-Native.zip"
 
 "$PACKWIZ_BIN" curseforge export -o "$CURSEFORGE"
+# The Modrinth package is distributed via GitHub Releases for Prism Launcher,
+# not uploaded directly to Modrinth.com. Keep domain restrictions disabled so
+# CurseForge CDN and Maven URLs remain downloads; Modrinth.com uploads only
+# accept cdn.modrinth.com, github.com, raw.githubusercontent.com, gitlab.com.
 "$PACKWIZ_BIN" modrinth export --restrictDomains=false -o "$MODRINTH"
 python3 dev/package-release.py \
   --curseforge "$CURSEFORGE" \

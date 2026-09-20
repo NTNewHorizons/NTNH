@@ -4,17 +4,13 @@
 
 ## Packwiz workflow
 
-The modpack is managed with [Packwiz](https://packwiz.infra.link/). Mod JARs are represented by `mods/*.pw.toml`, while `index.toml` tracks the remaining pack files.
-
 ```bash
-packwiz update --all
-packwiz refresh
-./build-packwiz.sh
+python dev/update-mods.py         # check for updates
+python dev/update-mods.py --apply # apply updates
+./build-packwiz.sh                # build CurseForge, Modrinth, Native to dist/
 ```
 
-Builds are written as `dist/NTNH-X.Y.Z-CurseForge.zip`, `dist/NTNH-X.Y.Z-Modrinth.mrpack`, and `dist/NTNH-X.Y.Z-Native.zip`, using the version from `pack.toml`. The Native archive contains the tracked raw game files without Packwiz metafiles. Run `packwiz refresh` after changing pack files so `index.toml` stays reproducible.
-
-To inspect available mod updates without changing the workspace, run `python dev/update-mods.py`. Use `python dev/update-mods.py --apply` to download all planned updates, replace the tracked JARs, update and re-pin their Packwiz metadata, refresh the index, and write the aggregated `MOD_UPDATE_CHANGELOG.md`. Direct artifacts without a supported release API are reported for manual review.
+Mods are pinned, so `packwiz update --all` skips them.
 
 **A hardcore quest-based modpack for Minecraft 1.7.10**, inspired by the legendary GTNH, but with a unique approach to progression and survival!
 

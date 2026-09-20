@@ -76,13 +76,32 @@ def prefix_curseforge_overrides(archive, sources_file):
         raise RuntimeError("Expected NTNH/GTNH overrides were not found: " + ", ".join(missing))
 
 
-def native_files():
+def native_files(sources_file):
+    sources = json.loads(sources_file.read_text())
+    seen = set()
+    for item in sources:
+        relative = Path(item["path"])
+        posix = relative.as_posix()
+        if posix in seen:
+            raise RuntimeError(f"Duplicate mod path in sources: {posix}")
+        seen.add(posix)
+        path = ROOT / relative
+        if not path.is_file():
+            raise RuntimeError(f"Expected mod file is missing: {posix}")
+        yield relative, path
+
     output = subprocess.check_output(["git", "ls-files", "-z"], cwd=ROOT)
     for raw_path in output.split(b"\0"):
         if not raw_path:
             continue
         relative = Path(raw_path.decode())
         posix = relative.as_posix()
+        if posix in seen:
+            continue
+        # Mod JARs are driven by packwiz-sources.json so renamed updates are
+        # included without requiring manual `git add` first.
+        if posix.startswith("mods/") and posix.endswith(".jar"):
+            continue
         if posix in NATIVE_EXCLUDES:
             continue
         if relative.parts[0] in {".github", "dev", "server"}:
@@ -94,12 +113,12 @@ def native_files():
             yield relative, path
 
 
-def build_native_archive(archive):
+def build_native_archive(archive, sources_file):
     archive.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(
         archive, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9, allowZip64=True
     ) as output:
-        for relative, path in native_files():
+        for relative, path in native_files(sources_file):
             info = zipfile.ZipInfo(relative.as_posix(), date_time=(1980, 1, 1, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o100644 << 16
@@ -160,7 +179,7 @@ def main():
             raise RuntimeError(f"Archive name does not contain pack version {version}: {archive.name}")
 
     prefix_curseforge_overrides(args.curseforge, args.sources)
-    build_native_archive(args.native)
+    build_native_archive(args.native, args.sources)
     validate_archives(args.curseforge, args.modrinth, args.native, args.sources)
 
 
