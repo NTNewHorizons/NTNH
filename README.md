@@ -2,6 +2,18 @@
 
 ---
 
+## Packwiz workflow
+
+The modpack is managed with [Packwiz](https://packwiz.infra.link/). Mod JARs are represented by `mods/*.pw.toml`, while `index.toml` tracks the remaining pack files.
+
+```bash
+packwiz update --all
+packwiz refresh
+./build-packwiz.sh
+```
+
+Builds are written as `dist/NTNH-X.Y.Z-CurseForge.zip` and `dist/NTNH-X.Y.Z-Modrinth.mrpack`, using the version from `pack.toml`. Run `packwiz refresh` after changing pack files so `index.toml` stays reproducible.
+
 **A hardcore quest-based modpack for Minecraft 1.7.10**, inspired by the legendary GTNH, but with a unique approach to progression and survival!
 
 > **🔥 300+ deep quests** will guide you from a stone axe to interstellar technologies, unlocking new technologies and possibilities at every step of the journey.
