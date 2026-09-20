@@ -2,16 +2,6 @@
 
 ---
 
-## Packwiz workflow
-
-```bash
-python dev/update-mods.py         # check for updates
-python dev/update-mods.py --apply # apply updates
-./build-packwiz.sh                # build CurseForge, Modrinth, Native to dist/
-```
-
-Mods are pinned, so `packwiz update --all` skips them.
-
 **A hardcore quest-based modpack for Minecraft 1.7.10**, inspired by the legendary GTNH, but with a unique approach to progression and survival!
 
 > **🔥 300+ deep quests** will guide you from a stone axe to interstellar technologies, unlocking new technologies and possibilities at every step of the journey.
