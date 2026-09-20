@@ -30,6 +30,7 @@
 * Compat between baubles and ntm (chargers and refueler now affect baubles and some ntm items can be put in baubles)
 * Compat between ae2 and ntm (chargers can now directly charge ae2 items)
 * Optimized background images in the loading screen and main menu, saving WHOLE 7MB
+* Removed Toggle Projection and Toggle Entity Interaction keybinds
 
 
 
