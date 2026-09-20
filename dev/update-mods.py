@@ -464,7 +464,9 @@ def apply_updates(updates, manual, sources, args):
             new_path = old_path.with_name(update["filename"])
             new_path.parent.mkdir(parents=True, exist_ok=True)
             staged_path, sha256 = staged[update["metafile"]]
-            os.replace(staged_path, new_path)
+            # shutil.move handles cross-device moves (/tmp vs repo on
+            # different filesystems); os.replace does not (Errno 18).
+            shutil.move(str(staged_path), str(new_path))
             if old_path != new_path:
                 old_paths.append(old_path)
 
