@@ -733,7 +733,7 @@ $$P_i = \frac{\text{Chance}_i}{\sum_{k=1}^M \text{Chance}_k}$$
   * `harvestcraft:sunflowerseedsItem` (**Семя подсолнуха**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`
   * `harvestcraft:soybeanseedItem` (**Семя сои**) | Кол-во: 8–16 | Вес: 70 | `RandomAmount="true"`. *Смысл:* Масло, соевое молоко, тофу.
   * `hbm:item.plant_item:2` (**Лист горчичной ивы NTM**) | Кол-во: 2–4 | Вес: 45 | `RandomAmount="true"`. *Смысл:* Компонент армейских стимуляторов и антидотов.
-  * `harvestcraft:sesameseedseedItem` (**Семя кунжута**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`. *Смысл:* Ценная масличная культура, кулинарное и техническое масло, посыпка для хлеба.
+  * `harvestcraft:sesameseedsseedItem` (**Семя кунжута**) | Кол-во: 4–8 | Вес: 65 | `RandomAmount="true"`. *Смысл:* Ценная масличная культура, кулинарное и техническое масло, посыпка для хлеба.
   * `harvestcraft:gingerseedItem` (**Семя имбиря**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`. *Смысл:* Пряный и лекарственный корень, тонизирующий имбирный чай, пряники.
   * `harvestcraft:curryleafseedItem` (**Семя листа карри**) | Кол-во: 4–8 | Вес: 55 | `RandomAmount="true"`. *Смысл:* Азиатская пряность для плова, мясных и овощных рагу.
   * `harvestcraft:spiceleafseedItem` (**Семя пряного листа**) | Кол-во: 4–8 | Вес: 60 | `RandomAmount="true"`. *Смысл:* Универсальная кулинарная специя Pam's HarvestCraft.
