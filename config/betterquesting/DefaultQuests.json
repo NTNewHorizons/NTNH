@@ -2759,7 +2759,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "§cWelcome to Nuclear Tech: New Horizons!§r\n\nPlease read the following information before starting out.\n\n§b1) Remember to Claim your base and Chunkload your reactors using Server Utilities (from the inventory).\n\n2) If shaders are glitching out try to use fancy textures.\n\n3) If you are encountering any rendering problems, try to scroll around in NEI.\n\n4) If you are playing with friends, make sure to invite them in your BetterQuesting Party as to share progression and rewards.\n",
+          "desc:8": "§cWelcome to Nuclear Tech: New Horizons!§r\n\nPlease read the following information before starting out.\n\n§b1) Quests ARE important, they explain a lot of things. Search the questbook before asking questions!\n\n2) While questbook tries to have as much info as possible, there is also a guidebook developing! A wiki that is always with you, can be opened by a keybind (Ctrl + G by default).\n\n3) Remember to Claim your base and Chunkload your reactors using Server Utilities (from the inventory).\n\n4) If shaders are glitching out try to use fancy textures.\n\n5) If you are encountering any rendering problems, try to scroll around in NEI.\n\n6) If you are playing with friends, make sure to invite them in your BetterQuesting Party as to share progression and rewards.\n",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -24126,7 +24126,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "Fluids are measured in §emB§r (§emilli-Buckets§r) and §eB§r (§eBuckets§r).\n\n1 bucket \u003d 1000mB.\n\nThere are two fluid systems that are currently barely incompatible between each other - §6Forge Fluids§r, which is the system that most of the mods are using, and §6NTM Fluids§r, which is the fluid system that is exclusive to NTM.\n\nThe §6Multi Fluid Identifier§r is used to select the type of NTM fluid one needs. Shift-Click while holding it to select a fluid.\n\nThose two systems are not compatible directly, however there is a solution called §3Bob Fluid Translator§r. This machine allows to convert NTM Fluids into Forge Fluids. Simply put an universal identifier at the top slot of the machine and then input the desired fluid.\n\nAE2 is only compatible with Forge Fluids.",
+          "desc:8": "Fluids are measured in §emB§r (§emilli-Buckets§r) and §eB§r (§eBuckets§r).\n\n1 bucket \u003d 1000mB.\n\nThere are two fluid systems - §6Forge Fluids§r, which is the system that most of the mods are using, and §6NTM Fluids§r, which is the fluid system that is exclusive to NTM.\n\nThe §6Multi Fluid Identifier§r is used to select the type of NTM fluid one needs. Shift-Click while holding it to select a fluid.\n\nThose two systems are fully compatible between each other! Feel free to automate your factory with AE2 and other mods!",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -24190,50 +24190,6 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
-        },
-        "1:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 1,
-          "index:3": 1,
-          "partialMatch:1": 1,
-          "requireOnlyOneItem:1": 0,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "bobfluidtranslator:universalTank",
-                "orig_meta:3": 0
-              }
-            }
-          },
-          "taskID:8": "bq_standard:optional_retrieval"
-        },
-        "2:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 1,
-          "index:3": 2,
-          "partialMatch:1": 1,
-          "requireOnlyOneItem:1": 0,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "bobfluidtranslator:universalTankLarge",
-                "orig_meta:3": 0
-              }
-            }
-          },
-          "taskID:8": "bq_standard:optional_retrieval"
         }
       }
     },
@@ -33807,7 +33763,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "This system is highly WIP (including this very quest), so do not expect it to be perfect.\n\nThis is an advanced mineral exploration technique for professional miners, providing very detailed information. The §3Geological Surveyor§r machine uses a controlled explosion to send seismic waves into the ground, and by analysing the echoes that come back, builds a map of underground ore densities.\n\nAs well as the Geological Surveyor itself, you will also need the following:\n\n1. At least 3 §3Geophones§r placed in a suitable arrangement around the Geological Surveyor. The geophones must be within 16 blocks of the Surveyor, but no closer than 8 blocks to the Surveyor or to each other.\n2. Supplies of §6Paper§r, §6Ink§r and §6Gunpowder§r in the appropriate slots of the Surveyor.\n3. A §6Button§r or other means of supplying a redstone signal to the Surveyor.\n\nThe Surveyor can operate in either §emonochrome§r or §ecolour§r mode, selected using the button beside the ink slots. Colour mode provides more information about types of ores, but is more expensive. §2Monochrome mode requires only black ink, whereas colour mode requires all four colours of ink.§r\n\nWhen all the necessary conditions are satisfied, the Surveyor wil show \"§6Ready§r\" in the GUI, and a single green light on the outside of the machine. The Surveyor is trigged by a redstone signal. The easiest way to deliver this is to put a button on the side of the machine.\n\n§lBe prepared for a loud noise.§r Do not be alarmed; the explosion is well contained and should not cause any damage.\n\nAnalysing the results and printing the map will take several seconds, during which time the machine will show a flashing §agreen light§r. When finished, two steady green lights will appear. The map can then be collected from the output slot of the GUI.\n\nA §cred light§r indicates an error condition; open the GUI to find out more information.",
+          "desc:8": "This is an advanced mineral exploration technique for professional miners, providing very detailed information. The §3Geological Surveyor§r machine uses a controlled explosion to send seismic waves into the ground, and by analysing the echoes that come back, builds a map of underground ore densities.\n\nAs well as the Geological Surveyor itself, you will also need the following:\n\n1. At least 3 §3Geophones§r placed in a suitable arrangement around the Geological Surveyor. The geophones must be within 16 blocks of the Surveyor, but no closer than 8 blocks to the Surveyor or to each other.\n2. Supplies of §6P§6aper, Ink§r and §6Gunpowder§r in the appropriate slots of the Surveyor.\n\nWhen all the necessary conditions are satisfied, the Surveyor wil show \"§6Ready§r\" in the GUI, and a single green light on the outside of the machine. The Surveyor is trigged by a redstone signal. The easiest way to deliver this is to put a button on the side of the machine.\n\n§lBe prepared for a loud noise.§r Do not be alarmed; the explosion is well contained and should not cause any damage.\n\nAnalysing the results and printing the map will take several seconds, during which time the machine will show a flashing §agreen light§r. When finished, two steady green lights will appear. Then the results can be seen at your World Map (default keybind is M).\n\nOn the left there is a button to toggle the geological survey map. Shift-clicking that button will open a selection menu, where you can select the ores that you want to be displayed.\n\nA §cred light§r indicates an error condition; open the GUI to find out more information.\n\n§2Note: there are several tiers of this machine, the higher the level is the more accurate the map is.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -37476,90 +37432,6 @@
     "384:10": {
       "preRequisites:9": {
         "0:10": {
-          "questIDHigh:4": -1922987534854173511,
-          "questIDLow:4": -8847684645341758176
-        }
-      },
-      "properties:10": {
-        "betterquesting:10": {
-          "autoClaim:1": 0,
-          "completion_animation:8": "default",
-          "completion_particle:8": "default",
-          "confetti_icon:10": {
-            "Count:3": 0,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:stick"
-          },
-          "countAsQuest:1": 1,
-          "desc:8": "While the §6Quest Book§r tries to give as much information as possible, it is not a full guide to all the content in the game.\n\nThat\u0027s what §6Guide Book§r is used for! Community-curated, constantly growing and \u0026q\u0026zawesome§r-looking!\n\n§2Note: this Guide Book can be opened via the keybind",
-          "globalShare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "guidenh:guide"
-          },
-          "isMain:1": 0,
-          "isSilent:1": 0,
-          "lockedProgress:1": 0,
-          "name:8": "Guide Book",
-          "notification_duration:5": -1.0,
-          "notification_effect:3": -1,
-          "notification_fade_in:5": -1.0,
-          "notification_fade_out:5": -1.0,
-          "notification_icon_offset_y:3": -2147483648,
-          "notification_icon_scale:5": -1.0,
-          "notification_pos_x:3": -2147483648,
-          "notification_pos_y:3": -2147483648,
-          "notification_show_icon:8": "default",
-          "notification_style:8": "default",
-          "notification_subtitle:8": "",
-          "notification_subtitle_scale:5": -1.0,
-          "notification_title:8": "",
-          "notification_title_scale:5": -1.0,
-          "particle_count:3": -1,
-          "questLogic:8": "AND",
-          "repeatTime:3": -1,
-          "repeat_relative:1": 1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "random.levelup",
-          "snd_update:8": "random.levelup",
-          "taskLogic:8": "AND",
-          "visibility:8": "NORMAL"
-        }
-      },
-      "questIDHigh:4": -6119174840009735131,
-      "questIDLow:4": -5395189488122666770,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "index:3": 0,
-          "taskID:8": "bq_standard:checkbox"
-        },
-        "1:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 1,
-          "index:3": 1,
-          "partialMatch:1": 1,
-          "requireOnlyOneItem:1": 0,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "guidenh:guide"
-            }
-          },
-          "taskID:8": "bq_standard:optional_retrieval"
-        }
-      }
-    },
-    "385:10": {
-      "preRequisites:9": {
-        "0:10": {
           "questIDHigh:4": 687731528747535133,
           "questIDLow:4": -8048369294660925893
         }
@@ -37637,7 +37509,7 @@
         }
       }
     },
-    "386:10": {
+    "385:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -37743,7 +37615,7 @@
         }
       }
     },
-    "387:10": {
+    "386:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -37827,7 +37699,7 @@
         }
       }
     },
-    "388:10": {
+    "387:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -37913,7 +37785,7 @@
         }
       }
     },
-    "389:10": {
+    "388:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 4706895528217954200,
@@ -38005,7 +37877,7 @@
         }
       }
     },
-    "390:10": {
+    "389:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -38110,7 +37982,7 @@
         }
       }
     },
-    "391:10": {
+    "390:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -38483,7 +38355,7 @@
         }
       }
     },
-    "392:10": {
+    "391:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 7275503112583856267,
@@ -38567,7 +38439,7 @@
         }
       }
     },
-    "393:10": {
+    "392:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -38665,7 +38537,7 @@
         }
       }
     },
-    "394:10": {
+    "393:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -38750,7 +38622,7 @@
         }
       }
     },
-    "395:10": {
+    "394:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -38834,7 +38706,7 @@
         }
       }
     },
-    "396:10": {
+    "395:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 3216936886722971351,
@@ -38926,7 +38798,7 @@
         }
       }
     },
-    "397:10": {
+    "396:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 654278939527758023,
@@ -38992,7 +38864,7 @@
         }
       }
     },
-    "398:10": {
+    "397:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2451141085209015770,
@@ -39096,7 +38968,7 @@
         }
       }
     },
-    "399:10": {
+    "398:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -39196,7 +39068,7 @@
         }
       }
     },
-    "400:10": {
+    "399:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -39276,7 +39148,7 @@
         }
       }
     },
-    "401:10": {
+    "400:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -39356,7 +39228,7 @@
         }
       }
     },
-    "402:10": {
+    "401:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -39436,7 +39308,7 @@
         }
       }
     },
-    "403:10": {
+    "402:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6787868727436752418,
@@ -39538,7 +39410,7 @@
         }
       }
     },
-    "404:10": {
+    "403:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -39618,7 +39490,7 @@
         }
       }
     },
-    "405:10": {
+    "404:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -4812035679007519365,
@@ -39734,7 +39606,7 @@
         }
       }
     },
-    "406:10": {
+    "405:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -39872,7 +39744,7 @@
         }
       }
     },
-    "407:10": {
+    "406:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1276458623384728704,
@@ -39952,7 +39824,7 @@
         }
       }
     },
-    "408:10": {
+    "407:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 4835946095099397745,
@@ -40036,7 +39908,7 @@
         }
       }
     },
-    "409:10": {
+    "408:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 5414272911860649617,
@@ -40134,7 +40006,7 @@
         }
       }
     },
-    "410:10": {
+    "409:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -40214,7 +40086,7 @@
         }
       }
     },
-    "411:10": {
+    "410:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 6191132467602672579,
@@ -40306,7 +40178,7 @@
         }
       }
     },
-    "412:10": {
+    "411:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -40392,7 +40264,7 @@
         }
       }
     },
-    "413:10": {
+    "412:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -40478,7 +40350,7 @@
         }
       }
     },
-    "414:10": {
+    "413:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 5414272911860649617,
@@ -40558,7 +40430,7 @@
         }
       }
     },
-    "415:10": {
+    "414:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 9020305243522809957,
@@ -42489,7 +42361,7 @@
         }
       }
     },
-    "416:10": {
+    "415:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -42583,7 +42455,7 @@
         }
       }
     },
-    "417:10": {
+    "416:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1480799430013988952,
@@ -45444,7 +45316,7 @@
           "questIDLow:4": -4961355786284448601,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 24,
+          "x:3": 12,
           "y:3": -348
         },
         "66:10": {
@@ -45588,7 +45460,7 @@
           "questIDLow:4": -8718371644389677501,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 0,
+          "x:3": -12,
           "y:3": -348
         },
         "84:10": {
@@ -45660,7 +45532,7 @@
           "questIDLow:4": -9105593870909274062,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -48,
+          "x:3": -36,
           "y:3": -348
         },
         "93:10": {
@@ -45688,14 +45560,6 @@
           "y:3": 648
         },
         "96:10": {
-          "questIDHigh:4": -6119174840009735131,
-          "questIDLow:4": -5395189488122666770,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -24,
-          "y:3": -348
-        },
-        "97:10": {
           "questIDHigh:4": -6005191642078558368,
           "questIDLow:4": -6890513112997641897,
           "sizeX:3": 48,
@@ -45703,7 +45567,7 @@
           "x:3": -24,
           "y:3": 828
         },
-        "98:10": {
+        "97:10": {
           "questIDHigh:4": -5491768019635254630,
           "questIDLow:4": -8438756366615056717,
           "sizeX:3": 24,
@@ -45711,7 +45575,7 @@
           "x:3": -180,
           "y:3": 756
         },
-        "99:10": {
+        "98:10": {
           "questIDHigh:4": -4528572839507964865,
           "questIDLow:4": -4808784924194840949,
           "sizeX:3": 24,
@@ -45719,7 +45583,7 @@
           "x:3": -48,
           "y:3": -60
         },
-        "100:10": {
+        "99:10": {
           "questIDHigh:4": -4012655372573785034,
           "questIDLow:4": -8808127576427151803,
           "sizeX:3": 24,
@@ -45727,7 +45591,7 @@
           "x:3": -60,
           "y:3": 300
         },
-        "101:10": {
+        "100:10": {
           "questIDHigh:4": -3894422327576932604,
           "questIDLow:4": -8870866079077399040,
           "sizeX:3": 24,
@@ -45735,7 +45599,7 @@
           "x:3": -60,
           "y:3": 12
         },
-        "102:10": {
+        "101:10": {
           "questIDHigh:4": -3543687055803659602,
           "questIDLow:4": -6798996681743515122,
           "sizeX:3": 24,
@@ -47796,14 +47660,6 @@
           "y:3": 84
         },
         "7:10": {
-          "questIDHigh:4": -6119174840009735131,
-          "questIDLow:4": -5395189488122666770,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -60,
-          "y:3": -12
-        },
-        "8:10": {
           "questIDHigh:4": -4155868891706668172,
           "questIDLow:4": -5069944341791301115,
           "sizeX:3": 24,

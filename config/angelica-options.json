@@ -2,7 +2,8 @@
   "quality": {
     "grass_quality": "DEFAULT",
     "use_celeritas_smooth_lighting": true,
-    "texture_filter_mode": "ANISOTROPIC"
+    "texture_filter_mode": "ANISOTROPIC",
+    "texel_sampling": "LINEAR"
   },
   "advanced": {
     "vsync_mode": "OFF",
@@ -24,11 +25,21 @@
     "animate_only_visible_textures": true,
     "use_entity_culling": true,
     "section_gated_tesr_culling": true,
-    "use_fog_occlusion": false,
+    "use_fog_occlusion": true,
     "use_block_face_culling": true,
     "use_compact_vertex_format": true,
     "translucency_sorting": true,
     "use_render_pass_optimization": true,
     "cpu_render_ahead_limit": 0
+  },
+  "reducer": {
+    "enabled": true,
+    "unfocused_fps_limit": 10,
+    "unfocused_volume": 100,
+    "minimized_volume": 100,
+    "idle_timeout_minutes": 5,
+    "idle_fps_limit": 30,
+    "idle_volume": 100,
+    "limit_menu_frame_rate": true
   }
 }

@@ -55,6 +55,11 @@
 * Added fishing handler to NEI
 * Added new barrel recipes and upgrades
 * Backported modern wither spawning behavior
+* Water splash effects
+* Сustom fonts support on MacOS
+* Hex Text and other Font Mod Compat System
+* Make Controllers colorable
+* Added command autocompletion/suggestions
 
 
 
@@ -103,6 +108,15 @@
 * Fixed wireless level terminal bauble navigation
 * Fixed single-fluid cell contents tooltip
 * Fixed a **long-standing** issue with shadow distortion / self-shadowing (dark spots) on large machines
+* Fixed issues with Schematica
+* DH: Fix shaderpack fading
+* Fixed cloud elevation setting
+* Fixed microblock transparency in the hotbar
+* Fixed borking modded mobs with broken eyes
+* Fixed chunk NBT corruption during concurrent saves
+* Fixed duplicate players on reconnect
+* Various major and minor bug fixes
+* Fixed Annihilation Plane crash when loading Forge Multipart cable buses
 
 
 
@@ -118,7 +132,7 @@
 * Compat between ae2 and ntm (chargers can now directly charge ae2 items)
 * Optimized background images in the loading screen and main menu, saving WHOLE 7MB
 * Removed Toggle Projection and Toggle Entity Interaction keybinds
-* Updated russian and ukrainian localization
+* Updated russian, japanese and ukrainian localizations
 * The cargo elevator can now be controlled using RoR, allowing the platform to stop at certain heights
 * Updated the pepperbox textures
   * The wood now looks more like wood and less like plastic
@@ -199,6 +213,10 @@
   * The ICF, all endgame recipes that used to use bismuth tubes and the particle accelerator now use CMB tubes
 * Hungry mob variant behaviour change/fix
 * Updateed trophy pedestal model and texture
+* Optimize resource reload
+* More Cloud Optimizations
+* Reduce resource pack manifest memory usage
+* Reduce memory allocation pressure
 
 
 
