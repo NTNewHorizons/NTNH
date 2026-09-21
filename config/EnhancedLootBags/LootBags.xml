@@ -108,6 +108,7 @@
         <Loot Identifier="med12_digamma_diagnostic" ItemName="hbm:item.digamma_diagnostic" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="med12_pill_red" ItemName="hbm:item.pill_red" Amount="1" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="med12_syringe_awesome" ItemName="hbm:item.syringe_awesome" Amount="1" NBTTag="" Chance="10" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="med12_bolt_lead" ItemName="hbm:item.bolt:8200" Amount="8" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="40" GroupName="enhancedlootbags.group.40" Rarity="0" MinItems="1" MaxItems="2" CombineTrashGroup="false">
         <Loot Identifier="sec40_pin" ItemName="hbm:item.pin" Amount="6" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -172,6 +173,7 @@
         <Loot Identifier="sec41_sifter" ItemName="hbm:item.weapon_mod_special:27" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sec41_motor" ItemName="hbm:item.motor" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sec41_bolt_steel" ItemName="hbm:item.bolt:30" Amount="8" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sec41_plate_stainless" ItemName="hbm:item.plate_stainless" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="42" GroupName="enhancedlootbags.group.42" Rarity="2" MinItems="3" MaxItems="5" CombineTrashGroup="false">
         <Loot Identifier="sec42_wrench_archineer" ItemName="hbm:item.wrench_archineer" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
@@ -204,6 +206,10 @@
         <Loot Identifier="sec42_pads_rubber" ItemName="hbm:item.pads_rubber" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sec42_fuse" ItemName="hbm:item.fuse" Amount="8" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sec42_bolt_steel" ItemName="hbm:item.bolt:30" Amount="8" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sec42_plate_stainless" ItemName="hbm:item.plate_stainless" Amount="6" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sec42_plate_polymer" ItemName="hbm:item.plate_polymer" Amount="4" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sec42_bolt_durasteel" ItemName="hbm:item.bolt:33" Amount="12" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="sec42_bolt_tungsten" ItemName="hbm:item.bolt:7400" Amount="8" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="70" GroupName="enhancedlootbags.group.70" Rarity="0" MinItems="2" MaxItems="3" CombineTrashGroup="false">
         <Loot Identifier="el70_wire_copper" ItemName="hbm:item.wire_fine:2900" Amount="12" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -295,6 +301,7 @@
         <Loot Identifier="el72_atomic_clock" ItemName="hbm:item.circuit:21" Amount="1" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="el72_pr_framewire_red" ItemName="ProjRed|Transmission:projectred.transmission.framewire:0" Amount="16" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="el72_pr_framecable_bundled" ItemName="ProjRed|Transmission:projectred.transmission.framewire:17" Amount="8" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="el72_plate_polymer" ItemName="hbm:item.plate_polymer" Amount="4" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="100" GroupName="enhancedlootbags.group.100" Rarity="0" MinItems="2" MaxItems="3" CombineTrashGroup="false">
         <Loot Identifier="wp100_paper" ItemName="minecraft:paper" Amount="4" NBTTag="" Chance="85" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -676,6 +683,7 @@
         <Loot Identifier="cr190_catalog" ItemName="BiblioCraft:item.StockroomCatalog" Amount="1" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="cr190_padlock_rusty" ItemName="hbm:item.padlock_rusty" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="cr190_web" ItemName="minecraft:web" Amount="2" NBTTag="" Chance="8" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr190_plate_iron" ItemName="hbm:item.plate_iron" Amount="4" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="191" GroupName="enhancedlootbags.group.191" Rarity="1" MinItems="2" MaxItems="4" CombineTrashGroup="false">
         <Loot Identifier="cr191_dye_ef_white" ItemName="etfuturum:dye:0" Amount="32" NBTTag="" Chance="85" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -840,6 +848,7 @@
         <Loot Identifier="geo222_sulfur" ItemName="hbm:item.sulfur" Amount="16" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="geo222_niter" ItemName="hbm:item.niter" Amount="16" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="geo222_redstone" ItemName="minecraft:redstone" Amount="16" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="geo222_bolt_durasteel" ItemName="hbm:item.bolt:33" Amount="12" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="250" GroupName="enhancedlootbags.group.250" Rarity="0" MinItems="2" MaxItems="4" CombineTrashGroup="false">
         <Loot Identifier="sig250_rf_sender" ItemName="hbm:tile.radio_torch_sender" Amount="1" NBTTag="" Chance="45" ItemGroup="sig_radio" LimitedDropCount="1" RandomAmount="false"/>
@@ -964,6 +973,9 @@
         <Loot Identifier="ch281_asbestos" ItemName="hbm:item.ingot_asbestos" Amount="4" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="ch281_solid_fuel" ItemName="hbm:item.solid_fuel" Amount="8" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="ch281_solid_presto" ItemName="hbm:item.solid_fuel_presto" Amount="4" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ch281_plate_stainless" ItemName="hbm:item.plate_stainless" Amount="4" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ch281_plate_polymer" ItemName="hbm:item.plate_polymer" Amount="6" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ch281_bolt_lead" ItemName="hbm:item.bolt:8200" Amount="8" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="310" GroupName="enhancedlootbags.group.310" Rarity="3" MinItems="2" MaxItems="4" CombineTrashGroup="false">
         <Loot Identifier="sp310_atmo_scanner" ItemName="hbm:item.atmosphere_scanner" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
@@ -1079,6 +1091,7 @@
         <Loot Identifier="sp312_ae2_net_tool" ItemName="appliedenergistics2:item.ToolNetworkTool" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sp312_betterp2p_card" ItemName="betterp2p:advanced_memory_card" Amount="1" NBTTag="{gui:3b,selectedIndex:0}" Chance="20" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sp312_ae2_adv_net_tool" ItemName="appliedenergistics2:item.ToolAdvancedNetworkTool" Amount="1" NBTTag="" Chance="10" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sp312_bolt_tungsten" ItemName="hbm:item.bolt:7400" Amount="8" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
 </LootGroups>
 
