@@ -61,6 +61,8 @@
 * Make Controllers colorable
 * Added command autocompletion/suggestions
 * Region preview on world load
+* Patpatpat
+* Home glyphids :3
 
 
 
