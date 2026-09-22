@@ -55,11 +55,12 @@
 * Added fishing handler to NEI
 * Added new barrel recipes and upgrades
 * Backported modern wither spawning behavior
-* Water splash effects
+* Water splash effects and waves
 * Сustom fonts support on MacOS
 * Hex Text and other Font Mod Compat System
 * Make Controllers colorable
 * Added command autocompletion/suggestions
+* Region preview on world load
 
 
 
