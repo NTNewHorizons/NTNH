@@ -1,6 +1,18 @@
 hash-format = "sha256"
 
 [[files]]
+file = "OpenComputersMod-1.12.61-GTNH-52-libjnlua52-linux-x86_64.so"
+hash = "578cad3ba97ca68238c9751e4dd0b56ba243b47ef3d8b9b6ec979c5021b74724"
+
+[[files]]
+file = "OpenComputersMod-1.12.61-GTNH-53-libjnlua53-linux-x86_64.so"
+hash = "0c465ec610d1b5e52ee4e8a98e6e2332a0357bea346ebb00422436188e185733"
+
+[[files]]
+file = "OpenComputersMod-1.12.61-GTNH-54-libjnlua54-linux-x86_64.so"
+hash = "a099f7ffc58421fc1d8f6b1d3655073b12d96c3bcee2bf31ab0735b26c506fb6"
+
+[[files]]
 file = "config/AE2Stuff/readme.txt"
 hash = "0267af34c1928a0ff3a23a40546dbd457eea83726cb4a8cb96ac9340fe9343f0"
 
@@ -939,6 +951,10 @@ hash = "9a0258c21efadae4700b0d117ad3c15af314b411c22660a071a68de9d9b121f7"
 [[files]]
 file = "config/PTRModelLib.cfg"
 hash = "e94a78b826775f16193c83dd65cb92884c3e3db6991d6ccbbf9380f7ae556233"
+
+[[files]]
+file = "config/PatPat/patpat.cfg"
+hash = "62227bdaee781e08b91112a3a4ce36c9835d0108248333421c5e852dfc44e4ca"
 
 [[files]]
 file = "config/ProjectBlue.cfg"
@@ -5334,7 +5350,7 @@ hash = "e290389fda718b234cefac253d4732410faa03d9bcc08f712a7df18b7574aa9e"
 
 [[files]]
 file = "config/hbm.cfg"
-hash = "1691b4e51bea06751a475f9ab847aece0074fc2fdf101ad4bd535c221ee4b09a"
+hash = "cddd101b36510384139c6878ecde99176396b22ef4799e2129ec62687de24382"
 
 [[files]]
 file = "config/hbmConfig/hbmClient.json"
@@ -5370,7 +5386,7 @@ hash = "cc4408b8a923089c537bbe30ca3ae4fcb1ec1ea0d6d5228364f6fd0404f64adb"
 
 [[files]]
 file = "config/hodgepodgeEarly.properties"
-hash = "5967e02ca54f1da0ea13086113428643751fdc90a2ee8a6472749f7a7219f490"
+hash = "69e5cd998bf72592fedd23f15a24eb7d8c153bd34413d4722d2cf93955fa991e"
 
 [[files]]
 file = "config/hud.txt"
@@ -5378,7 +5394,7 @@ hash = "1348eec186334206ca201fcbfb414812c4e4da16d8a6c8918249455dc7338f25"
 
 [[files]]
 file = "config/iChunUtil.cfg"
-hash = "9b7f92de15bff0e2857c3eddbf6179a75824f70900c03048649407b87fd2b286"
+hash = "06ee35eb3b89aebf7df6c44444a02a65987f81edb01aa1bb913ef80fd6fc62cb"
 
 [[files]]
 file = "config/iChunUtil_KeyBinds.cfg"
@@ -5566,7 +5582,7 @@ hash = "e02d356177d3acc2f5d56b49139faf3553e85734bb7cbc2b7e4d58f543714306"
 
 [[files]]
 file = "config/shaders.properties"
-hash = "206888222715dc0f08bd5ca602a499c9b381282100566ac16780c9f649970387"
+hash = "fc4de2bc7510b9df9113f11bd2696c3ca570fbc376801d6c88654a2e2758338a"
 
 [[files]]
 file = "config/shadersfixer/mixins.cfg"
@@ -5598,11 +5614,15 @@ hash = "34af924625faf749153f0108a20e40c8bfc2392680d1423410fae6ac27cc0b04"
 
 [[files]]
 file = "config/splash.properties"
-hash = "e6487f30d38fffd81f040cd85432ee305466901b10a80e70174290f7d81117ff"
+hash = "fb3a32651c59e436b76d8f9df75713da22a89354d7a17a2dc584a817dea004a0"
 
 [[files]]
 file = "config/structurelib.cfg"
 hash = "b35cf607dc4818f141e17147a0a3cd9a63f6510789f1468e97ed2b3a9f7e665f"
+
+[[files]]
+file = "config/tebreaker/tebreaker.cfg"
+hash = "d8ff7e864c4f16bf24ec1d1716ffd038056f7cadae894f7af88f102c98728bb1"
 
 [[files]]
 file = "config/txloader/config.json"
@@ -7373,6 +7393,11 @@ hash = "b5d93414d72a51252decfc7c4fbe0293db6f6180cd671fd4db909c9111f76377"
 metafile = true
 
 [[files]]
+file = "mods/entity-render-distance-extender.pw.toml"
+hash = "8b787a3dfe45f4b95b38ea5ec52edb34ae56f7f5f8359c64c48a1c7d1b9e994e"
+metafile = true
+
+[[files]]
 file = "mods/et-futurum-requiem.pw.toml"
 hash = "177f5fdab9eb50987440dcee3a65d573e40278a61ec32862e7554a2d4d26e926"
 metafile = true
@@ -7693,6 +7718,11 @@ hash = "703800574619c1d45ca9746c6554a8e4044083c8d387470684d09df25c49adbe"
 metafile = true
 
 [[files]]
+file = "mods/patpat-nh.pw.toml"
+hash = "8e9bf4fc988960369c3e05d74e04cb0994925fd70a1ada2dbc0653cebfa8f2c9"
+metafile = true
+
+[[files]]
 file = "mods/projectblue.pw.toml"
 hash = "259905d7a15a52a795af00577f18df3823579cb3bd71ae81c8f65298d3e6ad14"
 metafile = true
@@ -7736,15 +7766,6 @@ metafile = true
 file = "mods/serverutilities.pw.toml"
 hash = "a07236058b6df25f3210040ec85f69e398bbb1035ea7b55f926b15f0eaf4fcf4"
 metafile = true
-
-[[files]]
-file = "mods/shader-fixer.pw.toml"
-hash = "9531d86e47a9f44b12dce8d014b5b22296e1d3a8f2ea5543bf70d717b5e4e6af"
-metafile = true
-
-[[files]]
-file = "mods/shaderfixer-5.5-FINAL.jar.disabled"
-hash = "b772a8651196e5e788b9ef7e0c439703647fa25cc34f25b14d27673807b465a7"
 
 [[files]]
 file = "mods/slime-void-library.pw.toml"
@@ -7794,6 +7815,11 @@ metafile = true
 [[files]]
 file = "mods/structurelib.pw.toml"
 hash = "5165c6b5cef76fb93b10be300cb7773be8120e713bb7a412e7201959203a4907"
+metafile = true
+
+[[files]]
+file = "mods/tile-entity-breaker.pw.toml"
+hash = "3d8c0c37e3c881ffffb159dccd29cc7b0f07759d5f60fbf971f0ba56a9492d21"
 metafile = true
 
 [[files]]
