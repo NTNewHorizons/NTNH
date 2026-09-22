@@ -1,37 +1,13 @@
-filename = 'Tile Entity Breaker 1.2.1.jar'
-name = 'Tile Entity Breaker'
-side = ''
-x-prismlauncher-loaders = [ 'forge' ]
-x-prismlauncher-mc-versions = [ '1.7.10' ]
-x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'Tile Entity Breaker 1.2.1'
+name = "Tile Entity Breaker 1.2.1"
+filename = "Tile Entity Breaker 1.2.1.jar"
+side = "client"
+pin = true
 
 [download]
-hash = '2ccda15ef48e75d6cdc2576f21e8b8d37b612470'
-hash-format = 'sha1'
-mode = 'metadata:curseforge'
-url = ''
+hash-format = "sha256"
+hash = "5830200a531ac28e1e4cf5d24d6f121fe2baa3b4e5bd632465a88324ee3537bc"
+url = "https://edge.forgecdn.net/files/7941/207/Tile%20Entity%20Breaker%201.2.1.jar"
 
 [update.curseforge]
 file-id = 7941207
 project-id = 1332581
-
-[[x-prismlauncher-dependencies]]
-addonId = '826970'
-type = 'REQUIRED'
-
-[[x-prismlauncher-dependencies]]
-addonId = '1095442'
-type = 'OPTIONAL'
-
-[[x-prismlauncher-dependencies]]
-addonId = '232919'
-type = 'OPTIONAL'
-
-[[x-prismlauncher-dependencies]]
-addonId = '441392'
-type = 'OPTIONAL'
-
-[[x-prismlauncher-dependencies]]
-addonId = '223628'
-type = 'OPTIONAL'
