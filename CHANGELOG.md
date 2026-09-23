@@ -62,7 +62,8 @@
 * Added command autocompletion/suggestions
 * Region preview on world load
 * Patpatpat
-* Home glyphids :3
+* Pet glyphids :3
+  * The biggest feature of this update
 
 
 
@@ -220,6 +221,7 @@
 * More Cloud Optimizations
 * Reduce resource pack manifest memory usage
 * Reduce memory allocation pressure
+* Reduced the amount of food found in dungeons
 
 
 
