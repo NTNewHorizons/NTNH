@@ -63,7 +63,7 @@
         <Loot Identifier="med11_powder_calcium" ItemName="hbm:item.powder_calcium" Amount="8" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="med11_filter_coal" ItemName="hbm:item.filter_coal" Amount="3" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="med11_antidote" ItemName="hbm:item.syringe_antidote" Amount="2" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="med11_filter_mono" ItemName="hbm:item.gas_mask_filter_mono" Amount="1" NBTTag="" Chance="1" ItemGroup="med_mono_mask" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="med11_filter_mono" ItemName="hbm:item.gas_mask_filter_mono" Amount="1" NBTTag="" Chance="1" ItemGroup="med_mono_mask" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="med11_pads_rubber" ItemName="hbm:item.pads_rubber" Amount="4" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="med11_med_bag" ItemName="hbm:item.med_bag" Amount="1" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="med11_medx" ItemName="hbm:item.syringe_metal_medx" Amount="2" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -114,7 +114,7 @@
         <Loot Identifier="sec40_pin" ItemName="hbm:item.pin" Amount="6" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sec40_wrench" ItemName="OpenBlocks:wrench" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sec40_pads_rubber" ItemName="hbm:item.pads_rubber" Amount="4" NBTTag="" Chance="90" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="sec40_padlock_rusty" ItemName="hbm:item.padlock_rusty" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="2" RandomAmount="false"/>
+        <Loot Identifier="sec40_padlock_rusty" ItemName="hbm:item.padlock_rusty" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="sec40_key" ItemName="hbm:item.key" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="sec40_plastic_bag" ItemName="hbm:item.plastic_bag" Amount="2" NBTTag="" Chance="70" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sec40_screwdriver" ItemName="hbm:item.screwdriver" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
@@ -152,7 +152,7 @@
         <Loot Identifier="sec41_wd40" ItemName="hbm:item.wd40" Amount="1" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sec41_ducttape" ItemName="hbm:item.ducttape" Amount="2" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sec41_sponge" ItemName="OpenBlocks:spongeonastick" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sec41_padlock" ItemName="hbm:item.padlock" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="2" RandomAmount="false"/>
+        <Loot Identifier="sec41_padlock" ItemName="hbm:item.padlock" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="sec41_key_kit" ItemName="hbm:item.key_kit" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sec41_key_fake" ItemName="hbm:item.key_fake" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sec41_mirror_tool" ItemName="hbm:item.mirror_tool" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
@@ -388,9 +388,9 @@
         <Loot Identifier="wp102_rocket_he" ItemName="hbm:item.ammo_standard:60" Amount="2" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="wp102_rocket_heat" ItemName="hbm:item.ammo_standard:61" Amount="2" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="wp102_rocket_inc" ItemName="hbm:item.ammo_standard:63" Amount="2" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp102_b75" ItemName="hbm:item.ammo_standard:38" Amount="8" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp102_b75_exp" ItemName="hbm:item.ammo_standard:40" Amount="6" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="wp102_b75_inc" ItemName="hbm:item.ammo_standard:39" Amount="6" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="wp102_b75" ItemName="hbm:item.ammo_standard:40" Amount="8" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="wp102_b75_exp" ItemName="hbm:item.ammo_standard:42" Amount="6" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="wp102_b75_inc" ItemName="hbm:item.ammo_standard:41" Amount="6" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="wp102_ammo_762_du" ItemName="hbm:item.ammo_standard:34" Amount="16" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="wp102_coil_tungsten" ItemName="hbm:item.ammo_standard:73" Amount="8" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="wp102_coil_uranium" ItemName="hbm:item.ammo_standard:74" Amount="6" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -686,11 +686,11 @@
         <Loot Identifier="cr190_crayon_yellow" ItemName="hbm:item.crayon:11" Amount="6" NBTTag="" Chance="13" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr190_crayon_white" ItemName="hbm:item.crayon:15" Amount="6" NBTTag="" Chance="13" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr190_drawer_tape" ItemName="StorageDrawers:tape" Amount="1" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr190_drawer_lock" ItemName="StorageDrawers:upgradeLock" Amount="2" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr190_drawer_up_iron" ItemName="StorageDrawers:upgrade:2" Amount="1" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr190_drawer_up_gold" ItemName="StorageDrawers:upgrade:3" Amount="1" NBTTag="" Chance="12" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr190_drawer_up_void" ItemName="StorageDrawers:upgradeVoid" Amount="1" NBTTag="" Chance="10" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr190_wood_structure" ItemName="hbm:tile.wood_structure" Amount="8" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr190_drawer_lock" ItemName="StorageDrawers:upgradeLock" Amount="2" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="cr190_drawer_up_iron" ItemName="StorageDrawers:upgrade:2" Amount="1" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="cr190_drawer_up_gold" ItemName="StorageDrawers:upgrade:3" Amount="1" NBTTag="" Chance="12" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="cr190_drawer_up_void" ItemName="StorageDrawers:upgradeVoid" Amount="1" NBTTag="" Chance="10" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="cr190_sawdust" ItemName="hbm:item.powder_sawdust" Amount="8" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr190_resin" ItemName="hbm:item.ball_resin" Amount="4" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr190_crook" ItemName="exnihilo:crook" Amount="1" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="cr190_carp_button" ItemName="CarpentersBlocks:blockCarpentersButton" Amount="4" NBTTag="" Chance="20" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -818,12 +818,12 @@
         <Loot Identifier="cr192_arch_chisel" ItemName="ArchitectureCraft:chisel" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="cr192_glowbrush" ItemName="ArchitectureCraft:glowbrush" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="cr192_spray" ItemName="ProjectBlue:emptySprayCan" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="cr192_sawbench" ItemName="ArchitectureCraft:sawbench" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="cr192_blueprints" ItemName="hbm:item.blueprints" Amount="2" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr192_dye_gray" ItemName="minecraft:dye:8" Amount="12" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr192_dye_pink" ItemName="minecraft:dye:9" Amount="12" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr192_dye_lime" ItemName="minecraft:dye:10" Amount="12" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr192_dye_cyan" ItemName="minecraft:dye:12" Amount="12" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="cr192_dye_purple" ItemName="minecraft:dye:13" Amount="12" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr192_dye_cyan" ItemName="minecraft:dye:6" Amount="12" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="cr192_dye_purple" ItemName="minecraft:dye:5" Amount="12" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr192_dye_orange" ItemName="minecraft:dye:14" Amount="12" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="cr192_heightmap" ItemName="OpenBlocks:heightMap" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="cr192_plan" ItemName="ProjRed|Expansion:projectred.expansion.plan" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
@@ -915,7 +915,7 @@
         <Loot Identifier="geo222_goggles" ItemName="hbm:item.goggles" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="geo222_no9" ItemName="hbm:item.no9" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="geo222_gas_mask_mono" ItemName="hbm:item.gas_mask_mono" Amount="1" NBTTag="" Chance="45" ItemGroup="geo_mono_mask" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="geo222_gas_filter_mono" ItemName="hbm:item.gas_mask_filter_mono" Amount="1" NBTTag="" Chance="1" ItemGroup="geo_mono_mask" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="geo222_gas_filter_mono" ItemName="hbm:item.gas_mask_filter_mono" Amount="1" NBTTag="" Chance="1" ItemGroup="geo_mono_mask" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="geo222_defuser" ItemName="hbm:item.defuser" Amount="1" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="geo222_padlock" ItemName="hbm:item.padlock_reinforced" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="geo222_key" ItemName="hbm:item.key" Amount="2" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -929,7 +929,7 @@
         <Loot Identifier="sig250_rf_sender" ItemName="hbm:tile.radio_torch_sender" Amount="1" NBTTag="" Chance="45" ItemGroup="sig_radio" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sig250_rf_receiver" ItemName="hbm:tile.radio_torch_receiver" Amount="1" NBTTag="" Chance="1" ItemGroup="sig_radio" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sig250_siren" ItemName="hbm:tile.machine_siren" Amount="1" NBTTag="" Chance="35" ItemGroup="sig_siren" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sig250_siren_track" ItemName="hbm:item.siren_track" Amount="1" NBTTag="" Chance="1" ItemGroup="sig_siren" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="sig250_siren_track" ItemName="hbm:item.siren_track" Amount="1" NBTTag="" Chance="1" ItemGroup="sig_siren" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sig250_flaregun" ItemName="hbm:item.gun_flaregun" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sig250_flare_ammo" ItemName="hbm:item.ammo_standard:50" Amount="4" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sig250_flag" ItemName="OpenBlocks:flag" Amount="4" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -949,7 +949,7 @@
         <Loot Identifier="sig250_paper" ItemName="minecraft:paper" Amount="8" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sig250_book" ItemName="minecraft:book" Amount="1" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="sig250_compass" ItemName="minecraft:compass" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="sig250_padlock" ItemName="hbm:item.padlock" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
+        <Loot Identifier="sig250_padlock" ItemName="hbm:item.padlock" Amount="1" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="sig250_battery" ItemName="hbm:item.battery_pack:0" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
         <Loot Identifier="sig250_circuit_tube" ItemName="hbm:item.circuit:0" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="sig250_comparator" ItemName="minecraft:comparator" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
@@ -1044,8 +1044,7 @@
         <Loot Identifier="ch280_dye_chem_white" ItemName="hbm:item.chemical_dye:15" Amount="8" NBTTag="" Chance="2" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="ch280_mortar" ItemName="harvestcraft:mortarandpestleItem" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="ch280_siphon" ItemName="hbm:item.siphon" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="ch280_chem_set_boron" ItemName="hbm:item.chemistry_set_boron" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="ch280_pipe_copper" ItemName="hbm:item.pipe:1300" Amount="4" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="ch280_pipe_copper" ItemName="hbm:item.pipe:2900" Amount="4" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="ch280_powder_copper" ItemName="hbm:item.powder_copper" Amount="6" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="ch280_powder_lead" ItemName="hbm:item.powder_lead" Amount="6" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="ch280_filter_mono" ItemName="hbm:item.gas_mask_filter_mono" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="0" RandomAmount="false"/>
@@ -1056,7 +1055,7 @@
         <Loot Identifier="ch281_siphon" ItemName="hbm:item.siphon" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="ch281_acetylene_torch" ItemName="hbm:item.acetylene_torch" Amount="1" NBTTag="{68:8000,39:16000}" Chance="8" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="ch281_mask_mono" ItemName="hbm:item.gas_mask_mono" Amount="1" NBTTag="" Chance="40" ItemGroup="ch_mono_mask" LimitedDropCount="1" RandomAmount="false"/>
-        <Loot Identifier="ch281_mask_filter" ItemName="hbm:item.gas_mask_filter_mono" Amount="1" NBTTag="" Chance="1" ItemGroup="ch_mono_mask" LimitedDropCount="0" RandomAmount="false"/>
+        <Loot Identifier="ch281_mask_filter" ItemName="hbm:item.gas_mask_filter_mono" Amount="1" NBTTag="" Chance="1" ItemGroup="ch_mono_mask" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="ch281_filter_coal" ItemName="hbm:item.filter_coal" Amount="2" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="ch281_catalytic" ItemName="hbm:item.catalytic_converter" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="1" RandomAmount="false"/>
         <Loot Identifier="ch281_canister_empty" ItemName="hbm:item.canister_empty" Amount="2" NBTTag="" Chance="40" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
