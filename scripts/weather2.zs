@@ -15,14 +15,14 @@ recipes.remove(<weather2:WeatherMachine>);
 // 1. Wind Vane (LV1 - Early meteorology)
 recipes.addShaped(<weather2:WindVane>, [
     [null, <ore:plateIron>, <ore:plateIron>],
-    [null, <ore:stickSteel>, null],
+    [null, <minecraft:iron_bars>, null],
     [null, <ore:plateIron>, null]
 ]);
 
 // 2. Anemometer (LV1 - Wind velocity cups)
 recipes.addShaped(<weather2:Anemometer>, [
-    [<ore:plateIron>, <ore:stickSteel>, <ore:plateIron>],
-    [null, <ore:stickSteel>, null],
+    [<ore:plateIron>, <minecraft:iron_bars>, <ore:plateIron>],
+    [null, <minecraft:iron_bars>, null],
     [<ore:plateSteel>, <ore:dustRedstone>, <ore:plateSteel>]
 ]);
 
