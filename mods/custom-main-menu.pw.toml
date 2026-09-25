@@ -1,9 +1,16 @@
-name = "custommainmenu-1.14.1"
+name = "Custom-Main-Menu"
 filename = "custommainmenu-1.14.1.jar"
 side = "client"
 pin = true
 
 [download]
+url = "https://github.com/NTNewHorizons/Custom-Main-Menu/releases/download/1.14.1/custommainmenu-1.14.1.jar"
 hash-format = "sha256"
-hash = "a278b87bfa482f6e9dadfe879ae8b6fc18752fe288d786057ea72dbaab124fff"
-url = "https://github.com/GTNewHorizons/Custom-Main-Menu/releases/download/1.14.1/custommainmenu-1.14.1.jar"
+hash = "3dc3cf022894d35ce2ed0f73dfa89c951ed1780d9f5acd86c966250ca06b4411"
+
+[update]
+[update.github]
+branch = "master"
+regex = "^custommainmenu-[0-9.]+\\.jar$"
+slug = "NTNewHorizons/Custom-Main-Menu"
+tag = "1.14.1"
