@@ -17,7 +17,7 @@ on:
         description: 'Release type'
         required: true
         type: choice
-        default: release
+        default: latest
         options:
           - release
           - prerelease
@@ -40,10 +40,28 @@ jobs:
     name: Build and publish packages
     runs-on: ubuntu-24.04
     steps:
+      # release-published events always build from main and use fully
+      # default settings, regardless of what the human typed when
+      # publishing the release (tag, title, target branch, etc.) - that
+      # release object is only used as a trigger button.
+      - name: Determine target branch
+        id: target
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_BRANCH: ${{ github.event_name == 'workflow_dispatch' && inputs.branch || '' }}
+          REF_NAME: ${{ github.ref_name }}
+        run: |
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            BRANCH="${INPUT_BRANCH:-$REF_NAME}"
+          else
+            BRANCH="main"
+          fi
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: ${{ (github.event_name == 'workflow_dispatch' && inputs.branch != '') && inputs.branch || github.ref }}
+          ref: ${{ steps.target.outputs.branch }}
           fetch-depth: 0
           lfs: true
 
@@ -66,43 +84,29 @@ jobs:
         id: release_info
         env:
           EVENT_NAME: ${{ github.event_name }}
-          INPUT_BRANCH: ${{ github.event_name == 'workflow_dispatch' && inputs.branch || '' }}
           INPUT_RELEASE_NAME: ${{ github.event_name == 'workflow_dispatch' && inputs.release_name || '' }}
           INPUT_RELEASE_TYPE: ${{ github.event_name == 'workflow_dispatch' && inputs.release_type || '' }}
-          REF_NAME: ${{ github.ref_name }}
-          EVENT_RELEASE_TAG: ${{ github.event.release.tag_name }}
-          EVENT_RELEASE_NAME: ${{ github.event.release.name }}
-          EVENT_RELEASE_TARGET: ${{ github.event.release.target_commitish }}
           VERSION: ${{ steps.version.outputs.version }}
         run: |
           if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
-            # Fallback to the pack.toml version when no custom name is given
             TAG="${INPUT_RELEASE_NAME:-$VERSION}"
-            TITLE="${INPUT_RELEASE_NAME:-$VERSION}"
-            TARGET="${INPUT_BRANCH:-$REF_NAME}"
-
-            if git ls-remote --exit-code --tags origin "refs/tags/$TAG" >/dev/null 2>&1; then
-              echo "Release tag $TAG already exists" >&2
-              exit 1
-            fi
-
-            case "$INPUT_RELEASE_TYPE" in
-              prerelease) EXTRA_FLAG="--prerelease" ;;
-              latest) EXTRA_FLAG="--latest" ;;
-              *) EXTRA_FLAG="" ;;
-            esac
+            RELEASE_TYPE="${INPUT_RELEASE_TYPE:-latest}"
           else
-            # Triggered by a manually published GitHub release: attach
-            # built assets to the release that already exists.
-            TAG="$EVENT_RELEASE_TAG"
-            TITLE="$EVENT_RELEASE_NAME"
-            TARGET="$EVENT_RELEASE_TARGET"
-            EXTRA_FLAG=""
+            # release-published events fall back to fully default settings:
+            # tag/title come from pack.toml, marked as the latest release.
+            TAG="$VERSION"
+            RELEASE_TYPE="latest"
           fi
+          TITLE="$TAG"
+
+          case "$RELEASE_TYPE" in
+            prerelease) EXTRA_FLAG="--prerelease" ;;
+            latest) EXTRA_FLAG="--latest" ;;
+            *) EXTRA_FLAG="" ;;
+          esac
 
           echo "tag=$TAG" >> "$GITHUB_OUTPUT"
           echo "title=$TITLE" >> "$GITHUB_OUTPUT"
-          echo "target=$TARGET" >> "$GITHUB_OUTPUT"
           echo "extra_flag=$EXTRA_FLAG" >> "$GITHUB_OUTPUT"
 
       - name: Set up Go
@@ -134,32 +138,36 @@ jobs:
             dist/NTNH-${{ steps.version.outputs.version }}-Native.zip
           if-no-files-found: error
 
+      # Use the default GITHUB_TOKEN rather than a PAT for the actual
+      # release operations. GitHub does not start new workflow runs for
+      # events produced by GITHUB_TOKEN, so this create/delete step will
+      # NOT itself re-trigger this workflow's `release: published` handler,
+      # which avoids an infinite create -> publish -> create loop.
+      - name: Delete old release if it already exists
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ steps.release_info.outputs.tag }}
+        run: gh release delete --yes "$TAG"
+        continue-on-error: true
+
       - name: Publish GitHub release
         env:
-          GH_TOKEN: ${{ secrets.UNIVERSAL_FINE }}
-          EVENT_NAME: ${{ github.event_name }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VERSION: ${{ steps.version.outputs.version }}
           TAG: ${{ steps.release_info.outputs.tag }}
           TITLE: ${{ steps.release_info.outputs.title }}
-          TARGET: ${{ steps.release_info.outputs.target }}
+          TARGET: ${{ steps.target.outputs.branch }}
           EXTRA_FLAG: ${{ steps.release_info.outputs.extra_flag }}
         run: |
-          git config user.name "Bufka2011"
-          git config user.email "bufka.bulanov@gmail.com"
-
           FILES=(
             "dist/NTNH-$VERSION-CurseForge.zip"
             "dist/NTNH-$VERSION-Modrinth.mrpack"
             "dist/NTNH-$VERSION-Native.zip"
           )
 
-          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
-            gh release create "$TAG" \
-              "${FILES[@]}" \
-              --target "$TARGET" \
-              --title "$TITLE" \
-              --notes-file CHANGELOG.md \
-              $EXTRA_FLAG
-          else
-            gh release upload "$TAG" "${FILES[@]}" --clobber
-          fi
+          gh release create "$TAG" \
+            "${FILES[@]}" \
+            --target "$TARGET" \
+            --title "$TITLE" \
+            --notes-file CHANGELOG.md \
+            $EXTRA_FLAG
