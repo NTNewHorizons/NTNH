@@ -9,7 +9,7 @@ on:
         type: string
         default: ''
       release_name:
-        description: 'Name/tag for the release (leave empty to use the version from pack.toml)'
+        description: 'Name for the release (leave empty to use the version from pack.toml). Spaces are fine here; the git tag will have them replaced with hyphens.'
         required: false
         type: string
         default: ''
@@ -89,15 +89,21 @@ jobs:
           VERSION: ${{ steps.version.outputs.version }}
         run: |
           if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
-            TAG="${INPUT_RELEASE_NAME:-$VERSION}"
+            TITLE="${INPUT_RELEASE_NAME:-$VERSION}"
             RELEASE_TYPE="${INPUT_RELEASE_TYPE:-latest}"
           else
             # release-published events fall back to fully default settings:
             # tag/title come from pack.toml, marked as the latest release.
-            TAG="$VERSION"
+            TITLE="$VERSION"
             RELEASE_TYPE="latest"
           fi
-          TITLE="$TAG"
+
+          # Git tag/ref names can't contain spaces or ~ ^ : ? * [ \, so the
+          # tag is a sanitized version of the title (spaces -> hyphens,
+          # disallowed characters stripped) while the title keeps whatever
+          # the user typed, e.g. title "2.15.0 B-1" -> tag "2.15.0-B-1".
+          TAG="${TITLE// /-}"
+          TAG="$(echo "$TAG" | tr -d '~^:?*[\\')"
 
           case "$RELEASE_TYPE" in
             prerelease) EXTRA_FLAG="--prerelease" ;;
