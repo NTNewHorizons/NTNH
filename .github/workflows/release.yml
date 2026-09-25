@@ -2,6 +2,28 @@ name: Build and Publish Release
 
 on:
   workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to build the release from (defaults to the branch the workflow is run on)'
+        required: false
+        type: string
+        default: ''
+      release_name:
+        description: 'Name/tag for the release (leave empty to use the version from pack.toml)'
+        required: false
+        type: string
+        default: ''
+      release_type:
+        description: 'Release type'
+        required: true
+        type: choice
+        default: release
+        options:
+          - release
+          - prerelease
+          - latest
+  release:
+    types: [published]
 
 concurrency:
   group: stable-release
@@ -21,6 +43,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          ref: ${{ (github.event_name == 'workflow_dispatch' && inputs.branch != '') && inputs.branch || github.ref }}
           fetch-depth: 0
           lfs: true
 
@@ -37,11 +60,50 @@ jobs:
             echo "Invalid release version in pack.toml: $VERSION" >&2
             exit 1
           fi
-          if git ls-remote --exit-code --tags origin "refs/tags/$VERSION" >/dev/null 2>&1; then
-            echo "Release tag $VERSION already exists" >&2
-            exit 1
-          fi
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Determine release metadata
+        id: release_info
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_BRANCH: ${{ github.event_name == 'workflow_dispatch' && inputs.branch || '' }}
+          INPUT_RELEASE_NAME: ${{ github.event_name == 'workflow_dispatch' && inputs.release_name || '' }}
+          INPUT_RELEASE_TYPE: ${{ github.event_name == 'workflow_dispatch' && inputs.release_type || '' }}
+          REF_NAME: ${{ github.ref_name }}
+          EVENT_RELEASE_TAG: ${{ github.event.release.tag_name }}
+          EVENT_RELEASE_NAME: ${{ github.event.release.name }}
+          EVENT_RELEASE_TARGET: ${{ github.event.release.target_commitish }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            # Fallback to the pack.toml version when no custom name is given
+            TAG="${INPUT_RELEASE_NAME:-$VERSION}"
+            TITLE="${INPUT_RELEASE_NAME:-$VERSION}"
+            TARGET="${INPUT_BRANCH:-$REF_NAME}"
+
+            if git ls-remote --exit-code --tags origin "refs/tags/$TAG" >/dev/null 2>&1; then
+              echo "Release tag $TAG already exists" >&2
+              exit 1
+            fi
+
+            case "$INPUT_RELEASE_TYPE" in
+              prerelease) EXTRA_FLAG="--prerelease" ;;
+              latest) EXTRA_FLAG="--latest" ;;
+              *) EXTRA_FLAG="" ;;
+            esac
+          else
+            # Triggered by a manually published GitHub release: attach
+            # built assets to the release that already exists.
+            TAG="$EVENT_RELEASE_TAG"
+            TITLE="$EVENT_RELEASE_NAME"
+            TARGET="$EVENT_RELEASE_TARGET"
+            EXTRA_FLAG=""
+          fi
+
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "title=$TITLE" >> "$GITHUB_OUTPUT"
+          echo "target=$TARGET" >> "$GITHUB_OUTPUT"
+          echo "extra_flag=$EXTRA_FLAG" >> "$GITHUB_OUTPUT"
 
       - name: Set up Go
         uses: actions/setup-go@v5
@@ -72,18 +134,32 @@ jobs:
             dist/NTNH-${{ steps.version.outputs.version }}-Native.zip
           if-no-files-found: error
 
-      - name: Publish latest GitHub release
+      - name: Publish GitHub release
         env:
           GH_TOKEN: ${{ secrets.UNIVERSAL_FINE }}
+          EVENT_NAME: ${{ github.event_name }}
           VERSION: ${{ steps.version.outputs.version }}
+          TAG: ${{ steps.release_info.outputs.tag }}
+          TITLE: ${{ steps.release_info.outputs.title }}
+          TARGET: ${{ steps.release_info.outputs.target }}
+          EXTRA_FLAG: ${{ steps.release_info.outputs.extra_flag }}
         run: |
           git config user.name "Bufka2011"
           git config user.email "bufka.bulanov@gmail.com"
-          gh release create "$VERSION" \
-            "dist/NTNH-$VERSION-CurseForge.zip" \
-            "dist/NTNH-$VERSION-Modrinth.mrpack" \
-            "dist/NTNH-$VERSION-Native.zip" \
-            --target "$GITHUB_SHA" \
-            --title "$VERSION" \
-            --notes-file CHANGELOG.md \
-            --latest
+
+          FILES=(
+            "dist/NTNH-$VERSION-CurseForge.zip"
+            "dist/NTNH-$VERSION-Modrinth.mrpack"
+            "dist/NTNH-$VERSION-Native.zip"
+          )
+
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            gh release create "$TAG" \
+              "${FILES[@]}" \
+              --target "$TARGET" \
+              --title "$TITLE" \
+              --notes-file CHANGELOG.md \
+              $EXTRA_FLAG
+          else
+            gh release upload "$TAG" "${FILES[@]}" --clobber
+          fi
