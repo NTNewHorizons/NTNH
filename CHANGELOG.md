@@ -12,6 +12,9 @@
     * Use universal fluid identifier or a fluid container to set the ID
     * Pippetes also work!
     * Containers can be refilled/emptiet too
+* Salt ore generation in Roofed Forests
+    * Salt is no longer restricted to HarvestCraft's own generator, which is disabled
+    * Now placed by CustomOreGen as a rare cloud deposit, roughly Y 16-48
 
 
 
@@ -46,6 +49,10 @@
     * Ore overlay can be toggled
     * Ore selection included
 * Added "High" effect caused by "spongeboy me bob i am overdosing on ketamine agagagaga"
+* Changed the CustomOreGen frequency and size slider range from 0-5 to 0.25-2.5
+    * Ore generation is now noticeably less prone to being cranked up past balance
+    * The lower bound no longer reaches 0, so an individual ore can no longer be switched off via the slider
+    * Global worldgen can still be disabled entirely with the Populate toggle
 
 
 

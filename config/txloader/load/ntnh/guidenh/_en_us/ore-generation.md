@@ -39,6 +39,7 @@ categories:
 | Niter | Desert / Desert M / DesertHills | &bCloud | &cRare | ~16 - 48 |
 | Quartz (AE2) | Deep Ocean / Ocean | &bCloud | &4Very Rare | ~16 - 48 |
 | Redstone | Birch Forest / Birch Forest Hills / Birch Forest Hills M / Birch Forest M; Flower Forest / Forest / ForestHills; Mesa / Mesa Plateau / Mesa Plateau F / Mesa Plateau F M / Mesa Plateau M; Savanna / Savanna M / Savanna Plateau / Savanna Plateau M | &bCloud | &eUncommon | ~0 - 32 |
+| Salt | Roofed Forest / Roofed Forest M | &bCloud | &cRare | ~16 - 48 |
 | Sulfur | Mesa / Mesa Plateau / Mesa Plateau F / Mesa Plateau F M / Mesa Plateau M; Swampland / Swampland M | &bCloud / &9StandardGen | &aCommon | ~10 - 50 |
 | Thorium | Savanna / Savanna M / Savanna Plateau / Savanna Plateau M | &bCloud | &eUncommon | ~0 - 40 |
 | Titanium | Desert / Desert M / DesertHills; Jungle / Jungle Edge / Jungle Edge M / Jungle Hills / Jungle M; Mesa / Mesa Plateau / Mesa Plateau F / Mesa Plateau F M / Mesa Plateau M | &bCloud | &cRare | ~0 - 40 |

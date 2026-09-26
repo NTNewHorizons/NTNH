@@ -13,12 +13,12 @@
         <OptionDisplayGroup name="groupGeneral" displayName="General" displayState="shown">
         </OptionDisplayGroup>
 
-        <!-- Controls overall frequency of ore deposits.  Range 0–5; default 2 -->
-        <OptionNumeric name="oreFreq" default="2" min="0" max="5" displayState="shown"
+        <!-- Controls overall frequency of ore deposits.  Range 0.25-2.5; default 2 -->
+        <OptionNumeric name="oreFreq" default="2" min="0.25" max="2.5" displayState="shown"
                        displayGroup="groupGeneral">
             </OptionNumeric>
-            <!-- Controls overall size of ore deposits.  Range 0–5; default 2 -->
-            <OptionNumeric name="oreSize" default="2" min="0" max="5" displayState="shown"
+            <!-- Controls overall size of ore deposits.  Range 0.25-2.5; default 2 -->
+            <OptionNumeric name="oreSize" default="2" min="0.25" max="2.5" displayState="shown"
                            displayGroup="groupGeneral">
                 </OptionNumeric>
 
@@ -548,6 +548,13 @@
                 <!-- === Roofed Forest === -->
                 <Cloud name="RoofedForest"
                        block="hbm:tile.ore_fluorite" inherits="PresetBiomeCloudMedium">
+                    <Biome name="Roofed Forest" />
+                    <Biome name="Roofed Forest M" />
+                </Cloud>
+
+                <!-- === SALT ORE: roofed forest only (HarvestCraft vanilla gen is disabled in harvestcraft.cfg) === -->
+                <Cloud name="SaltRoofedForest"
+                       block="harvestcraft:salt" inherits="PresetBiomeCloudMedium">
                     <Biome name="Roofed Forest" />
                     <Biome name="Roofed Forest M" />
                 </Cloud>
