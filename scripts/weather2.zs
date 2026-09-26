@@ -47,11 +47,11 @@ recipes.addShaped(<weather2:WeatherForecast>, [
     [<ore:plateTitanium>, <ore:plateTitanium>, <ore:plateTitanium>]
 ]);
 
-// 6. Weather Deflector (LV3 - High-tech repulsive electromagnetic field generator)
+// 6. Weather Deflector (LV4 - Endgame High-Tech Forcefield Generator)
 recipes.addShaped(<weather2:WeatherDeflector>, [
-    [<ore:plateTitanium>, <hbm:tile.tesla>, <ore:plateTitanium>],
-    [<ore:plateTitanium>, <hbm:item.circuit:8>, <ore:plateTitanium>],
-    [<ore:plateLead>, <ore:plateSteel>, <ore:plateLead>]
+    [<hbm:item.plate_combine_steel>, <hbm:tile.tesla>, <hbm:item.plate_combine_steel>],
+    [<hbm:item.coil_magnetized_tungsten>, <hbm:item.circuit:18>, <hbm:item.coil_magnetized_tungsten>],
+    [<hbm:item.plate_bismuth>, <hbm:item.magnetron>, <hbm:item.plate_bismuth>]
 ]);
 
 // 7. Weather Machine (LV4 - End-game planetary weather manipulator)
