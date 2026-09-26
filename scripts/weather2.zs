@@ -43,14 +43,14 @@ recipes.addShaped(<weather2:TornadoSiren>, [
 // 5. Weather Forecast (LV3 - Radar weather station)
 recipes.addShaped(<weather2:WeatherForecast>, [
     [<ore:plateTitanium>, <weather2:WindVane>, <ore:plateTitanium>],
-    [<ore:paneGlassColorless>, <hbm:item.circuit:4>, <weather2:Anemometer>],
+    [<ore:paneGlassColorless>, <hbm:item.circuit:8>, <weather2:Anemometer>],
     [<ore:plateTitanium>, <ore:plateTitanium>, <ore:plateTitanium>]
 ]);
 
 // 6. Weather Deflector (LV3 - High-tech repulsive electromagnetic field generator)
 recipes.addShaped(<weather2:WeatherDeflector>, [
     [<ore:plateTitanium>, <hbm:tile.tesla>, <ore:plateTitanium>],
-    [<ore:plateTitanium>, <hbm:item.circuit:4>, <ore:plateTitanium>],
+    [<ore:plateTitanium>, <hbm:item.circuit:8>, <ore:plateTitanium>],
     [<ore:plateLead>, <ore:plateSteel>, <ore:plateLead>]
 ]);
 
