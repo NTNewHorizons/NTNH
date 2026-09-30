@@ -30,6 +30,9 @@
   * The biggest feature of this update
 * Gmod-style main menu
 * NTNH Poem
+* New structures
+  * Camp (2 variants)
+  * Airplane
 
 
 
