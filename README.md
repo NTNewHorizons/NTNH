@@ -7,7 +7,7 @@ This is the main repository of NT:NH modpack repo
 
 <h2 style="text-align:center">🌟 Our Amazing Contributors 🌟</h2>
 
-<table><tr><td align="center"><a href="https://github.com/Bufka2011"><img src="https://avatars.githubusercontent.com/u/85364803?v=4" width="50" alt="Bufka2011" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>Bufka2011</b></sub><br/><span>3680 🏆</span></td>
+<table><tr><td align="center"><a href="https://github.com/Bufka2011"><img src="https://avatars.githubusercontent.com/u/85364803?v=4" width="50" alt="Bufka2011" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>Bufka2011</b></sub><br/><span>3743 🏆</span></td>
 <td align="center"><a href="https://github.com/BufkaSecond"><img src="https://avatars.githubusercontent.com/u/190631137?v=4" width="50" alt="BufkaSecond" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>BufkaSecond</b></sub><br/><span>438 🏆</span></td>
 <td align="center"><a href="https://github.com/AniviaFlome"><img src="https://avatars.githubusercontent.com/u/66728147?v=4" width="50" alt="AniviaFlome" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>AniviaFlome</b></sub><br/><span>92 🏆</span></td>
 <td align="center"><a href="https://github.com/THOMASS47"><img src="https://avatars.githubusercontent.com/u/63131669?v=4" width="50" alt="THOMASS47" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>THOMASS47</b></sub><br/><span>64 🏆</span></td>
@@ -40,7 +40,7 @@ This is the main repository of NT:NH modpack repo
           <br />
           <sub><b>Bufka2011</b></sub></a>
         <br />
-        <sub><b>448699 words</b></sub>
+        <sub><b>669913 words</b></sub>
       </td>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/BufkaSecond"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/16895253/medium/0b29547a406506ea79d4bbd68608d6ed.png" />
@@ -56,7 +56,7 @@ This is the main repository of NT:NH modpack repo
           <br />
           <sub><b>(GamerRabbit22)</b></sub></a>
         <br />
-        <sub><b>11076 words</b></sub>
+        <sub><b>11108 words</b></sub>
       </td>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/Nekrasov.V.O"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/16528063/medium/d4325642df047bb9793b41833b15fadd.png" />
@@ -334,6 +334,13 @@ This is the main repository of NT:NH modpack repo
         <sub><b>333 words</b></sub>
       </td>
       <td align="center" valign="top">
+        <a href="https://crowdin.com/profile/davidporras31"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17524820/medium/a43b83267853e0996a6ae9b0ff069ca2.jpeg" />
+          <br />
+          <sub><b>davidporras31</b></sub></a>
+        <br />
+        <sub><b>284 words</b></sub>
+      </td>
+      <td align="center" valign="top">
         <a href="https://crowdin.com/profile/Syks"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/15430690/medium/37828ce414bcd9335e2bcaa86c014930.jpeg" />
           <br />
           <sub><b>Sykhasamann</b></sub>
@@ -341,13 +348,6 @@ This is the main repository of NT:NH modpack repo
           <sub><b>(Syks)</b></sub></a>
         <br />
         <sub><b>275 words</b></sub>
-      </td>
-      <td align="center" valign="top">
-        <a href="https://crowdin.com/profile/davidporras31"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17524820/medium/a43b83267853e0996a6ae9b0ff069ca2.jpeg" />
-          <br />
-          <sub><b>davidporras31</b></sub></a>
-        <br />
-        <sub><b>274 words</b></sub>
       </td>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/nuuh2_0"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17830683/medium/c50d392dcc1334d8612fb7e53d81ed19_default.png" />
