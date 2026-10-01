@@ -33,6 +33,9 @@
 * New structures
   * Camp (2 variants)
   * Airplane
+* Full translate-ability of NTM (I18n)
+  * Can be contributed to at [Crowdin](https://crowdin.com/project/ntnh)
+  * More mods planned
 
 
 
