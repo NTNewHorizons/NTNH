@@ -34,6 +34,13 @@ jobs:
             --exclude='install/' \
             --exclude='README.md' \
             --exclude='Dockerfile' \
+            --exclude='install.sh' \
+            --exclude='install.bat' \
+            --exclude='install-packwiz.sh' \
+            --exclude='install-packwiz.bat' \
+            --exclude='update.sh' \
+            --exclude='update.bat' \
+            --exclude='docker-compose.yml' \
             --exclude='eula.txt' \
             --exclude='start.sh' \
             --exclude='start.bat' \
@@ -49,6 +56,9 @@ jobs:
             --exclude='SECURITY.md' \
             --exclude='.gitattributes' \
             --exclude='.gitignore' \
+            --exclude='index.toml' \
+            --exclude='.packwizignore' \
+            --exclude='packwiz-sources.json' \
             --exclude='knownkeys.txt' \
             --exclude='localconfig.cfg' \
             --exclude='oauthprofiles.json' \
@@ -57,6 +67,13 @@ jobs:
             "${{ github.workspace }}/" /tmp/server-repo/
 
           cd /tmp/server-repo
+          if [ -f pack.toml ]; then
+            cp "${{ github.workspace }}/server/packwiz-server.ignore" .packwizignore
+            go install github.com/packwiz/packwiz@ef87d964f8cbd52b3b13ea42453ef322290e2b9e
+            "$(go env GOPATH)/bin/packwiz" refresh
+          else
+            rm -f index.toml
+          fi
           git add -A
 
           if git diff --cached --quiet; then
