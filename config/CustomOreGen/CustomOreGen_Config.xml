@@ -12,12 +12,12 @@
         </OptionDisplayGroup>
 
         <!-- Balanced production frequencies -->
-        <OptionNumeric name="oreFreq" default="1" min="0" max="5" displayState="shown" displayGroup="groupGeneral">
+        <OptionNumeric name="oreFreq" default="1" min="0.25" max="3" displayState="shown" displayGroup="groupGeneral">
             <Description>A global multiplier for the frequency of all ore distributions.</Description>
             <DisplayName>Ore Frequency</DisplayName>
         </OptionNumeric>
 
-        <OptionNumeric name="oreSize" default="1" min="0" max="5" displayState="shown" displayGroup="groupGeneral">
+        <OptionNumeric name="oreSize" default="1" min="0.25" max="3" displayState="shown" displayGroup="groupGeneral">
             <Description>A global multiplier for the size of all ore distributions.</Description>
             <DisplayName>Ore Deposit Size</DisplayName>
         </OptionNumeric>

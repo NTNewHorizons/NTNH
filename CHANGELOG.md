@@ -84,6 +84,8 @@
 * Reduce memory allocation pressure
 * Reduced the amount of food found in dungeons
 * Electric Press remodel and retexture
+* Updated NEI info pages on ore generation
+* Removed thief mobs
 
 
 

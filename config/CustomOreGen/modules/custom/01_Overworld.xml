@@ -155,6 +155,22 @@
         <Biome name="Roofed Forest.*" />
     </Cloud>
 
+    <Cloud name="LapisForest"
+           block="minecraft:lapis_ore:0" inherits="PresetBiomeCloudVerySmall">
+        <Biome name="Forest.*" />
+        <Biome name="Roofed Forest.*" />
+    </Cloud>
+
+    <!-- Evaporite pans: Pam's salt ore collects in the humid rainforest basins.
+         Note: the correct block ID is harvestcraft:pamSalt. Both the old
+         monolithic config and COG's own PamsHarvestCraft.xml module use
+         "harvestcraft:salt", which does not exist in Pam's HarvestCraft
+         1.7.10Lb, so neither ever generated anything. -->
+    <Cloud name="SaltRoofedForest"
+           block="harvestcraft:pamSalt:0" inherits="PresetBiomeCloudMedium">
+        <Biome name="Roofed Forest.*" />
+    </Cloud>
+
     <!-- === TAIGA: radiogenic & asbestos deposits === -->
     <Cloud name="CloudVerySmallUraniumColdTaiga"
            block="hbm:tile.ore_uranium:0" inherits="PresetBiomeCloudVerySmall">
@@ -221,6 +237,11 @@
 
     <Cloud name="FluoriteOcean"
            block="hbm:tile.ore_fluorite:0" inherits="PresetBiomeCloudMedium">
+        <Biome name=".*Ocean.*" />
+    </Cloud>
+
+    <Cloud name="LapisOcean"
+           block="minecraft:lapis_ore:0" inherits="PresetBiomeCloudVerySmall">
         <Biome name=".*Ocean.*" />
     </Cloud>
 
