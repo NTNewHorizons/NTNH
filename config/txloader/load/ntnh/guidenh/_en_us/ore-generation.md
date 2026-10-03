@@ -11,7 +11,7 @@ categories:
 # &6Ore Generation Reference (v2.14.0)
 
 > [!NOTE]
-> This page lists all known ore generation rules for NT:NH v2.14.0, covering planetary bodies, the Overworld and the Nether.
+> This page lists all known ore generation rules for NT:NH v2.15.0, covering planetary bodies, the Overworld and the Nether.
 
 ---
 

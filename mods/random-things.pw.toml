@@ -1,0 +1,14 @@
+name = "RandomThings-2.7.11"
+filename = "RandomThings-2.7.11.jar"
+side = "both"
+pin = true
+
+[download]
+hash-format = "sha256"
+hash = "b2d197c3e2a1cd82ba58baa983903e07b61dee24cfaccbe7e722602ac7d2feb9"
+url = "https://github.com/GTNewHorizons/Random-Things/releases/download/2.7.11/RandomThings-2.7.11.jar"
+
+[update.github]
+slug = "GTNewHorizons/Random-Things"
+tag = "2.7.11"
+regex = "^RandomThings\\-.+\\.jar$"

@@ -1,0 +1,14 @@
+name = "angelica-2.2.16"
+filename = "angelica-2.2.16.jar"
+side = "both"
+pin = true
+
+[download]
+hash-format = "sha256"
+hash = "b0e3f11236f612a609cf1a9d22ed115c3245814c99d3fc0a219273d1646b5f24"
+url = "https://github.com/GTNewHorizons/Angelica/releases/download/2.2.16/angelica-2.2.16.jar"
+
+[update.github]
+slug = "GTNewHorizons/Angelica"
+tag = "2.2.16"
+regex = "^angelica\\-.+\\.jar$"

@@ -1,0 +1,14 @@
+name = "ntnhcore-1.3.0"
+filename = "ntnhcore-1.3.0.jar"
+side = "both"
+pin = true
+
+[download]
+hash-format = "sha256"
+hash = "3a20802f80fe5213fb052d43c4d3ec1ad533ad3d866fcfde28fe0cb6df1a081a"
+url = "https://github.com/NTNewHorizons/NTNHCore/releases/download/1.3.0/ntnhcore-1.3.0.jar"
+
+[update.github]
+slug = "NTNewHorizons/NTNHCore"
+tag = "1.3.0"
+regex = "^ntnhcore\\-.+\\.jar$"

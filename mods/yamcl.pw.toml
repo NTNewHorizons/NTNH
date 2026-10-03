@@ -1,0 +1,14 @@
+name = "YAMCore-0.7.5"
+filename = "YAMCore-0.7.5.jar"
+side = "both"
+pin = true
+
+[download]
+hash-format = "sha256"
+hash = "7ff29db5b66525f9b1fab6d52d25e4c9adfe12aec52f5aa425d152599edaf02b"
+url = "https://github.com/GTNewHorizons/Yamcl/releases/download/0.7.5/YAMCore-0.7.5.jar"
+
+[update.github]
+slug = "GTNewHorizons/Yamcl"
+tag = "0.7.5"
+regex = "^YAMCore\\-.+\\.jar$"

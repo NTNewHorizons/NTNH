@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "Fluids are measured in §emB§r (§emilli-Buckets§r) and §eB§r (§eBuckets§r).\n\n1 bucket \u003d 1000mB.\n\nThere are two fluid systems that are currently barely incompatible between each other - §6Forge Fluids§r, which is the system that most of the mods are using, and §6NTM Fluids§r, which is the fluid system that is exclusive to NTM.\n\nThe §6Multi Fluid Identifier§r is used to select the type of NTM fluid one needs. Shift-Click while holding it to select a fluid.\n\nThose two systems are not compatible directly, however there is a solution called §3Bob Fluid Translator§r. This machine allows to convert NTM Fluids into Forge Fluids. Simply put an universal identifier at the top slot of the machine and then input the desired fluid.\n\nAE2 is only compatible with Forge Fluids.",
+      "desc:8": "Fluids are measured in §emB§r (§emilli-Buckets§r) and §eB§r (§eBuckets§r).\n\n1 bucket \u003d 1000mB.\n\nThere are two fluid systems - §6Forge Fluids§r, which is the system that most of the mods are using, and §6NTM Fluids§r, which is the fluid system that is exclusive to NTM.\n\nThe §6Multi Fluid Identifier§r is used to select the type of NTM fluid one needs. Shift-Click while holding it to select a fluid.\n\nThose two systems are fully compatible between each other! Feel free to automate your factory with AE2 and other mods!",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -81,50 +81,6 @@
         }
       },
       "taskID:8": "bq_standard:retrieval"
-    },
-    "1:10": {
-      "autoConsume:1": 0,
-      "consume:1": 0,
-      "groupDetect:1": 0,
-      "ignoreNBT:1": 1,
-      "index:3": 1,
-      "partialMatch:1": 1,
-      "requireOnlyOneItem:1": 0,
-      "requiredItems:9": {
-        "0:10": {
-          "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
-          "id:8": "betterquesting:placeholder",
-          "tag:10": {
-            "orig_id:8": "bobfluidtranslator:universalTank",
-            "orig_meta:3": 0
-          }
-        }
-      },
-      "taskID:8": "bq_standard:optional_retrieval"
-    },
-    "2:10": {
-      "autoConsume:1": 0,
-      "consume:1": 0,
-      "groupDetect:1": 0,
-      "ignoreNBT:1": 1,
-      "index:3": 2,
-      "partialMatch:1": 1,
-      "requireOnlyOneItem:1": 0,
-      "requiredItems:9": {
-        "0:10": {
-          "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
-          "id:8": "betterquesting:placeholder",
-          "tag:10": {
-            "orig_id:8": "bobfluidtranslator:universalTankLarge",
-            "orig_meta:3": 0
-          }
-        }
-      },
-      "taskID:8": "bq_standard:optional_retrieval"
     }
   }
 }

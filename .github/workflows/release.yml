@@ -1,0 +1,89 @@
+name: Build and Publish Release
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: stable-release
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+env:
+  PACKWIZ_VERSION: ef87d964f8cbd52b3b13ea42453ef322290e2b9e
+
+jobs:
+  release:
+    name: Build and publish packages
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: true
+
+      - name: Pull Git LFS files
+        run: |
+          git lfs pull
+          git lfs fsck
+
+      - name: Read and validate version
+        id: version
+        run: |
+          VERSION=$(awk -F '"' '/^version = / { print $2; exit }' pack.toml)
+          if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "Invalid release version in pack.toml: $VERSION" >&2
+            exit 1
+          fi
+          if git ls-remote --exit-code --tags origin "refs/tags/$VERSION" >/dev/null 2>&1; then
+            echo "Release tag $VERSION already exists" >&2
+            exit 1
+          fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.25.x'
+
+      - name: Install Packwiz
+        run: go install github.com/packwiz/packwiz@${PACKWIZ_VERSION}
+
+      - name: Build release packages
+        run: ./build-packwiz.sh
+
+      - name: Verify package names
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          test -f "dist/NTNH-$VERSION-CurseForge.zip"
+          test -f "dist/NTNH-$VERSION-Modrinth.mrpack"
+          test -f "dist/NTNH-$VERSION-Native.zip"
+
+      - name: Upload workflow artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: NTNH-${{ steps.version.outputs.version }}
+          path: |
+            dist/NTNH-${{ steps.version.outputs.version }}-CurseForge.zip
+            dist/NTNH-${{ steps.version.outputs.version }}-Modrinth.mrpack
+            dist/NTNH-${{ steps.version.outputs.version }}-Native.zip
+          if-no-files-found: error
+
+      - name: Publish latest GitHub release
+        env:
+          GH_TOKEN: ${{ secrets.UNIVERSAL_FINE }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          git config user.name "Bufka2011"
+          git config user.email "bufka.bulanov@gmail.com"
+          gh release create "$VERSION" \
+            "dist/NTNH-$VERSION-CurseForge.zip" \
+            "dist/NTNH-$VERSION-Modrinth.mrpack" \
+            "dist/NTNH-$VERSION-Native.zip" \
+            --target "$GITHUB_SHA" \
+            --title "$VERSION" \
+            --notes-file CHANGELOG.md \
+            --latest
