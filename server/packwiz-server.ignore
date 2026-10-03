@@ -1,0 +1,51 @@
+# Repository and release files
+/.git/
+/.github/
+/.gitattributes
+/.gitignore
+/.packwizignore
+/CHANGELOG.md
+/Dockerfile
+/LICENSE
+/PACKWIZ.md
+/README.md
+/SECURITY.md
+/dev/
+/docker/
+/packwiz-sources.json
+/server/
+
+# Manual and Docker distribution files
+/docker-compose.yml
+/install.sh
+/install.bat
+/update.sh
+/update.bat
+/server-args.txt
+
+# Mod JARs use Packwiz metadata URLs instead of GitHub/LFS copies.
+/mods/*.jar
+/mods/*/*.jar
+
+# Runtime state
+/.ntnh-*/
+/.ntnh-version
+/.packwiz-installer/
+/packwiz-installer-bootstrap.jar
+/world/
+/world_nether/
+/world_the_end/
+/DIM*/
+/logs/
+/crash-reports/
+/backups/
+/data/
+/eula.txt
+/server.properties
+/ops.json
+/whitelist.json
+/banned-players.json
+/banned-ips.json
+/usercache.json
+/usernamecache.json
+/*.log

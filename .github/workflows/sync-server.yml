@@ -38,8 +38,11 @@ jobs:
             --exclude='start.bat' \
             --exclude='install.sh' \
             --exclude='install.bat' \
+            --exclude='install-packwiz.sh' \
+            --exclude='install-packwiz.bat' \
             --exclude='update.sh' \
             --exclude='update.bat' \
+            --exclude='docker-compose.yml' \
             --exclude='server-args.txt' \
             --exclude='.github/' \
             --exclude='CHANGELOG.md' \
@@ -48,8 +51,6 @@ jobs:
             --exclude='.gitattributes' \
             --exclude='.gitignore' \
             --exclude='.packwizignore' \
-            --exclude='*.pw.toml' \
-            --exclude='pack.toml' \
             --exclude='index.toml' \
             --exclude='packwiz-sources.json' \
             --exclude='MOD_UPDATE_CHANGELOG.md' \
@@ -59,6 +60,13 @@ jobs:
             "${{ github.workspace }}/" /tmp/server-repo/
 
           cd /tmp/server-repo
+          if [ -f pack.toml ]; then
+            cp "${{ github.workspace }}/server/packwiz-server.ignore" .packwizignore
+            go install github.com/packwiz/packwiz@ef87d964f8cbd52b3b13ea42453ef322290e2b9e
+            "$(go env GOPATH)/bin/packwiz" refresh
+          else
+            rm -f index.toml
+          fi
           git add -A
 
           if git diff --cached --quiet; then
@@ -121,10 +129,10 @@ jobs:
             > /tmp/release-body.md 2>/dev/null || true
 
           printf 'Auto-generated server distribution for NTNH release **%s**.\n\n' "$TAG" > /tmp/release-notes.md
-          printf '### Install\n' >> /tmp/release-notes.md
-          printf '```bash\ncurl -fsSL https://raw.githubusercontent.com/NTNewHorizons/NTNH-Server/main/install.sh | bash\n./start.sh\n```\n\n' >> /tmp/release-notes.md
-          printf 'Windows: download `install.bat` into a dedicated folder and run it, then `start.bat`.\n\n' >> /tmp/release-notes.md
-          printf '### Update\n```bash\n./update.sh\n```\nWindows: run `update.bat` (or `start.bat --update`).\n' >> /tmp/release-notes.md
+          printf '### Packwiz\n```bash\ncurl -fsSL https://raw.githubusercontent.com/NTNewHorizons/NTNH-Server/main/install-packwiz.sh | bash\n./start.sh\n```\n\n' >> /tmp/release-notes.md
+          printf '### Manual ZIP\n```bash\ncurl -fsSL https://raw.githubusercontent.com/NTNewHorizons/NTNH-Server/main/install.sh | bash\n./start.sh\n```\nWindows: use `install-packwiz.bat` or `install.bat`.\n\n' >> /tmp/release-notes.md
+          printf '### Docker\n```bash\ncurl -O https://raw.githubusercontent.com/NTNewHorizons/NTNH-Server/main/docker-compose.yml\ndocker compose up -d\n```\n\n' >> /tmp/release-notes.md
+          printf '### Update\nPackwiz: rerun the Packwiz install command.\n\nManual: run `./update.sh`; Windows: run `update.bat`.\n\nDocker: run `docker compose pull && docker compose up -d`.\n' >> /tmp/release-notes.md
           if [ -s /tmp/release-body.md ]; then
             printf '\n---\n\n' >> /tmp/release-notes.md
             cat /tmp/release-body.md >> /tmp/release-notes.md

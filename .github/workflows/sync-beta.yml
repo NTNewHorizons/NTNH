@@ -37,6 +37,13 @@ jobs:
             --exclude='eula.txt' \
             --exclude='start.sh' \
             --exclude='start.bat' \
+            --exclude='install.sh' \
+            --exclude='install.bat' \
+            --exclude='install-packwiz.sh' \
+            --exclude='install-packwiz.bat' \
+            --exclude='update.sh' \
+            --exclude='update.bat' \
+            --exclude='docker-compose.yml' \
             --exclude='server-args.txt' \
             --exclude='server.jar' \
             --exclude='minecraft_server.1.7.10.jar' \
@@ -50,8 +57,6 @@ jobs:
             --exclude='.gitattributes' \
             --exclude='.gitignore' \
             --exclude='.packwizignore' \
-            --exclude='*.pw.toml' \
-            --exclude='pack.toml' \
             --exclude='index.toml' \
             --exclude='packwiz-sources.json' \
             --exclude='MOD_UPDATE_CHANGELOG.md' \
@@ -65,6 +70,13 @@ jobs:
             "${{ github.workspace }}/" /tmp/server-repo/
 
           cd /tmp/server-repo
+          if [ -f pack.toml ]; then
+            cp "${{ github.workspace }}/server/packwiz-server.ignore" .packwizignore
+            go install github.com/packwiz/packwiz@ef87d964f8cbd52b3b13ea42453ef322290e2b9e
+            "$(go env GOPATH)/bin/packwiz" refresh
+          else
+            rm -f index.toml
+          fi
           git add -A
 
           if git diff --cached --quiet; then
