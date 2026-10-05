@@ -239,7 +239,7 @@ betterquesting.quest.JcBabPI8RzGGmai3SwlcLw.desc=§3Конвертер HE в RF�
 
 # Quest: Fluids
 betterquesting.quest.K-eTce6PTLGe1htaZlPiHg.name=Жидкости
-betterquesting.quest.K-eTce6PTLGe1htaZlPiHg.desc=Fluids are measured in §emB§r (§emilli-Buckets§r) and §eB§r (§eBuckets§r).%n%n1 bucket = 1000mB.%n%nThere are two fluid systems - §6Forge Fluids§r, which is the system that most of the mods are using, and §6NTM Fluids§r, which is the fluid system that is exclusive to NTM.%n%nThe §6Multi Fluid Identifier§r is used to select the type of NTM fluid one needs. Shift-Click while holding it to select a fluid.%n%nThose two systems are fully compatible between each other! Feel free to automate your factory with AE2 and other mods!
+betterquesting.quest.K-eTce6PTLGe1htaZlPiHg.desc=Жидкости измеряются в §emB§r (§emilli-Buckets§r) и §eB§r (§eBuckets§r).%n%n1 bucket = 1000mB.%n%nВ сборке есть две жидкостные системы - §6Forge Fluids§r, которая является системой, используемой большинством модов, и §6NTM Fluids§r, которая является жидкостной системой, эксклюзивной для NTM.%n%n§6Мульти-жидкостный идентификатор§r используется для выбора жидкости из NTM. Держите его в руке и нажмите Shift + Click, чтобы выбрать жидкость.%n%nЭти две системы полностью совместимы друг с другом! Не стесняйтесь автоматизировать ваш завод используя AE2 и другие моды!
 
 # Quest: Known Issues
 betterquesting.quest.MNH6qakfTrC7Jbky4i_Epw.name=Известные проблемы
@@ -796,7 +796,7 @@ betterquesting.quest.CYtQLn_VSx2QTnLEwpMGOw.name=Уран-238
 betterquesting.quest.CYtQLn_VSx2QTnLEwpMGOw.desc=§6Уран-238§r - это наиболее распространённый изотоп урана в игре. %n%nЭтот материал имеет множество применений, некоторые из которых: §6Ферроуран§r, МОКС топливо, боеприпасы из обеднённого урана, поглощающие пеллеты для §3Ватцз§r, а также может быть превращён в §6Шрабидий§r позже в §3Камере облучения§r.
 
 # Quest: Narrowband Emission Scanning Satellite
-betterquesting.quest.DMCygjIOSOav8ZBlUlqEvQ.name=Спутник узкополосного сканирования излучений
+betterquesting.quest.DMCygjIOSOav8ZBlUlqEvQ.name=Спутник-сканер узкополосного излучения
 betterquesting.quest.DMCygjIOSOav8ZBlUlqEvQ.desc=§3Спутник-сканер узкополосного излучения§r точно локализует определенные высокоэнергетические события в радиусе 250 м от точки. Это высокоточный аналог §3Спутнику-детектору широкополосного радиоизлучения§r с чувствительностью к нейтронному излучению от ядерных реакторов, высокоэнергетических частиц от термоядерных реакторов и ускорителей частиц, радиолокационных волн от наземных радаров и радиоволн от §3Наземных станций спутников§r с активным TX сигналом.%n%nВсе результаты хранятся внутри системы и доступны через §dРедстоун-по-радио§r. "esurvey" выполняет сканирование. "ecount" записывает значение результата в RX "egetinfo", за которым следует индекс, записывает в RX тип выброса. "egetposition" после индекса записывает координаты X/Z, разделенные точкой с запятой - на RX.%n%n§2События ограничены по времени. Запустите повторные сканирования за короткий промежуток времени, чтобы избежать пропуска кратковременных событий.
 
 # Quest: Orbital Precision Laser
@@ -817,7 +817,7 @@ betterquesting.quest.MFweFzQDQg2L-9X4_I8o-Q.desc=§6Штампы из Деша§
 
 # Quest: Chlorophyte
 betterquesting.quest.PszZViltQjCHNmKB7QJcfA.name=Хлорофит
-betterquesting.quest.PszZViltQjCHNmKB7QJcfA.desc=§6Хлорофит§r является продуктом термоядерного синтеза и используется в §3DFC§r и §6Digamma Particle§r.
+betterquesting.quest.PszZViltQjCHNmKB7QJcfA.desc=§6Хлорофит§r является продуктом термоядерного синтеза и используется в §3РТС§r и §6Дигамма частице§r.
 
 # Quest: High-Performance Solvent Bedrock Ore Processing
 betterquesting.quest.QusK-8T-TGmBWETwmxosJQ.name=Обработка бедроковой руды с использованием высокоэффективного растворителя
@@ -857,7 +857,7 @@ betterquesting.quest.iJiX7wxoSBmljc9tITqIqQ.desc=§6Технеций-99§r яв�
 
 # Quest: Helium-4
 betterquesting.quest.mPHQk4_mRqi6o2onNs9qgg.name=Гелий-4
-betterquesting.quest.mPHQk4_mRqi6o2onNs9qgg.desc=§bГелий-4§r является продуктом слияния и в основном используется в крафте §6Quantum Processing Units§r.
+betterquesting.quest.mPHQk4_mRqi6o2onNs9qgg.desc=§bГелий-4§r является продуктом термоядерного синтеза и в основном используется в создании §6Устройства квантовой обработки§r.
 
 # Quest: Houston, We Have a Signal
 betterquesting.quest.ocylWycmSd6r-mvYENYGEw.name=Хьюстон, у нас сигнал
@@ -1222,7 +1222,7 @@ betterquesting.quest.fbvQbC3JTKOtI2b8e3cB0A.name=§c§l§4§lТВОЮ МАТЬ, 
 betterquesting.quest.fbvQbC3JTKOtI2b8e3cB0A.desc=Лови, твоя награда
 
 # Quest: ICF Laser Turbocharger
-betterquesting.quest.hmwBFeuMQXiUrjE-WdD6-g.name=Лазерный турбоусилитель
+betterquesting.quest.hmwBFeuMQXiUrjE-WdD6-g.name=Турбоусилитель лазера ICF
 betterquesting.quest.hmwBFeuMQXiUrjE-WdD6-g.desc=§3ICF Laser Turbocharger§r можно разместить рядом с §3ICF Laser Capacitors§r что значительно увеличить мощность лазера и вы сможете использовать в §3ICF§r более качественное топливо.
 
 # Quest: Balls-O-Tron
@@ -1622,7 +1622,7 @@ betterquesting.quest.Z-RsAsrVRM2a3zWP5a0OsQ.desc=Липкий и прыгучи�
 
 # Quest: Balls-O-Tron
 betterquesting.quest.ZeBLQUsPS72HAxsrR9s_3g.name=Баллс-О-Трон
-betterquesting.quest.ZeBLQUsPS72HAxsrR9s_3g.desc=Balls-O-Tron второй босс NTM. Его можно призвать, использовав Серебряный ключ (создаваемый с помощью монеты Maskman) на круге Механиста, который находится в Храме Энаргита (Enargite), появляющемся в джунглях.
+betterquesting.quest.ZeBLQUsPS72HAxsrR9s_3g.desc=Баллс-О-Трон - второй босс NTM. Его можно призвать, использовав Серебряный ключ (создаваемый с помощью монеты Маскмена) на круге Механиста, который находится в Храме Энаргита, появляющемся в джунглях.
 
 # Quest: Time to Kill (Spiders)
 betterquesting.quest.ZpKjClvCTGe4ytw_Yu6mYQ.name=Время убивать (Паук)
@@ -1677,7 +1677,7 @@ betterquesting.quest.45ow6xFKTQ6GHVi3FG_dtQ.desc=[warnЭта книга зада
 
 # Quest: Modpack information
 betterquesting.quest.5VAtBoWDTLmFNrWxLbn9IA.name=Информация о модпаке
-betterquesting.quest.5VAtBoWDTLmFNrWxLbn9IA.desc=§cWelcome to Nuclear Tech: New Horizons!§r%n%nPlease read the following information before starting out.%n%n§b1) Quests ARE important, they explain a lot of things. Search the questbook before asking questions!%n%n2) While questbook tries to have as much info as possible, there is also a guidebook developing! A wiki that is always with you, can be opened by a keybind (Ctrl + G by default).%n%n3) Remember to Claim your base and Chunkload your reactors using Server Utilities (from the inventory).%n%n4) If shaders are glitching out try to use fancy textures.%n%n5) If you are encountering any rendering problems, try to scroll around in NEI.%n%n6) If you are playing with friends, make sure to invite them in your BetterQuesting Party as to share progression and rewards.%n
+betterquesting.quest.5VAtBoWDTLmFNrWxLbn9IA.desc=§cДобро пожаловать в Nuclear Tech: New Horizons!§r%n%nПрочтите следующую информацию перед началом игры.%n%n§b1) Задания ОЧЕНЬ важны, они объясняют много вещей. Ищите что вам нужно в квестбуке перед тем как задать вопрос! %n%n2) Хотя квестбук пытается получить как можно больше информации, также есть гайдбук! Вики, которая всегда с вами, могут быть открыты с помощью клавиши (Ctrl + G по умолчанию).%n%n3) Не забудьте забрать базу и загрузить чанки ваших реакторов с помощью Server Utilities (из инвентаря).%n%n4) Если шейдеры ломаются, поставьте красивые текстуры в настройках графики.%n%n5) Если вы сталкиваетесь с любыми графическими проблемами, попробуйте пролистать странички в NEI.%n%n6) Если вы играете с друзьями, обязательно пригласите их в группу заданий для того, чтобы поделиться прогрессом и наградами.%n
 
 # Quest: Dyson Anatmogenesis Terraformer
 betterquesting.quest.6k-JrbD-S8GO9PRRthWNRA.name=Терраформер Дайсона
