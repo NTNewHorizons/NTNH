@@ -110,3 +110,4 @@ mods.nei.NEI.hide(<etfuturum:copper_ore>);
 mods.nei.NEI.hide(<imc:item_wooden_bucket>);
 mods.nei.NEI.hide(<imc:item_wooden_bucket_water>);
 mods.nei.NEI.hide(<imc:item_wooden_bucket_milk>);
+mods.nei.NEI.hide(<weather2:WeatherMachine>);

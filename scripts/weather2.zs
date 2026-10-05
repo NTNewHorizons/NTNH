@@ -53,6 +53,3 @@ recipes.addShaped(<weather2:WeatherDeflector>, [
     [<hbm:item.coil_magnetized_tungsten>, <hbm:item.circuit:18>, <hbm:item.coil_magnetized_tungsten>],
     [<hbm:item.plate_bismuth>, <hbm:item.magnetron>, <hbm:item.plate_bismuth>]
 ]);
-
-// 7. Weather Machine (Creative / Admin Only - Gated to prevent multiplayer base griefing)
-// Crafting recipe disabled in survival: prevents players from maliciously summoning F5 tornadoes over neighboring bases.
