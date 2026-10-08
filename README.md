@@ -8,7 +8,7 @@ This is the main repository of NT:NH modpack repo
 <h2 style="text-align:center">🌟 Our Amazing Contributors 🌟</h2>
 
 <table><tr><td align="center"><a href="https://github.com/Bufka2011"><img src="https://avatars.githubusercontent.com/u/85364803?v=4" width="50" alt="Bufka2011" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>Bufka2011</b></sub><br/><span>3829 🏆</span></td>
-<td align="center"><a href="https://github.com/BufkaSecond"><img src="https://avatars.githubusercontent.com/u/190631137?v=4" width="50" alt="BufkaSecond" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>BufkaSecond</b></sub><br/><span>447 🏆</span></td>
+<td align="center"><a href="https://github.com/BufkaSecond"><img src="https://avatars.githubusercontent.com/u/190631137?v=4" width="50" alt="BufkaSecond" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>BufkaSecond</b></sub><br/><span>454 🏆</span></td>
 <td align="center"><a href="https://github.com/AniviaFlome"><img src="https://avatars.githubusercontent.com/u/66728147?v=4" width="50" alt="AniviaFlome" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>AniviaFlome</b></sub><br/><span>92 🏆</span></td>
 <td align="center"><a href="https://github.com/THOMASS47"><img src="https://avatars.githubusercontent.com/u/63131669?v=4" width="50" alt="THOMASS47" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>THOMASS47</b></sub><br/><span>64 🏆</span></td>
 <td align="center"><a href="https://github.com/Rerserder"><img src="https://avatars.githubusercontent.com/u/251956539?v=4" width="50" alt="Rerserder" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>Rerserder</b></sub><br/><span>63 🏆</span></td>
@@ -213,7 +213,7 @@ This is the main repository of NT:NH modpack repo
           <br />
           <sub><b>Aftobus01</b></sub></a>
         <br />
-        <sub><b>2311 words</b></sub>
+        <sub><b>2320 words</b></sub>
       </td>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/itxv"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17848497/medium/0f7d2fb932135516b0af96f7dfbe9f98.jpg" />
