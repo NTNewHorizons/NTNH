@@ -29,7 +29,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §3ICF§r reactor is a very expensive and powerful reactor, which can produce a substantial amount of energy. Apart from the multiblock itself, §3ICF Lasers§r must be constructed for the reactor to work. §bStellar Flux§r will be produced during its operation which is needed to craft §6Gerald§r. Consider making use of §bLiquid Lead§r as it is a very efficient coolant for the ICF.\n\nIt is recommended that the wiki is checked out as it has built-in calculators for the laser power consumption and the amount of hot coolant it produces.\n\n[url]https://nucleartech.wiki/wiki/Inertial_Confinement_Fusion_Reactor[/url]",
+      "desc:8": "The §3ICF§r reactor is a very expensive and powerful reactor, which can produce a substantial amount of energy. Apart from the multiblock itself, §3ICF Lasers§r must be constructed for the reactor to work. §bStellar Flux§r will be produced during its operation which is needed to craft §6Gerald§r. Consider making use of §bLiquid Lead§r as it is a very efficient coolant for the ICF. §bBlood§r also works as an ICF coolant (turning into hot blood), and §bxenon§r can be used in fuels.\n\nIt is recommended that the wiki is checked out as it has built-in calculators for the laser power consumption and the amount of hot coolant it produces.\n\n[url]https://nucleartech.wiki/wiki/Inertial_Confinement_Fusion_Reactor[/url]",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -39,6 +39,7 @@
       },
       "isMain:1": 1,
       "isSilent:1": 0,
+      "is_final:1": 0,
       "lockedProgress:1": 0,
       "name:8": "ICF",
       "notification_duration:5": -1.0,
@@ -56,6 +57,9 @@
       "notification_title:8": "",
       "notification_title_scale:5": -1.0,
       "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,

@@ -30,7 +30,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §3Catalytic Reformer§r is an optional late-game oil processing machine. It converts certain oil products into more valuable ones.\n\nThe §3Hydrotreater§r is another optional late-game oil processing machine that allows for easier production of §bSour Gas§r, which can also turn §bCrude Oil§r into §bDesulfurized crude Oil§r. \n\n§2The Hydrotreater requires pressurized Liquid Hydrogen in all its recipes, requiring the use of a Compressor.",
+      "desc:8": "The §3Catalytic Reformer§r is an optional late-game oil processing machine. It converts certain oil products into more valuable ones.\n\nThe §3Hydrotreater§r is another optional late-game oil processing machine that allows for easier production of §bSour Gas§r, which can also turn §bCrude Oil§r into §bDesulfurized crude Oil§r. \n\n§2The Hydrotreater requires pressurized Liquid Hydrogen in all its recipes, requiring the use of a Compressor. For example, cracked naphtha reforms into reformate while desulfurized naphtha fractions into BTX.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -40,6 +40,7 @@
       },
       "isMain:1": 1,
       "isSilent:1": 0,
+      "is_final:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Advanced Oil Processing",
       "notification_duration:5": -1.0,
@@ -57,6 +58,9 @@
       "notification_title:8": "",
       "notification_title_scale:5": -1.0,
       "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,

@@ -2,7 +2,7 @@
   "preRequisites:9": {
     "0:10": {
       "questIDHigh:4": 0,
-      "questIDLow:4": 60
+      "questIDLow:4": 133
     }
   },
   "properties:10": {
@@ -17,18 +17,19 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §3Auxiliary Cooling Tower§r is a larger version of the Steam Condenser able to process up to 50 mb/t of §bLow-Pressure Steam§r.",
+      "desc:8": "§6Borax§r is found as depth deposits near bedrock - bring explosives to mine it. It can also be extracted from bedrock ores. Acidize it with §bsulfuric acid§r in an §3Ore Acidizer§r for §6boron§r (best yield with effectiveness upgrades), or run it through an §3Electric Arc Furnace§r. Borax is also an efficient §6flux§r and an ingredient of the §6saturnite§r blend in a §3Rotary Furnace§r (reformate gas, copper and high-speed steel powder).",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
         "Damage:2": 0,
         "OreDict:8": "",
-        "id:8": "hbm:tile.machine_tower_small"
+        "id:8": "hbm:item.powder_borax"
       },
       "isMain:1": 0,
       "isSilent:1": 0,
+      "is_final:1": 0,
       "lockedProgress:1": 0,
-      "name:8": "Auxilary Cooling Tower",
+      "name:8": "Borax",
       "notification_duration:5": -1.0,
       "notification_effect:3": -1,
       "notification_fade_in:5": -1.0,
@@ -44,6 +45,9 @@
       "notification_title:8": "",
       "notification_title_scale:5": -1.0,
       "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,
@@ -54,15 +58,15 @@
       "visibility:8": "NORMAL"
     }
   },
-  "questIDHigh:4": 0,
-  "questIDLow:4": 72,
+  "questIDHigh:4": 6876079395018919245,
+  "questIDLow:4": -6288216890648054046,
   "rewards:9": {},
   "tasks:9": {
     "0:10": {
       "autoConsume:1": 0,
       "consume:1": 0,
       "groupDetect:1": 0,
-      "ignoreNBT:1": 0,
+      "ignoreNBT:1": 1,
       "index:3": 0,
       "partialMatch:1": 1,
       "requireOnlyOneItem:1": 0,
@@ -71,7 +75,7 @@
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "hbm:tile.machine_tower_small"
+          "id:8": "hbm:item.powder_borax"
         }
       },
       "taskID:8": "bq_standard:retrieval"

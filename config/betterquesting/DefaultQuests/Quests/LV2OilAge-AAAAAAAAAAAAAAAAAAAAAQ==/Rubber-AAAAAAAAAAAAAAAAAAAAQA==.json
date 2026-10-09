@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "§6Rubber§r is an essential material used in many crafting recipes. It is created in a §3Chemical Plant§r with §bUnsaturated Hydrocarbons§r obtained from a §3Catalytic Cracking Tower§r.\n\n§6Latex§r is a rubber alternative which can be used in some recipes instead of normal rubber. It can be created early on using a §3Burner Press§r by processing dandelions or jungle wood.\n\n§2In NTM: Space cracked oil is required to obtain the first piece of rubber.",
+      "desc:8": "§6Rubber§r is an essential material used in many crafting recipes. It is created in a §3Chemical Plant§r from §bunsaturated hydrocarbons§r and §6sulfur§r; unsaturateds need at least a §3Catalytic Cracking Tower§r.\n\n§6Latex§r is a rubber alternative which can be used in all rubber recipes instead of normal rubber (but not vice versa). It can be created early on using a §3Burner Press§r by processing dandelions or jungle wood.\n\n§2The first rubber needs cracked oil for unsaturated hydrocarbons.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -27,6 +27,7 @@
       },
       "isMain:1": 1,
       "isSilent:1": 0,
+      "is_final:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Rubber",
       "notification_duration:5": -1.0,
@@ -44,6 +45,9 @@
       "notification_title:8": "",
       "notification_title_scale:5": -1.0,
       "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,

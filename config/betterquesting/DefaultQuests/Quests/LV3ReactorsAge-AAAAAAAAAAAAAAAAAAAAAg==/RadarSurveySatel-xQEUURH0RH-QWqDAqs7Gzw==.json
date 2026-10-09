@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §3Radar Survey Satellite§r detects all radar-visible entities - players, rockets, and more - within a 1000-chunk radius of its target position. It compiles results into a searchable list with entity types and exact coordinates, and can filter results by class name without requiring a new scan.\n\nRoR commands: \"survey\" scans the area and saves results to both a base list and a filtered list. \"filter name\" replaces the filtered list with only entries matching that class name - the original list is preserved, so this can be run multiple times for different types without rescanning. \"count\" writes the number of filtered results to RX. \"gettargetid index\" returns the unique entity ID for a given entry, which can be passed to other satellites for precise targeting. \"getposition index\" writes exact X/Y/Z coordinates - separated by semicolons - to RX. \"getname index\" writes the class name of the entry to RX.\n\n§2Pair this satellite with an §3AUTOCAL§r and the §3Orbital Precision Laser§r for automated missile interception.",
+      "desc:8": "The §3Radar Survey Satellite§r detects all radar-visible entities - players, missiles, and more - within a 1,000-block radius of its target position. It compiles results into a searchable list with entity types and exact coordinates, and can filter results by class name without requiring a new scan.\n\nRoR commands: \"survey\" scans the area and saves results to both a base list and a filtered list. \"filter name\" replaces the filtered list with only entries matching that class name - the original list is preserved, so this can be run multiple times for different types without rescanning. \"count\" writes the number of filtered results to RX. \"gettargetid index\" returns the unique entity ID for a given entry, which can be passed to other satellites for precise targeting. \"getposition index\" writes exact X/Y/Z coordinates - separated by semicolons - to RX. \"getname index\" writes the class name of the entry to RX.\n\n§2Pair this satellite with an §3AUTOCAL§r and the §3Orbital Precision Laser§r for automated missile interception.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -38,6 +38,7 @@
       },
       "isMain:1": 0,
       "isSilent:1": 0,
+      "is_final:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Radar Survey Satellite",
       "notification_duration:5": -1.0,
@@ -55,6 +56,9 @@
       "notification_title:8": "",
       "notification_title_scale:5": -1.0,
       "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,
