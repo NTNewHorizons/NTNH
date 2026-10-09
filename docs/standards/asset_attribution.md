@@ -46,6 +46,7 @@
 | `NTM_VANIL` | **NTM Vanilled** | TheVitya2127 | [Modrinth Project](https://modrinth.com/resourcepack/ntm-vanilled) | 🔵 Open / Mentioned | Указан в титрах пака |
 | `BIBLIO_LEGACY` | **Bibliocraft-Legacy** | MinecraftschurliMods | [GitHub Repository](https://github.com/MinecraftschurliMods/Bibliocraft-Legacy) | 🔵 OPEN_LICENSE (MIT) | [MIT License](https://github.com/MinecraftschurliMods/Bibliocraft-Legacy/blob/main/LICENSE) |
 | `COLOURFUL_GUI` | **Colourful Containers** | psdKingybu | [CurseForge Project](https://www.curseforge.com/minecraft/texture-packs/colourful-containers-gui) | 🟡 PENDING (Local/Dev) | [GitHub Source](https://github.com/psdKingybu/colourful-containers) |
+| `REDSTONE_TWEAKS` | **Redstone Tweaks 2.5.6** | RexxStone | [Modrinth Project](https://modrinth.com/resourcepack/redstone-tweaks/) | 🔵 OPEN_LICENSE (CC-BY-NC-SA 4.0) | [CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) |
 
 *(При добавлении новых авторов вносите новую строку с уникальным `ID донора`).*
 
@@ -96,6 +97,16 @@
 | Путь в NTNH (`assets/...`) | ID донора | Оригинальный файл/пак | Описание / Изменения NTNH | Статус |
 | :--- | :--- | :--- | :--- | :---: |
 | *(пример)* `minecraft/textures/blocks/cobblestone.png` | `MODERNITY` | `assets/minecraft/textures/blocks/cobblestone.png` | Современный булыжник | 🔵 OPEN_LICENSE |
+| `resourcepacks/NTNH-Modernity-2.1/assets/minecraft/textures/blocks/observer_front.png` | `REDSTONE_TWEAKS` | `assets/minecraft/textures/block/observer/front.png` | Лицевая грань Наблюдателя (Et Futurum) с редстоун-глазами (16x16) | 🔵 OPEN_LICENSE |
+| `resourcepacks/NTNH-Modernity-2.1/assets/minecraft/textures/blocks/observer_back.png` | `REDSTONE_TWEAKS` | `assets/minecraft/textures/block/observer/back.png` | Задний выход Наблюдателя в покое (16x16) | 🔵 OPEN_LICENSE |
+| `resourcepacks/NTNH-Modernity-2.1/assets/minecraft/textures/blocks/observer_back_lit.png` | `REDSTONE_TWEAKS` | `assets/minecraft/textures/block/observer/back_on.png` | Активный выход Наблюдателя с подсветкой импульса (16x16) | 🔵 OPEN_LICENSE |
+| `resourcepacks/NTNH-Modernity-2.1/assets/minecraft/textures/blocks/observer_top.png` | `REDSTONE_TWEAKS` | `assets/minecraft/textures/block/observer/top.png` | Верхняя/нижняя грань Наблюдателя со стрелкой и точкой сигнала (16x16) | 🔵 OPEN_LICENSE |
+| `resourcepacks/NTNH-Modernity-2.1/assets/minecraft/textures/blocks/observer_side.png` | `MODERNITY` | `assets/uptodate/textures/blocks/observer_side.png` | Симметричная боковая грань Наблюдателя JAPPA под рендерер Et Futurum (16x16) | 🔵 OPEN_LICENSE |
+| `resourcepacks/NTNH-Modernity-2.1/assets/minecraft/textures/blocks/redstone_lamp_off.png` | `REDSTONE_TWEAKS` | `assets/minecraft/textures/block/redstone_lamp/off.png` | Индустриальная редстоун-лампа (выкл., 16x16) | 🔵 OPEN_LICENSE |
+| `resourcepacks/NTNH-Modernity-2.1/assets/minecraft/textures/blocks/redstone_lamp_on.png` | `REDSTONE_TWEAKS` | `assets/minecraft/textures/block/redstone_lamp/on.png` | Индустриальная редстоун-лампа (вкл., 16x16) | 🔵 OPEN_LICENSE |
+| `resourcepacks/NTNH-Modernity-2.1/assets/minecraft/textures/blocks/rail_detector.png` | `REDSTONE_TWEAKS` | `assets/minecraft/textures/block/detector_rail/off.png` | Нажимные рельсы с боковыми редстоун-контактами (выкл., 16x16) | 🔵 OPEN_LICENSE |
+| `resourcepacks/NTNH-Modernity-2.1/assets/minecraft/textures/blocks/rail_detector_powered.png` | `REDSTONE_TWEAKS` | `assets/minecraft/textures/block/detector_rail/on.png` | Нажимные рельсы с активными редстоун-контактами (вкл., 16x16) | 🔵 OPEN_LICENSE |
+| `resourcepacks/NTNH-Modernity-2.1/assets/minecraft/textures/blocks/piston_bottom.png` | `REDSTONE_TWEAKS` | `assets/minecraft/textures/block/piston/bottom.png` | Тыльная сторона поршня с центральным редстоун-индикатором (16x16) | 🔵 OPEN_LICENSE |
 
 ### 4.4. Предметы и экипировка (Items)
 
