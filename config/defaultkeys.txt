@@ -26,7 +26,7 @@ key_key.hotbar.6:7
 key_key.hotbar.7:8
 key_key.hotbar.8:9
 key_key.hotbar.9:10
-key_key.container_interaction.desc:-100
+key_key.container_interaction.desc:29
 key_key.wireless_extra_action.desc:29
 key_key.wireless_mode_switch.desc:15
 key_ae2wct.OpenTerminal:0
@@ -58,6 +58,7 @@ key_nei.options.keys.bookmark.favorite_item:33
 key_nei.options.keys.bookmark.remove_recipe:30
 key_nei.options.keys.bookmark.pull_items:47
 key_nei.options.keys.bookmark.chat_link:38
+key_nei.options.keys.bookmark.open_crafting_tree:20
 key_nei.options.keys.bookmark.hide:48
 key_nei.options.keys.itemzoom.toggle:44
 key_nei.options.keys.itemzoom.hold:0
@@ -80,7 +81,15 @@ key_key.toggle_focus.desc:0
 key_key.search_connected_inventories.desc:0
 key_key.pick_block.desc:0
 key_key.locate_item_flow.desc:0
+key_key.cycle_controller_animation.desc:0
 key_key.betterquesting.quests:41
+key_key.chromatictooltips.next_page:44
+key_key.chromatictooltips.previous_page:0
+key_effortless.key.uiKey:56
+key_Open sound muffler screen:0
+key_key.openCompendium:25
+key_nei.options.keys.gui.findit.find_block:21
+key_nei.options.keys.gui.findit.find_item:20
 key_hbm.key.calculator:49
 key_hbm.key.toggleBack:46
 key_hbm.key.toggleMagnet:44
@@ -102,16 +111,11 @@ key_hbm.key.ability:-99
 key_hbm.key.abilityAlt:56
 key_hbm.key.copyToolAlt:56
 key_hbm.key.copyToolCtrl:29
-key_key.chromatictooltips.next_page:44
-key_key.chromatictooltips.previous_page:0
-key_effortless.key.uiKey:56
-key_key.openCompendium:25
-key_nei.options.keys.gui.findit.find_block:21
-key_nei.options.keys.gui.findit.find_item:20
 key_navigator.key.action:211
 key_openblocks.keybind.vario_switch:0
 key_openblocks.keybind.vario_vol_up:0
 key_openblocks.keybind.vario_vol_down:0
+key_key.ping:33
 key_schematica.key.load:181
 key_schematica.key.save:55
 key_schematica.key.control:74
@@ -119,10 +123,8 @@ key_schematica.key.layerInc:0
 key_schematica.key.layerDec:0
 key_key.serverutilities.nbt:0
 key_key.serverutilities.trash:0
-key_asjcore.orthoProjection:0
-key_asjcore.noEntityInteract:68
-key_keys.adventureBackpack.openInventory:-97
-key_keys.adventureBackpack.toggleActions:207
+key_keys.adventureBackpack.openInventory:0
+key_keys.adventureBackpack.toggleActions:-97
 key_nei.options.keys.gui.pattern_view:25
 key_ae2fc.key.OpenTerminal:0
 key_ae2fc.key.OpenCraftingTerminal:0
@@ -131,15 +133,18 @@ key_ae2fc.key.OpenInterfaceTerminal:0
 key_ae2fc.key.OpenPatternTerminal:0
 key_ae2fc.key.OpenPatternExTerminal:0
 key_ae2fc.key.Restock:0
-key_Reload Shaders:0
-key_Toggle Shaders:0
-key_Shaderpack Selection Screen:0
-key_Zoom:34
+key_iris.keybind.reload:0
+key_iris.keybind.toggleShaders:0
+key_iris.keybind.shaderPackSelection:0
+key_angelica.keybind.zoom:34
+key_angelica.keybind.fps_reducer_force:0
+key_angelica.keybind.fps_reducer_disable:0
 key_key.anextratouch.free_look:56
 key_Baubles Inventory:0
 key_key.betterHud.open:22
 key_bbw.key.mode:0
 key_bbw.key.fluidmode:0
+key_Options Gui:23
 key_key.toggleCleanView:0
 key_key.materialCosts:0
 key_key.clipboardPaste:0
@@ -159,7 +164,7 @@ key_key.guidenh.guide_page_forward:28
 key_key.guidenh.open_scene_editor:0
 key_key.guidenh.cycle_region_wand_mode:0
 key_ingameinfoxml.key.toggle:0
-key_jecalculation.key.gui_craft:36
+key_jecalculation.key.gui_craft:0
 key_jecalculation.key.gui_math:0
 key_key.mm-ctrl:29
 key_key.mm-cut:45
@@ -184,12 +189,12 @@ key_gui.xaero_new_waypoint:48
 key_gui.xaero_display_all_sets:0
 key_gui.xaero_toggle_light_overlay:0
 key_gui.xaero_minimap_settings:21
-key_gui.xaero_open_map:-96
+key_gui.xaero_open_map:50
 key_gui.xaero_open_settings:27
 key_gui.xaero_map_zoom_in:0
 key_gui.xaero_map_zoom_out:0
 key_gui.xaero_quick_confirm:54
-key_key.fastBlockPlacing.desc:46
+key_key.fastBlockPlacing.desc:0
 key_key.cofh.empower:0
 key_key.cofh.multimode:0
 key_key.sort_config:0
@@ -198,7 +203,9 @@ key_key.sort_gui:-98
 key_key.dropoff:0
 key_key.ae2_terminal_search:20
 key_key.bogosorter.controls_button:0
+key_key.bogosorter.pin_slot:-98
 key_key.carbon_config.key:82
+key_key.carbon_config.dep:79
 key_key.control:0
 key_key.craftpresence.config_keycode.name:210
 key_nei.options.keys.nee.count:29
