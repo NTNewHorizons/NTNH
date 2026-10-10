@@ -2,6 +2,10 @@
 
 ## What's changed?
 **Added**
+* Immersive Vehicles: Legacy
+  * Immersive Vehicles backport by @THOMASS47!
+  * Comes with the official pack and Knight Corp pack preinstalled!
+  * Highly unstable, report any bugs
 * Made upright steel scaffold variants climbable while preserving horizontal scaffold placements as platforms
 * New depletable "rich ore" system
   * Multi‑unit ore blocks that deplete to stone and drop "rich chunks"
@@ -77,6 +81,7 @@
   * TiCl4 can either be processed in a rotary furnace using flux, or pyrolysis oven (latter option also recovers all used chlorine)
   * Ilmenite can also be arc smelted directly for lower efficiency but faster output (liquid smelting mode also yields iron byproduct)
 * Pneumatic and exhaust pipe anchors
+* Crafting Tree feature in NEI
 
 
 

@@ -1,0 +1,42 @@
+{
+  "comment1": "The following section is used for overriding the default 1:1 damage values applied to vehicles in packs from external sources.",
+  "comment2": "This is useful for modpack creators that wish to include MTS in packs with other weapons that don't know about the various hitbox and armor systems.",
+  "comment3": "The entries in here are first indexed by the pack, then the vehicle ID.",
+  "comment4": "If you need the full listing of items, set dumpDamageConfig to true in the general config section.",
+  "comment5": "This will overwrite this file with all vehicles in all packs.",
+  "overrides": {
+    "mts40k": {
+      "vennew": 1.0,
+      "bleriot": 1.0,
+      "vildenmediumtankhull": 1.0,
+      "vildenbiplane": 1.0,
+      "bathysphere": 1.0,
+      "lightios_basichull": 1.0,
+      "venlar": 1.0,
+      "artilleros_hull": 1.0,
+      "thunder": 1.0,
+      "truck": 1.0,
+      "venlarmk2": 1.0,
+      "tempest": 1.0
+    },
+    "mtsofficialpack": {
+      "gmcbrig": 1.0,
+      "e500": 1.0,
+      "trimotor": 1.0,
+      "vulcanair": 1.0,
+      "pzl37los": 1.0,
+      "bell206": 1.0,
+      "fordmustang69": 1.0,
+      "scout": 1.0,
+      "skyhawk": 1.0,
+      "comanche": 1.0,
+      "merc230": 1.0,
+      "quad": 1.0,
+      "mc172": 1.0,
+      "pzlp11": 1.0,
+      "ft17": 1.0,
+      "bell47g": 1.0,
+      "firetruck": 1.0
+    }
+  }
+}

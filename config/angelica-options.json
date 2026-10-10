@@ -1,5 +1,7 @@
 {
   "quality": {
+    "biome_blend_radius": 3,
+    "biome_blend_mode": "FANCY",
     "grass_quality": "DEFAULT",
     "use_celeritas_smooth_lighting": true,
     "texture_filter_mode": "ANISOTROPIC",
@@ -8,7 +10,6 @@
   "advanced": {
     "vsync_mode": "OFF",
     "use_vertex_array_objects": true,
-    "use_chunk_multidraw": true,
     "multi_draw_mode": "INDIRECT",
     "use_particle_culling": true,
     "allow_direct_memory_access": true,

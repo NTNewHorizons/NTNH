@@ -1,9 +1,14 @@
-name = "NEIAddons-1.18.5"
-filename = "NEIAddons-1.18.5.jar"
+name = "NEIAddons-1.18.6"
+filename = "NEIAddons-1.18.6.jar"
 side = "both"
 pin = true
 
 [download]
 hash-format = "sha256"
-hash = "39576cd0accb129ac34b4d4f29eb43551e30a25d12f99ef172a98684ed89ac53"
-url = "https://github.com/GTNewHorizons/neiaddons/releases/download/1.18.5/NEIAddons-1.18.5.jar"
+hash = "59c4ed31a135c34e81c9947d6c45e8cece7bcab6d074424dcf4477182567eb3a"
+url = "https://github.com/GTNewHorizons/neiaddons/releases/download/1.18.6/NEIAddons-1.18.6.jar"
+
+[update.github]
+slug = "GTNewHorizons/neiaddons"
+tag = "1.18.6"
+regex = "^NEIAddons\\-.+\\.jar$"

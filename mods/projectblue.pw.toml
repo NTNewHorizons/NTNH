@@ -1,9 +1,14 @@
-name = "ProjectBlue-1.2.10-GTNH"
-filename = "ProjectBlue-1.2.10-GTNH.jar"
+name = "ProjectBlue-1.2.11-GTNH"
+filename = "ProjectBlue-1.2.11-GTNH.jar"
 side = "both"
 pin = true
 
 [download]
 hash-format = "sha256"
-hash = "344d739ea270b920b9092abf900ed6d4e08aade24727a568899ffcccebdcf263"
-url = "https://github.com/GTNewHorizons/ProjectBlue/releases/download/1.2.10-GTNH/ProjectBlue-1.2.10-GTNH.jar"
+hash = "ebd4de48e4528a25f547bb2fa1603072a7b4af5469b13167cfaa71f62056f5b1"
+url = "https://github.com/GTNewHorizons/ProjectBlue/releases/download/1.2.11-GTNH/ProjectBlue-1.2.11-GTNH.jar"
+
+[update.github]
+slug = "GTNewHorizons/ProjectBlue"
+tag = "1.2.11-GTNH"
+regex = "^ProjectBlue\\-.+\\.jar$"
