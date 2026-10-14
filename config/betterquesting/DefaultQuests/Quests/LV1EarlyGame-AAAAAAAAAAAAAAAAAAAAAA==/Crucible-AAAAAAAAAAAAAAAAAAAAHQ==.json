@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §3Crucible§r is an important machine as it is the central component of metallurgy. It is used as a method of ore processing, alloying, and metal casting. It requires an external heat source to melt the inputs into liquids and when filled, it emits a consistent amount of soot that can cause a fair amount of pollution that cannot be mitigated. Some alloys, as mentioned before, can be made alternatively using a §3Blast Furnace§r, however this is generally slower.\n\n[F1] For more information.",
+      "desc:8": "The §3Crucible§r is an important machine as it is the central component of metallurgy. It is used as a method of ore processing, alloying, and metal casting. It requires an external heat source to melt the inputs into liquids and when filled, it emits a consistent amount of soot that can cause a fair amount of pollution that cannot be mitigated. Some alloys, as mentioned before, can be made alternatively using a §3Blast Furnace§r, however this is generally slower. For example, high-speed steel is alloyed from steel, tungsten and cobalt and must be cast, and stainless steel can be made here or in a blast furnace.\n\n[F1] For more information.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -27,6 +27,7 @@
       },
       "isMain:1": 1,
       "isSilent:1": 0,
+      "is_final:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Crucible",
       "notification_duration:5": -1.0,
@@ -44,6 +45,9 @@
       "notification_title:8": "",
       "notification_title_scale:5": -1.0,
       "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,

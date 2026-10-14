@@ -21,7 +21,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §3Hydraulic Fracking Tower§r is used to extract infinite oil from a §eBedrock Oil Deposit§r. To operate, the machine needs §bFracking Solution§r. During its operation, the surrounding environment will sustain considerable damage. §6Oily Dirt§r and §6Oily Sand§r can be used to create §6Arsenic§r, a substitute of §6Bismuth§r.\n\nOperating the hydraulic fracking tower will consume §e100kHE/s§r.",
+      "desc:8": "The §3Hydraulic Fracking Tower§r is used to extract infinite oil from a §eBedrock Oil Deposit§r. To operate, the machine needs §bFracking Solution§r. During its operation, the surrounding environment will sustain considerable damage. §6Oily Dirt§r and §6Oily Sand§r mark infinite bedrock deposits (pumping is slower but never depletes); the tower also works on regular deposits. Shred its polluted blocks in a §3Shredder§r into §6oily scraps§r for §6Arsenic§r via the §3Ore Acidizer§r with §bhigh-performance solvent§r.\n\nOperating the hydraulic fracking tower will consume §e100kHE/s§r.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -31,6 +31,7 @@
       },
       "isMain:1": 1,
       "isSilent:1": 0,
+      "is_final:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Hydraulic Fracking Tower",
       "notification_duration:5": -1.0,
@@ -48,6 +49,9 @@
       "notification_title:8": "",
       "notification_title_scale:5": -1.0,
       "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,

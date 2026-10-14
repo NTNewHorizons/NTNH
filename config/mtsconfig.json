@@ -1,0 +1,552 @@
+{
+  "general": {
+    "generateOverrideConfigs": {
+      "value": false,
+      "comment": "If true, then crafting and damage override config files, as well as language template files, will be dumped into the config folder at boot.  WARNING: this will overwrite your existing override config files!  Language files must be put into packs to function and will NOT overwrite anything."
+    },
+    "opSignEditingOnly": {
+      "value": false,
+      "comment": "If true, only OPs will be able to edit signs on servers.  Does not affect client worlds."
+    },
+    "opPickupVehiclesOnly": {
+      "value": false,
+      "comment": "If true, only OPs will be able to pick up vehicles with wrenches.  Does not affect client worlds."
+    },
+    "creativePickupVehiclesOnly": {
+      "value": false,
+      "comment": "If true, vehicles can only be picked up in creative mode."
+    },
+    "keyRequiredToStartVehicles": {
+      "value": false,
+      "comment": "If true, vehicles can only be started if the player has the key in their hand."
+    },
+    "noclipVehicles": {
+      "value": false,
+      "comment": "If true, vehicles will not be able to collide with blocks.  This also prevents them from moving if they do not have wheels on them, as otherwise they would phase through the ground into the void."
+    },
+    "chunkloadVehicles": {
+      "value": true,
+      "comment": "If true, vehicles will be chunkloaded when on roads/tracks.  This allows them to travel into unloaded chunks."
+    },
+    "doLegacyLightCompats": {
+      "value": true,
+      "comment": "If true, legacy compatibility code will be performed on all models to make their lights work with newer versions.  This code will significantly slow down boot times due to needing to parse all models on boot, however, packs may not have functional lights without it.  Choose wisely if you want speed or features."
+    },
+    "useHSV": {
+      "value": false,
+      "comment": "If enabled, the MTS dev mode will export color values as HSV instead of hex."
+    },
+    "allPlanesWithNav": {
+      "value": false,
+      "comment": "If true, all planes will have the ability to use beacons for navigation.  This is false to allow pack authors to define new/old planes that have this capability, but can be turned on if you don't care about realism."
+    },
+    "giveManualsOnJoin": {
+      "value": true,
+      "comment": "If true, then whenever a new player joins a world, they will be given a copy of the mod manuals, including a part scanner."
+    },
+    "performModCompatFunctions": {
+      "value": true,
+      "comment": "If true, mod compatibility functions will be executed.  Should be true unless you're configuring a modpack and know and have addressed the various incompatibilities."
+    },
+    "forceRenderLastSolid": {
+      "value": false,
+      "comment": "If enabled, MTS will do rendering on the world-last Forge event.  This is not normally something you want, but can be used if some mods make things invisible.  Replaymod being one such example."
+    },
+    "devMode": {
+      "value": false,
+      "comment": "If enabled, MTS will allow access to the dev mode GUI while sitting in vehicles.  The GUI allows editing JSONs in-game without the need to restart."
+    },
+    "roadMaxLength": {
+      "value": 32,
+      "comment": "How long a single segment of road can be, in blocks.  While you can have longer segements, be aware they have more collision boxes and will generate more lag when broken or interacted with, and may not render if outside the chunk they are in.  Must be a whole number."
+    },
+    "aircraftSpeedFactor": {
+      "value": 0.35,
+      "comment": "Factor to apply to aircraft movement.  1 is the realistic value, but this makes vehicles move too fast for Minecraft. Adjust with caution."
+    },
+    "carSpeedFactor": {
+      "value": 0.35,
+      "comment": "Factor to apply to car movement.  1 is the realistic value, but this makes vehicles move too fast for Minecraft. Adjust with caution."
+    },
+    "fuelUsageFactor": {
+      "value": 1.0,
+      "comment": "Factor times which engines use fuel.  Change this if you think engines use fuel too fast or slow.  Setting it to 0 will disable fuel and allow engines to run without it."
+    },
+    "engineHoursFactor": {
+      "value": 1.0,
+      "comment": "Factor times which engines hours accumulate.  Change this if you want to adjust how fast engines wear out."
+    },
+    "climbSpeed": {
+      "value": 0.125,
+      "comment": "How far a vehicle will 'climb' blocks every tick when the wheels go into the ground.  Higher values make vehicles climb blocks quicker at the cost of smooth movement."
+    },
+    "gravityFactor": {
+      "value": 1.0,
+      "comment": "Factor for gravitational forces applied to vehicles.  Can be adjusted if you think cars are too 'floaty'.  Does not affect aircraft."
+    },
+    "maxFlightHeight": {
+      "value": 0.0,
+      "comment": "How high planes can fly.  Setting this to 0 (default) will allow planes to fly as high as their natural physics allows.  Useful if you want to cap vertical height for some reason."
+    },
+    "engineSpeedTempFactor": {
+      "value": 1.0,
+      "comment": "Factor for how RPM affects engine temp.  Higher values will make engines heat up quicker at higher RPMs."
+    },
+    "engineBiomeTempFactor": {
+      "value": 1.0,
+      "comment": "Factor for how biome temp affects engine temp.  Higher values will make engines heat up quicker in hotter biomes."
+    },
+    "rfToElectricityFactor": {
+      "value": 0.02,
+      "comment": "Factor for converting RF to internal electicity for vehicles.  Default value is 1/100, but can be adjusted."
+    },
+    "vehicleDeathDespawnTime": {
+      "value": 0.0,
+      "comment": "Time (in seconds) between when vehicles reach 0 health and they de-spawn.  Normally 0, which means they never de-spawn."
+    },
+    "seaLevel": {
+      "value": 63,
+      "comment": "The Y-Level that will be used to base altitude off of. Will also be factored in for engine performance calculations. Change only if you know what you're doing/ why this matters to engines/flying."
+    },
+    "defaultVehicleRepairMaterials": {
+      "value": [],
+      "comment": "List of items that can be used to repair vehicles by default, if no repair recipe is set in the vehicle's JSON."
+    },
+    "defaultPartRepairMaterials": {
+      "value": [],
+      "comment": "List of items that can be used to repair part by default, if no repair recipe is set in the part's JSON."
+    },
+    "engineDimensionBlacklist": {
+      "value": [],
+      "comment": "Blacklist of dimension names where engines will be prevented from being started.  Can be used to disable vehicles in specific dimensions.  Think Galacticraft, where you don't want folks flying planes on the moon."
+    },
+    "engineDimensionWhitelist": {
+      "value": [],
+      "comment": "Whitelist of dimension names where engines will only be alowed to work.  Overrides the blacklist if this exists."
+    },
+    "packVehicleScales": {
+      "value": {
+        "mtsofficialpack": 1.0,
+        "mts40k": 1.0,
+        "mts": 1.0
+      },
+      "comment": "Scale of all vehicles for this pack.  You probably won't want to change this, but if you do want the vehicles to be smaller for some reason, you can."
+    },
+    "packSpeedFactors": {
+      "value": {
+        "mtsofficialpack": 1.0,
+        "mts40k": 1.0,
+        "mts": 1.0
+      },
+      "comment": "A mapping of pack-speciifc speed factors.  These values will only apply to the vehicles in the pack modified.  This allows for speeding up packs with slower vehicles, or slowing down packs with fast vehicles for a more even play experience.  Note that this applies on top of the global speed factor.  So if that is set to 0.30, and a pack is set to 0.5, then the total speed factor will be 0.15"
+    },
+    "itemWeights": {
+      "comment1": "The following section is used for calculating item weights.  Any item that contains the text bits will have its weight multiplied by the following factor.",
+      "comment2": "This mass factors into vehicle performance, with particular emphasis on vehicle payloads.  Some defaults are presented here, but you can add/remove to your liking.",
+      "comment3": "Note that the part of the name searched is the item's registry name, NOT the in-game display name.  This is similar to what is in the /give command.",
+      "weights": {
+        "gold": 4.0,
+        "diamond": 4.0,
+        "ore": 2.5,
+        "cardboard_package": 5.0,
+        "iron": 4.0,
+        "coal": 2.0,
+        "stone": 1.5
+      }
+    },
+    "joinedPlayers": {
+      "value": [],
+      "comment": "Listing of players that have joined this world.  Players will be given the manual on their first join."
+    }
+  },
+  "damage": {
+    "bulletBlockBreaking": {
+      "value": true,
+      "comment": "Whether or not bullets/bombs can break blocks when they hit them.  This will also disable explosive block breakage (though not explosions themselves) and prevent incendiary bullets from setting blocks on fire."
+    },
+    "bulletExplosions": {
+      "value": true,
+      "comment": "Whether or not bullets/bombs will blow up.  This does not disable block breakage, but it will pretty much nerf all block mass-destruction weapons."
+    },
+    "vehicleBlockBreaking": {
+      "value": true,
+      "comment": "Whether or not vehicles can break blocks when they run into them or blow up.  If false, vehicles will simply stop when they hit blocks."
+    },
+    "vehicleDestruction": {
+      "value": true,
+      "comment": "Whether or not vehicles can be destroyed by ramming into blocks at high speeds.  Set this to false if you don't like loosing vehicles to badly-placed walls."
+    },
+    "vehicleExplosions": {
+      "value": true,
+      "comment": "Whether or not vehicles explode when crashed or shot down.  If this is false, vehicles will simply poof when they crash."
+    },
+    "creativePlayerDamage": {
+      "value": false,
+      "comment": "If true, damage from vehicles and guns will be applied to creative players.  Not sure why you'd want this, but it's here."
+    },
+    "wheelBreakage": {
+      "value": true,
+      "comment": "Whether or not wheels can be broken (go flat)."
+    },
+    "wheelDamageIgnoreVelocity": {
+      "value": false,
+      "comment": "Whether or not velocity is ignored when calculating wheel damage."
+    },
+    "allowExternalDamage": {
+      "value": true,
+      "comment": "Whether or not non-IV things can damage vehicles, such as other mod's guns / tanks etc. Extends to any damage type, so it can be disabled if other mods weapons kill vehicles too quickly."
+    },
+    "propellerDamageFactor": {
+      "value": 1.0,
+      "comment": "Factor for damage caused by a propeller."
+    },
+    "jetDamageFactor": {
+      "value": 1.0,
+      "comment": "Factor for damage caused by a jet engine."
+    },
+    "wheelDamageFactor": {
+      "value": 1.0,
+      "comment": "Factor for damage caused by wheels on vehicles."
+    },
+    "blockCrashDamageFactor": {
+      "value": 1.0,
+      "comment": "Factor for damage received by vehicles when they crash into blocks and use crash speed thresholds."
+    },
+    "crashDamageFactor": {
+      "value": 1.0,
+      "comment": "Factor for damage received by players when their vehicle explodes in a crash."
+    },
+    "bulletDamageFactor": {
+      "value": 1.0,
+      "comment": "Factor for damage caused by bullets on vehicles."
+    },
+    "wheelDamageMinimumVelocity": {
+      "value": 0.2,
+      "comment": "Minimum velocity (blocks/second) which vehicles must be going to damage entities with their wheels."
+    },
+    "packBulletDamageFactors": {
+      "value": {
+        "mtsofficialpack": 1.0,
+        "mts40k": 1.0,
+        "mts": 1.0
+      },
+      "comment": "A mapping of pack-speciifc bullet damage factors.  These values will apply to all bullets in a pack when they hit something, be it a vehicle or entity."
+    }
+  },
+  "fuel": {
+    "comment1": "The following section is used for fuel configs for engines.  Each entry here is a single fuel type for engines.",
+    "comment2": "Inside each entry exist values for the potency of the fluids that can be considered to be that fuel type.",
+    "comment3": "You can make engines take different types of fluids for their fuels by editing these values.  See the in-game handbook for more information.",
+    "comment4": "If you are having troubles getting the name for a particular fluid, run the game with the mods you want and check the 'lastLoadedFluids' list.  This contains all the fluids that were present during the last run of the game.",
+    "comment5": "The first entry in the list is the registered fluid name, while the second entry will be the displayed name.  Only use the first name, as the second name changes based on game language settings.",
+    "fuels": {
+      "diesel": {
+        "creosote": 0.7,
+        "diesel": 1.0,
+        "lava": 1.0,
+        "oil": 0.5,
+        "biodiesel": 0.8
+      },
+      "furnace": {
+        "lava": 1.0
+      },
+      "brewing_stand": {
+        "lava": 1.0
+      },
+      "avgas": {
+        "lava": 1.0,
+        "gasoline": 1.0
+      },
+      "gasoline": {
+        "lava": 1.0,
+        "gasoline": 1.0,
+        "ethanol": 0.85
+      }
+    },
+    "lastLoadedFluids": {
+      "egg": "Dissolved Egg",
+      "minsol": "Mineral Slurry",
+      "syngas": "Syngas",
+      "bromine": "Alkyl Bromide",
+      "brine": "Brine",
+      "xenon": "Xenon Gas",
+      "magma": "Magma",
+      "petroil_leaded": "Leaded Petroil",
+      "ccl": "Carbon Tetrachloride",
+      "airblast": "Hot Air Blast",
+      "tea": "Tea",
+      "vitriol": "Vitriol",
+      "thoriumsalthot": "Hot Liquid Thorium Salt",
+      "petroil": "Petroil",
+      "cholesterol": "Cholesterol Solution",
+      "betterquesting.placeholder": "Placeholder",
+      "lightoil_vacuum": "Vacuum Light Oil",
+      "coalgas": "Coal Gasoline",
+      "crackoil": "Cracked Oil",
+      "stellarflux": "Stellar Flux",
+      "nmass": "N-MASS(II) Driver Fuel",
+      "smoke_leaded": "Leaded Smoke",
+      "bitumen": "Bitumen",
+      "milk": "Milk",
+      "perfluoromethyl_cold": "Cold Perfluoromethyl",
+      "crude_oil": "Crude Oil",
+      "ultrahotsteam": "Ultra Dense Steam",
+      "coolanthot": "Hot Coolant",
+      "perfluoromethylcold": "Cold Perfluoromethyl",
+      "dieselcrackreform": "High-Cetane Cracked Diesel",
+      "hotoilds": "Desulfurized Hot Crude Oil",
+      "nitan": "NITAN© 100 Octane Super Fuel",
+      "smear": "Industrial Oil",
+      "plasma_dt": "Deuterium-Tritium Plasma",
+      "pheromone_m": "Modified Booster Pheromone",
+      "wastefluid": "Liquid Nuclear Waste",
+      "heatingoil": "Heating Oil",
+      "acid_fluid": "Acid",
+      "hydrazine": "Hydrazine",
+      "aqueous_copper": "Aqueous Copper",
+      "mug_hot": "Hot Mug Root Beer",
+      "ccl_fluid": "fluid.ccl_fluid",
+      "oil_coker": "Coker Oil",
+      "reformate": "Reformate",
+      "sodiumhot": "Hot Liquid Sodium",
+      "melonjuice": "Melon Juice",
+      "heavywaterhot": "Hot Heavy Water",
+      "enderjuice": "Ender Juice",
+      "dhc": "Deuterated Hydrocarbon",
+      "schrabidic_fluid": "Schrabidic Acid",
+      "schrabidic": "Schrabidic Acid",
+      "carbondioxide": "Carbon Dioxide",
+      "uranium_bromide": "Uranium Bromide",
+      "stellar_flux": "Stellar Flux",
+      "heavyoilvacuum": "Vacuum Heavy Oil",
+      "gaseous_uranium_bromide": "Gaseous Uranium Bromide",
+      "helium": "Helium-3",
+      "blood": "Blood",
+      "sulfuric_acid_fluid": "fluid.sulfuric_acid_fluid",
+      "uraniumbromide": "Uranium Bromide",
+      "dicyanoacetylene": "Dicyanoacetylene",
+      "unsaturateds": "Unsaturated Hydrocarbons",
+      "leadhot": "Hot Liquid Lead",
+      "ugas": "Urlum Air",
+      "naphtha_coker": "Coker Naphtha",
+      "krypton": "Krypton Gas",
+      "hotcrackoilds": "Desulfurized Hot Cracked Oil",
+      "chlorocalcite_cleaned": "Cleaned Chlorocalcite Solution",
+      "lye": "Lye",
+      "xpjuice": "Experience Juice",
+      "bauxitesolution": "Bauxite Solution",
+      "coalgas_leaded": "Leaded Coal Gasoline",
+      "aromatics": "Aromatic Hydrocarbons",
+      "mushroomstew": "fluid.mushroomStew",
+      "diesel_reform": "High-Cetane Diesel",
+      "smoke_poison": "Poison Smoke",
+      "volcanic_lava_fluid": "Volcanic Lava",
+      "gas_coker": "Coker Gas",
+      "spentsteam": "Low-Pressure Steam",
+      "chloroethane": "Chloroethane",
+      "mughot": "Hot Mug Root Beer",
+      "hotoil_ds": "Desulfurized Hot Crude Oil",
+      "crackoil_ds": "Desulfurized Cracked Oil",
+      "blood_hot": "Hot Blood",
+      "aqueous_nickel": "Aqueous Nickel",
+      "halolight": "Light Halocarbons",
+      "rad_lava_fluid": "Volcanic Lava",
+      "sodiumaluminate": "Sodium Aluminate",
+      "scutterblood": "Scutterblood",
+      "thoriumbromide": "Thorium Bromide",
+      "hotcrackoil": "Hot Cracked Oil",
+      "diesel_crack": "Cracked Diesel",
+      "sodium": "Liquid Sodium",
+      "lightoilvacuum": "Vacuum Light Oil",
+      "heavyoil_vacuum": "Vacuum Heavy Oil",
+      "sulfuric_acid": "Sulfuric Acid",
+      "joolgas": "Jool Air",
+      "solvent": "Solvent",
+      "woodoil": "Wood Oil",
+      "gaseous_schrabidium_bromide": "Gaseous Schrabidium Bromide",
+      "wastegas": "Gaseous Nuclear Waste",
+      "witchwater": "Witch Water",
+      "gasoline": "Gasoline",
+      "heavywater": "Heavy Water",
+      "nmasstetranol": "N-MASS(III) Tetrahexaethanol",
+      "xylene": "BTX",
+      "hcl": "Hydrochloric Acid",
+      "alumina": "Alumina",
+      "lava": "Lava",
+      "thoriumsalt": "Liquid Thorium Salt",
+      "superheated_hydrogen": "Superheated Hydrogen",
+      "thorium_salt": "Liquid Thorium Salt",
+      "nitroglycerin": "Nitroglycerin",
+      "honey": "Honey",
+      "gas": "Natural Gas",
+      "oilcoker": "Coker Oil",
+      "sas3": "Schrabidium Trisulfide",
+      "vinyl": "Vinyl Chloride",
+      "fluorine": "Fluorine",
+      "pain": "Pandemonium(III)tantalite Solution",
+      "lightoilds": "Desulfurized Light Oil",
+      "nitrogen": "Liquid Nitrogen",
+      "watz": "Poisonous Mud",
+      "hotsteam": "Dense Steam",
+      "natural_gas": "Natural Gas",
+      "earthair": "Oxygen-Rich Air",
+      "chlorine": "Chlorine Gas",
+      "naphthacrack": "Cracked Naphtha",
+      "gas_watz": "Gaseous Poisonous Mud",
+      "mercury_fluid": "fluid.mercury_fluid",
+      "plasma_bf": "Balefire Plasma",
+      "coffee": "Coffee",
+      "coalgasleaded": "Leaded Coal Gasoline",
+      "coolant_hot": "Hot Coolant",
+      "chloromethane": "Chloromethane",
+      "lithcarbonate": "Lithium Bicarbonate Aerosol",
+      "sunfloweroil": "Sunflower Seed Oil",
+      "seedslurry": "Seeding Slurry",
+      "cryogel": "Cryogel",
+      "ammonia": "Ammonia",
+      "chlorocalcite_solution": "Chlorocalcite Solution",
+      "hydrogen": "Liquid Hydrogen",
+      "phosgene": "Phosgene",
+      "uranium_hexafluoride": "Uranium Hexafluoride",
+      "peroxide": "Hydrogen Peroxide",
+      "kerosenereform": "Jet Fuel",
+      "potassium_chloride": "Potassiumchloride Solution",
+      "thoriumsaltdepleted": "Depleted Liquid Thorium Salt",
+      "customdemo": "Custom Demo",
+      "dunaair": "Duna Air",
+      "fishoil": "Fish Oil",
+      "bloodhot": "Hot Blood",
+      "toxic_fluid": "Stereotypical Green Ooze",
+      "tektoair": "Tekto Air",
+      "coppersulfate": "Copper Sulfate",
+      "tritium": "Tritium",
+      "naphtha_crack": "Cracked Naphtha",
+      "biofuel": "Biofuel",
+      "helium3": "Helium-3",
+      "helium4": "Helium-4",
+      "heavyoil": "Heavy Oil",
+      "coaloil": "Coal Oil",
+      "cream": "Heavy Whipping Cream",
+      "aqueousnickel": "Aqueous Nickel",
+      "bauxite_solution": "Bauxite Solution",
+      "naphtha_ds": "Desulfurized Naphtha",
+      "perfluoromethyl": "Perfluoromethyl",
+      "aqueouscopper": "Aqueous Copper",
+      "kerosene_reform": "Jet Fuel",
+      "argon": "Argon Gas",
+      "iongel": "Ionic Gel",
+      "lightoilcrack": "Cracked Light Oil",
+      "sourgas": "Sour Gas",
+      "calcium_chloride": "Calciumchloride Solution",
+      "conglomera": "Conglomera",
+      "coolant": "Coolant",
+      "sarnusgas": "Sarnus Air",
+      "hgas": "Halide Gas",
+      "diesel": "Diesel",
+      "heavywater_hot": "Hot Heavy Water",
+      "dieselcrack": "Cracked Diesel",
+      "heavy_oil": "Heavy Oil",
+      "oxyhydrogen": "Oxyhydrogen",
+      "air": "Compressed Air",
+      "ethanol": "Ethanol",
+      "lightoil_crack": "Cracked Light Oil",
+      "htco4": "Pertechnetic Acid",
+      "balefire": "BF Rocket Fuel",
+      "methanol": "Methanol",
+      "cmilk": "Condensed Milk",
+      "sodium_aluminate": "Sodium Aluminate",
+      "fracksol": "Fracking Solution",
+      "nitric_acid": "Nitric Acid",
+      "pheromone": "Booster Pheromone",
+      "estradiol": "Estradiol Solution",
+      "chlorocalcite_mix": "Mixed Chlorocalcite Solution",
+      "puf6": "Plutonium Hexafluoride",
+      "lpg": "LPG",
+      "pheromonem": "Modified Booster Pheromone",
+      "reclaimed": "Reclaimed Industrial Oil",
+      "tcrude": "Tektonic Crude",
+      "perfluoromethyl_hot": "Hot Perfluoromethyl",
+      "naphtha": "Naphtha",
+      "nitricacid": "Nitric Acid",
+      "lead": "Liquid Lead",
+      "mud_fluid": "Poisonous Mud",
+      "polythylene": "Polythylene",
+      "amat": "Antimatter",
+      "thorium_salt_hot": "Hot Liquid Thorium Salt",
+      "oil_ds": "Desulfurized Crude Oil",
+      "crackoilds": "Desulfurized Cracked Oil",
+      "corium_fluid": "Corium",
+      "bromine_fluid": "fluid.bromine_fluid",
+      "gaseous_plutonium_bromide": "Gaseous Plutonium Bromide",
+      "aschrab": "Antischrabidium",
+      "plasma_xm": "Helium-4-Oxygen Plasma",
+      "fuel": "Petroil",
+      "smilk": "Strawberry Milk",
+      "gascoker": "Coker Gas",
+      "plasma_hd": "Hydrogen-Deuterium Plasma",
+      "endergoo": "Ender Goo",
+      "cbenz": "Chlorinated Benzenes",
+      "elbowgrease": "Elbow Grease",
+      "petroilleaded": "Leaded Petroil",
+      "deuterium": "Deuterium",
+      "perfluoromethylhot": "Hot Perfluoromethyl",
+      "bloodgas": "Blood Fuel",
+      "ngas": "Neidon Air",
+      "petroleum": "Petroleum Gas",
+      "oxygen": "Liquid Oxygen",
+      "gasolineleaded": "Leaded Gasoline",
+      "naphthacoker": "Coker Naphtha",
+      "sodium_hot": "Hot Liquid Sodium",
+      "heatingoilvacuum": "Heavy Heating Oil",
+      "oilds": "Desulfurized Crude Oil",
+      "water": "Water",
+      "hotoil": "Hot Crude Oil",
+      "gasoline_leaded": "Leaded Gasoline",
+      "heatingoil_vacuum": "Heavy Heating Oil",
+      "carbon_dioxide": "Carbon Dioxide",
+      "diesel_crack_reform": "High-Cetane Cracked Diesel",
+      "mug": "Mug Root Beer",
+      "fullerene": "Fullerene Solution",
+      "plasma_ht": "Hydrogen-Tritium Plasma",
+      "concrete": "Liquid Concrete",
+      "sulfuricacid": "Sulfuric Acid",
+      "gaseous_thorium_bromide": "Gaseous Thorium Bromide",
+      "emilk": "Evaporated Milk",
+      "uf6": "Uranium Hexafluoride",
+      "death": "Osmiridic Solution",
+      "mercury": "Mercury",
+      "superhotsteam": "Super Dense Steam",
+      "hotcrackoil_ds": "Desulfurized Hot Cracked Oil",
+      "colloid": "Colloid",
+      "light_oil": "Light Oil",
+      "thorium_salt_depleted": "Depleted Liquid Thorium Salt",
+      "radiosolvent": "High-Performance Solvent",
+      "redmud": "Red Mud",
+      "naphthads": "Desulfurized Naphtha",
+      "calcium_solution": "Calcium Solution",
+      "slop": "Ore Slop",
+      "oil": "Crude Oil",
+      "salient": "Salient Green",
+      "steam": "Steam",
+      "lightoil": "Light Oil",
+      "lead_hot": "Hot Liquid Lead",
+      "neon": "Neon Gas",
+      "lightoil_ds": "Desulfurized Light Oil",
+      "flue": "Flue Gas",
+      "kmno4": "Potassium Permanganate Solution",
+      "biogas": "Biogas",
+      "coalcreosote": "Coal Tar Creosote",
+      "lithydro": "Lithium Hydroxide Aerosol",
+      "smoke": "Smoke",
+      "kerosene": "Kerosene",
+      "reformgas": "Reformate Gas",
+      "mustardgas": "Mustard Gas",
+      "plasma_dh3": "Deuterium-Helium-3 Plasma",
+      "eveair": "Eve Air",
+      "custom_demo": "Custom Demo",
+      "dieselreform": "High-Cetane Diesel",
+      "thorium_bromide": "Thorium Bromide",
+      "lubricant": "Engine Lubricant"
+    }
+  }
+}

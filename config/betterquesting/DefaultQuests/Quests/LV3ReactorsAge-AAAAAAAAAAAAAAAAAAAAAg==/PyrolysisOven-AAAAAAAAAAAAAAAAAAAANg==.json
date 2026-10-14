@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §3Pyrolysis Oven§r is a mid-to-late game oil processing machine that allows easier production pf §6Crystalline Fullerite§r, which is needed in bulk for late-game machines onwards. \n\nIt can process an item with an optional fluid to produce another item and/or fluid. Functionally, it works similar to the §3Combination Oven§r, mostly in bedrock ore processing.\nIts main use however is in production of §6Fullerene§r, as it can turn §6Tar§r into §6Fine Soot§r, eliminating the RNG of a §3Smokestack§r.\n\nOperating the pyrolysis oven will consume §e200kHE/s§r.",
+      "desc:8": "The §3Pyrolysis Oven§r is a mid-to-late game replacement for the §3Coker Unit§r that produces §6Solid Fuel§r instead of petroleum coke and allows easier production of §6Crystalline Fullerite§r, which is needed in bulk for late-game machines onwards. \n\nIt can process an item with an optional fluid to produce another item and/or fluid. Functionally, it works similar to the §3Combination Oven§r, mostly in bedrock ore processing.\nIts main use however is in production of §6Fullerene§r, as it can turn §6Tar§r into §6Fine Soot§r, eliminating the RNG of a §3Smokestack§r.\n\nOperating the pyrolysis oven will consume §e200kHE/s§r.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -27,6 +27,7 @@
       },
       "isMain:1": 1,
       "isSilent:1": 0,
+      "is_final:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Pyrolysis Oven",
       "notification_duration:5": -1.0,
@@ -44,6 +45,9 @@
       "notification_title:8": "",
       "notification_title_scale:5": -1.0,
       "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,

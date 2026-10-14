@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §3Chemical Plant§r is a machine needed for several processes, turning fluids into other fluids, synthesis of different compounds, ect. Like the §3Assembly Machine§r, recipes can be selected entirely within the GUI.",
+      "desc:8": "The §3Chemical Plant§r is a machine needed for several processes, turning fluids into other fluids, synthesis of different compounds, etc. Key early recipes: desh, polymer, hydrogen peroxide and sulfuric acid. Like the §3Assembly Machine§r, recipes can be selected entirely within the GUI.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -27,6 +27,7 @@
       },
       "isMain:1": 1,
       "isSilent:1": 0,
+      "is_final:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Chemical Plant",
       "notification_duration:5": -1.0,
@@ -44,6 +45,9 @@
       "notification_title:8": "",
       "notification_title_scale:5": -1.0,
       "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,

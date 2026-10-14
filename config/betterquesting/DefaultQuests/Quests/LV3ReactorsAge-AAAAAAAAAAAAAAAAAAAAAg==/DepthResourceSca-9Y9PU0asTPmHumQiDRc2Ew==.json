@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §3Depth-Resource Scanning Satellite§r maps underground ore deposits across loaded chunks. It is operated via §dRedstone-over-Radio§r through a §3Satellite Ground Station§r.\n\nThe map lacks labels and detail on its own. Pairing the satellite with §6Neutrino Lenses§r - an armor module linked to the same frequency via the §3Satellite ID Manager§r - overlays ores as glowing labeled outlines, making the data far more usable.",
+      "desc:8": "The §3Depth-Resource Scanning Satellite§r maps underground ore deposits across loaded chunks. It needs no ground-station commands: link it to §6Neutrino Lenses§r on the same frequency via the §3Satellite ID Manager§r.\n\nThe map lacks labels and detail on its own. Pairing the satellite with §6Neutrino Lenses§r - an armor module linked to the same frequency via the §3Satellite ID Manager§r - overlays ores as glowing labeled outlines, making the data far more usable.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -38,6 +38,7 @@
       },
       "isMain:1": 1,
       "isSilent:1": 0,
+      "is_final:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Depth-Resource Scanning Satellite",
       "notification_duration:5": -1.0,
@@ -55,6 +56,9 @@
       "notification_title:8": "",
       "notification_title_scale:5": -1.0,
       "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,

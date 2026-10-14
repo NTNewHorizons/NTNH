@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §3Particle Accelerator§r is a highly modular machine that uses high strength superconducting magnets to accelerate particles to relativistic speeds in order to collide them together.\n\nDue to the complex and expansive nature of the particle accelerator, it is highly recommend that the wiki is checked out as it provides more information.\n\n[url]https://nucleartech.wiki/wiki/Particle_Accelerator[/url]\n\n§2This quest demands the most essential parts of the particle accelerator, and does not represent the amount needed for it to function.",
+      "desc:8": "The §3Particle Accelerator§r is a highly modular machine that uses high strength superconducting magnets to accelerate particles to relativistic speeds in order to collide them together.\n\nDue to the complex and expansive nature of the particle accelerator, it is highly recommend that the wiki is checked out as it provides more information.\n\n[url]https://nucleartech.wiki/wiki/Particle_Accelerator[/url]\n\n§2This quest demands the most essential parts of the particle accelerator, and does not represent the amount needed for it to function. The in-game QMAW manual\u0027s PA Guide chapter gives a tested starter ring (source, beamlines, dipoles with gold coils, RFC, quadrupole and detector, plus power and cold-PFM cooling) - follow it before scaling up.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -27,6 +27,7 @@
       },
       "isMain:1": 1,
       "isSilent:1": 0,
+      "is_final:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Particle Accelerator",
       "notification_duration:5": -1.0,
@@ -44,6 +45,9 @@
       "notification_title:8": "",
       "notification_title_scale:5": -1.0,
       "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,

@@ -22,7 +22,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "With access to §6Tantalium§r for §6Control Units§r and fissile matterials, it is possible to assemble a nuclear bomb. To detonate the bomb one can use a detonator or a redstone signal.\n\nA nuclear explosion will transform ores into more valuable ones, such as §6Coal§r to §6Diamonds§r or §6Uranium§r to §6Schrabidium§r. Be prepared with radiation resistant armor before venturing into the crater.\n\nMake sure to stand behind some strong cover if you wish to see the explosion from close by.\n\n§2This quest serves as a list of components needed for various bombs. Some of these components can be mounted onto rockets that will carry the payload over large distances.",
+      "desc:8": "With access to §6Tantalium§r for §6Control Units§r and fissile materials, it is possible to assemble a nuclear bomb. Control units are made as capacitor boards using tantalum. To detonate the bomb one can use a detonator or a redstone signal.\n\nA nuclear explosion will transform ores into more valuable ones, such as §6Coal§r to §6Diamonds§r or §6Uranium§r to §6Schrabidium§r. Be prepared with radiation resistant armor before venturing into the crater.\n\nMake sure to stand behind some strong cover if you wish to see the explosion from close by.\n\n§2This quest serves as a list of components needed for various bombs. Some of these components can be mounted onto rockets that will carry the payload over large distances.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -32,6 +32,7 @@
       },
       "isMain:1": 0,
       "isSilent:1": 0,
+      "is_final:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Nuclear Bombs",
       "notification_duration:5": -1.0,
@@ -49,6 +50,9 @@
       "notification_title:8": "",
       "notification_title_scale:5": -1.0,
       "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,
