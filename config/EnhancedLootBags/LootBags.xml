@@ -21,6 +21,7 @@
         <Loot Identifier="trash_bone" ItemName="minecraft:bone" Amount="1" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="trash_microsoft" ItemName="imc:block_microsoft_carpet" Amount="1" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="trash_spider" ItemName="minecraft:spider_eye" Amount="1" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="trash_yellow_barrel" ItemName="hbm:tile.yellow_barrel" Amount="1" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="1" GroupName="LV1 - Early Game" Rarity="0" MinItems="1" MaxItems="3" CombineTrashGroup="true">
         <Loot Identifier="lv1_circuit_8" ItemName="hbm:item.circuit:8" Amount="2" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -41,12 +42,7 @@
         <Loot Identifier="lv1_hazmat_kit" ItemName="hbm:item.hazmat_kit" Amount="1" NBTTag="" Chance="35" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="lv1_bobmazon" ItemName="hbm:item.bobmazon" Amount="1" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="lv1_ingot_asbestos" ItemName="hbm:item.ingot_asbestos" Amount="8" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="lv1_minecraft_rotten_flesh" ItemName="minecraft:rotten_flesh" Amount="5" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="lv1_minecraft_carrot" ItemName="minecraft:carrot" Amount="4" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="lv1_minecraft_potato" ItemName="minecraft:potato" Amount="4" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="lv1_minecraft_beef" ItemName="minecraft:beef" Amount="16" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="lv1_minecraft_melon" ItemName="minecraft:melon" Amount="9" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="lv1_minecraft_water_bucket" ItemName="minecraft:water_bucket" Amount="1" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="lv1_battery_generic" ItemName="hbm:item.battery_generic" Amount="1" NBTTag="{charge:5000L}" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="lv1_syringe_metal_stimpak" ItemName="hbm:item.syringe_metal_stimpak" Amount="4" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="lv1_plan_c" ItemName="hbm:item.plan_c" Amount="1" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="1" RandomAmount="true"/>
@@ -62,13 +58,13 @@
         <Loot Identifier="lv1_circuit" ItemName="hbm:item.circuit" Amount="1" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="lv1_circuit_8_1" ItemName="hbm:item.circuit:8" Amount="1" NBTTag="" Chance="50" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="lv1_chunk_ore_2" ItemName="hbm:item.chunk_ore:2" Amount="4" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="lv1_ingot_tungsten" ItemName="hbm:item.ingot_tungsten" Amount="6" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="lv1_ingot_tungsten" ItemName="hbm:item.ingot_tungsten" Amount="4" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="lv1_hazmat_cloth" ItemName="hbm:item.hazmat_cloth" Amount="12" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="lv1_plate_dura_steel" ItemName="hbm:item.plate_dura_steel" Amount="6" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="lv1_chunk_ore_1" ItemName="hbm:item.chunk_ore:1" Amount="5" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="lv1_ingot_graphite" ItemName="hbm:item.ingot_graphite" Amount="8" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="lv1_ingot_lead" ItemName="hbm:item.ingot_lead" Amount="17" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="lv1_ingot_tungsten_1" ItemName="hbm:item.ingot_tungsten" Amount="15" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="lv1_ingot_graphite" ItemName="hbm:item.ingot_graphite" Amount="5" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="lv1_ingot_lead" ItemName="hbm:item.ingot_lead" Amount="10" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="lv1_ingot_tungsten_1" ItemName="hbm:item.ingot_tungsten" Amount="7" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="lv1_briquette" ItemName="hbm:item.briquette" Amount="24" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="lv1_filter_coal" ItemName="hbm:item.filter_coal" Amount="3" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="lv1_hazmat_cloth_red" ItemName="hbm:item.hazmat_cloth_red" Amount="8" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -79,8 +75,12 @@
         <Loot Identifier="lv1_pill_herbal_1" ItemName="hbm:item.pill_herbal" Amount="4" NBTTag="" Chance="56" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="lv1_loop_stew" ItemName="hbm:item.loop_stew" Amount="4" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="lv1_stick_dynamite" ItemName="hbm:item.stick_dynamite" Amount="12" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="lv1_grenade_generic" ItemName="hbm:item.grenade_generic" Amount="7" NBTTag="" Chance="34" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
-        <Loot Identifier="lv1_grenade_strong" ItemName="hbm:item.grenade_strong" Amount="4" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="gas_mask_filter" ItemName="hbm:item.gas_mask_filter" Amount="1" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="canister_lubricant" ItemName="hbm:item.canister_full:18" Amount="1" NBTTag="" Chance="9" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="blueprint_lv1" ItemName="hbm:item.blueprint_folder:0" Amount="1" NBTTag="" Chance="3" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="blueprint_booklet_lv1" ItemName="hbm:item.blueprint_folder:1" Amount="1" NBTTag="" Chance="1" ItemGroup="" LimitedDropCount="1" RandomAmount="true"/>
+        <Loot Identifier="bufka_plushie" ItemName="hbm:tile.plushie:1" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="number_nine_plushie" ItemName="hbm:tile.plushie:3" Amount="1" NBTTag="" Chance="60" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="2" GroupName="LV2 - Oil Age" Rarity="0" MinItems="1" MaxItems="3" CombineTrashGroup="true">
         <Loot Identifier="lv2_ingot_u235" ItemName="hbm:item.ingot_u235" Amount="2" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -135,6 +135,9 @@
         <Loot Identifier="lv2_plate_cast_2200" ItemName="hbm:item.plate_cast:2200" Amount="2" NBTTag="" Chance="65" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="lv2_drill_titanium" ItemName="hbm:item.drill_titanium" Amount="1" NBTTag="" Chance="85" ItemGroup="" LimitedDropCount="1" RandomAmount="true"/>
         <Loot Identifier="lv2_circuit_10" ItemName="hbm:item.circuit:10" Amount="1" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="blueprint_lv2" ItemName="hbm:item.blueprint_folder:0" Amount="1" NBTTag="" Chance="9" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="blueprint_booklet_lv2" ItemName="hbm:item.blueprint_folder:1" Amount="1" NBTTag="" Chance="3" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+
     </LootGroup>
     <LootGroup GroupMetaID="3" GroupName="LV3 - Reactors Age" Rarity="0" MinItems="1" MaxItems="3" CombineTrashGroup="true">
         <Loot Identifier="lv3_anvil_ferrouranium" ItemName="hbm:tile.anvil_ferrouranium" Amount="1" NBTTag="" Chance="55" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -198,6 +201,8 @@
         <Loot Identifier="lv3_ingot_tcalloy" ItemName="hbm:item.ingot_tcalloy" Amount="2" NBTTag="" Chance="30" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="lv3_upgrade_effect_3" ItemName="hbm:item.upgrade_effect_3" Amount="1" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="lv3_plate_welded_43" ItemName="hbm:item.plate_welded:43" Amount="1" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="blueprint_lv3" ItemName="hbm:item.blueprint_folder:0" Amount="1" NBTTag="" Chance="15" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="blueprint_booklet_lv3" ItemName="hbm:item.blueprint_folder:1" Amount="1" NBTTag="" Chance="6" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="4" GroupName="LV3.5 - Space Age" Rarity="0" MinItems="1" MaxItems="3" CombineTrashGroup="true">
         <Loot Identifier="lv4_laythe_coral_block" ItemName="hbm:tile.laythe_coral_block" Amount="24" NBTTag="" Chance="75" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -259,6 +264,8 @@
         <Loot Identifier="lv4_motor_desh" ItemName="hbm:item.motor_desh" Amount="7" NBTTag="" Chance="45" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="lv4_motor_bismuth" ItemName="hbm:item.motor_bismuth" Amount="4" NBTTag="" Chance="25" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="lv4_tank_steel" ItemName="hbm:item.tank_steel" Amount="12" NBTTag="" Chance="56" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="blueprint_lv4" ItemName="hbm:item.blueprint_folder:0" Amount="1" NBTTag="" Chance="17" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="blueprint_booklet_lv4" ItemName="hbm:item.blueprint_folder:1" Amount="1" NBTTag="" Chance="9" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="5" GroupName="LV4 - End Game" Rarity="0" MinItems="1" MaxItems="3" CombineTrashGroup="true">
         <Loot Identifier="cookiedropbecauseempty" ItemName="minecraft:cookie" Amount="64" NBTTag="" Chance="100" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
@@ -296,6 +303,8 @@
         <Loot Identifier="lv5_tem_flakes_2" ItemName="hbm:item.tem_flakes:2" Amount="32" NBTTag="" Chance="47" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="lv5_tem_flakes_1" ItemName="hbm:item.tem_flakes:1" Amount="32" NBTTag="" Chance="48" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
         <Loot Identifier="lv5_tem_flakes" ItemName="hbm:item.tem_flakes" Amount="32" NBTTag="" Chance="9" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="blueprint_lv5" ItemName="hbm:item.blueprint_folder:0" Amount="1" NBTTag="" Chance="23" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
+        <Loot Identifier="blueprint_booklet_lv5" ItemName="hbm:item.blueprint_folder:1" Amount="1" NBTTag="" Chance="12" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>
     </LootGroup>
     <LootGroup GroupMetaID="6" GroupName="Applied Energistics" Rarity="0" MinItems="1" MaxItems="3" CombineTrashGroup="true">
         <Loot Identifier="applied_energistics_itemmultimaterial_42" ItemName="appliedenergistics2:item.ItemMultiMaterial:42" Amount="4" NBTTag="" Chance="26" ItemGroup="" LimitedDropCount="0" RandomAmount="true"/>

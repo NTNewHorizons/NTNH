@@ -1,0 +1,33 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "exnihilocreatio:block_crucible_big",
+    "textures": {
+      "particle": "minecraft:blocks/log_oak",
+      "top": "minecraft:blocks/log_oak",
+      "bottom": "minecraft:blocks/log_oak",
+      "side": "minecraft:blocks/log_oak",
+      "inside": "minecraft:blocks/log_oak"
+    }
+  },
+  "variants": {
+    "thin": {
+      "true": {
+        "model": "exnihilocreatio:block_crucible_thin"
+      },
+      "false": {
+        "model": "exnihilocreatio:crucible_base",
+        "textures": {
+          "particle": "exnihilocreatio:blocks/wood_crucible",
+          "texture": "exnihilocreatio:blocks/wood_crucible"
+        }
+      }
+    },
+    "normal": [
+      {}
+    ],
+    "inventory": [
+      {}
+    ]
+  }
+}

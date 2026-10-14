@@ -107,3 +107,6 @@ mods.nei.NEI.hide(<exnihilo:aluminum_dust>);
 mods.nei.NEI.hide(<ProjRed|Core:projectred.core.part:52>);
 mods.nei.NEI.hide(<etfuturum:copper_ingot>);
 mods.nei.NEI.hide(<etfuturum:copper_ore>);
+mods.nei.NEI.hide(<imc:item_wooden_bucket>);
+mods.nei.NEI.hide(<imc:item_wooden_bucket_water>);
+mods.nei.NEI.hide(<imc:item_wooden_bucket_milk>);

@@ -1,0 +1,32 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "transform": "forge:default-block",
+        "model": "tconstruct:smeltery_controller",
+        "uvlock": true
+    },
+	"variants": {
+        "active": {
+            "true": {
+                "textures": { "front": "tconstruct:blocks/smeltery/smeltery_active" }
+            },
+            "false": {
+                "textures": { "front": "tconstruct:blocks/smeltery/smeltery_inactive" }
+            }
+        },
+        "facing": {
+            "north": {
+                "y": 0
+            },
+            "east": {
+                "y": 90
+            },
+            "south": {
+                "y": 180
+            },
+            "west": {
+                "y": 270
+            }
+        }
+    }
+}

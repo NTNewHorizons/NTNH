@@ -1,0 +1,48 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "exnihilocreatio:block_crucible_big",
+    "textures": {
+      "particle": "exnihilocreatio:blocks/blockcrucible",
+      "top": "exnihilocreatio:blocks/blockcrucible",
+      "bottom": "exnihilocreatio:blocks/blockcrucible",
+      "side": "exnihilocreatio:blocks/blockcrucible",
+      "inside": "exnihilocreatio:blocks/blockcrucible"
+    }
+  },
+  "variants": {
+    "fired=true,thin=true": {
+      "model": "exnihilocreatio:block_crucible_thin"
+    },
+    "fired=true,thin=false": {
+      "model": "exnihilocreatio:crucible_base",
+      "textures": {
+        "particle": "exnihilocreatio:blocks/fired_crucible",
+        "texture": "exnihilocreatio:blocks/fired_crucible"
+      }
+    },
+    "fired=false,thin=true": {
+      "model": "exnihilocreatio:block_crucible_thin",
+      "textures": {
+        "particle": "exnihilocreatio:blocks/blockcrucibleunfired",
+        "top": "exnihilocreatio:blocks/blockcrucibleunfired",
+        "bottom": "exnihilocreatio:blocks/blockcrucibleunfired",
+        "side": "exnihilocreatio:blocks/blockcrucibleunfired",
+        "inside": "exnihilocreatio:blocks/blockcrucibleunfired"
+      }
+    },
+    "fired=false,thin=false": {
+      "model": "exnihilocreatio:crucible_base",
+      "textures": {
+        "particle": "exnihilocreatio:blocks/unfired_crucible",
+        "texture": "exnihilocreatio:blocks/unfired_crucible"
+      }
+    },
+    "normal": [
+      {}
+    ],
+    "inventory": [
+      {}
+    ]
+  }
+}

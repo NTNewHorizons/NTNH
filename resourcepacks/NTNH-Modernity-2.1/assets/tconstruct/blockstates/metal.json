@@ -1,0 +1,51 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "transform": "forge:default-block",
+        "model": "cube_all"
+    },
+	"variants": {
+        "type": {
+            "cobalt": {
+                "textures": { "all": "tconstruct:blocks/block_cobalt" }
+            },
+            "ardite": {
+                "model": "cube_column",
+				"textures": {
+					"side": "tconstruct:blocks/block_ardite",
+                    "end": "tconstruct:blocks/block_ardite_end"
+				}
+            },
+            "manyullyn": {
+                "textures": { "all": "tconstruct:blocks/block_manyullyn" }
+            },
+            "knightslime": {
+                "textures": { "all": "tconstruct:blocks/block_knightslime" }
+            },
+            "pigiron": {
+				"model": "cube",
+				"textures": {
+					"down": "tconstruct:blocks/block_pigiron_bottom",
+					"up": "tconstruct:blocks/block_pigiron_top",
+					"west": "tconstruct:blocks/block_pigiron_left",
+					"east": "tconstruct:blocks/block_pigiron_right",
+					"north": "tconstruct:blocks/block_pigiron_front",
+					"south": "tconstruct:blocks/block_pigiron_back",
+					"particle": "#north"
+				}
+            },
+            "alubrass": {
+                "textures": { "all": "tconstruct:blocks/block_alubrass" }
+            },
+            "silky_jewel": {
+                "textures": { "all": "tconstruct:blocks/block_silky_jewel" }
+            }
+        },
+		"facing": {
+			"north": {},
+			"south": { "y": 180 },
+			"west": { "y": 270 },
+			"east": { "y": 90 }
+		}
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "transform": "forge:default-block",
+        "model": "cube_all"
+    },
+	"variants": {
+        "type": {
+            "cobalt": {
+                "textures": { "all": "tconstruct:blocks/nether_ore_cobalt" }
+            },
+            "ardite": {
+                "textures": { "all": "tconstruct:blocks/nether_ore_ardite" }
+            }
+        }
+    }
+}

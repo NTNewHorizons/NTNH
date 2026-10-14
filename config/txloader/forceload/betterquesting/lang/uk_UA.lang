@@ -17,16 +17,24 @@ betterquesting.quest.-FdHmQJDSNCih5noZiI5-w.desc=Вітаємо. Ти це зр�
 betterquesting.quest.-OxoBRz7Spqm0rVUNxRVpA.name=Двигун Стірлінга
 betterquesting.quest.-OxoBRz7Spqm0rVUNxRVpA.desc=§3Двигун Стірлінга§r використовує тепло від §3нагрівальної печі§r або §3§r§3топки§r для вироблення енергії. Якщо для нагрівання двигуна Стірлінга використовувати нагрівальну піч, він, ймовірно, перегріється і вийде з ладу, а головна шестерня відлетить. Важкий двигун Стірлінга не має цієї проблеми.%n%nТопка, що працює на вугіллі з двигуном Стірлінга, виробляє §e2kHE/s§r, тоді як нагрівальна піч з важким двигуном Стірлінга виробляє §e10kHE/s§r.
 
+# Quest: Additional Fluid Tools
+betterquesting.quest.0-Ws1mY3SeeFcyIcv2LKNQ.name=Додаткові інструменти рідини
+betterquesting.quest.0-Ws1mY3SeeFcyIcv2LKNQ.desc=§6Сифон§r це інструмент, який використовується для вилучення вхідних рідин з машини. Клік правої кнопки миші вміст вхідних танків заповнить будь які рідини, універсальні танки або трубопроводи (якщо сума рідини не може заповнювати будь-який з попередніх варіантів).%n%n§6Піпетки§r можна використовувати для введення певних сум рідин. Натискання правою клавішею або Shift-правою кнопкою збільшить або зменшить суму рідини.
+
 # Quest: Steam Engine
 betterquesting.quest.1WdjJYUsRMKgt4MYnlmM7A.name=Паровий Двигун
-betterquesting.quest.1WdjJYUsRMKgt4MYnlmM7A.desc=The §3Steam Engine§r is an early game method of turning §bSteam§r into energy. It requires an external source to provide steam and a way to dump or reprocess the §bLow-Pressure Steam§r it produces. %n%nThe Steam Engine has an energy efficiency of §e85%%§r, making it better than the §3Stirling Engine§r. However, it still has a throughput limit as it can only hold up to 2000 mB of steam. Its maximum processing rate is 2000 mB/t, producing a considerable §e3400 HE/t§r or §e68 kHE/s§r. It is therefore the best generator available before §3Steam Turbines§r.%n%nA boiler being heated up by a heating oven using coal will produce §e17kHE/s§r.
+betterquesting.quest.1WdjJYUsRMKgt4MYnlmM7A.desc=§3Паровий Двигун§r - це спосіб перетворення §bПару§r на енергію на початку гри. Для його роботи потрібне зовнішнє джерело пару, а також спосіб скидання або повторної переробки §bпару низького тиску§r, що утворюється. %n%nПаровий двигун має єффектифність §e85%%§r, що робить його кращим за §3Двигун Стірлінга§r. Однак він все ще має обмеження пропускної здатності, оскільки може вмістити лише до 2000 мБ пару. Його максимальна швидкість обробки становить 2000 мБ/т, що дає значні §e3400 HE/т§r або §e68 кHE/с§r. Тому це найкращий генератор, доступний до появи §3Парових турбін§r.%n%nБойлер, що нагрівається в печі на вугіллі, вироблятиме §e17кHE/с§r.
+
+# Quest: Automatic Thresher
+betterquesting.quest.3o6RE2fyQyaYt65j_dZ2HQ.name=Автоматична молотарка
+betterquesting.quest.3o6RE2fyQyaYt65j_dZ2HQ.desc=§3Автоматична молотарка§r збирає урожай наприклад §6Пшениця§r, §6Конопля§r, §6Цукрова тростина§r, у 7х7 радіусі коли поставляється паливом. Вона буде викидувати всі елементи заду.%n%n[F1] для отримання додаткової інформації.
 
 # Quest: Abandoned Structures
 betterquesting.quest.4d7s5-1MQxyI3YcrDSL98g.name=Покинуті споруди
 betterquesting.quest.4d7s5-1MQxyI3YcrDSL98g.desc=Будівлі з’являються по всьому світу і є одними з найкращих джерел ресурсів на початку гри. Якщо їх розграбувати, не вкладаючи значних коштів у виробництво, можна заощадити чимало часу та матеріалів.%n%n§2Дослідження окупаються вже на початку гри - огляньте околиці, перш ніж витрачати час на збір ресурсів, які можна знайти безкоштовно.§r
 
 # Quest: Flare Stack
-betterquesting.quest.4i9qqJhbSgC0UQ8pB9PD4g.name=Flare Stack
+betterquesting.quest.4i9qqJhbSgC0UQ8pB9PD4g.name=Факельна вежа
 betterquesting.quest.4i9qqJhbSgC0UQ8pB9PD4g.desc=The §3Flare Stack§r is a generator that produces energy by burning flammable liquids and gases. Any fluid tagged as Flammable can serve as fuel - supply it through pipes or directly via containers.%n%nOperation uses three steps. First, fill the internal buffer (capacity: §e64,000 mB§r) with fuel. Second, open the §6Flow Valve§r at the top of the middle section to release fuel from the buffer into the combustion system. Third, enable the §6Ignition§r switch at the bottom of the middle section to ignite the fuel and begin power generation.%n%nEfficiency is low: gases burn at §e50%%§r and liquids at only §e10%%§r. Output also varies by fuel type.%n%nTwo upgrades are available: the §6Speed Upgrade§r increases throughput, and the §6Effectiveness Upgrade§r improves fuel efficiency.
 
 # Quest: Batteries
@@ -39,7 +47,7 @@ betterquesting.quest.63Mkw5ZqT6iefbQvFZ_EDQ.desc=Ласкаво просимо �
 
 # Quest: Nailed It!
 betterquesting.quest.6l98ozdcQFqJOan6BC4kMA.name=Молоток!
-betterquesting.quest.6l98ozdcQFqJOan6BC4kMA.desc=The §6Hammer§r is a tool from §dEx Nihilo§r used to crush blocks down into finer forms. Its primary role is producing the materials needed for the §3Sieve§r: cobblestone is crushed into gravel, gravel into sand, and sand into dust, each of which can be sieved for different resources.%n%nTo use it, simply break a target block with the §6Hammer§r as you would with a pickaxe. Hammers come in the standard tool tiers -%nwood through diamond - and differ only in durability. They can be enchanted, though the available enchantments differ from those on a pickaxe.%n%nOres can also be hammered down through a multi-step crushing chain. Each step has a small chance to yield bonus%nmaterial, making the §6Hammer§r a basic form of ore multiplication before dedicated processing machines are available.%n%n§2Hammering can be automated with machines that simulate block breaking, such as the Auto Hammer from §dEx Compressum§r§2.%n§2Check NEI for the full crushing chain of any block.
+betterquesting.quest.6l98ozdcQFqJOan6BC4kMA.desc=§6Молот§r - це інструмент з §dEx Nihilo§r, який використовується для подрібнення блоків до дрібніших форм. Його основна роль - виробництво матеріалів, необхідних для §3Сита§r: бруківка подрібнюється на гравій, гравій - на пісок, а пісок - на пил, кожен з яких можна просіяти для отримання різних ресурсів.%n%nЩоб ним скористатися, просто розбийте цільовий блок за допомогою §6Молота§r, як ви це робите за допомогою кайла. Молотки бувають стандартних рівнів - від%nдерева до діаманта - і відрізняються лише міцністю. Їх можна зачарувати, хоча доступні зачарування відрізняються від тих, що є для кайла.%n%nРуду також можна подрібнювати за допомогою багатоетапного ланцюга подрібнення. Кожен крок має невеликий шанс дати бонусний%nmaterіал, що робить §6Молот§r базовим засобом розмноження руди до появи спеціалізованих машин для її обробки.%n%n§2Процес розбивання можна автоматизувати за допомогою машин, що імітують руйнування блоків, таких як Auto Hammer від §dEx Compressum§r.%n§2Перевірте JEI, щоб дізнатися повний ланцюжок подрібнення будь-якого блоку.
 
 # Quest: Cable Network Analysis Tool
 betterquesting.quest.9FPuQxhjSHmPmrCwdfRZRw.name=Інструмент для аналізу кабельних мереж
@@ -51,7 +59,7 @@ betterquesting.quest.9wRpAnjXSrGWFWSwKoTOhg.desc=§3Фіксатори труб�
 
 # Quest: Automatic Buzz Saw
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0A.name=Автоматична циркулярна пила
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0A.desc=With the §6§3Automatic Buzz Saw§r one can automatically farm trees for their §6Wood§r, aswell as other crops such as §6Hemp§r and §6Wheat§r.%n%n§3Fans§r, when powered by redstone, can be used to push the dropped items into hoppers or conveyors for storage. Use a §6Drill§r on them to remove the diminishing behaviour of pushing force.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0A.desc=За допомогою §6§3Автоматичної циркулярної пилки§r можна автоматично рубити §6Деревину§r, а також інші культури, такі як §6Конопля§r та §6Пшениця§r.%n%n§3Вентилятор§r, заживлен редстоуном, можна використовувати для транспортування предметів у воронку або конвеєри для сховища. Застосуйте до них §6Свердло§r, щоб скасувати зменшення дальності штовхання.
 
 # Quest: Industrial Mixer
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0w.name=Промисловий змішувач
@@ -67,7 +75,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAABA.desc=§3Преси§r - це маш�
 
 # Quest: Blast Furnace
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAACQ.name=Доменна піч
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAACQ.desc=The §3Blast Furnace§r is the foundation of early-game alloying, capable of fusing two compatible inputs into materials such as §6Steel§r, §6Star Metal§r, and §6Red Copper§r. Craft it at a §3Tier 1 Anvil§r from stone bricks, firebricks, and copper plates.%n%nPlace two compatible materials in the top and bottom slots - order does not matter. The furnace accepts inputs in both ingot and powder form. Fuel it with coal, coke, or other solid fuels; coke and solid fuel fill the fuel bar more efficiently than plain coal. Every operation also produces §6Slag§r and §bFlue Gas§r as byproducts.%n%nFor faster processing, pipe §bHot Air§r into the furnace at §e200 mB/t§r to accelerate it up to §e500%%§r of its base speed.%n%n§2Tip: Save the Flue Gas byproduct - you can burn it in a Flare Stack later to recover some power.§r
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAACQ.desc=The §3Blast Furnace§r is a solid fuel-powered furnace used to create different alloys out of two inputs. The main starter alloys are: §6Minecraft Grade Copper§r and §6Steel§r. Inserting §bHot Air Blast§r, made by putting §bCompressed Air§r in a §3Boiler§r, grants all recipes a §e3x§r boost.%n§bFlue Gas§r produced from operating the machine can be burnt for energy or vented into the atmosphere.%n%nSteel tools come equiped with vein mining, making them an excellent early-game tool.%n%n§2For more advanced tools later on, pressing the ALT key will bring up a menu from which one can select multiple abilities at once.§r
 
 # Quest: Trench Mask
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAADA.name=Захисна маска
@@ -111,7 +119,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAHQ.desc=§3Тигель§r є важл�
 
 # Quest: Arc Welder
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAHw.name=Дуговий зварювальник
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAHw.desc=§3Дуговий зварювальник§r — це обладнання, необхідне для виготовлення багатьох деталей, таких як §6Зварні пластини§r, §6Деталі ракет§r та інші. Для виконання деяких рецептів у зварювальний апарат потрібно залити рідину.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAHw.desc=§3Дуговий зварювальник§r - це обладнання, необхідне для виготовлення багатьох деталей, таких як §6Зварні пластини§r, §6Деталі ракет§r та інші. Для виконання деяких рецептів у зварювальний апарат потрібно залити рідину.
 
 # Quest: Combination Oven
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIQ.name=Коксова піч
@@ -119,15 +127,15 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIQ.desc=The §3Combination Oven§r is a
 
 # Quest: Chemical Plant
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIg.name=Хімічний комплекс
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIg.desc=§3Хімічний комплекс§r — це установка, необхідна для виконання низки процесів, таких як перетворення одних рідин на інші, синтез різних сполук тощо. Як і в §3Збиральній машині§r, рецепти можна повністю обирати за допомогою графічного інтерфейсу користувача.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIg.desc=§3Хімічний комплекс§r - це установка, необхідна для виконання низки процесів, таких як перетворення одних рідин на інші, синтез різних сполук тощо. Як і в §3Збиральній машині§r, рецепти можна повністю обирати за допомогою графічного інтерфейсу користувача.
 
 # Quest: Strand Caster
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJA.name=Машина безперервного лиття заготовок
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJA.desc=§3Машина безперервного лиття заготовок§r — це велика чаша, яка дозволяє виготовляти предмети партіями по 9 штук. Для роботи пристрою також потрібна §bВода§r, з якої вона виробляє §bПару низького тиску§r, яка може бути перетворена назад на воду.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJA.desc=§3Машина безперервного лиття заготовок§r - це велика чаша, яка дозволяє виготовляти предмети партіями по 9 штук. Для роботи пристрою також потрібна §bВода§r, з якої вона виробляє §bПару низького тиску§r, яка може бути перетворена назад на воду.
 
 # Quest: High-Speed Steel
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJQ.name=Швидкорізальна сталь
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJQ.desc=Швидкорізальна сталь§r — це вдосконалений та спеціалізований різновид стандартної сталі. Вона використовується у багатьох технологічних процесах, таких як §3Нафтова вишка§r та §3Промисловий змішувач§r.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJQ.desc=Швидкорізальна сталь§r - це вдосконалений та спеціалізований різновид стандартної сталі. Вона використовується у багатьох технологічних процесах, таких як §3Нафтова вишка§r та §3Промисловий змішувач§r.
 
 # Quest: Conveyor Belt
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAKg.name=Конвеєрна смуга
@@ -205,10 +213,6 @@ betterquesting.quest.Ek7Xr3XfSm-U7BYuBOACSA.desc=The §3Wood-Burning Generator§
 betterquesting.quest.F5fyyqAZREWe-rhgYcbXZg.name=Flint Tools
 betterquesting.quest.F5fyyqAZREWe-rhgYcbXZg.desc=§6Flint Tools§r are required to obtain first wood and stone. Break some tree leaves and get saplings, to recraft them into sticks.%n%nAxes automatically break tree blocks from top to bottom to prevent floating trees. Hold Shift to disable this and break blocks normally.
 
-# Quest: Hunger System
-betterquesting.quest.Fio9CeHtR9-O6cehKBCH5g.name=Система голоду
-betterquesting.quest.Fio9CeHtR9-O6cehKBCH5g.desc=§dHunger Overhaul§r перетворює голод на справжню загрозу, а не на незначну незручність.%n%nТепер рівень голоду пасивно знижується з часом, навіть у стані бездіяльності. Досягнення нульового рівня призводить до миттєвої смерті. До цього моменту низький рівень голоду спричиняє уповільнення, слабкість та зниження швидкості видобутку. Прийом їжі надає ефект §6Ситий§r, який прискорює відновлення здоров’я - чим ситніша їжа, тим довше триває ефект.%n%nХарчові цінності перебалансовані відповідно до розміру страви. Сирі інгредієнти відновлюють дуже мало; готові страви відновлюють значно більше. Більші страви їсти довше, і їх менше вміщається у вашому інвентарі.%n%nРослини ростуть лише вдень, і дозрівання займає набагато більше часу. Дерев'яні та кам'яні мотики видалено - для обробки ґрунту вам потрібна щонайменше залізна мотика. Сільськогосподарські угіддя повинні бути розташовані поруч із водою, інакше вони не працюватимуть.%n%n§dSpice of Life: Carrot Edition§r винагороджує різноманітність раціону. Кожна унікальна страва, з’їдена вперше, назавжди збільшує ваш максимальний запас здоров’я. Повторне вживання однієї й тієї ж страви не дає жодних бонусів.%n%n§2Чим різноманітніший ваш раціон, тим більше у вас сердець - побудуйте різноманітну ферму якомога раніше.§r
-
 # Quest: Steel Furnace
 betterquesting.quest.GOACXA8jRc-SMNzk2CsNUQ.name=Сталева піч
 betterquesting.quest.GOACXA8jRc-SMNzk2CsNUQ.desc=§3Сталева піч§r, на відміну від інших печей, працює на §eTU§r. Вона також може обробляти до 3 предметів одночасно, але кожен слот споживає більше TU, що робить її повільною без потужного джерела тепла. Вона також має бонусний вихід для руд та деревини, де кожен переплавлений предмет додає §e25%%§r до лічильника бонусного виходу, що означає, що кожні 4 предмети дають додатковий 5-й предмет безкоштовно (§e+15 предметів з одного стака§r).
@@ -239,7 +243,7 @@ betterquesting.quest.M3mauW7uTCej4mql-Wnhqg.desc=§6Ідентифікатор �
 
 # Quest: Known Issues
 betterquesting.quest.MNH6qakfTrC7Jbky4i_Epw.name=Відомі проблеми
-betterquesting.quest.MNH6qakfTrC7Jbky4i_Epw.desc=Not a bug, a &q&zFEATURE§r!
+betterquesting.quest.MNH6qakfTrC7Jbky4i_Epw.desc=Not a bug, a &q&zFEATURE§r!%n%nWhen you consume food your hands may shake weirdly, as if Steve was EXTREMELY happy for that lunch.%n%nIf you experience any stutters/micro-lags while playing, try turning Vsync on/off. If that does not help, contact in Discord #help.%n%nCurrently we have no idea how to fix those bugs, but we are trying our best!
 
 # Quest: Additional NTM Modes
 betterquesting.quest.MWwrY8PcTaam9T_sc4yDtQ.name=Додаткові режими НТМ
@@ -248,6 +252,10 @@ betterquesting.quest.MWwrY8PcTaam9T_sc4yDtQ.desc=§cNTNH§r - це модуль�
 # Quest: Charging Station
 betterquesting.quest.OlMZZGTaSz6VhzaeJdR6QQ.name=Зарядна станція
 betterquesting.quest.OlMZZGTaSz6VhzaeJdR6QQ.desc=§3Зарядна станція§r заряджатиме як електроінструменти, так і електрокостюми, якщо вони знаходяться поруч із нею. Якщо розмістити кілька таких станцій поруч одна з одною, швидкість заряджання предметів збільшиться.
+
+# Quest: Geological Samples
+betterquesting.quest.QF_GKcDaRim2-gEJRosFZQ.name=Geological Samples
+betterquesting.quest.QF_GKcDaRim2-gEJRosFZQ.desc=This system is highly WIP (including this very quest), so do not expect it to be perfect.%n%nThis is the simplest method of prospecting, based on visual examination of surrounding material. Right-click on any §6Stone§r or §6Gravel§r block with a §6Prospector's Eyeglass§r and it will tell you if there is a substantial amount of any interesting ore nearby. Three levels of indication are reported, "Faint signs", "Signs" and "Strong signs", allowing you to home in on the source.%n%nTaking and analyzing geological samples, on the other hand, provides similar information to the Eyeglass but in much more detail. First you will need to make a §6Prospecting Pick§r. To take a sample, right-click on any piece of Stone or Gravel with the Prospecting Pick. A Geological Sample item will be dropped.%n%nTo analyse the sample, you will need a §3Geological Sample Analysis Kit§r and a supply of §6Litmus Paper§r. To use the kit, place it down somewhere and right-click it to open its GUI. Place the sample you want to analyse in the sample slot and some litmus paper in the slot beside it. Analysis will begin automatically and should finish in a few seconds, after which a report will appear below.%n%nThe report shows the place where the sample was taken and the amounts of any interesting mineral traces it contains. You can expect indications of ores within 16 blocks of the sample location, horizontally and vertically, to show up. Ores closer to the sample location will show up more strongly than ones further away.%n%n§2To save the analysis report for future reference, place a Writeable Book in the book slot and press the + button.%n%nIf you lose the report, you can analyse the sample again to get it back. However, a little of the sample is used up each time you analyse it, and a given sample can only be analysed 16 times before there is nothing left.
 
 # Quest: Packing Tape
 betterquesting.quest.RBJS7D2ATpq7GUingAewuQ.name=Пакувальна стрічка
@@ -259,7 +267,7 @@ betterquesting.quest.UKkcpXk3SEWHXLIVC5VTDg.desc=§6Покриття§r є од�
 
 # Quest: Ore Generation System
 betterquesting.quest.VMLB88YjRb26RVJcRmvxeA.name=Система генерації руди
-betterquesting.quest.VMLB88YjRb26RVJcRmvxeA.desc=In §6NTNH§r, ore generation has been §ocompletely§r overhauled and is still receiving updates and fixes. If you don’t like it and/or find it too complicated, you have two options:%n1) Report it to us, the developers%n2) Disable the Custom Ore Generation mod and configure ore generation in hbm.cfg to your liking (ask for help with this on the Discord server)%n%n[warn]Important![/warn]%nThe online Google Docs spreadsheet was DEPRECATED, use the one in Guide Book.%n%nOnline ore generation spreadsheet [warn](DEPRECATED)[/warn]%n[url]https://docs.google.com/spreadsheets/d/1Uncs-usQqsCtb5NdSnniZNrd-BuYvllRwP43ZJiZLZE[/url]
+betterquesting.quest.VMLB88YjRb26RVJcRmvxeA.desc=In §6NTNH§r, ore generation has been §ocompletely§r overhauled and is still receiving updates and fixes. If you don’t like it and/or find it too complicated, you have two options:%n1) Report it to us, the developers%n2) Disable the Custom Ore Generation mod and configure ore generation in hbm.cfg to your liking (ask for help with this on the Discord server)%n%n[warn]Important![/warn]%nThe old online Google Docs spreadsheet was DEPRECATED, use the one in the Guide Book.
 
 # Quest: Dosimeter
 betterquesting.quest.X1wMtj-xQR6M4Qzm6Rk2vA.name=Дозиметр
@@ -272,10 +280,6 @@ betterquesting.quest.XNHsXFGWTvW9dhuen9iEFg.desc=§3Двигун з радіал
 # Quest: Hazards
 betterquesting.quest.Zd1HNIsxSRees_4of0ezDw.name=Небезпеки
 betterquesting.quest.Zd1HNIsxSRees_4of0ezDw.desc=Цей мод додає кілька небезпек навколишнього середовища, які можуть призвести до вашої загибелі, якщо їх ігнорувати.%n%n§6Радіація§r вимірюється в РАД. Ефекти починають проявлятися при рівні §e200 РАД§r і поступово посилюються - миттєва смерть настає при рівні §c1000 РАД§r. Використовуйте §6лічильник Гейгера§r для контролю отриманої дози. Радіаційно-стійка броня та §6Rad-X§r зменшують надходження РАД; §3Дезактиватор гравця§r або §6Антирад§r видаляють накопичену дозу.%n%n§lМезотеліома§r розвивається внаслідок впливу азбесту. Предмети з міткою §c[Містить азбест]§r та певні блоки, такі як хризотил, виділяють частинки азбесту. Без лікування призводить до смерті.%n%n§lЧорні легені§r розвиваються внаслідок впливу вугільного пилу. Основними джерелами є видобуток вугільної руди та перенесення предметів з міткою §c[Вугільний пил]§r. Також є смертельним.%n%nГазова маска одночасно захищає як від мезотеліоми, так і від чорних легеней. Обидві хвороби виліковуються за допомогою §6Ліки від раку SIOX§r або, на початку гри, §6Трав'яна паста§r - остання є слабшою та має побічні ефекти.
-
-# Quest: Agriculture and Farming
-betterquesting.quest.Zpwlu-OeTpCvf7vTFz-BIA.name=Сільське господарство та фермерство
-betterquesting.quest.Zpwlu-OeTpCvf7vTFz-BIA.desc=У цьому наборі три моди кардинально змінюють систему землеробства та харчування.%n%n§dPam's HarvestCraft§r додає понад 40 видів сільськогосподарських культур, безліч фруктових дерев, 10 видів риби, бджільництво та понад 75 видів їжі. Ключові блоки: §3Пресер§r (виробляє олії, мед тощо), §3Ринок§r (купує насіння та саджанці за смарагди), §3Блок доставки§r (продає врожай за смарагди). Клацнувши правою кнопкою миші на зрілій культурі, Ви збираєте врожай і пересаджуєте її.%n%n§dAgriCraft§r додає селекцію культур на основі генетики. Рослини мають шість характеристик - ріст, приріст, міцність, стійкість, родючість та мутативність - які успадковуються від батьківських культур під час схрещування. Вищі характеристики є домінантними. Мутації можуть повністю розблокувати нові види культур. Бур'яни будуть конкурувати з необробленими культурами і зрештою їх знищувати. Рослини мають специфічні вимоги до ґрунту, світла та рідини, тому розміщення має значення.%n%n§dHunger Overhaul§r вимагає, щоб сільськогосподарські угіддя розміщувалися поруч із водою - незайманий сухий оброблений ґрунт не буде створюватись.%n%n§2Плануйте розташування своєї ферми навколо води перед обробітком ґрунту.§r
 
 # Quest: Stirling Sawmill
 betterquesting.quest._qJt02i4ST2iccmkHudKCg.name=Лісопильня Стірлінга
@@ -291,7 +295,7 @@ betterquesting.quest.bXgPsVSbTy6Az8yENEF99w.desc=Уявіть собі, що о�
 
 # Quest: Heating Oven/Firebox
 betterquesting.quest.cUWyKdzATTSYaMg1MxZqYw.name=Опалювальна піч/Топка
-betterquesting.quest.cUWyKdzATTSYaMg1MxZqYw.desc=The §3Firebox§r and the §3Heating Oven§r are machines capable of producing heat from solid fuels for any machines that require heat to operate.%n%nHeat is measured in §eTU§r (§eThermal Units§r).%n%nBoth machines are similar in operation. In order for them to transfer heat, another machine for receiving the heat must be placed on top, such that the copper heat plate on the receiving machine sits on top of the copper heat plate of the heat producing machine.%n%nOnce constructed, these machines can be filled with solid fuel, which will burn until either the fuel runs out, or the heat buffer is filled. No fuel will be consumed if its buffer is full — as such, both machines are fairly efficient at conserving fuel.%n%nThe primary difference in these two machines lie in their speed: the firebox burns fuel much slower at full efficiency, whilst the heating oven produces five time the heat (but eight times faster). Despite its inefficiency, the heating oven is often preferred for its much higher heat outputs and heat capacity. However, it cannot heat a stirling engine, as its base output (500 TU/t) will automatically over-speed the engine; the heavy stirling engine does not have this issue.%n%nAdditionally, the heating oven can receive heat from other heat producing machines placed underneath it: multiple can be stacked for heat-hungry machines like the crucible. The heat received, however, is halved when transferring to the machine above.
+betterquesting.quest.cUWyKdzATTSYaMg1MxZqYw.desc=The §3Firebox§r and the §3Heating Oven§r are machines capable of producing heat from solid fuels for any machines that require heat to operate.%n%nHeat is measured in §eTU§r (§eThermal Units§r).%n%nBoth machines are similar in operation. In order for them to transfer heat, another machine for receiving the heat must be placed on top, such that the copper heat plate on the receiving machine sits on top of the copper heat plate of the heat producing machine.%n%nOnce constructed, these machines can be filled with solid fuel, which will burn until either the fuel runs out, or the heat buffer is filled. No fuel will be consumed if its buffer is full - as such, both machines are fairly efficient at conserving fuel.%n%nThe primary difference in these two machines lie in their speed: the firebox burns fuel much slower at full efficiency, whilst the heating oven produces five time the heat (but eight times faster). Despite its inefficiency, the heating oven is often preferred for its much higher heat outputs and heat capacity. However, it cannot heat a stirling engine, as its base output (500 TU/t) will automatically over-speed the engine; the heavy stirling engine does not have this issue.%n%nAdditionally, the heating oven can receive heat from other heat producing machines placed underneath it: multiple can be stacked for heat-hungry machines like the crucible. The heat received, however, is halved when transferring to the machine above.
 
 # Quest: Recycling
 betterquesting.quest.ceT8V2MeRz2u-FR9Uckarw.name=Перероблення
@@ -317,9 +321,9 @@ betterquesting.quest.gKQiP_zES4KokMmon9bDQg.desc=The §3Bricked Furnace§r is al
 betterquesting.quest.gWyCk5zlQlWAPGdwFXhTaQ.name=Infinite Water Sources
 betterquesting.quest.gWyCk5zlQlWAPGdwFXhTaQ.desc=Tired of using buckets to give §bWater§r to your machines? Try using water pumps or infinite water tanks!%n%n§6Infinite Water Tank§r will give §e50mb/t%n%n§6Enhanced Infinite Water Tank§r will give §e500mb/t%n%n§6Steam-Powered Groundwater Pump§r will give §e1000mb/t§r but requires §bSteam§r to operate (which is obvious).
 
-# Quest: Compressor
-betterquesting.quest.jcaOirN6QCOC50YJbil2rQ.name=Compressor
-betterquesting.quest.jcaOirN6QCOC50YJbil2rQ.desc=The §3Compressor§r is a specialized multiblock machine for compressing fluids. It can perform this operation on any fluid to increase its pressure, for use in other machines. Some of these fluids are compressed into different fluids entirely as special recipes for this machine.
+# Quest: Geological Survey
+betterquesting.quest.i978VfQyRr6TncUvwFr6iA.name=Geological Survey
+betterquesting.quest.i978VfQyRr6TncUvwFr6iA.desc=This system is highly WIP (including this very quest), so do not expect it to be perfect.%n%nThis is an advanced mineral exploration technique for professional miners, providing very detailed information. The §3Geological Surveyor§r machine uses a controlled explosion to send seismic waves into the ground, and by analysing the echoes that come back, builds a map of underground ore densities.%n%nAs well as the Geological Surveyor itself, you will also need the following:%n%n1. At least 3 §3Geophones§r placed in a suitable arrangement around the Geological Surveyor. The geophones must be within 16 blocks of the Surveyor, but no closer than 8 blocks to the Surveyor or to each other.%n2. Supplies of §6Paper§r, §6Ink§r and §6Gunpowder§r in the appropriate slots of the Surveyor.%n3. A §6Button§r or other means of supplying a redstone signal to the Surveyor.%n%nThe Surveyor can operate in either §emonochrome§r or §ecolour§r mode, selected using the button beside the ink slots. Colour mode provides more information about types of ores, but is more expensive. §2Monochrome mode requires only black ink, whereas colour mode requires all four colours of ink.§r%n%nWhen all the necessary conditions are satisfied, the Surveyor wil show "§6Ready§r" in the GUI, and a single green light on the outside of the machine. The Surveyor is trigged by a redstone signal. The easiest way to deliver this is to put a button on the side of the machine.%n%n§lBe prepared for a loud noise.§r Do not be alarmed; the explosion is well contained and should not cause any damage.%n%nAnalysing the results and printing the map will take several seconds, during which time the machine will show a flashing §agreen light§r. When finished, two steady green lights will appear. The map can then be collected from the output slot of the GUI.%n%nA §cred light§r indicates an error condition; open the GUI to find out more information.
 
 # Quest: Earth? Fake news
 betterquesting.quest.k52bjd5MTbefEXwVh0HLiw.name=Earth? Fake news
@@ -327,7 +331,7 @@ betterquesting.quest.k52bjd5MTbefEXwVh0HLiw.desc=This modpack makes it possible 
 
 # Quest: Oily Sand
 betterquesting.quest.kdNKd7NDSPiURFtLonc50g.name=Oily Sand
-betterquesting.quest.kdNKd7NDSPiURFtLonc50g.desc=§6Oily Sand§r is a surface-level block that generates among normal sand, typically in deserts. It acts as a marker for §bBedrock Oil§r deposits directly beneath it - if you find it, there is oil underground.%n%nIt can be ground in a §3Grinder§r into §6Oil Waste§r, which can then be processed to obtain §6Arsenic§r.%n%n§2Oily Sand patches are the most reliable way to locate Bedrock Oil without digging blindly.§r
+betterquesting.quest.kdNKd7NDSPiURFtLonc50g.desc=§6Oily Sand§r is a surface-level block that generates among normal sand, typically in deserts. It acts as a marker for §bBedrock Oil§r deposits directly beneath it - if you find it, there is oil underground.%n%nIt can be ground in a §3Grinder§r into §6Oil Waste§r, which can then be processed to obtain §6Arsenic§r - a really important mid-game material.
 
 # Quest: Highway To Hell
 betterquesting.quest.ljMurUJIT7OuwaBx_fb3EA.name=Highway To Hell
@@ -359,7 +363,11 @@ betterquesting.quest.s8lSFTDKSpqK44PLhdfusw.desc=For greater distances, and impr
 
 # Quest: Primitive Crucible
 betterquesting.quest.wSdG_vGlTD-9Q8OW6Bzeiw.name=Primitive Crucible
-betterquesting.quest.wSdG_vGlTD-9Q8OW6Bzeiw.desc=The §3Crucible§r is a block from §dEx Nihilo§r used to melt solid blocks down into fluids. It is crafted first as an §6Unfired Crucible§r from §6Porcelain Clay§r, then fired in a furnace to produce a usable §3Crucible§r.%n%nTo operate it, place the §3Crucible§r above a heat source and right-click it with an eligible block to load it. The block will slowly melt into fluid over time. The speed of melting depends entirely on the heat source below - stronger heat sources melt faster. Burning §6Netherrack§r is among the most efficient vanilla options.%n%nThe primary output is §blava§r, produced by melting cobblestone, stone, and similar blocks. The §3Crucible§r can hold fluids indefinitely, making it a cheap fluid storage vessel in a pinch. Drain it using fluid pipes connected to its side or bottom.%n%n§2A bank of Crucibles over burning Netherrack is a reliable early lava farm for fuel%nand power production.%n§2Check NEI for all valid heat sources and their melt rates.
+betterquesting.quest.wSdG_vGlTD-9Q8OW6Bzeiw.desc=The §3Crucible§r is a block from §dEx Nihilo§r used to melt solid blocks down into fluids. It is crafted first as an §6Unfired Crucible§r from §6Porcelain Clay§r, then fired in a furnace to produce a usable §3Crucible§r.%n%nTo operate it, place the §3Crucible§r above a heat source and right-click it with an eligible block to load it. The block will slowly melt into fluid over time. The speed of melting depends entirely on the heat source below - stronger heat sources melt faster. Burning §6Netherrack§r is among the most efficient vanilla options.%n%nThe primary output is §blava§r, produced by melting cobblestone, stone, and similar blocks. The §3Crucible§r can hold fluids indefinitely, making it a cheap fluid storage vessel in a pinch. Drain it using fluid pipes connected to its side or bottom.%n%n§2A bank of Crucibles over burning Netherrack is a reliable early lava farm.
+
+# Quest: Air Intake
+betterquesting.quest.yFAvMtetRDaFwz6i_ry-RQ.name=Air Intake
+betterquesting.quest.yFAvMtetRDaFwz6i_ry-RQ.desc=The §3Air Intake§r, when powered, produces §bCompressed Air§r needed in §3Pneumatic Pipes§r and §bHot Air Blast§r.
 
 # Quest: Silkworm
 betterquesting.quest.yfQ7hs9tTwSE5FpNCoeGAA.name=Silkworm
@@ -376,7 +384,7 @@ betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAQ.desc=Process Oil and begin Bedro
 
 # Quest: Balefire
 betterquesting.quest.8OusetROQiyH-66QbewmNQ.name=Balefire
-betterquesting.quest.8OusetROQiyH-66QbewmNQ.desc=§6Багаття§r — це надзвичайно радіоактивна речовина, яку можна використовувати для виготовлення потужного палива для §3РБМК§r, а також §bРакетне жар-паливо§r для виробництва електроенергії. Для зберігання цієї речовини необхідне обладнання з високою радіаційною стійкістю. §6Термоядерний попіл§r можна стабільно отримувати як побічний продукт при виробництві §bАнтиматерії — ракетного жар-палива§r.%n%nВисокотехнологічний пристрій для знешкодження бомб дозволяє вилучати осколки Багаття з нерозірваних бомб.
+betterquesting.quest.8OusetROQiyH-66QbewmNQ.desc=§6Багаття§r - це надзвичайно радіоактивна речовина, яку можна використовувати для виготовлення потужного палива для §3РБМК§r, а також §bРакетне жар-паливо§r для виробництва електроенергії. Для зберігання цієї речовини необхідне обладнання з високою радіаційною стійкістю. §6Термоядерний попіл§r можна стабільно отримувати як побічний продукт при виробництві §bАнтиматерії - ракетного жар-палива§r.%n%nВисокотехнологічний пристрій для знешкодження бомб дозволяє вилучати осколки Багаття з нерозірваних бомб.
 
 # Quest: Delinquent 2: Delinquent Harder
 betterquesting.quest.8R4pAa2BSWGGBdYOaobEMA.name=Delinquent 2: Delinquent Harder
@@ -400,11 +408,11 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAADg.desc=The §6M1TTY Environment Suit§
 
 # Quest: Antimatter
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAGw.name=Антиматерія
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAGw.desc=§bАнтиматерія§r — це небезпечна речовина, яку можна отримати за допомогою §3Циклотрона§r або §3Прискорювача частинок§r. Якщо її впустити на підлогу, відбудеться потужний вибух. Антиматерію неможливо зберігати у звичайних резервуарах, тому для цього потрібен §3Магнітний контейнер антиматерії§r.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAGw.desc=§bАнтиматерія§r - це небезпечна речовина, яку можна отримати за допомогою §3Циклотрона§r або §3Прискорювача частинок§r. Якщо її впустити на підлогу, відбудеться потужний вибух. Антиматерію неможливо зберігати у звичайних резервуарах, тому для цього потрібен §3Магнітний контейнер антиматерії§r.
 
 # Quest: Electric Arc Furnace
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAHg.name=Електродугова піч
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAHg.desc=§3Електродугова піч§r — це велика автоматизована багатоблокова установка, яка може виконувати функції §3тигля§r та автоматизованої плавильної печі; вона є необхідною для просування в грі, оскільки це єдиний пристрій, здатний виробляти §6кремній§r з різних джерел, таких як §6пісок§r, §6кремень§r, §6скловолокно§r та §6азбест§r.%n%nДля роботи цієї машини потрібні як електроенергія, так і виготовлені §7§6Електроди§r. Щодо електроенергії, машина має максимальну ємність накопичення §e2,5MHE§r і споживає §e20kHE/s§r під час роботи, що робить її досить енергоємною. Щодо електродів, необхідних для роботи, доступні чотири типи, і для запуску машини необхідно встановити хоча б три.%n%nЦя машина може працювати у двох різних режимах: «Твердий» режим, який є найпростішим у налаштуванні та використанні, чудово підходить для початкового виготовлення, та «Рідкий» режим, який виробляє розплавлені руди, що піддаються литтю, подібно до тигля, з невеликим бонусом до виходу, що підвищує ефективність видобутку з різних руд.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAHg.desc=§3Електродугова піч§r - це велика автоматизована багатоблокова установка, яка може виконувати функції §3тигля§r та автоматизованої плавильної печі; вона є необхідною для просування в грі, оскільки це єдиний пристрій, здатний виробляти §6кремній§r з різних джерел, таких як §6пісок§r, §6кремень§r, §6скловолокно§r та §6азбест§r.%n%nДля роботи цієї машини потрібні як електроенергія, так і виготовлені §7§6Електроди§r. Щодо електроенергії, машина має максимальну ємність накопичення §e2,5MHE§r і споживає §e20kHE/s§r під час роботи, що робить її досить енергоємною. Щодо електродів, необхідних для роботи, доступні чотири типи, і для запуску машини необхідно встановити хоча б три.%n%nЦя машина може працювати у двох різних режимах: «Твердий» режим, який є найпростішим у налаштуванні та використанні, чудово підходить для початкового виготовлення, та «Рідкий» режим, який виробляє розплавлені руди, що піддаються литтю, подібно до тигля, з невеликим бонусом до виходу, що підвищує ефективність видобутку з різних руд.
 
 # Quest: Integrated Circuit Board
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIA.name=Плата інтегральної схеми
@@ -412,11 +420,11 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIA.desc=§6Плата інтеграл�
 
 # Quest: Military Grade Circuit Board
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIw.name=Друкована плата військового класу
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIw.desc=§6Військова друкована плата§r — це сучасна друкована плата, яка використовується в більш складних машинах, таких як §3Газова центрифуга§r.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIw.desc=§6Військова друкована плата§r - це сучасна друкована плата, яка використовується в більш складних машинах, таких як §3Газова центрифуга§r.
 
 # Quest: Impact Drill
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAKQ.name=Ударна дриль
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAKQ.desc=«§6Ударна дриль§r» — це електричне кайло, яке має вбудовані зачарування та здібності. Це дуже корисний інструмент, який значно підвищить ефективність видобутку корисних копалин.%n%nАналогічні електричні інструменти існують також для сокири та лопати.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAKQ.desc=«§6Ударна дриль§r» - це електричне кайло, яке має вбудовані зачарування та здібності. Це дуже корисний інструмент, який значно підвищить ефективність видобутку корисних копалин.%n%nАналогічні електричні інструменти існують також для сокири та лопати.
 
 # Quest: Derrick
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAKw.name=Вишка
@@ -424,7 +432,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAKw.desc=§3Нафтова вишка§r
 
 # Quest: Bedrock Ore Processing
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAALA.name=Переробка руди з корінних порід
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAALA.desc=§eРодовища руди в корінній породі§r є нескінченним джерелом ресурсів, які можна добувати за допомогою §3Великого гірничого бура§r та §3Обробника руди з корінної породи§r.%n%nРобота бура споживає§e 200 тис. HE/с§r.%n%nПеред початком видобутку необхідно видалити §eГлибинну породу§r, що покриває родовище руди в корінній породі. Найпростіший спосіб зробити це — підірвати породу за допомогою §6вибухових зарядів§r.%n%nВеликий гірничий бур використовується для видобутку §6сирої руди з корінної породи§r з її родовищ. Для роботи бурової установки необхідне §6Свердло§r, яке можна модернізувати для збільшення швидкості роботи. §eУдача§r на буровому долоті впливає на якість видобутої руди з корінної породи, кожен рівень удачі додає §e10%%§r до вартості предмета.%n%nОбробник руди з корінних порід приймає §6§сиру руду з корінних порід, видобуту за допомогою бурової установки, і подрібнює її на дрібніші шматки, з яких можна отримати різні продукти. %n§a§bРудна суміш§r, що утворюється під час роботи машини, може бути перероблена на багато корисних продуктів, особливо якщо її пропустити через §3Електролізну машину§r.%n%n§6Сканер щільності руди§r показує інформацію про склад родовищ руди.%n%nПереробка руди з корінних порід може бути операцією, що вимагає значних витрат енергії та ресурсів, тому рекомендується займатися нею лише після створення належної інфраструктури.%n%n§2Варто розглянути можливість встановлення модифікації «Економія енергії» на бурову установку, оскільки вона лише зменшує споживання енергії, не впливаючи на швидкість видобутку. Крім того, встановлення модифікації «Ефективність» на рудороздрібнювач дозволить отримувати більше ресурсів.§r§r
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAALA.desc=§eРодовища руди в корінній породі§r є нескінченним джерелом ресурсів, які можна добувати за допомогою §3Великого гірничого бура§r та §3Обробника руди з корінної породи§r.%n%nРобота бура споживає§e 200 тис. HE/с§r.%n%nПеред початком видобутку необхідно видалити §eГлибинну породу§r, що покриває родовище руди в корінній породі. Найпростіший спосіб зробити це - підірвати породу за допомогою §6вибухових зарядів§r.%n%nВеликий гірничий бур використовується для видобутку §6сирої руди з корінної породи§r з її родовищ. Для роботи бурової установки необхідне §6Свердло§r, яке можна модернізувати для збільшення швидкості роботи. §eУдача§r на буровому долоті впливає на якість видобутої руди з корінної породи, кожен рівень удачі додає §e10%%§r до вартості предмета.%n%nОбробник руди з корінних порід приймає §6§сиру руду з корінних порід, видобуту за допомогою бурової установки, і подрібнює її на дрібніші шматки, з яких можна отримати різні продукти. %n§a§bРудна суміш§r, що утворюється під час роботи машини, може бути перероблена на багато корисних продуктів, особливо якщо її пропустити через §3Електролізну машину§r.%n%n§6Сканер щільності руди§r показує інформацію про склад родовищ руди.%n%nПереробка руди з корінних порід може бути операцією, що вимагає значних витрат енергії та ресурсів, тому рекомендується займатися нею лише після створення належної інфраструктури.%n%n§2Варто розглянути можливість встановлення модифікації «Економія енергії» на бурову установку, оскільки вона лише зменшує споживання енергії, не впливаючи на швидкість видобутку. Крім того, встановлення модифікації «Ефективність» на рудороздрібнювач дозволить отримувати більше ресурсів.§r§r
 
 # Quest: Basic Oil Processing
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAALw.name=Базова переробка нафти
@@ -432,11 +440,11 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAALw.desc=Перш ніж §bсиру н�
 
 # Quest: Polymer
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAOg.name=Полімер
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAOg.desc=§6Полімер§r — це базовий пластиковий матеріал, необхідний для багатьох технологічних процесів. Його використовують, зокрема, у §3Центрифузі§r, §3Колонці каталітичного крекінгу§r та §3Електродуговій печі§r.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAOg.desc=§6Полімер§r - це базовий пластиковий матеріал, необхідний для багатьох технологічних процесів. Його використовують, зокрема, у §3Центрифузі§r, §3Колонці каталітичного крекінгу§r та §3Електродуговій печі§r.
 
 # Quest: Catalytic Cracking Tower
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAOw.name=Колона каталітичного крекінгу
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAOw.desc=§3Колона каталітичного крекінгу§r — це велика багатоблокова установка для переробки нафти, яка виробляє багато різних рідин, таких як §bАроматичні вуглеводні§r, що використовуються для виробництва §6Бакеліту§r.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAOw.desc=§3Колона каталітичного крекінгу§r - це велика багатоблокова установка для переробки нафти, яка виробляє багато різних рідин, таких як §bАроматичні вуглеводні§r, що використовуються для виробництва §6Бакеліту§r.
 
 # Quest: Desh Anvil
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAPA.name=Деш ковадло
@@ -448,7 +456,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAPw.desc=§3Промисловий ко�
 
 # Quest: Rubber
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQA.name=Гума
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQA.desc=§6Гума§r — це важливий матеріал, який використовується в багатьох рецептах виготовлення. Його отримують на §3Хімічному заводі§r з §bНенасичених вуглеводнів§r, отриманих у §3Вежі каталітичного крекінгу§r.%n%n§6Латекс§r — це замінник каучуку, який можна використовувати в деяких рецептах замість звичайного каучуку. Його можна отримати на ранніх етапах гри за допомогою §3Преса-пальника§r шляхом переробки кульбаб або джунглевого дерева.%n%n§2У NTM: Space для отримання першого шматка гуми необхідна крекінгована нафта.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQA.desc=§6Гума§r - це важливий матеріал, який використовується в багатьох рецептах виготовлення. Його отримують на §3Хімічному заводі§r з §bНенасичених вуглеводнів§r, отриманих у §3Вежі каталітичного крекінгу§r.%n%n§6Латекс§r - це замінник каучуку, який можна використовувати в деяких рецептах замість звичайного каучуку. Його можна отримати на ранніх етапах гри за допомогою §3Преса-пальника§r шляхом переробки кульбаб або джунглевого дерева.%n%n§2У NTM: Space для отримання першого шматка гуми необхідна крекінгована нафта.
 
 # Quest: Bakelite
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQQ.name=Бакеліт
@@ -456,15 +464,15 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQQ.desc=§6Бакеліт§r є аль�
 
 # Quest: Desh
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQg.name=Деш
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQg.desc=§6Desh§r — це сплав, що складається з 9 рідкоземельних металів, який формується у суміш, що потім затвердіває та очищується за допомогою §bРтуті§r та §bЛегкої нафти§r на §3Хімічному заводі§r.Деш — це практично неруйнівний матеріал, тому інструменти з нього мають нескінченний термін служби. %n%n§a§2Деш також можна виготовити за допомогою ГотовіДеш™ у роторній печі або, пізніше, у кислотній печі для руди.§r%n%nНа цьому етапі гри ртуть можна отримати шляхом центрифугування §eРуди редстоуну§r або поміщення §eКіноварі§r у §3Коксову піч§r. Великі жили кіноварі можна знайти як руду на глибині.%n%nПізніше ртуть можна отримати шляхом переробки §bрудної суміші§r або §bвітріолу§r в §3електролізері§r.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQg.desc=§6Desh§r - це сплав, що складається з 9 рідкоземельних металів, який формується у суміш, що потім затвердіває та очищується за допомогою §bРтуті§r та §bЛегкої нафти§r на §3Хімічному заводі§r.Деш - це практично неруйнівний матеріал, тому інструменти з нього мають нескінченний термін служби. %n%n§a§2Деш також можна виготовити за допомогою ГотовіДеш™ у роторній печі або, пізніше, у кислотній печі для руди.§r%n%nНа цьому етапі гри ртуть можна отримати шляхом центрифугування §eРуди редстоуну§r або поміщення §eКіноварі§r у §3Коксову піч§r. Великі жили кіноварі можна знайти як руду на глибині.%n%nПізніше ртуть можна отримати шляхом переробки §bрудної суміші§r або §bвітріолу§r в §3електролізері§r.
 
 # Quest: Industrial Steam Turbine
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAARA.name=Промислова парова турбіна
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAARA.desc=§3Промислова парова турбіна§r — це багатоблочна машина, яка є значно більшою та потужнішою версією звичайної §3Парової турбіни§r. Її ККД становить §e100%%§r, а вихідна потужність поступово зростає при подачі §bпари§r і поступово знижується при його відключенні.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAARA.desc=§3Промислова парова турбіна§r - це багатоблочна машина, яка є значно більшою та потужнішою версією звичайної §3Парової турбіни§r. Її ККД становить §e100%%§r, а вихідна потужність поступово зростає при подачі §bпари§r і поступово знижується при його відключенні.
 
 # Quest: Coker Unit
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAARQ.name=Коксова установка
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAARQ.desc=§3Коксова установка§r — це установка, яка перетворює нафтопродукти на §6Нафтовий кокс§r, що за своїми властивостями не відрізняється від інших видів коксу, а також на додаткові рідини як побічні продукти. Для роботи установки коксування необхідне зовнішнє джерело тепла, подібно до §3Тигля§r.%n%n§2§r§2Поряд з §2§r§2§r§2Електродуговою піччю, установка коксування є однією з найбільш забруднюючих машин модифікації. Вона поширює 20 осаду на секунду, що робить її небезпечною для використання поблизу гнізда гліфідів.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAARQ.desc=§3Коксова установка§r - це установка, яка перетворює нафтопродукти на §6Нафтовий кокс§r, що за своїми властивостями не відрізняється від інших видів коксу, а також на додаткові рідини як побічні продукти. Для роботи установки коксування необхідне зовнішнє джерело тепла, подібно до §3Тигля§r.%n%n§2§r§2Поряд з §2§r§2§r§2Електродуговою піччю, установка коксування є однією з найбільш забруднюючих машин модифікації. Вона поширює 20 осаду на секунду, що робить її небезпечною для використання поблизу гнізда гліфідів.
 
 # Quest: Auxilary Cooling Tower
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAASA.name=Допоміжна градирня
@@ -472,7 +480,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAASA.desc=§3Допоміжна град�
 
 # Quest: Refinery Power
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAASw.name=Енергія нафтопродуктів
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAASw.desc=Нафтопродукти можна спалювати для отримання величезних обсягів енергії.%n%n§3Промисловий двигун внутрішнього згоряння§r спалює паливо, таке як §bмазут§r або §bдизельне паливо§r, для вироблення енергії. Існують різні типи поршневих груп, необхідних для роботи двигуна, кожна з яких надає власні бонуси до ККД залежно від сорту палива.%n%n§4§3Турбовентилятор§r — найкраще місце для використання авіаційного палива, такого як §bКеросин§r, оскільки він забезпечує §e100%%§r ККД. Будьте обережні, не стойте перед ним під час роботи!%n%n§3Газотурбіна комбінованого циклу§r — єдиний генератор, який може спалювати газоподібне паливо з §e100%%§r ККД. ТГК використовує §3§bмастило для двигунів§r і виробляє §bгусту пару§r.%n%n§3Факельна труба§r використовується для спалювання газів, таких як §bненасичені вуглеводні§r, з метою отримання енергії, а також для утилізації надлишків рідин.%n%n§3Рідинний пальник§r — це набагато ефективніший спосіб виробництва енергії з газів. Поставте §3Котел§r зверху та пропустіть §bПару§r через турбіну для вироблення енергії.%n%nРозгляньте можливість встановлення §6Глушника§r на деяких з цих машин, оскільки вони дуже гучні. Натисніть Shift та клацніть на машині, тримаючи Глушник, щоб застосувати.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAASw.desc=Нафтопродукти можна спалювати для отримання величезних обсягів енергії.%n%n§3Промисловий двигун внутрішнього згоряння§r спалює паливо, таке як §bмазут§r або §bдизельне паливо§r, для вироблення енергії. Існують різні типи поршневих груп, необхідних для роботи двигуна, кожна з яких надає власні бонуси до ККД залежно від сорту палива.%n%n§4§3Турбовентилятор§r - найкраще місце для використання авіаційного палива, такого як §bКеросин§r, оскільки він забезпечує §e100%%§r ККД. Будьте обережні, не стойте перед ним під час роботи!%n%n§3Газотурбіна комбінованого циклу§r - єдиний генератор, який може спалювати газоподібне паливо з §e100%%§r ККД. ТГК використовує §3§bмастило для двигунів§r і виробляє §bгусту пару§r.%n%n§3Факельна труба§r використовується для спалювання газів, таких як §bненасичені вуглеводні§r, з метою отримання енергії, а також для утилізації надлишків рідин.%n%n§3Рідинний пальник§r - це набагато ефективніший спосіб виробництва енергії з газів. Поставте §3Котел§r зверху та пропустіть §bПару§r через турбіну для вироблення енергії.%n%nРозгляньте можливість встановлення §6Глушника§r на деяких з цих машин, оскільки вони дуже гучні. Натисніть Shift та клацніть на машині, тримаючи Глушник, щоб застосувати.
 
 # Quest: Pumpjack
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAATg.name=Насосна вишка
@@ -480,7 +488,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAATg.desc=§3Насосна вишка§r
 
 # Quest: Ore Acidizer
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAATw.name=Підкислювач руди
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAATw.desc=§3Підкислювач руди§r — це корисна машина, яка використовується для обробки різних предметів з метою їхнього практичного застосування, збільшення кількості руди та інших цілей. Вона працює на електроенергії та потребує різних розчинників залежно від предмета. Ця машина споживає досить багато енергії — §e20kHE/s§r. %n%n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAATw.desc=§3Підкислювач руди§r - це корисна машина, яка використовується для обробки різних предметів з метою їхнього практичного застосування, збільшення кількості руди та інших цілей. Вона працює на електроенергії та потребує різних розчинників залежно від предмета. Ця машина споживає досить багато енергії - §e20kHE/s§r. %n%n
 
 # Quest: Hydraulic Fracking Tower
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAUQ.name=Гідравлічна вежа гідророзриву
@@ -496,7 +504,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAUw.desc=§3Електричний ґр�
 
 # Quest: Industrial Solidification Machine
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAVw.name=Промислова машина затвердіння
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAVw.desc=§3Промислова машина затвердіння§r — це універсальне обладнання для твердіння різних рідин. Одним із основних продуктів, що випускаються цією машиною, є §6Дьоготь§r, який можна використовувати для виготовлення §3Резервуарів§r.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAVw.desc=§3Промислова машина затвердіння§r - це універсальне обладнання для твердіння різних рідин. Одним із основних продуктів, що випускаються цією машиною, є §6Дьоготь§r, який можна використовувати для виготовлення §3Резервуарів§r.
 
 # Quest: Industrial Liquification Machine
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAWA.name=Industrial Liquification Machine
@@ -513,10 +521,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAXw.desc=The §6Geiger counter§r is a d
 # Quest: Survey Scanner
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAYA.name=Survey Scanner
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAYA.desc=The §6Survey Scanner§r is a handheld device that will point out underground resourse deposits, such as §eDepth Rock§r and §eBedrock Ores§r.
-
-# Quest: Nuclear Blast Furnace
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZQ.name=Nuclear Blast Furnace
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZQ.desc=The §3Nuclear Blast Furnace§r is an RTG-powered alternative to the standard §3Blast Furnace§r. It has 6 slots for RTG pellets, and requires a minimum of 15 heat to operate. It is significantly faster than the regular blast furnace.%n%nPellets with higher power levels will have a better effect of heating and thus speed. If sufficient heat is provided, it can alloy items near-instantaneously.
 
 # Quest: Launch Pad
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAaw.name=Launch Pad
@@ -572,7 +576,7 @@ betterquesting.quest.t6tkjZliTEKxH0W6y39auQ.desc=The §6Chlorine Pinwheel§r is 
 
 # Quest: Precision Assembly Machine
 betterquesting.quest.tKyjXZ3KQa6y3FLlxcC2_A.name=Високоточна збиральна машина
-betterquesting.quest.tKyjXZ3KQa6y3FLlxcC2_A.desc=§3Високоточна збиральна машина§r — це машина, яка може виготовляти §6Креслення§r. Оскільки рецепти мають низький рівень успішності, рекомендується автоматизувати процес отримання інгредієнтів.%n%nРибу фугу можна отримати, кинувши у воду §6Рибальський динаміт§r.
+betterquesting.quest.tKyjXZ3KQa6y3FLlxcC2_A.desc=§3Високоточна збиральна машина§r - це машина, яка може виготовляти §6Креслення§r. Оскільки рецепти мають низький рівень успішності, рекомендується автоматизувати процес отримання інгредієнтів.%n%nРибу фугу можна отримати, кинувши у воду §6Рибальський динаміт§r.
 
 # Quest: Weapon Steel
 betterquesting.quest.xADm9gLETmCgiS3amOTUcQ.name=Weapon Steel
@@ -587,6 +591,10 @@ betterquesting.quest.zYS6AlyFSuuMUErAJqPcTg.desc=The §3Mining Laser§r is a las
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAg.name=LV3 - Reactors Age
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAg.desc=As energy needs increase, more powerful energy sources will be needed. This chapter covers Nuclear Reactors aswell as other advanced machines needed to produce ever stronger materials.
 
+# Quest: Tungsten Carbide
+betterquesting.quest.-KF6RRqRSdG58hgsbtwsgg.name=Tungsten Carbide
+betterquesting.quest.-KF6RRqRSdG58hgsbtwsgg.desc=§6Tungsten Carbide§r is an alloy made from §6Tungsten§r and §bSyngas§r in a §3Pyrolysis Oven§r. It is mainly used in crafting neutron reflectors for reactors and nukes.
+
 # Quest: Plasma Forge
 betterquesting.quest.29WtP39ZRSClYLinoAxQpQ.name=Plasma Forge
 betterquesting.quest.29WtP39ZRSClYLinoAxQpQ.desc=The §3Plasma Forge§r is a large and advanced assembler that requires a running fusion reactor to work. It can weld plates at twice the speed of a normal welder. It does not accept upgrades, however, it can use up otherwise useless fission fragments and unstable isotopes to gain a temporary §ex4§r speed bonus with no penalty.
@@ -599,13 +607,17 @@ betterquesting.quest.2JMb-t2STTKM5sxV5Z7WOQ.desc=The §3Gas Centrifuge§r is use
 betterquesting.quest.7rFMNl3iSCOD-dpsKLAANQ.name=Nuclear Fuel Processing
 betterquesting.quest.7rFMNl3iSCOD-dpsKLAANQ.desc=Завдяки §3Баку для відпрацьованого палива§r, призначеному для охолодження відпрацьованого ядерного палива §3ЗІРНОКС§ або §3ПВР§r, а також технології §3П'юрекс§r для його подальшої переробки, зараз доступно багато нових матеріалів.
 
+# Quest: Wideband Radio Emission Detector Satellite
+betterquesting.quest.7xvtGouAQxKJ5rWXHykczg.name=Wideband Radio Emission Detector Satellite
+betterquesting.quest.7xvtGouAQxKJ5rWXHykczg.desc=The §3Wideband Radio Emission Detector Satellite§r monitors the entire map for high-energy events with no range limit, returning only an approximate location. Use it as a first-pass detection layer - once a hit is found, follow up with the §3Narrowband Emission Scanning Satellite§r or §3Radar Satellite§r to pinpoint the source.%n%nEvents are grouped by intensity. LOW covers mini-nuke detonations, accurate to within 10,000 m. MEDIUM covers active radars and particle accelerators, accurate to within 2,500 m. HIGH covers nuclear explosions, accurate to within 500 m. MEDIUM events persist for only half a second while others last up to a minute, so rapid repeated scans are recommended.%n%nRoR commands: "esurvey" collects all active results; "ecount" writes the total to RX; "egettype" writes LOW, MEDIUM, or HIGH for a given index; "egetposition" writes approximate X/Z coordinates for a given index.%n%n§2Route this satellite's output through an §3AUTOCAL§r§2 to automatically cue more precise instruments when a hit is detected.
+
 # Quest: Fusion Reactor
 betterquesting.quest.8DXv-b9sRxalmY8yovSQuw.name=Термоядерний реактор
-betterquesting.quest.8DXv-b9sRxalmY8yovSQuw.desc=§3Термоядерний реактор§r — це великий, дорогий і високотехнологічний тип реактора, який працює за рахунок синтезу різних видів плазми з метою отримання тепла.%n%nОсновна частина термоядерного реактора, §3«Торус»§r, має чотири з'єднувальні порти для підключення зовнішніх компонентів. Для роботи йому потрібна електрика та охолодження §bперфторметилом§r.%n%n§3Клистрон§r — це основне джерело живлення термоядерного реактора, яке використовує електрику та стиснене повітря для генерації вхідної енергії, §eKyU§r, для підключеного торуса. Він перейде в режим обмеження потужності, якщо запас електроенергії або стисненого повітря впаде нижче §e50%%§r, а якщо він впаде нижче необхідного рівня вхідної потужності торуса, плазма згасне.%n%nРізні типи плазми також генерують різні корисні побічні продукти та різні рівні потоку нейтронів для розмноження великих обсягів матеріалів, таких як §6Літій§r у §6Тритій§r.%n%nДля зварювання котушок знадобиться §6паяльна лампа§r або §6ацетиленовий зварювальний пальник§r.%n%n§2Щодо додаткових компонентів та методів генерації енергії, будь ласка, ознайомтеся з двома квестами нижче.§r
+betterquesting.quest.8DXv-b9sRxalmY8yovSQuw.desc=§3Термоядерний реактор§r - це великий, дорогий і високотехнологічний тип реактора, який працює за рахунок синтезу різних видів плазми з метою отримання тепла.%n%nОсновна частина термоядерного реактора, §3«Торус»§r, має чотири з'єднувальні порти для підключення зовнішніх компонентів. Для роботи йому потрібна електрика та охолодження §bперфторметилом§r.%n%n§3Клистрон§r - це основне джерело живлення термоядерного реактора, яке використовує електрику та стиснене повітря для генерації вхідної енергії, §eKyU§r, для підключеного торуса. Він перейде в режим обмеження потужності, якщо запас електроенергії або стисненого повітря впаде нижче §e50%%§r, а якщо він впаде нижче необхідного рівня вхідної потужності торуса, плазма згасне.%n%nРізні типи плазми також генерують різні корисні побічні продукти та різні рівні потоку нейтронів для розмноження великих обсягів матеріалів, таких як §6Літій§r у §6Тритій§r.%n%nДля зварювання котушок знадобиться §6паяльна лампа§r або §6ацетиленовий зварювальний пальник§r.%n%n§2Щодо додаткових компонентів та методів генерації енергії, будь ласка, ознайомтеся з двома квестами нижче.§r
 
 # Quest: Large Factory Multiblocks
 betterquesting.quest.8XHLo-wQRN28gu4AwCtHVQ.name=Великі мультиблочні заводи
-betterquesting.quest.8XHLo-wQRN28gu4AwCtHVQ.desc=§3Хімічний завод§r — це збільшена версія §3Хімічного комплексу§r, здатна паралельно виконувати 4 рецепти. Він працює вдвічі швидше за хімічний комплекс, але споживає вдвічі більше енергії. Крім того, вона споживає §bВоду§r як охолоджувач і виробляє §bПару низького тиску§r, тому рекомендується використовувати замкнутий водяний цикл.%n%n§3Зборочний завод§r — це велика версія §3Збиральної машини§r, здатна виконувати 4 рецепти одночасно. Він працює так само, як хімічний завод.
+betterquesting.quest.8XHLo-wQRN28gu4AwCtHVQ.desc=§3Хімічний завод§r - це збільшена версія §3Хімічного комплексу§r, здатна паралельно виконувати 4 рецепти. Він працює вдвічі швидше за хімічний комплекс, але споживає вдвічі більше енергії. Крім того, вона споживає §bВоду§r як охолоджувач і виробляє §bПару низького тиску§r, тому рекомендується використовувати замкнутий водяний цикл.%n%n§3Зборочний завод§r - це велика версія §3Збиральної машини§r, здатна виконувати 4 рецепти одночасно. Він працює так само, як хімічний завод.
 
 # Quest: Starmetal Pickaxe
 betterquesting.quest.8sIzBzykSPqskvhCp-Tsmw.name=Зірметалеве кайло
@@ -613,35 +625,39 @@ betterquesting.quest.8sIzBzykSPqskvhCp-Tsmw.desc=§6Зірметалеве ка�
 
 # Quest: Cadmium
 betterquesting.quest.9BjXTD5CSTOQ-_OroVdJmg.name=Кадмій
-betterquesting.quest.9BjXTD5CSTOQ-_OroVdJmg.desc=§6Кадмій§r — це матеріал, необхідний для виготовлення §6Кадмієвої сталі§r, яка є замінником §6Технетієвої сталі§r.%n%nКадмій можна отримати шляхом плавлення кадмієвого порошку, який можна отримати шляхом підкислення 10 §6Листя гірчичної верби§r за допомогою 250 мБ §bВисокоефективного розчинника§r у §3Підкислювачі руди§r.%n%nГірчична верба — це рослина, яку можна знайти поблизу §eРодовищ нафти в корінній породі§r. Коли вона повністю дозріє, можна отримати основний предмет — лист гірчичної верби.
+betterquesting.quest.9BjXTD5CSTOQ-_OroVdJmg.desc=§6Кадмій§r - це матеріал, необхідний для виготовлення §6Кадмієвої сталі§r, яка є замінником §6Технетієвої сталі§r.%n%nКадмій можна отримати шляхом плавлення кадмієвого порошку, який можна отримати шляхом підкислення 10 §6Листя гірчичної верби§r за допомогою 250 мБ §bВисокоефективного розчинника§r у §3Підкислювачі руди§r.%n%nГірчична верба - це рослина, яку можна знайти поблизу §eРодовищ нафти в корінній породі§r. Коли вона повністю дозріє, можна отримати основний предмет - лист гірчичної верби.
+
+# Quest: Depth-Resource Scanning Satellite
+betterquesting.quest.9Y9PU0asTPmHumQiDRc2Ew.name=Depth-Resource Scanning Satellite
+betterquesting.quest.9Y9PU0asTPmHumQiDRc2Ew.desc=The §3Depth-Resource Scanning Satellite§r maps underground ore deposits across loaded chunks. It is operated via §dRedstone-over-Radio§r through a §3Satellite Ground Station§r.%n%nThe map lacks labels and detail on its own. Pairing the satellite with §6Neutrino Lenses§r - an armor module linked to the same frequency via the §3Satellite ID Manager§r - overlays ores as glowing labeled outlines, making the data far more usable.
 
 # Quest: High-Power Steam Condenser
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0Q.name=Високопотужний паровий конденсатор
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0Q.desc=§3Високопотужний паровий конденсатор§r — це паровий конденсатор, що працює на електроенергії. Він переробляє до 60 мБ/т §bпари низького тиску§r.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0Q.desc=§3Високопотужний паровий конденсатор§r - це паровий конденсатор, що працює на електроенергії. Він переробляє до 60 мБ/т §bпари низького тиску§r.
 
 # Quest: Leviathan Steam Turbine
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAA1Q.name=Парова турбіна Левіафан
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA1Q.desc=§3Парова турбіна Левіафан§r — це величезна турбіна, здатна одночасно переробляти гігантські обсяги §пари§r, обмежена лише швидкістю транспортування рідини в системі. За потужністю переробки сирої пари вона значно перевершує навіть §3Промислову парову турбіну§r. Ця турбіна працює з ККД §e85%%§r, тому для дуже великих реакторів рекомендується використовувати лише 1-2 таких турбіни.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA1Q.desc=§3Парова турбіна Левіафан§r - це величезна турбіна, здатна одночасно переробляти гігантські обсяги §пари§r, обмежена лише швидкістю транспортування рідини в системі. За потужністю переробки сирої пари вона значно перевершує навіть §3Промислову парову турбіну§r. Ця турбіна працює з ККД §e85%%§r, тому для дуже великих реакторів рекомендується використовувати лише 1-2 таких турбіни.
 
 # Quest: RBMK
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAAA.name=РБМК
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAAA.desc=§3РБМК (реактор великої потужності канальний / рос. реактор большой мощности канальный)§r — це модульний ядерний реактор на киплячій воді, який повністю складається з бетонних колон. Кожна з цих колон може бути порожньою або виконувати певну функцію, наприклад, утримувати паливні стрижні, уповільнювати нейтрони або зберігати §bводу§r для перетворення її на §bпару§r. Кожна колона також обмінюється теплом із сусідньою колоною, завдяки чому температурні перепади між колонами поступово вирівнюються всередині реактора. Якщо температура будь-якої колони досягне §e1500°C§r, реактор вибухне з неймовірною силою, розкидаючи уламки та надзвичайно радіоактивні матеріали в усіх напрямках.%n%nЧерез складність та масштабність РБМК настійно рекомендується ознайомитися з вікі, яка містить більше інформації.%n%n[url]https://nucleartech.wiki/wiki/RBMK[/url]%n%n§2Це завдання пропонує опціональне завдання з пошуку дешевої та безпечної конструкції РБМК, яка може виробляти високопродуктивний розчинник§r §2без охолодження. Просто розмістіть канал опромінення РБМК поруч із паливним стрижнем РБМК, надіньте кришки на колони та оточіть їх суцільним блоком.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAAA.desc=§3РБМК (реактор великої потужності канальний / рос. реактор большой мощности канальный)§r - це модульний ядерний реактор на киплячій воді, який повністю складається з бетонних колон. Кожна з цих колон може бути порожньою або виконувати певну функцію, наприклад, утримувати паливні стрижні, уповільнювати нейтрони або зберігати §bводу§r для перетворення її на §bпару§r. Кожна колона також обмінюється теплом із сусідньою колоною, завдяки чому температурні перепади між колонами поступово вирівнюються всередині реактора. Якщо температура будь-якої колони досягне §e1500°C§r, реактор вибухне з неймовірною силою, розкидаючи уламки та надзвичайно радіоактивні матеріали в усіх напрямках.%n%nЧерез складність та масштабність РБМК настійно рекомендується ознайомитися з вікі, яка містить більше інформації.%n%n[url]https://nucleartech.wiki/wiki/RBMK[/url]%n%n§2Це завдання пропонує опціональне завдання з пошуку дешевої та безпечної конструкції РБМК, яка може виробляти високопродуктивний розчинник§r §2без охолодження. Просто розмістіть канал опромінення РБМК поруч із паливним стрижнем РБМК, надіньте кришки на колони та оточіть їх суцільним блоком.
 
 # Quest: Technetium/Cadmium Steel
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAABg.name=Технецій/Кадмієва сталь
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAABg.desc=§6Технецій/Кадмієва сталь§r — це сплав на основі сталі з додаванням технецію-99 та кадмію, що відрізняється надзвичайною корозійною стійкістю. Часто використовується на пізніх етапах гри та є одним із основних матеріалів для виготовлення енергетичних установок §3Ядерного поєднання§r та §3Ватз§r.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAABg.desc=§6Технецій/Кадмієва сталь§r - це сплав на основі сталі з додаванням технецію-99 та кадмію, що відрізняється надзвичайною корозійною стійкістю. Часто використовується на пізніх етапах гри та є одним із основних матеріалів для виготовлення енергетичних установок §3Ядерного поєднання§r та §3Ватз§r.
 
 # Quest: PWR
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAACg.name=ПВР
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAACg.desc=§2§3ПВР§r — це модульний ядерний реактор. Він має менші можливості та обмеженіший вибір типів палива порівняно з §3РБМК§r, але є набагато безпечнішим і простішим у використанні завдяки більш плавному переплавленню та значно більшій стабільності в роботі.%n%nЧерез складність та масштабність ПВР, настійно рекомендуємо ознайомитися з вікі, де наведено більше інформації.%n%n[url]https://nucleartech.wiki/wiki/PWR[/url]%n%n§2Цей квест вимагає найнеобхідніших деталей ПВР і не відображає кількості, необхідної для функціонування реактора. Існує також багато інших типів компонентів ПВР, які можна використовувати.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAACg.desc=§2§3ПВР§r - це модульний ядерний реактор. Він має менші можливості та обмеженіший вибір типів палива порівняно з §3РБМК§r, але є набагато безпечнішим і простішим у використанні завдяки більш плавному переплавленню та значно більшій стабільності в роботі.%n%nЧерез складність та масштабність ПВР, настійно рекомендуємо ознайомитися з вікі, де наведено більше інформації.%n%n[url]https://nucleartech.wiki/wiki/PWR[/url]%n%n§2Цей квест вимагає найнеобхідніших деталей ПВР і не відображає кількості, необхідної для функціонування реактора. Існує також багато інших типів компонентів ПВР, які можна використовувати.
 
 # Quest: Reformate
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAADQ.name=Реформат
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAADQ.desc=§bРеформат§r — це продукт §bсирої нафти§r, отриманий на §3вакуумній нафтопереробній установці§r або в результаті переробки §bнафти§r у §3гідроочисній установці§r.%n%n§2Цей етап можна пропустити, якщо виготовити авіаційне паливо та БТХ за допомогою гідроочисної установки.%n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAADQ.desc=§bРеформат§r - це продукт §bсирої нафти§r, отриманий на §3вакуумній нафтопереробній установці§r або в результаті переробки §bнафти§r у §3гідроочисній установці§r.%n%n§2Цей етап можна пропустити, якщо виготовити авіаційне паливо та БТХ за допомогою гідроочисної установки.%n
 
 # Quest: Starmetal
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJw.name=Зірметал
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJw.desc=§6Зірметал§r — це унікальний сплав, отриманий шляхом поєднання §6Сатурніту§r та §6Порошка метеорита§r у §3Доменній печі§r.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJw.desc=§6Зірметал§r - це унікальний сплав, отриманий шляхом поєднання §6Сатурніту§r та §6Порошка метеорита§r у §3Доменній печі§r.
 
 # Quest: Versatile Integrated Circuit
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAKA.name=Універсальна інтегральна схема
@@ -649,19 +665,19 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAKA.desc=§6Універсальна і�
 
 # Quest: Liquidator Medal
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAALQ.name=Медаль ліквідатора
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAALQ.desc=У разі розплавлення реактора §3РБМК§r §6Фрагменти палива§r будуть розкидані поблизу реактора. §6Медаль ліквідатора§r — це модифікація броні, яка пасивно знижує рівень радіації, що робить її дуже корисною під час роботи з радіоактивними предметами або при проникненні в зони радіаційного забруднення.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAALQ.desc=У разі розплавлення реактора §3РБМК§r §6Фрагменти палива§r будуть розкидані поблизу реактора. §6Медаль ліквідатора§r - це модифікація броні, яка пасивно знижує рівень радіації, що робить її дуже корисною під час роботи з радіоактивними предметами або при проникненні в зони радіаційного забруднення.
 
 # Quest: Versatile Circuit Board
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAMA.name=Універсальна друкована плата
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAMA.desc=§6Універсальна друкована плата§r — це найвищий рівень друкованих плат, для виготовлення якої потрібні §6Бісмут/Миш'як§r та §6Пружні пластикові/ПВХ-пластини§r. Крім того, це на сьогодні найдорожча друкована плата: для виготовлення однієї штуки потрібно майже 55 ізоляторів. Використовується рідко, але в невеликих кількостях у сучасних машинах, таких як §3Термоядерний реактор§r, та у великих кількостях у компонентах для §3Реактор інерційного термоядерного синтезу (ICF)§r.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAMA.desc=§6Універсальна друкована плата§r - це найвищий рівень друкованих плат, для виготовлення якої потрібні §6Бісмут/Миш'як§r та §6Пружні пластикові/ПВХ-пластини§r. Крім того, це на сьогодні найдорожча друкована плата: для виготовлення однієї штуки потрібно майже 55 ізоляторів. Використовується рідко, але в невеликих кількостях у сучасних машинах, таких як §3Термоядерний реактор§r, та у великих кількостях у компонентах для §3Реактор інерційного термоядерного синтезу (ICF)§r.
 
 # Quest: Hard Plastic/PVC Bars
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAANA.name=Пружні пластикові/ПВХ-пластини
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAANA.desc=§6Пружні пластикові/ПВХ-пластини§ — це дуже міцні пластикові матеріали, необхідні для багатьох рецептів на пізніх етапах гри. %n%n§2Обидва матеріали можна використовувати в одних і тих самих рецептах.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAANA.desc=§6Пружні пластикові/ПВХ-пластини§ - це дуже міцні пластикові матеріали, необхідні для багатьох рецептів на пізніх етапах гри. %n%n§2Обидва матеріали можна використовувати в одних і тих самих рецептах.
 
 # Quest: Pyrolysis Oven
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAANg.name=Піролізна піч
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAANg.desc=§3Піролізна піч§r — це установка для переробки нафти, призначена для середньої та пізньої стадій гри, яка спрощує виробництво §6Кристалічного фулериту§r, що в значних кількостях потрібний для створення установок на пізніх стадіях гри. %n%nВона дозволяє переробляти предмет із додаванням рідини на вибір для отримання іншого предмета та/або рідини. За принципом дії вона схожа на §3Коксову піч§r, переважно використовується для переробки руди з корінних порід.%nОднак її основне застосування — у виробництві §6Фулерену§r, оскільки вона може перетворювати §6Дьоготь§r на §6Дрібну сажу§r, усуваючи RNG §3Димової труби§r.%n%nЕксплуатація піролізної печі споживає §e200kHE/s§r.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAANg.desc=§3Піролізна піч§r - це установка для переробки нафти, призначена для середньої та пізньої стадій гри, яка спрощує виробництво §6Кристалічного фулериту§r, що в значних кількостях потрібний для створення установок на пізніх стадіях гри. %n%nВона дозволяє переробляти предмет із додаванням рідини на вибір для отримання іншого предмета та/або рідини. За принципом дії вона схожа на §3Коксову піч§r, переважно використовується для переробки руди з корінних порід.%nОднак її основне застосування - у виробництві §6Фулерену§r, оскільки вона може перетворювати §6Дьоготь§r на §6Дрібну сажу§r, усуваючи RNG §3Димової труби§r.%n%nЕксплуатація піролізної печі споживає §e200kHE/s§r.
 
 # Quest: Reformate Gas
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAPg.name=Реформований газ
@@ -669,27 +685,27 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAPg.desc=§bРеформований г�
 
 # Quest: FEL and SILEX
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQw.name=FEL та SILEX
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQw.desc=§3FEL§r, або лазер на вільних електронах, — це великий багатоблоковий пристрій, який використовується разом із SILEX для генерації різних довжин хвиль лазера, необхідних для виконання всіх рецептів SILEX.%n%nОдин FEL може живити до 5 пристроїв SILEX. Щоб зупинити лазер, на його шляху може бути будь-який бетонний блок.%n%nЧим нижча довжина хвилі кристала, тим швидше будуть виконані рецепти.%n%n§6§3SILEX§r — це машина, яка розділяє ізотопи та елементи від сполук або інших матеріалів за допомогою процесу SILEX (Separation of Isotopes by Laser Exitation — розділення ізотопів за допомогою лазерного збудження). Це дозволяє легше збагачувати §6Уран§r, §6Плутоній§r та §6Австралій§r.%n%nSILEX також може переробляти §6Лазурит§r на §6Сірку§r, §6Алюміній§r і, що найважливіше, §6Кобальт§r. Він може використовувати §bПерекис водню§r для розрідження будь-якого матеріалу, що підлягає переробці, навіть якщо матеріал знаходиться у вигляді порошку. Перероблені матеріали виходять у праву частину колектора.%n%nSILEX повинен бути розміщений на відстані не менше 2 блоків від активованого лазера FEL, інакше він розплавиться.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQw.desc=§3FEL§r, або лазер на вільних електронах, - це великий багатоблоковий пристрій, який використовується разом із SILEX для генерації різних довжин хвиль лазера, необхідних для виконання всіх рецептів SILEX.%n%nОдин FEL може живити до 5 пристроїв SILEX. Щоб зупинити лазер, на його шляху може бути будь-який бетонний блок.%n%nЧим нижча довжина хвилі кристала, тим швидше будуть виконані рецепти.%n%n§6§3SILEX§r - це машина, яка розділяє ізотопи та елементи від сполук або інших матеріалів за допомогою процесу SILEX (Separation of Isotopes by Laser Exitation - розділення ізотопів за допомогою лазерного збудження). Це дозволяє легше збагачувати §6Уран§r, §6Плутоній§r та §6Австралій§r.%n%nSILEX також може переробляти §6Лазурит§r на §6Сірку§r, §6Алюміній§r і, що найважливіше, §6Кобальт§r. Він може використовувати §bПерекис водню§r для розрідження будь-якого матеріалу, що підлягає переробці, навіть якщо матеріал знаходиться у вигляді порошку. Перероблені матеріали виходять у праву частину колектора.%n%nSILEX повинен бути розміщений на відстані не менше 2 блоків від активованого лазера FEL, інакше він розплавиться.
 
 # Quest: Saturnite
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAASQ.name=Сатурніт
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAASQ.desc=§6Сатурніт§r — це надзвичайно міцний, термостійкий і корозієстійкий сплав, який зазвичай використовують для виготовлення міцніших деталей зброї. Він також застосовується для виробництва §6Зірметалу§r і є важливим компонентом реактора §3Ватз§r.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAASQ.desc=§6Сатурніт§r - це надзвичайно міцний, термостійкий і корозієстійкий сплав, який зазвичай використовують для виготовлення міцніших деталей зброї. Він також застосовується для виробництва §6Зірметалу§r і є важливим компонентом реактора §3Ватз§r.
 
 # Quest: Gravity Gun
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAASg.name=Граві-пушка
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAASg.desc=§6Граві-пушка§ — це вдосконалений інструмент, здатний підіймати та кидати блоки. Вона особливо корисна для переміщення надзвичайно небезпечних блоків, таких як коріум, що утворився в результаті розплавлення реактора, або для кидання вибухових речовин.%n%n§2Гравитаційну гармату можна перезарядити в циклотроні за допомогою іонізованих частинок, що дозволить ще більше збільшити її дальність та потужність.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAASg.desc=§6Граві-пушка§ - це вдосконалений інструмент, здатний підіймати та кидати блоки. Вона особливо корисна для переміщення надзвичайно небезпечних блоків, таких як коріум, що утворився в результаті розплавлення реактора, або для кидання вибухових речовин.%n%n§2Гравитаційну гармату можна перезарядити в циклотроні за допомогою іонізованих частинок, що дозволить ще більше збільшити її дальність та потужність.
 
 # Quest: Schrabidium
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAVg.name=Шрабідіум
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAVg.desc=§6Шрабідіум§r — небезпечний матеріал, але він необхідний для створення інших предметів, таких як §6Магнітований вольфрам§r та §6Ферричний шрабідіат§r. Він також чудово підходить як паливо для реакторів. Його можна отримати, піддавши уранову руду радіації за допомогою ядерної зброї або, що простіше, підірвавши радіоактивні бочки, які можна знайти в покинутих атомних електростанціях у пустелях.%n%n§2Тримаючи шрабідій у руках, гравець отримає ефект сліпоти, тому рекомендується використовувати костюм, який забезпечує захист як від яскравого світла, так і від радіації.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAVg.desc=§6Шрабідіум§r - небезпечний матеріал, але він необхідний для створення інших предметів, таких як §6Магнітований вольфрам§r та §6Ферричний шрабідіат§r. Він також чудово підходить як паливо для реакторів. Його можна отримати, піддавши уранову руду радіації за допомогою ядерної зброї або, що простіше, підірвавши радіоактивні бочки, які можна знайти в покинутих атомних електростанціях у пустелях.%n%n§2Тримаючи шрабідій у руках, гравець отримає ефект сліпоти, тому рекомендується використовувати костюм, який забезпечує захист як від яскравого світла, так і від радіації.
 
 # Quest: Advanced Oil Processing
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAWw.name=Продвинута переробка нафти
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAWw.desc=§3Каталітичний переробник§ — це додаткова установка для переробки нафти на пізніх етапах гри. Вона перетворює певні нафтопродукти на більш цінні.%n%n§3Гідроочисник§r — ще одна опціональна машина для переробки нафти на пізніх етапах гри, яка спрощує виробництво §bКислого газу§r, що також може перетворювати §bСиру нафту§r на §bДесульфуровану сиру нафту§r. %n%n§2Гідроочисник потребує рідкого водню під тиском у всіх своїх рецептах, що вимагає використання Компресора.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAWw.desc=§3Каталітичний переробник§ - це додаткова установка для переробки нафти на пізніх етапах гри. Вона перетворює певні нафтопродукти на більш цінні.%n%n§3Гідроочисник§r - ще одна опціональна машина для переробки нафти на пізніх етапах гри, яка спрощує виробництво §bКислого газу§r, що також може перетворювати §bСиру нафту§r на §bДесульфуровану сиру нафту§r. %n%n§2Гідроочисник потребує рідкого водню під тиском у всіх своїх рецептах, що вимагає використання Компресора.
 
 # Quest: Soyuz-FG
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZw.name=Союз-ФГ
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZw.desc=§3Ракета Союз-ФГ§r — це надзвичайно потужна радянська ракета, яка є основною ракетою-носієм для всіх супутників. Ракета повинна запускатися з відповідної великої платформи — в даному випадку, §3Платформа запуску «Союз»§r.%n%nДля запуску потрібно 128,000 мБ §bКеросину§r та §bРідкого кисню§r, а також §e750kHE§r енергії. Натискання кнопки запуску починає 30-секундний відлік. Після завершення відліку «Союз» стартує.%n%n«Союз», окрім своєї основної функції — виведення будь-якого супутника на орбіту, — також може бути налаштований на вантажний режим, у якому він може доставити будь-який вантаж у віддалене місце по всьому світу. Очевидно, що це неймовірно дорогий спосіб транспортування вантажів, і на даний момент він не має великої користі.%n%n§2Креслення для «Союзу» можна знайти в будівлях або придбати через Бобмазон.%n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZw.desc=§3Ракета Союз-ФГ§r - це надзвичайно потужна радянська ракета, яка є основною ракетою-носієм для всіх супутників. Ракета повинна запускатися з відповідної великої платформи - в даному випадку, §3Платформа запуску «Союз»§r.%n%nДля запуску потрібно 128,000 мБ §bКеросину§r та §bРідкого кисню§r, а також §e750kHE§r енергії. Натискання кнопки запуску починає 30-секундний відлік. Після завершення відліку «Союз» стартує.%n%n«Союз», окрім своєї основної функції - виведення будь-якого супутника на орбіту, - також може бути налаштований на вантажний режим, у якому він може доставити будь-який вантаж у віддалене місце по всьому світу. Очевидно, що це неймовірно дорогий спосіб транспортування вантажів, і на даний момент він не має великої користі.%n%n§2Креслення для «Союзу» можна знайти в будівлях або придбати через Бобмазон.%n
 
 # Quest: Ferrouranium Anvil
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAbw.name=Ковадло з фероурану
@@ -697,11 +713,11 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAbw.desc=Оновлена версія �
 
 # Quest: Neutrino Lens
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcA.name=Нейтрино лінза
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcA.desc=§6Нейтрино лінза§r — це модифікація броні, яка дозволяє виявляти та виділяти спеціальні блоки, такі як §eРодовища руди в корінних породах§r, §6Рожеву деревину§r та §6Александрит§r. %n%nЩоб лінза працювала, її спочатку потрібно підключити до §6Супутникового модуля сканування ресурсів на глибині§r, а потім вставити в елемент броні за допомогою §3Верстата модифікацій броні§r.%n%n§2Для роботи лінзи потрібно активувати клавішу HUD.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcA.desc=§6Нейтрино лінза§r - це модифікація броні, яка дозволяє виявляти та виділяти спеціальні блоки, такі як §eРодовища руди в корінних породах§r, §6Рожеву деревину§r та §6Александрит§r. %n%nЩоб лінза працювала, її спочатку потрібно підключити до §6Супутникового модуля сканування ресурсів на глибині§r, а потім вставити в елемент броні за допомогою §3Верстата модифікацій броні§r.%n%n§2Для роботи лінзи потрібно активувати клавішу HUD.
 
 # Quest: ZIRNOX
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcg.name=ZIRNOX
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcg.desc=§3ЗІРНОКС§r — це перший і найдешевший ядерний реактор, який можна побудувати. На відміну від §3ПВР§r та §3РБМК§r, це повністю зібраний реактор, для роботи якого потрібні §bВода§r та §bДвоокис вуглецю§r.%n%nЗавдяки невеликій кількості пари, яку виробляє ЗІРНОКС, можна використовувати одноблокові §3Парові турбіни§r з ефективністю §e85%%§r та один §3Паровий конденсатор§r на паливі з нижчою потужністю. Таким чином, 24 §6Паливні стрижні з природного урану§r, що використовують 14 кмБ вуглекислого газу, дадуть вихідну потужність близько §e160kHE/с§r.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcg.desc=The §3ZIRNOX§r is the first and cheapest nuclear reactor one can make. Unlike the §3PWR§r and §3RBMK§r, it is a fully assembled reactor which requires §bWater§r and §bCarbon Dioxide§r to operate.%n%nDue to its modest steam output, the ZIRNOX can be paired with several §3Steam Engines§r, though an §3Industrial Turbine§r is recommended for its §e100%%§r efficiency. A single §3Steam Condenser§r handles the exhaust on lower power fuels. 24 §6Natural Uranium Fuel Rods§r using 14kmB of carbon dioxide will yield a power output of around §e240kHE/s§r.
 
 # Quest: Cooling Tower
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdQ.name=Cooling Tower
@@ -717,19 +733,15 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAhA.desc=The §6HEV Mark IV§r is a stro
 
 # Quest: Bismuth
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAhw.name=Bismuth
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAhw.desc=§6Бісмут§r — важливий матеріал, необхідний для багатьох складних рецептів виготовлення. Бісмут можна отримати або шляхом виснаження палива §3Канального реактору великої потужності (РБМК)§r та його переробки за допомогою §3Лазеру вільних електронів(FEL)§r і §3Камери лазерного розділення ізотопів (SILEX)§r, або шляхом переробки руди з корінних порід за допомогою §bВисокоефективного розчинника§r. %n%n§6Миш'як§r вимагатиме додаткового §bПідкислювача руди§r, а також доступу до високоефективного розчинника.%n%n§2Через брак на Землі руди вісмуту в корінних породах та тривалість переробки палива РБМК рекомендується використовувати замість бісмуту деяку кількість миш'яку.
-
-# Quest: Research and Breeding Reactor
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAiA.name=Research and Breeding Reactor
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAiA.desc=The §3Research Reactor§r is a non-power reactor intended for burning fuel efficiently and acting as a neutron source for §3Breeding Reactor§ss§r. It has to be submerged in §bWater§r to cool since it does not have the active cooling of a typical power reactor. A §6Ra226Be§r or §6Pu238Be§r neutron source plate is needed to begin the reaction, and then can be removed. It explodes at exactly §e1,000°C§r, so caution is advised when using strong fuels and several breeders simultaneously.%n%nA §3Reactor Remote Control§  Block§r%nand a §6Reactor Remote Sensor§r can be used to activate and monitor the reactor from a distance.%n%nThe Breeding Reactor breeds isotopes of elements into heavier forms using the neutron flux of an adjacent Research Reactor. When the reactor is operating, rays of green-ish "lightning" emitted from the center rod of the model can be seen going to the outer rods from the glass observation window.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAhw.desc=§6Бісмут§r - важливий матеріал, необхідний для багатьох складних рецептів виготовлення. Бісмут можна отримати або шляхом виснаження палива §3Канального реактору великої потужності (РБМК)§r та його переробки за допомогою §3Лазеру вільних електронів(FEL)§r і §3Камери лазерного розділення ізотопів (SILEX)§r, або шляхом переробки руди з корінних порід за допомогою §bВисокоефективного розчинника§r. %n%n§6Миш'як§r вимагатиме додаткового §bПідкислювача руди§r, а також доступу до високоефективного розчинника.%n%n§2Через брак на Землі руди вісмуту в корінних породах та тривалість переробки палива РБМК рекомендується використовувати замість бісмуту деяку кількість миш'яку.
 
 # Quest: Welded Technetium/Cadmium Steel Plate
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjg.name=Welded Technetium/Cadmium Steel Plate
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjg.desc=The §6Welded Technetium/Cadmium Steel Plate§r is the welded varient of the cast technetium/cadmium steel plate and is used in some recipes that require strong materials. %n%n§2Make sure to have good energy generation and storage infrastructure as each plate costs 1.2 Billion HE.
 
-# Quest: Big-Ass Tank 9000
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjw.name=Big-Ass Tank 9000
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjw.desc=The §3Big-Ass Tank 9000§r is the largest fluid storage container, capable of storing 2048000mB of fluids, aswell as being able to hold strongly corrosive fluids.
+# Quest: Big-Ass Tank
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjw.name=Big-Ass Tank
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjw.desc=The §3Big-Ass Tank§r is the largest fluid storage container, capable of storing 2048000mB of fluids, aswell as being able to hold strongly corrosive fluids. It has to be placed on the solid surface, otherwise it is going to break.
 
 # Quest: Heavy Magnetic Storage Tank
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkA.name=Heavy Magnetic Storage Tank
@@ -737,11 +749,11 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkA.desc=The §3Heavy Magnetic Storage T
 
 # Quest: Vacuum Refinery
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkw.name=Вакуумний нафтопереробний завод
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkw.desc=§3Вакуумний нафтопереробний завод§r — це нафтопереробний завод, який переробляє §bсиру нафту під тиском/десульфуровану§r на 4 рідкі продукти. Це хороший спосіб виготовлення §bвисокоефективного розчинника§r за допомогою §bреформованого газу§r та §bхлору§r у §3промисловому змішувачі§r.%n%n§2Для подачі нафти всередину вакуумного нафтопереробного заводу потрібні Компресори.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkw.desc=§3Вакуумний нафтопереробний завод§r - це нафтопереробний завод, який переробляє §bсиру нафту під тиском/десульфуровану§r на 4 рідкі продукти. Це хороший спосіб виготовлення §bвисокоефективного розчинника§r за допомогою §bреформованого газу§r та §bхлору§r у §3промисловому змішувачі§r.%n%n§2Для подачі нафти всередину вакуумного нафтопереробного заводу потрібні Компресори.
 
 # Quest: BTX
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAng.name=BTX
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAng.desc=§bБензол-толуол-ксилол (BTX)§r — це високоякісне потужне паливо, яке під час згоряння виділяє велику кількість енергії. Одним із важливих застосувань BTX є виробництво §6Кристалічного фулериту§r та §6Твердих пластикових брусків§r. BTX можна отримати за допомогою §3Гідроочисника§r, але ефективніше використовувати §bРеформат§r із §3Вакуумної нафтопереробної установки§r.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAng.desc=§bБензол-толуол-ксилол (BTX)§r - це високоякісне потужне паливо, яке під час згоряння виділяє велику кількість енергії. Одним із важливих застосувань BTX є виробництво §6Кристалічного фулериту§r та §6Твердих пластикових брусків§r. BTX можна отримати за допомогою §3Гідроочисника§r, але ефективніше використовувати §bРеформат§r із §3Вакуумної нафтопереробної установки§r.
 
 # Quest: Watz Powerplant
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAApg.name=Watz Powerplant
@@ -769,7 +781,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAww.desc=§6Crystalline Fullerite§r is 
 
 # Quest: High-Performance Solvent
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABPQ.name=High-Performance Solvent
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABPQ.desc=§bВисокоефективний розчинник§r — це розчинник, який використовується в §3Підкислювачу руди§r для подальшого підвищення виходу продуктів з руд корінних порід, а також в інших рецептах. Його можна створити з §bРеформованого газу§r, отриманого з §3Вакуумної нафтопереробної установки§r, та §bХлору§r у §3Промисловому змішувачі§r або отримати з опромінювального каналу §3РБМК§r.%n%nДля транспортування високопродуктивного розчинника вручну необхідна §6Цистерна для небезпечних речовин§r.%n%n§2Високопродуктивний розчинник, виготовлений у каналі опромінення РБМК, вимагає використання кислотного реагенту для руди.%n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABPQ.desc=§bВисокоефективний розчинник§r - це розчинник, який використовується в §3Підкислювачу руди§r для подальшого підвищення виходу продуктів з руд корінних порід, а також в інших рецептах. Його можна створити з §bРеформованого газу§r, отриманого з §3Вакуумної нафтопереробної установки§r, та §bХлору§r у §3Промисловому змішувачі§r або отримати з опромінювального каналу §3РБМК§r.%n%nДля транспортування високопродуктивного розчинника вручну необхідна §6Цистерна для небезпечних речовин§r.%n%n§2Високопродуктивний розчинник, виготовлений у каналі опромінення РБМК, вимагає використання кислотного реагенту для руди.%n
 
 # Quest: Radiation-Powered Engine
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABeA.name=Radiation-Powered Engine
@@ -783,13 +795,29 @@ betterquesting.quest.CYbDJkRORT-LPEInaoL3BQ.desc=Instead of using the §bHot Coo
 betterquesting.quest.CYtQLn_VSx2QTnLEwpMGOw.name=Uranium-238
 betterquesting.quest.CYtQLn_VSx2QTnLEwpMGOw.desc=§6Uranium-238§r is the most common uranium isotope in the game. %n%nThis material has many uses, some of which are: §6Ferrouranium§r, MOX fuel, depleted uranium ammunition, absorber Pellets for the §3Watz§r powerplant and can also be turned into §6Schrabidium§r later on in the §3Exposure Chamber§r.
 
+# Quest: Narrowband Emission Scanning Satellite
+betterquesting.quest.DMCygjIOSOav8ZBlUlqEvQ.name=Narrowband Emission Scanning Satellite
+betterquesting.quest.DMCygjIOSOav8ZBlUlqEvQ.desc=The §3Narrowband Emission Scanning Satellite§r precisely locates specific high-energy events within a 250-meter radius of a target point. It is the high-precision counterpart to the §3Wideband Radio Emission Detector Satellite§r, sensitive to: neutron radiation from nuclear reactors, high-energy particles from fusion reactors and particle accelerators, radar waves from ground radars, and radio waves from §3Satellite Ground Stations§r with an active TX signal.%n%nAll results are stored internally and accessed via §dRedstone-over-Radio§r. "esurvey" performs the scan. "ecount" writes the result count to RX. "egetinfo" followed by an index writes the emission type to RX. "egetposition" followed by an index writes the X/Z coordinates - separated by a semicolon - to RX.%n%n§2Events are time-limited. Run repeated scans at short intervals to avoid missing short-lived emissions.
+
+# Quest: Orbital Precision Laser
+betterquesting.quest.EQ8nf9eDQ-K9yPIxEaFQkw.name=Orbital Precision Laser
+betterquesting.quest.EQ8nf9eDQ-K9yPIxEaFQkw.desc=The §3Orbital Precision Laser§r is a solar-powered orbital weapon, a lighter alternative to the §3Orbital Death Ray§r. It fires an instantaneous beam dealing massive damage to entities within a 5-block radius, though its explosive yield is only roughly equivalent to a single block of TNT. Recharge time between shots is §e5 seconds§r.%n%nIt can be aimed with a §6Satellite (Laser) Designator§r or controlled via §dRedstone-over-Radio§r through a §3Satellite Ground Station§r. The "fire" command fires at the current target coordinates, or at a tracked entity if one has been set - entity target data is consumed after a single shot. The "canfire" command writes TRUE or FALSE to RX depending on whether the laser has finished recharging. The "setentitytarget" command accepts an entity ID from a §3Radar Satellite§r for precision tracking.%n%n§2Entity target data is consumed after one shot, reverting back to coordinate targeting.
+
 # Quest: Additional Fusion Attachments
 betterquesting.quest.JpsvBP1yQsu-XtkeZegA6A.name=Additional Fusion Attachments
 betterquesting.quest.JpsvBP1yQsu-XtkeZegA6A.desc=§3З'єднувач термоядерного реактора§r перетворює енергію плазми, що виходить з тора, на корисну §eKyE§r, яку потім можна використовувати для живлення іншого тора. Деякі комбінації палива вимагають цього, оскільки мінімальна енергія §eKyE§r, необхідна для запалювання плазми, перевищує ту, яку можуть забезпечити чотири §3Клістрони§r.%n%n§3Камера розмноження ядерного реактора§r використовує нейтронний потік з торусу для обробки матеріалів. Воно може виконувати будь-який рецепт з §3Каналу опромінення реактора РБМК§r, а також деякі додаткові рецепти. На нейтронний потік не впливають правила спільного використання портів, а рівень вихідної потужності однаковий з будь-якого боку.%n%n§3Камера збору термоядерного реактора§r збільшує швидкість виробництва побічних продуктів на §e50%%§r.
 
+# Quest: Orbital Death Ray
+betterquesting.quest.Ksafc-uMT02Uk0dvCx1JOQ.name=Orbital Death Ray
+betterquesting.quest.Ksafc-uMT02Uk0dvCx1JOQ.desc=The §3Orbital Death Ray§r is a high-destruction orbital weapon. Before launch, link it to a §6Satellite (Laser) Designator§r using the §3Satellite ID Manager§r. With a standard designator, enter target coordinates manually; with a laser designator, aim and hold right-click on the target block.%n%nUnlike the §3Orbital Precision Laser§r, it has no entity-tracking capability and cannot intercept rockets or hit fast-moving targets. The beam strikes the first surface in its path, so targets in deep cover are safe. Recharge time is §e5 minutes§r. RoR commands: "fire" fires at the current target position if the weapon is ready; "canfire" writes TRUE or FALSE to RX depending on whether it has finished recharging.
+
 # Quest: Desh Stamps
 betterquesting.quest.MFweFzQDQg2L-9X4_I8o-Q.name=Desh Stamps
 betterquesting.quest.MFweFzQDQg2L-9X4_I8o-Q.desc=§6Desh Stamps§r have infinite durability, perfect for automation.
+
+# Quest: Chlorophyte
+betterquesting.quest.PszZViltQjCHNmKB7QJcfA.name=Chlorophyte
+betterquesting.quest.PszZViltQjCHNmKB7QJcfA.desc=§6Chlorophyte§r is a product of fusion and is used in the §3DFC§r and §6Digamma Particle§r.
 
 # Quest: High-Performance Solvent Bedrock Ore Processing
 betterquesting.quest.QusK-8T-TGmBWETwmxosJQ.name=High-Performance Solvent Bedrock Ore Processing
@@ -817,7 +845,7 @@ betterquesting.quest.g3S9-75wTGyQKmZaQTZl5Q.desc=The §3PUREX§r is a machine th
 
 # Quest: Chicago Pile
 betterquesting.quest.g8IVppPpTceY55PbNbceJQ.name=Chicago Pile
-betterquesting.quest.g8IVppPpTceY55PbNbceJQ.desc=§3Чиказька купа§r — це примітивний реактор-розмножувач для початкової стадії гри, призначений для виробництва §6Плутонію§r, що використовується як паливо для реактора.%n%nКупа складається з просвердленого §6Графіту§r, який може вміщувати різноманітні предмети, включаючи радіоізотопні стрижні (§6Уран§r, §6Радій§r, §6Плутоній§r), §6Літієві стрижні§r та регулюючі стрижні. Він не поводиться як єдиний блок, натомість кожна окрема частина просвердленого графіту взаємодіє з іншими частинами унікальним чином, залежно від стрижня, який вона містить.%n%nПісля достатнього потоку уранові стрижні в «Чиказькій купі» перетворяться на плутонієві стрижні, які можна переробити на ковадлі на §6Плутоній реакторного класу§r, який можна використовувати в інших реакторах, таких як §3ЗІРНОКС§r та §3РБМК§r.%n%n«Чиказька купа» вимагає значної кількості графітових блоків, у які після розміщення можна просвердлити отвори за допомогою ручного дриля, щоб встановити будь-який стрижень. %n%n§6Ручний дриль§r можна використовувати для свердління отворів у графіті або відбору проб уранового палива для визначення тепла, виснаження та потоку нейтронів. §6Викрутки§r використовуються для вилучення стрижнів.%n%nУ квесті потрібно створити «Чиказьку купу» розміром 3x3 (без кутів) із стрижнем §6Ra226Be§r у центрі, оточеним урановими стрижнями.
+betterquesting.quest.g8IVppPpTceY55PbNbceJQ.desc=The §3Chicago Pile§r is a modular breeding reactor with no GUI, built to transmute §6Natural Uranium§r into plutonium isotopes through neutron bombardment. It must be operated manually or via §dRedstone-over-Radio§r.%n%nBuild a rectangular prism of §6Chicago Pile Graphite Bricks§r, at minimum 5*5*5 and at most 15*15*15. Once assembled, drill a non-edge block on one of its lateral faces with the §6Hand Drill§r to establish the core and fix the reactor's channel orientation. Channels are straight lines drilled through the pile and may not intersect. Fuel channels share the core's face orientation and accept rods via a §3Chicago Pile Fuel Loader§r on the input port; spent rods are ejected from the opposite side. Ventilation channels run perpendicular to the core and require a §3Chicago Pile Vent§r supplied with §bcompressed air§r at §e1 PU§r - each vent cools only the fuel channels within one block above or below it. Vertical control rod channels are optional and reduce reactivity between channels. %n%nEvery reaction requires a neutron source. The §6Ra226Be Neutron Source§r is the starter option; the more powerful §6Po210Be Neutron Source§r can replace it later. §6Natural Uranium Rods§r breed into §6Plutonium-239 Rods§r, which can be bred further into §6Reactor-Grade Plutonium Rods§r. Leaving fuel beyond that point produces §6Nuclear Waste Rods§r, which generate extreme heat and risk meltdown. To safely push out spent rods without fresh fuel, use §6Zirconium Rods§r - they are inert and transparent to neutrons.%n%n§2Verify cooling is working before loading any fuel. The pile melts down at 800°C, causing an explosion and widespread fire.%n%nThe quest asks for a §3Chicago Pile§r of at least 5*5*5 with a core established, a §3Chicago Pile Fuel Loader§r and §3Chicago Pile Vent§r attached, and a §6Ra226Be Neutron Source§r loaded alongside at least one §6Natural Uranium Rod§r.
 
 # Quest: Spent Fuel Pool Drum
 betterquesting.quest.har7pEFcSRKNgIf4NgmcLA.name=Spent Fuel Pool Drum
@@ -827,9 +855,17 @@ betterquesting.quest.har7pEFcSRKNgIf4NgmcLA.desc=§3Барабан для бас
 betterquesting.quest.iJiX7wxoSBmljc9tITqIqQ.name=Technetium-99
 betterquesting.quest.iJiX7wxoSBmljc9tITqIqQ.desc=§6Technetium-99§r is a common waste product from the fission of §6Uranium§r and §6Plutonium§r. It is mainly used in making §6Technetium Steel§r and §dAE2 Storage Components§r.
 
-# Quest: Satellite Launching
-betterquesting.quest.ocylWycmSd6r-mvYENYGEw.name=Satellite Launching
-betterquesting.quest.ocylWycmSd6r-mvYENYGEw.desc=Satelites in NTM space can be launched from either a Souyz or a custom rocket.
+# Quest: Helium-4
+betterquesting.quest.mPHQk4_mRqi6o2onNs9qgg.name=Helium-4
+betterquesting.quest.mPHQk4_mRqi6o2onNs9qgg.desc=§bHelium-4§r is a product of fusion and is mainly used in crafting §6Quantum Processing Units§r.
+
+# Quest: Houston, We Have a Signal
+betterquesting.quest.ocylWycmSd6r-mvYENYGEw.name=Houston, We Have a Signal
+betterquesting.quest.ocylWycmSd6r-mvYENYGEw.desc=Satellites require dedicated infrastructure to launch, identify, and communicate with.%n%nBefore anything leaves the ground, every satellite must be assigned a unique frequency using the §3Satellite ID Manager§r. Place the satellite in its right slot to generate a random frequency, then use the left and center slots to copy that frequency onto §6Satellite ID Chips§r or other linked devices such as designators. ID Chips are soldered, so prepare them in advance. The assigned frequency appears in the item's tooltip.%n%nSatellites can be launching using a custom rocket or Soyuz-FG.%n%nOnce a satellite is in orbit, a §3Satellite Ground Station§r handles communication. It does not process §dRedstone-over-Radio§r signals directly - it requires an external RoR receiver or transmitter. It connects to one satellite at a time, switched via the appropriate §6Satellite ID Chip§r or an RoR command. RX reads data transmitted down from the satellite; TX sends commands up to it.%n%n§2The Ground Station's capabilities expand significantly when paired with an §3AUTOCAL§r§2, enabling automated satellite tracking, data processing, and chained multi-satellite logic.
+
+# Quest: Xenium Resonator Satellite
+betterquesting.quest.qrbz8mP0Ry-RtTBVRTkruA.name=Xenium Resonator Satellite
+betterquesting.quest.qrbz8mP0Ry-RtTBVRTkruA.desc=The §3Xenium Resonator Satellite§r provides unlimited on-demand teleportation with no cooldown. Before launch, its frequency must be linked to a §6Satellite Designator§r using the §3Satellite ID Manager§r.%n%nA standard §6Satellite Designator§r requires coordinates to be entered manually. A §6Satellite (Laser) Designator§r is simpler - aim the crosshair at a block and right-click.%n%n§2Interdimensional teleportation is not supported.
 
 # Quest: Ferrouranium
 betterquesting.quest.rHdJmpZPSNWIvMLqALvC_w.name=Ferrouranium
@@ -846,6 +882,10 @@ betterquesting.quest.sCe8OyBsQEeMrUpYXUn9Yw.desc=With access to §6Tantalium§r 
 # Quest: Arsenic
 betterquesting.quest.tgpCNtEfScSyk-mdGhGxmQ.name=Arsenic
 betterquesting.quest.tgpCNtEfScSyk-mdGhGxmQ.desc=§6Arsenic§r is a substitute of §6Bismuth§r which can be made from acidizing §6Oily Dirt§r, found near §ebedrock oil deposits§r or from the environmental damage the §3Fracking Tower§r does, with §bHigh-Performance Solvent§r.
+
+# Quest: Radar Survey Satellite
+betterquesting.quest.xQEUURH0RH-QWqDAqs7Gzw.name=Radar Survey Satellite
+betterquesting.quest.xQEUURH0RH-QWqDAqs7Gzw.desc=The §3Radar Survey Satellite§r detects all radar-visible entities - players, rockets, and more - within a 1000-chunk radius of its target position. It compiles results into a searchable list with entity types and exact coordinates, and can filter results by class name without requiring a new scan.%n%nRoR commands: "survey" scans the area and saves results to both a base list and a filtered list. "filter name" replaces the filtered list with only entries matching that class name - the original list is preserved, so this can be run multiple times for different types without rescanning. "count" writes the number of filtered results to RX. "gettargetid index" returns the unique entity ID for a given entry, which can be passed to other satellites for precise targeting. "getposition index" writes exact X/Y/Z coordinates - separated by semicolons - to RX. "getname index" writes the class name of the entry to RX.%n%n§2Pair this satellite with an §3AUTOCAL§r and the §3Orbital Precision Laser§r for automated missile interception.
 
 # Quest: Deuterium Extraction Tower
 betterquesting.quest.yYyMBFJrRUOt39If3zFaFg.name=Deuterium Extraction Tower
@@ -1139,7 +1179,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABFQ.desc=The §6Spark Singularity§r is 
 
 # Quest: FEnSU
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABFg.name=FEnSU
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABFg.desc=The §3FenSU§r is the ultimate energy storage block, being able to store 9.22EHE.%n%n[F1] For more information.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABFg.desc=The §3FenSU§r is the ultimate energy storage block, being able to store §k1239217§rTHE.
 
 # Quest: Gerald the Construction Android
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABHw.name=Gerald the Construction Android
@@ -1167,7 +1207,7 @@ betterquesting.quest.DOSq2NdFQ3Ojsk2F4OtgMQ.desc=§3Magnetohydrodynamic Turbines
 
 # Quest: Done
 betterquesting.quest.FmWwl9ntTjeMSWhXcVcTdg.name=§cDone
-betterquesting.quest.FmWwl9ntTjeMSWhXcVcTdg.desc=Phew, that was quite a journey... Hopefully there is more to come with some modpack updates!%n%nNow [warn]GO TOUCH SOME GRASS IMMIDIATELY[/warn].
+betterquesting.quest.FmWwl9ntTjeMSWhXcVcTdg.desc=Phew, that was quite a journey... Hopefully there is more to come with some modpack updates!%n%nNow [warn]GO TOUCH SOME GRASS IMMIDIATELY[/warn].%n%n§6§lRATE OUR MODPACK: §r[url]https://moddex.gg/modpack/ntnewhorizons[/url]
 
 # Quest: Secret Catalogue
 betterquesting.quest.J9dwgncgSUydHFPUoI85oQ.name=Secret Catalogue
@@ -1187,7 +1227,7 @@ betterquesting.quest.hmwBFeuMQXiUrjE-WdD6-g.desc=The §3ICF Laser Turbocharger§
 
 # Quest: Balls-O-Tron
 betterquesting.quest.k-HwTdGiQVmikRwAeg_fkQ.name=Balls-O-Tron
-betterquesting.quest.k-HwTdGiQVmikRwAeg_fkQ.desc=Balls-O-Tron is the second boss of §dNTM§r. It can be summoned by interracting the mechanist's circle, found in the §eEnargite Temple§r which spawns in jungles, with a §6Silver Key§r, made using the Maskman Coin, or from crafting the Balls-O-Tron spawn item.%n%nDue to the outdated nature of the bosses, aswell as the RNG needed to obtain some of the items, this quest provides an alternative way of obtaining the Balls-O-Tron coin.%n%n§2This quest can be repeated.
+betterquesting.quest.k-HwTdGiQVmikRwAeg_fkQ.desc=§4Balls-O-Tron§r is the second boss of §dNTM§r. It can be summoned by interracting the mechanist's circle, found in the §eEnargite Temple§r which spawns in jungles, with a §6Silver Key§r, made using the Maskman Coin, or from crafting the Balls-O-Tron spawn item.
 
 # Quest: ICF Laser
 betterquesting.quest.nqmqybchRzWn-T46-3vHmQ.name=ICF Laser
@@ -1211,9 +1251,18 @@ betterquesting.quest.xlNjQwC6S3S5o_B7nIciBQ.name=Infinite Water Sources
 betterquesting.quest.xlNjQwC6S3S5o_B7nIciBQ.desc=Tired of using buckets to give water to your machines? Try using water pumps or infinite water tanks!%n%nInfinite Water Tank will give 50mb/t%nEnhanced Infinite Water Tank will give 500mb/t%nPump will give 1000mb/t but requires steam to operate.
 
 
+## Quest Line: Farming and Cooking
+betterquesting.questline.UJ4N6pDhQ5aGBxBW9j-BVw.name=Farming and Cooking
+betterquesting.questline.UJ4N6pDhQ5aGBxBW9j-BVw.desc=Everything about how to farm and cook.
+
+
 ## Quest Line: Building and Decorating
 betterquesting.questline.7-1bBIkKRc6xhh5bwIGsjg.name=Building and Decorating
 betterquesting.questline.7-1bBIkKRc6xhh5bwIGsjg.desc=Improve your builds by using Chisel, Architecturecraft and Better Builder's Wands.
+
+# Quest: Building Gadget
+betterquesting.quest.8voIl_BdSZWqZcTPQVjo9Q.name=Building Gadget
+betterquesting.quest.8voIl_BdSZWqZcTPQVjo9Q.desc=The §6Building Gadget§r is an advanced building tool which allows the user to create many complex shapes with ease. Press the ALT key to open its menu.%n%n§2It consumes power for blocks placed.§r
 
 # Quest: Auto Chisel
 betterquesting.quest.QS-1ophNScaPpKGGoCqFMQ.name=Auto Chisel
@@ -1242,27 +1291,6 @@ betterquesting.quest.p7NNm2NvRgWz37LQO6yraw.desc=§dArchitectureCraft§r introdu
 # Quest: Sign Pictures
 betterquesting.quest.wAu-q390TlKihyp-bEI2lw.name=Sign Pictures
 betterquesting.quest.wAu-q390TlKihyp-bEI2lw.desc=The §dSignPicture§r mod allows one to put any image on a sign, opening the door to many unique building designs. Press  to get started.
-
-
-## Quest Line: Three hundred caps
-betterquesting.questline.PUpgFX1lTJePHTcvicBC8g.name=Three hundred caps
-betterquesting.questline.PUpgFX1lTJePHTcvicBC8g.desc=Welcome to the shop!
-
-# Quest: Sell Dust
-betterquesting.quest.7NPMYwlyRnuUYaXsIwEgRg.name=Sell Dust
-betterquesting.quest.7NPMYwlyRnuUYaXsIwEgRg.desc=I hate dust!
-
-# Quest: Buy Minecraft Grade Copper
-betterquesting.quest.D2Exp9OuTbyYS9fJwtw2-g.name=Buy Minecraft Grade Copper
-betterquesting.quest.D2Exp9OuTbyYS9fJwtw2-g.desc=Need some minecraft grade copper? Buy some!
-
-# Quest: Buy Technetium Steel
-betterquesting.quest.QoKnQH_ETbiodGyDlEZzuA.name=Buy Technetium Steel
-betterquesting.quest.QoKnQH_ETbiodGyDlEZzuA.desc=Need some technetium steel? Buy some!
-
-# Quest: Buy Steel
-betterquesting.quest.r6_zzsvOSRWQ6N6YCBilvw.name=Buy Steel
-betterquesting.quest.r6_zzsvOSRWQ6N6YCBilvw.desc=Need some steel? Buy some!
 
 
 ## Quest Line: Reward Area
@@ -1560,10 +1588,6 @@ betterquesting.quest.6nKJ4mC3QB-i5nx8UXrPew.desc=I think I need a new backpack. 
 betterquesting.quest.8G4ZvwvWQpihM6NfflMw7A.name=Time to Kill (Witch)
 betterquesting.quest.8G4ZvwvWQpihM6NfflMw7A.desc=Witches bring stitches because they are always infernal and very dangerous. Be careful since they throw potions at you.
 
-# Quest: Maskman
-betterquesting.quest.8b6batCvQvCiGknitRMrSQ.name=Maskman
-betterquesting.quest.8b6batCvQvCiGknitRMrSQ.desc=Maskman is first NTM boss. To summon it, you should be under radiation poisoning (50 rad). Just wait for him to arrive.
-
 # Quest: MEGAKILL!
 betterquesting.quest.C7CLvAjyQUy2aNW1HiA7Ow.name=§4§lMEGAKILL!
 betterquesting.quest.C7CLvAjyQUy2aNW1HiA7Ow.desc=You killed them all! §cYou're monster!
@@ -1659,9 +1683,13 @@ betterquesting.quest.5VAtBoWDTLmFNrWxLbn9IA.desc=§cWelcome to Nuclear Tech: New
 betterquesting.quest.6k-JrbD-S8GO9PRRthWNRA.name=Dyson Anatmogenesis Terraformer
 betterquesting.quest.6k-JrbD-S8GO9PRRthWNRA.desc=The §3Dyson Anatmogenesis Terraformer§r provides the most utility out of all the currently available §3Dyson converters§r, accepting a beam from a receiver and providing a direct energy to mass conversion, producing planetary scale atmospheric gases, terraforming any planet or moon as a player sees fit.%n%nBy default it will release oxygen into an atmosphere, making it breathable once it crosses the 0.1atm threshold for breathing. A fluid identifier can be used to switch the gas emitted, and a screwdriver can switch it between emitting or extracting gases from the atmosphere.%n%nIf powered with §e150THE/s§r power from a swarm (equivalent to a swarm size of 1,024), it will take 8 hours to reach 0.1atm of pressure.
 
+# Quest: Maskman
+betterquesting.quest.8b6batCvQvCiGknitRMrSQ.name=Maskman
+betterquesting.quest.8b6batCvQvCiGknitRMrSQ.desc=Maskman is the first NTM boss. To summon it, you need to be under radiation poisoning (50 rad). A 20-minute timer starts per player when requirements are met. Once it runs out, Mask Man spawns. A warning appears 1 minute before spawn. If you are no longer irradiated, the timer resets.
+
 # Quest: Glyphids
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAABQ.name=Glyphids
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAABQ.desc=§6Glyphids§r are large insects that have many different types. They primarily spawn with naturally generated §6§rhives§r structures. All of the types are armored and they take less damage than against normal mobs. Glyphids are normally attracted to pollution created by the player, and usually have to be dealt with by the player.%n%n§6§r§6Hives§r can spawn naturally in all non-ocean biomes and can also be created by glyphid scouts. They contain several glyphid egg blocks and some low-tier loot inside, lying on top of eggs. glyphid egg blocks spawn glyphids and drop glyphid eggs upon destruction.%n%n§2It is recommended that all hives are destroyed as soon as possible as to prevent their spread later on.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAABQ.desc=§6Glyphids§r are large insects that have many different types. They primarily spawn with naturally generated §6§rhives§r structures. All of the types are armored and they take less damage than against normal mobs. Glyphids are normally attracted to pollution created by the player, and usually have to be dealt with by the player.%n%n§6§r§6Hives§r can spawn naturally in all non-ocean biomes and can also be created by glyphid scouts. They contain several glyphid egg blocks and some low-tier loot inside, lying on top of eggs. glyphid egg blocks spawn glyphids and drop glyphid eggs upon destruction.%n%nGlyphids now periodically retarget the closest player every 5 seconds if their current target is farther. 1/3 of glyphids do not have this behavior to prevent infinite trapping.%n%n§2It is recommended that all hives are destroyed as soon as possible as to prevent their spread later on.
 
 # Quest: Useful Tools
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAACA.name=Useful Tools
@@ -1670,6 +1698,10 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAACA.desc=There are many tools which will
 # Quest: Tantalium
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAiw.name=Tantalium
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAiw.desc=§6Tantalium§r is a material needed for the creation of some items, most importantly §6Capacitor Boards§r. Tantalium Polycrystal production requires §6Coltan§r which can be located by the use of a §6Coltass§r. Coltan can also be obtained by using the mining drill in a §eBedrock Ore Coltan Deposit§r located randomly on planet Dres. Tantalum can also be obtained via §3Watz Reactor§r.%n%n§2Coltan Processing at its early stage can provide Niobium needed for Catalytic Cracking Towers.
+
+# Quest: Hunger System
+betterquesting.quest.Fio9CeHtR9-O6cehKBCH5g.name=Система голоду
+betterquesting.quest.Fio9CeHtR9-O6cehKBCH5g.desc=§dHunger Overhaul§r перетворює голод на справжню загрозу, а не на незначну незручність.%n%nТепер рівень голоду пасивно знижується з часом, навіть у стані бездіяльності. Досягнення нульового рівня призводить до миттєвої смерті. До цього моменту низький рівень голоду спричиняє уповільнення, слабкість та зниження швидкості видобутку. Прийом їжі надає ефект §6Ситий§r, який прискорює відновлення здоров’я - чим ситніша їжа, тим довше триває ефект.%n%nХарчові цінності перебалансовані відповідно до розміру страви. Сирі інгредієнти відновлюють дуже мало; готові страви відновлюють значно більше. Більші страви їсти довше, і їх менше вміщається у вашому інвентарі.%n%nРослини ростуть лише вдень, і дозрівання займає набагато більше часу. Дерев'яні та кам'яні мотики видалено - для обробки ґрунту вам потрібна щонайменше залізна мотика. Сільськогосподарські угіддя повинні бути розташовані поруч із водою, інакше вони не працюватимуть.%n%n§dSpice of Life: Carrot Edition§r винагороджує різноманітність раціону. Кожна унікальна страва, з’їдена вперше, назавжди збільшує ваш максимальний запас здоров’я. Повторне вживання однієї й тієї ж страви не дає жодних бонусів.%n%n§2Чим різноманітніший ваш раціон, тим більше у вас сердець - побудуйте різноманітну ферму якомога раніше.§r
 
 # Quest: Red Key
 betterquesting.quest.NB6qs0xZSHaY5Sik2IoTxg.name=Red Key
@@ -1683,9 +1715,17 @@ betterquesting.quest.VoxsH2isSheNEKaJ3_Ikgg.desc=The §6Screwdriver§r is used t
 betterquesting.quest.XbTJRWJNTKa4UEeLPV0urg.name=The End of Space...
 betterquesting.quest.XbTJRWJNTKa4UEeLPV0urg.desc=Well, you've completed the space stage of the game; now the entire space knows and fears you (you are a true space pirate). Here are a couple more nuances about the §3Dyson swarm§r:%n%n§2Do not place §3converters§r directly next to the §3receiver§r - this will cause a malfunction.§r%n%n§2Multiple players in the same game world can create multiple §3swarms§r, but keep in mind that different swarms reduce each other's §eefficiency§r. This can encourage players to either work together on one common §3swarm§r or compete to extract more §eenergy§r from their own §3swarm§r.§r
 
+# Quest: Agriculture and Farming
+betterquesting.quest.Zpwlu-OeTpCvf7vTFz-BIA.name=Сільське господарство та фермерство
+betterquesting.quest.Zpwlu-OeTpCvf7vTFz-BIA.desc=Three mods overhaul farming and food in this pack.%n%n§dPam's HarvestCraft§r adds 40+ crops, many fruit trees, 10 fish, beekeeping, and 75+ foods. Key blocks: §3Presser§r (produces oils, honey, etc.), §3Market§r (buys seeds and saplings for emeralds), §3Shipping Block§r (sells crops for emeralds). Right-clicking a mature crop harvests and replants it.%n%n§dAgriCraft§r adds genetics-based crop breeding. Plants have six stats - Growth, Gain, Strength, Resistance, Fertility, and Mutativity - inherited from parent crops when cross-breeding. Higher stats are dominant. Mutations can unlock new crop species entirely. Weeds will compete with and eventually kill unmanaged crops. Plants have specific soil, light, and fluid requirements, so placement matters.%n%n§dHunger Overhaul§r requires farmland to be placed adjacent to water - untouched dry tilled soil will not function.%n%n§2Note that the crops should be planted on the Crop Sticks.
+
+# Quest: Compressor
+betterquesting.quest.jcaOirN6QCOC50YJbil2rQ.name=Compressor
+betterquesting.quest.jcaOirN6QCOC50YJbil2rQ.desc=The §3Compressor§r is a specialized multiblock machine for compressing fluids. It can perform this operation on any fluid to increase its pressure, for use in other machines. Some of these fluids are compressed into different fluids entirely as special recipes for this machine.
+
 # Quest: Guide Book
 betterquesting.quest.qxRS5162RCW1IG--2Ibg7g.name=Guide Book
-betterquesting.quest.qxRS5162RCW1IG--2Ibg7g.desc=While the §6Quest Book§r tries to give as much information as possible, it is not a full guide to all the content in the game.%n%nThat's what §6Guide Book§r is used for! Community-curated, constantly growing and &q&zawesome§r-looking!
+betterquesting.quest.qxRS5162RCW1IG--2Ibg7g.desc=While the §6Quest Book§r tries to give as much information as possible, it is not a full guide to all the content in the game.%n%nThat's what §6Guide Book§r is used for! Community-curated, constantly growing and &q&zawesome§r-looking!%n%n§2Note: this Guide Book can be opened via the keybind
 
 
 ### Quests in no quest lines ###

@@ -1,0 +1,36 @@
+{
+  "ae2_uvl_marker": true,
+  "parent": "block/block",
+  "textures": {
+    "block": "blocks/stone",
+    "quartz": "appliedenergistics2:blocks/charged_quartz_ore_light_0",
+    "particle": "appliedenergistics2:blocks/charged_quartz_ore"
+  },
+  "elements": [
+    {
+      "faces": {
+        "down": { "texture": "#block", "cullface": "down", "uvlightmap": { "block": 0.007, "sky": 0.007 } },
+        "east": { "texture": "#block", "cullface": "east", "uvlightmap": { "block": 0.007, "sky": 0.007 } },
+        "north": { "texture": "#block", "cullface": "north", "uvlightmap": { "block": 0.007, "sky": 0.007 } },
+        "south": { "texture": "#block", "cullface": "south" },
+        "up": { "texture": "#block", "cullface": "up" },
+        "west": { "texture": "#block", "cullface": "west" }
+      },
+      "from": [0, 0, 0],
+      "to": [16, 16, 16]
+    },
+    {
+      "faces": {
+        "down": { "texture": "#quartz", "cullface": "down", "uvlightmap": { "block": 0.007, "sky": 0.007 } },
+        "east": { "texture": "#quartz", "cullface": "east", "uvlightmap": { "block": 0.007, "sky": 0.007 } },
+        "north": { "texture": "#quartz", "cullface": "north", "uvlightmap": { "block": 0.007, "sky": 0.007 } },
+        "south": { "texture": "#quartz", "cullface": "south", "uvlightmap": { "block": 0.007, "sky": 0.007 } },
+        "up": { "texture": "#quartz", "cullface": "up", "uvlightmap": { "block": 0.007, "sky": 0.007 } },
+        "west": { "texture": "#quartz", "cullface": "west", "uvlightmap": { "block": 0.007, "sky": 0.007 } }
+      },
+      "from": [0, 0, 0],
+      "shade": true,
+      "to": [16, 16, 16]
+    }
+  ]
+}

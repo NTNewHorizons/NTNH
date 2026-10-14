@@ -1,0 +1,35 @@
+{
+  "parent": "appliedenergistics2:item/part/part",
+  "textures": {
+    "sides": "appliedenergistics2:parts/plane_sides",
+    "plane": "appliedenergistics2:items/part/annihilation_plane",
+    "back": "appliedenergistics2:parts/transition_plane_back"
+  },
+  "elements": [
+    {
+      "name": "Front",
+      "from": [1, 1, 8],
+      "to": [15, 15, 9],
+      "faces": {
+        "north": { "uv": [1, 1, 15, 15], "texture": "plane" },
+        "east": { "uv": [15, 1, 16, 15], "texture": "sides" },
+        "south": { "uv": [1, 1, 15, 15], "texture": "back" },
+        "west": { "uv": [0, 1, 1, 15], "texture": "sides" },
+        "up": { "uv": [1, 0, 15, 1], "texture": "sides" },
+        "down": { "uv": [1, 15, 15, 16], "texture": "sides" }
+      }
+    },
+    {
+      "name": "Back",
+      "from": [5, 5, 9],
+      "to": [11, 11, 10],
+      "faces": {
+        "east": { "uv": [14, 5, 15, 11], "texture": "sides" },
+        "south": { "uv": [5, 5, 11, 11], "texture": "sides" },
+        "west": { "uv": [1, 5, 2, 11], "texture": "sides" },
+        "up": { "uv": [5, 1, 11, 2], "texture": "sides" },
+        "down": { "uv": [5, 14, 11, 15], "texture": "sides" }
+      }
+    }
+  ]
+}

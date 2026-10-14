@@ -28,5 +28,4 @@ recipes.remove(<minecraft:iron_door>);
 
 // ================================================================================
 //#MARKER ADD SHAPED
-recipes.addShaped(<minecraft:iron_door>, [[<ore:ingotIron>, <ore:ingotIron>], [<ore:ingotIron>, <ore:ingotIron>], [<ore:ingotIron>, <ore:ingotIron>]]);
 

@@ -17,13 +17,13 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §3Nuclear Blast Furnace§r is an RTG-powered alternative to the standard §3Blast Furnace§r. It has 6 slots for RTG pellets, and requires a minimum of 15 heat to operate. It is significantly faster than the regular blast furnace.\n\nPellets with higher power levels will have a better effect of heating and thus speed. If sufficient heat is provided, it can alloy items near-instantaneously.",
+      "desc:8": "The §3RTG Furnace §fis an§r §c§eRTG-powered§r§r alternative to the standard §3Furnace§r§r§3.§r It has 3 slots for RTG pellets, and it is significantly faster than the regular furnace.\n\nPellets with higher power levels will have a better effect of heating and thus speed. If sufficient heat is provided, it can smelt items near-instantaneously.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
         "Damage:2": 0,
         "OreDict:8": "",
-        "id:8": "hbm:tile.machine_difurnace_rtg_off"
+        "id:8": "hbm:tile.machine_rtg_furnace_off"
       },
       "isMain:1": 0,
       "isSilent:1": 0,
@@ -71,7 +71,7 @@
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "hbm:tile.machine_difurnace_rtg_off"
+          "id:8": "hbm:tile.machine_rtg_furnace_off"
         }
       },
       "taskID:8": "bq_standard:retrieval"

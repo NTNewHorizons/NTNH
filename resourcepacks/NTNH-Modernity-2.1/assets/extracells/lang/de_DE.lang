@@ -1,0 +1,88 @@
+//**********//
+//EXTRACELLS//
+//**********//
+
+//Items
+extracells.item.storage.physical.256k.name=256k ME-Speicher
+extracells.item.storage.physical.1024k.name=1024k ME-Speicher
+extracells.item.storage.physical.4096k.name=4096k ME-Speicher
+extracells.item.storage.physical.16348k.name=16348k ME-Speicher
+extracells.item.storage.physical.container.name=ME-Block-Speicher
+extracells.item.storage.fluid.1k.name=1k ME-Flüssigkeitsspeicher
+extracells.item.storage.fluid.4k.name=4k ME-Flüssigkeitsspeicher
+extracells.item.storage.fluid.16k.name=16k ME-Flüssigkeitsspeicher
+extracells.item.storage.fluid.64k.name=64k ME-Flüssigkeitsspeicher
+extracells.item.storage.fluid.256k.name=256k ME-Flüssigkeitsspeicher
+extracells.item.storage.fluid.1024k.name=1024k ME-Flüssigkeitsspeicher
+extracells.item.storage.fluid.4096k.name=4096k ME-Flüssigkeitsspeicher
+extracells.item.storage.fluid.portable.name=Portabler ME-Flüssigkeitsspeicher
+extracells.item.storage.component.physical.256k.name=256k-ME-Speicherkomponente
+extracells.item.storage.component.physical.1024k.name=1024k-ME-Speicherkomponente
+extracells.item.storage.component.physical.4096k.name=4096k-ME-Speicherkomponente
+extracells.item.storage.component.physical.16384k.name=16348k-ME-Speicherkomponente
+extracells.item.storage.component.fluid.1k.name=1k-ME-Flüssigkeitsspeicherkomponente
+extracells.item.storage.component.fluid.4k.name=4k-ME-Flüssigkeitsspeicherkomponente
+extracells.item.storage.component.fluid.16k.name=16k-ME-Flüssigkeitsspeicherkomponente
+extracells.item.storage.component.fluid.64k.name=64k-ME-Flüssigkeitsspeicherkomponente
+extracells.item.storage.component.fluid.256k.name=256k-ME-Flüssigkeitsspeicherkomponente
+extracells.item.storage.component.fluid.1024k.name=1024k-ME-Flüssigkeitsspeicherkomponente
+extracells.item.storage.component.fluid.4096k.name=4096k-ME-Flüssigkeitsspeicherkomponente
+extracells.item.storage.casing.physical.name=Erweitertes Speichergehäuse
+extracells.item.storage.casing.fluid.name=Flüssigkeits-Speichergehäuse
+extracells.item.terminal.fluid.wireless.name=Drahtlose Flüssigkeits-Zugangskonsole
+extracells.item.fluid.pattern=ME Flüssigkeitsschablone [WIP]
+
+//Creative Tab
+itemGroup.Extra_Cells=Extra Cells 2
+
+//Item Groups
+extracells.fluid.IO=ME-Flüssigkeits-Export-/Importbus
+extracells.fluid.plane=ME-Flüssigkeits-Annihilations-/Formationsfeld
+
+//Parts
+extracells.part.fluid.export.name=ME-Flüssigkeits-Exportbus
+extracells.part.fluid.import.name=ME-Flüssigkeits-Importbus
+extracells.part.fluid.storage.name=ME-Flüssigkeits-Speicherbus
+extracells.part.fluid.terminal.name=ME-Flüssigkeits-Terminal
+extracells.part.fluid.plane.annihilation.name=ME-Flüssigkeits-Annihilationsfeld
+extracells.part.fluid.plane.formation.name=ME-Flüssigkeits-Formationsfeld
+extracells.part.fluid.levelemitter.name=ME-Flüssigkeits-Füllstandemitter
+extracells.part.drive.name=ME-Laufwerkhalterung
+extracells.part.battery.name=ME-Energiezellenhalterung
+extracells.part.fluid.conversion.monitor.name=ME-Flüssigkeits-Konversionsmonitor
+extracells.part.fluid.monitor.name=ME-Flüssigkeits-Speichermonitor
+extracells.part.oredict.export.name=ME-Ore-Dictionary-Exportbus
+
+//Blocks
+extracells.block.certustank=Certus-Quarz-Tank
+extracells.block.walrus.name=Walross
+extracells.block.fluidcrafter.name=ME-Flüssigkeits-Fertigungskammer
+extracells.block.fluidinterface.name=ME-Flüssigkeits-Interface
+extracells.block.fluidfiller.name=ME-Flüssigkeitsfüller
+tile.extracells.block.hardmedrive.name=Explosionssicheres ME-Laufwerk
+
+//Tooltips and Chat-Messages
+extracells.tooltip.amount=Menge
+extracells.tooltip.fluid=Flüssigkeit
+extracells.tooltip.storage.physical.types=%s von %s Item-Typen verwendet.
+extracells.tooltip.storage.fluid.types=%s von %s Flüssigkeits-Typen verwendet.
+extracells.tooltip.storage.physical.bytes=%s von %s Item-Bytes verwendet.
+extracells.tooltip.storage.fluid.bytes=%s von %s Flüssigkeits-Bytes verwendet.
+extracells.tooltip.storage.fluid.content=Enthält %s mB Flüssigkeit.
+extracells.tooltip.storage.physical.content=Enthält %s Items.
+extracells.tooltip.direction.0=Unten
+extracells.tooltip.direction.1=Oben
+extracells.tooltip.direction.2=Norden
+extracells.tooltip.direction.3=Süden
+extracells.tooltip.direction.4=Westen
+extracells.tooltip.direction.5=Osten
+extracells.tooltip.empty1=Leer
+extracells.tooltip.storage.container.0=Modus: Plazier-Modus
+extracells.tooltip.storage.container.1=Modus: Gleicher-Handel-Modus (1*1)
+extracells.tooltip.storage.container.2=Modus: Gleicher-Handel-Modus (3*3)
+extracells.tooltip.onlyblocks=Du kannst keine Items platzieren! Packe einen Block in den BLOCK-Container
+extracells.tooltip.save=Speichern
+extracells.tooltip.oredict=Ore-Dictionary Name
+
+//Buttons
+extracells.gui.craft=Herstellen

@@ -2,9 +2,9 @@ name: Pull Latest Translations
 
 on:
   workflow_dispatch:
-  repository_dispatch:
-    types: [translations-released]  # Triggered by daily-release.yml in NTNH-Translations
-
+  schedule:
+    - cron: '0 0 * * *'
+    
 permissions:
   contents: write
 

@@ -1,0 +1,75 @@
+{
+  "textures": {
+    "particle": "#texture"
+  },
+  "elements": [
+    {
+      "name": "Base",
+      "from": [ 4, 4, 4 ], 
+      "to": [ 12, 6, 12 ], 
+      "faces": {
+        "north": { "texture": "#texture" },
+        "east":  { "texture": "#texture" },
+        "south": { "texture": "#texture" },
+        "west":  { "texture": "#texture" },
+        "down":  { "texture": "#texture" }
+      }
+    },
+    {
+      "name": "Top",
+      "from": [ 6, 6, 6 ], 
+      "to": [ 10, 6, 10 ], 
+      "faces": {
+        "up": { "texture": "#texture" }
+      }
+    },
+    {
+      "name": "Northeast",
+      "from": [ 10, 6, 4 ], 
+      "to": [ 12, 9, 6 ], 
+      "faces": {
+        "north": { "texture": "#texture" },
+        "east":  { "texture": "#texture" },
+        "south": { "texture": "#texture" },
+        "west":  { "texture": "#texture" },
+        "up":    { "texture": "#texture" }
+      }
+    },
+    {
+      "name": "Northwest",
+      "from": [ 4, 6, 4 ], 
+      "to": [ 6, 9, 6 ], 
+      "faces": {
+        "north": { "texture": "#texture" },
+        "east":  { "texture": "#texture" },
+        "south": { "texture": "#texture" },
+        "west":  { "texture": "#texture" },
+        "up":    { "texture": "#texture" }
+      }
+    },
+    {
+      "name": "Southwest",
+      "from": [ 4, 6, 10 ], 
+      "to": [ 6, 9, 12 ], 
+      "faces": {
+        "north": { "texture": "#texture" },
+        "east":  { "texture": "#texture" },
+        "south": { "texture": "#texture" },
+        "west":  { "texture": "#texture" },
+        "up":    { "texture": "#texture" }
+      }
+    },
+    {
+      "name": "Southeast",
+      "from": [ 10, 6, 10 ], 
+      "to": [ 12, 9, 12 ], 
+      "faces": {
+        "north": { "texture": "#texture" },
+        "east":  { "texture": "#texture" },
+        "south": { "texture": "#texture" },
+        "west":  { "texture": "#texture" },
+        "up":    { "texture": "#texture" }
+      }
+    }
+  ]
+}

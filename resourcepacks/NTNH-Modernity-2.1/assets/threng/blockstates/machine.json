@@ -1,0 +1,70 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "threng:machine"
+  },
+  "variants": {
+    "type": {
+      "aggregator": {
+        "model": "threng:machine_aggregator",
+        "textures": {
+          "face": "threng:blocks/machine/aggregator",
+          "face_active": "threng:blocks/machine/aggregator_active"
+        }
+      },
+      "centrifuge": {
+        "model": "threng:machine_centrifuge",
+        "textures": {
+          "face": "threng:blocks/machine/centrifuge",
+          "face_active": "threng:blocks/machine/centrifuge_active"
+        }
+      },
+      "etcher": {
+        "model": "threng:machine_etcher",
+        "textures": {
+          "face": "threng:blocks/machine/etcher",
+          "face_active": "threng:blocks/machine/etcher_active"
+        }
+      },
+      "fast_crafter": {
+        "model": "threng:machine_fast_crafter",
+        "textures": {
+          "face": "threng:blocks/machine/fast_crafter",
+          "face_active": "threng:blocks/machine/fast_crafter_active"
+        }
+      },
+      "level_maintainer": {
+        "model": "threng:machine_level_maintainer",
+        "textures": {
+          "face": "threng:blocks/machine/level_maintainer",
+          "face_active": "threng:blocks/machine/level_maintainer_active"
+        }
+      },
+      "energizer": {
+        "model": "threng:machine_energizer",
+        "textures": {
+          "face": "threng:blocks/machine/energizer",
+          "face_active": "threng:blocks/machine/energizer_active"
+        }
+      }
+    },
+    "rotation": {
+      "north": {},
+      "east": { "y": 90 },
+      "south": { "y": 180 },
+      "west": { "y": 270 }
+    },
+    "active": {
+      "true": {
+        "textures": {
+          "front": "#face_active"
+        }
+      },
+      "false": {
+        "textures": {
+          "front": "#face"
+        }
+      }
+    }
+  }
+}

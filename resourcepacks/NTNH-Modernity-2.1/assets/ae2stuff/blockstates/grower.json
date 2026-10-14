@@ -1,0 +1,21 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model": "ae2stuff:grower"
+	},
+	"variants": {
+		"active": {
+			"true": {
+				"textures": {
+					"top": "ae2stuff:blocks/grower/top_on",
+					"side": "ae2stuff:blocks/grower/side_on",
+					"bottom": "ae2stuff:blocks/grower/bottom_on"
+				}
+			},
+			"false": {}
+		},
+		"inventory": [
+			{}
+		]
+	}
+}

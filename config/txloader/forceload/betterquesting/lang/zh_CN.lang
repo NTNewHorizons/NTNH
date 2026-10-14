@@ -17,9 +17,17 @@ betterquesting.quest.-FdHmQJDSNCih5noZiI5-w.desc=恭喜你，你做到了，你�
 betterquesting.quest.-OxoBRz7Spqm0rVUNxRVpA.name=斯特林发电机
 betterquesting.quest.-OxoBRz7Spqm0rVUNxRVpA.desc=§3斯特林发动机§r使用来自§3加热炉§r或§3§r§3燃烧室§r产生的热量来产生动力。如果使用加热炉来加热斯特林发动机，它可能会超速并损坏发动机，导致主齿轮飞出。重型斯特林发动机没有这个问题。%n%n使用煤炭作为燃料的燃烧室配合斯特林发动机工作时，其能量输出为§e2kHE/s§r；而配备加热炉的重型斯特林发动机则具有§e10kHE/s§r的能量输出。
 
+# Quest: Additional Fluid Tools
+betterquesting.quest.0-Ws1mY3SeeFcyIcv2LKNQ.name=流体工具
+betterquesting.quest.0-Ws1mY3SeeFcyIcv2LKNQ.desc=The §6Siphon§r is a tool used to extract input fluids from a machine. Right-clicking a machine with content in it's input tanks will fill any fluid barrels, universal tanks or pipettes (if the fluid amount cannot fill any of the previous options).%n%n§6Pipettes§r can be used to input specific amounts of fluids. Right-clicking or Shift-Right-clicking will increase or decrease the fluid amount.
+
 # Quest: Steam Engine
 betterquesting.quest.1WdjJYUsRMKgt4MYnlmM7A.name=蒸汽机
 betterquesting.quest.1WdjJYUsRMKgt4MYnlmM7A.desc=§3蒸汽机§r是一种在游戏早期用于将§b蒸汽§r转化为能量的方法。蒸汽机需要外部蒸汽来源，并且还需要处理或重新利用它所产生的§b低压蒸汽§r的装置。%n%n蒸汽机的能源利用效率高达§e85%§r，因此它的性能优于§3斯特林发电机§r。然而，它仍然存在处理能力上的限制——因为它最多只能容纳2000mB的蒸汽。它的最大处理速度为2000mB/t，因此每tick产生§e3400HE§r的能量，或者每秒§e68kHE§r的能量。因此，在制造出§3汽轮机§r之前，这种蒸汽机确实是最优秀的发电机。%n%n通过使用煤炭的加热炉进行加热的锅炉，可以达到§e17kHE/s§r的发电效率。
+
+# Quest: Automatic Thresher
+betterquesting.quest.3o6RE2fyQyaYt65j_dZ2HQ.name=Automatic Thresher
+betterquesting.quest.3o6RE2fyQyaYt65j_dZ2HQ.desc=The §3Automatic Thresher§r harvests crops such as §6Wheat§r, §6Hemp§r, §6Sugarcane§r, ect in a 7x7 area when supplied with fuel. It will eject all items from the back.%n%n[F1] for more information.
 
 # Quest: Abandoned Structures
 betterquesting.quest.4d7s5-1MQxyI3YcrDSL98g.name=废弃结构
@@ -67,7 +75,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAABA.desc=§3锻压机§r是一种可以�
 
 # Quest: Blast Furnace
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAACQ.name=高炉
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAACQ.desc=§3高炉§r是游戏初期进行合金制造的基础设备，它可以将两种材料融合在一起，从而制成§6钢铁§r、§6星金属§r和§6紫铜§r之类的材料。需要在§3一级砧§r使用石砖、耐火砖和铜板来制造它。%n%n将两种材料分别放入顶部和底部的物品槽中——顺序无关紧要。该炉子可以接受锭状或粉末状的原料。使用用煤、焦炭或其他固体燃料作为燃料；与普通煤相比，焦炭和固体燃料能更有效地填充燃料槽。在运行过程中，还会产生§6炉渣§r和§b烟道气§r作为副产品。%n%n为加快处理速度，以§e200 mB/t§r的速率将§b热空气§r注入炉中，从而使其速度提升至基础速度的§e500%%§r。%n%n§2 副产品烟道气可以先储存起来，日后可在高架火炬中燃烧它，从而回收部分能量。§r
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAACQ.desc=The §3Blast Furnace§r is a solid fuel-powered furnace used to create different alloys out of two inputs. The main starter alloys are: §6Minecraft Grade Copper§r and §6Steel§r. Inserting §bHot Air Blast§r, made by putting §bCompressed Air§r in a §3Boiler§r, grants all recipes a §e3x§r boost.%n§bFlue Gas§r produced from operating the machine can be burnt for energy or vented into the atmosphere.%n%nSteel tools come equiped with vein mining, making them an excellent early-game tool.%n%n§2For more advanced tools later on, pressing the ALT key will bring up a menu from which one can select multiple abilities at once.§r
 
 # Quest: Trench Mask
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAADA.name=战壕面具
@@ -205,10 +213,6 @@ betterquesting.quest.Ek7Xr3XfSm-U7BYuBOACSA.desc=§3火力发电机§r是通过�
 betterquesting.quest.F5fyyqAZREWe-rhgYcbXZg.name=燧石工具
 betterquesting.quest.F5fyyqAZREWe-rhgYcbXZg.desc=§6燧石工具§r 需要你首先获得木材和石头。打破一些树叶并获得树苗，将它们重新制作成木棍。%n%n斧子会自动从上到下连锁破坏树以防止浮空树。按住 Shift 键可禁用此功能并正常地断开方块。
 
-# Quest: Hunger System
-betterquesting.quest.Fio9CeHtR9-O6cehKBCH5g.name=饥饿系统
-betterquesting.quest.Fio9CeHtR9-O6cehKBCH5g.desc=§dHunger Overhaul§r makes hunger a genuine threat rather than a mild inconvenience.%n%nHunger now drains passively over time, even while idle. Reaching zero kills you instantly. Low hunger inflicts slowness, weakness, and reduced mining speed before that point. Eating grants a §6Well Fed§r effect that boosts health regeneration - the larger the meal, the longer it lasts.%n%nFood values are re-balanced by meal size. Raw ingredients restore very little; prepared meals restore substantially more. Larger meals take longer to eat and stack less in your inventory.%n%nCrops only grow during daytime and take much longer to mature. Wood and stone hoes are removed - you need at least an iron hoe to till soil. Farmland must be placed adjacent to water or it will not function.%n%n§dSpice of Life: Carrot Edition§r rewards dietary variety. Each unique food eaten for the first time permanently increases your maximum health. Eating the same food repeatedly provides no bonus.%n%n§2The more diverse your diet, the more hearts you have - build a varied farm as early as possible.§r
-
 # Quest: Steel Furnace
 betterquesting.quest.GOACXA8jRc-SMNzk2CsNUQ.name=钢炉
 betterquesting.quest.GOACXA8jRc-SMNzk2CsNUQ.desc=与其它熔炉不同，§3钢炉§r是依靠§e热量TU§r来运作的。它可以并行冶炼3件物品，但每个冶炼位置会消耗更多的TU，因此如果没有强大的热源，其冶炼速度会变得很慢。此外，这种熔炉在处理矿石和木材时还具有额外的收益机制：每冶炼一件物品，收益值会增加§e25%§r，这意味着每冶炼4个物品，就可以免费获得1个物品（§e也就是说，从1组64个物品中可以额外获得15个物品§r）。
@@ -239,7 +243,7 @@ betterquesting.quest.M3mauW7uTCej4mql-Wnhqg.desc=§6多类型流体识别码§r�
 
 # Quest: Known Issues
 betterquesting.quest.MNH6qakfTrC7Jbky4i_Epw.name=已知问题
-betterquesting.quest.MNH6qakfTrC7Jbky4i_Epw.desc=不是漏洞, 是&q&z特性§r!
+betterquesting.quest.MNH6qakfTrC7Jbky4i_Epw.desc=Not a bug, a &q&zFEATURE§r!%n%nWhen you consume food your hands may shake weirdly, as if Steve was EXTREMELY happy for that lunch.%n%nIf you experience any stutters/micro-lags while playing, try turning Vsync on/off. If that does not help, contact in Discord #help.%n%nCurrently we have no idea how to fix those bugs, but we are trying our best!
 
 # Quest: Additional NTM Modes
 betterquesting.quest.MWwrY8PcTaam9T_sc4yDtQ.name=NTM的其他模式
@@ -248,6 +252,10 @@ betterquesting.quest.MWwrY8PcTaam9T_sc4yDtQ.desc=§cNTNH§r是一个模块化模
 # Quest: Charging Station
 betterquesting.quest.OlMZZGTaSz6VhzaeJdR6QQ.name=充电站
 betterquesting.quest.OlMZZGTaSz6VhzaeJdR6QQ.desc=§3充电站§r能够为放置在附近的电动工具和电动装备进行充电。如果多个充电站并排放置，那么设备的充电速度就会更快。
+
+# Quest: Geological Samples
+betterquesting.quest.QF_GKcDaRim2-gEJRosFZQ.name=Geological Samples
+betterquesting.quest.QF_GKcDaRim2-gEJRosFZQ.desc=This system is highly WIP (including this very quest), so do not expect it to be perfect.%n%nThis is the simplest method of prospecting, based on visual examination of surrounding material. Right-click on any §6Stone§r or §6Gravel§r block with a §6Prospector's Eyeglass§r and it will tell you if there is a substantial amount of any interesting ore nearby. Three levels of indication are reported, "Faint signs", "Signs" and "Strong signs", allowing you to home in on the source.%n%nTaking and analyzing geological samples, on the other hand, provides similar information to the Eyeglass but in much more detail. First you will need to make a §6Prospecting Pick§r. To take a sample, right-click on any piece of Stone or Gravel with the Prospecting Pick. A Geological Sample item will be dropped.%n%nTo analyse the sample, you will need a §3Geological Sample Analysis Kit§r and a supply of §6Litmus Paper§r. To use the kit, place it down somewhere and right-click it to open its GUI. Place the sample you want to analyse in the sample slot and some litmus paper in the slot beside it. Analysis will begin automatically and should finish in a few seconds, after which a report will appear below.%n%nThe report shows the place where the sample was taken and the amounts of any interesting mineral traces it contains. You can expect indications of ores within 16 blocks of the sample location, horizontally and vertically, to show up. Ores closer to the sample location will show up more strongly than ones further away.%n%n§2To save the analysis report for future reference, place a Writeable Book in the book slot and press the + button.%n%nIf you lose the report, you can analyse the sample again to get it back. However, a little of the sample is used up each time you analyse it, and a given sample can only be analysed 16 times before there is nothing left.
 
 # Quest: Packing Tape
 betterquesting.quest.RBJS7D2ATpq7GUingAewuQ.name=打包带
@@ -259,7 +267,7 @@ betterquesting.quest.UKkcpXk3SEWHXLIVC5VTDg.desc=§6装甲覆层§r是减少辐�
 
 # Quest: Ore Generation System
 betterquesting.quest.VMLB88YjRb26RVJcRmvxeA.name=矿物生成系统
-betterquesting.quest.VMLB88YjRb26RVJcRmvxeA.desc=在 §6NTNH§r, 矿石生成已经被§o完 全§r重写。如果你不喜欢它或觉得它过于复杂，你有两个选项：%n1) 向我们开发者报告%n2) 禁用自定义矿物生成模组并根据你的喜好在hbm.cfg中配置矿石生成(具体可在Discord服务器上寻求帮助)%n%n[warn]重要！[/warn]%n在线谷歌文档电子表格已经 废 弃，请使用指南书中的文档。%n%n在线矿石生成电子表格 [warn](已 废 弃)[/warn]%n[url]https://docs.google.com/spreadsheets/d/1Uncs-usQqsCtb5NdSnniZNrd-BuYvllP43ZJiZLZE[/url]
+betterquesting.quest.VMLB88YjRb26RVJcRmvxeA.desc=In §6NTNH§r, ore generation has been §ocompletely§r overhauled and is still receiving updates and fixes. If you don’t like it and/or find it too complicated, you have two options:%n1) Report it to us, the developers%n2) Disable the Custom Ore Generation mod and configure ore generation in hbm.cfg to your liking (ask for help with this on the Discord server)%n%n[warn]Important![/warn]%nThe old online Google Docs spreadsheet was DEPRECATED, use the one in the Guide Book.
 
 # Quest: Dosimeter
 betterquesting.quest.X1wMtj-xQR6M4Qzm6Rk2vA.name=剂量计
@@ -272,10 +280,6 @@ betterquesting.quest.XNHsXFGWTvW9dhuen9iEFg.desc=The §3Radial Performance Engin
 # Quest: Hazards
 betterquesting.quest.Zd1HNIsxSRees_4of0ezDw.name=危害
 betterquesting.quest.Zd1HNIsxSRees_4of0ezDw.desc=This mod adds several environmental hazards that will kill you if ignored.%n%n§6Radiation§r is measured in RAD. Effects begin at §e200 RAD§r and worsen steadily - instant death occurs at §c1000 RAD§r. Use a §6Geiger Counter§r to monitor your dose. Radiation-resistant armor and §6Rad-X§r reduce incoming RAD; a §3Player Decontaminator§r or §6Antirads§r remove accumulated dose.%n%n§lMesothelioma§r develops from asbestos exposure. Items tagged §c[Contains Asbestos]§r and certain blocks like Chrysotile release asbestos particles. Progresses to death if untreated.%n%n§lBlack Lung§r develops from coal dust exposure. Mining coal ore and carrying items tagged §c[Coal Dust]§r are the main sources. Also fatal.%n%nA gas mask protects against both mesothelioma and black lung simultaneously. Both diseases are cured by §6SIOX Cancer Medication§r or, early-game, §6Herbal Paste§r - the latter being weaker and carrying side effects.
-
-# Quest: Agriculture and Farming
-betterquesting.quest.Zpwlu-OeTpCvf7vTFz-BIA.name=农业与种植
-betterquesting.quest.Zpwlu-OeTpCvf7vTFz-BIA.desc=Three mods overhaul farming and food in this pack.%n%n§dPam's HarvestCraft§r adds 40+ crops, many fruit trees, 10 fish, beekeeping, and 75+ foods. Key blocks: §3Presser§r (produces oils, honey, etc.), §3Market§r (buys seeds and saplings for emeralds), §3Shipping Block§r (sells crops for emeralds). Right-clicking a mature crop harvests and replants it.%n%n§dAgriCraft§r adds genetics-based crop breeding. Plants have six stats - Growth, Gain, Strength, Resistance, Fertility, and Mutativity - inherited from parent crops when cross-breeding. Higher stats are dominant. Mutations can unlock new crop species entirely. Weeds will compete with and eventually kill unmanaged crops. Plants have specific soil, light, and fluid requirements, so placement matters.%n%n§dHunger Overhaul§r requires farmland to be placed adjacent to water - untouched dry tilled soil will not function.%n%n§2Plan your farm layout around water before tilling.§r
 
 # Quest: Stirling Sawmill
 betterquesting.quest._qJt02i4ST2iccmkHudKCg.name=斯特林锯木机
@@ -291,7 +295,7 @@ betterquesting.quest.bXgPsVSbTy6Az8yENEF99w.desc=想一想同一台化工厂即�
 
 # Quest: Heating Oven/Firebox
 betterquesting.quest.cUWyKdzATTSYaMg1MxZqYw.name=加热炉/燃烧室
-betterquesting.quest.cUWyKdzATTSYaMg1MxZqYw.desc=§3燃烧室§r和§3加热炉§r能够燃烧固体燃料产生热量来供给上方任何需要热量来运行的机器。%n%n热量以§eTU§r（§eThermal Units§r）来衡量。%n%n两台机器在操作上很相似。为了使它们传递热量，必须将接收热量的机器放其在上方使接收热量的机器上的铜制热板对准产生热量的机器的铜制热板。%n%n放置后，这些机器就可以装满固体燃料，直到燃料用尽或热缓冲槽充满为止。如果其缓冲槽已满，则不会消耗任何燃料——因此，这两台机器在节省燃料方面都相当高效。%n%n这两台机器的主要区别在于它们的燃烧速度：燃烧室在满负荷下燃烧燃料的速度要慢得多，而加热炉产生的热量是其五倍（但燃烧速度是八倍）。尽管效率不高，但由于其更高的热输出和热容量，加热炉通常更受青睐。然而，它不能加热斯特林发动机，因为其基础输出(500 TU/t)将使发动机超速；重型斯特林发动机则没有这个问题。%n%n此外，加热炉可以从放置在其下方的其他产热机器接收热量，可以多个堆叠在一起，用于像坩埚这样的耗热大户。然而当热量传递给上方的机器时，所接收的热量减半。
+betterquesting.quest.cUWyKdzATTSYaMg1MxZqYw.desc=The §3Firebox§r and the §3Heating Oven§r are machines capable of producing heat from solid fuels for any machines that require heat to operate.%n%nHeat is measured in §eTU§r (§eThermal Units§r).%n%nBoth machines are similar in operation. In order for them to transfer heat, another machine for receiving the heat must be placed on top, such that the copper heat plate on the receiving machine sits on top of the copper heat plate of the heat producing machine.%n%nOnce constructed, these machines can be filled with solid fuel, which will burn until either the fuel runs out, or the heat buffer is filled. No fuel will be consumed if its buffer is full - as such, both machines are fairly efficient at conserving fuel.%n%nThe primary difference in these two machines lie in their speed: the firebox burns fuel much slower at full efficiency, whilst the heating oven produces five time the heat (but eight times faster). Despite its inefficiency, the heating oven is often preferred for its much higher heat outputs and heat capacity. However, it cannot heat a stirling engine, as its base output (500 TU/t) will automatically over-speed the engine; the heavy stirling engine does not have this issue.%n%nAdditionally, the heating oven can receive heat from other heat producing machines placed underneath it: multiple can be stacked for heat-hungry machines like the crucible. The heat received, however, is halved when transferring to the machine above.
 
 # Quest: Recycling
 betterquesting.quest.ceT8V2MeRz2u-FR9Uckarw.name=回收
@@ -317,9 +321,9 @@ betterquesting.quest.gKQiP_zES4KokMmon9bDQg.desc=§3砖砌炉§r与普通的炉�
 betterquesting.quest.gWyCk5zlQlWAPGdwFXhTaQ.name=无尽水源
 betterquesting.quest.gWyCk5zlQlWAPGdwFXhTaQ.desc=厌倦了使用水桶给你的机器供§b水§r吗？尝试使用水泵或无限水罐！%n%n§6无限水罐§r将提供§e50mb/t§r的水%n%n§6增强无限水罐§r将提供§e500mb/t§r的水%n%n§6蒸汽动力地下水泵§r将提供§e1000mb/t§r的水，但显而易见的需要§b蒸汽§r才能运行。
 
-# Quest: Compressor
-betterquesting.quest.jcaOirN6QCOC50YJbil2rQ.name=压缩机
-betterquesting.quest.jcaOirN6QCOC50YJbil2rQ.desc=§3压缩机§r是一种专门的多块机器，用于给流体加压。它可以对任何流体进行操作以增加其压力，以便在其他机器中使用。其中一些流体可以被压缩成另一种流体。
+# Quest: Geological Survey
+betterquesting.quest.i978VfQyRr6TncUvwFr6iA.name=Geological Survey
+betterquesting.quest.i978VfQyRr6TncUvwFr6iA.desc=This system is highly WIP (including this very quest), so do not expect it to be perfect.%n%nThis is an advanced mineral exploration technique for professional miners, providing very detailed information. The §3Geological Surveyor§r machine uses a controlled explosion to send seismic waves into the ground, and by analysing the echoes that come back, builds a map of underground ore densities.%n%nAs well as the Geological Surveyor itself, you will also need the following:%n%n1. At least 3 §3Geophones§r placed in a suitable arrangement around the Geological Surveyor. The geophones must be within 16 blocks of the Surveyor, but no closer than 8 blocks to the Surveyor or to each other.%n2. Supplies of §6Paper§r, §6Ink§r and §6Gunpowder§r in the appropriate slots of the Surveyor.%n3. A §6Button§r or other means of supplying a redstone signal to the Surveyor.%n%nThe Surveyor can operate in either §emonochrome§r or §ecolour§r mode, selected using the button beside the ink slots. Colour mode provides more information about types of ores, but is more expensive. §2Monochrome mode requires only black ink, whereas colour mode requires all four colours of ink.§r%n%nWhen all the necessary conditions are satisfied, the Surveyor wil show "§6Ready§r" in the GUI, and a single green light on the outside of the machine. The Surveyor is trigged by a redstone signal. The easiest way to deliver this is to put a button on the side of the machine.%n%n§lBe prepared for a loud noise.§r Do not be alarmed; the explosion is well contained and should not cause any damage.%n%nAnalysing the results and printing the map will take several seconds, during which time the machine will show a flashing §agreen light§r. When finished, two steady green lights will appear. The map can then be collected from the output slot of the GUI.%n%nA §cred light§r indicates an error condition; open the GUI to find out more information.
 
 # Quest: Earth? Fake news
 betterquesting.quest.k52bjd5MTbefEXwVh0HLiw.name=地球? 假的吧
@@ -327,7 +331,7 @@ betterquesting.quest.k52bjd5MTbefEXwVh0HLiw.desc=这个整合包能让玩家在�
 
 # Quest: Oily Sand
 betterquesting.quest.kdNKd7NDSPiURFtLonc50g.name=油砂
-betterquesting.quest.kdNKd7NDSPiURFtLonc50g.desc=§6Oily Sand§r is a surface-level block that generates among normal sand, typically in deserts. It acts as a marker for §bBedrock Oil§r deposits directly beneath it - if you find it, there is oil underground.%n%nIt can be ground in a §3Grinder§r into §6Oil Waste§r, which can then be processed to obtain §6Arsenic§r.%n%n§2Oily Sand patches are the most reliable way to locate Bedrock Oil without digging blindly.§r
+betterquesting.quest.kdNKd7NDSPiURFtLonc50g.desc=§6Oily Sand§r is a surface-level block that generates among normal sand, typically in deserts. It acts as a marker for §bBedrock Oil§r deposits directly beneath it - if you find it, there is oil underground.%n%nIt can be ground in a §3Grinder§r into §6Oil Waste§r, which can then be processed to obtain §6Arsenic§r - a really important mid-game material.
 
 # Quest: Highway To Hell
 betterquesting.quest.ljMurUJIT7OuwaBx_fb3EA.name=通向地狱的高速公路
@@ -359,7 +363,11 @@ betterquesting.quest.s8lSFTDKSpqK44PLhdfusw.desc=对于远距离电力传输及�
 
 # Quest: Primitive Crucible
 betterquesting.quest.wSdG_vGlTD-9Q8OW6Bzeiw.name=原始坩埚
-betterquesting.quest.wSdG_vGlTD-9Q8OW6Bzeiw.desc=The §3Crucible§r is a block from §dEx Nihilo§r used to melt solid blocks down into fluids. It is crafted first as an §6Unfired Crucible§r from §6Porcelain Clay§r, then fired in a furnace to produce a usable §3Crucible§r.%n%nTo operate it, place the §3Crucible§r above a heat source and right-click it with an eligible block to load it. The block will slowly melt into fluid over time. The speed of melting depends entirely on the heat source below - stronger heat sources melt faster. Burning §6Netherrack§r is among the most efficient vanilla options.%n%nThe primary output is §blava§r, produced by melting cobblestone, stone, and similar blocks. The §3Crucible§r can hold fluids indefinitely, making it a cheap fluid storage vessel in a pinch. Drain it using fluid pipes connected to its side or bottom.%n%n§2A bank of Crucibles over burning Netherrack is a reliable early lava farm for fuel%nand power production.%n§2Check NEI for all valid heat sources and their melt rates.
+betterquesting.quest.wSdG_vGlTD-9Q8OW6Bzeiw.desc=The §3Crucible§r is a block from §dEx Nihilo§r used to melt solid blocks down into fluids. It is crafted first as an §6Unfired Crucible§r from §6Porcelain Clay§r, then fired in a furnace to produce a usable §3Crucible§r.%n%nTo operate it, place the §3Crucible§r above a heat source and right-click it with an eligible block to load it. The block will slowly melt into fluid over time. The speed of melting depends entirely on the heat source below - stronger heat sources melt faster. Burning §6Netherrack§r is among the most efficient vanilla options.%n%nThe primary output is §blava§r, produced by melting cobblestone, stone, and similar blocks. The §3Crucible§r can hold fluids indefinitely, making it a cheap fluid storage vessel in a pinch. Drain it using fluid pipes connected to its side or bottom.%n%n§2A bank of Crucibles over burning Netherrack is a reliable early lava farm.
+
+# Quest: Air Intake
+betterquesting.quest.yFAvMtetRDaFwz6i_ry-RQ.name=Air Intake
+betterquesting.quest.yFAvMtetRDaFwz6i_ry-RQ.desc=The §3Air Intake§r, when powered, produces §bCompressed Air§r needed in §3Pneumatic Pipes§r and §bHot Air Blast§r.
 
 # Quest: Silkworm
 betterquesting.quest.yfQ7hs9tTwSE5FpNCoeGAA.name=蚕
@@ -391,8 +399,8 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAA1g.name=回旋加速器
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAA1g.desc=§3回旋加速器§r是一种通过用元素粒子轰击元素粉末来生成更重元素的设备。运行这种设备需要每秒消耗§e 20MHE§r的能量。%n%n在某些特定的配方中，这种方法还会产生§b反物质§r作为副产品，因此它确实是一种可靠但成本较高的大规模先进材料生产方法。%n%n§2 可考虑安装最高级别的节能及速度提升芯片，以此缩短运行时间并降低能耗。§r
 
 # Quest: Desh Servo Set
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAACw.name=Desh伺服装置
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAACw.desc=§6Desh伺服装置§r是一种用于增强战斗力的装甲改装部件，装备后可以显著提升玩家的战斗力，例如增加力量、提高采矿速度以及增强跳跃能力。
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAACw.name=Desh Servo Set
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAACw.desc=§6Desh Servos§r are an armor modification which give incredibely strong buffs when used, such as increased strength, mining speed and jump boost.
 
 # Quest: M1TTY Environment Suit
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAADg.name=M1TTY环境套装
@@ -514,10 +522,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAXw.desc=§6盖革计数器§r是一种�
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAYA.name=勘测扫描仪
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAYA.desc=§6勘测扫描仪§r是一种便携式设备，能够识别地下的资源矿藏，例如§e深层岩石§r和§e基岩矿石§r。
 
-# Quest: Nuclear Blast Furnace
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZQ.name=核高炉
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZQ.desc=§3核高炉§r是一种替代传统§3高炉§r的以放射性同位素为能源的设备。它拥有6个用于放置放射性同位素燃料靶丸的插槽，运行所需最低热量为15单位。其生产效率远高于普通高炉。%n%n功率较高的靶丸具有更好的加热效果，从而提升加工速度。如果提供足够的热量，几乎可以瞬间实现合金冶炼。
-
 # Quest: Launch Pad
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAaw.name=导弹发射台
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAaw.desc=§3发射台§r是大多数导弹的主要发射平台。虽然它是最先可用的发射设施，但导弹在发射前必须先进行装载，因此发射会有一定的延迟。%n%n§3导弹发射台§r是发射台的微型化版本。它能够以仅5秒的延迟时间发射所有普通导弹。在天然形成的发射井结构中，可以找到一种生锈的变体，其中存放着损坏的末日导弹。
@@ -587,6 +591,10 @@ betterquesting.quest.zYS6AlyFSuuMUErAJqPcTg.desc=§3采矿激光§r是一种可�
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAg.name=NTM: 反应堆
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAg.desc=随着能源需求的增加，你需要更强大的能源来源。本章介绍了核反应堆以及那些用于制造更强材料的先进设备。
 
+# Quest: Tungsten Carbide
+betterquesting.quest.-KF6RRqRSdG58hgsbtwsgg.name=Tungsten Carbide
+betterquesting.quest.-KF6RRqRSdG58hgsbtwsgg.desc=§6Tungsten Carbide§r is an alloy made from §6Tungsten§r and §bSyngas§r in a §3Pyrolysis Oven§r. It is mainly used in crafting neutron reflectors for reactors and nukes.
+
 # Quest: Plasma Forge
 betterquesting.quest.29WtP39ZRSClYLinoAxQpQ.name=等离子锻炉
 betterquesting.quest.29WtP39ZRSClYLinoAxQpQ.desc=§3等离子锻炉§r是一种功能强大且先进的焊接设备，其运行需要依赖正在运行的聚变反应堆。它的焊接速度是普通焊接设备的两倍。这种设备无法进行升级处理。不过，它可以利用那些原本无用的裂变碎片和不稳定的同位素来获得暂时的§e4倍§r高速焊接效果，而且没有任何负面后果。
@@ -598,6 +606,10 @@ betterquesting.quest.2JMb-t2STTKM5sxV5Z7WOQ.desc=§3气体离心机§r用于对�
 # Quest: Nuclear Fuel Processing
 betterquesting.quest.7rFMNl3iSCOD-dpsKLAANQ.name=核燃料处理
 betterquesting.quest.7rFMNl3iSCOD-dpsKLAANQ.desc=通过使用§3乏燃料池§r冷却在§3锆诺克斯反应堆§r、§3PWR压水堆§r等反应堆内反应完的枯竭核燃料，再进一步使用§3钚铀还原提取设备§r处理后，可以从这些枯竭核燃料中获取许多新的材料。
+
+# Quest: Wideband Radio Emission Detector Satellite
+betterquesting.quest.7xvtGouAQxKJ5rWXHykczg.name=Wideband Radio Emission Detector Satellite
+betterquesting.quest.7xvtGouAQxKJ5rWXHykczg.desc=The §3Wideband Radio Emission Detector Satellite§r monitors the entire map for high-energy events with no range limit, returning only an approximate location. Use it as a first-pass detection layer - once a hit is found, follow up with the §3Narrowband Emission Scanning Satellite§r or §3Radar Satellite§r to pinpoint the source.%n%nEvents are grouped by intensity. LOW covers mini-nuke detonations, accurate to within 10,000 m. MEDIUM covers active radars and particle accelerators, accurate to within 2,500 m. HIGH covers nuclear explosions, accurate to within 500 m. MEDIUM events persist for only half a second while others last up to a minute, so rapid repeated scans are recommended.%n%nRoR commands: "esurvey" collects all active results; "ecount" writes the total to RX; "egettype" writes LOW, MEDIUM, or HIGH for a given index; "egetposition" writes approximate X/Z coordinates for a given index.%n%n§2Route this satellite's output through an §3AUTOCAL§r§2 to automatically cue more precise instruments when a hit is detected.
 
 # Quest: Fusion Reactor
 betterquesting.quest.8DXv-b9sRxalmY8yovSQuw.name=聚变反应堆
@@ -614,6 +626,10 @@ betterquesting.quest.8sIzBzykSPqskvhCp-Tsmw.desc=§6星辉金属镐§r可作为�
 # Quest: Cadmium
 betterquesting.quest.9BjXTD5CSTOQ-_OroVdJmg.name=镉
 betterquesting.quest.9BjXTD5CSTOQ-_OroVdJmg.desc=§6镉§r是一种用于制造§6镉钢§r的原材料，而§6镉钢§r是§6锝钢§r的替代品。%n%n可通过熔炼镉粉来获取镉。镉粉可通过将10个§6芥子柳叶§r与250mb§b高性能溶剂§r在§3矿物酸化器§r中反应而得到。%n%n芥子柳是一种生长在§e基岩油层§r附近的植物。当其完全成熟后，可以获取其主要产物——芥子柳叶。
+
+# Quest: Depth-Resource Scanning Satellite
+betterquesting.quest.9Y9PU0asTPmHumQiDRc2Ew.name=Depth-Resource Scanning Satellite
+betterquesting.quest.9Y9PU0asTPmHumQiDRc2Ew.desc=The §3Depth-Resource Scanning Satellite§r maps underground ore deposits across loaded chunks. It is operated via §dRedstone-over-Radio§r through a §3Satellite Ground Station§r.%n%nThe map lacks labels and detail on its own. Pairing the satellite with §6Neutrino Lenses§r - an armor module linked to the same frequency via the §3Satellite ID Manager§r - overlays ores as glowing labeled outlines, making the data far more usable.
 
 # Quest: High-Power Steam Condenser
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0Q.name=大功率蒸汽冷凝器
@@ -701,7 +717,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcA.desc=§6中微子透镜§r是一种�
 
 # Quest: ZIRNOX
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcg.name=锆诺克斯核反应堆
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcg.desc=§3锆诺克斯反应堆§r是一种第一种能被制造出来的、价格最低的核反应堆。与§3PWR§r和§3RBMK§r反应堆不同，它是一种一体化的反应堆，其运行需要消耗§b水§r和§b二氧化碳§r作为反应介质。%n%n由于锆诺克斯反应堆产生的蒸汽量较少，因此可以使用单方块的§3汽轮机§r来发电，其效率约为§e85%§r。对于低功率燃料来说，使用一个§3蒸汽冷凝器§r就足够了。这样一来，使用24根§6天然铀燃料棒§r，消耗14kmB的二氧化碳后，大约可以有§e160kHE/s§r的发电效率。
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcg.desc=The §3ZIRNOX§r is the first and cheapest nuclear reactor one can make. Unlike the §3PWR§r and §3RBMK§r, it is a fully assembled reactor which requires §bWater§r and §bCarbon Dioxide§r to operate.%n%nDue to its modest steam output, the ZIRNOX can be paired with several §3Steam Engines§r, though an §3Industrial Turbine§r is recommended for its §e100%%§r efficiency. A single §3Steam Condenser§r handles the exhaust on lower power fuels. 24 §6Natural Uranium Fuel Rods§r using 14kmB of carbon dioxide will yield a power output of around §e240kHE/s§r.
 
 # Quest: Cooling Tower
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdQ.name=冷却塔
@@ -719,17 +735,13 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAhA.desc=§6HEV Mark IV§r是一款功�
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAhw.name=铋
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAhw.desc=§6铋§r是许多高级制造配方中不可或缺的重要材料。铋可通过利用§3FEL自由电子激光器§r及§3激光同位素分离室§r处理耗尽的§3RBMK燃料棒§r获得，也可通过使用§b高性能溶剂§r处理基岩矿石获得。%n%n§6砷§r的提取需要额外使用§b矿物酸化器§r，配合高性能溶剂。
 
-# Quest: Research and Breeding Reactor
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAiA.name=研究型反应堆与增殖反应堆
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAiA.desc=§3研究型反应堆§r是一种非发电型反应堆，其作用是高效地反应核燃料来为§3增殖反应堆§r提供中子源。由于它没有典型的发电型反应堆所具有的主动冷却系统，因此必须将其浸入水中进行冷却。启动反应时需要使用§6镭226-铍§r或§6钚238-铍§r燃料板作为中子源，之后则可以将其取出。这种反应堆在达到§e1000°C§r时会发生爆炸，因此在使用高能燃料以及多个增殖反应堆时必须格外小心。%n%n可以使用§3反应堆遥控模块§r和§6反应堆遥感器§r来远程启动和监测反应堆。%n%n增殖反应堆利用相邻的研究型反应堆产生的中子流，将各种元素的同位素转化为更重的元素。当反应堆处于运行状态时，可以通过玻璃观察窗看到，从反应堆中央的棒状装置中发出的绿色“闪电”般的射线朝着外部的棒状装置延伸而去。
-
 # Quest: Welded Technetium/Cadmium Steel Plate
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjg.name=焊接锝钢/镉钢板
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjg.desc=§6锝/镉钢焊接板§r是一种通过焊接制成的锝/镉钢板，它相当于铸造锝/镉钢板的焊接版本。这种钢材被广泛应用于那些需要高强度材料的场合中。%n%n§2务必建立完善的能源生产和储存设施，因为每块焊接板的电力消耗高达1200MHE。
 
-# Quest: Big-Ass Tank 9000
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjw.name=巨尻-9000 储罐
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjw.desc=§3巨尻-9000 储罐§r是容量最大的流体储存容器，其最大储液量为2,048,000mB，同时还能用于储存具有强腐蚀性的液体。
+# Quest: Big-Ass Tank
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjw.name=Big-Ass Tank
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjw.desc=The §3Big-Ass Tank§r is the largest fluid storage container, capable of storing 2048000mB of fluids, aswell as being able to hold strongly corrosive fluids. It has to be placed on the solid surface, otherwise it is going to break.
 
 # Quest: Heavy Magnetic Storage Tank
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkA.name=重型磁约束储罐
@@ -783,13 +795,29 @@ betterquesting.quest.CYbDJkRORT-LPEInaoL3BQ.desc=§b热冷却液§r除了来发�
 betterquesting.quest.CYtQLn_VSx2QTnLEwpMGOw.name=铀-238
 betterquesting.quest.CYtQLn_VSx2QTnLEwpMGOw.desc=§6铀-238§是游戏中最常见的铀同位素。%n%n这种材料具有多种用途，包括：用于制造§6铀铁合金§r、MOX燃料、贫化铀弹药，以及作为§3Watz发电厂§r中的吸收剂颗粒；此外，在§3辐照舱§r中，这种材料还可以被进一步加工成§6Sa326§r。
 
+# Quest: Narrowband Emission Scanning Satellite
+betterquesting.quest.DMCygjIOSOav8ZBlUlqEvQ.name=Narrowband Emission Scanning Satellite
+betterquesting.quest.DMCygjIOSOav8ZBlUlqEvQ.desc=The §3Narrowband Emission Scanning Satellite§r precisely locates specific high-energy events within a 250-meter radius of a target point. It is the high-precision counterpart to the §3Wideband Radio Emission Detector Satellite§r, sensitive to: neutron radiation from nuclear reactors, high-energy particles from fusion reactors and particle accelerators, radar waves from ground radars, and radio waves from §3Satellite Ground Stations§r with an active TX signal.%n%nAll results are stored internally and accessed via §dRedstone-over-Radio§r. "esurvey" performs the scan. "ecount" writes the result count to RX. "egetinfo" followed by an index writes the emission type to RX. "egetposition" followed by an index writes the X/Z coordinates - separated by a semicolon - to RX.%n%n§2Events are time-limited. Run repeated scans at short intervals to avoid missing short-lived emissions.
+
+# Quest: Orbital Precision Laser
+betterquesting.quest.EQ8nf9eDQ-K9yPIxEaFQkw.name=Orbital Precision Laser
+betterquesting.quest.EQ8nf9eDQ-K9yPIxEaFQkw.desc=The §3Orbital Precision Laser§r is a solar-powered orbital weapon, a lighter alternative to the §3Orbital Death Ray§r. It fires an instantaneous beam dealing massive damage to entities within a 5-block radius, though its explosive yield is only roughly equivalent to a single block of TNT. Recharge time between shots is §e5 seconds§r.%n%nIt can be aimed with a §6Satellite (Laser) Designator§r or controlled via §dRedstone-over-Radio§r through a §3Satellite Ground Station§r. The "fire" command fires at the current target coordinates, or at a tracked entity if one has been set - entity target data is consumed after a single shot. The "canfire" command writes TRUE or FALSE to RX depending on whether the laser has finished recharging. The "setentitytarget" command accepts an entity ID from a §3Radar Satellite§r for precision tracking.%n%n§2Entity target data is consumed after one shot, reverting back to coordinate targeting.
+
 # Quest: Additional Fusion Attachments
 betterquesting.quest.JpsvBP1yQsu-XtkeZegA6A.name=额外的聚变附件
 betterquesting.quest.JpsvBP1yQsu-XtkeZegA6A.desc=§3聚变反应堆等离子体耦合器§r能将环形反应器中的等离子体所释放的§eTU§r能量转化为§eKyU§r能量，这些能量随后可被用来为另一个环形反应器提供动力。某些聚变反应必须使用这种装置，因为引发这些等离子体反应所需的最低§eKyU§r能量超出了四台§3速调管§r最多所能提供的能量。%n%n§3聚变反应堆增殖舱§r利用环形反应器中的中子流来处理材料。它能够执行§3RBMK辐照通道§r的所有配方，同时还具备一些额外的配方。中子流不受端口共享规则的影响，且各侧的输出强度相同。%n%n§3聚变反应堆收集室§r使反应副产品的产生率提高了§e50%§r。
 
+# Quest: Orbital Death Ray
+betterquesting.quest.Ksafc-uMT02Uk0dvCx1JOQ.name=Orbital Death Ray
+betterquesting.quest.Ksafc-uMT02Uk0dvCx1JOQ.desc=The §3Orbital Death Ray§r is a high-destruction orbital weapon. Before launch, link it to a §6Satellite (Laser) Designator§r using the §3Satellite ID Manager§r. With a standard designator, enter target coordinates manually; with a laser designator, aim and hold right-click on the target block.%n%nUnlike the §3Orbital Precision Laser§r, it has no entity-tracking capability and cannot intercept rockets or hit fast-moving targets. The beam strikes the first surface in its path, so targets in deep cover are safe. Recharge time is §e5 minutes§r. RoR commands: "fire" fires at the current target position if the weapon is ready; "canfire" writes TRUE or FALSE to RX depending on whether it has finished recharging.
+
 # Quest: Desh Stamps
 betterquesting.quest.MFweFzQDQg2L-9X4_I8o-Q.name=Desh锻模
 betterquesting.quest.MFweFzQDQg2L-9X4_I8o-Q.desc=§6Desh锻模§r具有无限的耐久，非常适合用于自动化生产线。
+
+# Quest: Chlorophyte
+betterquesting.quest.PszZViltQjCHNmKB7QJcfA.name=Chlorophyte
+betterquesting.quest.PszZViltQjCHNmKB7QJcfA.desc=§6Chlorophyte§r is a product of fusion and is used in the §3DFC§r and §6Digamma Particle§r.
 
 # Quest: High-Performance Solvent Bedrock Ore Processing
 betterquesting.quest.QusK-8T-TGmBWETwmxosJQ.name=高性能溶剂处理基岩矿石
@@ -817,7 +845,7 @@ betterquesting.quest.g3S9-75wTGyQKmZaQTZl5Q.desc=§3钚铀还原提取设备§r�
 
 # Quest: Chicago Pile
 betterquesting.quest.g8IVppPpTceY55PbNbceJQ.name=芝加哥反应堆
-betterquesting.quest.g8IVppPpTceY55PbNbceJQ.desc=§3芝加哥反应堆§r是一种设计用于早期阶段的简易增殖反应堆，其目的是生产可用于反应堆燃料的钚。%n%n这种反应堆的结构是由经过钻孔处理的§6石墨块§r构成的，它可以用来放入各种物品，包括放射性同位素棒（如§6铀棒§r、§6镭棒§r、§6钚棒§r）、§6锂棒§r以及控制棒。这种堆结构并不是作为一个整体来运行的，而是其中每一块钻孔石墨都会根据其所容纳的特定物品，以独特的方式与其他石墨块发生相互作用。%n%n在接收到足够的中子通量后，芝加哥反应堆中的铀棒会发生转变，变成钚棒；这些钚棒可以在专用设备中被加工成可用于其他反应堆的钚材料，例如§3锆诺克斯核反应堆§r和§3RBMK反应堆§r。%n%n芝加哥试验堆需要使用大量的石墨块，这些石墨块在放置后，可以通过手钻进行钻孔，以便将各种棒材插入其中。%n%n§6手钻§r可以用来在石墨材料上钻孔，或者采集铀燃料的芯样，从而测定其热性质、耗竭程度以及中子通量。而§6螺丝刀§r则用于取出那些铀燃料棒。%n%n这个任务要求制作一个尺寸为3x3的芝加哥反应堆（不包括四个角），在反应堆的中心放置一根§6镭226-铍中子源§r，周围再环绕着插入铀棒。
+betterquesting.quest.g8IVppPpTceY55PbNbceJQ.desc=The §3Chicago Pile§r is a modular breeding reactor with no GUI, built to transmute §6Natural Uranium§r into plutonium isotopes through neutron bombardment. It must be operated manually or via §dRedstone-over-Radio§r.%n%nBuild a rectangular prism of §6Chicago Pile Graphite Bricks§r, at minimum 5*5*5 and at most 15*15*15. Once assembled, drill a non-edge block on one of its lateral faces with the §6Hand Drill§r to establish the core and fix the reactor's channel orientation. Channels are straight lines drilled through the pile and may not intersect. Fuel channels share the core's face orientation and accept rods via a §3Chicago Pile Fuel Loader§r on the input port; spent rods are ejected from the opposite side. Ventilation channels run perpendicular to the core and require a §3Chicago Pile Vent§r supplied with §bcompressed air§r at §e1 PU§r - each vent cools only the fuel channels within one block above or below it. Vertical control rod channels are optional and reduce reactivity between channels. %n%nEvery reaction requires a neutron source. The §6Ra226Be Neutron Source§r is the starter option; the more powerful §6Po210Be Neutron Source§r can replace it later. §6Natural Uranium Rods§r breed into §6Plutonium-239 Rods§r, which can be bred further into §6Reactor-Grade Plutonium Rods§r. Leaving fuel beyond that point produces §6Nuclear Waste Rods§r, which generate extreme heat and risk meltdown. To safely push out spent rods without fresh fuel, use §6Zirconium Rods§r - they are inert and transparent to neutrons.%n%n§2Verify cooling is working before loading any fuel. The pile melts down at 800°C, causing an explosion and widespread fire.%n%nThe quest asks for a §3Chicago Pile§r of at least 5*5*5 with a core established, a §3Chicago Pile Fuel Loader§r and §3Chicago Pile Vent§r attached, and a §6Ra226Be Neutron Source§r loaded alongside at least one §6Natural Uranium Rod§r.
 
 # Quest: Spent Fuel Pool Drum
 betterquesting.quest.har7pEFcSRKNgIf4NgmcLA.name=乏燃料池
@@ -827,9 +855,17 @@ betterquesting.quest.har7pEFcSRKNgIf4NgmcLA.desc=§3乏燃料池§r用于为从�
 betterquesting.quest.iJiX7wxoSBmljc9tITqIqQ.name=锝-99
 betterquesting.quest.iJiX7wxoSBmljc9tITqIqQ.desc=§6锝-99§是§6铀§r和§6钚§r裂变过程中产生的常见副产品。它主要用于制造§6锝钢§以及§dAE2的储存组件§r。
 
-# Quest: Satellite Launching
-betterquesting.quest.ocylWycmSd6r-mvYENYGEw.name=卫星发射
-betterquesting.quest.ocylWycmSd6r-mvYENYGEw.desc=核科技：航空版中的卫星可以通过联盟号或定制火箭上发射。
+# Quest: Helium-4
+betterquesting.quest.mPHQk4_mRqi6o2onNs9qgg.name=Helium-4
+betterquesting.quest.mPHQk4_mRqi6o2onNs9qgg.desc=§bHelium-4§r is a product of fusion and is mainly used in crafting §6Quantum Processing Units§r.
+
+# Quest: Houston, We Have a Signal
+betterquesting.quest.ocylWycmSd6r-mvYENYGEw.name=Houston, We Have a Signal
+betterquesting.quest.ocylWycmSd6r-mvYENYGEw.desc=Satellites require dedicated infrastructure to launch, identify, and communicate with.%n%nBefore anything leaves the ground, every satellite must be assigned a unique frequency using the §3Satellite ID Manager§r. Place the satellite in its right slot to generate a random frequency, then use the left and center slots to copy that frequency onto §6Satellite ID Chips§r or other linked devices such as designators. ID Chips are soldered, so prepare them in advance. The assigned frequency appears in the item's tooltip.%n%nSatellites can be launching using a custom rocket or Soyuz-FG.%n%nOnce a satellite is in orbit, a §3Satellite Ground Station§r handles communication. It does not process §dRedstone-over-Radio§r signals directly - it requires an external RoR receiver or transmitter. It connects to one satellite at a time, switched via the appropriate §6Satellite ID Chip§r or an RoR command. RX reads data transmitted down from the satellite; TX sends commands up to it.%n%n§2The Ground Station's capabilities expand significantly when paired with an §3AUTOCAL§r§2, enabling automated satellite tracking, data processing, and chained multi-satellite logic.
+
+# Quest: Xenium Resonator Satellite
+betterquesting.quest.qrbz8mP0Ry-RtTBVRTkruA.name=Xenium Resonator Satellite
+betterquesting.quest.qrbz8mP0Ry-RtTBVRTkruA.desc=The §3Xenium Resonator Satellite§r provides unlimited on-demand teleportation with no cooldown. Before launch, its frequency must be linked to a §6Satellite Designator§r using the §3Satellite ID Manager§r.%n%nA standard §6Satellite Designator§r requires coordinates to be entered manually. A §6Satellite (Laser) Designator§r is simpler - aim the crosshair at a block and right-click.%n%n§2Interdimensional teleportation is not supported.
 
 # Quest: Ferrouranium
 betterquesting.quest.rHdJmpZPSNWIvMLqALvC_w.name=铀铁合金
@@ -846,6 +882,10 @@ betterquesting.quest.sCe8OyBsQEeMrUpYXUn9Yw.desc=只要能够获得用于制造�
 # Quest: Arsenic
 betterquesting.quest.tgpCNtEfScSyk-mdGhGxmQ.name=砷
 betterquesting.quest.tgpCNtEfScSyk-mdGhGxmQ.desc=§6砷§r是§6铋§r的替代品。它可通过使用§b高性能溶剂§r酸化那些位于基岩油层附近或者利用§3水力压裂塔§r在作业过程中产生的§6油泥§r来提取。
+
+# Quest: Radar Survey Satellite
+betterquesting.quest.xQEUURH0RH-QWqDAqs7Gzw.name=Radar Survey Satellite
+betterquesting.quest.xQEUURH0RH-QWqDAqs7Gzw.desc=The §3Radar Survey Satellite§r detects all radar-visible entities - players, rockets, and more - within a 1000-chunk radius of its target position. It compiles results into a searchable list with entity types and exact coordinates, and can filter results by class name without requiring a new scan.%n%nRoR commands: "survey" scans the area and saves results to both a base list and a filtered list. "filter name" replaces the filtered list with only entries matching that class name - the original list is preserved, so this can be run multiple times for different types without rescanning. "count" writes the number of filtered results to RX. "gettargetid index" returns the unique entity ID for a given entry, which can be passed to other satellites for precise targeting. "getposition index" writes exact X/Y/Z coordinates - separated by semicolons - to RX. "getname index" writes the class name of the entry to RX.%n%n§2Pair this satellite with an §3AUTOCAL§r and the §3Orbital Precision Laser§r for automated missile interception.
 
 # Quest: Deuterium Extraction Tower
 betterquesting.quest.yYyMBFJrRUOt39If3zFaFg.name=氘萃取塔
@@ -1139,7 +1179,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABFQ.desc=§6Spark奇点§r是一种由�
 
 # Quest: FEnSU
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABFg.name=FEnSU
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABFg.desc=§3FenSU§r是终极能量电池，能够储存无限量的能量。%n%n按[F1]以获取更多信息
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABFg.desc=The §3FenSU§r is the ultimate energy storage block, being able to store §k1239217§rTHE.
 
 # Quest: Gerald the Construction Android
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABHw.name=Gerald建筑机器人
@@ -1167,7 +1207,7 @@ betterquesting.quest.DOSq2NdFQ3Ojsk2F4OtgMQ.desc=§3磁流体涡轮发电机§r�
 
 # Quest: Done
 betterquesting.quest.FmWwl9ntTjeMSWhXcVcTdg.name=§c完成
-betterquesting.quest.FmWwl9ntTjeMSWhXcVcTdg.desc=呼，这一路可真不容易啊……希望随着整合包的更新，还能有更多精彩内容出现！%n%n现在[warn]立刻去屋外摸摸草吧[/warn]。
+betterquesting.quest.FmWwl9ntTjeMSWhXcVcTdg.desc=Phew, that was quite a journey... Hopefully there is more to come with some modpack updates!%n%nNow [warn]GO TOUCH SOME GRASS IMMIDIATELY[/warn].%n%n§6§lRATE OUR MODPACK: §r[url]https://moddex.gg/modpack/ntnewhorizons[/url]
 
 # Quest: Secret Catalogue
 betterquesting.quest.J9dwgncgSUydHFPUoI85oQ.name=隐藏目录
@@ -1187,7 +1227,7 @@ betterquesting.quest.hmwBFeuMQXiUrjE-WdD6-g.desc=§3ICF激光器涡轮增压器�
 
 # Quest: Balls-O-Tron
 betterquesting.quest.k-HwTdGiQVmikRwAeg_fkQ.name=机械蠕虫
-betterquesting.quest.k-HwTdGiQVmikRwAeg_fkQ.desc=机械蠕虫是§dNTM§r的第二位boss。它可以通过使用面具人硬币制作的§6银钥匙§r与§e丛林地牢§r中的机械师之环交互或者制造机械蠕虫召唤物来召唤。%n%n由于该boss设计已经过时，并且召唤过程有很多依赖运气的操作，这个任务提供了一种获得机械蠕虫硬币的替代方法。%n%n§2这个任务可以重复。
+betterquesting.quest.k-HwTdGiQVmikRwAeg_fkQ.desc=§4Balls-O-Tron§r is the second boss of §dNTM§r. It can be summoned by interracting the mechanist's circle, found in the §eEnargite Temple§r which spawns in jungles, with a §6Silver Key§r, made using the Maskman Coin, or from crafting the Balls-O-Tron spawn item.
 
 # Quest: ICF Laser
 betterquesting.quest.nqmqybchRzWn-T46-3vHmQ.name=ICF激光器
@@ -1211,9 +1251,18 @@ betterquesting.quest.xlNjQwC6S3S5o_B7nIciBQ.name=无尽水源
 betterquesting.quest.xlNjQwC6S3S5o_B7nIciBQ.desc=厌倦了使用水桶给你的机器供水吗？尝试使用水泵或无限水罐！%n%n无限水罐将提供50mb/t的水%n增强无限水罐将提供500mb/t的水%n泵将提供1000mb/t的水，但需要蒸汽才能运行。
 
 
+## Quest Line: Farming and Cooking
+betterquesting.questline.UJ4N6pDhQ5aGBxBW9j-BVw.name=Farming and Cooking
+betterquesting.questline.UJ4N6pDhQ5aGBxBW9j-BVw.desc=Everything about how to farm and cook.
+
+
 ## Quest Line: Building and Decorating
 betterquesting.questline.7-1bBIkKRc6xhh5bwIGsjg.name=建筑与装饰
 betterquesting.questline.7-1bBIkKRc6xhh5bwIGsjg.desc=更好的建筑之杖
+
+# Quest: Building Gadget
+betterquesting.quest.8voIl_BdSZWqZcTPQVjo9Q.name=Building Gadget
+betterquesting.quest.8voIl_BdSZWqZcTPQVjo9Q.desc=The §6Building Gadget§r is an advanced building tool which allows the user to create many complex shapes with ease. Press the ALT key to open its menu.%n%n§2It consumes power for blocks placed.§r
 
 # Quest: Auto Chisel
 betterquesting.quest.QS-1ophNScaPpKGGoCqFMQ.name=自动雕刻机
@@ -1242,27 +1291,6 @@ betterquesting.quest.p7NNm2NvRgWz37LQO6yraw.desc=§d建筑师工艺（Architectu
 # Quest: Sign Pictures
 betterquesting.quest.wAu-q390TlKihyp-bEI2lw.name=告示牌图片
 betterquesting.quest.wAu-q390TlKihyp-bEI2lw.desc=§d告示牌图片§r允许玩家在告示牌上添加任何图像，默认按下键打开GUI。
-
-
-## Quest Line: Three hundred caps
-betterquesting.questline.PUpgFX1lTJePHTcvicBC8g.name=300瓶盖
-betterquesting.questline.PUpgFX1lTJePHTcvicBC8g.desc=欢迎来到商店！
-
-# Quest: Sell Dust
-betterquesting.quest.7NPMYwlyRnuUYaXsIwEgRg.name=出售灰尘
-betterquesting.quest.7NPMYwlyRnuUYaXsIwEgRg.desc=我讨厌灰尘！
-
-# Quest: Buy Minecraft Grade Copper
-betterquesting.quest.D2Exp9OuTbyYS9fJwtw2-g.name=购买紫铜
-betterquesting.quest.D2Exp9OuTbyYS9fJwtw2-g.desc=需要一些紫铜？来买一些吧！
-
-# Quest: Buy Technetium Steel
-betterquesting.quest.QoKnQH_ETbiodGyDlEZzuA.name=购买锝钢
-betterquesting.quest.QoKnQH_ETbiodGyDlEZzuA.desc=需要一些锝钢？来买一些吧！
-
-# Quest: Buy Steel
-betterquesting.quest.r6_zzsvOSRWQ6N6YCBilvw.name=购买钢
-betterquesting.quest.r6_zzsvOSRWQ6N6YCBilvw.desc=需要一些钢？来买一些吧！
 
 
 ## Quest Line: Reward Area
@@ -1560,10 +1588,6 @@ betterquesting.quest.6nKJ4mC3QB-i5nx8UXrPew.desc=我觉得需要一个新的背�
 betterquesting.quest.8G4ZvwvWQpihM6NfflMw7A.name=杀戮时刻(女巫)
 betterquesting.quest.8G4ZvwvWQpihM6NfflMw7A.desc=女巫既可恨又危险,她们总是躲在远处向你扔药水.要小心!
 
-# Quest: Maskman
-betterquesting.quest.8b6batCvQvCiGknitRMrSQ.name=面具人
-betterquesting.quest.8b6batCvQvCiGknitRMrSQ.desc=面具人是第一个NTM模组的BOSS。要召唤它，你需要处于辐射中毒状态（50Rad）。只需等待它出现即可。
-
 # Quest: MEGAKILL!
 betterquesting.quest.C7CLvAjyQUy2aNW1HiA7Ow.name=§4§l杀人如麻!
 betterquesting.quest.C7CLvAjyQUy2aNW1HiA7Ow.desc=你把他们全都杀了！§c你真是个怪物！
@@ -1659,9 +1683,13 @@ betterquesting.quest.5VAtBoWDTLmFNrWxLbn9IA.desc=欢迎游玩§5核科技：新�
 betterquesting.quest.6k-JrbD-S8GO9PRRthWNRA.name=戴森云大气改造器
 betterquesting.quest.6k-JrbD-S8GO9PRRthWNRA.desc=§3戴森云大气改造器§r在所有现有的§3戴森云转换器§r中是效用最多的，其接收来自接收器的光束并提供直接的能量到质量转换，产生行星规模的大气气体，根据玩家的意愿对任何行星或卫星进行地球化改造。%n%n默认情况下，它会向大气中释放氧气，一旦超过0.1个大气压的呼吸阈值，大气就会变得可呼吸。可以使用流体识别码切换排放的气体，使用螺丝刀可以在从大气中排放或提取气体之间切换。%n%n如果由戴森云提供§e150THE/s§r的功率（相当于1024个云模块），则达到0.1个大气压需要8小时。
 
+# Quest: Maskman
+betterquesting.quest.8b6batCvQvCiGknitRMrSQ.name=面具人
+betterquesting.quest.8b6batCvQvCiGknitRMrSQ.desc=面具人是NTM模组的第一个BOSS。要召唤它，你需要处于辐射中毒状态（50Rad）。当满足这个条件后，每位玩家都会开始一个20分钟的计时器。时间一到，面具人就会出现。在它出现前1分钟，会有一个警告提示。如果玩家的辐射剂量已降至安全水平，那么计时器就会重新开始计时。
+
 # Quest: Glyphids
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAABQ.name=异虫
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAABQ.desc=§G§6异虫§r是拥有多种变体的大型昆虫，主要随自然生成的§6§r巢穴§r结构出现。所有类型均自带护甲，相比普通生物具有伤害减免特性。这类生物通常会被玩家产生的污染所吸引。%n%n§6§r§6异虫巢§r可以在所有非海洋生物群落中自然生成，也可以由侦察异虫制造出来。这些巢内部会放置多个异虫蜂巢繁殖方块以及一些低级战利品，所有这些物品都位于异虫蜂巢繁殖方块的上面。异虫蜂巢繁殖方块会不断孵化出异虫，当其被破坏时会掉落异虫蛋。%n%n§2强烈建议尽早摧毁其巢穴，否则后期污染将使其成为巨大隐患。
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAABQ.desc=§6Glyphids§r are large insects that have many different types. They primarily spawn with naturally generated §6§rhives§r structures. All of the types are armored and they take less damage than against normal mobs. Glyphids are normally attracted to pollution created by the player, and usually have to be dealt with by the player.%n%n§6§r§6Hives§r can spawn naturally in all non-ocean biomes and can also be created by glyphid scouts. They contain several glyphid egg blocks and some low-tier loot inside, lying on top of eggs. glyphid egg blocks spawn glyphids and drop glyphid eggs upon destruction.%n%nGlyphids now periodically retarget the closest player every 5 seconds if their current target is farther. 1/3 of glyphids do not have this behavior to prevent infinite trapping.%n%n§2It is recommended that all hives are destroyed as soon as possible as to prevent their spread later on.
 
 # Quest: Useful Tools
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAACA.name=撬棍
@@ -1670,6 +1698,10 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAACA.desc=有许多工具可以帮助你�
 # Quest: Tantalium
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAiw.name=钽
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAiw.desc=§6钽§r是一种用于制造某些物品的材料，其中最重要的是§6电容板§r。钽晶体的生产需要§6钶钽铁矿§r，而钶钽铁矿可以通过使用§6钶钽铁矿指针§r来寻找。此外，还可以利用§b高性能溶剂§r处理§e重金属基岩矿石§r来获取钽。%n%n§2钶钽铁矿在其加工阶段早期可提供催化裂化塔所需的铌元素。
+
+# Quest: Hunger System
+betterquesting.quest.Fio9CeHtR9-O6cehKBCH5g.name=饥饿系统
+betterquesting.quest.Fio9CeHtR9-O6cehKBCH5g.desc=§dHunger Overhaul§r makes hunger a genuine threat rather than a mild inconvenience.%n%nHunger now drains passively over time, even while idle. Reaching zero kills you instantly. Low hunger inflicts slowness, weakness, and reduced mining speed before that point. Eating grants a §6Well Fed§r effect that boosts health regeneration - the larger the meal, the longer it lasts.%n%nFood values are re-balanced by meal size. Raw ingredients restore very little; prepared meals restore substantially more. Larger meals take longer to eat and stack less in your inventory.%n%nCrops only grow during daytime and take much longer to mature. Wood and stone hoes are removed - you need at least an iron hoe to till soil. Farmland must be placed adjacent to water or it will not function.%n%n§dSpice of Life: Carrot Edition§r rewards dietary variety. Each unique food eaten for the first time permanently increases your maximum health. Eating the same food repeatedly provides no bonus.%n%n§2The more diverse your diet, the more hearts you have - build a varied farm as early as possible.§r
 
 # Quest: Red Key
 betterquesting.quest.NB6qs0xZSHaY5Sik2IoTxg.name=红色钥匙
@@ -1683,9 +1715,17 @@ betterquesting.quest.VoxsH2isSheNEKaJ3_Ikgg.desc=§6螺丝刀§r可以用来旋�
 betterquesting.quest.XbTJRWJNTKa4UEeLPV0urg.name=宇宙的尽头...
 betterquesting.quest.XbTJRWJNTKa4UEeLPV0urg.desc=Well, you've completed the space stage of the game; now the entire space knows and fears you (you are a true space pirate). Here are a couple more nuances about the §3Dyson swarm§r:%n%n§2Do not place §3converters§r directly next to the §3receiver§r - this will cause a malfunction.§r%n%n§2Multiple players in the same game world can create multiple §3swarms§r, but keep in mind that different swarms reduce each other's §eefficiency§r. This can encourage players to either work together on one common §3swarm§r or compete to extract more §eenergy§r from their own §3swarm§r.§r
 
+# Quest: Agriculture and Farming
+betterquesting.quest.Zpwlu-OeTpCvf7vTFz-BIA.name=农业与种植
+betterquesting.quest.Zpwlu-OeTpCvf7vTFz-BIA.desc=Three mods overhaul farming and food in this pack.%n%n§dPam's HarvestCraft§r adds 40+ crops, many fruit trees, 10 fish, beekeeping, and 75+ foods. Key blocks: §3Presser§r (produces oils, honey, etc.), §3Market§r (buys seeds and saplings for emeralds), §3Shipping Block§r (sells crops for emeralds). Right-clicking a mature crop harvests and replants it.%n%n§dAgriCraft§r adds genetics-based crop breeding. Plants have six stats - Growth, Gain, Strength, Resistance, Fertility, and Mutativity - inherited from parent crops when cross-breeding. Higher stats are dominant. Mutations can unlock new crop species entirely. Weeds will compete with and eventually kill unmanaged crops. Plants have specific soil, light, and fluid requirements, so placement matters.%n%n§dHunger Overhaul§r requires farmland to be placed adjacent to water - untouched dry tilled soil will not function.%n%n§2Note that the crops should be planted on the Crop Sticks.
+
+# Quest: Compressor
+betterquesting.quest.jcaOirN6QCOC50YJbil2rQ.name=压缩机
+betterquesting.quest.jcaOirN6QCOC50YJbil2rQ.desc=§3压缩机§r是一种专门的多块机器，用于给流体加压。它可以对任何流体进行操作以增加其压力，以便在其他机器中使用。其中一些流体可以被压缩成另一种流体。
+
 # Quest: Guide Book
 betterquesting.quest.qxRS5162RCW1IG--2Ibg7g.name=指导书
-betterquesting.quest.qxRS5162RCW1IG--2Ibg7g.desc=虽然§6任务书§r会尽力提供尽可能多的信息，但它并不能涵盖游戏中的所有内容。%n%n而这正是§6指导书§r的作用——由玩家社区共同编写，内容不断更新，而且外观也&q&z非常出色§r！
+betterquesting.quest.qxRS5162RCW1IG--2Ibg7g.desc=While the §6Quest Book§r tries to give as much information as possible, it is not a full guide to all the content in the game.%n%nThat's what §6Guide Book§r is used for! Community-curated, constantly growing and &q&zawesome§r-looking!%n%n§2Note: this Guide Book can be opened via the keybind
 
 
 ### Quests in no quest lines ###

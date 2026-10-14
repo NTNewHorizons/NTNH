@@ -131,7 +131,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIg.desc=The §3Chemical Plant§r is a m
 
 # Quest: Strand Caster
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJA.name=Strand Caster
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJA.desc=The §3Strand Caster§r is a large basin that can cast items in batches of 9. It also requires §bWater§r in order to cast, where it makes §bLow-Pressure Steam§r that can be turned back into water.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJA.desc=The §3Strand Caster§r is a large basin that can cast items in batches of 9. It also requires §bWater§r in order to cast, where it makes §bLow-Pressure Steam§r that can be turned back into water.%n%nPlacing one §1§3§bSteam Condenser §ron one of it's holes after filling the caster with water will solve your problem with §bLow-Pressure Stea§r§bm§r it produces
 
 # Quest: High-Speed Steel
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJQ.name=High-Speed Steel
@@ -355,7 +355,7 @@ betterquesting.quest.pbwyXfgDRaCxA1R8YmlTIQ.desc=§6Graphite§r is a crystalline
 
 # Quest: From Flint to Oil - USA Simulator
 betterquesting.quest.rKlGBLXDR2CgX_rUy5rBVw.name=From Flint to Oil - USA Simulator
-betterquesting.quest.rKlGBLXDR2CgX_rUy5rBVw.desc=The §6Oil Reservoir Detector§r will help one in the search for an §eOil Deposit§r by pointing it out in chat. If the oil deposit is located very far away, it can be mined and moved to a stationary oil refinery.
+betterquesting.quest.rKlGBLXDR2CgX_rUy5rBVw.desc=The §6Oil Reservoir Detector§r will help one in the search for an §eOil Deposit§r by pointing it out in chat.
 
 # Quest: Long Distance Energy Transportation
 betterquesting.quest.s8lSFTDKSpqK44PLhdfusw.name=Long Distance Energy Transportation
@@ -460,7 +460,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQQ.desc=§6Bakelite§r is an alternativ
 
 # Quest: Desh
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQg.name=Desh
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQg.desc=§6Desh§r is an alloy made up of 9 rare earth metals to make its blend form, which is solidified and refined using §bMercury§r and §bLight oil§r in the §3Chemical Plant§r. Desh is an almost unbreakable material and as such its tools have infinite durability. %n%n§a§2Desh can also be made using DeshReady™ in a Rotary Furnace, or later on, in an Ore Acidizer.§r%n%nMercury at this stage of the game can be obtained from centrifuging §eRedstone Ore§r or putting §eCinnabar§r in a §3Combination Oven§r. Large cinnabar veins can be found as depth ore.%n%nLater on, mercury can be obtained from processing §bOre Slop§r or §bVitriol§r in an §3Electrolyzer§r.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQg.desc=§6Desh§r is an alloy made up of 9 rare earth metals to make its blend form, which is solidified and refined using §bMercury§r and §bLight oil§r in the §3Chemical Plant§r. Desh is an almost unbreakable material and as such its tools have infinite durability. %n%nThe §6Rare Earth Ore§r can be most commonly found in §1§3schist§r§3§r layers which can appear underground randomly, it can be recgonized by its blue texture.%n%n§a§2Desh can also be made using DeshReady™ in a Rotary Furnace, or later on, in an Ore Acidizer.§r%n%nMercury at this stage of the game can be obtained from centrifuging §eRedstone Ore§r or putting §eCinnabar§r in a §3Combination Oven§r. Large cinnabar veins can be found as depth ore.%n%nLater on, mercury can be obtained from processing §bOre Slop§r or §bVitriol§r in an §3Electrolyzer§r.
 
 # Quest: Industrial Steam Turbine
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAARA.name=Industrial Steam Turbine
@@ -516,11 +516,11 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAXw.desc=The §6Geiger counter§r is a d
 
 # Quest: Survey Scanner
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAYA.name=Survey Scanner
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAYA.desc=The §6Survey Scanner§r is a handheld device that will point out underground resourse deposits, such as §eDepth Rock§r and §eBedrock Ores§r.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAYA.desc=The §6Survey Scanner§r is a handheld device that will point out underground resourse deposits, such as §eDepth Rock§r§e,§r §eBedrock Ores,§r §eSchist layers, Bedrock Oil deposits and Oil deposits§r.
 
 # Quest: Nuclear Blast Furnace
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZQ.name=Nuclear Blast Furnace
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZQ.desc=The §3Nuclear Blast Furnace§r is an RTG-powered alternative to the standard §3Blast Furnace§r. It has 6 slots for RTG pellets, and requires a minimum of 15 heat to operate. It is significantly faster than the regular blast furnace.%n%nPellets with higher power levels will have a better effect of heating and thus speed. If sufficient heat is provided, it can alloy items near-instantaneously.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZQ.desc=The §3RTG Furnace §fis an§r §c§eRTG-powered§r§r alternative to the standard §3Furnace§r§r§3.§r It has 3 slots for RTG pellets, and it is significantly faster than the regular furnace.%n%nPellets with higher power levels will have a better effect of heating and thus speed. If sufficient heat is provided, it can smelt items near-instantaneously.
 
 # Quest: Launch Pad
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAaw.name=Launch Pad
@@ -528,11 +528,19 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAaw.desc=The §3Launch Pad§r is the mai
 
 # Quest: Transport Drones
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdg.name=Transport Drones
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdg.desc=§3Transport Drones§r are flying machines which will transport items and fluids between different containers. The drones require no power, and can transport both up and down. §3Waypoints§r can be used to make a better path for the transport drones to move around.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdg.desc=§3Transport Drones§r are flying machines which will transport items and fluids between different containers. The drones require no power, and can transport both up and down. §3Waypoints§r can be used to make a better path for the transport drones to move around. They are recommended if you don't like making large conveyor belts around your base.
 
 # Quest: Electrolysis Machine
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAzA.name=Electrolysis Machine
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAzA.desc=The §3Electrolysis Machine§r enables the separating of elements from fluids and the advanced processing of ores, making it an important machine in ore processing. Operating the machine consumes §e200kHE/s§r.%n%nThe electrolysis machine has 2 functions: one for the separation of fluids and one for ore processing.%n%nIn the first mode, the machine will take in a compatible fluid and separate it into 2 other fluids.%n%nIn the second mode, it will require §bNitric Acid§r and will process any kind of ore-derived crystal, allowing the maximum yield of the ore. There are 2 outputs, for the molten main product the outlet marked green and the secondary the one marked red, plus a byproduct kept in its item form. The outlets follow the same mechanics as the §3Crucible§r.%n%n§2Consider installing a Power Saving upgrade above level 2 on the electrolysis machine as it will significantly reduce the power consumption with only a minimal speed penalty.
+
+# Quest: Curvy Pipes
+betterquesting.quest.AWcWOsyyS0q-AHebIAkH1g.name=Curvy Pipes
+betterquesting.quest.AWcWOsyyS0q-AHebIAkH1g.desc=§6Curvy pipes§r are a very convienet mode of transporation for§3 items, fluids, and power§r.%n%n
+
+# Quest: AE2
+betterquesting.quest.D30AtxZdTCecSJqpydHE3w.name=AE2
+betterquesting.quest.D30AtxZdTCecSJqpydHE3w.desc=With §6silicion§r unlocked you are now able to make a simple §5AE2§r system using §6Storage buses§r, but without any drives, since they can be unlocked later on.%n%n[note]Go check the §6§rApplied Energistics 2§r§5§r Chapter for more information![/note]§r§r
 
 # Quest: Semtex
 betterquesting.quest.D6A-to-oSe29nf5qIu4h_w.name=Semtex
@@ -1257,7 +1265,15 @@ betterquesting.quest.xlNjQwC6S3S5o_B7nIciBQ.desc=Tired of using buckets to give 
 
 ## Quest Line: Farming and Cooking
 betterquesting.questline.UJ4N6pDhQ5aGBxBW9j-BVw.name=Farming and Cooking
-betterquesting.questline.UJ4N6pDhQ5aGBxBW9j-BVw.desc=Everything about how to farm and cook.
+betterquesting.questline.UJ4N6pDhQ5aGBxBW9j-BVw.desc=Yeah
+
+# Quest: Where is the quest line?
+betterquesting.quest.9uVhWowwQ3Kxf6N_O6UYng.name=Where is the quest line?
+betterquesting.quest.9uVhWowwQ3Kxf6N_O6UYng.desc=So you might be wondering where the farming quest line is well its not coming... this update that is, due to my busy schedule i didnt have enough time to finish it so here is a stack of cookies as a gift, have fun!
+
+# Quest: What the hell does this all mean?
+betterquesting.quest.BPCkaNHKSKKuyUffPYa7ZQ.name=What the hell does this all mean?
+betterquesting.quest.BPCkaNHKSKKuyUffPYa7ZQ.desc=So, you spent something like 20 minuets reading the other 2 quests and are wondering, "so... what the hell does any of that mean?" or you didnt read it at all, go back and read them you lazy bum or everything from here on will seem unclear. these food mods give a GTNH feel to hunger, you cant eat the same foods to many times in a row and eating a certain new foods can give extra hearts. this quest line will walk you thru how to use the food mods this pack ofers to there fullest potential (yes some of this is repeating what was said in the other 2 quests, no i will not be changing what this or the other quests say, if you want to complain DM I DARE YOU. gamernaut12)
 
 
 ## Quest Line: Building and Decorating
@@ -1295,31 +1311,6 @@ betterquesting.quest.p7NNm2NvRgWz37LQO6yraw.desc=§dArchitectureCraft§r introdu
 # Quest: Sign Pictures
 betterquesting.quest.wAu-q390TlKihyp-bEI2lw.name=Sign Pictures
 betterquesting.quest.wAu-q390TlKihyp-bEI2lw.desc=The §dSignPicture§r mod allows one to put any image on a sign, opening the door to many unique building designs. Press \ to get started.
-
-
-## Quest Line: Reward Area
-betterquesting.questline.VIthQchWRnKIQ6qTwFcPFg.name=Reward Area
-betterquesting.questline.VIthQchWRnKIQ6qTwFcPFg.desc=Trade your rewards.
-
-# Quest: LV1 > LV2 Lootbag Trade
-betterquesting.quest.8XIrl7C6Q5qBBT6HSgTHIA.name=LV1 > LV2 Lootbag Trade
-betterquesting.quest.8XIrl7C6Q5qBBT6HSgTHIA.desc=Trade three LV1 lootbags to get a better one: LV2.
-
-# Quest: LV3 > LV3.5 Lootbag Trade
-betterquesting.quest.U9KescpLTHK_XLG4Qil9zw.name=LV3 > LV3.5 Lootbag Trade
-betterquesting.quest.U9KescpLTHK_XLG4Qil9zw.desc=Trade two LV3 lootbags to get a LV3.5.
-
-# Quest: LV2 > LV3 Lootbag Trade
-betterquesting.quest.b_QkCMniQPmbvS4FX5sq-w.name=LV2 > LV3 Lootbag Trade
-betterquesting.quest.b_QkCMniQPmbvS4FX5sq-w.desc=Trade three LV2 lootbags to get a better one: LV3.
-
-# Quest: LV3.5 > LV4 Lootbag Trade
-betterquesting.quest.ecBXzr6RQ-i6XoIXFOvd5A.name=LV3.5 > LV4 Lootbag Trade
-betterquesting.quest.ecBXzr6RQ-i6XoIXFOvd5A.desc=Trade eight LV3.5 lootbags to get a better one: LV4.
-
-# Quest: LV3 > LV4 Lootbag Trade
-betterquesting.quest.qG74J_R9TQub-uWbBzZkoQ.name=LV3 > LV4 Lootbag Trade
-betterquesting.quest.qG74J_R9TQub-uWbBzZkoQ.desc=Trade four LV3 lootbags to get a better one: LV4.
 
 
 ## Quest Line: Applied Energistics 2
@@ -1689,7 +1680,7 @@ betterquesting.quest.6k-JrbD-S8GO9PRRthWNRA.desc=The §3Dyson Anatmogenesis Terr
 
 # Quest: Maskman
 betterquesting.quest.8b6batCvQvCiGknitRMrSQ.name=Maskman
-betterquesting.quest.8b6batCvQvCiGknitRMrSQ.desc=Maskman is the first NTM boss. To summon it, you need to be under radiation poisoning (50 rad). A 20-minute timer starts per player when requirements are met. Once it runs out, Mask Man spawns. A warning appears 1 minute before spawn. If you are no longer irradiated, the timer resets.
+betterquesting.quest.8b6batCvQvCiGknitRMrSQ.desc=§6Maskman§r is the first §1§rNTM§r boss.%n%n§2If a player is underground, has over 50 RADs, and has crafted or placed at least one acidizer, a 20 minute timer will start, when there will be 1 minute left a warning should appear in the chat and at the end of the timer Mask Man will spawn on the surface.
 
 # Quest: Glyphids
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAABQ.name=Glyphids
@@ -1701,7 +1692,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAACA.desc=There are many tools which will
 
 # Quest: Tantalium
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAiw.name=Tantalium
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAiw.desc=§6Tantalium§r is a material needed for the creation of some items, most importantly §6Capacitor Boards§r. Tantalium Polycrystal production requires §6Coltan§r which can be located by the use of a §6Coltass§r. Coltan can also be obtained by using the mining drill in a §eBedrock Ore Coltan Deposit§r located randomly on planet Dres. Tantalum can also be obtained via §3Watz Reactor§r.%n%n§2Coltan Processing at its early stage can provide Niobium needed for Catalytic Cracking Towers.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAiw.desc=§6Tantalium§r is a material needed for the creation of some items, most importantly §6Capacitor Boards§r. Tantalium Polycrystal production requires §6Coltan§r which can be located by the use of a §6Coltass§r. Coltan can also be obtained by using the mining drill in a §eBedrock Ore Coltan Deposit§r located randomly on planet Dres. Tantalum can also be obtained via §3Watz Reactor§r.%n%n§2Coltan Processing at its early stage can provide Niobium needed for Catalytic Cracking Towers but Rare Earth Ore is easier to find and more abundant in schist layers.
 
 # Quest: Hunger System
 betterquesting.quest.Fio9CeHtR9-O6cehKBCH5g.name=Hunger System
@@ -1734,6 +1725,26 @@ betterquesting.quest.qxRS5162RCW1IG--2Ibg7g.desc=While the §6Quest Book§r trie
 
 ### Quests in no quest lines ###
 
+# Quest: LV1 > LV2 Lootbag Trade
+betterquesting.quest.8XIrl7C6Q5qBBT6HSgTHIA.name=LV1 > LV2 Lootbag Trade
+betterquesting.quest.8XIrl7C6Q5qBBT6HSgTHIA.desc=Trade three LV1 lootbags to get a better one: LV2.
+
+# Quest: LV3 > LV3.5 Lootbag Trade
+betterquesting.quest.U9KescpLTHK_XLG4Qil9zw.name=LV3 > LV3.5 Lootbag Trade
+betterquesting.quest.U9KescpLTHK_XLG4Qil9zw.desc=Trade two LV3 lootbags to get a LV3.5.
+
+# Quest: LV2 > LV3 Lootbag Trade
+betterquesting.quest.b_QkCMniQPmbvS4FX5sq-w.name=LV2 > LV3 Lootbag Trade
+betterquesting.quest.b_QkCMniQPmbvS4FX5sq-w.desc=Trade three LV2 lootbags to get a better one: LV3.
+
 # Quest: Additional Fluid Tools
 betterquesting.quest.dIUUo_wJTR6juTJGlEfuBQ.name=Additional Fluid Tools
 betterquesting.quest.dIUUo_wJTR6juTJGlEfuBQ.desc=The §6Siphon§r is a tool used to extract input fluids from a machine. Right-clicking a machine with content in it's input tanks will fill any fluid barrels, universal tanks or pipettes (if the fluid amount cannot fill any of the previous options).%n%n§6Pipettes§r can be used to input specific amounts of fluids. Right-clicking or Shift-Right-clicking will increase or decrease the fluid amount.
+
+# Quest: LV3.5 > LV4 Lootbag Trade
+betterquesting.quest.ecBXzr6RQ-i6XoIXFOvd5A.name=LV3.5 > LV4 Lootbag Trade
+betterquesting.quest.ecBXzr6RQ-i6XoIXFOvd5A.desc=Trade eight LV3.5 lootbags to get a better one: LV4.
+
+# Quest: LV3 > LV4 Lootbag Trade
+betterquesting.quest.qG74J_R9TQub-uWbBzZkoQ.name=LV3 > LV4 Lootbag Trade
+betterquesting.quest.qG74J_R9TQub-uWbBzZkoQ.desc=Trade four LV3 lootbags to get a better one: LV4.

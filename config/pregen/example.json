@@ -1,0 +1,13 @@
+{
+	"fileheader": "Chunk Pregen Example file which executes all commands stored in it",
+	"filename": "This file is just the tutorial, the file that actually uses this feature is called: onDimensionCreation.json",
+	"filecontents": "The onDimensionCreation file is a Json File. All commands in there will be executed as a server",
+	"filecommands": "The commands inserted can be either an array or a value in json form, and the commands have to be written as if you would write them in a console",
+	"fileformat": "Everything in the example entry represents how the onDimensionCreation.json would look like. In other words it is the root of the file",
+	"example": {
+		"any": "/pregen start gen radius TESTING%1$s SQUARE 0 0 100 %1$s",
+		"DimensionId": "executes these commands on this specific dimension alone. The dimensionId has to be the integer id of said dimension, can be value or array",
+		"server": "executes these commands upon the servers first startup, can be a value or array",
+		"0": "/msg hello world"
+	}
+}

@@ -7,7 +7,7 @@ on:
 jobs:
   add-server:
     # state_reason is on the issue object: 'completed', 'not_planned', or 'duplicate'
-    # Only 'completed' should trigger this — the exact match naturally excludes the others
+    # Only 'completed' should trigger this - the exact match naturally excludes the others
     if: |
       github.event.issue.state_reason == 'completed' &&
       contains(toJson(github.event.issue.labels), 'Type: Unofficial Server')
@@ -58,7 +58,7 @@ jobs:
               );
             } catch (e) {
               if (e.status === 404) {
-                core.info('servers.json not found — will create it.');
+                core.info('servers.json not found - will create it.');
               } else {
                 throw e;
               }
@@ -66,7 +66,7 @@ jobs:
 
             // Guard: skip if the server IP is already in the list
             if (Object.values(currentServers).includes(ip)) {
-              core.warning(`⚠️ Server IP "${ip}" is already in servers.json — skipping.`);
+              core.warning(`⚠️ Server IP "${ip}" is already in servers.json - skipping.`);
               return;
             }
 

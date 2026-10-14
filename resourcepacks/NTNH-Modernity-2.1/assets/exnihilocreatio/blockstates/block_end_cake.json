@@ -1,0 +1,38 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "particle": "exnihilocreatio:blocks/end_cake_side",
+      "bottom": "exnihilocreatio:blocks/end_cake_bottom",
+      "top": "exnihilocreatio:blocks/end_cake_top",
+      "side": "exnihilocreatio:blocks/end_cake_side",
+      "inside": "exnihilocreatio:blocks/end_cake_inner"
+    }
+  },
+  "variants": {
+    "bites=0": {
+      "model": "exnihilocreatio:cake_uneaten"
+    },
+    "bites=1": {
+      "model": "exnihilocreatio:cake_slice1"
+    },
+    "bites=2": {
+      "model": "exnihilocreatio:cake_slice2"
+    },
+    "bites=3": {
+      "model": "exnihilocreatio:cake_slice3"
+    },
+    "bites=4": {
+      "model": "exnihilocreatio:cake_slice4"
+    },
+    "bites=5": {
+      "model": "exnihilocreatio:cake_slice5"
+    },
+    "bites=6": {
+      "model": "exnihilocreatio:cake_slice6"
+    },
+    "inventory": {
+      "model": "exnihilocreatio:end_cake"
+    }
+  }
+}

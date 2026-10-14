@@ -1,4 +1,4 @@
-# NTNH Contribution Guidelines, Version 1.1
+# NTNH Contribution Guidelines, Version 1.2
 ##### (srry [bob](https://github.com/HbmMods) for stealing your guidelines)
 
 
@@ -48,7 +48,7 @@ Please consult the [@Admins](https://github.com/orgs/NTNewHorizons/teams/admins)
 
 ## Communication
 
-If you're planning on adding some new thing or doing a grand change, it's best to ask whether that's a good idea before spending 50 hours on a project that won't end up getting merged, due to issues that could have been entirely avoidable with communication.
+If you're planning on adding some new thing or doing a grand change, it's best to ask whether that's a good idea before spending 50 hours on a project that won't end up getting merged, due to issues that could have been entirely avoidable with communication. On Discord server, we got [#developers-contributors](https://discord.com/channels/1365318764895277136/1541179745881030696), where you can discuss your edits with other developers
 
 
 ## No guarantees

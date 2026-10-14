@@ -1,0 +1,47 @@
+{
+  "credit": "Made with Blockbench by Sea_Kerman",
+  "textures": {
+    "sides": "appliedenergistics2:parts/interface_sides",
+    "sidesStatus": "appliedenergistics2:parts/monitor_sides_status",
+    "particle": "appliedenergistics2:parts/interface_back",
+    "back": "appliedenergistics2:parts/interface_back",
+    "front": "appliedenergistics2:items/part/interface"
+  },
+  "elements": [
+    {
+      "from": [2, 2, 0],
+      "to": [14, 14, 2],
+      "faces": {
+        "north": { "uv": [2, 2, 14, 14], "texture": "#front" },
+        "east": { "uv": [14, 2, 16, 14], "texture": "#sides" },
+        "south": { "uv": [2, 2, 14, 14], "texture": "#back" },
+        "west": { "uv": [0, 2, 2, 14], "texture": "#sides" },
+        "up": { "uv": [2, 0, 14, 2], "texture": "#sides" },
+        "down": { "uv": [2, 14, 14, 16], "texture": "#sides" }
+      }
+    },
+    {
+      "from": [5, 5, 3],
+      "to": [11, 11, 4],
+      "faces": {
+        "north": { "uv": [5, 5, 11, 11], "texture": "#front" },
+        "east": { "uv": [12, 5, 13, 11], "texture": "#sides" },
+        "south": { "uv": [5, 5, 11, 11], "texture": "#back" },
+        "west": { "uv": [3, 5, 4, 11], "texture": "#sides" },
+        "up": { "uv": [5, 3, 11, 4], "texture": "#sides" },
+        "down": { "uv": [5, 12, 11, 13], "texture": "#sides" }
+      }
+    },
+    {
+      "from": [5, 5, 2],
+      "to": [11, 11, 3],
+      "faces": {
+        "east": { "uv": [13, 5, 14, 11], "texture": "#sidesStatus" },
+        "south": { "uv": [5, 5, 11, 11], "texture": "#back" },
+        "west": { "uv": [2, 5, 3, 11], "texture": "#sidesStatus" },
+        "up": { "uv": [5, 2, 11, 3], "texture": "#sidesStatus" },
+        "down": { "uv": [5, 13, 11, 14], "texture": "#sidesStatus" }
+      }
+    }
+  ]
+}
