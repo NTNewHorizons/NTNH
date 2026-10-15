@@ -1,0 +1,1853 @@
+<!-- =================================================================
+     Custom Ore Generation "ElectriCraft" Module: This configuration
+     covers copper, mountain copper, tin, mountain tin, silver,
+     mountain silver, nickel, mountain nickel, aluminum, platinum, and
+     mountain platinum.
+     ================================================================= -->
+
+
+<!-- An expansion to Rotarycraft, this mod adds oregen appropriate to
+     the formation of various wires with different electrical
+     advantages/disadvantages.  Configuration by Reteo. -->
+
+
+
+
+<!-- Is the "ElectriCraft" mod on the system?  Let's find out! -->
+<IfModInstalled name="ElectriCraft">
+
+  <!-- Starting Configuration for Custom Ore Generation. -->
+  <ConfigSection>
+
+
+
+
+
+    <!-- Setup Screen Configuration -->
+    <ConfigSection>
+      <OptionDisplayGroup name='groupElectriCraft' displayName='ElectriCraft' displayState='shown'>
+        <Description>
+          Distribution options for ElectriCraft Ores.
+        </Description>
+      </OptionDisplayGroup>
+      <OptionChoice name='enableElectriCraft' displayName='Handle ElectriCraft Setup?' default='true' displayState='shown_dynamic' displayGroup='groupElectriCraft'>
+        <Description> Should Custom Ore Generation handle ElectriCraft ore generation? </Description>
+        <Choice value=':= ?true' displayValue='Yes' description='Use Custom Ore Generation to handle ElectriCraft ores.'/>
+        <Choice value=':= ?false' displayValue='No' description='ElectriCraft ores will be handled by the mod itself.'/>
+      </OptionChoice>
+      <OptionChoice name='cleanUpElectriCraft' displayName='Use ElectriCraft Cleanup?' default='true' displayState='shown_dynamic' displayGroup='groupElectriCraft'>
+        <Description> Should Custom Ore Generation use the Substitution Pass to remove all instances of ElectriCraft ore from the world?  If the mod's oregen can be turned off in its configuration, then it's recommended to do so, as the substitution pass can slow the game significantly.  If this option is disabled without disabling the mod's own ore generation, you'll end up with two oregens working at once, flooding the world with ore.  Enabled by default to ensure the ores are completely removed. </Description>
+        <Choice value=':= ?true' displayValue='Yes' description='Use the substitution pass to clean up ElectriCraft ores.'/>
+        <Choice value=':= ?false' displayValue='No' description='ElectriCraft ores do not need to be cleaned up by a substitution pass.'/>
+      </OptionChoice>
+
+      <!-- Copper Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='elcrCopperDist'  displayState=':= if(?enableElectriCraft, "shown", "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Controls how Copper is generated </Description>
+          <DisplayName>ElectriCraft Copper</DisplayName>
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Copper is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='elcrCopperFreq' default='1'  min='0' max='5' displayState=':= if(?enableElectriCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Frequency multiplier for ElectriCraft Copper distributions </Description>
+          <DisplayName>ElectriCraft Copper Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='elcrCopperSize' default='1'  min='0' max='5' displayState=':= if(?enableElectriCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Size multiplier for ElectriCraft Copper distributions </Description>
+          <DisplayName>ElectriCraft Copper Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Copper Configuration UI Complete -->
+
+
+      <!-- Mountain Copper Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='elcrMountainCopperDist'  displayState=':= if(?enableElectriCraft, "shown", "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Controls how Mountain Copper is generated </Description>
+          <DisplayName>ElectriCraft Mountain Copper</DisplayName>
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Copper is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='elcrMountainCopperFreq' default='1'  min='0' max='5' displayState=':= if(?enableElectriCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Frequency multiplier for ElectriCraft Mountain Copper distributions </Description>
+          <DisplayName>ElectriCraft Mountain Copper Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='elcrMountainCopperSize' default='1'  min='0' max='5' displayState=':= if(?enableElectriCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Size multiplier for ElectriCraft Mountain Copper distributions </Description>
+          <DisplayName>ElectriCraft Mountain Copper Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Copper Configuration UI Complete -->
+
+
+      <!-- Tin Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='elcrTinDist'  displayState=':= if(?enableElectriCraft, "shown", "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Controls how Tin is generated </Description>
+          <DisplayName>ElectriCraft Tin</DisplayName>
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:1")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:1")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:1")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Tin is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='elcrTinFreq' default='1'  min='0' max='5' displayState=':= if(?enableElectriCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Frequency multiplier for ElectriCraft Tin distributions </Description>
+          <DisplayName>ElectriCraft Tin Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='elcrTinSize' default='1'  min='0' max='5' displayState=':= if(?enableElectriCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Size multiplier for ElectriCraft Tin distributions </Description>
+          <DisplayName>ElectriCraft Tin Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Tin Configuration UI Complete -->
+
+
+      <!-- Mountain Tin Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='elcrMountainTinDist'  displayState=':= if(?enableElectriCraft, "shown", "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Controls how Mountain Tin is generated </Description>
+          <DisplayName>ElectriCraft Mountain Tin</DisplayName>
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:1")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:1")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:1")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Tin is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='elcrMountainTinFreq' default='1'  min='0' max='5' displayState=':= if(?enableElectriCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Frequency multiplier for ElectriCraft Mountain Tin distributions </Description>
+          <DisplayName>ElectriCraft Mountain Tin Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='elcrMountainTinSize' default='1'  min='0' max='5' displayState=':= if(?enableElectriCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Size multiplier for ElectriCraft Mountain Tin distributions </Description>
+          <DisplayName>ElectriCraft Mountain Tin Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Tin Configuration UI Complete -->
+
+
+      <!-- Silver Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='elcrSilverDist'  displayState=':= if(?enableElectriCraft, "shown", "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Controls how Silver is generated </Description>
+          <DisplayName>ElectriCraft Silver</DisplayName>
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:2")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:2")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:2")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Silver is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='elcrSilverFreq' default='1'  min='0' max='5' displayState=':= if(?enableElectriCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Frequency multiplier for ElectriCraft Silver distributions </Description>
+          <DisplayName>ElectriCraft Silver Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='elcrSilverSize' default='1'  min='0' max='5' displayState=':= if(?enableElectriCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Size multiplier for ElectriCraft Silver distributions </Description>
+          <DisplayName>ElectriCraft Silver Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Silver Configuration UI Complete -->
+
+
+      <!-- Mountain Silver Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='elcrMountainSilverDist'  displayState=':= if(?enableElectriCraft, "shown", "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Controls how Mountain Silver is generated </Description>
+          <DisplayName>ElectriCraft Mountain Silver</DisplayName>
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:2")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:2")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:2")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Silver is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='elcrMountainSilverFreq' default='1'  min='0' max='5' displayState=':= if(?enableElectriCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Frequency multiplier for ElectriCraft Mountain Silver distributions </Description>
+          <DisplayName>ElectriCraft Mountain Silver Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='elcrMountainSilverSize' default='1'  min='0' max='5' displayState=':= if(?enableElectriCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Size multiplier for ElectriCraft Mountain Silver distributions </Description>
+          <DisplayName>ElectriCraft Mountain Silver Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Silver Configuration UI Complete -->
+
+
+      <!-- Nickel Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='elcrNickelDist'  displayState=':= if(?enableElectriCraft, "shown", "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Controls how Nickel is generated </Description>
+          <DisplayName>ElectriCraft Nickel</DisplayName>
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:3")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:3")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:3")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Nickel is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='elcrNickelFreq' default='1'  min='0' max='5' displayState=':= if(?enableElectriCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Frequency multiplier for ElectriCraft Nickel distributions </Description>
+          <DisplayName>ElectriCraft Nickel Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='elcrNickelSize' default='1'  min='0' max='5' displayState=':= if(?enableElectriCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Size multiplier for ElectriCraft Nickel distributions </Description>
+          <DisplayName>ElectriCraft Nickel Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Nickel Configuration UI Complete -->
+
+
+      <!-- Mountain Nickel Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='elcrMountainNickelDist'  displayState=':= if(?enableElectriCraft, "shown", "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Controls how Mountain Nickel is generated </Description>
+          <DisplayName>ElectriCraft Mountain Nickel</DisplayName>
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:3")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:3")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:3")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Nickel is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='elcrMountainNickelFreq' default='1'  min='0' max='5' displayState=':= if(?enableElectriCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Frequency multiplier for ElectriCraft Mountain Nickel distributions </Description>
+          <DisplayName>ElectriCraft Mountain Nickel Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='elcrMountainNickelSize' default='1'  min='0' max='5' displayState=':= if(?enableElectriCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Size multiplier for ElectriCraft Mountain Nickel distributions </Description>
+          <DisplayName>ElectriCraft Mountain Nickel Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Nickel Configuration UI Complete -->
+
+
+      <!-- Aluminum Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='elcrAluminumDist'  displayState=':= if(?enableElectriCraft, "shown", "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Controls how Aluminum is generated </Description>
+          <DisplayName>ElectriCraft Aluminum</DisplayName>
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:4")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:4")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:4")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Aluminum is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='elcrAluminumFreq' default='1'  min='0' max='5' displayState=':= if(?enableElectriCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Frequency multiplier for ElectriCraft Aluminum distributions </Description>
+          <DisplayName>ElectriCraft Aluminum Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='elcrAluminumSize' default='1'  min='0' max='5' displayState=':= if(?enableElectriCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Size multiplier for ElectriCraft Aluminum distributions </Description>
+          <DisplayName>ElectriCraft Aluminum Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Aluminum Configuration UI Complete -->
+
+
+      <!-- Platinum Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='elcrPlatinumDist'  displayState=':= if(?enableElectriCraft, "shown", "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Controls how Platinum is generated </Description>
+          <DisplayName>ElectriCraft Platinum</DisplayName>
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:5")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:5")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:5")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Platinum is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='elcrPlatinumFreq' default='1'  min='0' max='5' displayState=':= if(?enableElectriCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Frequency multiplier for ElectriCraft Platinum distributions </Description>
+          <DisplayName>ElectriCraft Platinum Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='elcrPlatinumSize' default='1'  min='0' max='5' displayState=':= if(?enableElectriCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Size multiplier for ElectriCraft Platinum distributions </Description>
+          <DisplayName>ElectriCraft Platinum Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Platinum Configuration UI Complete -->
+
+
+      <!-- Mountain Platinum Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='elcrMountainPlatinumDist'  displayState=':= if(?enableElectriCraft, "shown", "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Controls how Mountain Platinum is generated </Description>
+          <DisplayName>ElectriCraft Mountain Platinum</DisplayName>
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:5")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:5")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("ElectriCraft:electricraft_block_ore:5")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Platinum is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='elcrMountainPlatinumFreq' default='1'  min='0' max='5' displayState=':= if(?enableElectriCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Frequency multiplier for ElectriCraft Mountain Platinum distributions </Description>
+          <DisplayName>ElectriCraft Mountain Platinum Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='elcrMountainPlatinumSize' default='1'  min='0' max='5' displayState=':= if(?enableElectriCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupElectriCraft'>
+          <Description> Size multiplier for ElectriCraft Mountain Platinum distributions </Description>
+          <DisplayName>ElectriCraft Mountain Platinum Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Platinum Configuration UI Complete -->
+
+    </ConfigSection>
+    <!-- Setup Screen Complete -->
+
+    <IfCondition condition=':= ?enableElectriCraft'>
+
+
+
+
+      <!-- Overworld Setup Beginning -->
+
+      <IfCondition condition=':= ?COGActive'>
+
+        <!-- Starting Original "Overworld" Block Removal -->
+
+        <IfCondition condition=':= ?cleanUpElectriCraft'>
+          <IfCondition condition=':= ?blockExists("minecraft:stone")'>
+            <Substitute name='elcrOverworldBlockSubstitute0' block='minecraft:stone'>
+              <Description>
+                Replace vanilla-generated ore clusters.
+              </Description>
+              <Comment>
+                The global option  deferredPopulationRange must be
+                large enough to catch all ore  clusters (>= 32).
+              </Comment>
+              <Replaces block='ElectriCraft:electricraft_block_ore' weight='1.0' />
+              <Replaces block='ElectriCraft:electricraft_block_ore:1' weight='1.0' />
+              <Replaces block='ElectriCraft:electricraft_block_ore:2' weight='1.0' />
+              <Replaces block='ElectriCraft:electricraft_block_ore:3' weight='1.0' />
+              <Replaces block='ElectriCraft:electricraft_block_ore:4' weight='1.0' />
+              <Replaces block='ElectriCraft:electricraft_block_ore:5' weight='1.0' />
+            </Substitute>
+          </IfCondition>
+        </IfCondition>
+
+        <!-- Original "Overworld" Block Removal Complete -->
+
+        <!-- Adding blocks -->
+
+        <!-- Begin Copper Generation -->
+
+        <!-- Starting LayeredVeins Preset for Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrCopperDist = "LayeredVeins"'>
+            <Veins name='elcrCopperVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60BB6E30' drawBoundBox='false' boundBoxColor='0x60BB6E30'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.226 * _default_ * elcrCopperFreq ' range=':= 1.226 * _default_ * elcrCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.035 * _default_ * elcrCopperSize ' range=':= 1.035 * _default_ * elcrCopperSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 48 ' range=':= 16 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.107 * _default_ ' range=':= 1.107 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * elcrCopperSize ' range=':= _default_ * elcrCopperSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.052 * _default_ * elcrCopperSize ' range=':= 1.052 * _default_ * elcrCopperSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Copper is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrCopperDist = "StrategicClouds"'>
+            <Cloud name='elcrCopperCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60BB6E30' drawBoundBox='false' boundBoxColor='0x60BB6E30'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 1.183 * _default_ * elcrCopperSize ' range=':= 1.183 * _default_ * elcrCopperSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.183 * _default_ * elcrCopperSize ' range=':= 1.183 * _default_ * elcrCopperSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.400 * _default_ * elcrCopperFreq ' range=':= 1.400 * _default_ * elcrCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 48 ' range=':= 16 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='elcrCopperHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60BB6E30' drawBoundBox='false' boundBoxColor='0x60BB6E30'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='ElectriCraft:electricraft_block_ore' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.226 * _default_ * elcrCopperFreq  * 0.1 ' range=':= 1.226 * _default_ * elcrCopperFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Copper is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrCopperDist = "Vanilla"'>
+            <StandardGen name='elcrCopperStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60BB6E30' drawBoundBox='false' boundBoxColor='0x60BB6E30'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 4.0 * elcrCopperSize ' range=':= 2.0 * elcrCopperSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 5.333 * elcrCopperFreq ' range=':= 2.67 * elcrCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 48 ' range=':= 16 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Copper is complete. -->
+
+        <!-- End Copper Generation -->
+
+
+        <!-- Begin Mountain Copper Generation -->
+
+        <!-- Starting LayeredVeins Preset for Mountain Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrMountainCopperDist = "LayeredVeins"'>
+            <Veins name='elcrMountainCopperVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60BB6E30' drawBoundBox='false' boundBoxColor='0x60BB6E30'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.226 * _default_ * elcrMountainCopperFreq ' range=':= 1.226 * _default_ * elcrMountainCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.035 * _default_ * elcrMountainCopperSize ' range=':= 1.035 * _default_ * elcrMountainCopperSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 208 ' range=':= 48 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.107 * _default_ ' range=':= 1.107 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * elcrMountainCopperSize ' range=':= _default_ * elcrMountainCopperSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.052 * _default_ * elcrMountainCopperSize ' range=':= 1.052 * _default_ * elcrMountainCopperSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Mountain Copper is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain  Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrMountainCopperDist = "StrategicClouds"'>
+            <Cloud name='elcrMountainCopperCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60BB6E30' drawBoundBox='false' boundBoxColor='0x60BB6E30'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 1.183 * _default_ * elcrMountainCopperSize ' range=':= 1.183 * _default_ * elcrMountainCopperSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.183 * _default_ * elcrMountainCopperSize ' range=':= 1.183 * _default_ * elcrMountainCopperSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.400 * _default_ * elcrMountainCopperFreq ' range=':= 1.400 * _default_ * elcrMountainCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 208 ' range=':= 48 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='elcrMountainCopperHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60BB6E30' drawBoundBox='false' boundBoxColor='0x60BB6E30'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='ElectriCraft:electricraft_block_ore' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.226 * _default_ * elcrMountainCopperFreq  * 0.1 ' range=':= 1.226 * _default_ * elcrMountainCopperFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Copper is  complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mountain Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrMountainCopperDist = "Vanilla"'>
+            <StandardGen name='elcrMountainCopperStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60BB6E30' drawBoundBox='false' boundBoxColor='0x60BB6E30'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 4.0 * elcrMountainCopperSize ' range=':= 2.0 * elcrMountainCopperSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 5.333 * elcrMountainCopperFreq ' range=':= 2.67 * elcrMountainCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 208 ' range=':= 48 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Copper is complete. -->
+
+        <!-- End Mountain Copper Generation -->
+
+
+        <!-- Begin Tin Generation -->
+
+        <!-- Starting LayeredVeins Preset for Tin. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrTinDist = "LayeredVeins"'>
+            <Veins name='elcrTinVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60A9C7CF' drawBoundBox='false' boundBoxColor='0x60A9C7CF'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:1' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.416 * _default_ * elcrTinFreq ' range=':= 1.416 * _default_ * elcrTinFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.060 * _default_ * elcrTinSize ' range=':= 1.060 * _default_ * elcrTinSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 60 ' range=':= 12 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.190 * _default_ ' range=':= 1.190 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * elcrTinSize ' range=':= _default_ * elcrTinSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.091 * _default_ * elcrTinSize ' range=':= 1.091 * _default_ * elcrTinSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Tin is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Tin. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrTinDist = "StrategicClouds"'>
+            <Cloud name='elcrTinCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60A9C7CF' drawBoundBox='false' boundBoxColor='0x60A9C7CF'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:1' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 1.271 * _default_ * elcrTinSize ' range=':= 1.271 * _default_ * elcrTinSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.271 * _default_ * elcrTinSize ' range=':= 1.271 * _default_ * elcrTinSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.616 * _default_ * elcrTinFreq ' range=':= 1.616 * _default_ * elcrTinFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 60 ' range=':= 12 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='elcrTinHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60A9C7CF' drawBoundBox='false' boundBoxColor='0x60A9C7CF'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='ElectriCraft:electricraft_block_ore:1' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.416 * _default_ * elcrTinFreq  * 0.1 ' range=':= 1.416 * _default_ * elcrTinFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Tin is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Tin. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrTinDist = "Vanilla"'>
+            <StandardGen name='elcrTinStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60A9C7CF' drawBoundBox='false' boundBoxColor='0x60A9C7CF'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:1' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 5.333 * elcrTinSize ' range=':= 2.67 * elcrTinSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 5.333 * elcrTinFreq ' range=':= 2.67 * elcrTinFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 60 ' range=':= 12 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Tin is complete. -->
+
+        <!-- End Tin Generation -->
+
+
+        <!-- Begin Mountain Tin Generation -->
+
+        <!-- Starting LayeredVeins Preset for Mountain Tin. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrMountainTinDist = "LayeredVeins"'>
+            <Veins name='elcrMountainTinVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60A9C7CF' drawBoundBox='false' boundBoxColor='0x60A9C7CF'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:1' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.416 * _default_ * elcrMountainTinFreq ' range=':= 1.416 * _default_ * elcrMountainTinFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.060 * _default_ * elcrMountainTinSize ' range=':= 1.060 * _default_ * elcrMountainTinSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 244 ' range=':= 36 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.190 * _default_ ' range=':= 1.190 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * elcrMountainTinSize ' range=':= _default_ * elcrMountainTinSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.091 * _default_ * elcrMountainTinSize ' range=':= 1.091 * _default_ * elcrMountainTinSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Mountain Tin is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain Tin. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrMountainTinDist = "StrategicClouds"'>
+            <Cloud name='elcrMountainTinCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60A9C7CF' drawBoundBox='false' boundBoxColor='0x60A9C7CF'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:1' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 1.271 * _default_ * elcrMountainTinSize ' range=':= 1.271 * _default_ * elcrMountainTinSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.271 * _default_ * elcrMountainTinSize ' range=':= 1.271 * _default_ * elcrMountainTinSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.616 * _default_ * elcrMountainTinFreq ' range=':= 1.616 * _default_ * elcrMountainTinFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 244 ' range=':= 36 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='elcrMountainTinHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60A9C7CF' drawBoundBox='false' boundBoxColor='0x60A9C7CF'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='ElectriCraft:electricraft_block_ore:1' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.416 * _default_ * elcrMountainTinFreq  * 0.1 ' range=':= 1.416 * _default_ * elcrMountainTinFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Tin is  complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mountain Tin. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrMountainTinDist = "Vanilla"'>
+            <StandardGen name='elcrMountainTinStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60A9C7CF' drawBoundBox='false' boundBoxColor='0x60A9C7CF'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:1' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 5.333 * elcrMountainTinSize ' range=':= 2.67 * elcrMountainTinSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 5.333 * elcrMountainTinFreq ' range=':= 2.67 * elcrMountainTinFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 244 ' range=':= 36 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Tin is complete. -->
+
+        <!-- End Mountain Tin Generation -->
+
+
+        <!-- Begin Silver Generation -->
+
+        <!-- Starting LayeredVeins Preset for Silver. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrSilverDist = "LayeredVeins"'>
+            <Veins name='elcrSilverVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60B6D2EA' drawBoundBox='false' boundBoxColor='0x60B6D2EA'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:2' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 0.867 * _default_ * elcrSilverFreq ' range=':= 0.867 * _default_ * elcrSilverFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0.976 * _default_ * elcrSilverSize ' range=':= 0.976 * _default_ * elcrSilverSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 19 ' range=':= 13 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 0.931 * _default_ ' range=':= 0.931 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * elcrSilverSize ' range=':= _default_ * elcrSilverSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.965 * _default_ * elcrSilverSize ' range=':= 0.965 * _default_ * elcrSilverSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Silver is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Silver. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrSilverDist = "StrategicClouds"'>
+            <Cloud name='elcrSilverCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60B6D2EA' drawBoundBox='false' boundBoxColor='0x60B6D2EA'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:2' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 0.995 * _default_ * elcrSilverSize ' range=':= 0.995 * _default_ * elcrSilverSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.995 * _default_ * elcrSilverSize ' range=':= 0.995 * _default_ * elcrSilverSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.990 * _default_ * elcrSilverFreq ' range=':= 0.990 * _default_ * elcrSilverFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 19 ' range=':= 13 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='elcrSilverHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60B6D2EA' drawBoundBox='false' boundBoxColor='0x60B6D2EA'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='ElectriCraft:electricraft_block_ore:2' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 0.867 * _default_ * elcrSilverFreq  * 0.1 ' range=':= 0.867 * _default_ * elcrSilverFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Silver is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Silver. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrSilverDist = "Vanilla"'>
+            <StandardGen name='elcrSilverStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60B6D2EA' drawBoundBox='false' boundBoxColor='0x60B6D2EA'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:2' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 4.0 * elcrSilverSize ' range=':= 2.0 * elcrSilverSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 2.667 * elcrSilverFreq ' range=':= 1.33 * elcrSilverFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 19 ' range=':= 13 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Silver is complete. -->
+
+        <!-- End Silver Generation -->
+
+
+        <!-- Begin Mountain Silver Generation -->
+
+        <!-- Starting LayeredVeins Preset for Mountain Silver. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrMountainSilverDist = "LayeredVeins"'>
+            <Veins name='elcrMountainSilverVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60B6D2EA' drawBoundBox='false' boundBoxColor='0x60B6D2EA'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:2' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 0.867 * _default_ * elcrMountainSilverFreq ' range=':= 0.867 * _default_ * elcrMountainSilverFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0.976 * _default_ * elcrMountainSilverSize ' range=':= 0.976 * _default_ * elcrMountainSilverSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 121 ' range=':= 39 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 0.931 * _default_ ' range=':= 0.931 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * elcrMountainSilverSize ' range=':= _default_ * elcrMountainSilverSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.965 * _default_ * elcrMountainSilverSize ' range=':= 0.965 * _default_ * elcrMountainSilverSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Mountain Silver is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain  Silver. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrMountainSilverDist = "StrategicClouds"'>
+            <Cloud name='elcrMountainSilverCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60B6D2EA' drawBoundBox='false' boundBoxColor='0x60B6D2EA'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:2' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 0.995 * _default_ * elcrMountainSilverSize ' range=':= 0.995 * _default_ * elcrMountainSilverSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.995 * _default_ * elcrMountainSilverSize ' range=':= 0.995 * _default_ * elcrMountainSilverSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.990 * _default_ * elcrMountainSilverFreq ' range=':= 0.990 * _default_ * elcrMountainSilverFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 121 ' range=':= 39 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='elcrMountainSilverHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60B6D2EA' drawBoundBox='false' boundBoxColor='0x60B6D2EA'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='ElectriCraft:electricraft_block_ore:2' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 0.867 * _default_ * elcrMountainSilverFreq  * 0.1 ' range=':= 0.867 * _default_ * elcrMountainSilverFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Silver is  complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mountain Silver. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrMountainSilverDist = "Vanilla"'>
+            <StandardGen name='elcrMountainSilverStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60B6D2EA' drawBoundBox='false' boundBoxColor='0x60B6D2EA'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:2' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 4.0 * elcrMountainSilverSize ' range=':= 2.0 * elcrMountainSilverSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 2.667 * elcrMountainSilverFreq ' range=':= 1.33 * elcrMountainSilverFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 121 ' range=':= 39 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Silver is complete. -->
+
+        <!-- End Mountain Silver Generation -->
+
+
+        <!-- Begin Nickel Generation -->
+
+        <!-- Starting LayeredVeins Preset for Nickel. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrNickelDist = "LayeredVeins"'>
+            <Veins name='elcrNickelVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60D2D1B6' drawBoundBox='false' boundBoxColor='0x60D2D1B6'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:3' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.226 * _default_ * elcrNickelFreq ' range=':= 1.226 * _default_ * elcrNickelFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.035 * _default_ * elcrNickelSize ' range=':= 1.035 * _default_ * elcrNickelSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 32 ' range=':= 16 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.107 * _default_ ' range=':= 1.107 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * elcrNickelSize ' range=':= _default_ * elcrNickelSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.052 * _default_ * elcrNickelSize ' range=':= 1.052 * _default_ * elcrNickelSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Nickel is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Nickel. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrNickelDist = "StrategicClouds"'>
+            <Cloud name='elcrNickelCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60D2D1B6' drawBoundBox='false' boundBoxColor='0x60D2D1B6'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:3' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 1.183 * _default_ * elcrNickelSize ' range=':= 1.183 * _default_ * elcrNickelSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.183 * _default_ * elcrNickelSize ' range=':= 1.183 * _default_ * elcrNickelSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.400 * _default_ * elcrNickelFreq ' range=':= 1.400 * _default_ * elcrNickelFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 32 ' range=':= 16 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='elcrNickelHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60D2D1B6' drawBoundBox='false' boundBoxColor='0x60D2D1B6'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='ElectriCraft:electricraft_block_ore:3' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.226 * _default_ * elcrNickelFreq  * 0.1 ' range=':= 1.226 * _default_ * elcrNickelFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Nickel is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Nickel. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrNickelDist = "Vanilla"'>
+            <StandardGen name='elcrNickelStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60D2D1B6' drawBoundBox='false' boundBoxColor='0x60D2D1B6'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:3' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 5.333 * elcrNickelSize ' range=':= 2.67 * elcrNickelSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 4.0 * elcrNickelFreq ' range=':= 2.0 * elcrNickelFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 32 ' range=':= 16 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Nickel is complete. -->
+
+        <!-- End Nickel Generation -->
+
+
+        <!-- Begin Mountain Nickel Generation -->
+
+        <!-- Starting LayeredVeins Preset for Mountain Nickel. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrMountainNickelDist = "LayeredVeins"'>
+            <Veins name='elcrMountainNickelVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60D2D1B6' drawBoundBox='false' boundBoxColor='0x60D2D1B6'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:3' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.226 * _default_ * elcrMountainNickelFreq ' range=':= 1.226 * _default_ * elcrMountainNickelFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.035 * _default_ * elcrMountainNickelSize ' range=':= 1.035 * _default_ * elcrMountainNickelSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 160 ' range=':= 48 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.107 * _default_ ' range=':= 1.107 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * elcrMountainNickelSize ' range=':= _default_ * elcrMountainNickelSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.052 * _default_ * elcrMountainNickelSize ' range=':= 1.052 * _default_ * elcrMountainNickelSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Mountain Nickel is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain  Nickel. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrMountainNickelDist = "StrategicClouds"'>
+            <Cloud name='elcrMountainNickelCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60D2D1B6' drawBoundBox='false' boundBoxColor='0x60D2D1B6'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:3' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 1.183 * _default_ * elcrMountainNickelSize ' range=':= 1.183 * _default_ * elcrMountainNickelSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.183 * _default_ * elcrMountainNickelSize ' range=':= 1.183 * _default_ * elcrMountainNickelSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.400 * _default_ * elcrMountainNickelFreq ' range=':= 1.400 * _default_ * elcrMountainNickelFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 160 ' range=':= 48 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='elcrMountainNickelHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60D2D1B6' drawBoundBox='false' boundBoxColor='0x60D2D1B6'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='ElectriCraft:electricraft_block_ore:3' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.226 * _default_ * elcrMountainNickelFreq  * 0.1 ' range=':= 1.226 * _default_ * elcrMountainNickelFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Nickel is  complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mountain Nickel. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrMountainNickelDist = "Vanilla"'>
+            <StandardGen name='elcrMountainNickelStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60D2D1B6' drawBoundBox='false' boundBoxColor='0x60D2D1B6'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:3' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 5.333 * elcrMountainNickelSize ' range=':= 2.67 * elcrMountainNickelSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 4.0 * elcrMountainNickelFreq ' range=':= 2.0 * elcrMountainNickelFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 160 ' range=':= 48 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Nickel is complete. -->
+
+        <!-- End Mountain Nickel Generation -->
+
+
+        <!-- Begin Aluminum Generation -->
+
+        <!-- Starting LayeredVeins Preset for Aluminum. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrAluminumDist = "LayeredVeins"'>
+            <Veins name='elcrAluminumVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60DAD9DB' drawBoundBox='false' boundBoxColor='0x60DAD9DB'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:4' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.583 * _default_ * elcrAluminumFreq ' range=':= 1.583 * _default_ * elcrAluminumFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.080 * _default_ * elcrAluminumSize ' range=':= 1.080 * _default_ * elcrAluminumSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 94 ' range=':= 34 ' type='uniform' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.258 * _default_ ' range=':= 1.258 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * elcrAluminumSize ' range=':= _default_ * elcrAluminumSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.122 * _default_ * elcrAluminumSize ' range=':= 1.122 * _default_ * elcrAluminumSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Aluminum is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Aluminum. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrAluminumDist = "StrategicClouds"'>
+            <Cloud name='elcrAluminumCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60DAD9DB' drawBoundBox='false' boundBoxColor='0x60DAD9DB'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:4' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 1.344 * _default_ * elcrAluminumSize ' range=':= 1.344 * _default_ * elcrAluminumSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.344 * _default_ * elcrAluminumSize ' range=':= 1.344 * _default_ * elcrAluminumSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.807 * _default_ * elcrAluminumFreq ' range=':= 1.807 * _default_ * elcrAluminumFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 94 ' range=':= 34 ' type='uniform' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='elcrAluminumHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60DAD9DB' drawBoundBox='false' boundBoxColor='0x60DAD9DB'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='ElectriCraft:electricraft_block_ore:4' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.583 * _default_ * elcrAluminumFreq  * 0.1 ' range=':= 1.583 * _default_ * elcrAluminumFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Aluminum is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Aluminum. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrAluminumDist = "Vanilla"'>
+            <StandardGen name='elcrAluminumStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60DAD9DB' drawBoundBox='false' boundBoxColor='0x60DAD9DB'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:4' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 5.333 * elcrAluminumSize ' range=':= 2.67 * elcrAluminumSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 6.667 * elcrAluminumFreq ' range=':= 3.33 * elcrAluminumFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 94 ' range=':= 34 ' type='uniform' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Aluminum is complete. -->
+
+        <!-- End Aluminum Generation -->
+
+
+        <!-- Begin Platinum Generation -->
+
+        <!-- Starting LayeredVeins Preset for Platinum. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrPlatinumDist = "LayeredVeins"'>
+            <Veins name='elcrPlatinumVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x602D84E7' drawBoundBox='false' boundBoxColor='0x602D84E7'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:5' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 0.500 * _default_ * elcrPlatinumFreq ' range=':= 0.500 * _default_ * elcrPlatinumFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0.891 * _default_ * elcrPlatinumSize ' range=':= 0.891 * _default_ * elcrPlatinumSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 11 ' range=':= 5 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 0.707 * _default_ ' range=':= 0.707 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * elcrPlatinumSize ' range=':= _default_ * elcrPlatinumSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.841 * _default_ * elcrPlatinumSize ' range=':= 0.841 * _default_ * elcrPlatinumSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Platinum is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Platinum. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrPlatinumDist = "StrategicClouds"'>
+            <Cloud name='elcrPlatinumCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x602D84E7' drawBoundBox='false' boundBoxColor='0x602D84E7'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:5' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 0.756 * _default_ * elcrPlatinumSize ' range=':= 0.756 * _default_ * elcrPlatinumSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.756 * _default_ * elcrPlatinumSize ' range=':= 0.756 * _default_ * elcrPlatinumSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.571 * _default_ * elcrPlatinumFreq ' range=':= 0.571 * _default_ * elcrPlatinumFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 11 ' range=':= 5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='elcrPlatinumHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x602D84E7' drawBoundBox='false' boundBoxColor='0x602D84E7'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='ElectriCraft:electricraft_block_ore:5' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 0.500 * _default_ * elcrPlatinumFreq  * 0.1 ' range=':= 0.500 * _default_ * elcrPlatinumFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Platinum is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Platinum. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrPlatinumDist = "Vanilla"'>
+            <StandardGen name='elcrPlatinumStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x602D84E7' drawBoundBox='false' boundBoxColor='0x602D84E7'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:5' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 2.667 * elcrPlatinumSize ' range=':= 1.33 * elcrPlatinumSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 1.333 * elcrPlatinumFreq ' range=':= 0.67 * elcrPlatinumFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 11 ' range=':= 5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Platinum is complete. -->
+
+        <!-- End Platinum Generation -->
+
+
+        <!-- Begin Mountain Platinum Generation -->
+
+        <!-- Starting LayeredVeins Preset for Mountain  Platinum. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrMountainPlatinumDist = "LayeredVeins"'>
+            <Veins name='elcrMountainPlatinumVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x602D84E7' drawBoundBox='false' boundBoxColor='0x602D84E7'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:5' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 0.500 * _default_ * elcrMountainPlatinumFreq ' range=':= 0.500 * _default_ * elcrMountainPlatinumFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0.891 * _default_ * elcrMountainPlatinumSize ' range=':= 0.891 * _default_ * elcrMountainPlatinumSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 97 ' range=':= 15 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 0.707 * _default_ ' range=':= 0.707 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * elcrMountainPlatinumSize ' range=':= _default_ * elcrMountainPlatinumSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.841 * _default_ * elcrMountainPlatinumSize ' range=':= 0.841 * _default_ * elcrMountainPlatinumSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Mountain Platinum is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain  Platinum. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrMountainPlatinumDist = "StrategicClouds"'>
+            <Cloud name='elcrMountainPlatinumCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x602D84E7' drawBoundBox='false' boundBoxColor='0x602D84E7'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:5' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 0.756 * _default_ * elcrMountainPlatinumSize ' range=':= 0.756 * _default_ * elcrMountainPlatinumSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.756 * _default_ * elcrMountainPlatinumSize ' range=':= 0.756 * _default_ * elcrMountainPlatinumSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.571 * _default_ * elcrMountainPlatinumFreq ' range=':= 0.571 * _default_ * elcrMountainPlatinumFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 97 ' range=':= 15 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='elcrMountainPlatinumHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x602D84E7' drawBoundBox='false' boundBoxColor='0x602D84E7'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='ElectriCraft:electricraft_block_ore:5' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 0.500 * _default_ * elcrMountainPlatinumFreq  * 0.1 ' range=':= 0.500 * _default_ * elcrMountainPlatinumFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Platinum is
+             complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mountain Platinum. -->
+        <ConfigSection>
+          <IfCondition condition=':= elcrMountainPlatinumDist = "Vanilla"'>
+            <StandardGen name='elcrMountainPlatinumStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x602D84E7' drawBoundBox='false' boundBoxColor='0x602D84E7'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='ElectriCraft:electricraft_block_ore:5' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 2.667 * elcrMountainPlatinumSize ' range=':= 1.33 * elcrMountainPlatinumSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 1.333 * elcrMountainPlatinumFreq ' range=':= 0.67 * elcrMountainPlatinumFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 97 ' range=':= 15 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Platinum is complete. -->
+
+        <!-- End Mountain Platinum Generation -->
+
+        <!-- Finished adding blocks -->
+
+      </IfCondition>
+      <!-- Overworld Setup Complete -->
+
+    </IfCondition>
+
+  </ConfigSection>
+  <!-- Configuration for Custom Ore Generation Complete! -->
+
+</IfModInstalled>
+<!-- The "ElectriCraft" mod is now configured. -->
+
+
+
+
+
+<!-- =================================================================
+     This file was made using the Sprocket Advanced Configuration
+     Generator.  If you wish to make your own configurations for a mod
+     not currently supported by Custom Ore Generation, and you don't
+     want the hassle of writing XML, you can find the generator script
+     at its GitHub page: http://https://github.com/reteo/Sprocket
+     ================================================================= -->

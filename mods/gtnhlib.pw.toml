@@ -1,0 +1,14 @@
+name = "gtnhlib-0.11.52"
+filename = "gtnhlib-0.11.52.jar"
+side = "both"
+pin = true
+
+[download]
+hash-format = "sha256"
+hash = "790460d7888c8eb2a816235d1500ec52c2005f6492c9686db76f8218809f3131"
+url = "https://github.com/GTNewHorizons/GTNHLib/releases/download/0.11.52/gtnhlib-0.11.52.jar"
+
+[update.github]
+slug = "GTNewHorizons/GTNHLib"
+tag = "0.11.52"
+regex = "^gtnhlib\\-.+\\.jar$"

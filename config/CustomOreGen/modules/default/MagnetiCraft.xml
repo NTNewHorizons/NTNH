@@ -1,0 +1,2474 @@
+<!-- =================================================================
+     Custom Ore Generation "MagnetiCraft" Module: This configuration
+     covers copper, mountain copper, tungsten, mountain tungsten,
+     sulfur, uranium, mountain uranium, thorium, mountain thorium,
+     salt, mountain salt, zinc, mountain zinc, limestone, and mountain
+     limestone.
+     ================================================================= -->
+
+
+<!-- Configuration by Reteo. -->
+
+
+
+
+<!-- Is the "MagnetiCraft" mod on the system?  Let's find out! -->
+<IfModInstalled name="Magneticraft">
+
+  <!-- Starting Configuration for Custom Ore Generation. -->
+  <ConfigSection>
+
+
+
+
+
+    <!-- Setup Screen Configuration -->
+    <ConfigSection>
+      <OptionDisplayGroup name='groupMagnetiCraft' displayName='MagnetiCraft' displayState='shown'>
+        <Description>
+          Distribution options for MagnetiCraft Ores.
+        </Description>
+      </OptionDisplayGroup>
+      <OptionChoice name='enableMagnetiCraft' displayName='Handle MagnetiCraft Setup?' default='true' displayState='shown_dynamic' displayGroup='groupMagnetiCraft'>
+        <Description> Should Custom Ore Generation handle MagnetiCraft ore generation? </Description>
+        <Choice value=':= ?true' displayValue='Yes' description='Use Custom Ore Generation to handle MagnetiCraft ores.'/>
+        <Choice value=':= ?false' displayValue='No' description='MagnetiCraft ores will be handled by the mod itself.'/>
+      </OptionChoice>
+      <OptionChoice name='cleanUpMagnetiCraft' displayName='Use MagnetiCraft Cleanup?' default='true' displayState='shown_dynamic' displayGroup='groupMagnetiCraft'>
+        <Description> Should Custom Ore Generation use the Substitution Pass to remove all instances of MagnetiCraft ore from the world?  If the mod's oregen can be turned off in its configuration, then it's recommended to do so, as the substitution pass can slow the game significantly.  If this option is disabled without disabling the mod's own ore generation, you'll end up with two oregens working at once, flooding the world with ore.  Enabled by default to ensure the ores are completely removed. </Description>
+        <Choice value=':= ?true' displayValue='Yes' description='Use the substitution pass to clean up MagnetiCraft ores.'/>
+        <Choice value=':= ?false' displayValue='No' description='MagnetiCraft ores do not need to be cleaned up by a substitution pass.'/>
+      </OptionChoice>
+
+      <!-- Copper Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mgntCopperDist'  displayState=':= if(?enableMagnetiCraft, "shown", "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Controls how Copper is generated </Description>
+          <DisplayName>MagnetiCraft Copper</DisplayName>
+          <IfCondition condition=':= (?blockExists("Magneticraft:copper_ore")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:copper_ore")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:copper_ore")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Copper is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mgntCopperFreq' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Frequency multiplier for MagnetiCraft Copper distributions </Description>
+          <DisplayName>MagnetiCraft Copper Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mgntCopperSize' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Size multiplier for MagnetiCraft Copper distributions </Description>
+          <DisplayName>MagnetiCraft Copper Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Copper Configuration UI Complete -->
+
+
+      <!-- Mountain Copper Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mgntMountainCopperDist'  displayState=':= if(?enableMagnetiCraft, "shown", "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Controls how Mountain Copper is generated </Description>
+          <DisplayName>MagnetiCraft Mountain Copper</DisplayName>
+          <IfCondition condition=':= (?blockExists("Magneticraft:copper_ore")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:copper_ore")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:copper_ore")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Copper is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mgntMountainCopperFreq' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Frequency multiplier for MagnetiCraft Mountain Copper distributions </Description>
+          <DisplayName>MagnetiCraft Mountain Copper Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mgntMountainCopperSize' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Size multiplier for MagnetiCraft Mountain Copper distributions </Description>
+          <DisplayName>MagnetiCraft Mountain Copper Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Copper Configuration UI Complete -->
+
+
+      <!-- Tungsten Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mgntTungstenDist'  displayState=':= if(?enableMagnetiCraft, "shown", "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Controls how Tungsten is generated </Description>
+          <DisplayName>MagnetiCraft Tungsten</DisplayName>
+          <IfCondition condition=':= (?blockExists("Magneticraft:tungsten_ore")) '>
+
+          <Choice value='SparseVeins' displayValue='Sparse Veins'>
+            <Description>
+              Large veins filled very lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:tungsten_ore")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:tungsten_ore")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Tungsten is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mgntTungstenFreq' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Frequency multiplier for MagnetiCraft Tungsten distributions </Description>
+          <DisplayName>MagnetiCraft Tungsten Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mgntTungstenSize' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Size multiplier for MagnetiCraft Tungsten distributions </Description>
+          <DisplayName>MagnetiCraft Tungsten Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Tungsten Configuration UI Complete -->
+
+
+      <!-- Mountain Tungsten Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mgntMountainTungstenDist'  displayState=':= if(?enableMagnetiCraft, "shown", "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Controls how Mountain Tungsten is generated </Description>
+          <DisplayName>MagnetiCraft Mountain Tungsten</DisplayName>
+          <IfCondition condition=':= (?blockExists("Magneticraft:tungsten_ore")) '>
+
+          <Choice value='SparseVeins' displayValue='Sparse Veins'>
+            <Description>
+              Large veins filled very lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:tungsten_ore")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:tungsten_ore")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Tungsten is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mgntMountainTungstenFreq' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Frequency multiplier for MagnetiCraft Mountain Tungsten distributions </Description>
+          <DisplayName>MagnetiCraft Mountain Tungsten Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mgntMountainTungstenSize' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Size multiplier for MagnetiCraft Mountain Tungsten distributions </Description>
+          <DisplayName>MagnetiCraft Mountain Tungsten Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Tungsten Configuration UI Complete -->
+
+
+      <!-- Sulfur Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mgntSulfurDist'  displayState=':= if(?enableMagnetiCraft, "shown", "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Controls how Sulfur is generated </Description>
+          <DisplayName>MagnetiCraft Sulfur</DisplayName>
+          <IfCondition condition=':= (?blockExists("Magneticraft:sulfur_ore")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='PipeVeins' displayValue='Pipe Veins'>
+            <Description>
+              Short and sparsely filled compound veins containing one material inside another.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:sulfur_ore")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:sulfur_ore")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Sulfur is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mgntSulfurFreq' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Frequency multiplier for MagnetiCraft Sulfur distributions </Description>
+          <DisplayName>MagnetiCraft Sulfur Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mgntSulfurSize' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Size multiplier for MagnetiCraft Sulfur distributions </Description>
+          <DisplayName>MagnetiCraft Sulfur Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Sulfur Configuration UI Complete -->
+
+
+      <!-- Uranium Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mgntUraniumDist'  displayState=':= if(?enableMagnetiCraft, "shown", "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Controls how Uranium is generated </Description>
+          <DisplayName>MagnetiCraft Uranium</DisplayName>
+          <IfCondition condition=':= (?blockExists("Magneticraft:uranium_ore")) '>
+
+          <Choice value='SparseVeins' displayValue='Sparse Veins'>
+            <Description>
+              Large veins filled very lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:uranium_ore")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:uranium_ore")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Uranium is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mgntUraniumFreq' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Frequency multiplier for MagnetiCraft Uranium distributions </Description>
+          <DisplayName>MagnetiCraft Uranium Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mgntUraniumSize' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Size multiplier for MagnetiCraft Uranium distributions </Description>
+          <DisplayName>MagnetiCraft Uranium Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Uranium Configuration UI Complete -->
+
+
+      <!-- Mountain Uranium Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mgntMountainUraniumDist'  displayState=':= if(?enableMagnetiCraft, "shown", "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Controls how Mountain Uranium is generated </Description>
+          <DisplayName>MagnetiCraft Mountain Uranium</DisplayName>
+          <IfCondition condition=':= (?blockExists("Magneticraft:uranium_ore")) '>
+
+          <Choice value='SparseVeins' displayValue='Sparse Veins'>
+            <Description>
+              Large veins filled very lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:uranium_ore")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:uranium_ore")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Uranium is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mgntMountainUraniumFreq' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Frequency multiplier for MagnetiCraft Mountain Uranium distributions </Description>
+          <DisplayName>MagnetiCraft Mountain Uranium Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mgntMountainUraniumSize' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Size multiplier for MagnetiCraft Mountain Uranium distributions </Description>
+          <DisplayName>MagnetiCraft Mountain Uranium Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Uranium Configuration UI Complete -->
+
+
+      <!-- Thorium Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mgntThoriumDist'  displayState=':= if(?enableMagnetiCraft, "shown", "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Controls how Thorium is generated </Description>
+          <DisplayName>MagnetiCraft Thorium</DisplayName>
+          <IfCondition condition=':= (?blockExists("Magneticraft:thorium_ore")) '>
+
+          <Choice value='SmallDeposits' displayValue='Small Deposits'>
+            <Description>
+              Small motherlodes without any branches.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:thorium_ore")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:thorium_ore")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Thorium is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mgntThoriumFreq' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Frequency multiplier for MagnetiCraft Thorium distributions </Description>
+          <DisplayName>MagnetiCraft Thorium Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mgntThoriumSize' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Size multiplier for MagnetiCraft Thorium distributions </Description>
+          <DisplayName>MagnetiCraft Thorium Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Thorium Configuration UI Complete -->
+
+
+      <!-- Mountain Thorium Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mgntMountainThoriumDist'  displayState=':= if(?enableMagnetiCraft, "shown", "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Controls how Mountain Thorium is generated </Description>
+          <DisplayName>MagnetiCraft Mountain Thorium</DisplayName>
+          <IfCondition condition=':= (?blockExists("Magneticraft:thorium_ore")) '>
+
+          <Choice value='SmallDeposits' displayValue='Small Deposits'>
+            <Description>
+              Small motherlodes without any branches.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:thorium_ore")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:thorium_ore")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Thorium is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mgntMountainThoriumFreq' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Frequency multiplier for MagnetiCraft Mountain Thorium distributions </Description>
+          <DisplayName>MagnetiCraft Mountain Thorium Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mgntMountainThoriumSize' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Size multiplier for MagnetiCraft Mountain Thorium distributions </Description>
+          <DisplayName>MagnetiCraft Mountain Thorium Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Thorium Configuration UI Complete -->
+
+
+      <!-- Salt Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mgntSaltDist'  displayState=':= if(?enableMagnetiCraft, "shown", "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Controls how Salt is generated </Description>
+          <DisplayName>MagnetiCraft Salt</DisplayName>
+          <IfCondition condition=':= (?blockExists("Magneticraft:salt_ore")) '>
+
+          <Choice value='SparseVeins' displayValue='Sparse Veins'>
+            <Description>
+              Large veins filled very lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:salt_ore")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:salt_ore")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Salt is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mgntSaltFreq' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Frequency multiplier for MagnetiCraft Salt distributions </Description>
+          <DisplayName>MagnetiCraft Salt Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mgntSaltSize' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Size multiplier for MagnetiCraft Salt distributions </Description>
+          <DisplayName>MagnetiCraft Salt Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Salt Configuration UI Complete -->
+
+
+      <!-- Mountain Salt Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mgntMountainSaltDist'  displayState=':= if(?enableMagnetiCraft, "shown", "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Controls how Mountain Salt is generated </Description>
+          <DisplayName>MagnetiCraft Mountain Salt</DisplayName>
+          <IfCondition condition=':= (?blockExists("Magneticraft:salt_ore")) '>
+
+          <Choice value='SparseVeins' displayValue='Sparse Veins'>
+            <Description>
+              Large veins filled very lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:salt_ore")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:salt_ore")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Salt is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mgntMountainSaltFreq' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Frequency multiplier for MagnetiCraft Mountain Salt distributions </Description>
+          <DisplayName>MagnetiCraft Mountain Salt Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mgntMountainSaltSize' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Size multiplier for MagnetiCraft Mountain Salt distributions </Description>
+          <DisplayName>MagnetiCraft Mountain Salt Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Salt Configuration UI Complete -->
+
+
+      <!-- Zinc Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mgntZincDist'  displayState=':= if(?enableMagnetiCraft, "shown", "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Controls how Zinc is generated </Description>
+          <DisplayName>MagnetiCraft Zinc</DisplayName>
+          <IfCondition condition=':= (?blockExists("Magneticraft:zinc_ore")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:zinc_ore")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:zinc_ore")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Zinc is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mgntZincFreq' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Frequency multiplier for MagnetiCraft Zinc distributions </Description>
+          <DisplayName>MagnetiCraft Zinc Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mgntZincSize' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Size multiplier for MagnetiCraft Zinc distributions </Description>
+          <DisplayName>MagnetiCraft Zinc Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Zinc Configuration UI Complete -->
+
+
+      <!-- Mountain Zinc Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mgntMountainZincDist'  displayState=':= if(?enableMagnetiCraft, "shown", "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Controls how Mountain Zinc is generated </Description>
+          <DisplayName>MagnetiCraft Mountain Zinc</DisplayName>
+          <IfCondition condition=':= (?blockExists("Magneticraft:zinc_ore")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:zinc_ore")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:zinc_ore")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Zinc is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mgntMountainZincFreq' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Frequency multiplier for MagnetiCraft Mountain Zinc distributions </Description>
+          <DisplayName>MagnetiCraft Mountain Zinc Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mgntMountainZincSize' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Size multiplier for MagnetiCraft Mountain Zinc distributions </Description>
+          <DisplayName>MagnetiCraft Mountain Zinc Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Zinc Configuration UI Complete -->
+
+
+      <!-- Limestone Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mgntLimestoneDist'  displayState=':= if(?enableMagnetiCraft, "shown", "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Controls how Limestone is generated </Description>
+          <DisplayName>MagnetiCraft Limestone</DisplayName>
+          <IfCondition condition=':= (?blockExists("Magneticraft:limestone")) '>
+
+          <Choice value='StratumClouds' displayValue='Strata'>
+            <Description>
+              Wide, thin, and flat disks of ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:limestone")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:limestone")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Limestone is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mgntLimestoneFreq' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Frequency multiplier for MagnetiCraft Limestone distributions </Description>
+          <DisplayName>MagnetiCraft Limestone Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mgntLimestoneSize' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Size multiplier for MagnetiCraft Limestone distributions </Description>
+          <DisplayName>MagnetiCraft Limestone Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Limestone Configuration UI Complete -->
+
+
+      <!-- Mountain Limestone Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mgntMountainLimestoneDist'  displayState=':= if(?enableMagnetiCraft, "shown", "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Controls how Mountain Limestone is generated </Description>
+          <DisplayName>MagnetiCraft Mountain Limestone</DisplayName>
+          <IfCondition condition=':= (?blockExists("Magneticraft:limestone")) '>
+
+          <Choice value='StratumClouds' displayValue='Strata'>
+            <Description>
+              Wide, thin, and flat disks of ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:limestone")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Magneticraft:limestone")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Limestone is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mgntMountainLimestoneFreq' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Frequency multiplier for MagnetiCraft Mountain Limestone distributions </Description>
+          <DisplayName>MagnetiCraft Mountain Limestone Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mgntMountainLimestoneSize' default='1'  min='0' max='5' displayState=':= if(?enableMagnetiCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMagnetiCraft'>
+          <Description> Size multiplier for MagnetiCraft Mountain Limestone distributions </Description>
+          <DisplayName>MagnetiCraft Mountain Limestone Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Limestone Configuration UI Complete -->
+
+    </ConfigSection>
+    <!-- Setup Screen Complete -->
+
+    <IfCondition condition=':= ?enableMagnetiCraft'>
+
+
+
+
+      <!-- Overworld Setup Beginning -->
+
+      <IfCondition condition=':= ?COGActive'>
+
+        <!-- Starting Original "Overworld" Block Removal -->
+
+        <IfCondition condition=':= ?cleanUpMagnetiCraft'>
+          <IfCondition condition=':= ?blockExists("minecraft:stone")'>
+            <Substitute name='mgntOverworldBlockSubstitute0' block='minecraft:stone'>
+              <Description>
+                Replace vanilla-generated ore clusters.
+              </Description>
+              <Comment>
+                The global option  deferredPopulationRange must be
+                large enough to catch all ore  clusters (>= 32).
+              </Comment>
+              <Replaces block='Magneticraft:copper_ore' weight='1.0' />
+              <Replaces block='Magneticraft:limestone' weight='1.0' />
+              <Replaces block='Magneticraft:salt_ore' weight='1.0' />
+              <Replaces block='Magneticraft:sulfur_ore' weight='1.0' />
+              <Replaces block='Magneticraft:thorium_ore' weight='1.0' />
+              <Replaces block='Magneticraft:tungsten_ore' weight='1.0' />
+              <Replaces block='Magneticraft:uranium_ore' weight='1.0' />
+              <Replaces block='Magneticraft:zinc_ore' weight='1.0' />
+            </Substitute>
+          </IfCondition>
+        </IfCondition>
+
+        <!-- Original "Overworld" Block Removal Complete -->
+
+        <!-- Adding blocks -->
+
+        <!-- Begin Copper Generation -->
+
+        <!-- Starting LayeredVeins Preset for Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntCopperDist = "LayeredVeins"'>
+            <Veins name='mgntCopperVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60986359' drawBoundBox='false' boundBoxColor='0x60986359'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='Magneticraft:copper_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.583 * _default_ * mgntCopperFreq ' range=':= 1.583 * _default_ * mgntCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.080 * _default_ * mgntCopperSize ' range=':= 1.080 * _default_ * mgntCopperSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 55 ' range=':= 25 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.258 * _default_ ' range=':= 1.258 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mgntCopperSize ' range=':= _default_ * mgntCopperSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.122 * _default_ * mgntCopperSize ' range=':= 1.122 * _default_ * mgntCopperSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Copper is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntCopperDist = "StrategicClouds"'>
+            <Cloud name='mgntCopperCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60986359' drawBoundBox='false' boundBoxColor='0x60986359'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Magneticraft:copper_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 1.344 * _default_ * mgntCopperSize ' range=':= 1.344 * _default_ * mgntCopperSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.344 * _default_ * mgntCopperSize ' range=':= 1.344 * _default_ * mgntCopperSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.807 * _default_ * mgntCopperFreq ' range=':= 1.807 * _default_ * mgntCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 55 ' range=':= 25 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mgntCopperHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60986359' drawBoundBox='false' boundBoxColor='0x60986359'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Magneticraft:copper_ore' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.583 * _default_ * mgntCopperFreq  * 0.1 ' range=':= 1.583 * _default_ * mgntCopperFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Copper is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntCopperDist = "Vanilla"'>
+            <StandardGen name='mgntCopperStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60986359' drawBoundBox='false' boundBoxColor='0x60986359'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Magneticraft:copper_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 5.333 * mgntCopperSize ' range=':= 2.67 * mgntCopperSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 6.667 * mgntCopperFreq ' range=':= 3.33 * mgntCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 55 ' range=':= 25 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Copper is complete. -->
+
+        <!-- End Copper Generation -->
+
+
+        <!-- Begin Mountain Copper Generation -->
+
+        <!-- Starting LayeredVeins Preset for Mountain Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntMountainCopperDist = "LayeredVeins"'>
+            <Veins name='mgntMountainCopperVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60986359' drawBoundBox='false' boundBoxColor='0x60986359'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='Magneticraft:copper_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.583 * _default_ * mgntMountainCopperFreq ' range=':= 1.583 * _default_ * mgntMountainCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.080 * _default_ * mgntMountainCopperSize ' range=':= 1.080 * _default_ * mgntMountainCopperSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 229 ' range=':= 75 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.258 * _default_ ' range=':= 1.258 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mgntMountainCopperSize ' range=':= _default_ * mgntMountainCopperSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.122 * _default_ * mgntMountainCopperSize ' range=':= 1.122 * _default_ * mgntMountainCopperSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Mountain Copper is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain  Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntMountainCopperDist = "StrategicClouds"'>
+            <Cloud name='mgntMountainCopperCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60986359' drawBoundBox='false' boundBoxColor='0x60986359'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Magneticraft:copper_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 1.344 * _default_ * mgntMountainCopperSize ' range=':= 1.344 * _default_ * mgntMountainCopperSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.344 * _default_ * mgntMountainCopperSize ' range=':= 1.344 * _default_ * mgntMountainCopperSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.807 * _default_ * mgntMountainCopperFreq ' range=':= 1.807 * _default_ * mgntMountainCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 229 ' range=':= 75 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mgntMountainCopperHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60986359' drawBoundBox='false' boundBoxColor='0x60986359'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Magneticraft:copper_ore' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.583 * _default_ * mgntMountainCopperFreq  * 0.1 ' range=':= 1.583 * _default_ * mgntMountainCopperFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Copper is  complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mountain Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntMountainCopperDist = "Vanilla"'>
+            <StandardGen name='mgntMountainCopperStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60986359' drawBoundBox='false' boundBoxColor='0x60986359'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Magneticraft:copper_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 5.333 * mgntMountainCopperSize ' range=':= 2.67 * mgntMountainCopperSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 6.667 * mgntMountainCopperFreq ' range=':= 3.33 * mgntMountainCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 229 ' range=':= 75 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Copper is complete. -->
+
+        <!-- End Mountain Copper Generation -->
+
+
+        <!-- Begin Tungsten Generation -->
+
+        <!-- Starting SparseVeins Preset for Tungsten. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntTungstenDist = "SparseVeins"'>
+            <Veins name='mgntTungstenVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60525252' drawBoundBox='false' boundBoxColor='0x60525252'>
+              <Description>
+                Large veins filled very lightly  with ore.  Because
+                they contain  less ore per volume, these veins  are
+                relatively wide and long.  Mining the ore from them is
+                time  consuming compared to solid ore  veins.  They
+                are also more  difficult to follow, since it is
+                harder to get an idea of their  direction while
+                mining.
+              </Description>
+              <OreBlock block='Magneticraft:tungsten_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.500 * _default_ * mgntTungstenFreq ' range=':= 1.500 * _default_ * mgntTungstenFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * mgntTungstenSize ' range=':= 0 * _default_ * mgntTungstenSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 5 ' range=':= 5 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.225 * _default_ ' range=':= 1.225 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mgntTungstenSize ' range=':= _default_ * mgntTungstenSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.107 * _default_ * mgntTungstenSize ' range=':= 1.107 * _default_ * mgntTungstenSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- SparseVeins Preset for Tungsten is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Tungsten. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntTungstenDist = "StrategicClouds"'>
+            <Cloud name='mgntTungstenCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60525252' drawBoundBox='false' boundBoxColor='0x60525252'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Magneticraft:tungsten_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 0.837 * _default_ * mgntTungstenSize ' range=':= 0.837 * _default_ * mgntTungstenSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.837 * _default_ * mgntTungstenSize ' range=':= 0.837 * _default_ * mgntTungstenSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.700 * _default_ * mgntTungstenFreq ' range=':= 0.700 * _default_ * mgntTungstenFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 5 ' range=':= 5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mgntTungstenHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60525252' drawBoundBox='false' boundBoxColor='0x60525252'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Magneticraft:tungsten_ore' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.500 * _default_ * mgntTungstenFreq  * 0.1 ' range=':= 1.500 * _default_ * mgntTungstenFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Tungsten is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Tungsten. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntTungstenDist = "Vanilla"'>
+            <StandardGen name='mgntTungstenStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60525252' drawBoundBox='false' boundBoxColor='0x60525252'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Magneticraft:tungsten_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 4.0 * mgntTungstenSize ' range=':= 2.0 * mgntTungstenSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 1.333 * mgntTungstenFreq ' range=':= 0.67 * mgntTungstenFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 5 ' range=':= 5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Tungsten is complete. -->
+
+        <!-- End Tungsten Generation -->
+
+
+        <!-- Begin Mountain Tungsten Generation -->
+
+        <!-- Starting SparseVeins Preset for Mountain  Tungsten. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntMountainTungstenDist = "SparseVeins"'>
+            <Veins name='mgntMountainTungstenVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60525252' drawBoundBox='false' boundBoxColor='0x60525252'>
+              <Description>
+                Large veins filled very lightly  with ore.  Because
+                they contain  less ore per volume, these veins  are
+                relatively wide and long.  Mining the ore from them is
+                time  consuming compared to solid ore  veins.  They
+                are also more  difficult to follow, since it is
+                harder to get an idea of their  direction while
+                mining.
+              </Description>
+              <OreBlock block='Magneticraft:tungsten_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.500 * _default_ * mgntMountainTungstenFreq ' range=':= 1.500 * _default_ * mgntMountainTungstenFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * mgntMountainTungstenSize ' range=':= 0 * _default_ * mgntMountainTungstenSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 79 ' range=':= 15 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.225 * _default_ ' range=':= 1.225 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mgntMountainTungstenSize ' range=':= _default_ * mgntMountainTungstenSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.107 * _default_ * mgntMountainTungstenSize ' range=':= 1.107 * _default_ * mgntMountainTungstenSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- SparseVeins Preset for Mountain Tungsten is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain  Tungsten. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntMountainTungstenDist = "StrategicClouds"'>
+            <Cloud name='mgntMountainTungstenCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60525252' drawBoundBox='false' boundBoxColor='0x60525252'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Magneticraft:tungsten_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 0.837 * _default_ * mgntMountainTungstenSize ' range=':= 0.837 * _default_ * mgntMountainTungstenSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.837 * _default_ * mgntMountainTungstenSize ' range=':= 0.837 * _default_ * mgntMountainTungstenSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.700 * _default_ * mgntMountainTungstenFreq ' range=':= 0.700 * _default_ * mgntMountainTungstenFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 79 ' range=':= 15 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mgntMountainTungstenHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60525252' drawBoundBox='false' boundBoxColor='0x60525252'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Magneticraft:tungsten_ore' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.500 * _default_ * mgntMountainTungstenFreq  * 0.1 ' range=':= 1.500 * _default_ * mgntMountainTungstenFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Tungsten is
+             complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mountain Tungsten. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntMountainTungstenDist = "Vanilla"'>
+            <StandardGen name='mgntMountainTungstenStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60525252' drawBoundBox='false' boundBoxColor='0x60525252'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Magneticraft:tungsten_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 4.0 * mgntMountainTungstenSize ' range=':= 2.0 * mgntMountainTungstenSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 1.333 * mgntMountainTungstenFreq ' range=':= 0.67 * mgntMountainTungstenFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 79 ' range=':= 15 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Tungsten is complete. -->
+
+        <!-- End Mountain Tungsten Generation -->
+
+
+        <!-- Begin Sulfur Generation -->
+
+        <!-- Starting PipeVeins Preset for Sulfur. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntSulfurDist = "PipeVeins"'>
+            <Veins name='mgntSulfurVeins'  inherits='PresetPipeVeins' branchType='Bezier' seed='0x31FA' drawWireframe='true' wireframeColor='0x60FEE002' drawBoundBox='false' boundBoxColor='0x60FEE002'>
+              <Description>
+                Short sparsely filled veins  sloping up from near the
+                bottom  of the map.
+              </Description>
+              <OreBlock block='Magneticraft:sulfur_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.323 * _default_ * mgntSulfurFreq ' range=':= 1.323 * _default_ * mgntSulfurFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * mgntSulfurSize ' range=':= 0 * _default_ * mgntSulfurSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 6 ' range=':= 6 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.150 * _default_ ' range=':= 1.150 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mgntSulfurSize ' range=':= _default_ * mgntSulfurSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.072 * _default_ * mgntSulfurSize ' range=':= 1.072 * _default_ * mgntSulfurSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+
+            <!-- Configuring contained material. -->
+            <Veins name='mgntSulfurVeinsPipe'  inherits='mgntSulfurVeins' branchType='Bezier' seed='0x31FA' drawWireframe='true' wireframeColor='0x60FEE002' drawBoundBox='false' boundBoxColor='0x60FEE002'>
+              <OreBlock block='minecraft:lava' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Replaces block='Magneticraft:sulfur_ore' weight='1.0' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * mgntSulfurSize  * 0.5 ' range=':= 0 * _default_ * mgntSulfurSize  * 0.5 ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.072 * _default_ * mgntSulfurSize  * 0.5 ' range=':= 1.072 * _default_ * mgntSulfurSize  * 0.5 ' type='normal' />
+              <Setting name='OreDensity' avg=':= 1.0 ' range=':= 0 ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- PipeVeins Preset for Sulfur is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Sulfur. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntSulfurDist = "StrategicClouds"'>
+            <Cloud name='mgntSulfurCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60FEE002' drawBoundBox='false' boundBoxColor='0x60FEE002'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Magneticraft:sulfur_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 0.995 * _default_ * mgntSulfurSize ' range=':= 0.995 * _default_ * mgntSulfurSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.995 * _default_ * mgntSulfurSize ' range=':= 0.995 * _default_ * mgntSulfurSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.990 * _default_ * mgntSulfurFreq ' range=':= 0.990 * _default_ * mgntSulfurFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 6 ' range=':= 6 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mgntSulfurHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60FEE002' drawBoundBox='false' boundBoxColor='0x60FEE002'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Magneticraft:sulfur_ore' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.323 * _default_ * mgntSulfurFreq  * 0.1 ' range=':= 1.323 * _default_ * mgntSulfurFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Sulfur is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Sulfur. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntSulfurDist = "Vanilla"'>
+            <StandardGen name='mgntSulfurStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60FEE002' drawBoundBox='false' boundBoxColor='0x60FEE002'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Magneticraft:sulfur_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 5.333 * mgntSulfurSize ' range=':= 2.67 * mgntSulfurSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 2.0 * mgntSulfurFreq ' range=':= 1.0 * mgntSulfurFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 6 ' range=':= 6 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Sulfur is complete. -->
+
+        <!-- End Sulfur Generation -->
+
+
+        <!-- Begin Uranium Generation -->
+
+        <!-- Starting SparseVeins Preset for Uranium. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntUraniumDist = "SparseVeins"'>
+            <Veins name='mgntUraniumVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x606F8F53' drawBoundBox='false' boundBoxColor='0x606F8F53'>
+              <Description>
+                Large veins filled very lightly  with ore.  Because
+                they contain  less ore per volume, these veins  are
+                relatively wide and long.  Mining the ore from them is
+                time  consuming compared to solid ore  veins.  They
+                are also more  difficult to follow, since it is
+                harder to get an idea of their  direction while
+                mining.
+              </Description>
+              <OreBlock block='Magneticraft:uranium_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.299 * _default_ * mgntUraniumFreq ' range=':= 1.299 * _default_ * mgntUraniumFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * mgntUraniumSize ' range=':= 0 * _default_ * mgntUraniumSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 40 ' range=':= 40 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.140 * _default_ ' range=':= 1.140 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mgntUraniumSize ' range=':= _default_ * mgntUraniumSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.068 * _default_ * mgntUraniumSize ' range=':= 1.068 * _default_ * mgntUraniumSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- SparseVeins Preset for Uranium is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Uranium. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntUraniumDist = "StrategicClouds"'>
+            <Cloud name='mgntUraniumCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x606F8F53' drawBoundBox='false' boundBoxColor='0x606F8F53'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Magneticraft:uranium_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 0.779 * _default_ * mgntUraniumSize ' range=':= 0.779 * _default_ * mgntUraniumSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.779 * _default_ * mgntUraniumSize ' range=':= 0.779 * _default_ * mgntUraniumSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.606 * _default_ * mgntUraniumFreq ' range=':= 0.606 * _default_ * mgntUraniumFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 40 ' range=':= 40 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mgntUraniumHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x606F8F53' drawBoundBox='false' boundBoxColor='0x606F8F53'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Magneticraft:uranium_ore' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.299 * _default_ * mgntUraniumFreq  * 0.1 ' range=':= 1.299 * _default_ * mgntUraniumFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Uranium is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Uranium. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntUraniumDist = "Vanilla"'>
+            <StandardGen name='mgntUraniumStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x606F8F53' drawBoundBox='false' boundBoxColor='0x606F8F53'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Magneticraft:uranium_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 2.0 * mgntUraniumSize ' range=':= 1.0 * mgntUraniumSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 2.0 * mgntUraniumFreq ' range=':= 1.0 * mgntUraniumFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 40 ' range=':= 40 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Uranium is complete. -->
+
+        <!-- End Uranium Generation -->
+
+
+        <!-- Begin Mountain Uranium Generation -->
+
+        <!-- Starting SparseVeins Preset for Mountain Uranium. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntMountainUraniumDist = "SparseVeins"'>
+            <Veins name='mgntMountainUraniumVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x606F8F53' drawBoundBox='false' boundBoxColor='0x606F8F53'>
+              <Description>
+                Large veins filled very lightly  with ore.  Because
+                they contain  less ore per volume, these veins  are
+                relatively wide and long.  Mining the ore from them is
+                time  consuming compared to solid ore  veins.  They
+                are also more  difficult to follow, since it is
+                harder to get an idea of their  direction while
+                mining.
+              </Description>
+              <OreBlock block='Magneticraft:uranium_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.299 * _default_ * mgntMountainUraniumFreq ' range=':= 1.299 * _default_ * mgntMountainUraniumFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * mgntMountainUraniumSize ' range=':= 0 * _default_ * mgntMountainUraniumSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 184 ' range=':= 120 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.140 * _default_ ' range=':= 1.140 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mgntMountainUraniumSize ' range=':= _default_ * mgntMountainUraniumSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.068 * _default_ * mgntMountainUraniumSize ' range=':= 1.068 * _default_ * mgntMountainUraniumSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- SparseVeins Preset for Mountain Uranium is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain  Uranium. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntMountainUraniumDist = "StrategicClouds"'>
+            <Cloud name='mgntMountainUraniumCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x606F8F53' drawBoundBox='false' boundBoxColor='0x606F8F53'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Magneticraft:uranium_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 0.779 * _default_ * mgntMountainUraniumSize ' range=':= 0.779 * _default_ * mgntMountainUraniumSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.779 * _default_ * mgntMountainUraniumSize ' range=':= 0.779 * _default_ * mgntMountainUraniumSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.606 * _default_ * mgntMountainUraniumFreq ' range=':= 0.606 * _default_ * mgntMountainUraniumFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 184 ' range=':= 120 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mgntMountainUraniumHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x606F8F53' drawBoundBox='false' boundBoxColor='0x606F8F53'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Magneticraft:uranium_ore' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.299 * _default_ * mgntMountainUraniumFreq  * 0.1 ' range=':= 1.299 * _default_ * mgntMountainUraniumFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Uranium is  complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mountain Uranium. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntMountainUraniumDist = "Vanilla"'>
+            <StandardGen name='mgntMountainUraniumStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x606F8F53' drawBoundBox='false' boundBoxColor='0x606F8F53'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Magneticraft:uranium_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 2.0 * mgntMountainUraniumSize ' range=':= 1.0 * mgntMountainUraniumSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 2.0 * mgntMountainUraniumFreq ' range=':= 1.0 * mgntMountainUraniumFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 184 ' range=':= 120 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Uranium is complete. -->
+
+        <!-- End Mountain Uranium Generation -->
+
+
+        <!-- Begin Thorium Generation -->
+
+        <!-- Starting SmallDeposits Preset for Thorium. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntThoriumDist = "SmallDeposits"'>
+            <Veins name='mgntThoriumVeins'  inherits='PresetSmallDeposits' branchType='Bezier' drawWireframe='true' wireframeColor='0x605A483A' drawBoundBox='false' boundBoxColor='0x605A483A'>
+              <Description>
+                Small motherlodes without any  branches.  Similar to
+                the  deposits produced by StandardGen  distributions.
+              </Description>
+              <OreBlock block='Magneticraft:thorium_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.212 * _default_ * mgntThoriumFreq ' range=':= 1.212 * _default_ * mgntThoriumFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.033 * _default_ * mgntThoriumSize ' range=':= 1.033 * _default_ * mgntThoriumSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 10 ' range=':= 10 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 0 * _default_ ' range=':= 0 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mgntThoriumSize ' range=':= _default_ * mgntThoriumSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0 * _default_ * mgntThoriumSize ' range=':= 0 * _default_ * mgntThoriumSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- SmallDeposits Preset for Thorium is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Thorium. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntThoriumDist = "StrategicClouds"'>
+            <Cloud name='mgntThoriumCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x605A483A' drawBoundBox='false' boundBoxColor='0x605A483A'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Magneticraft:thorium_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 1.052 * _default_ * mgntThoriumSize ' range=':= 1.052 * _default_ * mgntThoriumSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.052 * _default_ * mgntThoriumSize ' range=':= 1.052 * _default_ * mgntThoriumSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.107 * _default_ * mgntThoriumFreq ' range=':= 1.107 * _default_ * mgntThoriumFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 10 ' range=':= 10 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mgntThoriumHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x605A483A' drawBoundBox='false' boundBoxColor='0x605A483A'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Magneticraft:thorium_ore' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.212 * _default_ * mgntThoriumFreq  * 0.1 ' range=':= 1.212 * _default_ * mgntThoriumFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Thorium is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Thorium. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntThoriumDist = "Vanilla"'>
+            <StandardGen name='mgntThoriumStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x605A483A' drawBoundBox='false' boundBoxColor='0x605A483A'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Magneticraft:thorium_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 4.0 * mgntThoriumSize ' range=':= 2.0 * mgntThoriumSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 3.333 * mgntThoriumFreq ' range=':= 1.67 * mgntThoriumFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 10 ' range=':= 10 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Thorium is complete. -->
+
+        <!-- End Thorium Generation -->
+
+
+        <!-- Begin Mountain Thorium Generation -->
+
+        <!-- Starting SmallDeposits Preset for Mountain  Thorium. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntMountainThoriumDist = "SmallDeposits"'>
+            <Veins name='mgntMountainThoriumVeins'  inherits='PresetSmallDeposits' branchType='Bezier' drawWireframe='true' wireframeColor='0x605A483A' drawBoundBox='false' boundBoxColor='0x605A483A'>
+              <Description>
+                Small motherlodes without any  branches.  Similar to
+                the  deposits produced by StandardGen  distributions.
+              </Description>
+              <OreBlock block='Magneticraft:thorium_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.212 * _default_ * mgntMountainThoriumFreq ' range=':= 1.212 * _default_ * mgntMountainThoriumFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.033 * _default_ * mgntMountainThoriumSize ' range=':= 1.033 * _default_ * mgntMountainThoriumSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 94 ' range=':= 30 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 0 * _default_ ' range=':= 0 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mgntMountainThoriumSize ' range=':= _default_ * mgntMountainThoriumSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0 * _default_ * mgntMountainThoriumSize ' range=':= 0 * _default_ * mgntMountainThoriumSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- SmallDeposits Preset for Mountain Thorium is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain  Thorium. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntMountainThoriumDist = "StrategicClouds"'>
+            <Cloud name='mgntMountainThoriumCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x605A483A' drawBoundBox='false' boundBoxColor='0x605A483A'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Magneticraft:thorium_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 1.052 * _default_ * mgntMountainThoriumSize ' range=':= 1.052 * _default_ * mgntMountainThoriumSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.052 * _default_ * mgntMountainThoriumSize ' range=':= 1.052 * _default_ * mgntMountainThoriumSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.107 * _default_ * mgntMountainThoriumFreq ' range=':= 1.107 * _default_ * mgntMountainThoriumFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 94 ' range=':= 30 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mgntMountainThoriumHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x605A483A' drawBoundBox='false' boundBoxColor='0x605A483A'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Magneticraft:thorium_ore' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.212 * _default_ * mgntMountainThoriumFreq  * 0.1 ' range=':= 1.212 * _default_ * mgntMountainThoriumFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Thorium is  complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mountain Thorium. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntMountainThoriumDist = "Vanilla"'>
+            <StandardGen name='mgntMountainThoriumStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x605A483A' drawBoundBox='false' boundBoxColor='0x605A483A'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Magneticraft:thorium_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 4.0 * mgntMountainThoriumSize ' range=':= 2.0 * mgntMountainThoriumSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 3.333 * mgntMountainThoriumFreq ' range=':= 1.67 * mgntMountainThoriumFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 94 ' range=':= 30 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Thorium is complete. -->
+
+        <!-- End Mountain Thorium Generation -->
+
+
+        <!-- Begin Salt Generation -->
+
+        <!-- Starting SparseVeins Preset for Salt. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntSaltDist = "SparseVeins"'>
+            <Veins name='mgntSaltVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60CDD6CB' drawBoundBox='false' boundBoxColor='0x60CDD6CB'>
+              <Description>
+                Large veins filled very lightly  with ore.  Because
+                they contain  less ore per volume, these veins  are
+                relatively wide and long.  Mining the ore from them is
+                time  consuming compared to solid ore  veins.  They
+                are also more  difficult to follow, since it is
+                harder to get an idea of their  direction while
+                mining.
+              </Description>
+              <OreBlock block='Magneticraft:salt_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * mgntSaltFreq ' range=':= 3.001 * _default_ * mgntSaltFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * mgntSaltSize ' range=':= 0 * _default_ * mgntSaltSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 40 ' range=':= 40 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.732 * _default_ ' range=':= 1.732 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mgntSaltSize ' range=':= _default_ * mgntSaltSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.316 * _default_ * mgntSaltSize ' range=':= 1.316 * _default_ * mgntSaltSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- SparseVeins Preset for Salt is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Salt. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntSaltDist = "StrategicClouds"'>
+            <Cloud name='mgntSaltCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60CDD6CB' drawBoundBox='false' boundBoxColor='0x60CDD6CB'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Magneticraft:salt_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 1.183 * _default_ * mgntSaltSize ' range=':= 1.183 * _default_ * mgntSaltSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.183 * _default_ * mgntSaltSize ' range=':= 1.183 * _default_ * mgntSaltSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.400 * _default_ * mgntSaltFreq ' range=':= 1.400 * _default_ * mgntSaltFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 40 ' range=':= 40 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mgntSaltHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60CDD6CB' drawBoundBox='false' boundBoxColor='0x60CDD6CB'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Magneticraft:salt_ore' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * mgntSaltFreq  * 0.1 ' range=':= 3.001 * _default_ * mgntSaltFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Salt is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Salt. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntSaltDist = "Vanilla"'>
+            <StandardGen name='mgntSaltStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60CDD6CB' drawBoundBox='false' boundBoxColor='0x60CDD6CB'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Magneticraft:salt_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 4.0 * mgntSaltSize ' range=':= 2.0 * mgntSaltSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 5.333 * mgntSaltFreq ' range=':= 2.67 * mgntSaltFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 40 ' range=':= 40 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Salt is complete. -->
+
+        <!-- End Salt Generation -->
+
+
+        <!-- Begin Mountain Salt Generation -->
+
+        <!-- Starting SparseVeins Preset for Mountain Salt. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntMountainSaltDist = "SparseVeins"'>
+            <Veins name='mgntMountainSaltVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60CDD6CB' drawBoundBox='false' boundBoxColor='0x60CDD6CB'>
+              <Description>
+                Large veins filled very lightly  with ore.  Because
+                they contain  less ore per volume, these veins  are
+                relatively wide and long.  Mining the ore from them is
+                time  consuming compared to solid ore  veins.  They
+                are also more  difficult to follow, since it is
+                harder to get an idea of their  direction while
+                mining.
+              </Description>
+              <OreBlock block='Magneticraft:salt_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * mgntMountainSaltFreq ' range=':= 3.001 * _default_ * mgntMountainSaltFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * mgntMountainSaltSize ' range=':= 0 * _default_ * mgntMountainSaltSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 184 ' range=':= 120 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.732 * _default_ ' range=':= 1.732 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mgntMountainSaltSize ' range=':= _default_ * mgntMountainSaltSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.316 * _default_ * mgntMountainSaltSize ' range=':= 1.316 * _default_ * mgntMountainSaltSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- SparseVeins Preset for Mountain Salt is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain  Salt. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntMountainSaltDist = "StrategicClouds"'>
+            <Cloud name='mgntMountainSaltCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60CDD6CB' drawBoundBox='false' boundBoxColor='0x60CDD6CB'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Magneticraft:salt_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 1.183 * _default_ * mgntMountainSaltSize ' range=':= 1.183 * _default_ * mgntMountainSaltSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.183 * _default_ * mgntMountainSaltSize ' range=':= 1.183 * _default_ * mgntMountainSaltSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.400 * _default_ * mgntMountainSaltFreq ' range=':= 1.400 * _default_ * mgntMountainSaltFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 184 ' range=':= 120 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mgntMountainSaltHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60CDD6CB' drawBoundBox='false' boundBoxColor='0x60CDD6CB'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Magneticraft:salt_ore' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * mgntMountainSaltFreq  * 0.1 ' range=':= 3.001 * _default_ * mgntMountainSaltFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Salt is  complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mountain Salt. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntMountainSaltDist = "Vanilla"'>
+            <StandardGen name='mgntMountainSaltStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60CDD6CB' drawBoundBox='false' boundBoxColor='0x60CDD6CB'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Magneticraft:salt_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 4.0 * mgntMountainSaltSize ' range=':= 2.0 * mgntMountainSaltSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 5.333 * mgntMountainSaltFreq ' range=':= 2.67 * mgntMountainSaltFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 184 ' range=':= 120 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Salt is complete. -->
+
+        <!-- End Mountain Salt Generation -->
+
+
+        <!-- Begin Zinc Generation -->
+
+        <!-- Starting LayeredVeins Preset for Zinc. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntZincDist = "LayeredVeins"'>
+            <Veins name='mgntZincVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60706750' drawBoundBox='false' boundBoxColor='0x60706750'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='Magneticraft:zinc_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 0.867 * _default_ * mgntZincFreq ' range=':= 0.867 * _default_ * mgntZincFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0.976 * _default_ * mgntZincSize ' range=':= 0.976 * _default_ * mgntZincSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 40 ' range=':= 40 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 0.931 * _default_ ' range=':= 0.931 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mgntZincSize ' range=':= _default_ * mgntZincSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.965 * _default_ * mgntZincSize ' range=':= 0.965 * _default_ * mgntZincSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Zinc is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Zinc. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntZincDist = "StrategicClouds"'>
+            <Cloud name='mgntZincCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60706750' drawBoundBox='false' boundBoxColor='0x60706750'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Magneticraft:zinc_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 0.995 * _default_ * mgntZincSize ' range=':= 0.995 * _default_ * mgntZincSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.995 * _default_ * mgntZincSize ' range=':= 0.995 * _default_ * mgntZincSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.990 * _default_ * mgntZincFreq ' range=':= 0.990 * _default_ * mgntZincFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 40 ' range=':= 40 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mgntZincHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60706750' drawBoundBox='false' boundBoxColor='0x60706750'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Magneticraft:zinc_ore' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 0.867 * _default_ * mgntZincFreq  * 0.1 ' range=':= 0.867 * _default_ * mgntZincFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Zinc is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Zinc. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntZincDist = "Vanilla"'>
+            <StandardGen name='mgntZincStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60706750' drawBoundBox='false' boundBoxColor='0x60706750'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Magneticraft:zinc_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 4.0 * mgntZincSize ' range=':= 2.0 * mgntZincSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 2.667 * mgntZincFreq ' range=':= 1.33 * mgntZincFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 40 ' range=':= 40 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Zinc is complete. -->
+
+        <!-- End Zinc Generation -->
+
+
+        <!-- Begin Mountain Zinc Generation -->
+
+        <!-- Starting LayeredVeins Preset for Mountain Zinc. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntMountainZincDist = "LayeredVeins"'>
+            <Veins name='mgntMountainZincVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60706750' drawBoundBox='false' boundBoxColor='0x60706750'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='Magneticraft:zinc_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 0.867 * _default_ * mgntMountainZincFreq ' range=':= 0.867 * _default_ * mgntMountainZincFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0.976 * _default_ * mgntMountainZincSize ' range=':= 0.976 * _default_ * mgntMountainZincSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 184 ' range=':= 120 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 0.931 * _default_ ' range=':= 0.931 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mgntMountainZincSize ' range=':= _default_ * mgntMountainZincSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.965 * _default_ * mgntMountainZincSize ' range=':= 0.965 * _default_ * mgntMountainZincSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Mountain Zinc is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain  Zinc. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntMountainZincDist = "StrategicClouds"'>
+            <Cloud name='mgntMountainZincCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60706750' drawBoundBox='false' boundBoxColor='0x60706750'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Magneticraft:zinc_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 0.995 * _default_ * mgntMountainZincSize ' range=':= 0.995 * _default_ * mgntMountainZincSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.995 * _default_ * mgntMountainZincSize ' range=':= 0.995 * _default_ * mgntMountainZincSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.990 * _default_ * mgntMountainZincFreq ' range=':= 0.990 * _default_ * mgntMountainZincFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 184 ' range=':= 120 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mgntMountainZincHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60706750' drawBoundBox='false' boundBoxColor='0x60706750'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Magneticraft:zinc_ore' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 0.867 * _default_ * mgntMountainZincFreq  * 0.1 ' range=':= 0.867 * _default_ * mgntMountainZincFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Zinc is  complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mountain Zinc. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntMountainZincDist = "Vanilla"'>
+            <StandardGen name='mgntMountainZincStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60706750' drawBoundBox='false' boundBoxColor='0x60706750'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Magneticraft:zinc_ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 4.0 * mgntMountainZincSize ' range=':= 2.0 * mgntMountainZincSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 2.667 * mgntMountainZincFreq ' range=':= 1.33 * mgntMountainZincFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 184 ' range=':= 120 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Zinc is complete. -->
+
+        <!-- End Mountain Zinc Generation -->
+
+
+        <!-- Begin Limestone Generation -->
+
+        <!-- Starting StratumClouds Preset for Limestone. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntLimestoneDist = "StratumClouds"'>
+            <Cloud name='mgntLimestoneCloud'  inherits='PresetStratum' drawWireframe='true' wireframeColor='0x60A6B2A6' drawBoundBox='false' boundBoxColor='0x60A6B2A6'>
+              <Description>
+                Wide, thin, and flat disks of  ore.  Primarily, this
+                distribution is meant to provide  realistic
+                distribution of stone  in a strata formation.
+              </Description>
+              <OreBlock block='Magneticraft:limestone' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 1.367 * _default_ * mgntLimestoneSize ' range=':= 1.367 * _default_ * mgntLimestoneSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.367 * _default_ * mgntLimestoneSize ' range=':= 1.367 * _default_ * mgntLimestoneSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.868 * _default_ * mgntLimestoneFreq ' range=':= 1.868 * _default_ * mgntLimestoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 40 ' range=':= 24 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StratumClouds Preset for Limestone is complete. -->
+
+
+        <!-- Starting LayeredVeins Preset for Limestone. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntLimestoneDist = "LayeredVeins"'>
+            <Veins name='mgntLimestoneVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60A6B2A6' drawBoundBox='false' boundBoxColor='0x60A6B2A6'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='Magneticraft:limestone' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 2.798 * _default_ * mgntLimestoneFreq ' range=':= 2.798 * _default_ * mgntLimestoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.187 * _default_ * mgntLimestoneSize ' range=':= 1.187 * _default_ * mgntLimestoneSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 40 ' range=':= 24 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.673 * _default_ ' range=':= 1.673 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mgntLimestoneSize ' range=':= _default_ * mgntLimestoneSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.293 * _default_ * mgntLimestoneSize ' range=':= 1.293 * _default_ * mgntLimestoneSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Limestone is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Limestone. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntLimestoneDist = "Vanilla"'>
+            <StandardGen name='mgntLimestoneStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60A6B2A6' drawBoundBox='false' boundBoxColor='0x60A6B2A6'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Magneticraft:limestone' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 33.333 * mgntLimestoneSize ' range=':= 16.67 * mgntLimestoneSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 3.333 * mgntLimestoneFreq ' range=':= 1.67 * mgntLimestoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 40 ' range=':= 24 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Limestone is complete. -->
+
+        <!-- End Limestone Generation -->
+
+
+        <!-- Begin Mountain Limestone Generation -->
+
+        <!-- Starting StratumClouds Preset for Mountain  Limestone. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntMountainLimestoneDist = "StratumClouds"'>
+            <Cloud name='mgntMountainLimestoneCloud'  inherits='PresetStratum' drawWireframe='true' wireframeColor='0x60A6B2A6' drawBoundBox='false' boundBoxColor='0x60A6B2A6'>
+              <Description>
+                Wide, thin, and flat disks of  ore.  Primarily, this
+                distribution is meant to provide  realistic
+                distribution of stone  in a strata formation.
+              </Description>
+              <OreBlock block='Magneticraft:limestone' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 1.367 * _default_ * mgntMountainLimestoneSize ' range=':= 1.367 * _default_ * mgntMountainLimestoneSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.367 * _default_ * mgntMountainLimestoneSize ' range=':= 1.367 * _default_ * mgntMountainLimestoneSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.868 * _default_ * mgntMountainLimestoneFreq ' range=':= 1.868 * _default_ * mgntMountainLimestoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 184 ' range=':= 72 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StratumClouds Preset for Mountain Limestone is  complete. -->
+
+
+        <!-- Starting LayeredVeins Preset for Mountain  Limestone. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntMountainLimestoneDist = "LayeredVeins"'>
+            <Veins name='mgntMountainLimestoneVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60A6B2A6' drawBoundBox='false' boundBoxColor='0x60A6B2A6'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='Magneticraft:limestone' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 2.798 * _default_ * mgntMountainLimestoneFreq ' range=':= 2.798 * _default_ * mgntMountainLimestoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.187 * _default_ * mgntMountainLimestoneSize ' range=':= 1.187 * _default_ * mgntMountainLimestoneSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 184 ' range=':= 72 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.673 * _default_ ' range=':= 1.673 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mgntMountainLimestoneSize ' range=':= _default_ * mgntMountainLimestoneSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.293 * _default_ * mgntMountainLimestoneSize ' range=':= 1.293 * _default_ * mgntMountainLimestoneSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Mountain Limestone is  complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mountain Limestone. -->
+        <ConfigSection>
+          <IfCondition condition=':= mgntMountainLimestoneDist = "Vanilla"'>
+            <StandardGen name='mgntMountainLimestoneStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60A6B2A6' drawBoundBox='false' boundBoxColor='0x60A6B2A6'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Magneticraft:limestone' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 33.333 * mgntMountainLimestoneSize ' range=':= 16.67 * mgntMountainLimestoneSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 3.333 * mgntMountainLimestoneFreq ' range=':= 1.67 * mgntMountainLimestoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 184 ' range=':= 72 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Limestone is  complete. -->
+
+        <!-- End Mountain Limestone Generation -->
+
+        <!-- Finished adding blocks -->
+
+      </IfCondition>
+      <!-- Overworld Setup Complete -->
+
+    </IfCondition>
+
+  </ConfigSection>
+  <!-- Configuration for Custom Ore Generation Complete! -->
+
+</IfModInstalled>
+<!-- The "MagnetiCraft" mod is now configured. -->
+
+
+
+
+
+<!-- =================================================================
+     This file was made using the Sprocket Advanced Configuration
+     Generator.  If you wish to make your own configurations for a mod
+     not currently supported by Custom Ore Generation, and you don't
+     want the hassle of writing XML, you can find the generator script
+     at its GitHub page: http://https://github.com/reteo/Sprocket
+     ================================================================= -->

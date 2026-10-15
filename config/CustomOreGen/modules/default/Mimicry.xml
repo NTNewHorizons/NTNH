@@ -1,0 +1,818 @@
+<!-- =================================================================
+     Custom Ore Generation "Mimicry" Module: This configuration covers
+     mimichite, mountain mimichite, nether mimichite, and end
+     mimichite.
+     ================================================================= -->
+
+
+<!-- Configuration by Reteo. -->
+
+
+
+
+<!-- Is the "Mimicry" mod on the system?  Let's find out! -->
+<IfModInstalled name="Mimicry">
+
+  <!-- Starting Configuration for Custom Ore Generation. -->
+  <ConfigSection>
+
+
+
+
+
+    <!-- Setup Screen Configuration -->
+    <ConfigSection>
+      <OptionDisplayGroup name='groupMimicry' displayName='Mimicry' displayState='shown'>
+        <Description>
+          Distribution options for Mimicry Ores.
+        </Description>
+      </OptionDisplayGroup>
+      <OptionChoice name='enableMimicry' displayName='Handle Mimicry Setup?' default='true' displayState='shown_dynamic' displayGroup='groupMimicry'>
+        <Description> Should Custom Ore Generation handle Mimicry ore generation? </Description>
+        <Choice value=':= ?true' displayValue='Yes' description='Use Custom Ore Generation to handle Mimicry ores.'/>
+        <Choice value=':= ?false' displayValue='No' description='Mimicry ores will be handled by the mod itself.'/>
+      </OptionChoice>
+      <OptionChoice name='cleanUpMimicry' displayName='Use Mimicry Cleanup?' default='true' displayState='shown_dynamic' displayGroup='groupMimicry'>
+        <Description> Should Custom Ore Generation use the Substitution Pass to remove all instances of Mimicry ore from the world?  If the mod's oregen can be turned off in its configuration, then it's recommended to do so, as the substitution pass can slow the game significantly.  If this option is disabled without disabling the mod's own ore generation, you'll end up with two oregens working at once, flooding the world with ore.  Enabled by default to ensure the ores are completely removed. </Description>
+        <Choice value=':= ?true' displayValue='Yes' description='Use the substitution pass to clean up Mimicry ores.'/>
+        <Choice value=':= ?false' displayValue='No' description='Mimicry ores do not need to be cleaned up by a substitution pass.'/>
+      </OptionChoice>
+
+      <!-- Mimichite Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mcryMimichiteDist'  displayState=':= if(?enableMimicry, "shown", "hidden")' displayGroup='groupMimicry'>
+          <Description> Controls how Mimichite is generated </Description>
+          <DisplayName>Mimicry Mimichite</DisplayName>
+          <IfCondition condition=':= (?blockExists("Mimicry:Sparr_Mimichite Ore")) '>
+
+          <Choice value='SparseVeins' displayValue='Sparse Veins'>
+            <Description>
+              Large veins filled very lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Mimicry:Sparr_Mimichite Ore")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Mimicry:Sparr_Mimichite Ore")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mimichite is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mcryMimichiteFreq' default='1'  min='0' max='5' displayState=':= if(?enableMimicry, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMimicry'>
+          <Description> Frequency multiplier for Mimicry Mimichite distributions </Description>
+          <DisplayName>Mimicry Mimichite Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mcryMimichiteSize' default='1'  min='0' max='5' displayState=':= if(?enableMimicry, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMimicry'>
+          <Description> Size multiplier for Mimicry Mimichite distributions </Description>
+          <DisplayName>Mimicry Mimichite Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mimichite Configuration UI Complete -->
+
+
+      <!-- Mountain Mimichite Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mcryMountainMimichiteDist'  displayState=':= if(?enableMimicry, "shown", "hidden")' displayGroup='groupMimicry'>
+          <Description> Controls how Mountain Mimichite is generated </Description>
+          <DisplayName>Mimicry Mountain Mimichite</DisplayName>
+          <IfCondition condition=':= (?blockExists("Mimicry:Sparr_Mimichite Ore")) '>
+
+          <Choice value='SparseVeins' displayValue='Sparse Veins'>
+            <Description>
+              Large veins filled very lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Mimicry:Sparr_Mimichite Ore")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Mimicry:Sparr_Mimichite Ore")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Mimichite is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mcryMountainMimichiteFreq' default='1'  min='0' max='5' displayState=':= if(?enableMimicry, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMimicry'>
+          <Description> Frequency multiplier for Mimicry Mountain Mimichite distributions </Description>
+          <DisplayName>Mimicry Mountain Mimichite Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mcryMountainMimichiteSize' default='1'  min='0' max='5' displayState=':= if(?enableMimicry, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMimicry'>
+          <Description> Size multiplier for Mimicry Mountain Mimichite distributions </Description>
+          <DisplayName>Mimicry Mountain Mimichite Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Mimichite Configuration UI Complete -->
+
+
+      <!-- Nether Mimichite Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mcryNetherMimichiteDist'  displayState=':= if(?enableMimicry, "shown", "hidden")' displayGroup='groupMimicry'>
+          <Description> Controls how Nether Mimichite is generated </Description>
+          <DisplayName>Mimicry Nether Mimichite</DisplayName>
+          <IfCondition condition=':= (?blockExists("Mimicry:Sparr_Mimichite Ore:1")) '>
+
+          <Choice value='SparseVeins' displayValue='Sparse Veins'>
+            <Description>
+              Large veins filled very lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Mimicry:Sparr_Mimichite Ore:1")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Mimicry:Sparr_Mimichite Ore:1")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Nether Mimichite is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mcryNetherMimichiteFreq' default='1'  min='0' max='5' displayState=':= if(?enableMimicry, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMimicry'>
+          <Description> Frequency multiplier for Mimicry Nether Mimichite distributions </Description>
+          <DisplayName>Mimicry Nether Mimichite Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mcryNetherMimichiteSize' default='1'  min='0' max='5' displayState=':= if(?enableMimicry, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMimicry'>
+          <Description> Size multiplier for Mimicry Nether Mimichite distributions </Description>
+          <DisplayName>Mimicry Nether Mimichite Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Nether Mimichite Configuration UI Complete -->
+
+
+      <!-- End Mimichite Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mcryEndMimichiteDist'  displayState=':= if(?enableMimicry, "shown", "hidden")' displayGroup='groupMimicry'>
+          <Description> Controls how End Mimichite is generated </Description>
+          <DisplayName>Mimicry End Mimichite</DisplayName>
+          <IfCondition condition=':= (?blockExists("Mimicry:Sparr_Mimichite Ore:2")) '>
+
+          <Choice value='SparseVeins' displayValue='Sparse Veins'>
+            <Description>
+              Large veins filled very lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Mimicry:Sparr_Mimichite Ore:2")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Mimicry:Sparr_Mimichite Ore:2")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='End Mimichite is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mcryEndMimichiteFreq' default='1'  min='0' max='5' displayState=':= if(?enableMimicry, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMimicry'>
+          <Description> Frequency multiplier for Mimicry End Mimichite distributions </Description>
+          <DisplayName>Mimicry End Mimichite Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mcryEndMimichiteSize' default='1'  min='0' max='5' displayState=':= if(?enableMimicry, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMimicry'>
+          <Description> Size multiplier for Mimicry End Mimichite distributions </Description>
+          <DisplayName>Mimicry End Mimichite Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- End Mimichite Configuration UI Complete -->
+
+    </ConfigSection>
+    <!-- Setup Screen Complete -->
+
+    <IfCondition condition=':= ?enableMimicry'>
+
+
+
+
+      <!-- Overworld Setup Beginning -->
+
+      <IfCondition condition=':= ?COGActive'>
+
+        <!-- Starting Original "Overworld" Block Removal -->
+
+        <IfCondition condition=':= ?cleanUpMimicry'>
+          <IfCondition condition=':= ?blockExists("minecraft:stone")'>
+            <Substitute name='mcryOverworldBlockSubstitute0' block='minecraft:stone'>
+              <Description>
+                Replace vanilla-generated ore clusters.
+              </Description>
+              <Comment>
+                The global option  deferredPopulationRange must be
+                large enough to catch all ore  clusters (>= 32).
+              </Comment>
+              <Replaces block='Mimicry:Sparr_MimichiteOre' weight='1.0' />
+            </Substitute>
+          </IfCondition>
+        </IfCondition>
+
+        <!-- Original "Overworld" Block Removal Complete -->
+
+        <!-- Adding blocks -->
+
+        <!-- Begin Mimichite Generation -->
+
+        <!-- Starting SparseVeins Preset for Mimichite. -->
+        <ConfigSection>
+          <IfCondition condition=':= mcryMimichiteDist = "SparseVeins"'>
+            <Veins name='mcryMimichiteVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x608800FF' drawBoundBox='false' boundBoxColor='0x608800FF'>
+              <Description>
+                Large veins filled very lightly  with ore.  Because
+                they contain  less ore per volume, these veins  are
+                relatively wide and long.  Mining the ore from them is
+                time  consuming compared to solid ore  veins.  They
+                are also more  difficult to follow, since it is
+                harder to get an idea of their  direction while
+                mining.
+              </Description>
+              <OreBlock block='Mimicry:Sparr_Mimichite Ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 2.450 * _default_ * mcryMimichiteFreq ' range=':= 2.450 * _default_ * mcryMimichiteFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * mcryMimichiteSize ' range=':= 0 * _default_ * mcryMimichiteSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 30 ' range=':= 30 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.565 * _default_ ' range=':= 1.565 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mcryMimichiteSize ' range=':= _default_ * mcryMimichiteSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.251 * _default_ * mcryMimichiteSize ' range=':= 1.251 * _default_ * mcryMimichiteSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- SparseVeins Preset for Mimichite is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mimichite. -->
+        <ConfigSection>
+          <IfCondition condition=':= mcryMimichiteDist = "StrategicClouds"'>
+            <Cloud name='mcryMimichiteCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x608800FF' drawBoundBox='false' boundBoxColor='0x608800FF'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Mimicry:Sparr_Mimichite Ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 1.069 * _default_ * mcryMimichiteSize ' range=':= 1.069 * _default_ * mcryMimichiteSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.069 * _default_ * mcryMimichiteSize ' range=':= 1.069 * _default_ * mcryMimichiteSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.143 * _default_ * mcryMimichiteFreq ' range=':= 1.143 * _default_ * mcryMimichiteFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 30 ' range=':= 30 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mcryMimichiteHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x608800FF' drawBoundBox='false' boundBoxColor='0x608800FF'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Mimicry:Sparr_Mimichite Ore' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 2.450 * _default_ * mcryMimichiteFreq  * 0.1 ' range=':= 2.450 * _default_ * mcryMimichiteFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mimichite is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mimichite. -->
+        <ConfigSection>
+          <IfCondition condition=':= mcryMimichiteDist = "Vanilla"'>
+            <StandardGen name='mcryMimichiteStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x608800FF' drawBoundBox='false' boundBoxColor='0x608800FF'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Mimicry:Sparr_Mimichite Ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 2.667 * mcryMimichiteSize ' range=':= 1.33 * mcryMimichiteSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 5.333 * mcryMimichiteFreq ' range=':= 2.67 * mcryMimichiteFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 30 ' range=':= 30 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mimichite is complete. -->
+
+        <!-- End Mimichite Generation -->
+
+
+        <!-- Begin Mountain Mimichite Generation -->
+
+        <!-- Starting SparseVeins Preset for Mountain  Mimichite. -->
+        <ConfigSection>
+          <IfCondition condition=':= mcryMountainMimichiteDist = "SparseVeins"'>
+            <Veins name='mcryMountainMimichiteVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x608800FF' drawBoundBox='false' boundBoxColor='0x608800FF'>
+              <Description>
+                Large veins filled very lightly  with ore.  Because
+                they contain  less ore per volume, these veins  are
+                relatively wide and long.  Mining the ore from them is
+                time  consuming compared to solid ore  veins.  They
+                are also more  difficult to follow, since it is
+                harder to get an idea of their  direction while
+                mining.
+              </Description>
+              <OreBlock block='Mimicry:Sparr_Mimichite Ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 2.450 * _default_ * mcryMountainMimichiteFreq ' range=':= 2.450 * _default_ * mcryMountainMimichiteFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * mcryMountainMimichiteSize ' range=':= 0 * _default_ * mcryMountainMimichiteSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 154 ' range=':= 90 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.565 * _default_ ' range=':= 1.565 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mcryMountainMimichiteSize ' range=':= _default_ * mcryMountainMimichiteSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.251 * _default_ * mcryMountainMimichiteSize ' range=':= 1.251 * _default_ * mcryMountainMimichiteSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- SparseVeins Preset for Mountain Mimichite is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain  Mimichite. -->
+        <ConfigSection>
+          <IfCondition condition=':= mcryMountainMimichiteDist = "StrategicClouds"'>
+            <Cloud name='mcryMountainMimichiteCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x608800FF' drawBoundBox='false' boundBoxColor='0x608800FF'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Mimicry:Sparr_Mimichite Ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 1.069 * _default_ * mcryMountainMimichiteSize ' range=':= 1.069 * _default_ * mcryMountainMimichiteSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.069 * _default_ * mcryMountainMimichiteSize ' range=':= 1.069 * _default_ * mcryMountainMimichiteSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.143 * _default_ * mcryMountainMimichiteFreq ' range=':= 1.143 * _default_ * mcryMountainMimichiteFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 154 ' range=':= 90 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mcryMountainMimichiteHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x608800FF' drawBoundBox='false' boundBoxColor='0x608800FF'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Mimicry:Sparr_Mimichite Ore' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 2.450 * _default_ * mcryMountainMimichiteFreq  * 0.1 ' range=':= 2.450 * _default_ * mcryMountainMimichiteFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Mimichite is
+             complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mountain Mimichite. -->
+        <ConfigSection>
+          <IfCondition condition=':= mcryMountainMimichiteDist = "Vanilla"'>
+            <StandardGen name='mcryMountainMimichiteStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x608800FF' drawBoundBox='false' boundBoxColor='0x608800FF'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Mimicry:Sparr_Mimichite Ore' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 2.667 * mcryMountainMimichiteSize ' range=':= 1.33 * mcryMountainMimichiteSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 5.333 * mcryMountainMimichiteFreq ' range=':= 2.67 * mcryMountainMimichiteFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 154 ' range=':= 90 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Mimichite is  complete. -->
+
+        <!-- End Mountain Mimichite Generation -->
+
+        <!-- Finished adding blocks -->
+
+      </IfCondition>
+      <!-- Overworld Setup Complete -->
+
+
+
+
+
+      <!-- Nether Setup Beginning -->
+
+      <IfCondition condition=':= dimension.generator.class = "ChunkProviderHell"'>
+
+        <!-- Starting Original "Nether" Block Removal -->
+
+        <IfCondition condition=':= ?cleanUpMimicry'>
+          <IfCondition condition=':= ?blockExists("minecraft:netherrack")'>
+            <Substitute name='mcryNetherBlockSubstitute0' block='minecraft:netherrack'>
+              <Description>
+                Replace vanilla-generated ore clusters.
+              </Description>
+              <Comment>
+                The global option  deferredPopulationRange must be
+                large enough to catch all ore  clusters (>= 32).
+              </Comment>
+              <Replaces block='Mimicry:Sparr_MimichiteOre:1' weight='1.0' />
+            </Substitute>
+          </IfCondition>
+        </IfCondition>
+
+        <!-- Original "Nether" Block Removal Complete -->
+
+        <!-- Adding blocks -->
+
+        <!-- Begin Nether Mimichite Generation -->
+
+        <!-- Starting SparseVeins Preset for Nether Mimichite. -->
+        <ConfigSection>
+          <IfCondition condition=':= mcryNetherMimichiteDist = "SparseVeins"'>
+            <Veins name='mcryNetherMimichiteVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x608800FF' drawBoundBox='false' boundBoxColor='0x608800FF'>
+              <Description>
+                Large veins filled very lightly  with ore.  Because
+                they contain  less ore per volume, these veins  are
+                relatively wide and long.  Mining the ore from them is
+                time  consuming compared to solid ore  veins.  They
+                are also more  difficult to follow, since it is
+                harder to get an idea of their  direction while
+                mining.
+              </Description>
+              <OreBlock block='Mimicry:Sparr_Mimichite Ore:1' weight='1.0' />
+              <Replaces block='minecraft:netherrack' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 3.465 * _default_ * mcryNetherMimichiteFreq ' range=':= 3.465 * _default_ * mcryNetherMimichiteFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * mcryNetherMimichiteSize ' range=':= 0 * _default_ * mcryNetherMimichiteSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 64 ' range=':= 64 ' type='uniform' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.861 * _default_ ' range=':= 1.861 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mcryNetherMimichiteSize ' range=':= _default_ * mcryNetherMimichiteSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.364 * _default_ * mcryNetherMimichiteSize ' range=':= 1.364 * _default_ * mcryNetherMimichiteSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- SparseVeins Preset for Nether Mimichite is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Nether  Mimichite. -->
+        <ConfigSection>
+          <IfCondition condition=':= mcryNetherMimichiteDist = "StrategicClouds"'>
+            <Cloud name='mcryNetherMimichiteCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x608800FF' drawBoundBox='false' boundBoxColor='0x608800FF'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Mimicry:Sparr_Mimichite Ore:1' weight='1.0' />
+              <Replaces block='minecraft:netherrack' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 1.271 * _default_ * mcryNetherMimichiteSize ' range=':= 1.271 * _default_ * mcryNetherMimichiteSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.271 * _default_ * mcryNetherMimichiteSize ' range=':= 1.271 * _default_ * mcryNetherMimichiteSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.616 * _default_ * mcryNetherMimichiteFreq ' range=':= 1.616 * _default_ * mcryNetherMimichiteFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 64 ' range=':= 64 ' type='uniform' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mcryNetherMimichiteHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x608800FF' drawBoundBox='false' boundBoxColor='0x608800FF'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Mimicry:Sparr_Mimichite Ore:1' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 3.465 * _default_ * mcryNetherMimichiteFreq  * 0.1 ' range=':= 3.465 * _default_ * mcryNetherMimichiteFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Nether Mimichite is  complete. -->
+
+
+        <!-- Starting Vanilla Preset for Nether Mimichite. -->
+        <ConfigSection>
+          <IfCondition condition=':= mcryNetherMimichiteDist = "Vanilla"'>
+            <StandardGen name='mcryNetherMimichiteStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x608800FF' drawBoundBox='false' boundBoxColor='0x608800FF'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Mimicry:Sparr_Mimichite Ore:1' weight='1.0' />
+              <Replaces block='minecraft:netherrack' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 2.667 * mcryNetherMimichiteSize ' range=':= 1.33 * mcryNetherMimichiteSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 10.667 * mcryNetherMimichiteFreq ' range=':= 5.33 * mcryNetherMimichiteFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 64 ' range=':= 64 ' type='uniform' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Nether Mimichite is complete. -->
+
+        <!-- End Nether Mimichite Generation -->
+
+        <!-- Finished adding blocks -->
+
+      </IfCondition>
+      <!-- Nether Setup Complete -->
+
+
+
+
+
+      <!-- End Setup Beginning -->
+
+      <IfCondition condition=':= dimension.generator.class = "ChunkProviderEnd"'>
+
+        <!-- Starting Original "End" Block Removal -->
+
+        <IfCondition condition=':= ?cleanUpMimicry'>
+          <IfCondition condition=':= ?blockExists("minecraft:end_stone")'>
+            <Substitute name='mcryEndBlockSubstitute0' block='minecraft:end_stone'>
+              <Description>
+                Replace vanilla-generated ore clusters.
+              </Description>
+              <Comment>
+                The global option  deferredPopulationRange must be
+                large enough to catch all ore  clusters (>= 32).
+              </Comment>
+              <Replaces block='Mimicry:Sparr_MimichiteOre:2' weight='1.0' />
+            </Substitute>
+          </IfCondition>
+        </IfCondition>
+
+        <!-- Original "End" Block Removal Complete -->
+
+        <!-- Adding blocks -->
+
+        <!-- Begin End Mimichite Generation -->
+
+        <!-- Starting SparseVeins Preset for End Mimichite. -->
+        <ConfigSection>
+          <IfCondition condition=':= mcryEndMimichiteDist = "SparseVeins"'>
+            <Veins name='mcryEndMimichiteVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x608800FF' drawBoundBox='false' boundBoxColor='0x608800FF'>
+              <Description>
+                Large veins filled very lightly  with ore.  Because
+                they contain  less ore per volume, these veins  are
+                relatively wide and long.  Mining the ore from them is
+                time  consuming compared to solid ore  veins.  They
+                are also more  difficult to follow, since it is
+                harder to get an idea of their  direction while
+                mining.
+              </Description>
+              <OreBlock block='Mimicry:Sparr_Mimichite Ore:2' weight='1.0' />
+              <Replaces block='minecraft:end_stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 4.900 * _default_ * mcryEndMimichiteFreq ' range=':= 4.900 * _default_ * mcryEndMimichiteFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * mcryEndMimichiteSize ' range=':= 0 * _default_ * mcryEndMimichiteSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 32 ' range=':= 32 ' type='uniform' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 2.214 * _default_ ' range=':= 2.214 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mcryEndMimichiteSize ' range=':= _default_ * mcryEndMimichiteSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.488 * _default_ * mcryEndMimichiteSize ' range=':= 1.488 * _default_ * mcryEndMimichiteSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- SparseVeins Preset for End Mimichite is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for End  Mimichite. -->
+        <ConfigSection>
+          <IfCondition condition=':= mcryEndMimichiteDist = "StrategicClouds"'>
+            <Cloud name='mcryEndMimichiteCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x608800FF' drawBoundBox='false' boundBoxColor='0x608800FF'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Mimicry:Sparr_Mimichite Ore:2' weight='1.0' />
+              <Replaces block='minecraft:end_stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 1.512 * _default_ * mcryEndMimichiteSize ' range=':= 1.512 * _default_ * mcryEndMimichiteSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.512 * _default_ * mcryEndMimichiteSize ' range=':= 1.512 * _default_ * mcryEndMimichiteSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 2.286 * _default_ * mcryEndMimichiteFreq ' range=':= 2.286 * _default_ * mcryEndMimichiteFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 32 ' range=':= 32 ' type='uniform' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mcryEndMimichiteHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x608800FF' drawBoundBox='false' boundBoxColor='0x608800FF'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Mimicry:Sparr_Mimichite Ore:2' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 4.900 * _default_ * mcryEndMimichiteFreq  * 0.1 ' range=':= 4.900 * _default_ * mcryEndMimichiteFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for End Mimichite is  complete. -->
+
+
+        <!-- Starting Vanilla Preset for End Mimichite. -->
+        <ConfigSection>
+          <IfCondition condition=':= mcryEndMimichiteDist = "Vanilla"'>
+            <StandardGen name='mcryEndMimichiteStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x608800FF' drawBoundBox='false' boundBoxColor='0x608800FF'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Mimicry:Sparr_Mimichite Ore:2' weight='1.0' />
+              <Replaces block='minecraft:end_stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 2.667 * mcryEndMimichiteSize ' range=':= 1.33 * mcryEndMimichiteSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 21.333 * mcryEndMimichiteFreq ' range=':= 10.67 * mcryEndMimichiteFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 32 ' range=':= 32 ' type='uniform' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for End Mimichite is complete. -->
+
+        <!-- End End Mimichite Generation -->
+
+        <!-- Finished adding blocks -->
+
+      </IfCondition>
+      <!-- End Setup Complete -->
+
+    </IfCondition>
+
+  </ConfigSection>
+  <!-- Configuration for Custom Ore Generation Complete! -->
+
+</IfModInstalled>
+<!-- The "Mimicry" mod is now configured. -->
+
+
+
+
+
+<!-- =================================================================
+     This file was made using the Sprocket Advanced Configuration
+     Generator.  If you wish to make your own configurations for a mod
+     not currently supported by Custom Ore Generation, and you don't
+     want the hassle of writing XML, you can find the generator script
+     at its GitHub page: http://https://github.com/reteo/Sprocket
+     ================================================================= -->

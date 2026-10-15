@@ -1,0 +1,14 @@
+name = "AppleCore-3.3.13"
+filename = "AppleCore-3.3.13.jar"
+side = "both"
+pin = true
+
+[download]
+hash-format = "sha256"
+hash = "aedbe88524f75fe9ee1126e173999c2167c9dfe80bb26ff99be13fab403f372d"
+url = "https://github.com/GTNewHorizons/AppleCore/releases/download/3.3.13/AppleCore-3.3.13.jar"
+
+[update.github]
+slug = "GTNewHorizons/AppleCore"
+tag = "3.3.13"
+regex = "^AppleCore\\-.+\\.jar$"

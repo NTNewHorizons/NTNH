@@ -1,0 +1,733 @@
+<!-- =================================================================
+     Custom Ore Generation "Flaxbeards Steamcraft" Module: This
+     configuration covers copper, mountain copper, zinc, and mountain
+     zinc.
+     ================================================================= -->
+
+
+<!-- A mod centered around steam power. Configuration by Reteo. -->
+
+
+
+
+<!-- Is the "Flaxbeards Steamcraft" mod on the system?  Let's find
+     out! -->
+<IfModInstalled name="Steamcraft">
+
+  <!-- Starting Configuration for Custom Ore Generation. -->
+  <ConfigSection>
+
+
+
+
+
+    <!-- Setup Screen Configuration -->
+    <ConfigSection>
+      <OptionDisplayGroup name='groupFlaxbeardsSteamcraft' displayName='Flaxbeards Steamcraft' displayState='shown'>
+        <Description>
+          Distribution options for Flaxbeards Steamcraft Ores.
+        </Description>
+      </OptionDisplayGroup>
+      <OptionChoice name='enableFlaxbeardsSteamcraft' displayName='Handle Flaxbeards Steamcraft Setup?' default='true' displayState='shown_dynamic' displayGroup='groupFlaxbeardsSteamcraft'>
+        <Description> Should Custom Ore Generation handle Flaxbeards Steamcraft ore generation? </Description>
+        <Choice value=':= ?true' displayValue='Yes' description='Use Custom Ore Generation to handle Flaxbeards Steamcraft ores.'/>
+        <Choice value=':= ?false' displayValue='No' description='Flaxbeards Steamcraft ores will be handled by the mod itself.'/>
+      </OptionChoice>
+      <OptionChoice name='cleanUpFlaxbeardsSteamcraft' displayName='Use Flaxbeards Steamcraft Cleanup?' default='true' displayState='shown_dynamic' displayGroup='groupFlaxbeardsSteamcraft'>
+        <Description> Should Custom Ore Generation use the Substitution Pass to remove all instances of Flaxbeards Steamcraft ore from the world?  If the mod's oregen can be turned off in its configuration, then it's recommended to do so, as the substitution pass can slow the game significantly.  If this option is disabled without disabling the mod's own ore generation, you'll end up with two oregens working at once, flooding the world with ore.  Enabled by default to ensure the ores are completely removed. </Description>
+        <Choice value=':= ?true' displayValue='Yes' description='Use the substitution pass to clean up Flaxbeards Steamcraft ores.'/>
+        <Choice value=':= ?false' displayValue='No' description='Flaxbeards Steamcraft ores do not need to be cleaned up by a substitution pass.'/>
+      </OptionChoice>
+
+      <!-- Copper Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='flxbCopperDist'  displayState=':= if(?enableFlaxbeardsSteamcraft, "shown", "hidden")' displayGroup='groupFlaxbeardsSteamcraft'>
+          <Description> Controls how Copper is generated </Description>
+          <DisplayName>Flaxbeards Steamcraft Copper</DisplayName>
+          <IfCondition condition=':= (?blockExists("Steamcraft:steamcraftOre")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Steamcraft:steamcraftOre")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Steamcraft:steamcraftOre")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Copper is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='flxbCopperFreq' default='1'  min='0' max='5' displayState=':= if(?enableFlaxbeardsSteamcraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupFlaxbeardsSteamcraft'>
+          <Description> Frequency multiplier for Flaxbeards Steamcraft Copper distributions </Description>
+          <DisplayName>Flaxbeards Steamcraft Copper Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='flxbCopperSize' default='1'  min='0' max='5' displayState=':= if(?enableFlaxbeardsSteamcraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupFlaxbeardsSteamcraft'>
+          <Description> Size multiplier for Flaxbeards Steamcraft Copper distributions </Description>
+          <DisplayName>Flaxbeards Steamcraft Copper Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Copper Configuration UI Complete -->
+
+
+      <!-- Mountain Copper Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='flxbMountainCopperDist'  displayState=':= if(?enableFlaxbeardsSteamcraft, "shown", "hidden")' displayGroup='groupFlaxbeardsSteamcraft'>
+          <Description> Controls how Mountain Copper is generated </Description>
+          <DisplayName>Flaxbeards Steamcraft Mountain Copper</DisplayName>
+          <IfCondition condition=':= (?blockExists("Steamcraft:steamcraftOre")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Steamcraft:steamcraftOre")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Steamcraft:steamcraftOre")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Copper is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='flxbMountainCopperFreq' default='1'  min='0' max='5' displayState=':= if(?enableFlaxbeardsSteamcraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupFlaxbeardsSteamcraft'>
+          <Description> Frequency multiplier for Flaxbeards Steamcraft Mountain Copper distributions </Description>
+          <DisplayName>Flaxbeards Steamcraft Mountain Copper Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='flxbMountainCopperSize' default='1'  min='0' max='5' displayState=':= if(?enableFlaxbeardsSteamcraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupFlaxbeardsSteamcraft'>
+          <Description> Size multiplier for Flaxbeards Steamcraft Mountain Copper distributions </Description>
+          <DisplayName>Flaxbeards Steamcraft Mountain Copper Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Copper Configuration UI Complete -->
+
+
+      <!-- Zinc Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='flxbZincDist'  displayState=':= if(?enableFlaxbeardsSteamcraft, "shown", "hidden")' displayGroup='groupFlaxbeardsSteamcraft'>
+          <Description> Controls how Zinc is generated </Description>
+          <DisplayName>Flaxbeards Steamcraft Zinc</DisplayName>
+          <IfCondition condition=':= (?blockExists("Steamcraft:steamcraftOre:1")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Steamcraft:steamcraftOre:1")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Steamcraft:steamcraftOre:1")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Zinc is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='flxbZincFreq' default='1'  min='0' max='5' displayState=':= if(?enableFlaxbeardsSteamcraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupFlaxbeardsSteamcraft'>
+          <Description> Frequency multiplier for Flaxbeards Steamcraft Zinc distributions </Description>
+          <DisplayName>Flaxbeards Steamcraft Zinc Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='flxbZincSize' default='1'  min='0' max='5' displayState=':= if(?enableFlaxbeardsSteamcraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupFlaxbeardsSteamcraft'>
+          <Description> Size multiplier for Flaxbeards Steamcraft Zinc distributions </Description>
+          <DisplayName>Flaxbeards Steamcraft Zinc Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Zinc Configuration UI Complete -->
+
+
+      <!-- Mountain Zinc Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='flxbMountainZincDist'  displayState=':= if(?enableFlaxbeardsSteamcraft, "shown", "hidden")' displayGroup='groupFlaxbeardsSteamcraft'>
+          <Description> Controls how Mountain Zinc is generated </Description>
+          <DisplayName>Flaxbeards Steamcraft Mountain Zinc</DisplayName>
+          <IfCondition condition=':= (?blockExists("Steamcraft:steamcraftOre:1")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Steamcraft:steamcraftOre:1")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Steamcraft:steamcraftOre:1")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Zinc is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='flxbMountainZincFreq' default='1'  min='0' max='5' displayState=':= if(?enableFlaxbeardsSteamcraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupFlaxbeardsSteamcraft'>
+          <Description> Frequency multiplier for Flaxbeards Steamcraft Mountain Zinc distributions </Description>
+          <DisplayName>Flaxbeards Steamcraft Mountain Zinc Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='flxbMountainZincSize' default='1'  min='0' max='5' displayState=':= if(?enableFlaxbeardsSteamcraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupFlaxbeardsSteamcraft'>
+          <Description> Size multiplier for Flaxbeards Steamcraft Mountain Zinc distributions </Description>
+          <DisplayName>Flaxbeards Steamcraft Mountain Zinc Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Zinc Configuration UI Complete -->
+
+    </ConfigSection>
+    <!-- Setup Screen Complete -->
+
+    <IfCondition condition=':= ?enableFlaxbeardsSteamcraft'>
+
+
+
+
+      <!-- Overworld Setup Beginning -->
+
+      <IfCondition condition=':= ?COGActive'>
+
+        <!-- Starting Original "Overworld" Block Removal -->
+
+        <IfCondition condition=':= ?cleanUpFlaxbeardsSteamcraft'>
+          <IfCondition condition=':= ?blockExists("minecraft:stone")'>
+            <Substitute name='flxbOverworldBlockSubstitute0' block='minecraft:stone'>
+              <Description>
+                Replace vanilla-generated ore clusters.
+              </Description>
+              <Comment>
+                The global option  deferredPopulationRange must be
+                large enough to catch all ore  clusters (>= 32).
+              </Comment>
+              <Replaces block='Steamcraft:steamcraftOre' weight='1.0' />
+              <Replaces block='Steamcraft:steamcraftOre:1' weight='1.0' />
+            </Substitute>
+          </IfCondition>
+        </IfCondition>
+
+        <!-- Original "Overworld" Block Removal Complete -->
+
+        <!-- Adding blocks -->
+
+        <!-- Begin Copper Generation -->
+
+        <!-- Starting LayeredVeins Preset for Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= flxbCopperDist = "LayeredVeins"'>
+            <Veins name='flxbCopperVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60D26B2F' drawBoundBox='false' boundBoxColor='0x60D26B2F'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='Steamcraft:steamcraftOre' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.251 * _default_ * flxbCopperFreq ' range=':= 1.251 * _default_ * flxbCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.038 * _default_ * flxbCopperSize ' range=':= 1.038 * _default_ * flxbCopperSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 42.5 ' range=':= 37.5 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.119 * _default_ ' range=':= 1.119 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * flxbCopperSize ' range=':= _default_ * flxbCopperSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.058 * _default_ * flxbCopperSize ' range=':= 1.058 * _default_ * flxbCopperSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Copper is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= flxbCopperDist = "StrategicClouds"'>
+            <Cloud name='flxbCopperCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60D26B2F' drawBoundBox='false' boundBoxColor='0x60D26B2F'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Steamcraft:steamcraftOre' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 1.195 * _default_ * flxbCopperSize ' range=':= 1.195 * _default_ * flxbCopperSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.195 * _default_ * flxbCopperSize ' range=':= 1.195 * _default_ * flxbCopperSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.429 * _default_ * flxbCopperFreq ' range=':= 1.429 * _default_ * flxbCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 42.5 ' range=':= 37.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='flxbCopperHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60D26B2F' drawBoundBox='false' boundBoxColor='0x60D26B2F'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Steamcraft:steamcraftOre' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.251 * _default_ * flxbCopperFreq  * 0.1 ' range=':= 1.251 * _default_ * flxbCopperFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Copper is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= flxbCopperDist = "Vanilla"'>
+            <StandardGen name='flxbCopperStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60D26B2F' drawBoundBox='false' boundBoxColor='0x60D26B2F'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Steamcraft:steamcraftOre' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 3.333 * flxbCopperSize ' range=':= 1.67 * flxbCopperSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 6.667 * flxbCopperFreq ' range=':= 3.33 * flxbCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 42.5 ' range=':= 37.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Copper is complete. -->
+
+        <!-- End Copper Generation -->
+
+
+        <!-- Begin Mountain Copper Generation -->
+
+        <!-- Starting LayeredVeins Preset for Mountain Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= flxbMountainCopperDist = "LayeredVeins"'>
+            <Veins name='flxbMountainCopperVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60D26B2F' drawBoundBox='false' boundBoxColor='0x60D26B2F'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='Steamcraft:steamcraftOre' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.251 * _default_ * flxbMountainCopperFreq ' range=':= 1.251 * _default_ * flxbMountainCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.038 * _default_ * flxbMountainCopperSize ' range=':= 1.038 * _default_ * flxbMountainCopperSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 191.5 ' range=':= 112.5 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.119 * _default_ ' range=':= 1.119 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * flxbMountainCopperSize ' range=':= _default_ * flxbMountainCopperSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.058 * _default_ * flxbMountainCopperSize ' range=':= 1.058 * _default_ * flxbMountainCopperSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Mountain Copper is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain  Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= flxbMountainCopperDist = "StrategicClouds"'>
+            <Cloud name='flxbMountainCopperCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60D26B2F' drawBoundBox='false' boundBoxColor='0x60D26B2F'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Steamcraft:steamcraftOre' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 1.195 * _default_ * flxbMountainCopperSize ' range=':= 1.195 * _default_ * flxbMountainCopperSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.195 * _default_ * flxbMountainCopperSize ' range=':= 1.195 * _default_ * flxbMountainCopperSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.429 * _default_ * flxbMountainCopperFreq ' range=':= 1.429 * _default_ * flxbMountainCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 191.5 ' range=':= 112.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='flxbMountainCopperHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60D26B2F' drawBoundBox='false' boundBoxColor='0x60D26B2F'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Steamcraft:steamcraftOre' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.251 * _default_ * flxbMountainCopperFreq  * 0.1 ' range=':= 1.251 * _default_ * flxbMountainCopperFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Copper is  complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mountain Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= flxbMountainCopperDist = "Vanilla"'>
+            <StandardGen name='flxbMountainCopperStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60D26B2F' drawBoundBox='false' boundBoxColor='0x60D26B2F'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Steamcraft:steamcraftOre' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 3.333 * flxbMountainCopperSize ' range=':= 1.67 * flxbMountainCopperSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 6.667 * flxbMountainCopperFreq ' range=':= 3.33 * flxbMountainCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 191.5 ' range=':= 112.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Copper is complete. -->
+
+        <!-- End Mountain Copper Generation -->
+
+
+        <!-- Begin Zinc Generation -->
+
+        <!-- Starting LayeredVeins Preset for Zinc. -->
+        <ConfigSection>
+          <IfCondition condition=':= flxbZincDist = "LayeredVeins"'>
+            <Veins name='flxbZincVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60EAEAEA' drawBoundBox='false' boundBoxColor='0x60EAEAEA'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='Steamcraft:steamcraftOre:1' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 0.936 * _default_ * flxbZincFreq ' range=':= 0.936 * _default_ * flxbZincFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0.989 * _default_ * flxbZincSize ' range=':= 0.989 * _default_ * flxbZincSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 40 ' range=':= 35 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 0.968 * _default_ ' range=':= 0.968 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * flxbZincSize ' range=':= _default_ * flxbZincSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.984 * _default_ * flxbZincSize ' range=':= 0.984 * _default_ * flxbZincSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Zinc is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Zinc. -->
+        <ConfigSection>
+          <IfCondition condition=':= flxbZincDist = "StrategicClouds"'>
+            <Cloud name='flxbZincCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60EAEAEA' drawBoundBox='false' boundBoxColor='0x60EAEAEA'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Steamcraft:steamcraftOre:1' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 1.034 * _default_ * flxbZincSize ' range=':= 1.034 * _default_ * flxbZincSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.034 * _default_ * flxbZincSize ' range=':= 1.034 * _default_ * flxbZincSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.069 * _default_ * flxbZincFreq ' range=':= 1.069 * _default_ * flxbZincFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 40 ' range=':= 35 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='flxbZincHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60EAEAEA' drawBoundBox='false' boundBoxColor='0x60EAEAEA'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Steamcraft:steamcraftOre:1' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 0.936 * _default_ * flxbZincFreq  * 0.1 ' range=':= 0.936 * _default_ * flxbZincFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Zinc is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Zinc. -->
+        <ConfigSection>
+          <IfCondition condition=':= flxbZincDist = "Vanilla"'>
+            <StandardGen name='flxbZincStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60EAEAEA' drawBoundBox='false' boundBoxColor='0x60EAEAEA'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Steamcraft:steamcraftOre:1' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 2.667 * flxbZincSize ' range=':= 1.33 * flxbZincSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 4.667 * flxbZincFreq ' range=':= 2.33 * flxbZincFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 40 ' range=':= 35 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Zinc is complete. -->
+
+        <!-- End Zinc Generation -->
+
+
+        <!-- Begin Mountain Zinc Generation -->
+
+        <!-- Starting LayeredVeins Preset for Mountain Zinc. -->
+        <ConfigSection>
+          <IfCondition condition=':= flxbMountainZincDist = "LayeredVeins"'>
+            <Veins name='flxbMountainZincVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60EAEAEA' drawBoundBox='false' boundBoxColor='0x60EAEAEA'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='Steamcraft:steamcraftOre:1' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 0.936 * _default_ * flxbMountainZincFreq ' range=':= 0.936 * _default_ * flxbMountainZincFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0.989 * _default_ * flxbMountainZincSize ' range=':= 0.989 * _default_ * flxbMountainZincSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 184 ' range=':= 105 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 0.968 * _default_ ' range=':= 0.968 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * flxbMountainZincSize ' range=':= _default_ * flxbMountainZincSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.984 * _default_ * flxbMountainZincSize ' range=':= 0.984 * _default_ * flxbMountainZincSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Mountain Zinc is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain  Zinc. -->
+        <ConfigSection>
+          <IfCondition condition=':= flxbMountainZincDist = "StrategicClouds"'>
+            <Cloud name='flxbMountainZincCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60EAEAEA' drawBoundBox='false' boundBoxColor='0x60EAEAEA'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Steamcraft:steamcraftOre:1' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 1.034 * _default_ * flxbMountainZincSize ' range=':= 1.034 * _default_ * flxbMountainZincSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.034 * _default_ * flxbMountainZincSize ' range=':= 1.034 * _default_ * flxbMountainZincSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.069 * _default_ * flxbMountainZincFreq ' range=':= 1.069 * _default_ * flxbMountainZincFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 184 ' range=':= 105 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='flxbMountainZincHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60EAEAEA' drawBoundBox='false' boundBoxColor='0x60EAEAEA'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Steamcraft:steamcraftOre:1' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 0.936 * _default_ * flxbMountainZincFreq  * 0.1 ' range=':= 0.936 * _default_ * flxbMountainZincFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Zinc is  complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mountain Zinc. -->
+        <ConfigSection>
+          <IfCondition condition=':= flxbMountainZincDist = "Vanilla"'>
+            <StandardGen name='flxbMountainZincStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60EAEAEA' drawBoundBox='false' boundBoxColor='0x60EAEAEA'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Steamcraft:steamcraftOre:1' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 2.667 * flxbMountainZincSize ' range=':= 1.33 * flxbMountainZincSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 4.667 * flxbMountainZincFreq ' range=':= 2.33 * flxbMountainZincFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 184 ' range=':= 105 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Zinc is complete. -->
+
+        <!-- End Mountain Zinc Generation -->
+
+        <!-- Finished adding blocks -->
+
+      </IfCondition>
+      <!-- Overworld Setup Complete -->
+
+    </IfCondition>
+
+  </ConfigSection>
+  <!-- Configuration for Custom Ore Generation Complete! -->
+
+</IfModInstalled>
+<!-- The "Flaxbeards Steamcraft" mod is now configured. -->
+
+
+
+
+
+<!-- =================================================================
+     This file was made using the Sprocket Advanced Configuration
+     Generator.  If you wish to make your own configurations for a mod
+     not currently supported by Custom Ore Generation, and you don't
+     want the hassle of writing XML, you can find the generator script
+     at its GitHub page: http://https://github.com/reteo/Sprocket
+     ================================================================= -->

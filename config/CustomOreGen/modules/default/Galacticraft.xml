@@ -1,0 +1,1373 @@
+<!-- =================================================================
+     Custom Ore Generation "Galacticraft" Module: This configuration
+     covers copper, mountain copper, tin, mountain tin, aluminum,
+     mountain aluminum, silicon, and mountain silicon.
+     ================================================================= -->
+
+
+<!-- A mod focused on spaceflight.  Only the overworld ores are
+     configured; other worlds' ores are untouched. Configuration by
+     Reteo. -->
+
+
+
+
+<!-- Is the "Galacticraft" mod on the system?  Let's find out! -->
+<IfModInstalled name="GalacticraftCore">
+
+  <!-- Starting Configuration for Custom Ore Generation. -->
+  <ConfigSection>
+
+
+
+
+
+    <!-- Setup Screen Configuration -->
+    <ConfigSection>
+      <OptionDisplayGroup name='groupGalacticraft' displayName='Galacticraft' displayState='shown'>
+        <Description>
+          Distribution options for Galacticraft Ores.
+        </Description>
+      </OptionDisplayGroup>
+      <OptionChoice name='enableGalacticraft' displayName='Handle Galacticraft Setup?' default='true' displayState='shown_dynamic' displayGroup='groupGalacticraft'>
+        <Description> Should Custom Ore Generation handle Galacticraft ore generation? </Description>
+        <Choice value=':= ?true' displayValue='Yes' description='Use Custom Ore Generation to handle Galacticraft ores.'/>
+        <Choice value=':= ?false' displayValue='No' description='Galacticraft ores will be handled by the mod itself.'/>
+      </OptionChoice>
+      <OptionChoice name='cleanUpGalacticraft' displayName='Use Galacticraft Cleanup?' default='true' displayState='shown_dynamic' displayGroup='groupGalacticraft'>
+        <Description> Should Custom Ore Generation use the Substitution Pass to remove all instances of Galacticraft ore from the world?  If the mod's oregen can be turned off in its configuration, then it's recommended to do so, as the substitution pass can slow the game significantly.  If this option is disabled without disabling the mod's own ore generation, you'll end up with two oregens working at once, flooding the world with ore.  Enabled by default to ensure the ores are completely removed. </Description>
+        <Choice value=':= ?true' displayValue='Yes' description='Use the substitution pass to clean up Galacticraft ores.'/>
+        <Choice value=':= ?false' displayValue='No' description='Galacticraft ores do not need to be cleaned up by a substitution pass.'/>
+      </OptionChoice>
+
+      <!-- Copper Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='glctCopperDist'  displayState=':= if(?enableGalacticraft, "shown", "hidden")' displayGroup='groupGalacticraft'>
+          <Description> Controls how Copper is generated </Description>
+          <DisplayName>Galacticraft Copper</DisplayName>
+          <IfCondition condition=':= (?blockExists("GalacticraftCore:tile.gcBlockCore:5")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("GalacticraftCore:tile.gcBlockCore:5")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("GalacticraftCore:tile.gcBlockCore:5")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Copper is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='glctCopperFreq' default='1'  min='0' max='5' displayState=':= if(?enableGalacticraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupGalacticraft'>
+          <Description> Frequency multiplier for Galacticraft Copper distributions </Description>
+          <DisplayName>Galacticraft Copper Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='glctCopperSize' default='1'  min='0' max='5' displayState=':= if(?enableGalacticraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupGalacticraft'>
+          <Description> Size multiplier for Galacticraft Copper distributions </Description>
+          <DisplayName>Galacticraft Copper Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Copper Configuration UI Complete -->
+
+
+      <!-- Mountain Copper Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='glctMountainCopperDist'  displayState=':= if(?enableGalacticraft, "shown", "hidden")' displayGroup='groupGalacticraft'>
+          <Description> Controls how Mountain Copper is generated </Description>
+          <DisplayName>Galacticraft Mountain Copper</DisplayName>
+          <IfCondition condition=':= (?blockExists("GalacticraftCore:tile.gcBlockCore:5")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("GalacticraftCore:tile.gcBlockCore:5")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("GalacticraftCore:tile.gcBlockCore:5")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Copper is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='glctMountainCopperFreq' default='1'  min='0' max='5' displayState=':= if(?enableGalacticraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupGalacticraft'>
+          <Description> Frequency multiplier for Galacticraft Mountain Copper distributions </Description>
+          <DisplayName>Galacticraft Mountain Copper Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='glctMountainCopperSize' default='1'  min='0' max='5' displayState=':= if(?enableGalacticraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupGalacticraft'>
+          <Description> Size multiplier for Galacticraft Mountain Copper distributions </Description>
+          <DisplayName>Galacticraft Mountain Copper Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Copper Configuration UI Complete -->
+
+
+      <!-- Tin Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='glctTinDist'  displayState=':= if(?enableGalacticraft, "shown", "hidden")' displayGroup='groupGalacticraft'>
+          <Description> Controls how Tin is generated </Description>
+          <DisplayName>Galacticraft Tin</DisplayName>
+          <IfCondition condition=':= (?blockExists("GalacticraftCore:tile.gcBlockCore:6")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("GalacticraftCore:tile.gcBlockCore:6")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("GalacticraftCore:tile.gcBlockCore:6")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Tin is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='glctTinFreq' default='1'  min='0' max='5' displayState=':= if(?enableGalacticraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupGalacticraft'>
+          <Description> Frequency multiplier for Galacticraft Tin distributions </Description>
+          <DisplayName>Galacticraft Tin Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='glctTinSize' default='1'  min='0' max='5' displayState=':= if(?enableGalacticraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupGalacticraft'>
+          <Description> Size multiplier for Galacticraft Tin distributions </Description>
+          <DisplayName>Galacticraft Tin Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Tin Configuration UI Complete -->
+
+
+      <!-- Mountain Tin Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='glctMountainTinDist'  displayState=':= if(?enableGalacticraft, "shown", "hidden")' displayGroup='groupGalacticraft'>
+          <Description> Controls how Mountain Tin is generated </Description>
+          <DisplayName>Galacticraft Mountain Tin</DisplayName>
+          <IfCondition condition=':= (?blockExists("GalacticraftCore:tile.gcBlockCore:6")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("GalacticraftCore:tile.gcBlockCore:6")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("GalacticraftCore:tile.gcBlockCore:6")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Tin is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='glctMountainTinFreq' default='1'  min='0' max='5' displayState=':= if(?enableGalacticraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupGalacticraft'>
+          <Description> Frequency multiplier for Galacticraft Mountain Tin distributions </Description>
+          <DisplayName>Galacticraft Mountain Tin Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='glctMountainTinSize' default='1'  min='0' max='5' displayState=':= if(?enableGalacticraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupGalacticraft'>
+          <Description> Size multiplier for Galacticraft Mountain Tin distributions </Description>
+          <DisplayName>Galacticraft Mountain Tin Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Tin Configuration UI Complete -->
+
+
+      <!-- Aluminum Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='glctAluminumDist'  displayState=':= if(?enableGalacticraft, "shown", "hidden")' displayGroup='groupGalacticraft'>
+          <Description> Controls how Aluminum is generated </Description>
+          <DisplayName>Galacticraft Aluminum</DisplayName>
+          <IfCondition condition=':= (?blockExists("GalacticraftCore:tile.gcBlockCore:7")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("GalacticraftCore:tile.gcBlockCore:7")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("GalacticraftCore:tile.gcBlockCore:7")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Aluminum is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='glctAluminumFreq' default='1'  min='0' max='5' displayState=':= if(?enableGalacticraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupGalacticraft'>
+          <Description> Frequency multiplier for Galacticraft Aluminum distributions </Description>
+          <DisplayName>Galacticraft Aluminum Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='glctAluminumSize' default='1'  min='0' max='5' displayState=':= if(?enableGalacticraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupGalacticraft'>
+          <Description> Size multiplier for Galacticraft Aluminum distributions </Description>
+          <DisplayName>Galacticraft Aluminum Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Aluminum Configuration UI Complete -->
+
+
+      <!-- Mountain Aluminum Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='glctMountainAluminumDist'  displayState=':= if(?enableGalacticraft, "shown", "hidden")' displayGroup='groupGalacticraft'>
+          <Description> Controls how Mountain Aluminum is generated </Description>
+          <DisplayName>Galacticraft Mountain Aluminum</DisplayName>
+          <IfCondition condition=':= (?blockExists("GalacticraftCore:tile.gcBlockCore:7")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("GalacticraftCore:tile.gcBlockCore:7")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("GalacticraftCore:tile.gcBlockCore:7")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Aluminum is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='glctMountainAluminumFreq' default='1'  min='0' max='5' displayState=':= if(?enableGalacticraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupGalacticraft'>
+          <Description> Frequency multiplier for Galacticraft Mountain Aluminum distributions </Description>
+          <DisplayName>Galacticraft Mountain Aluminum Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='glctMountainAluminumSize' default='1'  min='0' max='5' displayState=':= if(?enableGalacticraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupGalacticraft'>
+          <Description> Size multiplier for Galacticraft Mountain Aluminum distributions </Description>
+          <DisplayName>Galacticraft Mountain Aluminum Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Aluminum Configuration UI Complete -->
+
+
+      <!-- Silicon Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='glctSiliconDist'  displayState=':= if(?enableGalacticraft, "shown", "hidden")' displayGroup='groupGalacticraft'>
+          <Description> Controls how Silicon is generated </Description>
+          <DisplayName>Galacticraft Silicon</DisplayName>
+          <IfCondition condition=':= (?blockExists("GalacticraftCore:tile.gcBlockCore:8")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("GalacticraftCore:tile.gcBlockCore:8")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("GalacticraftCore:tile.gcBlockCore:8")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Silicon is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='glctSiliconFreq' default='1'  min='0' max='5' displayState=':= if(?enableGalacticraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupGalacticraft'>
+          <Description> Frequency multiplier for Galacticraft Silicon distributions </Description>
+          <DisplayName>Galacticraft Silicon Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='glctSiliconSize' default='1'  min='0' max='5' displayState=':= if(?enableGalacticraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupGalacticraft'>
+          <Description> Size multiplier for Galacticraft Silicon distributions </Description>
+          <DisplayName>Galacticraft Silicon Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Silicon Configuration UI Complete -->
+
+
+      <!-- Mountain Silicon Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='glctMountainSiliconDist'  displayState=':= if(?enableGalacticraft, "shown", "hidden")' displayGroup='groupGalacticraft'>
+          <Description> Controls how Mountain Silicon is generated </Description>
+          <DisplayName>Galacticraft Mountain Silicon</DisplayName>
+          <IfCondition condition=':= (?blockExists("GalacticraftCore:tile.gcBlockCore:8")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("GalacticraftCore:tile.gcBlockCore:8")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("GalacticraftCore:tile.gcBlockCore:8")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Silicon is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='glctMountainSiliconFreq' default='1'  min='0' max='5' displayState=':= if(?enableGalacticraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupGalacticraft'>
+          <Description> Frequency multiplier for Galacticraft Mountain Silicon distributions </Description>
+          <DisplayName>Galacticraft Mountain Silicon Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='glctMountainSiliconSize' default='1'  min='0' max='5' displayState=':= if(?enableGalacticraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupGalacticraft'>
+          <Description> Size multiplier for Galacticraft Mountain Silicon distributions </Description>
+          <DisplayName>Galacticraft Mountain Silicon Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Silicon Configuration UI Complete -->
+
+    </ConfigSection>
+    <!-- Setup Screen Complete -->
+
+    <IfCondition condition=':= ?enableGalacticraft'>
+
+
+
+
+      <!-- Overworld Setup Beginning -->
+
+      <IfCondition condition=':= ?COGActive'>
+
+        <!-- Starting Original "Overworld" Block Removal -->
+
+        <IfCondition condition=':= ?cleanUpGalacticraft'>
+          <IfCondition condition=':= ?blockExists("minecraft:stone")'>
+            <Substitute name='glctOverworldBlockSubstitute0' block='minecraft:stone'>
+              <Description>
+                Replace vanilla-generated ore clusters.
+              </Description>
+              <Comment>
+                The global option  deferredPopulationRange must be
+                large enough to catch all ore  clusters (>= 32).
+              </Comment>
+              <Replaces block='GalacticraftCore:tile.gcBlockCore:5' weight='1.0' />
+              <Replaces block='GalacticraftCore:tile.gcBlockCore:6' weight='1.0' />
+              <Replaces block='GalacticraftCore:tile.gcBlockCore:7' weight='1.0' />
+              <Replaces block='GalacticraftCore:tile.gcBlockCore:8' weight='1.0' />
+            </Substitute>
+          </IfCondition>
+        </IfCondition>
+
+        <!-- Original "Overworld" Block Removal Complete -->
+
+        <!-- Adding blocks -->
+
+        <!-- Begin Copper Generation -->
+
+        <!-- Starting LayeredVeins Preset for Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= glctCopperDist = "LayeredVeins"'>
+            <Veins name='glctCopperVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60C17B40' drawBoundBox='false' boundBoxColor='0x60C17B40'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='GalacticraftCore:tile.gcBlockCore:5' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 2.294 * _default_ * glctCopperFreq ' range=':= 2.294 * _default_ * glctCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.148 * _default_ * glctCopperSize ' range=':= 1.148 * _default_ * glctCopperSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 40 ' range=':= 35 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.514 * _default_ ' range=':= 1.514 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * glctCopperSize ' range=':= _default_ * glctCopperSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.231 * _default_ * glctCopperSize ' range=':= 1.231 * _default_ * glctCopperSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Copper is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= glctCopperDist = "StrategicClouds"'>
+            <Cloud name='glctCopperCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60C17B40' drawBoundBox='false' boundBoxColor='0x60C17B40'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='GalacticraftCore:tile.gcBlockCore:5' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 1.618 * _default_ * glctCopperSize ' range=':= 1.618 * _default_ * glctCopperSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.618 * _default_ * glctCopperSize ' range=':= 1.618 * _default_ * glctCopperSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 2.619 * _default_ * glctCopperFreq ' range=':= 2.619 * _default_ * glctCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 40 ' range=':= 35 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='glctCopperHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60C17B40' drawBoundBox='false' boundBoxColor='0x60C17B40'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='GalacticraftCore:tile.gcBlockCore:5' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 2.294 * _default_ * glctCopperFreq  * 0.1 ' range=':= 2.294 * _default_ * glctCopperFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Copper is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= glctCopperDist = "Vanilla"'>
+            <StandardGen name='glctCopperStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60C17B40' drawBoundBox='false' boundBoxColor='0x60C17B40'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='GalacticraftCore:tile.gcBlockCore:5' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 4.667 * glctCopperSize ' range=':= 2.33 * glctCopperSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 16.0 * glctCopperFreq ' range=':= 8.0 * glctCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 40 ' range=':= 35 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Copper is complete. -->
+
+        <!-- End Copper Generation -->
+
+
+        <!-- Begin Mountain Copper Generation -->
+
+        <!-- Starting LayeredVeins Preset for Mountain Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= glctMountainCopperDist = "LayeredVeins"'>
+            <Veins name='glctMountainCopperVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60C17B40' drawBoundBox='false' boundBoxColor='0x60C17B40'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='GalacticraftCore:tile.gcBlockCore:5' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 2.294 * _default_ * glctMountainCopperFreq ' range=':= 2.294 * _default_ * glctMountainCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.148 * _default_ * glctMountainCopperSize ' range=':= 1.148 * _default_ * glctMountainCopperSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 184 ' range=':= 105 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.514 * _default_ ' range=':= 1.514 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * glctMountainCopperSize ' range=':= _default_ * glctMountainCopperSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.231 * _default_ * glctMountainCopperSize ' range=':= 1.231 * _default_ * glctMountainCopperSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Mountain Copper is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain  Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= glctMountainCopperDist = "StrategicClouds"'>
+            <Cloud name='glctMountainCopperCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60C17B40' drawBoundBox='false' boundBoxColor='0x60C17B40'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='GalacticraftCore:tile.gcBlockCore:5' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 1.618 * _default_ * glctMountainCopperSize ' range=':= 1.618 * _default_ * glctMountainCopperSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.618 * _default_ * glctMountainCopperSize ' range=':= 1.618 * _default_ * glctMountainCopperSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 2.619 * _default_ * glctMountainCopperFreq ' range=':= 2.619 * _default_ * glctMountainCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 184 ' range=':= 105 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='glctMountainCopperHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60C17B40' drawBoundBox='false' boundBoxColor='0x60C17B40'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='GalacticraftCore:tile.gcBlockCore:5' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 2.294 * _default_ * glctMountainCopperFreq  * 0.1 ' range=':= 2.294 * _default_ * glctMountainCopperFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Copper is  complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mountain Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= glctMountainCopperDist = "Vanilla"'>
+            <StandardGen name='glctMountainCopperStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60C17B40' drawBoundBox='false' boundBoxColor='0x60C17B40'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='GalacticraftCore:tile.gcBlockCore:5' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 4.667 * glctMountainCopperSize ' range=':= 2.33 * glctMountainCopperSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 16.0 * glctMountainCopperFreq ' range=':= 8.0 * glctMountainCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 184 ' range=':= 105 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Copper is complete. -->
+
+        <!-- End Mountain Copper Generation -->
+
+
+        <!-- Begin Tin Generation -->
+
+        <!-- Starting LayeredVeins Preset for Tin. -->
+        <ConfigSection>
+          <IfCondition condition=':= glctTinDist = "LayeredVeins"'>
+            <Veins name='glctTinVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60C9C9C9' drawBoundBox='false' boundBoxColor='0x60C9C9C9'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='GalacticraftCore:tile.gcBlockCore:6' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 2.196 * _default_ * glctTinFreq ' range=':= 2.196 * _default_ * glctTinFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.140 * _default_ * glctTinSize ' range=':= 1.140 * _default_ * glctTinSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 33 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.482 * _default_ ' range=':= 1.482 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * glctTinSize ' range=':= _default_ * glctTinSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.217 * _default_ * glctTinSize ' range=':= 1.217 * _default_ * glctTinSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Tin is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Tin. -->
+        <ConfigSection>
+          <IfCondition condition=':= glctTinDist = "StrategicClouds"'>
+            <Cloud name='glctTinCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60C9C9C9' drawBoundBox='false' boundBoxColor='0x60C9C9C9'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='GalacticraftCore:tile.gcBlockCore:6' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 1.583 * _default_ * glctTinSize ' range=':= 1.583 * _default_ * glctTinSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.583 * _default_ * glctTinSize ' range=':= 1.583 * _default_ * glctTinSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 2.507 * _default_ * glctTinFreq ' range=':= 2.507 * _default_ * glctTinFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 33 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='glctTinHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60C9C9C9' drawBoundBox='false' boundBoxColor='0x60C9C9C9'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='GalacticraftCore:tile.gcBlockCore:6' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 2.196 * _default_ * glctTinFreq  * 0.1 ' range=':= 2.196 * _default_ * glctTinFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Tin is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Tin. -->
+        <ConfigSection>
+          <IfCondition condition=':= glctTinDist = "Vanilla"'>
+            <StandardGen name='glctTinStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60C9C9C9' drawBoundBox='false' boundBoxColor='0x60C9C9C9'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='GalacticraftCore:tile.gcBlockCore:6' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 4.667 * glctTinSize ' range=':= 2.33 * glctTinSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 14.667 * glctTinFreq ' range=':= 7.33 * glctTinFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 33 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Tin is complete. -->
+
+        <!-- End Tin Generation -->
+
+
+        <!-- Begin Mountain Tin Generation -->
+
+        <!-- Starting LayeredVeins Preset for Mountain Tin. -->
+        <ConfigSection>
+          <IfCondition condition=':= glctMountainTinDist = "LayeredVeins"'>
+            <Veins name='glctMountainTinVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60C9C9C9' drawBoundBox='false' boundBoxColor='0x60C9C9C9'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='GalacticraftCore:tile.gcBlockCore:6' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 2.196 * _default_ * glctMountainTinFreq ' range=':= 2.196 * _default_ * glctMountainTinFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.140 * _default_ * glctMountainTinSize ' range=':= 1.140 * _default_ * glctMountainTinSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 163 ' range=':= 81 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.482 * _default_ ' range=':= 1.482 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * glctMountainTinSize ' range=':= _default_ * glctMountainTinSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.217 * _default_ * glctMountainTinSize ' range=':= 1.217 * _default_ * glctMountainTinSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Mountain Tin is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain Tin. -->
+        <ConfigSection>
+          <IfCondition condition=':= glctMountainTinDist = "StrategicClouds"'>
+            <Cloud name='glctMountainTinCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60C9C9C9' drawBoundBox='false' boundBoxColor='0x60C9C9C9'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='GalacticraftCore:tile.gcBlockCore:6' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 1.583 * _default_ * glctMountainTinSize ' range=':= 1.583 * _default_ * glctMountainTinSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.583 * _default_ * glctMountainTinSize ' range=':= 1.583 * _default_ * glctMountainTinSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 2.507 * _default_ * glctMountainTinFreq ' range=':= 2.507 * _default_ * glctMountainTinFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 163 ' range=':= 81 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='glctMountainTinHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60C9C9C9' drawBoundBox='false' boundBoxColor='0x60C9C9C9'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='GalacticraftCore:tile.gcBlockCore:6' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 2.196 * _default_ * glctMountainTinFreq  * 0.1 ' range=':= 2.196 * _default_ * glctMountainTinFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Tin is  complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mountain Tin. -->
+        <ConfigSection>
+          <IfCondition condition=':= glctMountainTinDist = "Vanilla"'>
+            <StandardGen name='glctMountainTinStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60C9C9C9' drawBoundBox='false' boundBoxColor='0x60C9C9C9'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='GalacticraftCore:tile.gcBlockCore:6' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 4.667 * glctMountainTinSize ' range=':= 2.33 * glctMountainTinSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 14.667 * glctMountainTinFreq ' range=':= 7.33 * glctMountainTinFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 163 ' range=':= 81 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Tin is complete. -->
+
+        <!-- End Mountain Tin Generation -->
+
+
+        <!-- Begin Aluminum Generation -->
+
+        <!-- Starting LayeredVeins Preset for Aluminum. -->
+        <ConfigSection>
+          <IfCondition condition=':= glctAluminumDist = "LayeredVeins"'>
+            <Veins name='glctAluminumVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x609CACB8' drawBoundBox='false' boundBoxColor='0x609CACB8'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='GalacticraftCore:tile.gcBlockCore:7' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.986 * _default_ * glctAluminumFreq ' range=':= 1.986 * _default_ * glctAluminumFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.121 * _default_ * glctAluminumSize ' range=':= 1.121 * _default_ * glctAluminumSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 25 ' range=':= 20 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.409 * _default_ ' range=':= 1.409 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * glctAluminumSize ' range=':= _default_ * glctAluminumSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.187 * _default_ * glctAluminumSize ' range=':= 1.187 * _default_ * glctAluminumSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Aluminum is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Aluminum. -->
+        <ConfigSection>
+          <IfCondition condition=':= glctAluminumDist = "StrategicClouds"'>
+            <Cloud name='glctAluminumCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x609CACB8' drawBoundBox='false' boundBoxColor='0x609CACB8'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='GalacticraftCore:tile.gcBlockCore:7' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 1.506 * _default_ * glctAluminumSize ' range=':= 1.506 * _default_ * glctAluminumSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.506 * _default_ * glctAluminumSize ' range=':= 1.506 * _default_ * glctAluminumSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 2.268 * _default_ * glctAluminumFreq ' range=':= 2.268 * _default_ * glctAluminumFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 25 ' range=':= 20 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='glctAluminumHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x609CACB8' drawBoundBox='false' boundBoxColor='0x609CACB8'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='GalacticraftCore:tile.gcBlockCore:7' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.986 * _default_ * glctAluminumFreq  * 0.1 ' range=':= 1.986 * _default_ * glctAluminumFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Aluminum is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Aluminum. -->
+        <ConfigSection>
+          <IfCondition condition=':= glctAluminumDist = "Vanilla"'>
+            <StandardGen name='glctAluminumStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x609CACB8' drawBoundBox='false' boundBoxColor='0x609CACB8'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='GalacticraftCore:tile.gcBlockCore:7' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 4.667 * glctAluminumSize ' range=':= 2.33 * glctAluminumSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 12.0 * glctAluminumFreq ' range=':= 6.0 * glctAluminumFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 25 ' range=':= 20 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Aluminum is complete. -->
+
+        <!-- End Aluminum Generation -->
+
+
+        <!-- Begin Mountain Aluminum Generation -->
+
+        <!-- Starting LayeredVeins Preset for Mountain  Aluminum. -->
+        <ConfigSection>
+          <IfCondition condition=':= glctMountainAluminumDist = "LayeredVeins"'>
+            <Veins name='glctMountainAluminumVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x609CACB8' drawBoundBox='false' boundBoxColor='0x609CACB8'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='GalacticraftCore:tile.gcBlockCore:7' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.986 * _default_ * glctMountainAluminumFreq ' range=':= 1.986 * _default_ * glctMountainAluminumFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.121 * _default_ * glctMountainAluminumSize ' range=':= 1.121 * _default_ * glctMountainAluminumSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 139 ' range=':= 60 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.409 * _default_ ' range=':= 1.409 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * glctMountainAluminumSize ' range=':= _default_ * glctMountainAluminumSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.187 * _default_ * glctMountainAluminumSize ' range=':= 1.187 * _default_ * glctMountainAluminumSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Mountain Aluminum is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain  Aluminum. -->
+        <ConfigSection>
+          <IfCondition condition=':= glctMountainAluminumDist = "StrategicClouds"'>
+            <Cloud name='glctMountainAluminumCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x609CACB8' drawBoundBox='false' boundBoxColor='0x609CACB8'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='GalacticraftCore:tile.gcBlockCore:7' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 1.506 * _default_ * glctMountainAluminumSize ' range=':= 1.506 * _default_ * glctMountainAluminumSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.506 * _default_ * glctMountainAluminumSize ' range=':= 1.506 * _default_ * glctMountainAluminumSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 2.268 * _default_ * glctMountainAluminumFreq ' range=':= 2.268 * _default_ * glctMountainAluminumFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 139 ' range=':= 60 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='glctMountainAluminumHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x609CACB8' drawBoundBox='false' boundBoxColor='0x609CACB8'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='GalacticraftCore:tile.gcBlockCore:7' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.986 * _default_ * glctMountainAluminumFreq  * 0.1 ' range=':= 1.986 * _default_ * glctMountainAluminumFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Aluminum is
+             complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mountain Aluminum. -->
+        <ConfigSection>
+          <IfCondition condition=':= glctMountainAluminumDist = "Vanilla"'>
+            <StandardGen name='glctMountainAluminumStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x609CACB8' drawBoundBox='false' boundBoxColor='0x609CACB8'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='GalacticraftCore:tile.gcBlockCore:7' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 4.667 * glctMountainAluminumSize ' range=':= 2.33 * glctMountainAluminumSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 12.0 * glctMountainAluminumFreq ' range=':= 6.0 * glctMountainAluminumFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 139 ' range=':= 60 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Aluminum is complete. -->
+
+        <!-- End Mountain Aluminum Generation -->
+
+
+        <!-- Begin Silicon Generation -->
+
+        <!-- Starting LayeredVeins Preset for Silicon. -->
+        <ConfigSection>
+          <IfCondition condition=':= glctSiliconDist = "LayeredVeins"'>
+            <Veins name='glctSiliconVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x602A2A2A' drawBoundBox='false' boundBoxColor='0x602A2A2A'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='GalacticraftCore:tile.gcBlockCore:8' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 0.811 * _default_ * glctSiliconFreq ' range=':= 0.811 * _default_ * glctSiliconFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0.966 * _default_ * glctSiliconSize ' range=':= 0.966 * _default_ * glctSiliconSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 15 ' range=':= 10 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 0.900 * _default_ ' range=':= 0.900 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * glctSiliconSize ' range=':= _default_ * glctSiliconSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.949 * _default_ * glctSiliconSize ' range=':= 0.949 * _default_ * glctSiliconSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Silicon is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Silicon. -->
+        <ConfigSection>
+          <IfCondition condition=':= glctSiliconDist = "StrategicClouds"'>
+            <Cloud name='glctSiliconCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x602A2A2A' drawBoundBox='false' boundBoxColor='0x602A2A2A'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='GalacticraftCore:tile.gcBlockCore:8' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 0.962 * _default_ * glctSiliconSize ' range=':= 0.962 * _default_ * glctSiliconSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.962 * _default_ * glctSiliconSize ' range=':= 0.962 * _default_ * glctSiliconSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.926 * _default_ * glctSiliconFreq ' range=':= 0.926 * _default_ * glctSiliconFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 15 ' range=':= 10 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='glctSiliconHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x602A2A2A' drawBoundBox='false' boundBoxColor='0x602A2A2A'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='GalacticraftCore:tile.gcBlockCore:8' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 0.811 * _default_ * glctSiliconFreq  * 0.1 ' range=':= 0.811 * _default_ * glctSiliconFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Silicon is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Silicon. -->
+        <ConfigSection>
+          <IfCondition condition=':= glctSiliconDist = "Vanilla"'>
+            <StandardGen name='glctSiliconStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x602A2A2A' drawBoundBox='false' boundBoxColor='0x602A2A2A'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='GalacticraftCore:tile.gcBlockCore:8' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 4.667 * glctSiliconSize ' range=':= 2.33 * glctSiliconSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 2.0 * glctSiliconFreq ' range=':= 1.0 * glctSiliconFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 15 ' range=':= 10 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Silicon is complete. -->
+
+        <!-- End Silicon Generation -->
+
+
+        <!-- Begin Mountain Silicon Generation -->
+
+        <!-- Starting LayeredVeins Preset for Mountain  Silicon. -->
+        <ConfigSection>
+          <IfCondition condition=':= glctMountainSiliconDist = "LayeredVeins"'>
+            <Veins name='glctMountainSiliconVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x602A2A2A' drawBoundBox='false' boundBoxColor='0x602A2A2A'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='GalacticraftCore:tile.gcBlockCore:8' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 0.811 * _default_ * glctMountainSiliconFreq ' range=':= 0.811 * _default_ * glctMountainSiliconFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0.966 * _default_ * glctMountainSiliconSize ' range=':= 0.966 * _default_ * glctMountainSiliconSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 109 ' range=':= 30 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 0.900 * _default_ ' range=':= 0.900 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * glctMountainSiliconSize ' range=':= _default_ * glctMountainSiliconSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.949 * _default_ * glctMountainSiliconSize ' range=':= 0.949 * _default_ * glctMountainSiliconSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Mountain Silicon is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain  Silicon. -->
+        <ConfigSection>
+          <IfCondition condition=':= glctMountainSiliconDist = "StrategicClouds"'>
+            <Cloud name='glctMountainSiliconCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x602A2A2A' drawBoundBox='false' boundBoxColor='0x602A2A2A'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='GalacticraftCore:tile.gcBlockCore:8' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 0.962 * _default_ * glctMountainSiliconSize ' range=':= 0.962 * _default_ * glctMountainSiliconSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.962 * _default_ * glctMountainSiliconSize ' range=':= 0.962 * _default_ * glctMountainSiliconSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.926 * _default_ * glctMountainSiliconFreq ' range=':= 0.926 * _default_ * glctMountainSiliconFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 109 ' range=':= 30 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='glctMountainSiliconHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x602A2A2A' drawBoundBox='false' boundBoxColor='0x602A2A2A'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='GalacticraftCore:tile.gcBlockCore:8' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 0.811 * _default_ * glctMountainSiliconFreq  * 0.1 ' range=':= 0.811 * _default_ * glctMountainSiliconFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Silicon is  complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mountain Silicon. -->
+        <ConfigSection>
+          <IfCondition condition=':= glctMountainSiliconDist = "Vanilla"'>
+            <StandardGen name='glctMountainSiliconStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x602A2A2A' drawBoundBox='false' boundBoxColor='0x602A2A2A'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='GalacticraftCore:tile.gcBlockCore:8' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 4.667 * glctMountainSiliconSize ' range=':= 2.33 * glctMountainSiliconSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 2.0 * glctMountainSiliconFreq ' range=':= 1.0 * glctMountainSiliconFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 109 ' range=':= 30 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Silicon is complete. -->
+
+        <!-- End Mountain Silicon Generation -->
+
+        <!-- Finished adding blocks -->
+
+      </IfCondition>
+      <!-- Overworld Setup Complete -->
+
+    </IfCondition>
+
+  </ConfigSection>
+  <!-- Configuration for Custom Ore Generation Complete! -->
+
+</IfModInstalled>
+<!-- The "Galacticraft" mod is now configured. -->
+
+
+
+
+
+<!-- =================================================================
+     This file was made using the Sprocket Advanced Configuration
+     Generator.  If you wish to make your own configurations for a mod
+     not currently supported by Custom Ore Generation, and you don't
+     want the hassle of writing XML, you can find the generator script
+     at its GitHub page: http://https://github.com/reteo/Sprocket
+     ================================================================= -->

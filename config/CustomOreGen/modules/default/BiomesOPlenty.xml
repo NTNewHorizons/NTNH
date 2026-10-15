@@ -1,0 +1,1520 @@
+<!-- =================================================================
+     Custom Ore Generation "Biomes O Plenty" Module: This
+     configuration covers amethyst, ruby, peridot, topaz, tanzanite,
+     malachite, sapphire, and amber.
+     ================================================================= -->
+
+
+<!-- A mod that adds a large collection of biomes to Minecraft.
+     Configuration by Reteo. -->
+
+
+
+
+<!-- Is the "Biomes O Plenty" mod on the system?  Let's find out! -->
+<IfModInstalled name="BiomesOPlenty">
+
+  <!-- Starting Configuration for Custom Ore Generation. -->
+  <ConfigSection>
+
+
+
+
+
+    <!-- Setup Screen Configuration -->
+    <ConfigSection>
+      <OptionDisplayGroup name='groupBiomesOPlenty' displayName='Biomes O Plenty' displayState='shown'>
+        <Description>
+          Distribution options for Biomes O Plenty Ores.
+        </Description>
+      </OptionDisplayGroup>
+      <OptionChoice name='enableBiomesOPlenty' displayName='Handle Biomes O Plenty Setup?' default='true' displayState='shown_dynamic' displayGroup='groupBiomesOPlenty'>
+        <Description> Should Custom Ore Generation handle Biomes O Plenty ore generation? </Description>
+        <Choice value=':= ?true' displayValue='Yes' description='Use Custom Ore Generation to handle Biomes O Plenty ores.'/>
+        <Choice value=':= ?false' displayValue='No' description='Biomes O Plenty ores will be handled by the mod itself.'/>
+      </OptionChoice>
+      <OptionChoice name='cleanUpBiomesOPlenty' displayName='Use Biomes O Plenty Cleanup?' default='true' displayState='shown_dynamic' displayGroup='groupBiomesOPlenty'>
+        <Description> Should Custom Ore Generation use the Substitution Pass to remove all instances of Biomes O Plenty ore from the world?  If the mod's oregen can be turned off in its configuration, then it's recommended to do so, as the substitution pass can slow the game significantly.  If this option is disabled without disabling the mod's own ore generation, you'll end up with two oregens working at once, flooding the world with ore.  Enabled by default to ensure the ores are completely removed. </Description>
+        <Choice value=':= ?true' displayValue='Yes' description='Use the substitution pass to clean up Biomes O Plenty ores.'/>
+        <Choice value=':= ?false' displayValue='No' description='Biomes O Plenty ores do not need to be cleaned up by a substitution pass.'/>
+      </OptionChoice>
+
+      <!-- Amethyst Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='boplAmethystDist'  displayState=':= if(?enableBiomesOPlenty, "shown", "hidden")' displayGroup='groupBiomesOPlenty'>
+          <Description> Controls how Amethyst is generated </Description>
+          <DisplayName>Biomes O Plenty Amethyst</DisplayName>
+          <IfCondition condition=':= (?blockExists("BiomesOPlenty:gemOre")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='PipeVeins' displayValue='Pipe Veins'>
+            <Description>
+              Short and sparsely filled compound veins containing one material inside another.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("BiomesOPlenty:gemOre")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("BiomesOPlenty:gemOre")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Amethyst is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='boplAmethystFreq' default='1'  min='0' max='5' displayState=':= if(?enableBiomesOPlenty, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupBiomesOPlenty'>
+          <Description> Frequency multiplier for Biomes O Plenty Amethyst distributions </Description>
+          <DisplayName>Biomes O Plenty Amethyst Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='boplAmethystSize' default='1'  min='0' max='5' displayState=':= if(?enableBiomesOPlenty, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupBiomesOPlenty'>
+          <Description> Size multiplier for Biomes O Plenty Amethyst distributions </Description>
+          <DisplayName>Biomes O Plenty Amethyst Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Amethyst Configuration UI Complete -->
+
+
+      <!-- Ruby Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='boplRubyDist'  displayState=':= if(?enableBiomesOPlenty, "shown", "hidden")' displayGroup='groupBiomesOPlenty'>
+          <Description> Controls how Ruby is generated </Description>
+          <DisplayName>Biomes O Plenty Ruby</DisplayName>
+          <IfCondition condition=':= (?blockExists("BiomesOPlenty:gemOre:2")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='PipeVeins' displayValue='Pipe Veins'>
+            <Description>
+              Short and sparsely filled compound veins containing one material inside another.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("BiomesOPlenty:gemOre:2")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("BiomesOPlenty:gemOre:2")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Ruby is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='boplRubyFreq' default='1'  min='0' max='5' displayState=':= if(?enableBiomesOPlenty, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupBiomesOPlenty'>
+          <Description> Frequency multiplier for Biomes O Plenty Ruby distributions </Description>
+          <DisplayName>Biomes O Plenty Ruby Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='boplRubySize' default='1'  min='0' max='5' displayState=':= if(?enableBiomesOPlenty, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupBiomesOPlenty'>
+          <Description> Size multiplier for Biomes O Plenty Ruby distributions </Description>
+          <DisplayName>Biomes O Plenty Ruby Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Ruby Configuration UI Complete -->
+
+
+      <!-- Peridot Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='boplPeridotDist'  displayState=':= if(?enableBiomesOPlenty, "shown", "hidden")' displayGroup='groupBiomesOPlenty'>
+          <Description> Controls how Peridot is generated </Description>
+          <DisplayName>Biomes O Plenty Peridot</DisplayName>
+          <IfCondition condition=':= (?blockExists("BiomesOPlenty:gemOre:4")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='PipeVeins' displayValue='Pipe Veins'>
+            <Description>
+              Short and sparsely filled compound veins containing one material inside another.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("BiomesOPlenty:gemOre:4")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("BiomesOPlenty:gemOre:4")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Peridot is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='boplPeridotFreq' default='1'  min='0' max='5' displayState=':= if(?enableBiomesOPlenty, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupBiomesOPlenty'>
+          <Description> Frequency multiplier for Biomes O Plenty Peridot distributions </Description>
+          <DisplayName>Biomes O Plenty Peridot Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='boplPeridotSize' default='1'  min='0' max='5' displayState=':= if(?enableBiomesOPlenty, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupBiomesOPlenty'>
+          <Description> Size multiplier for Biomes O Plenty Peridot distributions </Description>
+          <DisplayName>Biomes O Plenty Peridot Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Peridot Configuration UI Complete -->
+
+
+      <!-- Topaz Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='boplTopazDist'  displayState=':= if(?enableBiomesOPlenty, "shown", "hidden")' displayGroup='groupBiomesOPlenty'>
+          <Description> Controls how Topaz is generated </Description>
+          <DisplayName>Biomes O Plenty Topaz</DisplayName>
+          <IfCondition condition=':= (?blockExists("BiomesOPlenty:gemOre:6")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='PipeVeins' displayValue='Pipe Veins'>
+            <Description>
+              Short and sparsely filled compound veins containing one material inside another.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("BiomesOPlenty:gemOre:6")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("BiomesOPlenty:gemOre:6")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Topaz is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='boplTopazFreq' default='1'  min='0' max='5' displayState=':= if(?enableBiomesOPlenty, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupBiomesOPlenty'>
+          <Description> Frequency multiplier for Biomes O Plenty Topaz distributions </Description>
+          <DisplayName>Biomes O Plenty Topaz Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='boplTopazSize' default='1'  min='0' max='5' displayState=':= if(?enableBiomesOPlenty, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupBiomesOPlenty'>
+          <Description> Size multiplier for Biomes O Plenty Topaz distributions </Description>
+          <DisplayName>Biomes O Plenty Topaz Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Topaz Configuration UI Complete -->
+
+
+      <!-- Tanzanite Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='boplTanzaniteDist'  displayState=':= if(?enableBiomesOPlenty, "shown", "hidden")' displayGroup='groupBiomesOPlenty'>
+          <Description> Controls how Tanzanite is generated </Description>
+          <DisplayName>Biomes O Plenty Tanzanite</DisplayName>
+          <IfCondition condition=':= (?blockExists("BiomesOPlenty:gemOre:8")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='PipeVeins' displayValue='Pipe Veins'>
+            <Description>
+              Short and sparsely filled compound veins containing one material inside another.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("BiomesOPlenty:gemOre:8")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("BiomesOPlenty:gemOre:8")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Tanzanite is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='boplTanzaniteFreq' default='1'  min='0' max='5' displayState=':= if(?enableBiomesOPlenty, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupBiomesOPlenty'>
+          <Description> Frequency multiplier for Biomes O Plenty Tanzanite distributions </Description>
+          <DisplayName>Biomes O Plenty Tanzanite Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='boplTanzaniteSize' default='1'  min='0' max='5' displayState=':= if(?enableBiomesOPlenty, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupBiomesOPlenty'>
+          <Description> Size multiplier for Biomes O Plenty Tanzanite distributions </Description>
+          <DisplayName>Biomes O Plenty Tanzanite Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Tanzanite Configuration UI Complete -->
+
+
+      <!-- Malachite Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='boplMalachiteDist'  displayState=':= if(?enableBiomesOPlenty, "shown", "hidden")' displayGroup='groupBiomesOPlenty'>
+          <Description> Controls how Malachite is generated </Description>
+          <DisplayName>Biomes O Plenty Malachite</DisplayName>
+          <IfCondition condition=':= (?blockExists("BiomesOPlenty:gemOre:10")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='PipeVeins' displayValue='Pipe Veins'>
+            <Description>
+              Short and sparsely filled compound veins containing one material inside another.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("BiomesOPlenty:gemOre:10")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("BiomesOPlenty:gemOre:10")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Malachite is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='boplMalachiteFreq' default='1'  min='0' max='5' displayState=':= if(?enableBiomesOPlenty, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupBiomesOPlenty'>
+          <Description> Frequency multiplier for Biomes O Plenty Malachite distributions </Description>
+          <DisplayName>Biomes O Plenty Malachite Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='boplMalachiteSize' default='1'  min='0' max='5' displayState=':= if(?enableBiomesOPlenty, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupBiomesOPlenty'>
+          <Description> Size multiplier for Biomes O Plenty Malachite distributions </Description>
+          <DisplayName>Biomes O Plenty Malachite Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Malachite Configuration UI Complete -->
+
+
+      <!-- Sapphire Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='boplSapphireDist'  displayState=':= if(?enableBiomesOPlenty, "shown", "hidden")' displayGroup='groupBiomesOPlenty'>
+          <Description> Controls how Sapphire is generated </Description>
+          <DisplayName>Biomes O Plenty Sapphire</DisplayName>
+          <IfCondition condition=':= (?blockExists("BiomesOPlenty:gemOre:12")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='PipeVeins' displayValue='Pipe Veins'>
+            <Description>
+              Short and sparsely filled compound veins containing one material inside another.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("BiomesOPlenty:gemOre:12")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("BiomesOPlenty:gemOre:12")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Sapphire is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='boplSapphireFreq' default='1'  min='0' max='5' displayState=':= if(?enableBiomesOPlenty, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupBiomesOPlenty'>
+          <Description> Frequency multiplier for Biomes O Plenty Sapphire distributions </Description>
+          <DisplayName>Biomes O Plenty Sapphire Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='boplSapphireSize' default='1'  min='0' max='5' displayState=':= if(?enableBiomesOPlenty, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupBiomesOPlenty'>
+          <Description> Size multiplier for Biomes O Plenty Sapphire distributions </Description>
+          <DisplayName>Biomes O Plenty Sapphire Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Sapphire Configuration UI Complete -->
+
+
+      <!-- Amber Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='boplAmberDist'  displayState=':= if(?enableBiomesOPlenty, "shown", "hidden")' displayGroup='groupBiomesOPlenty'>
+          <Description> Controls how Amber is generated </Description>
+          <DisplayName>Biomes O Plenty Amber</DisplayName>
+          <IfCondition condition=':= (?blockExists("BiomesOPlenty:gemOre:14")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='PipeVeins' displayValue='Pipe Veins'>
+            <Description>
+              Short and sparsely filled compound veins containing one material inside another.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("BiomesOPlenty:gemOre:14")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("BiomesOPlenty:gemOre:14")) &amp; (?blockExists("minecraft:lava")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Amber is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='boplAmberFreq' default='1'  min='0' max='5' displayState=':= if(?enableBiomesOPlenty, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupBiomesOPlenty'>
+          <Description> Frequency multiplier for Biomes O Plenty Amber distributions </Description>
+          <DisplayName>Biomes O Plenty Amber Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='boplAmberSize' default='1'  min='0' max='5' displayState=':= if(?enableBiomesOPlenty, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupBiomesOPlenty'>
+          <Description> Size multiplier for Biomes O Plenty Amber distributions </Description>
+          <DisplayName>Biomes O Plenty Amber Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Amber Configuration UI Complete -->
+
+    </ConfigSection>
+    <!-- Setup Screen Complete -->
+
+    <IfCondition condition=':= ?enableBiomesOPlenty'>
+
+
+
+
+      <!-- Overworld Setup Beginning -->
+
+      <IfCondition condition=':= ?COGActive'>
+
+        <!-- Starting Original "Overworld" Block Removal -->
+
+        <IfCondition condition=':= ?cleanUpBiomesOPlenty'>
+          <IfCondition condition=':= ?blockExists("minecraft:stone")'>
+            <Substitute name='boplOverworldBlockSubstitute0' block='minecraft:stone'>
+              <Description>
+                Replace vanilla-generated ore clusters.
+              </Description>
+              <Comment>
+                The global option  deferredPopulationRange must be
+                large enough to catch all ore  clusters (>= 32).
+              </Comment>
+              <Replaces block='BiomesOPlenty:gemOre:10' weight='1.0' />
+              <Replaces block='BiomesOPlenty:gemOre:12' weight='1.0' />
+              <Replaces block='BiomesOPlenty:gemOre:14' weight='1.0' />
+              <Replaces block='BiomesOPlenty:gemOre:2' weight='1.0' />
+              <Replaces block='BiomesOPlenty:gemOre:4' weight='1.0' />
+              <Replaces block='BiomesOPlenty:gemOre:6' weight='1.0' />
+              <Replaces block='BiomesOPlenty:gemOre:8' weight='1.0' />
+            </Substitute>
+          </IfCondition>
+        </IfCondition>
+
+        <!-- Original "Overworld" Block Removal Complete -->
+
+        <!-- Adding blocks -->
+
+        <!-- Begin Ruby Generation -->
+
+        <!-- Starting PipeVeins Preset for Ruby. -->
+        <ConfigSection>
+          <IfCondition condition=':= boplRubyDist = "PipeVeins"'>
+            <Veins name='boplRubyVeins'  inherits='PresetPipeVeins' branchType='Bezier' seed='0x706D' drawWireframe='true' wireframeColor='0x60C60031' drawBoundBox='false' boundBoxColor='0x60C60031'>
+              <Description>
+                Short sparsely filled veins  sloping up from near the
+                bottom  of the map.
+              </Description>
+              <OreBlock block='BiomesOPlenty:gemOre:2' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Sandy'  />
+              <Setting name='MotherlodeFrequency' avg=':= 0.270 * _default_ * boplRubyFreq ' range=':= 0.270 * _default_ * boplRubyFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * boplRubySize ' range=':= 0 * _default_ * boplRubySize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 19 ' range=':= 13 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 0.520 * _default_ ' range=':= 0.520 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * boplRubySize ' range=':= _default_ * boplRubySize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.721 * _default_ * boplRubySize ' range=':= 0.721 * _default_ * boplRubySize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+
+            <!-- Configuring contained material. -->
+            <Veins name='boplRubyVeinsPipe'  inherits='boplRubyVeins' branchType='Bezier' seed='0x706D' drawWireframe='true' wireframeColor='0x60C60031' drawBoundBox='false' boundBoxColor='0x60C60031'>
+              <OreBlock block='minecraft:lava' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Replaces block='BiomesOPlenty:gemOre:2' weight='1.0' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * boplRubySize  * 0.5 ' range=':= 0 * _default_ * boplRubySize  * 0.5 ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.721 * _default_ * boplRubySize  * 0.5 ' range=':= 0.721 * _default_ * boplRubySize  * 0.5 ' type='normal' />
+              <Setting name='OreDensity' avg=':= 1.0 ' range=':= 0 ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- PipeVeins Preset for Ruby is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Ruby. -->
+        <ConfigSection>
+          <IfCondition condition=':= boplRubyDist = "StrategicClouds"'>
+            <Cloud name='boplRubyCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60C60031' drawBoundBox='false' boundBoxColor='0x60C60031'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='BiomesOPlenty:gemOre:2' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Sandy'  />
+              <Setting name='CloudRadius' avg=':= 0.449 * _default_ * boplRubySize ' range=':= 0.449 * _default_ * boplRubySize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.449 * _default_ * boplRubySize ' range=':= 0.449 * _default_ * boplRubySize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.202 * _default_ * boplRubyFreq ' range=':= 0.202 * _default_ * boplRubyFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 19 ' range=':= 13 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='boplRubyHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60C60031' drawBoundBox='false' boundBoxColor='0x60C60031'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='BiomesOPlenty:gemOre:2' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 0.270 * _default_ * boplRubyFreq  * 0.1 ' range=':= 0.270 * _default_ * boplRubyFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Ruby is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Ruby. -->
+        <ConfigSection>
+          <IfCondition condition=':= boplRubyDist = "Vanilla"'>
+            <StandardGen name='boplRubyStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60C60031' drawBoundBox='false' boundBoxColor='0x60C60031'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='BiomesOPlenty:gemOre:2' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Sandy'  />
+              <Setting name='Size' avg=':= 0.667 * boplRubySize ' range=':= 0.33 * boplRubySize ' type='normal' />
+              <Setting name='Frequency' avg=':= 0.667 * boplRubyFreq ' range=':= 0.33 * boplRubyFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 19 ' range=':= 13 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Ruby is complete. -->
+
+        <!-- End Ruby Generation -->
+
+
+        <!-- Begin Peridot Generation -->
+
+        <!-- Starting PipeVeins Preset for Peridot. -->
+        <ConfigSection>
+          <IfCondition condition=':= boplPeridotDist = "PipeVeins"'>
+            <Veins name='boplPeridotVeins'  inherits='PresetPipeVeins' branchType='Bezier' seed='0xA6AC' drawWireframe='true' wireframeColor='0x60076855' drawBoundBox='false' boundBoxColor='0x60076855'>
+              <Description>
+                Short sparsely filled veins  sloping up from near the
+                bottom  of the map.
+              </Description>
+              <OreBlock block='BiomesOPlenty:gemOre:4' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Plains'  />
+              <Setting name='MotherlodeFrequency' avg=':= 0.270 * _default_ * boplPeridotFreq ' range=':= 0.270 * _default_ * boplPeridotFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * boplPeridotSize ' range=':= 0 * _default_ * boplPeridotSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 19 ' range=':= 13 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 0.520 * _default_ ' range=':= 0.520 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * boplPeridotSize ' range=':= _default_ * boplPeridotSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.721 * _default_ * boplPeridotSize ' range=':= 0.721 * _default_ * boplPeridotSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+
+            <!-- Configuring contained material. -->
+            <Veins name='boplPeridotVeinsPipe'  inherits='boplPeridotVeins' branchType='Bezier' seed='0xA6AC' drawWireframe='true' wireframeColor='0x60076855' drawBoundBox='false' boundBoxColor='0x60076855'>
+              <OreBlock block='minecraft:lava' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Replaces block='BiomesOPlenty:gemOre:4' weight='1.0' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * boplPeridotSize  * 0.5 ' range=':= 0 * _default_ * boplPeridotSize  * 0.5 ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.721 * _default_ * boplPeridotSize  * 0.5 ' range=':= 0.721 * _default_ * boplPeridotSize  * 0.5 ' type='normal' />
+              <Setting name='OreDensity' avg=':= 1.0 ' range=':= 0 ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- PipeVeins Preset for Peridot is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Peridot. -->
+        <ConfigSection>
+          <IfCondition condition=':= boplPeridotDist = "StrategicClouds"'>
+            <Cloud name='boplPeridotCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60076855' drawBoundBox='false' boundBoxColor='0x60076855'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='BiomesOPlenty:gemOre:4' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Plains'  />
+              <Setting name='CloudRadius' avg=':= 0.449 * _default_ * boplPeridotSize ' range=':= 0.449 * _default_ * boplPeridotSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.449 * _default_ * boplPeridotSize ' range=':= 0.449 * _default_ * boplPeridotSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.202 * _default_ * boplPeridotFreq ' range=':= 0.202 * _default_ * boplPeridotFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 19 ' range=':= 13 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='boplPeridotHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60076855' drawBoundBox='false' boundBoxColor='0x60076855'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='BiomesOPlenty:gemOre:4' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 0.270 * _default_ * boplPeridotFreq  * 0.1 ' range=':= 0.270 * _default_ * boplPeridotFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Peridot is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Peridot. -->
+        <ConfigSection>
+          <IfCondition condition=':= boplPeridotDist = "Vanilla"'>
+            <StandardGen name='boplPeridotStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60076855' drawBoundBox='false' boundBoxColor='0x60076855'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='BiomesOPlenty:gemOre:4' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Plains'  />
+              <Setting name='Size' avg=':= 0.667 * boplPeridotSize ' range=':= 0.33 * boplPeridotSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 0.667 * boplPeridotFreq ' range=':= 0.33 * boplPeridotFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 19 ' range=':= 13 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Peridot is complete. -->
+
+        <!-- End Peridot Generation -->
+
+
+        <!-- Begin Topaz Generation -->
+
+        <!-- Starting PipeVeins Preset for Topaz. -->
+        <ConfigSection>
+          <IfCondition condition=':= boplTopazDist = "PipeVeins"'>
+            <Veins name='boplTopazVeins'  inherits='PresetPipeVeins' branchType='Bezier' seed='0xB7E1' drawWireframe='true' wireframeColor='0x60D95A03' drawBoundBox='false' boundBoxColor='0x60D95A03'>
+              <Description>
+                Short sparsely filled veins  sloping up from near the
+                bottom  of the map.
+              </Description>
+              <OreBlock block='BiomesOPlenty:gemOre:6' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Jungle'  />
+              <Setting name='MotherlodeFrequency' avg=':= 0.270 * _default_ * boplTopazFreq ' range=':= 0.270 * _default_ * boplTopazFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * boplTopazSize ' range=':= 0 * _default_ * boplTopazSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 19 ' range=':= 13 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 0.520 * _default_ ' range=':= 0.520 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * boplTopazSize ' range=':= _default_ * boplTopazSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.721 * _default_ * boplTopazSize ' range=':= 0.721 * _default_ * boplTopazSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+
+            <!-- Configuring contained material. -->
+            <Veins name='boplTopazVeinsPipe'  inherits='boplTopazVeins' branchType='Bezier' seed='0xB7E1' drawWireframe='true' wireframeColor='0x60D95A03' drawBoundBox='false' boundBoxColor='0x60D95A03'>
+              <OreBlock block='minecraft:lava' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Replaces block='BiomesOPlenty:gemOre:6' weight='1.0' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * boplTopazSize  * 0.5 ' range=':= 0 * _default_ * boplTopazSize  * 0.5 ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.721 * _default_ * boplTopazSize  * 0.5 ' range=':= 0.721 * _default_ * boplTopazSize  * 0.5 ' type='normal' />
+              <Setting name='OreDensity' avg=':= 1.0 ' range=':= 0 ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- PipeVeins Preset for Topaz is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Topaz. -->
+        <ConfigSection>
+          <IfCondition condition=':= boplTopazDist = "StrategicClouds"'>
+            <Cloud name='boplTopazCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60D95A03' drawBoundBox='false' boundBoxColor='0x60D95A03'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='BiomesOPlenty:gemOre:6' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Jungle'  />
+              <Setting name='CloudRadius' avg=':= 0.449 * _default_ * boplTopazSize ' range=':= 0.449 * _default_ * boplTopazSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.449 * _default_ * boplTopazSize ' range=':= 0.449 * _default_ * boplTopazSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.202 * _default_ * boplTopazFreq ' range=':= 0.202 * _default_ * boplTopazFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 19 ' range=':= 13 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='boplTopazHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60D95A03' drawBoundBox='false' boundBoxColor='0x60D95A03'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='BiomesOPlenty:gemOre:6' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 0.270 * _default_ * boplTopazFreq  * 0.1 ' range=':= 0.270 * _default_ * boplTopazFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Topaz is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Topaz. -->
+        <ConfigSection>
+          <IfCondition condition=':= boplTopazDist = "Vanilla"'>
+            <StandardGen name='boplTopazStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60D95A03' drawBoundBox='false' boundBoxColor='0x60D95A03'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='BiomesOPlenty:gemOre:6' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Jungle'  />
+              <Setting name='Size' avg=':= 0.667 * boplTopazSize ' range=':= 0.33 * boplTopazSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 0.667 * boplTopazFreq ' range=':= 0.33 * boplTopazFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 19 ' range=':= 13 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Topaz is complete. -->
+
+        <!-- End Topaz Generation -->
+
+
+        <!-- Begin Tanzanite Generation -->
+
+        <!-- Starting PipeVeins Preset for Tanzanite. -->
+        <ConfigSection>
+          <IfCondition condition=':= boplTanzaniteDist = "PipeVeins"'>
+            <Veins name='boplTanzaniteVeins'  inherits='PresetPipeVeins' branchType='Bezier' seed='0xA51A' drawWireframe='true' wireframeColor='0x607701B9' drawBoundBox='false' boundBoxColor='0x607701B9'>
+              <Description>
+                Short sparsely filled veins  sloping up from near the
+                bottom  of the map.
+              </Description>
+              <OreBlock block='BiomesOPlenty:gemOre:8' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Snowy'  />
+              <Biome name='Alps'  weight='-1' />
+              <Biome name='Alps Forest'  weight='-1' />
+              <Setting name='MotherlodeFrequency' avg=':= 0.270 * _default_ * boplTanzaniteFreq ' range=':= 0.270 * _default_ * boplTanzaniteFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * boplTanzaniteSize ' range=':= 0 * _default_ * boplTanzaniteSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 19 ' range=':= 13 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 0.520 * _default_ ' range=':= 0.520 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * boplTanzaniteSize ' range=':= _default_ * boplTanzaniteSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.721 * _default_ * boplTanzaniteSize ' range=':= 0.721 * _default_ * boplTanzaniteSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+
+            <!-- Configuring contained material. -->
+            <Veins name='boplTanzaniteVeinsPipe'  inherits='boplTanzaniteVeins' branchType='Bezier' seed='0xA51A' drawWireframe='true' wireframeColor='0x607701B9' drawBoundBox='false' boundBoxColor='0x607701B9'>
+              <OreBlock block='minecraft:lava' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Replaces block='BiomesOPlenty:gemOre:8' weight='1.0' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * boplTanzaniteSize  * 0.5 ' range=':= 0 * _default_ * boplTanzaniteSize  * 0.5 ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.721 * _default_ * boplTanzaniteSize  * 0.5 ' range=':= 0.721 * _default_ * boplTanzaniteSize  * 0.5 ' type='normal' />
+              <Setting name='OreDensity' avg=':= 1.0 ' range=':= 0 ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- PipeVeins Preset for Tanzanite is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Tanzanite. -->
+        <ConfigSection>
+          <IfCondition condition=':= boplTanzaniteDist = "StrategicClouds"'>
+            <Cloud name='boplTanzaniteCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x607701B9' drawBoundBox='false' boundBoxColor='0x607701B9'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='BiomesOPlenty:gemOre:8' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Snowy'  />
+              <Biome name='Alps'  weight='-1' />
+              <Biome name='Alps Forest'  weight='-1' />
+              <Setting name='CloudRadius' avg=':= 0.449 * _default_ * boplTanzaniteSize ' range=':= 0.449 * _default_ * boplTanzaniteSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.449 * _default_ * boplTanzaniteSize ' range=':= 0.449 * _default_ * boplTanzaniteSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.202 * _default_ * boplTanzaniteFreq ' range=':= 0.202 * _default_ * boplTanzaniteFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 19 ' range=':= 13 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='boplTanzaniteHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x607701B9' drawBoundBox='false' boundBoxColor='0x607701B9'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='BiomesOPlenty:gemOre:8' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 0.270 * _default_ * boplTanzaniteFreq  * 0.1 ' range=':= 0.270 * _default_ * boplTanzaniteFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Tanzanite is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Tanzanite. -->
+        <ConfigSection>
+          <IfCondition condition=':= boplTanzaniteDist = "Vanilla"'>
+            <StandardGen name='boplTanzaniteStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x607701B9' drawBoundBox='false' boundBoxColor='0x607701B9'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='BiomesOPlenty:gemOre:8' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Snowy'  />
+              <Biome name='Alps'  weight='-1' />
+              <Biome name='Alps Forest'  weight='-1' />
+              <Setting name='Size' avg=':= 0.667 * boplTanzaniteSize ' range=':= 0.33 * boplTanzaniteSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 0.667 * boplTanzaniteFreq ' range=':= 0.33 * boplTanzaniteFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 19 ' range=':= 13 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Tanzanite is complete. -->
+
+        <!-- End Tanzanite Generation -->
+
+
+        <!-- Begin Malachite Generation -->
+
+        <!-- Starting PipeVeins Preset for Malachite. -->
+        <ConfigSection>
+          <IfCondition condition=':= boplMalachiteDist = "PipeVeins"'>
+            <Veins name='boplMalachiteVeins'  inherits='PresetPipeVeins' branchType='Bezier' seed='0x5A38' drawWireframe='true' wireframeColor='0x60109D81' drawBoundBox='false' boundBoxColor='0x60109D81'>
+              <Description>
+                Short sparsely filled veins  sloping up from near the
+                bottom  of the map.
+              </Description>
+              <OreBlock block='BiomesOPlenty:gemOre:10' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Swamp'  />
+              <Setting name='MotherlodeFrequency' avg=':= 0.270 * _default_ * boplMalachiteFreq ' range=':= 0.270 * _default_ * boplMalachiteFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * boplMalachiteSize ' range=':= 0 * _default_ * boplMalachiteSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 19 ' range=':= 13 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 0.520 * _default_ ' range=':= 0.520 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * boplMalachiteSize ' range=':= _default_ * boplMalachiteSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.721 * _default_ * boplMalachiteSize ' range=':= 0.721 * _default_ * boplMalachiteSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+
+            <!-- Configuring contained material. -->
+            <Veins name='boplMalachiteVeinsPipe'  inherits='boplMalachiteVeins' branchType='Bezier' seed='0x5A38' drawWireframe='true' wireframeColor='0x60109D81' drawBoundBox='false' boundBoxColor='0x60109D81'>
+              <OreBlock block='minecraft:lava' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Replaces block='BiomesOPlenty:gemOre:10' weight='1.0' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * boplMalachiteSize  * 0.5 ' range=':= 0 * _default_ * boplMalachiteSize  * 0.5 ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.721 * _default_ * boplMalachiteSize  * 0.5 ' range=':= 0.721 * _default_ * boplMalachiteSize  * 0.5 ' type='normal' />
+              <Setting name='OreDensity' avg=':= 1.0 ' range=':= 0 ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- PipeVeins Preset for Malachite is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Malachite. -->
+        <ConfigSection>
+          <IfCondition condition=':= boplMalachiteDist = "StrategicClouds"'>
+            <Cloud name='boplMalachiteCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60109D81' drawBoundBox='false' boundBoxColor='0x60109D81'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='BiomesOPlenty:gemOre:10' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Swamp'  />
+              <Setting name='CloudRadius' avg=':= 0.449 * _default_ * boplMalachiteSize ' range=':= 0.449 * _default_ * boplMalachiteSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.449 * _default_ * boplMalachiteSize ' range=':= 0.449 * _default_ * boplMalachiteSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.202 * _default_ * boplMalachiteFreq ' range=':= 0.202 * _default_ * boplMalachiteFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 19 ' range=':= 13 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='boplMalachiteHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60109D81' drawBoundBox='false' boundBoxColor='0x60109D81'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='BiomesOPlenty:gemOre:10' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 0.270 * _default_ * boplMalachiteFreq  * 0.1 ' range=':= 0.270 * _default_ * boplMalachiteFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Malachite is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Malachite. -->
+        <ConfigSection>
+          <IfCondition condition=':= boplMalachiteDist = "Vanilla"'>
+            <StandardGen name='boplMalachiteStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60109D81' drawBoundBox='false' boundBoxColor='0x60109D81'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='BiomesOPlenty:gemOre:10' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Swamp'  />
+              <Setting name='Size' avg=':= 0.667 * boplMalachiteSize ' range=':= 0.33 * boplMalachiteSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 0.667 * boplMalachiteFreq ' range=':= 0.33 * boplMalachiteFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 19 ' range=':= 13 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Malachite is complete. -->
+
+        <!-- End Malachite Generation -->
+
+
+        <!-- Begin Sapphire Generation -->
+
+        <!-- Starting PipeVeins Preset for Sapphire. -->
+        <ConfigSection>
+          <IfCondition condition=':= boplSapphireDist = "PipeVeins"'>
+            <Veins name='boplSapphireVeins'  inherits='PresetPipeVeins' branchType='Bezier' seed='0x7474' drawWireframe='true' wireframeColor='0x603494C3' drawBoundBox='false' boundBoxColor='0x603494C3'>
+              <Description>
+                Short sparsely filled veins  sloping up from near the
+                bottom  of the map.
+              </Description>
+              <OreBlock block='BiomesOPlenty:gemOre:12' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='Coral Reef'  />
+              <Biome name='Crag'  />
+              <Biome name='Hot Springs'  />
+              <Biome name='Kelp Forest'  />
+              <Biome name='Mangrove'  />
+              <Biome name='Sacred Springs'  />
+              <Biome name='Tropics'  />
+              <Setting name='MotherlodeFrequency' avg=':= 0.270 * _default_ * boplSapphireFreq ' range=':= 0.270 * _default_ * boplSapphireFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * boplSapphireSize ' range=':= 0 * _default_ * boplSapphireSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 19 ' range=':= 13 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 0.520 * _default_ ' range=':= 0.520 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * boplSapphireSize ' range=':= _default_ * boplSapphireSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.721 * _default_ * boplSapphireSize ' range=':= 0.721 * _default_ * boplSapphireSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+
+            <!-- Configuring contained material. -->
+            <Veins name='boplSapphireVeinsPipe'  inherits='boplSapphireVeins' branchType='Bezier' seed='0x7474' drawWireframe='true' wireframeColor='0x603494C3' drawBoundBox='false' boundBoxColor='0x603494C3'>
+              <OreBlock block='minecraft:lava' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Replaces block='BiomesOPlenty:gemOre:12' weight='1.0' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * boplSapphireSize  * 0.5 ' range=':= 0 * _default_ * boplSapphireSize  * 0.5 ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.721 * _default_ * boplSapphireSize  * 0.5 ' range=':= 0.721 * _default_ * boplSapphireSize  * 0.5 ' type='normal' />
+              <Setting name='OreDensity' avg=':= 1.0 ' range=':= 0 ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- PipeVeins Preset for Sapphire is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Sapphire. -->
+        <ConfigSection>
+          <IfCondition condition=':= boplSapphireDist = "StrategicClouds"'>
+            <Cloud name='boplSapphireCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x603494C3' drawBoundBox='false' boundBoxColor='0x603494C3'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='BiomesOPlenty:gemOre:12' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='Coral Reef'  />
+              <Biome name='Crag'  />
+              <Biome name='Hot Springs'  />
+              <Biome name='Kelp Forest'  />
+              <Biome name='Mangrove'  />
+              <Biome name='Sacred Springs'  />
+              <Biome name='Tropics'  />
+              <Setting name='CloudRadius' avg=':= 0.449 * _default_ * boplSapphireSize ' range=':= 0.449 * _default_ * boplSapphireSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.449 * _default_ * boplSapphireSize ' range=':= 0.449 * _default_ * boplSapphireSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.202 * _default_ * boplSapphireFreq ' range=':= 0.202 * _default_ * boplSapphireFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 19 ' range=':= 13 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='boplSapphireHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x603494C3' drawBoundBox='false' boundBoxColor='0x603494C3'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='BiomesOPlenty:gemOre:12' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 0.270 * _default_ * boplSapphireFreq  * 0.1 ' range=':= 0.270 * _default_ * boplSapphireFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Sapphire is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Sapphire. -->
+        <ConfigSection>
+          <IfCondition condition=':= boplSapphireDist = "Vanilla"'>
+            <StandardGen name='boplSapphireStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x603494C3' drawBoundBox='false' boundBoxColor='0x603494C3'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='BiomesOPlenty:gemOre:12' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='Coral Reef'  />
+              <Biome name='Crag'  />
+              <Biome name='Hot Springs'  />
+              <Biome name='Kelp Forest'  />
+              <Biome name='Mangrove'  />
+              <Biome name='Sacred Springs'  />
+              <Biome name='Tropics'  />
+              <Setting name='Size' avg=':= 0.667 * boplSapphireSize ' range=':= 0.33 * boplSapphireSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 0.667 * boplSapphireFreq ' range=':= 0.33 * boplSapphireFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 19 ' range=':= 13 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Sapphire is complete. -->
+
+        <!-- End Sapphire Generation -->
+
+
+        <!-- Begin Amber Generation -->
+
+        <!-- Starting PipeVeins Preset for Amber. -->
+        <ConfigSection>
+          <IfCondition condition=':= boplAmberDist = "PipeVeins"'>
+            <Veins name='boplAmberVeins'  inherits='PresetPipeVeins' branchType='Bezier' seed='0x1FEF' drawWireframe='true' wireframeColor='0x60FE9D1B' drawBoundBox='false' boundBoxColor='0x60FE9D1B'>
+              <Description>
+                Short sparsely filled veins  sloping up from near the
+                bottom  of the map.
+              </Description>
+              <OreBlock block='BiomesOPlenty:gemOre:14' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='River'  />
+              <Biome name='Grove'  />
+              <Biome name='Shield'  />
+              <Biome name='Thicket'  />
+              <Setting name='MotherlodeFrequency' avg=':= 0.270 * _default_ * boplAmberFreq ' range=':= 0.270 * _default_ * boplAmberFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * boplAmberSize ' range=':= 0 * _default_ * boplAmberSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 19 ' range=':= 13 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 0.520 * _default_ ' range=':= 0.520 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * boplAmberSize ' range=':= _default_ * boplAmberSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.721 * _default_ * boplAmberSize ' range=':= 0.721 * _default_ * boplAmberSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+
+            <!-- Configuring contained material. -->
+            <Veins name='boplAmberVeinsPipe'  inherits='boplAmberVeins' branchType='Bezier' seed='0x1FEF' drawWireframe='true' wireframeColor='0x60FE9D1B' drawBoundBox='false' boundBoxColor='0x60FE9D1B'>
+              <OreBlock block='minecraft:lava' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Replaces block='BiomesOPlenty:gemOre:14' weight='1.0' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * boplAmberSize  * 0.5 ' range=':= 0 * _default_ * boplAmberSize  * 0.5 ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.721 * _default_ * boplAmberSize  * 0.5 ' range=':= 0.721 * _default_ * boplAmberSize  * 0.5 ' type='normal' />
+              <Setting name='OreDensity' avg=':= 1.0 ' range=':= 0 ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- PipeVeins Preset for Amber is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Amber. -->
+        <ConfigSection>
+          <IfCondition condition=':= boplAmberDist = "StrategicClouds"'>
+            <Cloud name='boplAmberCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60FE9D1B' drawBoundBox='false' boundBoxColor='0x60FE9D1B'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='BiomesOPlenty:gemOre:14' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='River'  />
+              <Biome name='Grove'  />
+              <Biome name='Shield'  />
+              <Biome name='Thicket'  />
+              <Setting name='CloudRadius' avg=':= 0.449 * _default_ * boplAmberSize ' range=':= 0.449 * _default_ * boplAmberSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.449 * _default_ * boplAmberSize ' range=':= 0.449 * _default_ * boplAmberSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.202 * _default_ * boplAmberFreq ' range=':= 0.202 * _default_ * boplAmberFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 19 ' range=':= 13 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='boplAmberHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60FE9D1B' drawBoundBox='false' boundBoxColor='0x60FE9D1B'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='BiomesOPlenty:gemOre:14' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 0.270 * _default_ * boplAmberFreq  * 0.1 ' range=':= 0.270 * _default_ * boplAmberFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Amber is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Amber. -->
+        <ConfigSection>
+          <IfCondition condition=':= boplAmberDist = "Vanilla"'>
+            <StandardGen name='boplAmberStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60FE9D1B' drawBoundBox='false' boundBoxColor='0x60FE9D1B'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='BiomesOPlenty:gemOre:14' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='River'  />
+              <Biome name='Grove'  />
+              <Biome name='Shield'  />
+              <Biome name='Thicket'  />
+              <Setting name='Size' avg=':= 0.667 * boplAmberSize ' range=':= 0.33 * boplAmberSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 0.667 * boplAmberFreq ' range=':= 0.33 * boplAmberFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 19 ' range=':= 13 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Amber is complete. -->
+
+        <!-- End Amber Generation -->
+
+        <!-- Finished adding blocks -->
+
+      </IfCondition>
+      <!-- Overworld Setup Complete -->
+
+
+
+
+
+      <!-- End Setup Beginning -->
+
+      <IfCondition condition=':= dimension.generator.class = "ChunkProviderEnd"'>
+
+        <!-- Starting Original "End" Block Removal -->
+
+        <IfCondition condition=':= ?cleanUpBiomesOPlenty'>
+          <IfCondition condition=':= ?blockExists("minecraft:end_stone")'>
+            <Substitute name='boplEndBlockSubstitute0' block='minecraft:end_stone'>
+              <Description>
+                Replace vanilla-generated ore clusters.
+              </Description>
+              <Comment>
+                The global option  deferredPopulationRange must be
+                large enough to catch all ore  clusters (>= 32).
+              </Comment>
+              <Replaces block='BiomesOPlenty:gemOre' weight='1.0' />
+            </Substitute>
+          </IfCondition>
+        </IfCondition>
+
+        <!-- Original "End" Block Removal Complete -->
+
+        <!-- Adding blocks -->
+
+        <!-- Begin Amethyst Generation -->
+
+        <!-- Starting PipeVeins Preset for Amethyst. -->
+        <ConfigSection>
+          <IfCondition condition=':= boplAmethystDist = "PipeVeins"'>
+            <Veins name='boplAmethystVeins'  inherits='PresetPipeVeins' branchType='Bezier' seed='0x58D8' drawWireframe='true' wireframeColor='0x60DD4EEA' drawBoundBox='false' boundBoxColor='0x60DD4EEA'>
+              <Description>
+                Short sparsely filled veins  sloping up from near the
+                bottom  of the map.
+              </Description>
+              <OreBlock block='BiomesOPlenty:gemOre' weight='1.0' />
+              <Replaces block='minecraft:end_stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 0.270 * _default_ * boplAmethystFreq ' range=':= 0.270 * _default_ * boplAmethystFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * boplAmethystSize ' range=':= 0 * _default_ * boplAmethystSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 19 ' range=':= 13 ' type='uniform' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 0.520 * _default_ ' range=':= 0.520 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * boplAmethystSize ' range=':= _default_ * boplAmethystSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.721 * _default_ * boplAmethystSize ' range=':= 0.721 * _default_ * boplAmethystSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+
+            <!-- Configuring contained material. -->
+            <Veins name='boplAmethystVeinsPipe'  inherits='boplAmethystVeins' branchType='Bezier' seed='0x58D8' drawWireframe='true' wireframeColor='0x60DD4EEA' drawBoundBox='false' boundBoxColor='0x60DD4EEA'>
+              <OreBlock block='minecraft:lava' weight='1.0' />
+              <Replaces block='minecraft:end_stone' weight='1.0' />
+              <Replaces block='BiomesOPlenty:gemOre' weight='1.0' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * boplAmethystSize  * 0.5 ' range=':= 0 * _default_ * boplAmethystSize  * 0.5 ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.721 * _default_ * boplAmethystSize  * 0.5 ' range=':= 0.721 * _default_ * boplAmethystSize  * 0.5 ' type='normal' />
+              <Setting name='OreDensity' avg=':= 1.0 ' range=':= 0 ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- PipeVeins Preset for Amethyst is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Amethyst. -->
+        <ConfigSection>
+          <IfCondition condition=':= boplAmethystDist = "StrategicClouds"'>
+            <Cloud name='boplAmethystCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60DD4EEA' drawBoundBox='false' boundBoxColor='0x60DD4EEA'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='BiomesOPlenty:gemOre' weight='1.0' />
+              <Replaces block='minecraft:end_stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 0.449 * _default_ * boplAmethystSize ' range=':= 0.449 * _default_ * boplAmethystSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.449 * _default_ * boplAmethystSize ' range=':= 0.449 * _default_ * boplAmethystSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.202 * _default_ * boplAmethystFreq ' range=':= 0.202 * _default_ * boplAmethystFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 19 ' range=':= 13 ' type='uniform' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='boplAmethystHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60DD4EEA' drawBoundBox='false' boundBoxColor='0x60DD4EEA'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='BiomesOPlenty:gemOre' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 0.270 * _default_ * boplAmethystFreq  * 0.1 ' range=':= 0.270 * _default_ * boplAmethystFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Amethyst is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Amethyst. -->
+        <ConfigSection>
+          <IfCondition condition=':= boplAmethystDist = "Vanilla"'>
+            <StandardGen name='boplAmethystStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60DD4EEA' drawBoundBox='false' boundBoxColor='0x60DD4EEA'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='BiomesOPlenty:gemOre' weight='1.0' />
+              <Replaces block='minecraft:end_stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 0.667 * boplAmethystSize ' range=':= 0.33 * boplAmethystSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 0.667 * boplAmethystFreq ' range=':= 0.33 * boplAmethystFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 19 ' range=':= 13 ' type='uniform' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Amethyst is complete. -->
+
+        <!-- End Amethyst Generation -->
+
+        <!-- Finished adding blocks -->
+
+      </IfCondition>
+      <!-- End Setup Complete -->
+
+    </IfCondition>
+
+  </ConfigSection>
+  <!-- Configuration for Custom Ore Generation Complete! -->
+
+</IfModInstalled>
+<!-- The "Biomes O Plenty" mod is now configured. -->
+
+
+
+
+
+<!-- =================================================================
+     This file was made using the Sprocket Advanced Configuration
+     Generator.  If you wish to make your own configurations for a mod
+     not currently supported by Custom Ore Generation, and you don't
+     want the hassle of writing XML, you can find the generator script
+     at its GitHub page: http://https://github.com/reteo/Sprocket
+     ================================================================= -->

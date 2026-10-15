@@ -1,0 +1,884 @@
+<!-- =================================================================
+     Custom Ore Generation "Et Futurum" Module: This configuration
+     covers granite, mountain granite, diorite, mountain diorite,
+     andesite, and mountain andesite.
+     ================================================================= -->
+
+
+<!-- This mod backports several features from Minecraft 1.8, including
+     andesite, diorite, and granite.  Configuration by Reteo. -->
+
+
+
+
+<!-- Is the "Et Futurum" mod on the system?  Let's find out! -->
+<IfModInstalled name="etfuturum">
+
+  <!-- Starting Configuration for Custom Ore Generation. -->
+  <ConfigSection>
+
+
+
+
+
+    <!-- Setup Screen Configuration -->
+    <ConfigSection>
+      <OptionDisplayGroup name='groupEtFuturum' displayName='Et Futurum' displayState='shown'>
+        <Description>
+          Distribution options for Et Futurum Ores.
+        </Description>
+      </OptionDisplayGroup>
+      <OptionChoice name='enableEtFuturum' displayName='Handle Et Futurum Setup?' default='true' displayState='shown_dynamic' displayGroup='groupEtFuturum'>
+        <Description> Should Custom Ore Generation handle Et Futurum ore generation? </Description>
+        <Choice value=':= ?true' displayValue='Yes' description='Use Custom Ore Generation to handle Et Futurum ores.'/>
+        <Choice value=':= ?false' displayValue='No' description='Et Futurum ores will be handled by the mod itself.'/>
+      </OptionChoice>
+      <OptionChoice name='cleanUpEtFuturum' displayName='Use Et Futurum Cleanup?' default='true' displayState='shown_dynamic' displayGroup='groupEtFuturum'>
+        <Description> Should Custom Ore Generation use the Substitution Pass to remove all instances of Et Futurum ore from the world?  If the mod's oregen can be turned off in its configuration, then it's recommended to do so, as the substitution pass can slow the game significantly.  If this option is disabled without disabling the mod's own ore generation, you'll end up with two oregens working at once, flooding the world with ore.  Enabled by default to ensure the ores are completely removed. </Description>
+        <Choice value=':= ?true' displayValue='Yes' description='Use the substitution pass to clean up Et Futurum ores.'/>
+        <Choice value=':= ?false' displayValue='No' description='Et Futurum ores do not need to be cleaned up by a substitution pass.'/>
+      </OptionChoice>
+
+      <!-- Granite Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='etftGraniteDist'  displayState=':= if(?enableEtFuturum, "shown", "hidden")' displayGroup='groupEtFuturum'>
+          <Description> Controls how Granite is generated </Description>
+          <DisplayName>Et Futurum Granite</DisplayName>
+          <IfCondition condition=':= (?blockExists("etfuturum:stone:1")) '>
+
+          <Choice value='StratumClouds' displayValue='Strata'>
+            <Description>
+              Wide, thin, and flat disks of ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("etfuturum:stone:1")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("etfuturum:stone:1")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Granite is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='etftGraniteFreq' default='1'  min='0' max='5' displayState=':= if(?enableEtFuturum, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupEtFuturum'>
+          <Description> Frequency multiplier for Et Futurum Granite distributions </Description>
+          <DisplayName>Et Futurum Granite Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='etftGraniteSize' default='1'  min='0' max='5' displayState=':= if(?enableEtFuturum, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupEtFuturum'>
+          <Description> Size multiplier for Et Futurum Granite distributions </Description>
+          <DisplayName>Et Futurum Granite Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Granite Configuration UI Complete -->
+
+
+      <!-- Mountain Granite Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='etftMountainGraniteDist'  displayState=':= if(?enableEtFuturum, "shown", "hidden")' displayGroup='groupEtFuturum'>
+          <Description> Controls how Mountain Granite is generated </Description>
+          <DisplayName>Et Futurum Mountain Granite</DisplayName>
+          <IfCondition condition=':= (?blockExists("etfuturum:stone:1")) '>
+
+          <Choice value='StratumClouds' displayValue='Strata'>
+            <Description>
+              Wide, thin, and flat disks of ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("etfuturum:stone:1")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("etfuturum:stone:1")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Granite is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='etftMountainGraniteFreq' default='1'  min='0' max='5' displayState=':= if(?enableEtFuturum, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupEtFuturum'>
+          <Description> Frequency multiplier for Et Futurum Mountain Granite distributions </Description>
+          <DisplayName>Et Futurum Mountain Granite Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='etftMountainGraniteSize' default='1'  min='0' max='5' displayState=':= if(?enableEtFuturum, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupEtFuturum'>
+          <Description> Size multiplier for Et Futurum Mountain Granite distributions </Description>
+          <DisplayName>Et Futurum Mountain Granite Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Granite Configuration UI Complete -->
+
+
+      <!-- Diorite Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='etftDioriteDist'  displayState=':= if(?enableEtFuturum, "shown", "hidden")' displayGroup='groupEtFuturum'>
+          <Description> Controls how Diorite is generated </Description>
+          <DisplayName>Et Futurum Diorite</DisplayName>
+          <IfCondition condition=':= (?blockExists("etfuturum:stone:3")) '>
+
+          <Choice value='StratumClouds' displayValue='Strata'>
+            <Description>
+              Wide, thin, and flat disks of ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("etfuturum:stone:3")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("etfuturum:stone:3")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Diorite is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='etftDioriteFreq' default='1'  min='0' max='5' displayState=':= if(?enableEtFuturum, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupEtFuturum'>
+          <Description> Frequency multiplier for Et Futurum Diorite distributions </Description>
+          <DisplayName>Et Futurum Diorite Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='etftDioriteSize' default='1'  min='0' max='5' displayState=':= if(?enableEtFuturum, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupEtFuturum'>
+          <Description> Size multiplier for Et Futurum Diorite distributions </Description>
+          <DisplayName>Et Futurum Diorite Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Diorite Configuration UI Complete -->
+
+
+      <!-- Mountain Diorite Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='etftMountainDioriteDist'  displayState=':= if(?enableEtFuturum, "shown", "hidden")' displayGroup='groupEtFuturum'>
+          <Description> Controls how Mountain Diorite is generated </Description>
+          <DisplayName>Et Futurum Mountain Diorite</DisplayName>
+          <IfCondition condition=':= (?blockExists("etfuturum:stone:3")) '>
+
+          <Choice value='StratumClouds' displayValue='Strata'>
+            <Description>
+              Wide, thin, and flat disks of ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("etfuturum:stone:3")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("etfuturum:stone:3")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Diorite is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='etftMountainDioriteFreq' default='1'  min='0' max='5' displayState=':= if(?enableEtFuturum, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupEtFuturum'>
+          <Description> Frequency multiplier for Et Futurum Mountain Diorite distributions </Description>
+          <DisplayName>Et Futurum Mountain Diorite Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='etftMountainDioriteSize' default='1'  min='0' max='5' displayState=':= if(?enableEtFuturum, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupEtFuturum'>
+          <Description> Size multiplier for Et Futurum Mountain Diorite distributions </Description>
+          <DisplayName>Et Futurum Mountain Diorite Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Diorite Configuration UI Complete -->
+
+
+      <!-- Andesite Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='etftAndesiteDist'  displayState=':= if(?enableEtFuturum, "shown", "hidden")' displayGroup='groupEtFuturum'>
+          <Description> Controls how Andesite is generated </Description>
+          <DisplayName>Et Futurum Andesite</DisplayName>
+          <IfCondition condition=':= (?blockExists("etfuturum:stone:5")) '>
+
+          <Choice value='StratumClouds' displayValue='Strata'>
+            <Description>
+              Wide, thin, and flat disks of ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("etfuturum:stone:5")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("etfuturum:stone:5")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Andesite is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='etftAndesiteFreq' default='1'  min='0' max='5' displayState=':= if(?enableEtFuturum, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupEtFuturum'>
+          <Description> Frequency multiplier for Et Futurum Andesite distributions </Description>
+          <DisplayName>Et Futurum Andesite Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='etftAndesiteSize' default='1'  min='0' max='5' displayState=':= if(?enableEtFuturum, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupEtFuturum'>
+          <Description> Size multiplier for Et Futurum Andesite distributions </Description>
+          <DisplayName>Et Futurum Andesite Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Andesite Configuration UI Complete -->
+
+
+      <!-- Mountain Andesite Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='etftMountainAndesiteDist'  displayState=':= if(?enableEtFuturum, "shown", "hidden")' displayGroup='groupEtFuturum'>
+          <Description> Controls how Mountain Andesite is generated </Description>
+          <DisplayName>Et Futurum Mountain Andesite</DisplayName>
+          <IfCondition condition=':= (?blockExists("etfuturum:stone:5")) '>
+
+          <Choice value='StratumClouds' displayValue='Strata'>
+            <Description>
+              Wide, thin, and flat disks of ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("etfuturum:stone:5")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("etfuturum:stone:5")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Andesite is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='etftMountainAndesiteFreq' default='1'  min='0' max='5' displayState=':= if(?enableEtFuturum, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupEtFuturum'>
+          <Description> Frequency multiplier for Et Futurum Mountain Andesite distributions </Description>
+          <DisplayName>Et Futurum Mountain Andesite Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='etftMountainAndesiteSize' default='1'  min='0' max='5' displayState=':= if(?enableEtFuturum, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupEtFuturum'>
+          <Description> Size multiplier for Et Futurum Mountain Andesite distributions </Description>
+          <DisplayName>Et Futurum Mountain Andesite Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Andesite Configuration UI Complete -->
+
+    </ConfigSection>
+    <!-- Setup Screen Complete -->
+
+    <IfCondition condition=':= ?enableEtFuturum'>
+
+
+
+
+      <!-- Overworld Setup Beginning -->
+
+      <IfCondition condition=':= ?COGActive'>
+
+        <!-- Starting Original "Overworld" Block Removal -->
+
+        <IfCondition condition=':= ?cleanUpEtFuturum'>
+          <IfCondition condition=':= ?blockExists("minecraft:stone")'>
+            <Substitute name='etftOverworldBlockSubstitute0' block='minecraft:stone'>
+              <Description>
+                Replace vanilla-generated ore clusters.
+              </Description>
+              <Comment>
+                The global option  deferredPopulationRange must be
+                large enough to catch all ore  clusters (>= 32).
+              </Comment>
+              <Replaces block='etfuturum:stone:1' weight='1.0' />
+              <Replaces block='etfuturum:stone:3' weight='1.0' />
+              <Replaces block='etfuturum:stone:5' weight='1.0' />
+            </Substitute>
+          </IfCondition>
+        </IfCondition>
+
+        <!-- Original "Overworld" Block Removal Complete -->
+
+        <!-- Adding blocks -->
+
+        <!-- Begin Granite Generation -->
+
+        <!-- Starting StratumClouds Preset for Granite. -->
+        <ConfigSection>
+          <IfCondition condition=':= etftGraniteDist = "StratumClouds"'>
+            <Cloud name='etftGraniteCloud'  inherits='PresetStratum' drawWireframe='true' wireframeColor='0x60DAAE99' drawBoundBox='false' boundBoxColor='0x60DAAE99'>
+              <Description>
+                Wide, thin, and flat disks of  ore.  Primarily, this
+                distribution is meant to provide  realistic
+                distribution of stone  in a strata formation.
+              </Description>
+              <OreBlock block='etfuturum:stone:1' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 1.465 * _default_ * etftGraniteSize ' range=':= 1.465 * _default_ * etftGraniteSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.465 * _default_ * etftGraniteSize ' range=':= 1.465 * _default_ * etftGraniteSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 2.146 * _default_ * etftGraniteFreq ' range=':= 2.146 * _default_ * etftGraniteFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 40 ' range=':= 40 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StratumClouds Preset for Granite is complete. -->
+
+
+        <!-- Starting LayeredVeins Preset for Granite. -->
+        <ConfigSection>
+          <IfCondition condition=':= etftGraniteDist = "LayeredVeins"'>
+            <Veins name='etftGraniteVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60DAAE99' drawBoundBox='false' boundBoxColor='0x60DAAE99'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='etfuturum:stone:1' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 3.214 * _default_ * etftGraniteFreq ' range=':= 3.214 * _default_ * etftGraniteFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.215 * _default_ * etftGraniteSize ' range=':= 1.215 * _default_ * etftGraniteSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 40 ' range=':= 40 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.793 * _default_ ' range=':= 1.793 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * etftGraniteSize ' range=':= _default_ * etftGraniteSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.339 * _default_ * etftGraniteSize ' range=':= 1.339 * _default_ * etftGraniteSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Granite is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Granite. -->
+        <ConfigSection>
+          <IfCondition condition=':= etftGraniteDist = "Vanilla"'>
+            <StandardGen name='etftGraniteStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60DAAE99' drawBoundBox='false' boundBoxColor='0x60DAAE99'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='etfuturum:stone:1' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 22.0 * etftGraniteSize ' range=':= 11.0 * etftGraniteSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 6.667 * etftGraniteFreq ' range=':= 3.33 * etftGraniteFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 40 ' range=':= 40 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Granite is complete. -->
+
+        <!-- End Granite Generation -->
+
+
+        <!-- Begin Mountain Granite Generation -->
+
+        <!-- Starting StratumClouds Preset for Mountain  Granite. -->
+        <ConfigSection>
+          <IfCondition condition=':= etftMountainGraniteDist = "StratumClouds"'>
+            <Cloud name='etftMountainGraniteCloud'  inherits='PresetStratum' drawWireframe='true' wireframeColor='0x60DAAE99' drawBoundBox='false' boundBoxColor='0x60DAAE99'>
+              <Description>
+                Wide, thin, and flat disks of  ore.  Primarily, this
+                distribution is meant to provide  realistic
+                distribution of stone  in a strata formation.
+              </Description>
+              <OreBlock block='etfuturum:stone:1' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 1.465 * _default_ * etftMountainGraniteSize ' range=':= 1.465 * _default_ * etftMountainGraniteSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.465 * _default_ * etftMountainGraniteSize ' range=':= 1.465 * _default_ * etftMountainGraniteSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 2.146 * _default_ * etftMountainGraniteFreq ' range=':= 2.146 * _default_ * etftMountainGraniteFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 184 ' range=':= 120 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StratumClouds Preset for Mountain Granite is  complete. -->
+
+
+        <!-- Starting LayeredVeins Preset for Mountain  Granite. -->
+        <ConfigSection>
+          <IfCondition condition=':= etftMountainGraniteDist = "LayeredVeins"'>
+            <Veins name='etftMountainGraniteVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60DAAE99' drawBoundBox='false' boundBoxColor='0x60DAAE99'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='etfuturum:stone:1' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 3.214 * _default_ * etftMountainGraniteFreq ' range=':= 3.214 * _default_ * etftMountainGraniteFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.215 * _default_ * etftMountainGraniteSize ' range=':= 1.215 * _default_ * etftMountainGraniteSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 184 ' range=':= 120 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.793 * _default_ ' range=':= 1.793 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * etftMountainGraniteSize ' range=':= _default_ * etftMountainGraniteSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.339 * _default_ * etftMountainGraniteSize ' range=':= 1.339 * _default_ * etftMountainGraniteSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Mountain Granite is  complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mountain Granite. -->
+        <ConfigSection>
+          <IfCondition condition=':= etftMountainGraniteDist = "Vanilla"'>
+            <StandardGen name='etftMountainGraniteStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60DAAE99' drawBoundBox='false' boundBoxColor='0x60DAAE99'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='etfuturum:stone:1' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 22.0 * etftMountainGraniteSize ' range=':= 11.0 * etftMountainGraniteSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 6.667 * etftMountainGraniteFreq ' range=':= 3.33 * etftMountainGraniteFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 184 ' range=':= 120 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Granite is complete. -->
+
+        <!-- End Mountain Granite Generation -->
+
+
+        <!-- Begin Diorite Generation -->
+
+        <!-- Starting StratumClouds Preset for Diorite. -->
+        <ConfigSection>
+          <IfCondition condition=':= etftDioriteDist = "StratumClouds"'>
+            <Cloud name='etftDioriteCloud'  inherits='PresetStratum' drawWireframe='true' wireframeColor='0x60CBCBCF' drawBoundBox='false' boundBoxColor='0x60CBCBCF'>
+              <Description>
+                Wide, thin, and flat disks of  ore.  Primarily, this
+                distribution is meant to provide  realistic
+                distribution of stone  in a strata formation.
+              </Description>
+              <OreBlock block='etfuturum:stone:3' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 1.465 * _default_ * etftDioriteSize ' range=':= 1.465 * _default_ * etftDioriteSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.465 * _default_ * etftDioriteSize ' range=':= 1.465 * _default_ * etftDioriteSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 2.146 * _default_ * etftDioriteFreq ' range=':= 2.146 * _default_ * etftDioriteFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 40 ' range=':= 40 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StratumClouds Preset for Diorite is complete. -->
+
+
+        <!-- Starting LayeredVeins Preset for Diorite. -->
+        <ConfigSection>
+          <IfCondition condition=':= etftDioriteDist = "LayeredVeins"'>
+            <Veins name='etftDioriteVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60CBCBCF' drawBoundBox='false' boundBoxColor='0x60CBCBCF'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='etfuturum:stone:3' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 3.214 * _default_ * etftDioriteFreq ' range=':= 3.214 * _default_ * etftDioriteFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.215 * _default_ * etftDioriteSize ' range=':= 1.215 * _default_ * etftDioriteSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 40 ' range=':= 40 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.793 * _default_ ' range=':= 1.793 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * etftDioriteSize ' range=':= _default_ * etftDioriteSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.339 * _default_ * etftDioriteSize ' range=':= 1.339 * _default_ * etftDioriteSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Diorite is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Diorite. -->
+        <ConfigSection>
+          <IfCondition condition=':= etftDioriteDist = "Vanilla"'>
+            <StandardGen name='etftDioriteStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60CBCBCF' drawBoundBox='false' boundBoxColor='0x60CBCBCF'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='etfuturum:stone:3' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 22.0 * etftDioriteSize ' range=':= 11.0 * etftDioriteSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 6.667 * etftDioriteFreq ' range=':= 3.33 * etftDioriteFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 40 ' range=':= 40 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Diorite is complete. -->
+
+        <!-- End Diorite Generation -->
+
+
+        <!-- Begin Mountain Diorite Generation -->
+
+        <!-- Starting StratumClouds Preset for Mountain  Diorite. -->
+        <ConfigSection>
+          <IfCondition condition=':= etftMountainDioriteDist = "StratumClouds"'>
+            <Cloud name='etftMountainDioriteCloud'  inherits='PresetStratum' drawWireframe='true' wireframeColor='0x60CBCBCF' drawBoundBox='false' boundBoxColor='0x60CBCBCF'>
+              <Description>
+                Wide, thin, and flat disks of  ore.  Primarily, this
+                distribution is meant to provide  realistic
+                distribution of stone  in a strata formation.
+              </Description>
+              <OreBlock block='etfuturum:stone:3' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 1.465 * _default_ * etftMountainDioriteSize ' range=':= 1.465 * _default_ * etftMountainDioriteSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.465 * _default_ * etftMountainDioriteSize ' range=':= 1.465 * _default_ * etftMountainDioriteSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 2.146 * _default_ * etftMountainDioriteFreq ' range=':= 2.146 * _default_ * etftMountainDioriteFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 184 ' range=':= 120 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StratumClouds Preset for Mountain Diorite is  complete. -->
+
+
+        <!-- Starting LayeredVeins Preset for Mountain  Diorite. -->
+        <ConfigSection>
+          <IfCondition condition=':= etftMountainDioriteDist = "LayeredVeins"'>
+            <Veins name='etftMountainDioriteVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60CBCBCF' drawBoundBox='false' boundBoxColor='0x60CBCBCF'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='etfuturum:stone:3' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 3.214 * _default_ * etftMountainDioriteFreq ' range=':= 3.214 * _default_ * etftMountainDioriteFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.215 * _default_ * etftMountainDioriteSize ' range=':= 1.215 * _default_ * etftMountainDioriteSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 184 ' range=':= 120 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.793 * _default_ ' range=':= 1.793 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * etftMountainDioriteSize ' range=':= _default_ * etftMountainDioriteSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.339 * _default_ * etftMountainDioriteSize ' range=':= 1.339 * _default_ * etftMountainDioriteSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Mountain Diorite is  complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mountain Diorite. -->
+        <ConfigSection>
+          <IfCondition condition=':= etftMountainDioriteDist = "Vanilla"'>
+            <StandardGen name='etftMountainDioriteStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60CBCBCF' drawBoundBox='false' boundBoxColor='0x60CBCBCF'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='etfuturum:stone:3' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 22.0 * etftMountainDioriteSize ' range=':= 11.0 * etftMountainDioriteSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 6.667 * etftMountainDioriteFreq ' range=':= 3.33 * etftMountainDioriteFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 184 ' range=':= 120 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Diorite is complete. -->
+
+        <!-- End Mountain Diorite Generation -->
+
+
+        <!-- Begin Andesite Generation -->
+
+        <!-- Starting StratumClouds Preset for Andesite. -->
+        <ConfigSection>
+          <IfCondition condition=':= etftAndesiteDist = "StratumClouds"'>
+            <Cloud name='etftAndesiteCloud'  inherits='PresetStratum' drawWireframe='true' wireframeColor='0x6085858B' drawBoundBox='false' boundBoxColor='0x6085858B'>
+              <Description>
+                Wide, thin, and flat disks of  ore.  Primarily, this
+                distribution is meant to provide  realistic
+                distribution of stone  in a strata formation.
+              </Description>
+              <OreBlock block='etfuturum:stone:5' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 1.465 * _default_ * etftAndesiteSize ' range=':= 1.465 * _default_ * etftAndesiteSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.465 * _default_ * etftAndesiteSize ' range=':= 1.465 * _default_ * etftAndesiteSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 2.146 * _default_ * etftAndesiteFreq ' range=':= 2.146 * _default_ * etftAndesiteFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 40 ' range=':= 40 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StratumClouds Preset for Andesite is complete. -->
+
+
+        <!-- Starting LayeredVeins Preset for Andesite. -->
+        <ConfigSection>
+          <IfCondition condition=':= etftAndesiteDist = "LayeredVeins"'>
+            <Veins name='etftAndesiteVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x6085858B' drawBoundBox='false' boundBoxColor='0x6085858B'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='etfuturum:stone:5' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 3.214 * _default_ * etftAndesiteFreq ' range=':= 3.214 * _default_ * etftAndesiteFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.215 * _default_ * etftAndesiteSize ' range=':= 1.215 * _default_ * etftAndesiteSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 40 ' range=':= 40 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.793 * _default_ ' range=':= 1.793 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * etftAndesiteSize ' range=':= _default_ * etftAndesiteSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.339 * _default_ * etftAndesiteSize ' range=':= 1.339 * _default_ * etftAndesiteSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Andesite is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Andesite. -->
+        <ConfigSection>
+          <IfCondition condition=':= etftAndesiteDist = "Vanilla"'>
+            <StandardGen name='etftAndesiteStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x6085858B' drawBoundBox='false' boundBoxColor='0x6085858B'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='etfuturum:stone:5' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 22.0 * etftAndesiteSize ' range=':= 11.0 * etftAndesiteSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 6.667 * etftAndesiteFreq ' range=':= 3.33 * etftAndesiteFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 40 ' range=':= 40 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Andesite is complete. -->
+
+        <!-- End Andesite Generation -->
+
+
+        <!-- Begin Mountain Andesite Generation -->
+
+        <!-- Starting StratumClouds Preset for Mountain  Andesite. -->
+        <ConfigSection>
+          <IfCondition condition=':= etftMountainAndesiteDist = "StratumClouds"'>
+            <Cloud name='etftMountainAndesiteCloud'  inherits='PresetStratum' drawWireframe='true' wireframeColor='0x6085858B' drawBoundBox='false' boundBoxColor='0x6085858B'>
+              <Description>
+                Wide, thin, and flat disks of  ore.  Primarily, this
+                distribution is meant to provide  realistic
+                distribution of stone  in a strata formation.
+              </Description>
+              <OreBlock block='etfuturum:stone:5' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 1.465 * _default_ * etftMountainAndesiteSize ' range=':= 1.465 * _default_ * etftMountainAndesiteSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.465 * _default_ * etftMountainAndesiteSize ' range=':= 1.465 * _default_ * etftMountainAndesiteSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 2.146 * _default_ * etftMountainAndesiteFreq ' range=':= 2.146 * _default_ * etftMountainAndesiteFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 184 ' range=':= 120 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StratumClouds Preset for Mountain Andesite is  complete. -->
+
+
+        <!-- Starting LayeredVeins Preset for Mountain  Andesite. -->
+        <ConfigSection>
+          <IfCondition condition=':= etftMountainAndesiteDist = "LayeredVeins"'>
+            <Veins name='etftMountainAndesiteVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x6085858B' drawBoundBox='false' boundBoxColor='0x6085858B'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='etfuturum:stone:5' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 3.214 * _default_ * etftMountainAndesiteFreq ' range=':= 3.214 * _default_ * etftMountainAndesiteFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.215 * _default_ * etftMountainAndesiteSize ' range=':= 1.215 * _default_ * etftMountainAndesiteSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 184 ' range=':= 120 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.793 * _default_ ' range=':= 1.793 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * etftMountainAndesiteSize ' range=':= _default_ * etftMountainAndesiteSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.339 * _default_ * etftMountainAndesiteSize ' range=':= 1.339 * _default_ * etftMountainAndesiteSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Mountain Andesite is  complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mountain Andesite. -->
+        <ConfigSection>
+          <IfCondition condition=':= etftMountainAndesiteDist = "Vanilla"'>
+            <StandardGen name='etftMountainAndesiteStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x6085858B' drawBoundBox='false' boundBoxColor='0x6085858B'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='etfuturum:stone:5' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 22.0 * etftMountainAndesiteSize ' range=':= 11.0 * etftMountainAndesiteSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 6.667 * etftMountainAndesiteFreq ' range=':= 3.33 * etftMountainAndesiteFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 184 ' range=':= 120 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Andesite is complete. -->
+
+        <!-- End Mountain Andesite Generation -->
+
+        <!-- Finished adding blocks -->
+
+      </IfCondition>
+      <!-- Overworld Setup Complete -->
+
+    </IfCondition>
+
+  </ConfigSection>
+  <!-- Configuration for Custom Ore Generation Complete! -->
+
+</IfModInstalled>
+<!-- The "Et Futurum" mod is now configured. -->
+
+
+
+
+
+<!-- =================================================================
+     This file was made using the Sprocket Advanced Configuration
+     Generator.  If you wish to make your own configurations for a mod
+     not currently supported by Custom Ore Generation, and you don't
+     want the hassle of writing XML, you can find the generator script
+     at its GitHub page: http://https://github.com/reteo/Sprocket
+     ================================================================= -->

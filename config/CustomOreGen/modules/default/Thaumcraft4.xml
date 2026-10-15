@@ -1,0 +1,2164 @@
+<!-- =================================================================
+     Custom Ore Generation "Thaumcraft 4" Module: This configuration
+     covers amber bearing stone, mountain amber bearing stone,
+     cinnabar, mountain cinnabar, air infused stone, fire infused
+     stone, water infused stone, earth infused stone, order infused
+     stone, and entropy infused stone.
+     ================================================================= -->
+
+
+<!-- Magic mod that encourages exploration and research.  Has a few
+     ores, and several types of "infused stone." Configuration by
+     Reteo. -->
+
+
+
+
+<!-- Is the "Thaumcraft 4" mod on the system?  Let's find out! -->
+<IfModInstalled name="Thaumcraft">
+
+  <!-- Starting Configuration for Custom Ore Generation. -->
+  <ConfigSection>
+
+
+
+
+
+    <!-- Setup Screen Configuration -->
+    <ConfigSection>
+      <OptionDisplayGroup name='groupThaumcraft4' displayName='Thaumcraft 4' displayState='shown'>
+        <Description>
+          Distribution options for Thaumcraft 4 Ores.
+        </Description>
+      </OptionDisplayGroup>
+      <OptionChoice name='enableThaumcraft4' displayName='Handle Thaumcraft 4 Setup?' default='true' displayState='shown_dynamic' displayGroup='groupThaumcraft4'>
+        <Description> Should Custom Ore Generation handle Thaumcraft 4 ore generation? </Description>
+        <Choice value=':= ?true' displayValue='Yes' description='Use Custom Ore Generation to handle Thaumcraft 4 ores.'/>
+        <Choice value=':= ?false' displayValue='No' description='Thaumcraft 4 ores will be handled by the mod itself.'/>
+      </OptionChoice>
+      <OptionChoice name='cleanUpThaumcraft4' displayName='Use Thaumcraft 4 Cleanup?' default='true' displayState='shown_dynamic' displayGroup='groupThaumcraft4'>
+        <Description> Should Custom Ore Generation use the Substitution Pass to remove all instances of Thaumcraft 4 ore from the world?  If the mod's oregen can be turned off in its configuration, then it's recommended to do so, as the substitution pass can slow the game significantly.  If this option is disabled without disabling the mod's own ore generation, you'll end up with two oregens working at once, flooding the world with ore.  Enabled by default to ensure the ores are completely removed. </Description>
+        <Choice value=':= ?true' displayValue='Yes' description='Use the substitution pass to clean up Thaumcraft 4 ores.'/>
+        <Choice value=':= ?false' displayValue='No' description='Thaumcraft 4 ores do not need to be cleaned up by a substitution pass.'/>
+      </OptionChoice>
+
+      <!-- Amber Bearing Stone Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='thm4AmberBearingStoneDist'  displayState=':= if(?enableThaumcraft4, "shown", "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Controls how Amber Bearing Stone is generated </Description>
+          <DisplayName>Thaumcraft 4 Amber Bearing Stone</DisplayName>
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre:7")) '>
+
+          <Choice value='SparseVeins' displayValue='Sparse Veins'>
+            <Description>
+              Large veins filled very lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre:7")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre:7")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Amber Bearing Stone is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='thm4AmberBearingStoneFreq' default='1'  min='0' max='5' displayState=':= if(?enableThaumcraft4, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Frequency multiplier for Thaumcraft 4 Amber Bearing Stone distributions </Description>
+          <DisplayName>Thaumcraft 4 Amber Bearing Stone Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='thm4AmberBearingStoneSize' default='1'  min='0' max='5' displayState=':= if(?enableThaumcraft4, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Size multiplier for Thaumcraft 4 Amber Bearing Stone distributions </Description>
+          <DisplayName>Thaumcraft 4 Amber Bearing Stone Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Amber Bearing Stone Configuration UI Complete -->
+
+
+      <!-- Mountain Amber Bearing Stone Configuration UI  Starting -->
+      <ConfigSection>
+        <OptionChoice name='thm4MountainAmberBearingStoneDist'  displayState=':= if(?enableThaumcraft4, "shown", "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Controls how Mountain Amber Bearing Stone is generated </Description>
+          <DisplayName>Thaumcraft 4 Mountain Amber Bearing Stone</DisplayName>
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre:7")) '>
+
+          <Choice value='SparseVeins' displayValue='Sparse Veins'>
+            <Description>
+              Large veins filled very lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre:7")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre:7")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Amber Bearing Stone is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='thm4MountainAmberBearingStoneFreq' default='1'  min='0' max='5' displayState=':= if(?enableThaumcraft4, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Frequency multiplier for Thaumcraft 4 Mountain Amber Bearing Stone distributions </Description>
+          <DisplayName>Thaumcraft 4 Mountain Amber Bearing Stone Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='thm4MountainAmberBearingStoneSize' default='1'  min='0' max='5' displayState=':= if(?enableThaumcraft4, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Size multiplier for Thaumcraft 4 Mountain Amber Bearing Stone distributions </Description>
+          <DisplayName>Thaumcraft 4 Mountain Amber Bearing Stone Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Amber Bearing Stone Configuration UI  Complete -->
+
+
+      <!-- Cinnabar Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='thm4CinnabarDist'  displayState=':= if(?enableThaumcraft4, "shown", "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Controls how Cinnabar is generated </Description>
+          <DisplayName>Thaumcraft 4 Cinnabar</DisplayName>
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre")) '>
+
+          <Choice value='SparseVeins' displayValue='Sparse Veins'>
+            <Description>
+              Large veins filled very lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Cinnabar is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='thm4CinnabarFreq' default='1'  min='0' max='5' displayState=':= if(?enableThaumcraft4, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Frequency multiplier for Thaumcraft 4 Cinnabar distributions </Description>
+          <DisplayName>Thaumcraft 4 Cinnabar Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='thm4CinnabarSize' default='1'  min='0' max='5' displayState=':= if(?enableThaumcraft4, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Size multiplier for Thaumcraft 4 Cinnabar distributions </Description>
+          <DisplayName>Thaumcraft 4 Cinnabar Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Cinnabar Configuration UI Complete -->
+
+
+      <!-- Mountain Cinnabar Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='thm4MountainCinnabarDist'  displayState=':= if(?enableThaumcraft4, "shown", "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Controls how Mountain Cinnabar is generated </Description>
+          <DisplayName>Thaumcraft 4 Mountain Cinnabar</DisplayName>
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre")) '>
+
+          <Choice value='SparseVeins' displayValue='Sparse Veins'>
+            <Description>
+              Large veins filled very lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Cinnabar is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='thm4MountainCinnabarFreq' default='1'  min='0' max='5' displayState=':= if(?enableThaumcraft4, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Frequency multiplier for Thaumcraft 4 Mountain Cinnabar distributions </Description>
+          <DisplayName>Thaumcraft 4 Mountain Cinnabar Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='thm4MountainCinnabarSize' default='1'  min='0' max='5' displayState=':= if(?enableThaumcraft4, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Size multiplier for Thaumcraft 4 Mountain Cinnabar distributions </Description>
+          <DisplayName>Thaumcraft 4 Mountain Cinnabar Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Cinnabar Configuration UI Complete -->
+
+
+      <!-- Air Infused Stone Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='thm4AirInfusedStoneDist'  displayState=':= if(?enableThaumcraft4, "shown", "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Controls how Air Infused Stone is generated </Description>
+          <DisplayName>Thaumcraft 4 Air Infused Stone</DisplayName>
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre:1")) '>
+
+          <Choice value='SparseVeins' displayValue='Sparse Veins'>
+            <Description>
+              Large veins filled very lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre:1")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre:1")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Air Infused Stone is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='thm4AirInfusedStoneFreq' default='1'  min='0' max='5' displayState=':= if(?enableThaumcraft4, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Frequency multiplier for Thaumcraft 4 Air Infused Stone distributions </Description>
+          <DisplayName>Thaumcraft 4 Air Infused Stone Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='thm4AirInfusedStoneSize' default='1'  min='0' max='5' displayState=':= if(?enableThaumcraft4, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Size multiplier for Thaumcraft 4 Air Infused Stone distributions </Description>
+          <DisplayName>Thaumcraft 4 Air Infused Stone Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Air Infused Stone Configuration UI Complete -->
+
+
+      <!-- Fire Infused Stone Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='thm4FireInfusedStoneDist'  displayState=':= if(?enableThaumcraft4, "shown", "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Controls how Fire Infused Stone is generated </Description>
+          <DisplayName>Thaumcraft 4 Fire Infused Stone</DisplayName>
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre:2")) '>
+
+          <Choice value='SparseVeins' displayValue='Sparse Veins'>
+            <Description>
+              Large veins filled very lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre:2")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre:2")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Fire Infused Stone is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='thm4FireInfusedStoneFreq' default='1'  min='0' max='5' displayState=':= if(?enableThaumcraft4, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Frequency multiplier for Thaumcraft 4 Fire Infused Stone distributions </Description>
+          <DisplayName>Thaumcraft 4 Fire Infused Stone Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='thm4FireInfusedStoneSize' default='1'  min='0' max='5' displayState=':= if(?enableThaumcraft4, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Size multiplier for Thaumcraft 4 Fire Infused Stone distributions </Description>
+          <DisplayName>Thaumcraft 4 Fire Infused Stone Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Fire Infused Stone Configuration UI Complete -->
+
+
+      <!-- Water Infused Stone Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='thm4WaterInfusedStoneDist'  displayState=':= if(?enableThaumcraft4, "shown", "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Controls how Water Infused Stone is generated </Description>
+          <DisplayName>Thaumcraft 4 Water Infused Stone</DisplayName>
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre:3")) '>
+
+          <Choice value='SparseVeins' displayValue='Sparse Veins'>
+            <Description>
+              Large veins filled very lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre:3")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre:3")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Water Infused Stone is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='thm4WaterInfusedStoneFreq' default='1'  min='0' max='5' displayState=':= if(?enableThaumcraft4, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Frequency multiplier for Thaumcraft 4 Water Infused Stone distributions </Description>
+          <DisplayName>Thaumcraft 4 Water Infused Stone Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='thm4WaterInfusedStoneSize' default='1'  min='0' max='5' displayState=':= if(?enableThaumcraft4, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Size multiplier for Thaumcraft 4 Water Infused Stone distributions </Description>
+          <DisplayName>Thaumcraft 4 Water Infused Stone Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Water Infused Stone Configuration UI Complete -->
+
+
+      <!-- Earth Infused Stone Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='thm4EarthInfusedStoneDist'  displayState=':= if(?enableThaumcraft4, "shown", "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Controls how Earth Infused Stone is generated </Description>
+          <DisplayName>Thaumcraft 4 Earth Infused Stone</DisplayName>
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre:4")) '>
+
+          <Choice value='SparseVeins' displayValue='Sparse Veins'>
+            <Description>
+              Large veins filled very lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre:4")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre:4")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Earth Infused Stone is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='thm4EarthInfusedStoneFreq' default='1'  min='0' max='5' displayState=':= if(?enableThaumcraft4, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Frequency multiplier for Thaumcraft 4 Earth Infused Stone distributions </Description>
+          <DisplayName>Thaumcraft 4 Earth Infused Stone Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='thm4EarthInfusedStoneSize' default='1'  min='0' max='5' displayState=':= if(?enableThaumcraft4, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Size multiplier for Thaumcraft 4 Earth Infused Stone distributions </Description>
+          <DisplayName>Thaumcraft 4 Earth Infused Stone Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Earth Infused Stone Configuration UI Complete -->
+
+
+      <!-- Order Infused Stone Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='thm4OrderInfusedStoneDist'  displayState=':= if(?enableThaumcraft4, "shown", "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Controls how Order Infused Stone is generated </Description>
+          <DisplayName>Thaumcraft 4 Order Infused Stone</DisplayName>
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre:5")) '>
+
+          <Choice value='SparseVeins' displayValue='Sparse Veins'>
+            <Description>
+              Large veins filled very lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre:5")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre:5")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Order Infused Stone is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='thm4OrderInfusedStoneFreq' default='1'  min='0' max='5' displayState=':= if(?enableThaumcraft4, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Frequency multiplier for Thaumcraft 4 Order Infused Stone distributions </Description>
+          <DisplayName>Thaumcraft 4 Order Infused Stone Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='thm4OrderInfusedStoneSize' default='1'  min='0' max='5' displayState=':= if(?enableThaumcraft4, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Size multiplier for Thaumcraft 4 Order Infused Stone distributions </Description>
+          <DisplayName>Thaumcraft 4 Order Infused Stone Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Order Infused Stone Configuration UI Complete -->
+
+
+      <!-- Entropy Infused Stone Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='thm4EntropyInfusedStoneDist'  displayState=':= if(?enableThaumcraft4, "shown", "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Controls how Entropy Infused Stone is generated </Description>
+          <DisplayName>Thaumcraft 4 Entropy Infused Stone</DisplayName>
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre:6")) '>
+
+          <Choice value='SparseVeins' displayValue='Sparse Veins'>
+            <Description>
+              Large veins filled very lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre:6")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("Thaumcraft:blockCustomOre:6")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Entropy Infused Stone is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='thm4EntropyInfusedStoneFreq' default='1'  min='0' max='5' displayState=':= if(?enableThaumcraft4, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Frequency multiplier for Thaumcraft 4 Entropy Infused Stone distributions </Description>
+          <DisplayName>Thaumcraft 4 Entropy Infused Stone Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='thm4EntropyInfusedStoneSize' default='1'  min='0' max='5' displayState=':= if(?enableThaumcraft4, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupThaumcraft4'>
+          <Description> Size multiplier for Thaumcraft 4 Entropy Infused Stone distributions </Description>
+          <DisplayName>Thaumcraft 4 Entropy Infused Stone Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Entropy Infused Stone Configuration UI Complete -->
+
+    </ConfigSection>
+    <!-- Setup Screen Complete -->
+
+    <IfCondition condition=':= ?enableThaumcraft4'>
+
+
+
+
+      <!-- Overworld Setup Beginning -->
+
+      <IfCondition condition=':= ?COGActive'>
+
+        <!-- Starting Original "Overworld" Block Removal -->
+
+        <IfCondition condition=':= ?cleanUpThaumcraft4'>
+          <IfCondition condition=':= ?blockExists("minecraft:stone")'>
+            <Substitute name='thm4OverworldBlockSubstitute0' block='minecraft:stone'>
+              <Description>
+                Replace vanilla-generated ore clusters.
+              </Description>
+              <Comment>
+                The global option  deferredPopulationRange must be
+                large enough to catch all ore  clusters (>= 32).
+              </Comment>
+              <Replaces block='Thaumcraft:blockCustomOre' weight='1.0' />
+              <Replaces block='Thaumcraft:blockCustomOre:1' weight='1.0' />
+              <Replaces block='Thaumcraft:blockCustomOre:2' weight='1.0' />
+              <Replaces block='Thaumcraft:blockCustomOre:3' weight='1.0' />
+              <Replaces block='Thaumcraft:blockCustomOre:4' weight='1.0' />
+              <Replaces block='Thaumcraft:blockCustomOre:5' weight='1.0' />
+              <Replaces block='Thaumcraft:blockCustomOre:6' weight='1.0' />
+              <Replaces block='Thaumcraft:blockCustomOre:7' weight='1.0' />
+            </Substitute>
+          </IfCondition>
+        </IfCondition>
+
+        <!-- Original "Overworld" Block Removal Complete -->
+
+        <!-- Adding blocks -->
+
+        <!-- Begin Amber Bearing Stone Generation -->
+
+        <!-- Starting SparseVeins Preset for Amber Bearing  Stone. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4AmberBearingStoneDist = "SparseVeins"'>
+            <Veins name='thm4AmberBearingStoneVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60FE9D1B' drawBoundBox='false' boundBoxColor='0x60FE9D1B'>
+              <Description>
+                Large veins filled very lightly  with ore.  Because
+                they contain  less ore per volume, these veins  are
+                relatively wide and long.  Mining the ore from them is
+                time  consuming compared to solid ore  veins.  They
+                are also more  difficult to follow, since it is
+                harder to get an idea of their  direction while
+                mining.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:7' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.937 * _default_ * thm4AmberBearingStoneFreq ' range=':= 1.937 * _default_ * thm4AmberBearingStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * thm4AmberBearingStoneSize ' range=':= 0 * _default_ * thm4AmberBearingStoneSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 51.5 ' range=':= 12.5 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.392 * _default_ ' range=':= 1.392 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * thm4AmberBearingStoneSize ' range=':= _default_ * thm4AmberBearingStoneSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.180 * _default_ * thm4AmberBearingStoneSize ' range=':= 1.180 * _default_ * thm4AmberBearingStoneSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- SparseVeins Preset for Amber Bearing Stone is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Amber Bearing  Stone. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4AmberBearingStoneDist = "StrategicClouds"'>
+            <Cloud name='thm4AmberBearingStoneCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60FE9D1B' drawBoundBox='false' boundBoxColor='0x60FE9D1B'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:7' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 0.951 * _default_ * thm4AmberBearingStoneSize ' range=':= 0.951 * _default_ * thm4AmberBearingStoneSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.951 * _default_ * thm4AmberBearingStoneSize ' range=':= 0.951 * _default_ * thm4AmberBearingStoneSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.904 * _default_ * thm4AmberBearingStoneFreq ' range=':= 0.904 * _default_ * thm4AmberBearingStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 51.5 ' range=':= 12.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='thm4AmberBearingStoneHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60FE9D1B' drawBoundBox='false' boundBoxColor='0x60FE9D1B'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Thaumcraft:blockCustomOre:7' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.937 * _default_ * thm4AmberBearingStoneFreq  * 0.1 ' range=':= 1.937 * _default_ * thm4AmberBearingStoneFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Amber Bearing Stone is
+             complete. -->
+
+
+        <!-- Starting Vanilla Preset for Amber Bearing Stone. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4AmberBearingStoneDist = "Vanilla"'>
+            <StandardGen name='thm4AmberBearingStoneStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60FE9D1B' drawBoundBox='false' boundBoxColor='0x60FE9D1B'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:7' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 0.667 * thm4AmberBearingStoneSize ' range=':= 0.33 * thm4AmberBearingStoneSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 13.333 * thm4AmberBearingStoneFreq ' range=':= 6.67 * thm4AmberBearingStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 51.5 ' range=':= 12.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Amber Bearing Stone is  complete. -->
+
+        <!-- End Amber Bearing Stone Generation -->
+
+
+        <!-- Begin Mountain Amber Bearing Stone Generation -->
+
+        <!-- Starting SparseVeins Preset for Mountain Amber  Bearing
+             Stone. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4MountainAmberBearingStoneDist = "SparseVeins"'>
+            <Veins name='thm4MountainAmberBearingStoneVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60FE9D1B' drawBoundBox='false' boundBoxColor='0x60FE9D1B'>
+              <Description>
+                Large veins filled very lightly  with ore.  Because
+                they contain  less ore per volume, these veins  are
+                relatively wide and long.  Mining the ore from them is
+                time  consuming compared to solid ore  veins.  They
+                are also more  difficult to follow, since it is
+                harder to get an idea of their  direction while
+                mining.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:7' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.937 * _default_ * thm4MountainAmberBearingStoneFreq ' range=':= 1.937 * _default_ * thm4MountainAmberBearingStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * thm4MountainAmberBearingStoneSize ' range=':= 0 * _default_ * thm4MountainAmberBearingStoneSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 218.5 ' range=':= 37.5 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.392 * _default_ ' range=':= 1.392 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * thm4MountainAmberBearingStoneSize ' range=':= _default_ * thm4MountainAmberBearingStoneSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.180 * _default_ * thm4MountainAmberBearingStoneSize ' range=':= 1.180 * _default_ * thm4MountainAmberBearingStoneSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- SparseVeins Preset for Mountain Amber Bearing  Stone is
+             complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain  Amber
+             Bearing Stone. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4MountainAmberBearingStoneDist = "StrategicClouds"'>
+            <Cloud name='thm4MountainAmberBearingStoneCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60FE9D1B' drawBoundBox='false' boundBoxColor='0x60FE9D1B'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:7' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 0.951 * _default_ * thm4MountainAmberBearingStoneSize ' range=':= 0.951 * _default_ * thm4MountainAmberBearingStoneSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.951 * _default_ * thm4MountainAmberBearingStoneSize ' range=':= 0.951 * _default_ * thm4MountainAmberBearingStoneSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.904 * _default_ * thm4MountainAmberBearingStoneFreq ' range=':= 0.904 * _default_ * thm4MountainAmberBearingStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 218.5 ' range=':= 37.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='thm4MountainAmberBearingStoneHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60FE9D1B' drawBoundBox='false' boundBoxColor='0x60FE9D1B'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Thaumcraft:blockCustomOre:7' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.937 * _default_ * thm4MountainAmberBearingStoneFreq  * 0.1 ' range=':= 1.937 * _default_ * thm4MountainAmberBearingStoneFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Amber Bearing  Stone
+             is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mountain Amber  Bearing
+             Stone. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4MountainAmberBearingStoneDist = "Vanilla"'>
+            <StandardGen name='thm4MountainAmberBearingStoneStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60FE9D1B' drawBoundBox='false' boundBoxColor='0x60FE9D1B'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:7' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 0.667 * thm4MountainAmberBearingStoneSize ' range=':= 0.33 * thm4MountainAmberBearingStoneSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 13.333 * thm4MountainAmberBearingStoneFreq ' range=':= 6.67 * thm4MountainAmberBearingStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 218.5 ' range=':= 37.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Amber Bearing Stone  is
+             complete. -->
+
+        <!-- End Mountain Amber Bearing Stone Generation -->
+
+
+        <!-- Begin Cinnabar Generation -->
+
+        <!-- Starting SparseVeins Preset for Cinnabar. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4CinnabarDist = "SparseVeins"'>
+            <Veins name='thm4CinnabarVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60831C20' drawBoundBox='false' boundBoxColor='0x60831C20'>
+              <Description>
+                Large veins filled very lightly  with ore.  Because
+                they contain  less ore per volume, these veins  are
+                relatively wide and long.  Mining the ore from them is
+                time  consuming compared to solid ore  veins.  They
+                are also more  difficult to follow, since it is
+                harder to get an idea of their  direction while
+                mining.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.838 * _default_ * thm4CinnabarFreq ' range=':= 1.838 * _default_ * thm4CinnabarFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * thm4CinnabarSize ' range=':= 0 * _default_ * thm4CinnabarSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 26 ' range=':= 26 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.356 * _default_ ' range=':= 1.356 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * thm4CinnabarSize ' range=':= _default_ * thm4CinnabarSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.164 * _default_ * thm4CinnabarSize ' range=':= 1.164 * _default_ * thm4CinnabarSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- SparseVeins Preset for Cinnabar is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Cinnabar. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4CinnabarDist = "StrategicClouds"'>
+            <Cloud name='thm4CinnabarCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60831C20' drawBoundBox='false' boundBoxColor='0x60831C20'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 0.926 * _default_ * thm4CinnabarSize ' range=':= 0.926 * _default_ * thm4CinnabarSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.926 * _default_ * thm4CinnabarSize ' range=':= 0.926 * _default_ * thm4CinnabarSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.857 * _default_ * thm4CinnabarFreq ' range=':= 0.857 * _default_ * thm4CinnabarFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 26 ' range=':= 26 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='thm4CinnabarHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60831C20' drawBoundBox='false' boundBoxColor='0x60831C20'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Thaumcraft:blockCustomOre' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.838 * _default_ * thm4CinnabarFreq  * 0.1 ' range=':= 1.838 * _default_ * thm4CinnabarFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Cinnabar is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Cinnabar. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4CinnabarDist = "Vanilla"'>
+            <StandardGen name='thm4CinnabarStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60831C20' drawBoundBox='false' boundBoxColor='0x60831C20'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 0.667 * thm4CinnabarSize ' range=':= 0.33 * thm4CinnabarSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 12.0 * thm4CinnabarFreq ' range=':= 6.0 * thm4CinnabarFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 26 ' range=':= 26 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Cinnabar is complete. -->
+
+        <!-- End Cinnabar Generation -->
+
+
+        <!-- Begin Mountain Cinnabar Generation -->
+
+        <!-- Starting SparseVeins Preset for Mountain  Cinnabar. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4MountainCinnabarDist = "SparseVeins"'>
+            <Veins name='thm4MountainCinnabarVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60831C20' drawBoundBox='false' boundBoxColor='0x60831C20'>
+              <Description>
+                Large veins filled very lightly  with ore.  Because
+                they contain  less ore per volume, these veins  are
+                relatively wide and long.  Mining the ore from them is
+                time  consuming compared to solid ore  veins.  They
+                are also more  difficult to follow, since it is
+                harder to get an idea of their  direction while
+                mining.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.838 * _default_ * thm4MountainCinnabarFreq ' range=':= 1.838 * _default_ * thm4MountainCinnabarFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * thm4MountainCinnabarSize ' range=':= 0 * _default_ * thm4MountainCinnabarSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 142 ' range=':= 78 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.356 * _default_ ' range=':= 1.356 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * thm4MountainCinnabarSize ' range=':= _default_ * thm4MountainCinnabarSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.164 * _default_ * thm4MountainCinnabarSize ' range=':= 1.164 * _default_ * thm4MountainCinnabarSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- SparseVeins Preset for Mountain Cinnabar is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain  Cinnabar. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4MountainCinnabarDist = "StrategicClouds"'>
+            <Cloud name='thm4MountainCinnabarCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60831C20' drawBoundBox='false' boundBoxColor='0x60831C20'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 0.926 * _default_ * thm4MountainCinnabarSize ' range=':= 0.926 * _default_ * thm4MountainCinnabarSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.926 * _default_ * thm4MountainCinnabarSize ' range=':= 0.926 * _default_ * thm4MountainCinnabarSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.857 * _default_ * thm4MountainCinnabarFreq ' range=':= 0.857 * _default_ * thm4MountainCinnabarFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 142 ' range=':= 78 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='thm4MountainCinnabarHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60831C20' drawBoundBox='false' boundBoxColor='0x60831C20'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Thaumcraft:blockCustomOre' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.838 * _default_ * thm4MountainCinnabarFreq  * 0.1 ' range=':= 1.838 * _default_ * thm4MountainCinnabarFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Cinnabar is
+             complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mountain Cinnabar. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4MountainCinnabarDist = "Vanilla"'>
+            <StandardGen name='thm4MountainCinnabarStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60831C20' drawBoundBox='false' boundBoxColor='0x60831C20'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 0.667 * thm4MountainCinnabarSize ' range=':= 0.33 * thm4MountainCinnabarSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 12.0 * thm4MountainCinnabarFreq ' range=':= 6.0 * thm4MountainCinnabarFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 142 ' range=':= 78 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Cinnabar is complete. -->
+
+        <!-- End Mountain Cinnabar Generation -->
+
+
+        <!-- Begin Air Infused Stone Generation -->
+
+        <!-- Starting SparseVeins Preset for Air Infused  Stone. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4AirInfusedStoneDist = "SparseVeins"'>
+            <Veins name='thm4AirInfusedStoneVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60FEFEAB' drawBoundBox='false' boundBoxColor='0x60FEFEAB'>
+              <Description>
+                Large veins filled very lightly  with ore.  Because
+                they contain  less ore per volume, these veins  are
+                relatively wide and long.  Mining the ore from them is
+                time  consuming compared to solid ore  veins.  They
+                are also more  difficult to follow, since it is
+                harder to get an idea of their  direction while
+                mining.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:1' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * thm4AirInfusedStoneFreq ' range=':= 3.001 * _default_ * thm4AirInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * thm4AirInfusedStoneSize ' range=':= 0 * _default_ * thm4AirInfusedStoneSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.732 * _default_ ' range=':= 1.732 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * thm4AirInfusedStoneSize ' range=':= _default_ * thm4AirInfusedStoneSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.316 * _default_ * thm4AirInfusedStoneSize ' range=':= 1.316 * _default_ * thm4AirInfusedStoneSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+
+            <!-- Beginning "Preferred" configuration. -->
+            <Veins name='thm4AirInfusedStonePreferredVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60FEFEAB' drawBoundBox='false' boundBoxColor='0x60FEFEAB'>
+              <Description>
+                Ore generation is doubled in  preferred biomes.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:1' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Savanna'  />
+              <BiomeType name='Mountain'  />
+              <BiomeType name='Hills'  />
+              <BiomeType name='Plains'  />
+              <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * thm4AirInfusedStoneFreq ' range=':= 3.001 * _default_ * thm4AirInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * thm4AirInfusedStoneSize ' range=':= 0 * _default_ * thm4AirInfusedStoneSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.732 * _default_ ' range=':= 1.732 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * thm4AirInfusedStoneSize ' range=':= _default_ * thm4AirInfusedStoneSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.316 * _default_ * thm4AirInfusedStoneSize ' range=':= 1.316 * _default_ * thm4AirInfusedStoneSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+            <!-- "Preferred" configuration complete. -->
+
+          </IfCondition>
+        </ConfigSection>
+        <!-- SparseVeins Preset for Air Infused Stone is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Air Infused  Stone. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4AirInfusedStoneDist = "StrategicClouds"'>
+            <Cloud name='thm4AirInfusedStoneCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60FEFEAB' drawBoundBox='false' boundBoxColor='0x60FEFEAB'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:1' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 0.905 * _default_ * thm4AirInfusedStoneSize ' range=':= 0.905 * _default_ * thm4AirInfusedStoneSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.905 * _default_ * thm4AirInfusedStoneSize ' range=':= 0.905 * _default_ * thm4AirInfusedStoneSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.818 * _default_ * thm4AirInfusedStoneFreq ' range=':= 0.818 * _default_ * thm4AirInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='thm4AirInfusedStoneHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60FEFEAB' drawBoundBox='false' boundBoxColor='0x60FEFEAB'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Thaumcraft:blockCustomOre:1' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * thm4AirInfusedStoneFreq  * 0.1 ' range=':= 3.001 * _default_ * thm4AirInfusedStoneFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+
+            <!-- Beginning "Preferred" configuration. -->
+            <Cloud name='thm4AirInfusedStonePreferredCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60FEFEAB' drawBoundBox='false' boundBoxColor='0x60FEFEAB'>
+              <Description>
+                Ore generation is doubled in  preferred biomes.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:1' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Savanna'  />
+              <BiomeType name='Mountain'  />
+              <BiomeType name='Hills'  />
+              <BiomeType name='Plains'  />
+              <Setting name='CloudRadius' avg=':= 0.905 * _default_ * thm4AirInfusedStoneSize ' range=':= 0.905 * _default_ * thm4AirInfusedStoneSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.905 * _default_ * thm4AirInfusedStoneSize ' range=':= 0.905 * _default_ * thm4AirInfusedStoneSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.818 * _default_ * thm4AirInfusedStoneFreq ' range=':= 0.818 * _default_ * thm4AirInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='thm4AirInfusedStonePreferredHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60FEFEAB' drawBoundBox='false' boundBoxColor='0x60FEFEAB'>
+                <Description>
+                  Ore generation is doubled in  preferred biomes.
+                </Description>
+                <OreBlock block='Thaumcraft:blockCustomOre:1' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * thm4AirInfusedStoneFreq  * 0.1 ' range=':= 3.001 * _default_ * thm4AirInfusedStoneFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+            <!-- "Preferred" configuration complete. -->
+
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Air Infused Stone is
+             complete. -->
+
+
+        <!-- Starting Vanilla Preset for Air Infused Stone. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4AirInfusedStoneDist = "Vanilla"'>
+            <StandardGen name='thm4AirInfusedStoneStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60FEFEAB' drawBoundBox='false' boundBoxColor='0x60FEFEAB'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:1' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 4.0 * thm4AirInfusedStoneSize ' range=':= 2.0 * thm4AirInfusedStoneSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 5.333 * thm4AirInfusedStoneFreq ' range=':= 2.67 * thm4AirInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Air Infused Stone is complete. -->
+
+        <!-- End Air Infused Stone Generation -->
+
+
+        <!-- Begin Fire Infused Stone Generation -->
+
+        <!-- Starting SparseVeins Preset for Fire Infused  Stone. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4FireInfusedStoneDist = "SparseVeins"'>
+            <Veins name='thm4FireInfusedStoneVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60FC5100' drawBoundBox='false' boundBoxColor='0x60FC5100'>
+              <Description>
+                Large veins filled very lightly  with ore.  Because
+                they contain  less ore per volume, these veins  are
+                relatively wide and long.  Mining the ore from them is
+                time  consuming compared to solid ore  veins.  They
+                are also more  difficult to follow, since it is
+                harder to get an idea of their  direction while
+                mining.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:2' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * thm4FireInfusedStoneFreq ' range=':= 3.001 * _default_ * thm4FireInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * thm4FireInfusedStoneSize ' range=':= 0 * _default_ * thm4FireInfusedStoneSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.732 * _default_ ' range=':= 1.732 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * thm4FireInfusedStoneSize ' range=':= _default_ * thm4FireInfusedStoneSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.316 * _default_ * thm4FireInfusedStoneSize ' range=':= 1.316 * _default_ * thm4FireInfusedStoneSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+
+            <!-- Beginning "Preferred" configuration. -->
+            <Veins name='thm4FireInfusedStonePreferredVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60FC5100' drawBoundBox='false' boundBoxColor='0x60FC5100'>
+              <Description>
+                Ore generation is doubled in  preferred biomes.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:2' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Hot'  />
+              <BiomeType name='Sandy'  />
+              <BiomeType name='Nether'  />
+              <BiomeType name='Mesa'  />
+              <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * thm4FireInfusedStoneFreq ' range=':= 3.001 * _default_ * thm4FireInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * thm4FireInfusedStoneSize ' range=':= 0 * _default_ * thm4FireInfusedStoneSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.732 * _default_ ' range=':= 1.732 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * thm4FireInfusedStoneSize ' range=':= _default_ * thm4FireInfusedStoneSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.316 * _default_ * thm4FireInfusedStoneSize ' range=':= 1.316 * _default_ * thm4FireInfusedStoneSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+            <!-- "Preferred" configuration complete. -->
+
+          </IfCondition>
+        </ConfigSection>
+        <!-- SparseVeins Preset for Fire Infused Stone is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Fire Infused  Stone. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4FireInfusedStoneDist = "StrategicClouds"'>
+            <Cloud name='thm4FireInfusedStoneCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60FC5100' drawBoundBox='false' boundBoxColor='0x60FC5100'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:2' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 0.905 * _default_ * thm4FireInfusedStoneSize ' range=':= 0.905 * _default_ * thm4FireInfusedStoneSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.905 * _default_ * thm4FireInfusedStoneSize ' range=':= 0.905 * _default_ * thm4FireInfusedStoneSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.818 * _default_ * thm4FireInfusedStoneFreq ' range=':= 0.818 * _default_ * thm4FireInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='thm4FireInfusedStoneHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60FC5100' drawBoundBox='false' boundBoxColor='0x60FC5100'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Thaumcraft:blockCustomOre:2' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * thm4FireInfusedStoneFreq  * 0.1 ' range=':= 3.001 * _default_ * thm4FireInfusedStoneFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+
+            <!-- Beginning "Preferred" configuration. -->
+            <Cloud name='thm4FireInfusedStonePreferredCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60FC5100' drawBoundBox='false' boundBoxColor='0x60FC5100'>
+              <Description>
+                Ore generation is doubled in  preferred biomes.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:2' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Hot'  />
+              <BiomeType name='Sandy'  />
+              <BiomeType name='Nether'  />
+              <BiomeType name='Mesa'  />
+              <Setting name='CloudRadius' avg=':= 0.905 * _default_ * thm4FireInfusedStoneSize ' range=':= 0.905 * _default_ * thm4FireInfusedStoneSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.905 * _default_ * thm4FireInfusedStoneSize ' range=':= 0.905 * _default_ * thm4FireInfusedStoneSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.818 * _default_ * thm4FireInfusedStoneFreq ' range=':= 0.818 * _default_ * thm4FireInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='thm4FireInfusedStonePreferredHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60FC5100' drawBoundBox='false' boundBoxColor='0x60FC5100'>
+                <Description>
+                  Ore generation is doubled in  preferred biomes.
+                </Description>
+                <OreBlock block='Thaumcraft:blockCustomOre:2' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * thm4FireInfusedStoneFreq  * 0.1 ' range=':= 3.001 * _default_ * thm4FireInfusedStoneFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+            <!-- "Preferred" configuration complete. -->
+
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Fire Infused Stone is
+             complete. -->
+
+
+        <!-- Starting Vanilla Preset for Fire Infused Stone. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4FireInfusedStoneDist = "Vanilla"'>
+            <StandardGen name='thm4FireInfusedStoneStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60FC5100' drawBoundBox='false' boundBoxColor='0x60FC5100'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:2' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 4.0 * thm4FireInfusedStoneSize ' range=':= 2.0 * thm4FireInfusedStoneSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 5.333 * thm4FireInfusedStoneFreq ' range=':= 2.67 * thm4FireInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Fire Infused Stone is  complete. -->
+
+        <!-- End Fire Infused Stone Generation -->
+
+
+        <!-- Begin Water Infused Stone Generation -->
+
+        <!-- Starting SparseVeins Preset for Water Infused  Stone. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4WaterInfusedStoneDist = "SparseVeins"'>
+            <Veins name='thm4WaterInfusedStoneVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x6000C0FA' drawBoundBox='false' boundBoxColor='0x6000C0FA'>
+              <Description>
+                Large veins filled very lightly  with ore.  Because
+                they contain  less ore per volume, these veins  are
+                relatively wide and long.  Mining the ore from them is
+                time  consuming compared to solid ore  veins.  They
+                are also more  difficult to follow, since it is
+                harder to get an idea of their  direction while
+                mining.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:3' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * thm4WaterInfusedStoneFreq ' range=':= 3.001 * _default_ * thm4WaterInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * thm4WaterInfusedStoneSize ' range=':= 0 * _default_ * thm4WaterInfusedStoneSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.732 * _default_ ' range=':= 1.732 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * thm4WaterInfusedStoneSize ' range=':= _default_ * thm4WaterInfusedStoneSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.316 * _default_ * thm4WaterInfusedStoneSize ' range=':= 1.316 * _default_ * thm4WaterInfusedStoneSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+
+            <!-- Beginning "Preferred" configuration. -->
+            <Veins name='thm4WaterInfusedStonePreferredVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x6000C0FA' drawBoundBox='false' boundBoxColor='0x6000C0FA'>
+              <Description>
+                Ore generation is doubled in  preferred biomes.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:3' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Water'  />
+              <BiomeType name='Ocean'  />
+              <BiomeType name='River'  />
+              <BiomeType name='Wet'  />
+              <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * thm4WaterInfusedStoneFreq ' range=':= 3.001 * _default_ * thm4WaterInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * thm4WaterInfusedStoneSize ' range=':= 0 * _default_ * thm4WaterInfusedStoneSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.732 * _default_ ' range=':= 1.732 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * thm4WaterInfusedStoneSize ' range=':= _default_ * thm4WaterInfusedStoneSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.316 * _default_ * thm4WaterInfusedStoneSize ' range=':= 1.316 * _default_ * thm4WaterInfusedStoneSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+            <!-- "Preferred" configuration complete. -->
+
+          </IfCondition>
+        </ConfigSection>
+        <!-- SparseVeins Preset for Water Infused Stone is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Water Infused  Stone. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4WaterInfusedStoneDist = "StrategicClouds"'>
+            <Cloud name='thm4WaterInfusedStoneCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x6000C0FA' drawBoundBox='false' boundBoxColor='0x6000C0FA'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:3' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 0.905 * _default_ * thm4WaterInfusedStoneSize ' range=':= 0.905 * _default_ * thm4WaterInfusedStoneSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.905 * _default_ * thm4WaterInfusedStoneSize ' range=':= 0.905 * _default_ * thm4WaterInfusedStoneSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.818 * _default_ * thm4WaterInfusedStoneFreq ' range=':= 0.818 * _default_ * thm4WaterInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='thm4WaterInfusedStoneHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x6000C0FA' drawBoundBox='false' boundBoxColor='0x6000C0FA'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Thaumcraft:blockCustomOre:3' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * thm4WaterInfusedStoneFreq  * 0.1 ' range=':= 3.001 * _default_ * thm4WaterInfusedStoneFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+
+            <!-- Beginning "Preferred" configuration. -->
+            <Cloud name='thm4WaterInfusedStonePreferredCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x6000C0FA' drawBoundBox='false' boundBoxColor='0x6000C0FA'>
+              <Description>
+                Ore generation is doubled in  preferred biomes.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:3' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Water'  />
+              <BiomeType name='Ocean'  />
+              <BiomeType name='River'  />
+              <BiomeType name='Wet'  />
+              <Setting name='CloudRadius' avg=':= 0.905 * _default_ * thm4WaterInfusedStoneSize ' range=':= 0.905 * _default_ * thm4WaterInfusedStoneSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.905 * _default_ * thm4WaterInfusedStoneSize ' range=':= 0.905 * _default_ * thm4WaterInfusedStoneSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.818 * _default_ * thm4WaterInfusedStoneFreq ' range=':= 0.818 * _default_ * thm4WaterInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='thm4WaterInfusedStonePreferredHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x6000C0FA' drawBoundBox='false' boundBoxColor='0x6000C0FA'>
+                <Description>
+                  Ore generation is doubled in  preferred biomes.
+                </Description>
+                <OreBlock block='Thaumcraft:blockCustomOre:3' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * thm4WaterInfusedStoneFreq  * 0.1 ' range=':= 3.001 * _default_ * thm4WaterInfusedStoneFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+            <!-- "Preferred" configuration complete. -->
+
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Water Infused Stone is
+             complete. -->
+
+
+        <!-- Starting Vanilla Preset for Water Infused Stone. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4WaterInfusedStoneDist = "Vanilla"'>
+            <StandardGen name='thm4WaterInfusedStoneStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x6000C0FA' drawBoundBox='false' boundBoxColor='0x6000C0FA'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:3' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 4.0 * thm4WaterInfusedStoneSize ' range=':= 2.0 * thm4WaterInfusedStoneSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 5.333 * thm4WaterInfusedStoneFreq ' range=':= 2.67 * thm4WaterInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Water Infused Stone is  complete. -->
+
+        <!-- End Water Infused Stone Generation -->
+
+
+        <!-- Begin Earth Infused Stone Generation -->
+
+        <!-- Starting SparseVeins Preset for Earth Infused  Stone. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4EarthInfusedStoneDist = "SparseVeins"'>
+            <Veins name='thm4EarthInfusedStoneVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x6000D900' drawBoundBox='false' boundBoxColor='0x6000D900'>
+              <Description>
+                Large veins filled very lightly  with ore.  Because
+                they contain  less ore per volume, these veins  are
+                relatively wide and long.  Mining the ore from them is
+                time  consuming compared to solid ore  veins.  They
+                are also more  difficult to follow, since it is
+                harder to get an idea of their  direction while
+                mining.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:4' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * thm4EarthInfusedStoneFreq ' range=':= 3.001 * _default_ * thm4EarthInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * thm4EarthInfusedStoneSize ' range=':= 0 * _default_ * thm4EarthInfusedStoneSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.732 * _default_ ' range=':= 1.732 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * thm4EarthInfusedStoneSize ' range=':= _default_ * thm4EarthInfusedStoneSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.316 * _default_ * thm4EarthInfusedStoneSize ' range=':= 1.316 * _default_ * thm4EarthInfusedStoneSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+
+            <!-- Beginning "Preferred" configuration. -->
+            <Veins name='thm4EarthInfusedStonePreferredVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x6000D900' drawBoundBox='false' boundBoxColor='0x6000D900'>
+              <Description>
+                Ore generation is doubled in  preferred biomes.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:4' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Coniferous'  />
+              <BiomeType name='Forest'  />
+              <BiomeType name='Sandy'  />
+              <BiomeType name='Beach'  />
+              <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * thm4EarthInfusedStoneFreq ' range=':= 3.001 * _default_ * thm4EarthInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * thm4EarthInfusedStoneSize ' range=':= 0 * _default_ * thm4EarthInfusedStoneSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.732 * _default_ ' range=':= 1.732 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * thm4EarthInfusedStoneSize ' range=':= _default_ * thm4EarthInfusedStoneSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.316 * _default_ * thm4EarthInfusedStoneSize ' range=':= 1.316 * _default_ * thm4EarthInfusedStoneSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+            <!-- "Preferred" configuration complete. -->
+
+          </IfCondition>
+        </ConfigSection>
+        <!-- SparseVeins Preset for Earth Infused Stone is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Earth Infused  Stone. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4EarthInfusedStoneDist = "StrategicClouds"'>
+            <Cloud name='thm4EarthInfusedStoneCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x6000D900' drawBoundBox='false' boundBoxColor='0x6000D900'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:4' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 0.905 * _default_ * thm4EarthInfusedStoneSize ' range=':= 0.905 * _default_ * thm4EarthInfusedStoneSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.905 * _default_ * thm4EarthInfusedStoneSize ' range=':= 0.905 * _default_ * thm4EarthInfusedStoneSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.818 * _default_ * thm4EarthInfusedStoneFreq ' range=':= 0.818 * _default_ * thm4EarthInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='thm4EarthInfusedStoneHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x6000D900' drawBoundBox='false' boundBoxColor='0x6000D900'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Thaumcraft:blockCustomOre:4' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * thm4EarthInfusedStoneFreq  * 0.1 ' range=':= 3.001 * _default_ * thm4EarthInfusedStoneFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+
+            <!-- Beginning "Preferred" configuration. -->
+            <Cloud name='thm4EarthInfusedStonePreferredCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x6000D900' drawBoundBox='false' boundBoxColor='0x6000D900'>
+              <Description>
+                Ore generation is doubled in  preferred biomes.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:4' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Coniferous'  />
+              <BiomeType name='Forest'  />
+              <BiomeType name='Sandy'  />
+              <BiomeType name='Beach'  />
+              <Setting name='CloudRadius' avg=':= 0.905 * _default_ * thm4EarthInfusedStoneSize ' range=':= 0.905 * _default_ * thm4EarthInfusedStoneSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.905 * _default_ * thm4EarthInfusedStoneSize ' range=':= 0.905 * _default_ * thm4EarthInfusedStoneSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.818 * _default_ * thm4EarthInfusedStoneFreq ' range=':= 0.818 * _default_ * thm4EarthInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='thm4EarthInfusedStonePreferredHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x6000D900' drawBoundBox='false' boundBoxColor='0x6000D900'>
+                <Description>
+                  Ore generation is doubled in  preferred biomes.
+                </Description>
+                <OreBlock block='Thaumcraft:blockCustomOre:4' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * thm4EarthInfusedStoneFreq  * 0.1 ' range=':= 3.001 * _default_ * thm4EarthInfusedStoneFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+            <!-- "Preferred" configuration complete. -->
+
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Earth Infused Stone is
+             complete. -->
+
+
+        <!-- Starting Vanilla Preset for Earth Infused Stone. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4EarthInfusedStoneDist = "Vanilla"'>
+            <StandardGen name='thm4EarthInfusedStoneStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x6000D900' drawBoundBox='false' boundBoxColor='0x6000D900'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:4' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 4.0 * thm4EarthInfusedStoneSize ' range=':= 2.0 * thm4EarthInfusedStoneSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 5.333 * thm4EarthInfusedStoneFreq ' range=':= 2.67 * thm4EarthInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Earth Infused Stone is  complete. -->
+
+        <!-- End Earth Infused Stone Generation -->
+
+
+        <!-- Begin Order Infused Stone Generation -->
+
+        <!-- Starting SparseVeins Preset for Order Infused  Stone. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4OrderInfusedStoneDist = "SparseVeins"'>
+            <Veins name='thm4OrderInfusedStoneVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60EBEBF9' drawBoundBox='false' boundBoxColor='0x60EBEBF9'>
+              <Description>
+                Large veins filled very lightly  with ore.  Because
+                they contain  less ore per volume, these veins  are
+                relatively wide and long.  Mining the ore from them is
+                time  consuming compared to solid ore  veins.  They
+                are also more  difficult to follow, since it is
+                harder to get an idea of their  direction while
+                mining.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:5' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * thm4OrderInfusedStoneFreq ' range=':= 3.001 * _default_ * thm4OrderInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * thm4OrderInfusedStoneSize ' range=':= 0 * _default_ * thm4OrderInfusedStoneSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.732 * _default_ ' range=':= 1.732 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * thm4OrderInfusedStoneSize ' range=':= _default_ * thm4OrderInfusedStoneSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.316 * _default_ * thm4OrderInfusedStoneSize ' range=':= 1.316 * _default_ * thm4OrderInfusedStoneSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+
+            <!-- Beginning "Preferred" configuration. -->
+            <Veins name='thm4OrderInfusedStonePreferredVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60EBEBF9' drawBoundBox='false' boundBoxColor='0x60EBEBF9'>
+              <Description>
+                Ore generation is doubled in  preferred biomes.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:5' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Dense'  />
+              <BiomeType name='Snowy'  />
+              <BiomeType name='Cold'  />
+              <BiomeType name='Mushroom'  />
+              <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * thm4OrderInfusedStoneFreq ' range=':= 3.001 * _default_ * thm4OrderInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * thm4OrderInfusedStoneSize ' range=':= 0 * _default_ * thm4OrderInfusedStoneSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.732 * _default_ ' range=':= 1.732 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * thm4OrderInfusedStoneSize ' range=':= _default_ * thm4OrderInfusedStoneSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.316 * _default_ * thm4OrderInfusedStoneSize ' range=':= 1.316 * _default_ * thm4OrderInfusedStoneSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+            <!-- "Preferred" configuration complete. -->
+
+          </IfCondition>
+        </ConfigSection>
+        <!-- SparseVeins Preset for Order Infused Stone is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Order Infused  Stone. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4OrderInfusedStoneDist = "StrategicClouds"'>
+            <Cloud name='thm4OrderInfusedStoneCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60EBEBF9' drawBoundBox='false' boundBoxColor='0x60EBEBF9'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:5' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 0.905 * _default_ * thm4OrderInfusedStoneSize ' range=':= 0.905 * _default_ * thm4OrderInfusedStoneSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.905 * _default_ * thm4OrderInfusedStoneSize ' range=':= 0.905 * _default_ * thm4OrderInfusedStoneSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.818 * _default_ * thm4OrderInfusedStoneFreq ' range=':= 0.818 * _default_ * thm4OrderInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='thm4OrderInfusedStoneHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60EBEBF9' drawBoundBox='false' boundBoxColor='0x60EBEBF9'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Thaumcraft:blockCustomOre:5' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * thm4OrderInfusedStoneFreq  * 0.1 ' range=':= 3.001 * _default_ * thm4OrderInfusedStoneFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+
+            <!-- Beginning "Preferred" configuration. -->
+            <Cloud name='thm4OrderInfusedStonePreferredCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60EBEBF9' drawBoundBox='false' boundBoxColor='0x60EBEBF9'>
+              <Description>
+                Ore generation is doubled in  preferred biomes.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:5' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Dense'  />
+              <BiomeType name='Snowy'  />
+              <BiomeType name='Cold'  />
+              <BiomeType name='Mushroom'  />
+              <Setting name='CloudRadius' avg=':= 0.905 * _default_ * thm4OrderInfusedStoneSize ' range=':= 0.905 * _default_ * thm4OrderInfusedStoneSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.905 * _default_ * thm4OrderInfusedStoneSize ' range=':= 0.905 * _default_ * thm4OrderInfusedStoneSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.818 * _default_ * thm4OrderInfusedStoneFreq ' range=':= 0.818 * _default_ * thm4OrderInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='thm4OrderInfusedStonePreferredHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60EBEBF9' drawBoundBox='false' boundBoxColor='0x60EBEBF9'>
+                <Description>
+                  Ore generation is doubled in  preferred biomes.
+                </Description>
+                <OreBlock block='Thaumcraft:blockCustomOre:5' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * thm4OrderInfusedStoneFreq  * 0.1 ' range=':= 3.001 * _default_ * thm4OrderInfusedStoneFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+            <!-- "Preferred" configuration complete. -->
+
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Order Infused Stone is
+             complete. -->
+
+
+        <!-- Starting Vanilla Preset for Order Infused Stone. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4OrderInfusedStoneDist = "Vanilla"'>
+            <StandardGen name='thm4OrderInfusedStoneStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60EBEBF9' drawBoundBox='false' boundBoxColor='0x60EBEBF9'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:5' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 4.0 * thm4OrderInfusedStoneSize ' range=':= 2.0 * thm4OrderInfusedStoneSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 5.333 * thm4OrderInfusedStoneFreq ' range=':= 2.67 * thm4OrderInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Order Infused Stone is  complete. -->
+
+        <!-- End Order Infused Stone Generation -->
+
+
+        <!-- Begin Entropy Infused Stone Generation -->
+
+        <!-- Starting SparseVeins Preset for Entropy Infused  Stone. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4EntropyInfusedStoneDist = "SparseVeins"'>
+            <Veins name='thm4EntropyInfusedStoneVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60260920' drawBoundBox='false' boundBoxColor='0x60260920'>
+              <Description>
+                Large veins filled very lightly  with ore.  Because
+                they contain  less ore per volume, these veins  are
+                relatively wide and long.  Mining the ore from them is
+                time  consuming compared to solid ore  veins.  They
+                are also more  difficult to follow, since it is
+                harder to get an idea of their  direction while
+                mining.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:6' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * thm4EntropyInfusedStoneFreq ' range=':= 3.001 * _default_ * thm4EntropyInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * thm4EntropyInfusedStoneSize ' range=':= 0 * _default_ * thm4EntropyInfusedStoneSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.732 * _default_ ' range=':= 1.732 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * thm4EntropyInfusedStoneSize ' range=':= _default_ * thm4EntropyInfusedStoneSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.316 * _default_ * thm4EntropyInfusedStoneSize ' range=':= 1.316 * _default_ * thm4EntropyInfusedStoneSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+
+            <!-- Beginning "Preferred" configuration. -->
+            <Veins name='thm4EntropyInfusedStonePreferredVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60260920' drawBoundBox='false' boundBoxColor='0x60260920'>
+              <Description>
+                Ore generation is doubled in  preferred biomes.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:6' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Dry'  />
+              <BiomeType name='Sparse'  />
+              <BiomeType name='Swamp'  />
+              <BiomeType name='Wasteland'  />
+              <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * thm4EntropyInfusedStoneFreq ' range=':= 3.001 * _default_ * thm4EntropyInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0 * _default_ * thm4EntropyInfusedStoneSize ' range=':= 0 * _default_ * thm4EntropyInfusedStoneSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.732 * _default_ ' range=':= 1.732 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * thm4EntropyInfusedStoneSize ' range=':= _default_ * thm4EntropyInfusedStoneSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.316 * _default_ * thm4EntropyInfusedStoneSize ' range=':= 1.316 * _default_ * thm4EntropyInfusedStoneSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+            <!-- "Preferred" configuration complete. -->
+
+          </IfCondition>
+        </ConfigSection>
+        <!-- SparseVeins Preset for Entropy Infused Stone is
+             complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Entropy  Infused
+             Stone. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4EntropyInfusedStoneDist = "StrategicClouds"'>
+            <Cloud name='thm4EntropyInfusedStoneCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60260920' drawBoundBox='false' boundBoxColor='0x60260920'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:6' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 0.905 * _default_ * thm4EntropyInfusedStoneSize ' range=':= 0.905 * _default_ * thm4EntropyInfusedStoneSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.905 * _default_ * thm4EntropyInfusedStoneSize ' range=':= 0.905 * _default_ * thm4EntropyInfusedStoneSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.818 * _default_ * thm4EntropyInfusedStoneFreq ' range=':= 0.818 * _default_ * thm4EntropyInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='thm4EntropyInfusedStoneHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60260920' drawBoundBox='false' boundBoxColor='0x60260920'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='Thaumcraft:blockCustomOre:6' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * thm4EntropyInfusedStoneFreq  * 0.1 ' range=':= 3.001 * _default_ * thm4EntropyInfusedStoneFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+
+            <!-- Beginning "Preferred" configuration. -->
+            <Cloud name='thm4EntropyInfusedStonePreferredCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60260920' drawBoundBox='false' boundBoxColor='0x60260920'>
+              <Description>
+                Ore generation is doubled in  preferred biomes.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:6' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Dry'  />
+              <BiomeType name='Sparse'  />
+              <BiomeType name='Swamp'  />
+              <BiomeType name='Wasteland'  />
+              <Setting name='CloudRadius' avg=':= 0.905 * _default_ * thm4EntropyInfusedStoneSize ' range=':= 0.905 * _default_ * thm4EntropyInfusedStoneSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.905 * _default_ * thm4EntropyInfusedStoneSize ' range=':= 0.905 * _default_ * thm4EntropyInfusedStoneSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.818 * _default_ * thm4EntropyInfusedStoneFreq ' range=':= 0.818 * _default_ * thm4EntropyInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='thm4EntropyInfusedStonePreferredHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60260920' drawBoundBox='false' boundBoxColor='0x60260920'>
+                <Description>
+                  Ore generation is doubled in  preferred biomes.
+                </Description>
+                <OreBlock block='Thaumcraft:blockCustomOre:6' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 3.001 * _default_ * thm4EntropyInfusedStoneFreq  * 0.1 ' range=':= 3.001 * _default_ * thm4EntropyInfusedStoneFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+            <!-- "Preferred" configuration complete. -->
+
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Entropy Infused Stone  is
+             complete. -->
+
+
+        <!-- Starting Vanilla Preset for Entropy Infused  Stone. -->
+        <ConfigSection>
+          <IfCondition condition=':= thm4EntropyInfusedStoneDist = "Vanilla"'>
+            <StandardGen name='thm4EntropyInfusedStoneStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60260920' drawBoundBox='false' boundBoxColor='0x60260920'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='Thaumcraft:blockCustomOre:6' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 4.0 * thm4EntropyInfusedStoneSize ' range=':= 2.0 * thm4EntropyInfusedStoneSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 5.333 * thm4EntropyInfusedStoneFreq ' range=':= 2.67 * thm4EntropyInfusedStoneFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 32 ' range=':= 27 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Entropy Infused Stone is  complete. -->
+
+        <!-- End Entropy Infused Stone Generation -->
+
+        <!-- Finished adding blocks -->
+
+      </IfCondition>
+      <!-- Overworld Setup Complete -->
+
+    </IfCondition>
+
+  </ConfigSection>
+  <!-- Configuration for Custom Ore Generation Complete! -->
+
+</IfModInstalled>
+<!-- The "Thaumcraft 4" mod is now configured. -->
+
+
+
+
+
+<!-- =================================================================
+     This file was made using the Sprocket Advanced Configuration
+     Generator.  If you wish to make your own configurations for a mod
+     not currently supported by Custom Ore Generation, and you don't
+     want the hassle of writing XML, you can find the generator script
+     at its GitHub page: http://https://github.com/reteo/Sprocket
+     ================================================================= -->
