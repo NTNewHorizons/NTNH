@@ -44,6 +44,9 @@ jobs:
             --exclude='update.bat' \
             --exclude='docker-compose.yml' \
             --exclude='server-args.txt' \
+            --exclude='index.toml' \
+            --exclude='.packwizignore' \
+            --exclude='packwiz-sources.json' \
             --exclude='.github/' \
             --exclude='CHANGELOG.md' \
             --exclude='LICENSE' \
