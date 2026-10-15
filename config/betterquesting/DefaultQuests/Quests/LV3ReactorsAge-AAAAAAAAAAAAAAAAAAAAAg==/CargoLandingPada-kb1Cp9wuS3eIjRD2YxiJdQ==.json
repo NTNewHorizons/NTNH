@@ -1,8 +1,14 @@
 {
   "preRequisites:9": {
     "0:10": {
-      "questIDHigh:4": -6787868727436752418,
-      "questIDLow:4": -6054408173306640877
+      "questIDHigh:4": 0,
+      "questIDLow:4": 103,
+      "type:1": 1
+    },
+    "1:10": {
+      "questIDHigh:4": 0,
+      "questIDLow:4": 73,
+      "type:1": 1
     }
   },
   "properties:10": {
@@ -17,30 +23,30 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §3Depth-Resource Scanning Satellite§r maps underground ore deposits across loaded chunks. It needs no ground-station commands: link it to §6Neutrino Lenses§r on the same frequency via the §3Satellite ID Manager§r.\n\nThe map lacks labels and detail on its own. Pairing the satellite with §6Neutrino Lenses§r - an armor module linked to the same frequency via the §3Satellite ID Manager§r - overlays ores as glowing labeled outlines, making the data far more usable.",
+      "desc:8": "The §3Cargo Landing Pad§r receives resource shipments from §3Asteroid Mining Ships§r.\n\nAssign a §bSatellite ID§r to an Asteroid Mining Ship and launch it using a fueled §3Soyuz§r. Insert a §bSatellite ID Chip§r with the same ID into the landing pad. The miner operates at §6Dres§r and prepares a shipment every §b15 minutes of running game time§r, while the pad can receive deliveries on any planet.\n\nKeep the pad’s chunk loaded and the space above it unobstructed. If multiple pads share the same ID, the §efirst to request a ready shipment§r receives it; no planet has priority.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
         "Damage:2": 0,
         "OreDict:8": "",
-        "id:8": "hbm:item.sat_scanner",
+        "id:8": "hbm:item.sat_miner",
         "tag:10": {
           "satAltitude:5": 100.0,
           "satBlink:5": 0.3,
-          "satColorB:5": 1.0,
-          "satColorG:5": 0.68,
-          "satColorR:5": 0.544,
+          "satColorB:5": 0.68,
+          "satColorG:5": 0.56,
+          "satColorR:5": 0.46,
           "satInclination:5": 0.0,
           "satIsBlinking:1": 0,
           "satOwner:8": "None",
           "satPhaseOffset:5": 0.0
         }
       },
-      "isMain:1": 1,
+      "isMain:1": 0,
       "isSilent:1": 0,
       "is_final:1": 0,
       "lockedProgress:1": 0,
-      "name:8": "Depth-Resource Scanning Satellite",
+      "name:8": "Cargo Landing Pad§r and Asteroid Mining Ship",
       "notification_duration:5": -1.0,
       "notification_effect:3": -1,
       "notification_fade_in:5": -1.0,
@@ -69,8 +75,8 @@
       "visibility:8": "NORMAL"
     }
   },
-  "questIDHigh:4": -752295393661006599,
-  "questIDLow:4": -8666504435509807597,
+  "questIDHigh:4": -7945120878890693769,
+  "questIDLow:4": -8607204662424598155,
   "rewards:9": {},
   "tasks:9": {
     "0:10": {
@@ -86,18 +92,24 @@
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "hbm:item.sat_scanner",
+          "id:8": "hbm:item.sat_miner",
           "tag:10": {
             "satAltitude:5": 100.0,
             "satBlink:5": 0.3,
-            "satColorB:5": 1.0,
-            "satColorG:5": 0.68,
-            "satColorR:5": 0.544,
+            "satColorB:5": 0.68,
+            "satColorG:5": 0.56,
+            "satColorR:5": 0.46,
             "satInclination:5": 0.0,
             "satIsBlinking:1": 0,
             "satOwner:8": "None",
             "satPhaseOffset:5": 0.0
           }
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.sat_dock"
         }
       },
       "taskID:8": "bq_standard:retrieval"

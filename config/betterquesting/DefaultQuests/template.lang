@@ -635,10 +635,6 @@ betterquesting.quest.8sIzBzykSPqskvhCp-Tsmw.desc=The §6Starmetal Pickaxe§r is 
 betterquesting.quest.9BjXTD5CSTOQ-_OroVdJmg.name=Cadmium
 betterquesting.quest.9BjXTD5CSTOQ-_OroVdJmg.desc=§6Cadmium§r is a material needed to make §6Cadmium Steel§r, which is a substitute of §6Technetium Steel§r.%n%nCadmium can be obtained by smelting cadmium powder, which can be obtained acidizing 10 §6Mustard Willow leaves§r with 250mB of §bHigh-Performance Solvent§r in the §3Ore Acidizer§r.%n%nThe mustard willow is a plant that can be found near §eBedrock Oil Deposits§r. When it's fully matured, the main item can be obtained, that being the mustard willow leaf.
 
-# Quest: Depth-Resource Scanning Satellite
-betterquesting.quest.9Y9PU0asTPmHumQiDRc2Ew.name=Depth-Resource Scanning Satellite
-betterquesting.quest.9Y9PU0asTPmHumQiDRc2Ew.desc=The §3Depth-Resource Scanning Satellite§r maps underground ore deposits across loaded chunks. It needs no ground-station commands: link it to §6Neutrino Lenses§r on the same frequency via the §3Satellite ID Manager§r.%n%nThe map lacks labels and detail on its own. Pairing the satellite with §6Neutrino Lenses§r - an armor module linked to the same frequency via the §3Satellite ID Manager§r - overlays ores as glowing labeled outlines, making the data far more usable.
-
 # Quest: High-Power Steam Condenser
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0Q.name=High-Power Steam Condenser
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0Q.desc=The §3High-Power Steam Condenser§r is a steam condenser which runs on electricity. It processes up to 1,000,000 mB/t of §bLow-Pressure Steam§r.
@@ -866,6 +862,10 @@ betterquesting.quest.har7pEFcSRKNgIf4NgmcLA.desc=The §3Spent Fuel Pool Drum§r 
 # Quest: Technetium-99
 betterquesting.quest.iJiX7wxoSBmljc9tITqIqQ.name=Technetium-99
 betterquesting.quest.iJiX7wxoSBmljc9tITqIqQ.desc=§6Technetium-99§r is a common waste product from the fission of §6Uranium§r and §6Plutonium§r. Reprocess ZIRNOX or PWR fuel early on to get it; it can also come from some RBMK fuels or bedrock ore with high-performance solvent. It is mainly used in making §6Technetium Steel§r and §dAE2 Storage Components§r.
+
+# Quest: Cargo Landing Pad and Asteroid Mining Ship
+betterquesting.quest.kb1Cp9wuS3eIjRD2YxiJdQ.name=Cargo Landing Pad§r and Asteroid Mining Ship
+betterquesting.quest.kb1Cp9wuS3eIjRD2YxiJdQ.desc=The §3Cargo Landing Pad§r receives resource shipments from §3Asteroid Mining Ships§r.%n%nAssign a §bSatellite ID§r to an Asteroid Mining Ship and launch it using a fueled §3Soyuz§r. Insert a §bSatellite ID Chip§r with the same ID into the landing pad. The miner operates at §6Dres§r and prepares a shipment every §b15 minutes of running game time§r, while the pad can receive deliveries on any planet.%n%nKeep the pad’s chunk loaded and the space above it unobstructed. If multiple pads share the same ID, the §efirst to request a ready shipment§r receives it; no planet has priority.
 
 # Quest: Helium-4
 betterquesting.quest.mPHQk4_mRqi6o2onNs9qgg.name=Helium-4
@@ -1303,31 +1303,6 @@ betterquesting.quest.p7NNm2NvRgWz37LQO6yraw.desc=§dArchitectureCraft§r introdu
 # Quest: Sign Pictures
 betterquesting.quest.wAu-q390TlKihyp-bEI2lw.name=Sign Pictures
 betterquesting.quest.wAu-q390TlKihyp-bEI2lw.desc=The §dSignPicture§r mod allows one to put any image on a sign, opening the door to many unique building designs. Press \ to get started.
-
-
-## Quest Line: Reward Area
-betterquesting.questline.VIthQchWRnKIQ6qTwFcPFg.name=Reward Area
-betterquesting.questline.VIthQchWRnKIQ6qTwFcPFg.desc=Trade your rewards.
-
-# Quest: LV1 > LV2 Lootbag Trade
-betterquesting.quest.8XIrl7C6Q5qBBT6HSgTHIA.name=LV1 > LV2 Lootbag Trade
-betterquesting.quest.8XIrl7C6Q5qBBT6HSgTHIA.desc=Trade three LV1 lootbags to get a better one: LV2.
-
-# Quest: LV3 > LV3.5 Lootbag Trade
-betterquesting.quest.U9KescpLTHK_XLG4Qil9zw.name=LV3 > LV3.5 Lootbag Trade
-betterquesting.quest.U9KescpLTHK_XLG4Qil9zw.desc=Trade two LV3 lootbags to get a LV3.5.
-
-# Quest: LV2 > LV3 Lootbag Trade
-betterquesting.quest.b_QkCMniQPmbvS4FX5sq-w.name=LV2 > LV3 Lootbag Trade
-betterquesting.quest.b_QkCMniQPmbvS4FX5sq-w.desc=Trade three LV2 lootbags to get a better one: LV3.
-
-# Quest: LV3.5 > LV4 Lootbag Trade
-betterquesting.quest.ecBXzr6RQ-i6XoIXFOvd5A.name=LV3.5 > LV4 Lootbag Trade
-betterquesting.quest.ecBXzr6RQ-i6XoIXFOvd5A.desc=Trade eight LV3.5 lootbags to get a better one: LV4.
-
-# Quest: LV3 > LV4 Lootbag Trade
-betterquesting.quest.qG74J_R9TQub-uWbBzZkoQ.name=LV3 > LV4 Lootbag Trade
-betterquesting.quest.qG74J_R9TQub-uWbBzZkoQ.desc=Trade four LV3 lootbags to get a better one: LV4.
 
 
 ## Quest Line: Applied Energistics 2
