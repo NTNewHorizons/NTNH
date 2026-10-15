@@ -291,6 +291,12 @@
 * The power grid tool now displays the network's current flow rate
 * The satellite frequency range has been increased from 100k to 10M to prevent the entire range from being brute-forcable in a short period of time
 * Artillery rockets should now disable their guidance once reaching their target, preventing rockets from floating
+* Updated various electric port textures
+* Changed the custom material/autogen shape config structure
+  * There can now be multiple mold per shape, allowing single and multi molds (like with 1x and 9x ingots)
+  * Examples are now "custom metal demo" and "custom shape demo" instead of "bronze" and "gear" to avoid confusion
+* Some common materials like tungsten, copper, aluminium and boron now have nugget forms
+  * This allows foundry setups to use up materials with nugget precision
 
 
 
