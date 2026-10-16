@@ -1,9 +1,14 @@
-name = "SpiceOfLife-2.2.10-carrot"
-filename = "SpiceOfLife-2.2.10-carrot.jar"
+name = "SpiceOfLife-2.2.11-carrot"
+filename = "SpiceOfLife-2.2.11-carrot.jar"
 side = "both"
 pin = true
 
 [download]
 hash-format = "sha256"
-hash = "4fdff2926631fd38c49065a016add61d19eb1254ec5373a30fbd7dc56003344d"
-url = "https://github.com/GTNewHorizons/SpiceOfLife/releases/download/2.2.10-carrot/SpiceOfLife-2.2.10-carrot.jar"
+hash = "a63b4e9ea7912bc1c53e90bf08df6db5f2cd2f8cced6627b4ba797b9a33770c1"
+url = "https://github.com/GTNewHorizons/SpiceOfLife/releases/download/2.2.11-carrot/SpiceOfLife-2.2.11-carrot.jar"
+
+[update.github]
+slug = "GTNewHorizons/SpiceOfLife"
+tag = "2.2.11-carrot"
+regex = "^SpiceOfLife\\-.+\\.jar$"
