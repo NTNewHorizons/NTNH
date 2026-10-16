@@ -2,19 +2,8 @@
   "preRequisites:9": {
     "0:10": {
       "questIDHigh:4": 0,
-      "questIDLow:4": 0
-    },
-    "1:10": {
-      "questIDHigh:4": 0,
-      "questIDLow:4": 114
-    },
-    "2:10": {
-      "questIDHigh:4": -8952569304068829753,
-      "questIDLow:4": -7428806490616029659
-    },
-    "3:10": {
-      "questIDHigh:4": 0,
-      "questIDLow:4": 10
+      "questIDLow:4": 253,
+      "type:1": 1
     }
   },
   "properties:10": {
@@ -29,18 +18,19 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "Trade two LV3 lootbags to get a LV3.5.",
+      "desc:8": "§6Dineutronium armor§r (helmet, plate, legs and boots): an endgame protective suit crafted from §6dineutronium§r.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
-        "Damage:2": 999,
+        "Damage:2": 0,
         "OreDict:8": "",
-        "id:8": "enhancedlootbags:lootbag"
+        "id:8": "hbm:item.dnt_helmet"
       },
-      "isMain:1": 1,
+      "isMain:1": 0,
       "isSilent:1": 0,
+      "is_final:1": 0,
       "lockedProgress:1": 0,
-      "name:8": "LV3 \u003e LV3.5 Lootbag Trade",
+      "name:8": "Dineutronium Armor",
       "notification_duration:5": -1.0,
       "notification_effect:3": -1,
       "notification_fade_in:5": -1.0,
@@ -56,8 +46,11 @@
       "notification_title:8": "",
       "notification_title_scale:5": -1.0,
       "particle_count:3": -1,
-      "questLogic:8": "OR",
-      "repeatTime:3": 0,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
       "repeat_relative:1": 1,
       "simultaneous:1": 0,
       "snd_complete:8": "random.levelup",
@@ -66,8 +59,8 @@
       "visibility:8": "NORMAL"
     }
   },
-  "questIDHigh:4": 6040064536697588850,
-  "questIDLow:4": -4657652509665821233,
+  "questIDHigh:4": -1660064545287614708,
+  "questIDLow:4": -4649092236607223198,
   "rewards:9": {
     "0:10": {
       "ignoreDisabled:1": 0,
@@ -76,9 +69,9 @@
       "rewards:9": {
         "0:10": {
           "Count:3": 1,
-          "Damage:2": 4,
+          "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "enhancedlootbags:lootbag"
+          "id:8": "hbm:item.dust_tiny"
         }
       }
     }
@@ -86,7 +79,7 @@
   "tasks:9": {
     "0:10": {
       "autoConsume:1": 0,
-      "consume:1": 1,
+      "consume:1": 0,
       "groupDetect:1": 0,
       "ignoreNBT:1": 1,
       "index:3": 0,
@@ -94,10 +87,28 @@
       "requireOnlyOneItem:1": 0,
       "requiredItems:9": {
         "0:10": {
-          "Count:3": 2,
-          "Damage:2": 3,
+          "Count:3": 1,
+          "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "enhancedlootbags:lootbag"
+          "id:8": "hbm:item.dnt_helmet"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.dnt_plate"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.dnt_legs"
+        },
+        "3:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.dnt_boots"
         }
       },
       "taskID:8": "bq_standard:retrieval"

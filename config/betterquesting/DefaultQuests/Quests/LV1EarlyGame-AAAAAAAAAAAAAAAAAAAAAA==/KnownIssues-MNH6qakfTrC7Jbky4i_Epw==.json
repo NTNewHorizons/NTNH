@@ -1,8 +1,8 @@
 {
   "preRequisites:9": {
     "0:10": {
-      "questIDHigh:4": 0,
-      "questIDLow:4": 30
+      "questIDHigh:4": -1922987534854173511,
+      "questIDLow:4": -8847684645341758176
     }
   },
   "properties:10": {
@@ -17,18 +17,19 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §6§3Geothermal Heat Exchang§3e§r§3r§r§r§r is essentially a boiler powered by heat from §6lava§r or §6geothermal vents§r underneath it in a 15x15x10 box below it, making it require no fuel to operate.\n\n[note]Only 3 things can contribute heat to the heat exchanger:\n\nLava (source or flowing blocks): 5 TU\nVolcanic lava: 150 TU\nGeothermal vents: 300 TU (effectively always 900)[/note]",
+      "desc:8": "Not a bug, a \u0026q\u0026zFEATURE§r!\n\nWhen you consume food your hands may shake weirdly, as if Steve was EXTREMELY happy for that lunch.\n\nIf you experience any stutters/micro-lags while playing, try turning Vsync on/off. If that does not help, contact in Discord #help.\n\nCurrently we have no idea how to fix those bugs, but we are trying our best!",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
         "Damage:2": 0,
         "OreDict:8": "",
-        "id:8": "hbm:tile.machine_hephaestus"
+        "id:8": "betterquesting:placeholder"
       },
       "isMain:1": 0,
       "isSilent:1": 0,
+      "is_final:1": 0,
       "lockedProgress:1": 0,
-      "name:8": "Geothermal Power",
+      "name:8": "Known Issues",
       "notification_duration:5": -1.0,
       "notification_effect:3": -1,
       "notification_fade_in:5": -1.0,
@@ -44,6 +45,9 @@
       "notification_title:8": "",
       "notification_title_scale:5": -1.0,
       "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,
@@ -54,41 +58,13 @@
       "visibility:8": "NORMAL"
     }
   },
-  "questIDHigh:4": -3581465447835940086,
-  "questIDLow:4": -6140714886735732721,
-  "rewards:9": {
-    "0:10": {
-      "ignoreDisabled:1": 0,
-      "index:3": 0,
-      "rewardID:8": "bq_standard:item",
-      "rewards:9": {
-        "0:10": {
-          "Count:3": 1,
-          "Damage:2": 2,
-          "OreDict:8": "",
-          "id:8": "enhancedlootbags:lootbag"
-        }
-      }
-    }
-  },
+  "questIDHigh:4": 3517868390546886320,
+  "questIDLow:4": -4961355786284448601,
+  "rewards:9": {},
   "tasks:9": {
     "0:10": {
-      "autoConsume:1": 0,
-      "consume:1": 0,
-      "groupDetect:1": 0,
-      "ignoreNBT:1": 1,
       "index:3": 0,
-      "partialMatch:1": 1,
-      "requireOnlyOneItem:1": 0,
-      "requiredItems:9": {
-        "0:10": {
-          "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
-          "id:8": "hbm:tile.machine_hephaestus"
-        }
-      },
-      "taskID:8": "bq_standard:retrieval"
+      "taskID:8": "bq_standard:checkbox"
     }
   }
 }

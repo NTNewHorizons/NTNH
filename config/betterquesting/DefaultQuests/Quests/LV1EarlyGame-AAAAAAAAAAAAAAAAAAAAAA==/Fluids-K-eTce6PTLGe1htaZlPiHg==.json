@@ -2,7 +2,7 @@
   "preRequisites:9": {
     "0:10": {
       "questIDHigh:4": 0,
-      "questIDLow:4": 30
+      "questIDLow:4": 4
     }
   },
   "properties:10": {
@@ -17,18 +17,22 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "With §6silicion§r unlocked you are now able to make a simple §5AE2§r system using §6Storage buses§r, but without any drives, since they can be unlocked later on.\n\n[note]Go check the §6§rApplied Energistics 2§r§5§r Chapter for more information![/note]§r§r",
+      "desc:8": "Fluids are measured in §emB§r (§emilli-Buckets§r) and §eB§r (§eBuckets§r).\n\n1 bucket \u003d 1000mB.\n\nThere are two fluid systems - §6Forge Fluids§r, which is the system that most of the mods are using, and §6NTM Fluids§r, which is the fluid system that is exclusive to NTM.\n\nThe §6Multi Fluid Identifier§r is used to select the type of NTM fluid one needs. Shift-Click while holding it to select a fluid.\n\nThose two systems are fully compatible between each other! Feel free to automate your factory with AE2 and other mods!",
       "globalShare:1": 0,
       "icon:10": {
-        "Count:3": 111,
-        "Damage:2": 0,
+        "Count:3": 1,
+        "Damage:2": 32767,
         "OreDict:8": "",
-        "id:8": "appliedenergistics2:tile.BlockController"
+        "id:8": "hbm:item.fluid_identifier_multi",
+        "tag:10": {
+          "fluid1:3": 211
+        }
       },
-      "isMain:1": 0,
+      "isMain:1": 1,
       "isSilent:1": 0,
+      "is_final:1": 0,
       "lockedProgress:1": 0,
-      "name:8": "AE2",
+      "name:8": "Fluids",
       "notification_duration:5": -1.0,
       "notification_effect:3": -1,
       "notification_fade_in:5": -1.0,
@@ -44,6 +48,9 @@
       "notification_title:8": "",
       "notification_title_scale:5": -1.0,
       "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,
@@ -54,31 +61,30 @@
       "visibility:8": "NORMAL"
     }
   },
-  "questIDHigh:4": 1116049069011979303,
-  "questIDLow:4": -7185323151443508001,
+  "questIDHigh:4": 3163659380794018993,
+  "questIDLow:4": -7001378495623077346,
   "rewards:9": {},
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
-      "taskID:8": "bq_standard:checkbox"
-    },
-    "1:10": {
       "autoConsume:1": 0,
       "consume:1": 0,
       "groupDetect:1": 0,
       "ignoreNBT:1": 1,
-      "index:3": 1,
+      "index:3": 0,
       "partialMatch:1": 1,
       "requireOnlyOneItem:1": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
-          "Damage:2": 220,
+          "Damage:2": 32767,
           "OreDict:8": "",
-          "id:8": "appliedenergistics2:item.ItemMultiPart"
+          "id:8": "hbm:item.fluid_identifier_multi",
+          "tag:10": {
+            "fluid1:3": 211
+          }
         }
       },
-      "taskID:8": "bq_standard:optional_retrieval"
+      "taskID:8": "bq_standard:retrieval"
     }
   }
 }

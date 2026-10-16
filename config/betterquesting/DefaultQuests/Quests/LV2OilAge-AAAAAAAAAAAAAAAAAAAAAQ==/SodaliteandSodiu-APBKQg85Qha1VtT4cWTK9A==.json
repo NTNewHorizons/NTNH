@@ -2,8 +2,7 @@
   "preRequisites:9": {
     "0:10": {
       "questIDHigh:4": 0,
-      "questIDLow:4": 253,
-      "type:1": 1
+      "questIDLow:4": 82
     }
   },
   "properties:10": {
@@ -18,18 +17,19 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "Increasus damge takn by 5x tims\nBestest armr in da wurld!!!!!!1!!1!!\n\nStaje of da gaim - Brayn Partiklz\nProtekshun levl - Funtastick\nFeetchurs - Yoor Btes Chois",
+      "desc:8": "§6Sodalite§r is a gem recovered as a §3Centrifuge§r byproduct of many ores. Run lapis through a §3Combination Oven§r to get §bChlorine Gas§r plus sodium§r. Melt sodium down to §bLiquid Sodium§r: a powerful §3Pressurized Water Reactor§r coolant, far stronger than water loops. Stockpile it before your first PWR core.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
         "Damage:2": 0,
         "OreDict:8": "",
-        "id:8": "hbm:item.dnt_helmet"
+        "id:8": "hbm:item.gem_sodalite"
       },
       "isMain:1": 0,
       "isSilent:1": 0,
+      "is_final:1": 0,
       "lockedProgress:1": 0,
-      "name:8": "Dineurtom amrr",
+      "name:8": "Sodalite and Sodium",
       "notification_duration:5": -1.0,
       "notification_effect:3": -1,
       "notification_fade_in:5": -1.0,
@@ -45,6 +45,9 @@
       "notification_title:8": "",
       "notification_title_scale:5": -1.0,
       "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,
@@ -55,23 +58,9 @@
       "visibility:8": "NORMAL"
     }
   },
-  "questIDHigh:4": -1660064545287614708,
-  "questIDLow:4": -4649092236607223198,
-  "rewards:9": {
-    "0:10": {
-      "ignoreDisabled:1": 0,
-      "index:3": 0,
-      "rewardID:8": "bq_standard:item",
-      "rewards:9": {
-        "0:10": {
-          "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
-          "id:8": "hbm:item.dust_tiny"
-        }
-      }
-    }
-  },
+  "questIDHigh:4": 67635641994265110,
+  "questIDLow:4": -5379878541328069900,
+  "rewards:9": {},
   "tasks:9": {
     "0:10": {
       "autoConsume:1": 0,
@@ -86,25 +75,7 @@
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "hbm:item.dnt_helmet"
-        },
-        "1:10": {
-          "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
-          "id:8": "hbm:item.dnt_plate"
-        },
-        "2:10": {
-          "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
-          "id:8": "hbm:item.dnt_legs"
-        },
-        "3:10": {
-          "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
-          "id:8": "hbm:item.dnt_boots"
+          "id:8": "hbm:item.gem_sodalite"
         }
       },
       "taskID:8": "bq_standard:retrieval"
