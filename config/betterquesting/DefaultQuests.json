@@ -5123,7 +5123,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "Maskman is the first NTM boss. To summon it, you need to be under radiation poisoning (50 rad). A 20-minute timer starts per player when requirements are met. Once it runs out, Mask Man spawns. A warning appears 1 minute before spawn. If you are no longer irradiated, the timer resets.",
+          "desc:8": "Maskman is the first NTM boss. To summon it, you need to be under radiation poisoning (50 rad). A 20-minute timer starts per player when requirements are met. Once it runs out, Mask Man spawns. A warning appears 1 minute before spawn. If you are no longer irradiated, the timer resets.\n\n§2The player must be underground and have crafted or placed at least one Ore Acidizer to start the timer. Maskman spawns on the surface.§r",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5603,7 +5603,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "§6Cadmium§r is a material needed to make §6Cadmium Steel§r, which is a substitute of §6Technetium Steel§r.\n\nCadmium can be obtained by smelting cadmium powder, which can be obtained acidizing 10 §6Mustard Willow leaves§r with 250mB of §bHigh-Performance Solvent§r in the §3Ore Acidizer§r.\n\nThe mustard willow is a plant that can be found near §eBedrock Oil Deposits§r. When it\u0027s fully matured, the main item can be obtained, that being the mustard willow leaf.",
+          "desc:8": "§6Cadmium§r is a material needed to make §6Cadmium Steel§r, which is a substitute of §6Technetium Steel§r.\n\nCadmium can be obtained by smelting cadmium powder, which can be obtained acidizing 10 §6Mustard Willow leaves§r with 250mB of §bHigh-Performance Solvent§r in the §3Ore Acidizer§r.\n\nThe mustard willow is a plant that can be found near §eBedrock Oil Deposits§r. When it\u0027s fully matured, the main item can be obtained, that being the mustard willow leaf.\n\n§6Mustard Willow§r can only mature on dead dirt or oily dirt, which can be produced by a §3Hydraulic Fracking Tower§r polluting the ground, making this resource easier to automate than §6Technetium§r.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6396,7 +6396,8 @@
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
-          "questIDLow:4": 64
+          "questIDLow:4": 64,
+          "type:1": 1
         },
         "1:10": {
           "questIDHigh:4": 0,
@@ -6595,7 +6596,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "The §3RBMK§r is a modular boiling-water type nuclear fission reactor which consists entirely of concrete columns. Each of these columns is either blank or has a specific function that it performs such as holding fuel rods, moderating neutrons, or storing §bWater§r to be boiled into §bSteam§r. Each column will also exchange heat with the column next to it such that temperature differences between columns will gradually equalize within the reactor. If any column reaches §e1500°C§r, the reactor will explode incredibly violently, spraying scrap and immensely radioactive material in every direction.\n\nDue to the complex and expansive nature of the RBMK, it is highly recommend that the wiki is checked out as it provides more information.\n\n[url]https://nucleartech.wiki/wiki/RBMK[/url]\n\n§2This quest provides an optional retrieval task for a cheap and safe RBMK design which can produce High-Performance Solvent§r §2without cooling. Simply Place the RBMK Irradiation Channel next to the RBMK Fuel Rod, apply the covers on the collumns and surround them with a solid block. Watch the RBMK Console neutron-flux graph for spikes, insert control rods gradually (AZ-5), and cool with 50 mB/t cold PFM per cooler.",
+          "desc:8": "The §3RBMK§r is a modular boiling-water type nuclear fission reactor which consists entirely of concrete columns. Each of these columns is either blank or has a specific function that it performs such as holding fuel rods, moderating neutrons, or storing §bWater§r to be boiled into §bSteam§r. Each column will also exchange heat with the column next to it such that temperature differences between columns will gradually equalize within the reactor. If any column reaches §e1500°C§r, the reactor will explode incredibly violently, spraying scrap and immensely radioactive material in every direction.\n\nDue to the complex and expansive nature of the RBMK, it is highly recommend that the wiki is checked out as it provides more information.\n\n[url]https://nucleartech.wiki/wiki/RBMK[/url]\n\n§2This quest provides an optional retrieval task for a cheap and safe RBMK design which can produce High-Performance Solvent§r §2without cooling. Simply Place the RBMK Irradiation Channel next to the RBMK Fuel Rod, apply the covers on the collumns and surround them with a solid block. Watch the RBMK Console neutron-flux graph for spikes, insert control rods gradually (AZ-5), and cool with 50 mB/t cold PFM per cooler.\n\n[note]Always test your §3RBMK§r designs on a creative world before actually building them on your world[/note]",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6672,8 +6673,40 @@
       },
       "tasks:9": {
         "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
-          "taskID:8": "bq_standard:checkbox"
+          "partialMatch:1": 1,
+          "requireOnlyOneItem:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "hbm:tile.rbmk_rod"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "hbm:tile.rbmk_moderator"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "hbm:tile.rbmk_boiler"
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "hbm:tile.rbmk_loader"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         },
         "1:10": {
           "autoConsume:1": 0,
@@ -7704,7 +7737,8 @@
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
-          "questIDLow:4": 64
+          "questIDLow:4": 64,
+          "type:1": 1
         },
         "1:10": {
           "questIDHigh:4": 3300935411432441238,
@@ -9181,7 +9215,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "The §3Arc Welder§r is a machine needed for the creation of many components, such as §6Welded Plates§r, §6Missile Parts§r and more. Some Recipes will require a fluid inserted into the welder to work. Make one §6dense copper or gold wire§r here first - it unlocks the crucible casting mold.",
+          "desc:8": "The §3Arc Welder§r is a [warn]§lpower hungry§r[/warn] machine needed for the creation of many components, such as §6Welded Plates§r, §6Missile Parts§r and more. Some Recipes will require a fluid inserted into the welder to work. Make one §6dense copper or gold wire§r here first - it unlocks the crucible casting mold.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9453,6 +9487,11 @@
         "0:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 20
+        },
+        "1:10": {
+          "questIDHigh:4": 0,
+          "questIDLow:4": 25,
+          "type:1": 1
         }
       },
       "properties:10": {
@@ -9683,7 +9722,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "The §3Strand Caster§r is a large basin that can cast items in batches of 9. It also requires §bWater§r in order to cast, where it makes §bLow-Pressure Steam§r that can be turned back into water.",
+          "desc:8": "The §3Strand Caster§r is a large basin that can cast items in batches of 9. It also requires §bWater§r in order to cast, where it makes §bLow-Pressure Steam§r that can be turned back into water.\n\nPlacing one §1§3§bSteam Condenser §ron one of it\u0027s holes after filling the caster with water will solve your problem with §bLow-Pressure Stea§r§bm§r it produces",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9775,7 +9814,7 @@
             "OreDict:8": "",
             "id:8": "hbm:item.ingot_dura_steel"
           },
-          "isMain:1": 1,
+          "isMain:1": 0,
           "isSilent:1": 0,
           "is_final:1": 0,
           "lockedProgress:1": 0,
@@ -11997,7 +12036,8 @@
         },
         "1:10": {
           "questIDHigh:4": 0,
-          "questIDLow:4": 60
+          "questIDLow:4": 60,
+          "type:1": 1
         }
       },
       "properties:10": {
@@ -12268,7 +12308,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "§6Desh§r is an alloy made up of 9 rare earth metals to make its blend form, which is solidified and refined using §bMercury§r and §bLight oil§r in the §3Chemical Plant§r. Desh is an almost unbreakable material and as such its tools have infinite durability. \n\n§a§2Desh can also be made using DeshReady™ in a Rotary Furnace, or later on, in an Ore Acidizer.§r\n\nMercury at this stage of the game can be obtained from centrifuging §eRedstone Ore§r or putting §eCinnabar§r in a §3Combination Oven§r. Large cinnabar veins can be found as depth ore.\n\nLater on, mercury can be obtained from processing §bOre Slop§r or §bVitriol§r in an §3Electrolyzer§r.",
+          "desc:8": "§6Desh§r is an alloy made up of 9 rare earth metals to make its blend form, which is solidified and refined using §bMercury§r and §bLight oil§r in the §3Chemical Plant§r. Desh is an almost unbreakable material and as such its tools have infinite durability. \n\nThe §6Rare Earth Ore§r can be most commonly found in §1§3schist§r§3§r layers which can appear underground randomly, it can be recgonized by its blue texture.\n\n§a§2Desh can also be made using DeshReady™ in a Rotary Furnace, or later on, in an Ore Acidizer.§r\n\nMercury at this stage of the game can be obtained from centrifuging §eRedstone Ore§r or putting §eCinnabar§r in a §3Combination Oven§r. Large cinnabar veins can be found as depth ore.\n\nLater on, mercury can be obtained from processing §bOre Slop§r or §bVitriol§r in an §3Electrolyzer§r.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12507,7 +12547,8 @@
         },
         "1:10": {
           "questIDHigh:4": 0,
-          "questIDLow:4": 64
+          "questIDLow:4": 64,
+          "type:1": 1
         }
       },
       "properties:10": {
@@ -13520,10 +13561,6 @@
         "0:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 32
-        },
-        "1:10": {
-          "questIDHigh:4": 0,
-          "questIDLow:4": 66
         }
       },
       "properties:10": {
@@ -14732,7 +14769,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "The §6Survey Scanner§r is a handheld device that will point out underground resourse deposits, such as §eDepth Rock§r and §eBedrock Ores§r.",
+          "desc:8": "The §6Survey Scanner§r is a handheld device that will point out underground resourse deposits, such as §eDepth Rock§r§e,§r §eBedrock Ores,§r §eSchist layers, Bedrock Oil deposits and Oil deposits§r.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14802,10 +14839,6 @@
         "0:10": {
           "questIDHigh:4": -8603960035130193895,
           "questIDLow:4": -6517325018119370583
-        },
-        "1:10": {
-          "questIDHigh:4": 0,
-          "questIDLow:4": 125
         }
       },
       "properties:10": {
@@ -16196,6 +16229,10 @@
         "5:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 60
+        },
+        "6:10": {
+          "questIDHigh:4": -752295393661006599,
+          "questIDLow:4": -8666504435509807597
         }
       },
       "properties:10": {
@@ -16708,7 +16745,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "§3Transport Drones§r are flying machines which will transport items and fluids between different containers. The drones require no power, and can transport both up and down. §3Waypoints§r can be used to make a better path for the transport drones to move around.",
+          "desc:8": "§3Transport Drones§r are flying machines which will transport items and fluids between different containers. The drones require no power, and can transport both up and down. §3Waypoints§r can be used to make a better path for the transport drones to move around. They are recommended if you don\u0027t like making large conveyor belts around your base.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17259,7 +17296,12 @@
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
-          "questIDLow:4": 125
+          "questIDLow:4": 121,
+          "type:1": 1
+        },
+        "1:10": {
+          "questIDHigh:4": 1116049069011979303,
+          "questIDLow:4": -7185323151443508001
         }
       },
       "properties:10": {
@@ -17447,8 +17489,8 @@
     "173:10": {
       "preRequisites:9": {
         "0:10": {
-          "questIDHigh:4": 0,
-          "questIDLow:4": 125
+          "questIDHigh:4": 1116049069011979303,
+          "questIDLow:4": -7185323151443508001
         }
       },
       "properties:10": {
@@ -18056,7 +18098,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "§6Tantalium§r is a material needed for the creation of some items, most importantly §6Capacitor Boards§r, which are crucial for the control units of most nuclear bombs. Tantalium Polycrystal production requires §6Coltan§r which can be located by the use of a §6Coltas§r. Coltan can also be obtained by using the mining drill in a §eBedrock Ore Coltan Deposit§r located randomly on planet Dres. Tantalum can also be obtained via §3Watz Reactor§r.\n\n§2Coltan Processing at its early stage can provide Niobium needed for Catalytic Cracking Towers.",
+          "desc:8": "§6Tantalium§r is a material needed for the creation of some items, most importantly §6Capacitor Boards§r, which are crucial for the control units of most nuclear bombs. Tantalium Polycrystal production requires §6Coltan§r which can be located by the use of a §6Coltas§r. Coltan can also be obtained by using the mining drill in a §eBedrock Ore Coltan Deposit§r located randomly on planet Dres. Tantalum can also be obtained via §3Watz Reactor§r.\n\n§2Coltan Processing at its early stage can provide Niobium needed for Catalytic Cracking Towers.\n\n§2Rare Earth Ore is easier to find and more abundant in schist layers, providing an alternative source of Niobium for Catalytic Cracking Towers.§r",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19477,7 +19519,8 @@
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
-          "questIDLow:4": 64
+          "questIDLow:4": 64,
+          "type:1": 1
         },
         "1:10": {
           "questIDHigh:4": 0,
@@ -25410,7 +25453,7 @@
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
-          "questIDLow:4": 33
+          "questIDLow:4": 208
         }
       },
       "properties:10": {
@@ -26986,7 +27029,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "Not a bug, a \u0026q\u0026zFEATURE§r!\n\nWhen you consume food your hands may shake weirdly, as if Steve was EXTREMELY happy for that lunch.\n\nIf you experience any stutters/micro-lags while playing, try turning Vsync on/off. If that does not help, contact in Discord #help.\n\nCurrently we have no idea how to fix those bugs, but we are trying our best!",
+          "desc:8": "Not a bug, a \u0026q\u0026zFEATURE§r!\n\nWhen you consume food your hands may shake weirdly, as if Steve was EXTREMELY happy for that lunch.\n\nIf you experience any stutters/micro-lags while playing, try turning Vsync on/off. If that does not help, contact in Discord #help.\n\nCurrently we have no idea how to fix those bugs, but we are trying our best!\n\nIf you experience any performance issues, bugs, or glitches please contact in §1Discord§r #help.\n\nOr better yet, report these on the §6github§r page, so we can better track what to fix.\n\n§1Discord server:§r\n[url]https://discord.com/invite/wtNVzeE5QB[/url]\n\n§6Github:§§§r\n[url]https://github.com/NTNewHorizons/NTNH[/url]\n\n§r",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26998,7 +27041,7 @@
           "isSilent:1": 0,
           "is_final:1": 0,
           "lockedProgress:1": 0,
-          "name:8": "Known Issues",
+          "name:8": "Bugs",
           "notification_duration:5": -1.0,
           "notification_effect:3": -1,
           "notification_fade_in:5": -1.0,
@@ -34325,10 +34368,6 @@
         "2:10": {
           "questIDHigh:4": 3934306737288201973,
           "questIDLow:4": -4889338669924184104
-        },
-        "3:10": {
-          "questIDHigh:4": 0,
-          "questIDLow:4": 125
         }
       },
       "properties:10": {
@@ -39408,7 +39447,8 @@
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
-          "questIDLow:4": 66
+          "questIDLow:4": 66,
+          "type:1": 2
         },
         "1:10": {
           "questIDHigh:4": 0,
@@ -39612,7 +39652,7 @@
               "id:8": "hbm:tile.machine_satlink"
             }
           },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:optional_retrieval"
         },
         "2:10": {
           "autoConsume:1": 0,
@@ -46298,6 +46338,662 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "443:10": {
+      "preRequisites:9": {
+        "0:10": {
+          "questIDHigh:4": 0,
+          "questIDLow:4": 30
+        }
+      },
+      "properties:10": {
+        "betterquesting:10": {
+          "autoClaim:1": 0,
+          "completion_animation:8": "default",
+          "completion_particle:8": "default",
+          "confetti_icon:10": {
+            "Count:3": 0,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:stick"
+          },
+          "countAsQuest:1": 1,
+          "desc:8": "The §6§3Geothermal Heat Exchang§3e§r§3r§r§r§r is essentially a boiler powered by heat from §6lava§r or §6geothermal vents§r underneath it in a 15x15x10 box below it, making it require no fuel to operate.\n\n[note]Only 3 things can contribute heat to the heat exchanger:\n\nLava (source or flowing blocks): 5 TU\nVolcanic lava: 150 TU\nGeothermal vents: 300 TU (effectively always 900)[/note]",
+          "globalShare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "hbm:tile.machine_hephaestus"
+          },
+          "isMain:1": 0,
+          "isSilent:1": 0,
+          "lockedProgress:1": 0,
+          "name:8": "Geothermal Power",
+          "notification_duration:5": -1.0,
+          "notification_effect:3": -1,
+          "notification_fade_in:5": -1.0,
+          "notification_fade_out:5": -1.0,
+          "notification_icon_offset_y:3": -2147483648,
+          "notification_icon_scale:5": -1.0,
+          "notification_pos_x:3": -2147483648,
+          "notification_pos_y:3": -2147483648,
+          "notification_show_icon:8": "default",
+          "notification_style:8": "default",
+          "notification_subtitle:8": "",
+          "notification_subtitle_scale:5": -1.0,
+          "notification_title:8": "",
+          "notification_title_scale:5": -1.0,
+          "particle_count:3": -1,
+          "questLogic:8": "AND",
+          "repeatTime:3": -1,
+          "repeat_relative:1": 1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "random.levelup",
+          "snd_update:8": "random.levelup",
+          "taskLogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questIDHigh:4": -3581465447835940086,
+      "questIDLow:4": -6140714886735732721,
+      "rewards:9": {
+        "0:10": {
+          "ignoreDisabled:1": 0,
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 191,
+              "OreDict:8": "",
+              "id:8": "enhancedlootbags:lootbag"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requireOnlyOneItem:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "hbm:tile.machine_hephaestus"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "444:10": {
+      "preRequisites:9": {
+        "0:10": {
+          "questIDHigh:4": -6787868727436752418,
+          "questIDLow:4": -6054408173306640877
+        }
+      },
+      "properties:10": {
+        "betterquesting:10": {
+          "autoClaim:1": 0,
+          "completion_animation:8": "default",
+          "completion_particle:8": "default",
+          "confetti_icon:10": {
+            "Count:3": 0,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:stick"
+          },
+          "countAsQuest:1": 1,
+          "desc:8": "The §3Depth-Resource Scanning Satellite§r maps underground ore deposits across loaded chunks. It is operated via §dRedstone-over-Radio§r through a §3Satellite Ground Station§r.\n\nThe map lacks labels and detail on its own. Pairing the satellite with §6Neutrino Lenses§r - an armor module linked to the same frequency via the §3Satellite ID Manager§r - overlays ores as glowing labeled outlines, making the data far more usable.",
+          "globalShare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "hbm:item.sat_scanner",
+            "tag:10": {
+              "satAltitude:5": 100.0,
+              "satBlink:5": 0.3,
+              "satColorB:5": 1.0,
+              "satColorG:5": 0.68,
+              "satColorR:5": 0.544,
+              "satInclination:5": 0.0,
+              "satIsBlinking:1": 0,
+              "satOwner:8": "None",
+              "satPhaseOffset:5": 0.0
+            }
+          },
+          "isMain:1": 1,
+          "isSilent:1": 0,
+          "lockedProgress:1": 0,
+          "name:8": "Depth-Resource Scanning Satellite",
+          "notification_duration:5": -1.0,
+          "notification_effect:3": -1,
+          "notification_fade_in:5": -1.0,
+          "notification_fade_out:5": -1.0,
+          "notification_icon_offset_y:3": -2147483648,
+          "notification_icon_scale:5": -1.0,
+          "notification_pos_x:3": -2147483648,
+          "notification_pos_y:3": -2147483648,
+          "notification_show_icon:8": "default",
+          "notification_style:8": "default",
+          "notification_subtitle:8": "",
+          "notification_subtitle_scale:5": -1.0,
+          "notification_title:8": "",
+          "notification_title_scale:5": -1.0,
+          "particle_count:3": -1,
+          "questLogic:8": "AND",
+          "repeatTime:3": -1,
+          "repeat_relative:1": 1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "random.levelup",
+          "snd_update:8": "random.levelup",
+          "taskLogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questIDHigh:4": -752295393661006599,
+      "questIDLow:4": -8666504435509807597,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requireOnlyOneItem:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "hbm:item.sat_scanner",
+              "tag:10": {
+                "satAltitude:5": 100.0,
+                "satBlink:5": 0.3,
+                "satColorB:5": 1.0,
+                "satColorG:5": 0.68,
+                "satColorR:5": 0.544,
+                "satInclination:5": 0.0,
+                "satIsBlinking:1": 0,
+                "satOwner:8": "None",
+                "satPhaseOffset:5": 0.0
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "445:10": {
+      "preRequisites:9": {
+        "0:10": {
+          "questIDHigh:4": 355965140665518242,
+          "questIDLow:4": -5852067216655729819
+        }
+      },
+      "properties:10": {
+        "betterquesting:10": {
+          "autoClaim:1": 0,
+          "completion_animation:8": "default",
+          "completion_particle:8": "default",
+          "confetti_icon:10": {
+            "Count:3": 0,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:stick"
+          },
+          "countAsQuest:1": 1,
+          "desc:8": "So you might be wondering where the farming quest line is well its not coming... this update that is, due to my busy schedule i didnt have enough time to finish it so here is a stack of cookies as a gift, have fun!",
+          "globalShare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:nether_star"
+          },
+          "isMain:1": 0,
+          "isSilent:1": 0,
+          "lockedProgress:1": 0,
+          "name:8": "Where is the quest line?",
+          "notification_duration:5": -1.0,
+          "notification_effect:3": -1,
+          "notification_fade_in:5": -1.0,
+          "notification_fade_out:5": -1.0,
+          "notification_icon_offset_y:3": -2147483648,
+          "notification_icon_scale:5": -1.0,
+          "notification_pos_x:3": -2147483648,
+          "notification_pos_y:3": -2147483648,
+          "notification_show_icon:8": "default",
+          "notification_style:8": "default",
+          "notification_subtitle:8": "",
+          "notification_subtitle_scale:5": -1.0,
+          "notification_title:8": "",
+          "notification_title_scale:5": -1.0,
+          "particle_count:3": -1,
+          "questLogic:8": "AND",
+          "repeatTime:3": -1,
+          "repeat_relative:1": 1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "random.levelup",
+          "snd_update:8": "random.levelup",
+          "taskLogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questIDHigh:4": -656011129185614990,
+      "questIDLow:4": -5656622840097204066,
+      "rewards:9": {
+        "0:10": {
+          "ignoreDisabled:1": 0,
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 64,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "minecraft:cookie"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "446:10": {
+      "preRequisites:9": {
+        "0:10": {
+          "questIDHigh:4": 0,
+          "questIDLow:4": 64
+        }
+      },
+      "properties:10": {
+        "betterquesting:10": {
+          "autoClaim:1": 0,
+          "completion_animation:8": "default",
+          "completion_particle:8": "default",
+          "confetti_icon:10": {
+            "Count:3": 0,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:stick"
+          },
+          "countAsQuest:1": 1,
+          "desc:8": "§6Curvy pipes§r are a very convienet mode of transporation for§3 items, fluids, and power§r.\n\n",
+          "globalShare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1,
+            "OreDict:8": "",
+            "id:8": "curvy_pipes:pipe"
+          },
+          "isMain:1": 0,
+          "isSilent:1": 0,
+          "lockedProgress:1": 0,
+          "name:8": "Curvy Pipes",
+          "notification_duration:5": -1.0,
+          "notification_effect:3": -1,
+          "notification_fade_in:5": -1.0,
+          "notification_fade_out:5": -1.0,
+          "notification_icon_offset_y:3": -2147483648,
+          "notification_icon_scale:5": -1.0,
+          "notification_pos_x:3": -2147483648,
+          "notification_pos_y:3": -2147483648,
+          "notification_show_icon:8": "default",
+          "notification_style:8": "default",
+          "notification_subtitle:8": "",
+          "notification_subtitle_scale:5": -1.0,
+          "notification_title:8": "",
+          "notification_title_scale:5": -1.0,
+          "particle_count:3": -1,
+          "questLogic:8": "OR",
+          "repeatTime:3": -1,
+          "repeat_relative:1": 1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "random.levelup",
+          "snd_update:8": "random.levelup",
+          "taskLogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questIDHigh:4": 101073958437276490,
+      "questIDLow:4": -4755669698362144810,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requireOnlyOneItem:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "curvy_pipes:pipe"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requireOnlyOneItem:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 6,
+              "OreDict:8": "",
+              "id:8": "curvy_pipes:pipe"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "2:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 2,
+          "partialMatch:1": 1,
+          "requireOnlyOneItem:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 11,
+              "OreDict:8": "",
+              "id:8": "curvy_pipes:pipe"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "447:10": {
+      "preRequisites:9": {
+        "0:10": {
+          "questIDHigh:4": 7393826177143426704,
+          "questIDLow:4": -5800711279727378144
+        },
+        "1:10": {
+          "questIDHigh:4": 1597156130510686175,
+          "questIDLow:4": -8148762555774367770
+        }
+      },
+      "properties:10": {
+        "betterquesting:10": {
+          "autoClaim:1": 0,
+          "completion_animation:8": "default",
+          "completion_particle:8": "default",
+          "confetti_icon:10": {
+            "Count:3": 0,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:stick"
+          },
+          "countAsQuest:1": 1,
+          "desc:8": "So, you spent something like 20 minuets reading the other 2 quests and are wondering, \"so... what the hell does any of that mean?\" or you didnt read it at all, go back and read them you lazy bum or everything from here on will seem unclear. these food mods give a GTNH feel to hunger, you cant eat the same foods to many times in a row and eating a certain new foods can give extra hearts. this quest line will walk you thru how to use the food mods this pack ofers to there fullest potential (yes some of this is repeating what was said in the other 2 quests, no i will not be changing what this or the other quests say, if you want to complain DM I DARE YOU. gamernaut12)",
+          "globalShare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "betterquesting:placeholder"
+          },
+          "isMain:1": 0,
+          "isSilent:1": 0,
+          "lockedProgress:1": 0,
+          "name:8": "What the hell does this all mean?",
+          "notification_duration:5": -1.0,
+          "notification_effect:3": -1,
+          "notification_fade_in:5": -1.0,
+          "notification_fade_out:5": -1.0,
+          "notification_icon_offset_y:3": -2147483648,
+          "notification_icon_scale:5": -1.0,
+          "notification_pos_x:3": -2147483648,
+          "notification_pos_y:3": -2147483648,
+          "notification_show_icon:8": "default",
+          "notification_style:8": "default",
+          "notification_subtitle:8": "",
+          "notification_subtitle_scale:5": -1.0,
+          "notification_title:8": "",
+          "notification_title_scale:5": -1.0,
+          "particle_count:3": -1,
+          "questLogic:8": "AND",
+          "repeatTime:3": -1,
+          "repeat_relative:1": 1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "random.levelup",
+          "snd_update:8": "random.levelup",
+          "taskLogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questIDHigh:4": 355965140665518242,
+      "questIDLow:4": -5852067216655729819,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 3,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "448:10": {
+      "preRequisites:9": {
+        "0:10": {
+          "questIDHigh:4": 0,
+          "questIDLow:4": 30
+        }
+      },
+      "properties:10": {
+        "betterquesting:10": {
+          "autoClaim:1": 0,
+          "completion_animation:8": "default",
+          "completion_particle:8": "default",
+          "confetti_icon:10": {
+            "Count:3": 0,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:stick"
+          },
+          "countAsQuest:1": 1,
+          "desc:8": "With §6silicion§r unlocked you are now able to make a simple §5AE2§r system using §6Storage buses§r, but without any drives, since they can be unlocked later on.\n\n[note]Go check the §6§rApplied Energistics 2§r§5§r Chapter for more information![/note]§r§r",
+          "globalShare:1": 0,
+          "icon:10": {
+            "Count:3": 111,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "appliedenergistics2:tile.BlockController"
+          },
+          "isMain:1": 0,
+          "isSilent:1": 0,
+          "lockedProgress:1": 0,
+          "name:8": "AE2",
+          "notification_duration:5": -1.0,
+          "notification_effect:3": -1,
+          "notification_fade_in:5": -1.0,
+          "notification_fade_out:5": -1.0,
+          "notification_icon_offset_y:3": -2147483648,
+          "notification_icon_scale:5": -1.0,
+          "notification_pos_x:3": -2147483648,
+          "notification_pos_y:3": -2147483648,
+          "notification_show_icon:8": "default",
+          "notification_style:8": "default",
+          "notification_subtitle:8": "",
+          "notification_subtitle_scale:5": -1.0,
+          "notification_title:8": "",
+          "notification_title_scale:5": -1.0,
+          "particle_count:3": -1,
+          "questLogic:8": "AND",
+          "repeatTime:3": -1,
+          "repeat_relative:1": 1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "random.levelup",
+          "snd_update:8": "random.levelup",
+          "taskLogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questIDHigh:4": 1116049069011979303,
+      "questIDLow:4": -7185323151443508001,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requireOnlyOneItem:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 220,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:item.ItemMultiPart"
+            }
+          },
+          "taskID:8": "bq_standard:optional_retrieval"
+        }
+      }
+    },
+    "449:10": {
+      "preRequisites:9": {
+        "0:10": {
+          "questIDHigh:4": 6107657297413227965,
+          "questIDLow:4": -5024519252989972104
+        }
+      },
+      "properties:10": {
+        "betterquesting:10": {
+          "autoClaim:1": 0,
+          "completion_animation:8": "default",
+          "completion_particle:8": "default",
+          "confetti_icon:10": {
+            "Count:3": 0,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:stick"
+          },
+          "countAsQuest:1": 1,
+          "desc:8": "This system is highly WIP (including this very quest), so do not expect it to be perfect.\n\nThis is the simplest method of prospecting, based on visual examination of surrounding material. Right-click on any §6Stone§r or §6Gravel§r block with a §6Prospector\u0027s Eyeglass§r and it will tell you if there is a substantial amount of any interesting ore nearby. Three levels of indication are reported, \"Faint signs\", \"Signs\" and \"Strong signs\", allowing you to home in on the source.\n\nTaking and analyzing geological samples, on the other hand, provides similar information to the Eyeglass but in much more detail. First you will need to make a §6Prospecting Pick§r. To take a sample, right-click on any piece of Stone or Gravel with the Prospecting Pick. A Geological Sample item will be dropped.\n\nTo analyse the sample, you will need a §3Geological Sample Analysis Kit§r and a supply of §6Litmus Paper§r. To use the kit, place it down somewhere and right-click it to open its GUI. Place the sample you want to analyse in the sample slot and some litmus paper in the slot beside it. Analysis will begin automatically and should finish in a few seconds, after which a report will appear below.\n\nThe report shows the place where the sample was taken and the amounts of any interesting mineral traces it contains. You can expect indications of ores within 16 blocks of the sample location, horizontally and vertically, to show up. Ores closer to the sample location will show up more strongly than ones further away.\n\n§2To save the analysis report for future reference, place a Writeable Book in the book slot and press the + button.\n\nIf you lose the report, you can analyse the sample again to get it back. However, a little of the sample is used up each time you analyse it, and a given sample can only be analysed 16 times before there is nothing left.",
+          "globalShare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "prospectingcraft:eyeglass"
+          },
+          "isMain:1": 0,
+          "isSilent:1": 0,
+          "lockedProgress:1": 0,
+          "name:8": "Geological Samples",
+          "notification_duration:5": -1.0,
+          "notification_effect:3": -1,
+          "notification_fade_in:5": -1.0,
+          "notification_fade_out:5": -1.0,
+          "notification_icon_offset_y:3": -2147483648,
+          "notification_icon_scale:5": -1.0,
+          "notification_pos_x:3": -2147483648,
+          "notification_pos_y:3": -2147483648,
+          "notification_show_icon:8": "default",
+          "notification_style:8": "default",
+          "notification_subtitle:8": "",
+          "notification_subtitle_scale:5": -1.0,
+          "notification_title:8": "",
+          "notification_title_scale:5": -1.0,
+          "particle_count:3": -1,
+          "questLogic:8": "AND",
+          "repeatTime:3": -1,
+          "repeat_relative:1": 1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "random.levelup",
+          "snd_update:8": "random.levelup",
+          "taskLogic:8": "OR",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questIDHigh:4": 4638644023846389289,
+      "questIDLow:4": -5261892075279153819,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requireOnlyOneItem:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "prospectingcraft:eyeglass"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requireOnlyOneItem:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "prospectingcraft:gsa_kit"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "prospectingcraft:prospecting_pick"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "prospectingcraft:litmus_paper"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -48599,7 +49295,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": -276
+          "y:3": -288
         },
         "8:10": {
           "questIDHigh:4": -2171037489483201764,
@@ -49079,7 +49775,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": -324
+          "y:3": -312
         },
         "68:10": {
           "questIDHigh:4": 4202730796246256446,
@@ -49222,8 +49918,8 @@
           "questIDLow:4": -7205135763288628092,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -60,
-          "y:3": -300
+          "x:3": -12,
+          "y:3": -252
         },
         "86:10": {
           "questIDHigh:4": 8734571997805300442,
@@ -49278,7 +49974,7 @@
           "questIDLow:4": -6984665115169535093,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 48,
+          "x:3": 36,
           "y:3": -312
         },
         "93:10": {
@@ -49384,6 +50080,14 @@
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": -228
+        },
+        "106:10": {
+          "questIDHigh:4": 4638644023846389289,
+          "questIDLow:4": -5261892075279153819,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -48,
+          "y:3": -108
         }
       }
     },
@@ -49846,6 +50550,30 @@
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": 192
+        },
+        "55:10": {
+          "questIDHigh:4": 101073958437276490,
+          "questIDLow:4": -4755669698362144810,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 84,
+          "y:3": 168
+        },
+        "56:10": {
+          "questIDHigh:4": 1116049069011979303,
+          "questIDLow:4": -7185323151443508001,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -108,
+          "y:3": 60
+        },
+        "57:10": {
+          "questIDHigh:4": -3581465447835940086,
+          "questIDLow:4": -6140714886735732721,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -204,
+          "y:3": 60
         }
       }
     },
@@ -49978,7 +50706,7 @@
           "questIDLow:4": 0,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 312,
+          "x:3": 252,
           "y:3": 60
         },
         "14:10": {
@@ -50026,7 +50754,7 @@
           "questIDLow:4": 45,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 372,
+          "x:3": 312,
           "y:3": 72
         },
         "20:10": {
@@ -50532,6 +51260,14 @@
           "sizeY:3": 48,
           "x:3": -108,
           "y:3": 648
+        },
+        "83:10": {
+          "questIDHigh:4": -752295393661006599,
+          "questIDLow:4": -8666504435509807597,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 252,
+          "y:3": 384
         }
       }
     },
@@ -50601,7 +51337,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
-          "y:3": 156
+          "y:3": 180
         },
         "6:10": {
           "questIDHigh:4": 0,
@@ -50625,7 +51361,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -24,
-          "y:3": 600
+          "y:3": 576
         },
         "9:10": {
           "questIDHigh:4": 0,
@@ -50633,15 +51369,15 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -36,
-          "y:3": 492
+          "y:3": 480
         },
         "10:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 77,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 48,
-          "y:3": 108
+          "x:3": 84,
+          "y:3": 132
         },
         "11:10": {
           "questIDHigh:4": 0,
@@ -50649,7 +51385,7 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -216,
-          "y:3": 144
+          "y:3": 168
         },
         "12:10": {
           "questIDHigh:4": 0,
@@ -50673,7 +51409,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
-          "y:3": 60
+          "y:3": 84
         },
         "15:10": {
           "questIDHigh:4": 0,
@@ -50681,7 +51417,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
-          "y:3": 24
+          "y:3": 48
         },
         "16:10": {
           "questIDHigh:4": 0,
@@ -50721,7 +51457,7 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 192,
-          "y:3": 48
+          "y:3": 72
         },
         "21:10": {
           "questIDHigh:4": 0,
@@ -50737,7 +51473,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
-          "y:3": 504
+          "y:3": 492
         },
         "23:10": {
           "questIDHigh:4": 0,
@@ -50745,7 +51481,7 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 192,
-          "y:3": 444
+          "y:3": 432
         },
         "24:10": {
           "questIDHigh:4": 0,
@@ -50769,7 +51505,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -24,
-          "y:3": 552
+          "y:3": 540
         },
         "27:10": {
           "questIDHigh:4": 0,
@@ -50777,7 +51513,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 12,
-          "y:3": 600
+          "y:3": 576
         },
         "28:10": {
           "questIDHigh:4": 0,
@@ -50785,15 +51521,15 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": 600
+          "y:3": 576
         },
         "29:10": {
           "questIDHigh:4": 929055271446463347,
           "questIDLow:4": -6651168462273290191,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 96,
-          "y:3": 144
+          "x:3": 132,
+          "y:3": 252
         },
         "30:10": {
           "questIDHigh:4": 1324615150211645647,
@@ -50809,7 +51545,7 @@
           "sizeX:3": 72,
           "sizeY:3": 72,
           "x:3": -48,
-          "y:3": 636
+          "y:3": 612
         },
         "32:10": {
           "questIDHigh:4": 2870886993118644556,
@@ -50848,8 +51584,8 @@
           "questIDLow:4": -5285318114980582696,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 36,
-          "y:3": 144
+          "x:3": 72,
+          "y:3": 168
         },
         "37:10": {
           "questIDHigh:4": 9060064238429097123,
@@ -50905,7 +51641,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -24,
-          "y:3": 456
+          "y:3": 444
         }
       }
     },
@@ -51300,7 +52036,7 @@
           "questIDLow:4": -5049317874480871778,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -60,
+          "x:3": -84,
           "y:3": -60
         },
         "2:10": {
@@ -51348,7 +52084,7 @@
           "questIDLow:4": -8585709469103528141,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -108,
+          "x:3": -132,
           "y:3": -60
         },
         "8:10": {
@@ -51396,7 +52132,7 @@
           "questIDLow:4": -5131046660634401183,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
+          "x:3": 108,
           "y:3": -60
         },
         "14:10": {
@@ -51404,7 +52140,7 @@
           "questIDLow:4": -9092348455014731738,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 36,
+          "x:3": 12,
           "y:3": -60
         },
         "15:10": {
@@ -51444,7 +52180,7 @@
           "questIDLow:4": -6209457741238451931,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
+          "x:3": -36,
           "y:3": -60
         },
         "20:10": {
@@ -51452,8 +52188,8 @@
           "questIDLow:4": -8504565608106062636,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -24,
-          "y:3": -120
+          "x:3": -192,
+          "y:3": -24
         }
       }
     },
@@ -51578,6 +52314,22 @@
           "sizeY:3": 48,
           "x:3": -72,
           "y:3": -24
+        },
+        "2:10": {
+          "questIDHigh:4": -656011129185614990,
+          "questIDLow:4": -5656622840097204066,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 96
+        },
+        "3:10": {
+          "questIDHigh:4": 355965140665518242,
+          "questIDLow:4": -5852067216655729819,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 36
         }
       }
     },
