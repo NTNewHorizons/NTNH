@@ -2,7 +2,7 @@
   "preRequisites:9": {
     "0:10": {
       "questIDHigh:4": 0,
-      "questIDLow:4": 142
+      "questIDLow:4": 42
     }
   },
   "properties:10": {
@@ -17,19 +17,19 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §3Big-Ass Tank§r is the largest fluid storage container, capable of storing 2048000mB of fluids, aswell as being able to hold strongly corrosive fluids. It has to be placed on the solid surface, otherwise it is going to break.",
+      "desc:8": "Multi-Lane Conveyor Belts can be used to transport items on different lanes on the same block, while the Express Conveyor transfers the items twice as fast.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
         "Damage:2": 0,
         "OreDict:8": "",
-        "id:8": "hbm:tile.machine_bigasstank"
+        "id:8": "hbm:tile.conveyor_express"
       },
       "isMain:1": 0,
       "isSilent:1": 0,
       "is_final:1": 0,
       "lockedProgress:1": 0,
-      "name:8": "Big-Ass Tank",
+      "name:8": "Better Conveyors",
       "notification_duration:5": -1.0,
       "notification_effect:3": -1,
       "notification_fade_in:5": -1.0,
@@ -58,8 +58,8 @@
       "visibility:8": "NORMAL"
     }
   },
-  "questIDHigh:4": 0,
-  "questIDLow:4": 143,
+  "questIDHigh:4": 2795396746292708589,
+  "questIDLow:4": -5984198842617186574,
   "rewards:9": {},
   "tasks:9": {
     "0:10": {
@@ -73,9 +73,45 @@
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
-          "Damage:2": 0,
+          "Damage:2": 2,
           "OreDict:8": "",
-          "id:8": "hbm:tile.machine_bigasstank"
+          "id:8": "hbm:item.conveyor_wand"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "1:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 1,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 3,
+          "OreDict:8": "",
+          "id:8": "hbm:item.conveyor_wand"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "2:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 2,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "OreDict:8": "",
+          "id:8": "hbm:item.conveyor_wand"
         }
       },
       "taskID:8": "bq_standard:retrieval"

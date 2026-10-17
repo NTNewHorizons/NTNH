@@ -1,8 +1,8 @@
 {
   "preRequisites:9": {
     "0:10": {
-      "questIDHigh:4": 6107657297413227965,
-      "questIDLow:4": -5024519252989972104
+      "questIDHigh:4": 0,
+      "questIDLow:4": 32
     }
   },
   "properties:10": {
@@ -17,19 +17,19 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "No Description",
+      "desc:8": "The §3Network Separator§r can be used to split up a power network into multiple. It has a power gauge integrated into it and can be shut off by providing power from beneath.\n\nYou can control the priority and throughput of each network separator.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
         "Damage:2": 0,
         "OreDict:8": "",
-        "id:8": "minecraft:nether_star"
+        "id:8": "hbm:tile.network_separator"
       },
       "isMain:1": 0,
       "isSilent:1": 0,
       "is_final:1": 0,
       "lockedProgress:1": 0,
-      "name:8": "New Quest",
+      "name:8": "Network Separator",
       "notification_duration:5": -1.0,
       "notification_effect:3": -1,
       "notification_fade_in:5": -1.0,
@@ -58,8 +58,27 @@
       "visibility:8": "NORMAL"
     }
   },
-  "questIDHigh:4": 5390298830758430627,
-  "questIDLow:4": -6012581497053432484,
+  "questIDHigh:4": 1415689939357354221,
+  "questIDLow:4": -5850449607947383627,
   "rewards:9": {},
-  "tasks:9": {}
+  "tasks:9": {
+    "0:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 0,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.network_separator"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
 }
