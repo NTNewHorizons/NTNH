@@ -1,0 +1,14 @@
+name = "SignPicture"
+filename = "SignPicture-1.7.10-2.8.0-universal.jar"
+side = "client"
+pin = true
+
+[download]
+hash-format = "sha256"
+hash = "a0b6ce01d3230dc884debd7e5a56e66691c09d5311b64e43cc6facca2f1b1d74"
+url = "https://github.com/Team-Fruit/SignPicture/releases/download/1.7.10-2.8.0/SignPicture-1.7.10-2.8.0-universal.jar"
+
+[update.github]
+slug = "Team-Fruit/SignPicture"
+tag = "1.7.10-2.8.0"
+regex = "^SignPicture-1\\.7\\.10-.+-universal\\.jar$"
