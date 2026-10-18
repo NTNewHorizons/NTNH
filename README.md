@@ -7,7 +7,7 @@ This is the main repository of NT:NH modpack repo
 
 <h2 style="text-align:center">🌟 Our Amazing Contributors 🌟</h2>
 
-<table><tr><td align="center"><a href="https://github.com/Bufka2011"><img src="https://avatars.githubusercontent.com/u/85364803?v=4" width="50" alt="Bufka2011" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>Bufka2011</b></sub><br/><span>3902 🏆</span></td>
+<table><tr><td align="center"><a href="https://github.com/Bufka2011"><img src="https://avatars.githubusercontent.com/u/85364803?v=4" width="50" alt="Bufka2011" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>Bufka2011</b></sub><br/><span>3950 🏆</span></td>
 <td align="center"><a href="https://github.com/BufkaSecond"><img src="https://avatars.githubusercontent.com/u/190631137?v=4" width="50" alt="BufkaSecond" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>BufkaSecond</b></sub><br/><span>451 🏆</span></td>
 <td align="center"><a href="https://github.com/AniviaFlome"><img src="https://avatars.githubusercontent.com/u/66728147?v=4" width="50" alt="AniviaFlome" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>AniviaFlome</b></sub><br/><span>92 🏆</span></td>
 <td align="center"><a href="https://github.com/THOMASS47"><img src="https://avatars.githubusercontent.com/u/63131669?v=4" width="50" alt="THOMASS47" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>THOMASS47</b></sub><br/><span>64 🏆</span></td>
@@ -394,6 +394,15 @@ This is the main repository of NT:NH modpack repo
         <sub><b>212 words</b></sub>
       </td>
       <td align="center" valign="top">
+        <a href="https://crowdin.com/profile/igrok123"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17943833/medium/1291f476a7b99f20c5141680d5517656.png" />
+          <br />
+          <sub><b>Stabay</b></sub>
+          <br />
+          <sub><b>(igrok123)</b></sub></a>
+        <br />
+        <sub><b>175 words</b></sub>
+      </td>
+      <td align="center" valign="top">
         <a href="https://crowdin.com/profile/gustawj21"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17808885/medium/41a38de3530925ca564594a43378a165.jpeg" />
           <br />
           <sub><b>Gustaw</b></sub>
@@ -427,6 +436,8 @@ This is the main repository of NT:NH modpack repo
         <br />
         <sub><b>127 words</b></sub>
       </td>
+    </tr>
+    <tr>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/Alex6_"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/14881780/medium/b951ed53df012b560385ee8b96e8af2d.jpg" />
           <br />
@@ -435,17 +446,6 @@ This is the main repository of NT:NH modpack repo
           <sub><b>(Alex6_)</b></sub></a>
         <br />
         <sub><b>126 words</b></sub>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" valign="top">
-        <a href="https://crowdin.com/profile/eiko0"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17801663/medium/431999895c7c5b1994f1cc5938f82e72.jpg" />
-          <br />
-          <sub><b>Diko Ahlo</b></sub>
-          <br />
-          <sub><b>(eiko0)</b></sub></a>
-        <br />
-        <sub><b>120 words</b></sub>
       </td>
     </tr>
   </tbody>
