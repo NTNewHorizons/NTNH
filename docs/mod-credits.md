@@ -92,80 +92,84 @@
 | 86 | Hodgepodge | mitchej123 / GTNH Team | https://github.com/GTNewHorizons/Hodgepodge | GNU Lesser General Public License v3.0 | https://github.com/GTNewHorizons/Hodgepodge/blob/master/LICENSE |
 | 87 | Hunger Overhaul | progwml6 | https://www.curseforge.com/minecraft/mc-mods/hunger-overhaul | All Rights Reserved | https://www.curseforge.com/minecraft/mc-mods/hunger-overhaul/license |
 | 88 | iChunUtil | iChun | https://www.curseforge.com/minecraft/mc-mods/ichunutil | GNU Lesser General Public License v3.0 | https://www.curseforge.com/minecraft/mc-mods/ichunutil/license |
-| 89 | Improving Minecraft | Forge_User_52183994 | https://www.curseforge.com/minecraft/mc-mods/improving-minecraft | All Rights Reserved | https://www.curseforge.com/minecraft/mc-mods/improving-minecraft/license |
-| 90 | InGame Info XML | Lunatrius | https://github.com/GTNewHorizons/InGame-Info-XML | MIT License | https://github.com/GTNewHorizons/InGame-Info-XML/blob/master/LICENSE |
-| 91 | Inventory BogoSorter | brachy84 / GTNH Team | https://github.com/GTNewHorizons/InventoryBogoSorter | GNU Lesser General Public License v3.0 | https://github.com/GTNewHorizons/InventoryBogoSorter/blob/master/LICENSE |
-| 92 | Iron Chests | cpw | https://github.com/GTNewHorizons/ironchest | GNU General Public License v3.0 | https://github.com/GTNewHorizons/ironchest/blob/master/LICENSE |
-| 93 | It's the little things | Zlepper | https://github.com/GTNH-Museum/itlt | MIT License | https://github.com/GTNH-Museum/itlt/blob/master/LICENSE |
-| 94 | Just Enough Calculation | towdium | https://www.curseforge.com/minecraft/mc-mods/just-enough-calculation | GNU General Public License v3.0 | https://www.curseforge.com/minecraft/mc-mods/just-enough-calculation/license |
-| 95 | LunatriusCore | Lunatrius | https://github.com/GTNewHorizons/LunatriusCore | MIT License | https://github.com/GTNewHorizons/LunatriusCore/blob/master/LICENSE |
-| 96 | Mantle | mDiyo / boni | https://github.com/GTNewHorizons/Mantle | MIT License | https://github.com/GTNewHorizons/Mantle/blob/master/LICENSE |
-| 97 | Matter Manipulator | RecursivePineapple | https://github.com/RecursivePineapple/MatterManipulator | GNU Lesser General Public License v3.0 | https://github.com/RecursivePineapple/MatterManipulator/blob/master/LICENSE |
-| 98 | Minemoticon | jack_glows | https://www.curseforge.com/minecraft/mc-mods/minemoticon | GNU Lesser General Public License v3.0 | https://www.curseforge.com/minecraft/mc-mods/minemoticon/license |
-| 99 | MineTweaker RecipeMaker | DoubleDoorDev | https://www.curseforge.com/minecraft/mc-mods/minetweaker-recipemaker | BSD License | https://www.curseforge.com/minecraft/mc-mods/minetweaker-recipemaker/license |
-| 100 | Mobs Info | kuba6000 | https://github.com/GTNewHorizons/Mobs-Info | GNU Lesser General Public License v3.0 | https://github.com/GTNewHorizons/Mobs-Info/blob/master/LICENSE |
-| 101 | ModernMarkings | GTNH Team | https://github.com/GTNewHorizons/ModernMarkings | GNU General Public License v3.0 | https://github.com/GTNewHorizons/ModernMarkings/blob/master/LICENSE |
-| 102 | Modpack Configuration Checker | matt1235r | https://www.curseforge.com/minecraft/mc-mods/config-checker | Custom License | https://www.curseforge.com/minecraft/mc-mods/config-checker/license |
-| 103 | ModTweaker 2 | Jaredlll08 | https://github.com/GTNewHorizons/ModTweaker | MIT License | https://github.com/GTNewHorizons/ModTweaker/blob/master/LICENSE |
-| 104 | ModularUI | miozune / GTNH Team | https://github.com/GTNewHorizons/ModularUI | GNU Lesser General Public License v3.0 | https://github.com/GTNewHorizons/ModularUI/blob/master/LICENSE |
-| 105 | ModularUI 2 | brachy / miozune / GTNH Team | https://github.com/GTNewHorizons/ModularUI2 | GNU Lesser General Public License v3.0 | https://github.com/GTNewHorizons/ModularUI2/blob/master/LICENSE |
-| 106 | Mouse Tweaks | YaLTeR / GTNH Team | https://github.com/GTNewHorizons/MouseTweaks | BSD 3-Clause License | https://github.com/GTNewHorizons/MouseTweaks/blob/master/LICENSE |
-| 107 | MrCrayfish's Furniture Mod | MrCrayfish | https://www.curseforge.com/minecraft/mc-mods/mrcrayfish-furniture-mod | GNU General Public License v3.0 | https://www.curseforge.com/minecraft/mc-mods/mrcrayfish-furniture-mod/license |
-| 108 | MrTJPCore | MrTJP | https://github.com/GTNewHorizons/MrTJPCore | GNU Lesser General Public License v3.0 | https://github.com/GTNewHorizons/MrTJPCore/blob/master/LICENSE |
-| 109 | Mycelium | tesseract4d | https://github.com/TesseractLHY/Mycelium | GNU Lesser General Public License v2.1 | https://github.com/TesseractLHY/Mycelium/blob/master/LICENSE |
-| 110 | Nature's Compass | Chaosyr | https://github.com/GTNewHorizons/NaturesCompass | Creative Commons Attribution-NonCommercial-ShareAlike 4.0 | https://github.com/GTNewHorizons/NaturesCompass/blob/master/LICENSE |
-| 111 | Navigator | Lyft | https://github.com/GTNewHorizons/Navigator | GNU Lesser General Public License v3.0 | https://github.com/GTNewHorizons/Navigator/blob/master/LICENSE |
-| 112 | NEI Addons | bdew | https://github.com/GTNewHorizons/neiaddons | Minecraft Mod Public License 1.0.1 | https://github.com/GTNewHorizons/neiaddons/blob/master/LICENSE |
-| 113 | NEI Integration | toniush | https://github.com/GTNewHorizons/NEI-Integration | GNU Lesser General Public License v3.0 | https://github.com/GTNewHorizons/NEI-Integration/blob/master/LICENSE |
-| 114 | NetherPortalFix | BlayTheNinth | https://github.com/GTNewHorizons/NetherPortalFix | N/A | N/A |
-| 115 | Netty Patcher | makamys | https://github.com/GTNH-Museum/Netty-Patcher | GNU General Public License v3.0 | https://github.com/GTNH-Museum/Netty-Patcher/blob/master/LICENSE |
-| 116 | NoMoreRecipeConflict | stimmedcow / GotoLink | https://www.curseforge.com/minecraft/mc-mods/stimmedcow-nomorerecipeconflict | Public Domain | https://www.curseforge.com/minecraft/mc-mods/stimmedcow-nomorerecipeconflict/license |
-| 117 | Not Enough Resources | Way2muchnoise / hillburn | https://www.curseforge.com/minecraft/mc-mods/notenoughresources | Don't Be a Jerk License | https://www.curseforge.com/minecraft/mc-mods/notenoughresources/license |
-| 118 | NotEnoughEnergistics | MRSander | https://github.com/GTNewHorizons/NotEnoughEnergistics | MIT License | https://github.com/GTNewHorizons/NotEnoughEnergistics/blob/master/LICENSE |
-| 119 | NotEnoughItems | ChickenBones | https://github.com/GTNewHorizons/NotEnoughItems | GNU Lesser General Public License v3.0 | https://github.com/GTNewHorizons/NotEnoughItems/blob/master/LICENSE |
-| 120 | NTM: Space | HBMTheBobcat / JamesH_2 / NTNH Team | https://github.com/NTNewHorizons/Hbm-s-Nuclear-Tech-GIT | GNU Lesser General Public License v3.0 | https://github.com/NTNewHorizons/Hbm-s-Nuclear-Tech-GIT/blob/master/LICENSE |
-| 121 | NTNHCore | Bufka2011 | https://github.com/NTNewHorizons/NTNHCore | GNU General Public License v3.0 | https://github.com/NTNewHorizons/NTNHCore/blob/main/LICENSE |
-| 122 | OAuth | GTNH Team | https://github.com/GTNewHorizons/oauth | GNU General Public License v3.0 | https://github.com/GTNewHorizons/oauth/blob/master/LICENSE |
-| 123 | OpenBlocks | OpenMods Team | https://github.com/GTNewHorizons/OpenBlocks | MIT License | https://github.com/GTNewHorizons/OpenBlocks/blob/master/LICENSE |
-| 124 | OpenComputers | Sangar | https://github.com/GTNewHorizons/OpenComputers | MIT License | https://github.com/GTNewHorizons/OpenComputers/blob/master/LICENSE |
-| 125 | OpenFM | MichiyoRavencroft | https://www.curseforge.com/minecraft/mc-mods/openfm | MIT License | https://www.curseforge.com/minecraft/mc-mods/openfm/license |
-| 126 | OpenMods | OpenMods Team | https://github.com/GTNewHorizons/OpenModsLib | MIT License | https://github.com/GTNewHorizons/OpenModsLib/blob/master/LICENSE |
-| 127 | OpenSecurity | PC-Logix | https://github.com/GTNewHorizons/OpenSecurity | MIT License | https://github.com/GTNewHorizons/OpenSecurity/blob/master/LICENSE |
-| 128 | Opis | ProfMobius / RoyCurtis | https://github.com/GTNewHorizons/Opis | Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International | https://github.com/GTNewHorizons/Opis/blob/master/LICENSE.txt |
-| 129 | Pam's Harvest the Nether | pamharvestcraft | https://www.curseforge.com/minecraft/mc-mods/pams-harvest-the-nether | All Rights Reserved | https://www.curseforge.com/minecraft/mc-mods/pams-harvest-the-nether/license |
-| 130 | Pam's HarvestCraft | pamharvestcraft | https://www.curseforge.com/minecraft/mc-mods/pams-harvestcraft | All Rights Reserved | https://www.curseforge.com/minecraft/mc-mods/pams-harvestcraft/license |
-| 131 | PanicleCraft | ee_man | https://github.com/vanym/paniclecraft | Mozilla Public License 2.0 | https://github.com/vanym/paniclecraft/blob/1.16.5/LICENSE |
-| 132 | PatPat NH | HFstudio / ABKQPO | https://github.com/ABKQPO/PatPatNH | GNU Lesser General Public License v3.0 | https://github.com/ABKQPO/PatPatNH/blob/master/LICENSE.txt |
-| 133 | Project Blue | gcewing / GTNH Team | https://github.com/GTNewHorizons/ProjectBlue | N/A | N/A |
-| 134 | ProjectRed | MrTJP | https://github.com/GTNewHorizons/ProjectRed | Redpower Source License 1.3.1 | https://github.com/GTNewHorizons/ProjectRed/blob/master/LICENSE |
-| 135 | ProspectingCraft NTNH | Johann Bernhardt / bluefalconeer1 | https://github.com/NTNewHorizons/ProspectingCraft-NTNH | MIT License | https://github.com/NTNewHorizons/ProspectingCraft-NTNH/blob/main/LICENSE |
-| 136 | Random Things | Lumien231 | https://github.com/GTNewHorizons/Random-Things | MIT License | https://github.com/GTNewHorizons/Random-Things/blob/master/LICENSE |
-| 137 | Re: Chests | Khikki | https://www.curseforge.com/minecraft/mc-mods/rechests | MIT License | https://www.curseforge.com/minecraft/mc-mods/rechests/license |
-| 138 | Realistic Terrain Generation | Team RTG / GTNH Team | https://github.com/GTNewHorizons/Realistic-Terrain-Generation | GNU General Public License v3.0 | https://github.com/GTNewHorizons/Realistic-Terrain-Generation/blob/master/LICENSE |
-| 139 | Resource Pack Organizer | chylex | https://github.com/chylex/Minecraft-Resource-Pack-Organizer | Mozilla Public License 2.0 | https://github.com/chylex/Minecraft-Resource-Pack-Organizer/blob/master/LICENSE |
-| 140 | Schematica | Lunatrius | https://github.com/GTNewHorizons/Schematica | MIT License | https://github.com/GTNewHorizons/Schematica/blob/master/LICENSE |
-| 141 | ServerUtilities | LatvianModder / mitchej123 / GTNH Team | https://github.com/GTNewHorizons/ServerUtilities | GNU Lesser General Public License v3.0 | https://github.com/GTNewHorizons/ServerUtilities/blob/master/LICENSE |
-| 142 | Slimevoid Library | Slimevoid Dev Team / Tarig | https://www.curseforge.com/minecraft/mc-mods/slimevoid-library | GNU Lesser General Public License v3.0 | https://www.curseforge.com/minecraft/mc-mods/slimevoid-library/license |
-| 143 | Smart Tree Felling | thestapler26 | https://www.curseforge.com/minecraft/mc-mods/smart-tree-felling | MIT License | https://www.curseforge.com/minecraft/mc-mods/smart-tree-felling/license |
-| 144 | Sound Filters | Tmtravlr | https://www.curseforge.com/minecraft/mc-mods/sound-filters | All Rights Reserved | https://www.curseforge.com/minecraft/mc-mods/sound-filters/license |
-| 145 | Special AI | FatherToast | https://www.curseforge.com/minecraft/mc-mods/special-ai | GNU General Public License v3.0 | https://www.curseforge.com/minecraft/mc-mods/special-ai/license |
-| 146 | Special Mobs | FatherToast | https://www.curseforge.com/minecraft/mc-mods/special-mobs | GNU General Public License v3.0 | https://www.curseforge.com/minecraft/mc-mods/special-mobs/license |
-| 147 | Stackie | Lunatrius | https://www.curseforge.com/minecraft/mc-mods/stackie | MIT License | https://www.curseforge.com/minecraft/mc-mods/stackie/license |
-| 148 | Storage Drawers | jaquadro | https://github.com/GTNewHorizons/StorageDrawers | GNU Lesser General Public License v3.0 | https://github.com/GTNewHorizons/StorageDrawers/blob/master/LICENSE |
-| 149 | StructureCompat | GTNH Team | https://github.com/GTNewHorizons/StructureCompat | GNU Affero General Public License v3.0 | https://github.com/GTNewHorizons/StructureCompat/blob/master/LICENSE |
-| 150 | StructureLib | bartimaeusnek / GTNH Team | https://github.com/GTNewHorizons/StructureLib | MIT License | https://github.com/GTNewHorizons/StructureLib/blob/master/LICENSE |
-| 151 | The Spice of Life - Carrot Edition | squeek502 / GTNH Team | https://github.com/GTNewHorizons/SpiceOfLife | GNU Lesser General Public License v3.0 | https://github.com/GTNewHorizons/SpiceOfLife/blob/master/LICENSE |
-| 152 | Tile Entity Breaker | Sergius Onesimus | https://github.com/Gordon-Frohman/TileEntityBreaker | MIT License | https://github.com/Gordon-Frohman/TileEntityBreaker/blob/main/LICENSE |
-| 153 | TileEntity Reset Fix | TCLProject | https://modrinth.com/mod/tileentity-reset-fix | MIT License | https://modrinth.com/mod/tileentity-reset-fix |
-| 154 | TooManyDanyOres | Dany2001RU | https://github.com/NTNewHorizons/NTNH/blob/2.14.0/mods/TooManyDanyOres-1.7.10-b1.0-3-forge-1199.jar | N/A | N/A |
-| 155 | TX Loader | glowredman | https://github.com/GTNewHorizons/TX-Loader | GNU Lesser General Public License v3.0 | https://github.com/GTNewHorizons/TX-Loader/blob/master/LICENSE |
-| 156 | Underp Hangables | masady / maruohon | https://github.com/maruohon/underphangables | GNU General Public License v3.0 | https://github.com/maruohon/underphangables/blob/master/COPYING.LESSER.txt |
-| 157 | UniLib | CDAGaming | https://gitlab.com/CDAGaming/UniLib/ | MIT License | https://gitlab.com/CDAGaming/UniLib/-/blob/master/LICENSE |
-| 158 | UniMixins | makamys / LegacyModdingMC | https://github.com/LegacyModdingMC/UniMixins | The Unlicense | https://github.com/LegacyModdingMC/UniMixins/blob/master/LICENSE |
-| 159 | Vending Block Revived | TungstonMiner | https://www.curseforge.com/minecraft/mc-mods/vending-block-revived | GNU General Public License v2.0 | https://www.curseforge.com/minecraft/mc-mods/vending-block-revived/license |
-| 160 | VorbisSPI | Matthias Pfisterer / JavaZOOM | http://www.javazoom.net/vorbisspi/vorbisspi.html | GNU Lesser General Public License v2.1 | https://central.sonatype.com/artifact/com.googlecode.soundlibs/vorbisspi |
-| 161 | WDMla | GTNH Team | https://github.com/GTNewHorizons/WDMla | Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International | https://github.com/GTNewHorizons/WDMla/blob/master/LICENSE |
-| 162 | Wireless Crafting Terminal | TheRealp455w0rd | https://github.com/GTNewHorizons/WirelessCraftingTerminal | GNU General Public License v3.0 | https://github.com/GTNewHorizons/WirelessCraftingTerminal/blob/master/LICENSE |
-| 163 | Xaero's Minimap | xaero96 | https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap | All Rights Reserved | https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap/license |
-| 164 | Xaero's World Map | xaero96 | https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map | All Rights Reserved | https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map/license |
-| 165 | YAMCore | YetAnotherModder / GTNH Team | https://github.com/GTNewHorizons/Yamcl | GNU General Public License v2.0 | https://github.com/GTNewHorizons/Yamcl/blob/master/LICENSE |
+| 89 | Immersive Vehicles (MTS/IV) - Official Content Pack | Mr_Mulle | https://www.curseforge.com/minecraft/mc-mods/transport-simulator-official-vehicle-set | All rights reserved | https://www.curseforge.com/minecraft/mc-mods/transport-simulator-official-vehicle-set/license |
+| 90 | Immersive Vehicles: Legacy | THOMASS47 | https://github.com/THOMASS47/IVL | MIT License | https://github.com/THOMASS47/IVL/blob/master/LICENSE |
+| 91 | Improving Minecraft | Forge_User_52183994 | https://www.curseforge.com/minecraft/mc-mods/improving-minecraft | All Rights Reserved | https://www.curseforge.com/minecraft/mc-mods/improving-minecraft/license |
+| 92 | InGame Info XML | Lunatrius | https://github.com/GTNewHorizons/InGame-Info-XML | MIT License | https://github.com/GTNewHorizons/InGame-Info-XML/blob/master/LICENSE |
+| 93 | Inventory BogoSorter | brachy84 / GTNH Team | https://github.com/GTNewHorizons/InventoryBogoSorter | GNU Lesser General Public License v3.0 | https://github.com/GTNewHorizons/InventoryBogoSorter/blob/master/LICENSE |
+| 94 | Iron Chests | cpw | https://github.com/GTNewHorizons/ironchest | GNU General Public License v3.0 | https://github.com/GTNewHorizons/ironchest/blob/master/LICENSE |
+| 95 | It's the little things | Zlepper | https://github.com/GTNH-Museum/itlt | MIT License | https://github.com/GTNH-Museum/itlt/blob/master/LICENSE |
+| 96 | Just Enough Calculation | towdium | https://www.curseforge.com/minecraft/mc-mods/just-enough-calculation | GNU General Public License v3.0 | https://www.curseforge.com/minecraft/mc-mods/just-enough-calculation/license |
+| 97 | KnightCorp Pack (IV/MTS) | willowyknight76 | https://www.curseforge.com/minecraft/mc-mods/knightcorp-pack-mts | All Rights Reserved | https://www.curseforge.com/minecraft/mc-mods/knightcorp-pack-mts/license |
+| 98 | LunatriusCore | Lunatrius | https://github.com/GTNewHorizons/LunatriusCore | MIT License | https://github.com/GTNewHorizons/LunatriusCore/blob/master/LICENSE |
+| 99 | Mantle | mDiyo / boni | https://github.com/GTNewHorizons/Mantle | MIT License | https://github.com/GTNewHorizons/Mantle/blob/master/LICENSE |
+| 100 | Matter Manipulator | RecursivePineapple | https://github.com/RecursivePineapple/MatterManipulator | GNU Lesser General Public License v3.0 | https://github.com/RecursivePineapple/MatterManipulator/blob/master/LICENSE |
+| 101 | Minemoticon | jack_glows | https://www.curseforge.com/minecraft/mc-mods/minemoticon | GNU Lesser General Public License v3.0 | https://www.curseforge.com/minecraft/mc-mods/minemoticon/license |
+| 102 | MineTweaker RecipeMaker | DoubleDoorDev | https://www.curseforge.com/minecraft/mc-mods/minetweaker-recipemaker | BSD License | https://www.curseforge.com/minecraft/mc-mods/minetweaker-recipemaker/license |
+| 103 | Mobs Info | kuba6000 | https://github.com/GTNewHorizons/Mobs-Info | GNU Lesser General Public License v3.0 | https://github.com/GTNewHorizons/Mobs-Info/blob/master/LICENSE |
+| 104 | ModernMarkings | GTNH Team | https://github.com/GTNewHorizons/ModernMarkings | GNU General Public License v3.0 | https://github.com/GTNewHorizons/ModernMarkings/blob/master/LICENSE |
+| 105 | Modpack Configuration Checker | matt1235r | https://www.curseforge.com/minecraft/mc-mods/config-checker | Custom License | https://www.curseforge.com/minecraft/mc-mods/config-checker/license |
+| 106 | ModTweaker 2 | Jaredlll08 | https://github.com/GTNewHorizons/ModTweaker | MIT License | https://github.com/GTNewHorizons/ModTweaker/blob/master/LICENSE |
+| 107 | ModularUI | miozune / GTNH Team | https://github.com/GTNewHorizons/ModularUI | GNU Lesser General Public License v3.0 | https://github.com/GTNewHorizons/ModularUI/blob/master/LICENSE |
+| 108 | ModularUI 2 | brachy / miozune / GTNH Team | https://github.com/GTNewHorizons/ModularUI2 | GNU Lesser General Public License v3.0 | https://github.com/GTNewHorizons/ModularUI2/blob/master/LICENSE |
+| 109 | Mouse Tweaks | YaLTeR / GTNH Team | https://github.com/GTNewHorizons/MouseTweaks | BSD 3-Clause License | https://github.com/GTNewHorizons/MouseTweaks/blob/master/LICENSE |
+| 110 | MrCrayfish's Furniture Mod | MrCrayfish | https://www.curseforge.com/minecraft/mc-mods/mrcrayfish-furniture-mod | GNU General Public License v3.0 | https://www.curseforge.com/minecraft/mc-mods/mrcrayfish-furniture-mod/license |
+| 111 | MrTJPCore | MrTJP | https://github.com/GTNewHorizons/MrTJPCore | GNU Lesser General Public License v3.0 | https://github.com/GTNewHorizons/MrTJPCore/blob/master/LICENSE |
+| 112 | Mycelium | tesseract4d | https://github.com/TesseractLHY/Mycelium | GNU Lesser General Public License v2.1 | https://github.com/TesseractLHY/Mycelium/blob/master/LICENSE |
+| 113 | Nature's Compass | Chaosyr | https://github.com/GTNewHorizons/NaturesCompass | Creative Commons Attribution-NonCommercial-ShareAlike 4.0 | https://github.com/GTNewHorizons/NaturesCompass/blob/master/LICENSE |
+| 114 | Navigator | Lyft | https://github.com/GTNewHorizons/Navigator | GNU Lesser General Public License v3.0 | https://github.com/GTNewHorizons/Navigator/blob/master/LICENSE |
+| 115 | NEI Addons | bdew | https://github.com/GTNewHorizons/neiaddons | Minecraft Mod Public License 1.0.1 | https://github.com/GTNewHorizons/neiaddons/blob/master/LICENSE |
+| 116 | NEI Integration | toniush | https://github.com/GTNewHorizons/NEI-Integration | GNU Lesser General Public License v3.0 | https://github.com/GTNewHorizons/NEI-Integration/blob/master/LICENSE |
+| 117 | NetherPortalFix | BlayTheNinth | https://github.com/GTNewHorizons/NetherPortalFix | N/A | N/A |
+| 118 | Netty Patcher | makamys | https://github.com/GTNH-Museum/Netty-Patcher | GNU General Public License v3.0 | https://github.com/GTNH-Museum/Netty-Patcher/blob/master/LICENSE |
+| 119 | NoMoreRecipeConflict | stimmedcow / GotoLink | https://www.curseforge.com/minecraft/mc-mods/stimmedcow-nomorerecipeconflict | Public Domain | https://www.curseforge.com/minecraft/mc-mods/stimmedcow-nomorerecipeconflict/license |
+| 120 | Not Enough Resources | Way2muchnoise / hillburn | https://www.curseforge.com/minecraft/mc-mods/notenoughresources | Don't Be a Jerk License | https://www.curseforge.com/minecraft/mc-mods/notenoughresources/license |
+| 121 | NotEnoughEnergistics | MRSander | https://github.com/GTNewHorizons/NotEnoughEnergistics | MIT License | https://github.com/GTNewHorizons/NotEnoughEnergistics/blob/master/LICENSE |
+| 122 | NotEnoughItems | ChickenBones | https://github.com/GTNewHorizons/NotEnoughItems | GNU Lesser General Public License v3.0 | https://github.com/GTNewHorizons/NotEnoughItems/blob/master/LICENSE |
+| 123 | NTM: Space | HBMTheBobcat / JamesH_2 / NTNH Team | https://github.com/NTNewHorizons/Hbm-s-Nuclear-Tech-GIT | GNU Lesser General Public License v3.0 | https://github.com/NTNewHorizons/Hbm-s-Nuclear-Tech-GIT/blob/master/LICENSE |
+| 124 | NTM: Vehicles | TechTastic | https://github.com/NTNewHorizons/NTM-Vehicles-Legacy | MIT License | https://github.com/NTNewHorizons/NTM-Vehicles-Legacy/blob/master/LICENSE |
+| 125 | NTNHCore | Bufka2011 | https://github.com/NTNewHorizons/NTNHCore | GNU General Public License v3.0 | https://github.com/NTNewHorizons/NTNHCore/blob/main/LICENSE |
+| 126 | OAuth | GTNH Team | https://github.com/GTNewHorizons/oauth | GNU General Public License v3.0 | https://github.com/GTNewHorizons/oauth/blob/master/LICENSE |
+| 127 | OpenBlocks | OpenMods Team | https://github.com/GTNewHorizons/OpenBlocks | MIT License | https://github.com/GTNewHorizons/OpenBlocks/blob/master/LICENSE |
+| 128 | OpenComputers | Sangar | https://github.com/GTNewHorizons/OpenComputers | MIT License | https://github.com/GTNewHorizons/OpenComputers/blob/master/LICENSE |
+| 129 | OpenFM | MichiyoRavencroft | https://www.curseforge.com/minecraft/mc-mods/openfm | MIT License | https://www.curseforge.com/minecraft/mc-mods/openfm/license |
+| 130 | OpenMods | OpenMods Team | https://github.com/GTNewHorizons/OpenModsLib | MIT License | https://github.com/GTNewHorizons/OpenModsLib/blob/master/LICENSE |
+| 131 | OpenSecurity | PC-Logix | https://github.com/GTNewHorizons/OpenSecurity | MIT License | https://github.com/GTNewHorizons/OpenSecurity/blob/master/LICENSE |
+| 132 | Opis | ProfMobius / RoyCurtis | https://github.com/GTNewHorizons/Opis | Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International | https://github.com/GTNewHorizons/Opis/blob/master/LICENSE.txt |
+| 133 | Pam's Harvest the Nether | pamharvestcraft | https://www.curseforge.com/minecraft/mc-mods/pams-harvest-the-nether | All Rights Reserved | https://www.curseforge.com/minecraft/mc-mods/pams-harvest-the-nether/license |
+| 134 | Pam's HarvestCraft | pamharvestcraft | https://www.curseforge.com/minecraft/mc-mods/pams-harvestcraft | All Rights Reserved | https://www.curseforge.com/minecraft/mc-mods/pams-harvestcraft/license |
+| 135 | PanicleCraft | ee_man | https://github.com/vanym/paniclecraft | Mozilla Public License 2.0 | https://github.com/vanym/paniclecraft/blob/1.16.5/LICENSE |
+| 136 | PatPat NH | HFstudio / ABKQPO | https://github.com/ABKQPO/PatPatNH | GNU Lesser General Public License v3.0 | https://github.com/ABKQPO/PatPatNH/blob/master/LICENSE.txt |
+| 137 | Project Blue | gcewing / GTNH Team | https://github.com/GTNewHorizons/ProjectBlue | N/A | N/A |
+| 138 | ProjectRed | MrTJP | https://github.com/GTNewHorizons/ProjectRed | Redpower Source License 1.3.1 | https://github.com/GTNewHorizons/ProjectRed/blob/master/LICENSE |
+| 139 | ProspectingCraft NTNH | Johann Bernhardt / bluefalconeer1 | https://github.com/NTNewHorizons/ProspectingCraft-NTNH | MIT License | https://github.com/NTNewHorizons/ProspectingCraft-NTNH/blob/main/LICENSE |
+| 140 | Random Things | Lumien231 | https://github.com/GTNewHorizons/Random-Things | MIT License | https://github.com/GTNewHorizons/Random-Things/blob/master/LICENSE |
+| 141 | Re: Chests | Khikki | https://www.curseforge.com/minecraft/mc-mods/rechests | MIT License | https://www.curseforge.com/minecraft/mc-mods/rechests/license |
+| 142 | Realistic Terrain Generation | Team RTG / GTNH Team | https://github.com/GTNewHorizons/Realistic-Terrain-Generation | GNU General Public License v3.0 | https://github.com/GTNewHorizons/Realistic-Terrain-Generation/blob/master/LICENSE |
+| 143 | Resource Pack Organizer | chylex | https://github.com/chylex/Minecraft-Resource-Pack-Organizer | Mozilla Public License 2.0 | https://github.com/chylex/Minecraft-Resource-Pack-Organizer/blob/master/LICENSE |
+| 144 | Schematica | Lunatrius | https://github.com/GTNewHorizons/Schematica | MIT License | https://github.com/GTNewHorizons/Schematica/blob/master/LICENSE |
+| 145 | ServerUtilities | LatvianModder / mitchej123 / GTNH Team | https://github.com/GTNewHorizons/ServerUtilities | GNU Lesser General Public License v3.0 | https://github.com/GTNewHorizons/ServerUtilities/blob/master/LICENSE |
+| 146 | Slimevoid Library | Slimevoid Dev Team / Tarig | https://www.curseforge.com/minecraft/mc-mods/slimevoid-library | GNU Lesser General Public License v3.0 | https://www.curseforge.com/minecraft/mc-mods/slimevoid-library/license |
+| 147 | Smart Tree Felling | thestapler26 | https://www.curseforge.com/minecraft/mc-mods/smart-tree-felling | MIT License | https://www.curseforge.com/minecraft/mc-mods/smart-tree-felling/license |
+| 148 | Sound Filters | Tmtravlr | https://www.curseforge.com/minecraft/mc-mods/sound-filters | All Rights Reserved | https://www.curseforge.com/minecraft/mc-mods/sound-filters/license |
+| 149 | Special AI | FatherToast | https://www.curseforge.com/minecraft/mc-mods/special-ai | GNU General Public License v3.0 | https://www.curseforge.com/minecraft/mc-mods/special-ai/license |
+| 150 | Special Mobs | FatherToast | https://www.curseforge.com/minecraft/mc-mods/special-mobs | GNU General Public License v3.0 | https://www.curseforge.com/minecraft/mc-mods/special-mobs/license |
+| 151 | Stackie | Lunatrius | https://www.curseforge.com/minecraft/mc-mods/stackie | MIT License | https://www.curseforge.com/minecraft/mc-mods/stackie/license |
+| 152 | Storage Drawers | jaquadro | https://github.com/GTNewHorizons/StorageDrawers | GNU Lesser General Public License v3.0 | https://github.com/GTNewHorizons/StorageDrawers/blob/master/LICENSE |
+| 153 | StructureCompat | GTNH Team | https://github.com/GTNewHorizons/StructureCompat | GNU Affero General Public License v3.0 | https://github.com/GTNewHorizons/StructureCompat/blob/master/LICENSE |
+| 154 | StructureLib | bartimaeusnek / GTNH Team | https://github.com/GTNewHorizons/StructureLib | MIT License | https://github.com/GTNewHorizons/StructureLib/blob/master/LICENSE |
+| 155 | The Spice of Life - Carrot Edition | squeek502 / GTNH Team | https://github.com/GTNewHorizons/SpiceOfLife | GNU Lesser General Public License v3.0 | https://github.com/GTNewHorizons/SpiceOfLife/blob/master/LICENSE |
+| 156 | Tile Entity Breaker | Sergius Onesimus | https://github.com/Gordon-Frohman/TileEntityBreaker | MIT License | https://github.com/Gordon-Frohman/TileEntityBreaker/blob/main/LICENSE |
+| 157 | TileEntity Reset Fix | TCLProject | https://modrinth.com/mod/tileentity-reset-fix | MIT License | https://modrinth.com/mod/tileentity-reset-fix |
+| 158 | TooManyDanyOres | Dany2001RU | https://github.com/NTNewHorizons/NTNH/blob/2.14.0/mods/TooManyDanyOres-1.7.10-b1.0-3-forge-1199.jar | N/A | N/A |
+| 159 | TX Loader | glowredman | https://github.com/GTNewHorizons/TX-Loader | GNU Lesser General Public License v3.0 | https://github.com/GTNewHorizons/TX-Loader/blob/master/LICENSE |
+| 160 | Underp Hangables | masady / maruohon | https://github.com/maruohon/underphangables | GNU General Public License v3.0 | https://github.com/maruohon/underphangables/blob/master/COPYING.LESSER.txt |
+| 161 | UniLib | CDAGaming | https://gitlab.com/CDAGaming/UniLib/ | MIT License | https://gitlab.com/CDAGaming/UniLib/-/blob/master/LICENSE |
+| 162 | UniMixins | makamys / LegacyModdingMC | https://github.com/LegacyModdingMC/UniMixins | The Unlicense | https://github.com/LegacyModdingMC/UniMixins/blob/master/LICENSE |
+| 163 | Vending Block Revived | TungstonMiner | https://www.curseforge.com/minecraft/mc-mods/vending-block-revived | GNU General Public License v2.0 | https://www.curseforge.com/minecraft/mc-mods/vending-block-revived/license |
+| 164 | VorbisSPI | Matthias Pfisterer / JavaZOOM | http://www.javazoom.net/vorbisspi/vorbisspi.html | GNU Lesser General Public License v2.1 | https://central.sonatype.com/artifact/com.googlecode.soundlibs/vorbisspi |
+| 165 | WDMla | GTNH Team | https://github.com/GTNewHorizons/WDMla | Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International | https://github.com/GTNewHorizons/WDMla/blob/master/LICENSE |
+| 166 | Wireless Crafting Terminal | TheRealp455w0rd | https://github.com/GTNewHorizons/WirelessCraftingTerminal | GNU General Public License v3.0 | https://github.com/GTNewHorizons/WirelessCraftingTerminal/blob/master/LICENSE |
+| 167 | Xaero's Minimap | xaero96 | https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap | All Rights Reserved | https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap/license |
+| 168 | Xaero's World Map | xaero96 | https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map | All Rights Reserved | https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map/license |
+| 169 | YAMCore | YetAnotherModder / GTNH Team | https://github.com/GTNewHorizons/Yamcl | GNU General Public License v2.0 | https://github.com/GTNewHorizons/Yamcl/blob/master/LICENSE |
