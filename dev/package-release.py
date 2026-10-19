@@ -16,12 +16,15 @@ NATIVE_EXCLUDES = {
     ".packwizignore",
     "CHANGELOG.md",
     "LICENSE",
+    "Mary-TTS.zip",
     "MOD_UPDATE_CHANGELOG.md",
     "README.md",
     "build-packwiz.sh",
     "index.toml",
     "dev/package-release.py",
+    "oauthprofiles.json",
     "pack.toml",
+    "packwiz",
     "packwiz-sources.json",
 }
 
@@ -126,6 +129,45 @@ def build_native_archive(archive, sources_file):
                 shutil.copyfileobj(input_file, output_file, length=1024 * 1024)
 
 
+def build_mmc_prism_archive(archive, native, pack):
+    components = {
+        "formatVersion": 1,
+        "components": [
+            {"uid": "net.minecraft", "version": pack["versions"]["minecraft"], "important": True},
+            {"uid": "net.minecraftforge", "version": pack["versions"]["forge"]},
+        ],
+    }
+    config = f"[General]\nInstanceType=OneSix\nname=NTNH {pack['version']}\niconKey=default\n"
+    archive.parent.mkdir(parents=True, exist_ok=True)
+    with zipfile.ZipFile(native) as source, zipfile.ZipFile(
+        archive, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9, allowZip64=True
+    ) as target:
+        target.writestr("instance.cfg", config)
+        target.writestr("mmc-pack.json", json.dumps(components, indent=2) + "\n")
+        for info in source.infolist():
+            copy_zip_entry(source, target, info, ".minecraft/" + info.filename)
+
+
+def validate_mmc_prism_archive(archive, native, pack):
+    with zipfile.ZipFile(archive) as output, zipfile.ZipFile(native) as source:
+        if output.testzip() is not None:
+            raise RuntimeError("MMC/Prism archive failed its integrity check")
+        expected = {"instance.cfg", "mmc-pack.json"} | {".minecraft/" + name for name in source.namelist()}
+        if len(output.namelist()) != len(expected) or set(output.namelist()) != expected:
+            raise RuntimeError("MMC/Prism archive does not match the Native payload")
+        for info in source.infolist():
+            copied = output.getinfo(".minecraft/" + info.filename)
+            if (copied.CRC, copied.file_size) != (info.CRC, info.file_size):
+                raise RuntimeError(f"MMC/Prism payload differs from Native: {info.filename}")
+        components = json.loads(output.read("mmc-pack.json"))
+        versions = {item["uid"]: item["version"] for item in components["components"]}
+        if components["formatVersion"] != 1 or versions != {
+            "net.minecraft": pack["versions"]["minecraft"],
+            "net.minecraftforge": pack["versions"]["forge"],
+        }:
+            raise RuntimeError("MMC/Prism component versions do not match pack.toml")
+
+
 def validate_archives(curseforge, modrinth, native, sources_file):
     sources = json.loads(sources_file.read_text())
     expected_mods = len(sources)
@@ -169,18 +211,22 @@ def main():
     parser.add_argument("--curseforge", required=True, type=Path)
     parser.add_argument("--modrinth", required=True, type=Path)
     parser.add_argument("--native", required=True, type=Path)
+    parser.add_argument("--mmc-prism", required=True, type=Path)
     parser.add_argument("--sources", default=ROOT / "packwiz-sources.json", type=Path)
     args = parser.parse_args()
 
     with (ROOT / "pack.toml").open("rb") as pack_file:
-        version = tomllib.load(pack_file)["version"]
-    for archive in (args.curseforge, args.modrinth, args.native):
+        pack = tomllib.load(pack_file)
+    version = pack["version"]
+    for archive in (args.curseforge, args.modrinth, args.native, args.mmc_prism):
         if version not in archive.name:
             raise RuntimeError(f"Archive name does not contain pack version {version}: {archive.name}")
 
     prefix_curseforge_overrides(args.curseforge, args.sources)
     build_native_archive(args.native, args.sources)
     validate_archives(args.curseforge, args.modrinth, args.native, args.sources)
+    build_mmc_prism_archive(args.mmc_prism, args.native, pack)
+    validate_mmc_prism_archive(args.mmc_prism, args.native, pack)
 
 
 if __name__ == "__main__":

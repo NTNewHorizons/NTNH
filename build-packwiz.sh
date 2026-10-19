@@ -25,6 +25,7 @@ done
 CURSEFORGE="$OUTPUT_DIR/NTNH-$VERSION-CurseForge.zip"
 MODRINTH="$OUTPUT_DIR/NTNH-$VERSION-Modrinth.mrpack"
 NATIVE="$OUTPUT_DIR/NTNH-$VERSION-Native.zip"
+MMC_PRISM="$OUTPUT_DIR/NTNH-$VERSION-MMC_Prism.zip"
 
 "$PACKWIZ_BIN" curseforge export -o "$CURSEFORGE"
 # The Modrinth package is distributed via GitHub Releases for Prism Launcher,
@@ -35,4 +36,5 @@ NATIVE="$OUTPUT_DIR/NTNH-$VERSION-Native.zip"
 python3 dev/package-release.py \
   --curseforge "$CURSEFORGE" \
   --modrinth "$MODRINTH" \
-  --native "$NATIVE"
+  --native "$NATIVE" \
+  --mmc-prism "$MMC_PRISM"
