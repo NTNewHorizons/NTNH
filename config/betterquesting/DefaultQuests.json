@@ -6901,7 +6901,7 @@
               "tag:10": {
                 "core:6": 20.0,
                 "hull:6": 20.0,
-                "yield:6": 100000000.0
+                "yield:6": 1.0E8
               }
             }
           },
@@ -12466,7 +12466,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "§6Desh§r is an alloy made up of 9 rare earth metals to make its blend form, which is solidified and refined using §bMercury§r and §bLight oil§r in the §3Chemical Plant§r. Desh is an almost unbreakable material and as such its tools have infinite durability. \n\nThe §6Rare Earth Ore§r can be most commonly found in §1§3schist§r§3§r layers which can appear underground randomly, it can be recgonized by its blue texture.\n\n§a§2Desh can also be made using DeshReady™ in a Rotary Furnace, or later on, in an Ore Acidizer.§r\n\nMercury at this stage of the game can be obtained from centrifuging §eRedstone Ore§r or putting §eCinnabar§r in a §3Combination Oven§r. Large cinnabar veins can be found as depth ore.\n\nLater on, mercury can be obtained from processing §bOre Slop§r or §bVitriol§r in an §3Electrolyzer§r.",
+          "desc:8": "§6Desh§r is an alloy made up of 9 rare earth metals to make its blend form, which is solidified and refined using §bMercury§r and §bLight oil§r in the §3Chemical Plant§r. Desh is an almost unbreakable material and as such its tools have infinite durability. \n\nThe §6Rare Earth Ore§r can be most commonly found in §1§3schist§r§3§r layers which can generate deep underground,\n\n§a§2Desh can also be made using DeshReady™ in a Rotary Furnace, or later on, in an Ore Acidizer.§r\n\nMercury at this stage of the game can be obtained from centrifuging §eRedstone Ore§r or putting §eCinnabar§r in a §3Combination Oven§r. Large cinnabar veins can be found as depth ore.\n\nLater on, mercury can be obtained from processing §bOre Slop§r or §bVitriol§r in an §3Electrolyzer§r.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -29140,120 +29140,6 @@
     "290:10": {
       "preRequisites:9": {
         "0:10": {
-          "questIDHigh:4": 6107657297413227965,
-          "questIDLow:4": -5024519252989972104
-        }
-      },
-      "properties:10": {
-        "betterquesting:10": {
-          "autoClaim:1": 0,
-          "completion_animation:8": "default",
-          "completion_particle:8": "default",
-          "confetti_icon:10": {
-            "Count:3": 0,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:stick"
-          },
-          "countAsQuest:1": 1,
-          "desc:8": "This system is highly WIP (including this very quest), so do not expect it to be perfect.\n\nThis is the simplest method of prospecting, based on visual examination of surrounding material. Right-click on any §6Stone§r or §6Gravel§r block with a §6Prospector\u0027s Eyeglass§r and it will tell you if there is a substantial amount of any interesting ore nearby. Three levels of indication are reported, \"Faint signs\", \"Signs\" and \"Strong signs\", allowing you to home in on the source.\n\nTaking and analyzing geological samples, on the other hand, provides similar information to the Eyeglass but in much more detail. First you will need to make a §6Prospecting Pick§r. To take a sample, right-click on any piece of Stone or Gravel with the Prospecting Pick. A Geological Sample item will be dropped.\n\nTo analyse the sample, you will need a §3Geological Sample Analysis Kit§r and a supply of §6Litmus Paper§r. To use the kit, place it down somewhere and right-click it to open its GUI. Place the sample you want to analyse in the sample slot and some litmus paper in the slot beside it. Analysis will begin automatically and should finish in a few seconds, after which a report will appear below.\n\nThe report shows the place where the sample was taken and the amounts of any interesting mineral traces it contains. You can expect indications of ores within 16 blocks of the sample location, horizontally and vertically, to show up. Ores closer to the sample location will show up more strongly than ones further away.\n\n§2To save the analysis report for future reference, place a Writeable Book in the book slot and press the + button.\n\nIf you lose the report, you can analyse the sample again to get it back. However, a little of the sample is used up each time you analyse it, and a given sample can only be analysed 16 times before there is nothing left.",
-          "globalShare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "prospectingcraft:eyeglass"
-          },
-          "isMain:1": 0,
-          "isSilent:1": 0,
-          "is_final:1": 0,
-          "lockedProgress:1": 0,
-          "name:8": "Geological Samples",
-          "notification_duration:5": -1.0,
-          "notification_effect:3": -1,
-          "notification_fade_in:5": -1.0,
-          "notification_fade_out:5": -1.0,
-          "notification_icon_offset_y:3": -2147483648,
-          "notification_icon_scale:5": -1.0,
-          "notification_pos_x:3": -2147483648,
-          "notification_pos_y:3": -2147483648,
-          "notification_show_icon:8": "default",
-          "notification_style:8": "default",
-          "notification_subtitle:8": "",
-          "notification_subtitle_scale:5": -1.0,
-          "notification_title:8": "",
-          "notification_title_scale:5": -1.0,
-          "particle_count:3": -1,
-          "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
-          "poem_music:8": "",
-          "poem_text:8": "betterquesting:texts/end_poem",
-          "questLogic:8": "AND",
-          "repeatTime:3": -1,
-          "repeat_relative:1": 1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "random.levelup",
-          "snd_update:8": "random.levelup",
-          "taskLogic:8": "OR",
-          "visibility:8": "NORMAL"
-        }
-      },
-      "questIDHigh:4": 4638644023846389289,
-      "questIDLow:4": -5261892075279153819,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 1,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requireOnlyOneItem:1": 0,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "prospectingcraft:eyeglass"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        },
-        "1:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 1,
-          "index:3": 1,
-          "partialMatch:1": 1,
-          "requireOnlyOneItem:1": 0,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "prospectingcraft:gsa_kit"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "prospectingcraft:prospecting_pick"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "prospectingcraft:litmus_paper"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "291:10": {
-      "preRequisites:9": {
-        "0:10": {
           "questIDHigh:4": 5480478594726251954,
           "questIDLow:4": -6016508538328508008
         }
@@ -29335,7 +29221,7 @@
         }
       }
     },
-    "292:10": {
+    "291:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 1000830747582415130,
@@ -29419,7 +29305,7 @@
         }
       }
     },
-    "293:10": {
+    "292:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -29503,7 +29389,7 @@
         }
       }
     },
-    "294:10": {
+    "293:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -29577,7 +29463,7 @@
         }
       }
     },
-    "295:10": {
+    "294:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -29680,6 +29566,76 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "295:10": {
+      "preRequisites:9": {
+        "0:10": {
+          "questIDHigh:4": 6107657297413227965,
+          "questIDLow:4": -5024519252989972104
+        }
+      },
+      "properties:10": {
+        "betterquesting:10": {
+          "autoClaim:1": 0,
+          "completion_animation:8": "default",
+          "completion_particle:8": "default",
+          "confetti_icon:10": {
+            "Count:3": 0,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:stick"
+          },
+          "countAsQuest:1": 1,
+          "desc:8": "§3§6Schist§r§r layers are vast clusters of §3Graphitic Schis§f§3t§r, which are usually generated deep underground. \n\nThese layers contain much higher amount of ores, and are the most common source of§r §3Rare Earth Ore§r early game.",
+          "globalShare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "hbm:tile.stone_gneiss"
+          },
+          "isMain:1": 0,
+          "isSilent:1": 0,
+          "is_final:1": 0,
+          "lockedProgress:1": 0,
+          "name:8": "Schist Layers",
+          "notification_duration:5": -1.0,
+          "notification_effect:3": -1,
+          "notification_fade_in:5": -1.0,
+          "notification_fade_out:5": -1.0,
+          "notification_icon_offset_y:3": -2147483648,
+          "notification_icon_scale:5": -1.0,
+          "notification_pos_x:3": -2147483648,
+          "notification_pos_y:3": -2147483648,
+          "notification_show_icon:8": "default",
+          "notification_style:8": "default",
+          "notification_subtitle:8": "",
+          "notification_subtitle_scale:5": -1.0,
+          "notification_title:8": "",
+          "notification_title_scale:5": -1.0,
+          "particle_count:3": -1,
+          "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+          "poem_music:8": "",
+          "poem_text:8": "betterquesting:texts/end_poem",
+          "questLogic:8": "AND",
+          "repeatTime:3": -1,
+          "repeat_relative:1": 1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "random.levelup",
+          "snd_update:8": "random.levelup",
+          "taskLogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questIDHigh:4": 5164314495288558511,
+      "questIDLow:4": -7884587684482927836,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -49371,13 +49327,21 @@
         },
         "18:10": {
           "questIDHigh:4": 0,
+          "questIDLow:4": 0,
+          "sizeX:3": 0,
+          "sizeY:3": 0,
+          "x:3": 0,
+          "y:3": 0
+        },
+        "19:10": {
+          "questIDHigh:4": 0,
           "questIDLow:4": 3,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
           "y:3": -24
         },
-        "19:10": {
+        "20:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 4,
           "sizeX:3": 48,
@@ -49385,7 +49349,7 @@
           "x:3": -24,
           "y:3": 48
         },
-        "20:10": {
+        "21:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 5,
           "sizeX:3": 24,
@@ -49393,7 +49357,7 @@
           "x:3": 72,
           "y:3": -264
         },
-        "21:10": {
+        "22:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 8,
           "sizeX:3": 24,
@@ -49401,7 +49365,7 @@
           "x:3": -60,
           "y:3": 204
         },
-        "22:10": {
+        "23:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 9,
           "sizeX:3": 48,
@@ -49409,7 +49373,7 @@
           "x:3": -24,
           "y:3": 192
         },
-        "23:10": {
+        "24:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 12,
           "sizeX:3": 24,
@@ -49417,7 +49381,7 @@
           "x:3": 72,
           "y:3": -288
         },
-        "24:10": {
+        "25:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 15,
           "sizeX:3": 24,
@@ -49425,7 +49389,7 @@
           "x:3": 36,
           "y:3": 660
         },
-        "25:10": {
+        "26:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 17,
           "sizeX:3": 24,
@@ -49433,7 +49397,7 @@
           "x:3": 36,
           "y:3": 360
         },
-        "26:10": {
+        "27:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 18,
           "sizeX:3": 24,
@@ -49441,7 +49405,7 @@
           "x:3": 36,
           "y:3": 636
         },
-        "27:10": {
+        "28:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 19,
           "sizeX:3": 48,
@@ -49449,7 +49413,7 @@
           "x:3": -24,
           "y:3": 360
         },
-        "28:10": {
+        "29:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 20,
           "sizeX:3": 24,
@@ -49457,7 +49421,7 @@
           "x:3": -252,
           "y:3": 588
         },
-        "29:10": {
+        "30:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 25,
           "sizeX:3": 48,
@@ -49465,7 +49429,7 @@
           "x:3": -24,
           "y:3": 492
         },
-        "30:10": {
+        "31:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 26,
           "sizeX:3": 48,
@@ -49473,7 +49437,7 @@
           "x:3": -24,
           "y:3": 660
         },
-        "31:10": {
+        "32:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 28,
           "sizeX:3": 48,
@@ -49481,7 +49445,7 @@
           "x:3": -264,
           "y:3": 492
         },
-        "32:10": {
+        "33:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 29,
           "sizeX:3": 48,
@@ -49489,7 +49453,7 @@
           "x:3": -144,
           "y:3": 360
         },
-        "33:10": {
+        "34:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 31,
           "sizeX:3": 48,
@@ -49497,7 +49461,7 @@
           "x:3": -144,
           "y:3": 588
         },
-        "34:10": {
+        "35:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 33,
           "sizeX:3": 48,
@@ -49505,7 +49469,7 @@
           "x:3": -144,
           "y:3": 492
         },
-        "35:10": {
+        "36:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 34,
           "sizeX:3": 48,
@@ -49513,7 +49477,7 @@
           "x:3": -264,
           "y:3": 660
         },
-        "36:10": {
+        "37:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 36,
           "sizeX:3": 48,
@@ -49521,7 +49485,7 @@
           "x:3": -144,
           "y:3": 660
         },
-        "37:10": {
+        "38:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 37,
           "sizeX:3": 24,
@@ -49529,7 +49493,7 @@
           "x:3": -180,
           "y:3": 360
         },
-        "38:10": {
+        "39:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 42,
           "sizeX:3": 24,
@@ -49537,7 +49501,7 @@
           "x:3": 36,
           "y:3": 72
         },
-        "39:10": {
+        "40:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 49,
           "sizeX:3": 24,
@@ -49545,7 +49509,7 @@
           "x:3": -216,
           "y:3": 600
         },
-        "40:10": {
+        "41:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 57,
           "sizeX:3": 24,
@@ -49553,7 +49517,7 @@
           "x:3": 36,
           "y:3": -108
         },
-        "41:10": {
+        "42:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 61,
           "sizeX:3": 24,
@@ -49561,7 +49525,7 @@
           "x:3": -216,
           "y:3": 396
         },
-        "42:10": {
+        "43:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 85,
           "sizeX:3": 24,
@@ -49569,7 +49533,7 @@
           "x:3": -180,
           "y:3": 384
         },
-        "43:10": {
+        "44:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 98,
           "sizeX:3": 24,
@@ -49577,7 +49541,7 @@
           "x:3": 0,
           "y:3": 420
         },
-        "44:10": {
+        "45:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 104,
           "sizeX:3": 24,
@@ -49585,7 +49549,7 @@
           "x:3": -84,
           "y:3": 348
         },
-        "45:10": {
+        "46:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 133,
           "sizeX:3": 24,
@@ -49593,7 +49557,7 @@
           "x:3": -300,
           "y:3": 684
         },
-        "46:10": {
+        "47:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 187,
           "sizeX:3": 48,
@@ -49601,7 +49565,7 @@
           "x:3": -24,
           "y:3": 264
         },
-        "47:10": {
+        "48:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 202,
           "sizeX:3": 24,
@@ -49609,7 +49573,7 @@
           "x:3": -84,
           "y:3": 372
         },
-        "48:10": {
+        "49:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 267,
           "sizeX:3": 24,
@@ -49617,7 +49581,7 @@
           "x:3": 36,
           "y:3": 708
         },
-        "49:10": {
+        "50:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 328,
           "sizeX:3": 24,
@@ -49625,7 +49589,7 @@
           "x:3": -216,
           "y:3": 576
         },
-        "50:10": {
+        "51:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 374,
           "sizeX:3": 24,
@@ -49633,7 +49597,7 @@
           "x:3": -84,
           "y:3": 396
         },
-        "51:10": {
+        "52:10": {
           "questIDHigh:4": 409672666446187249,
           "questIDLow:4": -6628125486467880895,
           "sizeX:3": 24,
@@ -49641,7 +49605,7 @@
           "x:3": -60,
           "y:3": -108
         },
-        "52:10": {
+        "53:10": {
           "questIDHigh:4": 576884900218224660,
           "questIDLow:4": -5968809463241953077,
           "sizeX:3": 24,
@@ -49649,7 +49613,7 @@
           "x:3": -60,
           "y:3": -84
         },
-        "53:10": {
+        "54:10": {
           "questIDHigh:4": 1100830882678590018,
           "questIDLow:4": -5354062344744064371,
           "sizeX:3": 24,
@@ -49657,7 +49621,7 @@
           "x:3": 72,
           "y:3": 192
         },
-        "54:10": {
+        "55:10": {
           "questIDHigh:4": 1306029136933572136,
           "questIDLow:4": -7894191337086736848,
           "sizeX:3": 24,
@@ -49665,7 +49629,7 @@
           "x:3": -60,
           "y:3": 528
         },
-        "55:10": {
+        "56:10": {
           "questIDHigh:4": 1319228889462950511,
           "questIDLow:4": -7715767674686406072,
           "sizeX:3": 24,
@@ -49673,7 +49637,7 @@
           "x:3": -24,
           "y:3": 432
         },
-        "56:10": {
+        "57:10": {
           "questIDHigh:4": 1700094336438977605,
           "questIDLow:4": -6991072747442481306,
           "sizeX:3": 24,
@@ -49681,7 +49645,7 @@
           "x:3": -12,
           "y:3": -228
         },
-        "57:10": {
+        "58:10": {
           "questIDHigh:4": 1597156130510686175,
           "questIDLow:4": -8148762555774367770,
           "sizeX:3": 24,
@@ -49689,7 +49653,7 @@
           "x:3": 36,
           "y:3": -252
         },
-        "58:10": {
+        "59:10": {
           "questIDHigh:4": 1792435246107674063,
           "questIDLow:4": -7912581669852607151,
           "sizeX:3": 24,
@@ -49697,7 +49661,7 @@
           "x:3": -180,
           "y:3": 264
         },
-        "59:10": {
+        "60:10": {
           "questIDHigh:4": 2081600360242234975,
           "questIDLow:4": -6669270567593592616,
           "sizeX:3": 24,
@@ -49705,7 +49669,7 @@
           "x:3": -60,
           "y:3": 372
         },
-        "60:10": {
+        "61:10": {
           "questIDHigh:4": 2105028282867793957,
           "questIDLow:4": -7479141439667949382,
           "sizeX:3": 24,
@@ -49713,7 +49677,7 @@
           "x:3": 72,
           "y:3": 60
         },
-        "61:10": {
+        "62:10": {
           "questIDHigh:4": 2306956816106802527,
           "questIDLow:4": -7803400941985387744,
           "sizeX:3": 24,
@@ -49721,7 +49685,7 @@
           "x:3": 36,
           "y:3": -60
         },
-        "62:10": {
+        "63:10": {
           "questIDHigh:4": 2422285452448056951,
           "questIDLow:4": -7042285292644273313,
           "sizeX:3": 24,
@@ -49729,7 +49693,7 @@
           "x:3": 72,
           "y:3": 216
         },
-        "63:10": {
+        "64:10": {
           "questIDHigh:4": 2510193474925051947,
           "questIDLow:4": -8986065919182461264,
           "sizeX:3": 24,
@@ -49737,7 +49701,7 @@
           "x:3": -180,
           "y:3": 552
         },
-        "64:10": {
+        "65:10": {
           "questIDHigh:4": 2720273598898784049,
           "questIDLow:4": -8747775295999091665,
           "sizeX:3": 24,
@@ -49745,7 +49709,7 @@
           "x:3": 36,
           "y:3": 384
         },
-        "65:10": {
+        "66:10": {
           "questIDHigh:4": 3163659380794018993,
           "questIDLow:4": -7001378495623077346,
           "sizeX:3": 48,
@@ -49753,7 +49717,7 @@
           "x:3": -24,
           "y:3": 120
         },
-        "66:10": {
+        "67:10": {
           "questIDHigh:4": 3517868390546886320,
           "questIDLow:4": -4961355786284448601,
           "sizeX:3": 24,
@@ -49761,7 +49725,7 @@
           "x:3": 12,
           "y:3": -420
         },
-        "67:10": {
+        "68:10": {
           "questIDHigh:4": 3561269112830971302,
           "questIDLow:4": -6416151809335983179,
           "sizeX:3": 24,
@@ -49769,7 +49733,7 @@
           "x:3": -60,
           "y:3": -396
         },
-        "68:10": {
+        "69:10": {
           "questIDHigh:4": 4202730796246256446,
           "questIDLow:4": -7672103387334935999,
           "sizeX:3": 24,
@@ -49777,15 +49741,15 @@
           "x:3": 72,
           "y:3": 360
         },
-        "69:10": {
-          "questIDHigh:4": 4638644023846389289,
-          "questIDLow:4": -5261892075279153819,
+        "70:10": {
+          "questIDHigh:4": 5164314495288558511,
+          "questIDLow:4": -7884587684482927836,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
-          "y:3": -180
+          "y:3": -168
         },
-        "70:10": {
+        "71:10": {
           "questIDHigh:4": 4905074118757469850,
           "questIDLow:4": -4964857229954535239,
           "sizeX:3": 24,
@@ -49793,15 +49757,15 @@
           "x:3": 72,
           "y:3": 36
         },
-        "71:10": {
+        "72:10": {
           "questIDHigh:4": 5390298830758430627,
           "questIDLow:4": -6012581497053432484,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
-          "y:3": -180
+          "y:3": -192
         },
-        "72:10": {
+        "73:10": {
           "questIDHigh:4": 5812208291127183429,
           "questIDLow:4": -8692877377273507058,
           "sizeX:3": 24,
@@ -49809,7 +49773,7 @@
           "x:3": 36,
           "y:3": 684
         },
-        "73:10": {
+        "74:10": {
           "questIDHigh:4": 6107657297413227965,
           "questIDLow:4": -5024519252989972104,
           "sizeX:3": 24,
@@ -49817,7 +49781,7 @@
           "x:3": -12,
           "y:3": -180
         },
-        "74:10": {
+        "75:10": {
           "questIDHigh:4": 6236478466157201943,
           "questIDLow:4": -8281936603636423550,
           "sizeX:3": 24,
@@ -49825,7 +49789,7 @@
           "x:3": -60,
           "y:3": 180
         },
-        "75:10": {
+        "76:10": {
           "questIDHigh:4": 6871381108352696606,
           "questIDLow:4": -8295334852746987844,
           "sizeX:3": 24,
@@ -49833,7 +49797,7 @@
           "x:3": -60,
           "y:3": 60
         },
-        "76:10": {
+        "77:10": {
           "questIDHigh:4": 6876079395018919245,
           "questIDLow:4": -6288216890648054046,
           "sizeX:3": 24,
@@ -49841,7 +49805,7 @@
           "x:3": -336,
           "y:3": 684
         },
-        "77:10": {
+        "78:10": {
           "questIDHigh:4": 6688386802871848693,
           "questIDLow:4": -4794614385188764650,
           "sizeX:3": 24,
@@ -49849,7 +49813,7 @@
           "x:3": -48,
           "y:3": 432
         },
-        "78:10": {
+        "79:10": {
           "questIDHigh:4": 7340101258682910999,
           "questIDLow:4": -7010980744998178033,
           "sizeX:3": 24,
@@ -49857,7 +49821,7 @@
           "x:3": 36,
           "y:3": -276
         },
-        "79:10": {
+        "80:10": {
           "questIDHigh:4": 7393826177143426704,
           "questIDLow:4": -5800711279727378144,
           "sizeX:3": 24,
@@ -49865,7 +49829,7 @@
           "x:3": -60,
           "y:3": -252
         },
-        "80:10": {
+        "81:10": {
           "questIDHigh:4": -98395487086294723,
           "questIDLow:4": -6741385460466628086,
           "sizeX:3": 24,
@@ -49873,7 +49837,7 @@
           "x:3": -180,
           "y:3": 288
         },
-        "81:10": {
+        "82:10": {
           "questIDHigh:4": 7750249545579122375,
           "questIDLow:4": -9002175308732590758,
           "sizeX:3": 48,
@@ -49881,7 +49845,7 @@
           "x:3": 72,
           "y:3": 264
         },
-        "82:10": {
+        "83:10": {
           "questIDHigh:4": 7830852685465734165,
           "questIDLow:4": -8858773679965223078,
           "sizeX:3": 24,
@@ -49889,7 +49853,7 @@
           "x:3": -216,
           "y:3": 348
         },
-        "83:10": {
+        "84:10": {
           "questIDHigh:4": 7888072001642516270,
           "questIDLow:4": -9164881848491213321,
           "sizeX:3": 24,
@@ -49897,7 +49861,7 @@
           "x:3": -300,
           "y:3": 636
         },
-        "84:10": {
+        "85:10": {
           "questIDHigh:4": 8162125792545885492,
           "questIDLow:4": -7464496251550668189,
           "sizeX:3": 48,
@@ -49905,7 +49869,7 @@
           "x:3": -144,
           "y:3": 264
         },
-        "85:10": {
+        "86:10": {
           "questIDHigh:4": 8206961873231169341,
           "questIDLow:4": -5838824019666068817,
           "sizeX:3": 24,
@@ -49913,7 +49877,7 @@
           "x:3": 36,
           "y:3": 288
         },
-        "86:10": {
+        "87:10": {
           "questIDHigh:4": 8570567570997133659,
           "questIDLow:4": -7205135763288628092,
           "sizeX:3": 24,
@@ -49921,7 +49885,7 @@
           "x:3": -60,
           "y:3": -372
         },
-        "87:10": {
+        "88:10": {
           "questIDHigh:4": 8734571997805300442,
           "questIDLow:4": -8718371644389677501,
           "sizeX:3": 24,
@@ -49929,7 +49893,7 @@
           "x:3": -12,
           "y:3": -420
         },
-        "88:10": {
+        "89:10": {
           "questIDHigh:4": 9098570208866746782,
           "questIDLow:4": -6916701274949395603,
           "sizeX:3": 24,
@@ -49937,7 +49901,7 @@
           "x:3": -60,
           "y:3": 480
         },
-        "89:10": {
+        "90:10": {
           "questIDHigh:4": -9177172482455221374,
           "questIDLow:4": -6300314152617983166,
           "sizeX:3": 24,
@@ -49945,7 +49909,7 @@
           "x:3": 36,
           "y:3": -84
         },
-        "90:10": {
+        "91:10": {
           "questIDHigh:4": -9120771574828023211,
           "questIDLow:4": -9206369807157931159,
           "sizeX:3": 24,
@@ -49953,7 +49917,7 @@
           "x:3": 36,
           "y:3": 264
         },
-        "91:10": {
+        "92:10": {
           "questIDHigh:4": -8367973611508447554,
           "questIDLow:4": -7809869369909249400,
           "sizeX:3": 24,
@@ -49961,7 +49925,7 @@
           "x:3": 24,
           "y:3": -180
         },
-        "92:10": {
+        "93:10": {
           "questIDHigh:4": -8230734542605238237,
           "questIDLow:4": -9014159122841897299,
           "sizeX:3": 24,
@@ -49969,7 +49933,7 @@
           "x:3": -288,
           "y:3": 588
         },
-        "93:10": {
+        "94:10": {
           "questIDHigh:4": -7809915145168335433,
           "questIDLow:4": -6984665115169535093,
           "sizeX:3": 48,
@@ -49977,7 +49941,7 @@
           "x:3": 36,
           "y:3": -384
         },
-        "94:10": {
+        "95:10": {
           "questIDHigh:4": -7938919840154957576,
           "questIDLow:4": -7762979477273495086,
           "sizeX:3": 24,
@@ -49985,7 +49949,7 @@
           "x:3": -60,
           "y:3": -276
         },
-        "95:10": {
+        "96:10": {
           "questIDHigh:4": -7623698422531862605,
           "questIDLow:4": -5854221629152364784,
           "sizeX:3": 48,
@@ -49993,7 +49957,7 @@
           "x:3": 48,
           "y:3": 492
         },
-        "96:10": {
+        "97:10": {
           "questIDHigh:4": -7018857519747610537,
           "questIDLow:4": -9105593870909274062,
           "sizeX:3": 24,
@@ -50001,7 +49965,7 @@
           "x:3": -36,
           "y:3": -420
         },
-        "97:10": {
+        "98:10": {
           "questIDHigh:4": -7018651477296855465,
           "questIDLow:4": -8725395520225007410,
           "sizeX:3": 48,
@@ -50009,7 +49973,7 @@
           "x:3": -24,
           "y:3": -96
         },
-        "98:10": {
+        "99:10": {
           "questIDHigh:4": -6542062107870935314,
           "questIDLow:4": -6500343898679542889,
           "sizeX:3": 24,
@@ -50017,7 +49981,7 @@
           "x:3": -324,
           "y:3": 588
         },
-        "99:10": {
+        "100:10": {
           "questIDHigh:4": -6504268382655527520,
           "questIDLow:4": -5691612610862427359,
           "sizeX:3": 24,
@@ -50025,7 +49989,7 @@
           "x:3": -132,
           "y:3": 552
         },
-        "100:10": {
+        "101:10": {
           "questIDHigh:4": -6306542984304769804,
           "questIDLow:4": -8472329852027665198,
           "sizeX:3": 24,
@@ -50033,7 +49997,7 @@
           "x:3": -84,
           "y:3": 552
         },
-        "101:10": {
+        "102:10": {
           "questIDHigh:4": -6005191642078558368,
           "questIDLow:4": -6890513112997641897,
           "sizeX:3": 48,
@@ -50041,7 +50005,7 @@
           "x:3": -144,
           "y:3": 732
         },
-        "102:10": {
+        "103:10": {
           "questIDHigh:4": -5491768019635254630,
           "questIDLow:4": -8438756366615056717,
           "sizeX:3": 24,
@@ -50049,7 +50013,7 @@
           "x:3": -300,
           "y:3": 660
         },
-        "103:10": {
+        "104:10": {
           "questIDHigh:4": -4528572839507964865,
           "questIDLow:4": -4808784924194840949,
           "sizeX:3": 24,
@@ -50057,7 +50021,7 @@
           "x:3": -48,
           "y:3": -132
         },
-        "104:10": {
+        "105:10": {
           "questIDHigh:4": -4012655372573785034,
           "questIDLow:4": -8808127576427151803,
           "sizeX:3": 24,
@@ -50065,7 +50029,7 @@
           "x:3": -60,
           "y:3": 228
         },
-        "105:10": {
+        "106:10": {
           "questIDHigh:4": -3894422327576932604,
           "questIDLow:4": -8870866079077399040,
           "sizeX:3": 24,
@@ -50073,7 +50037,7 @@
           "x:3": -60,
           "y:3": -60
         },
-        "106:10": {
+        "107:10": {
           "questIDHigh:4": -3543687055803659602,
           "questIDLow:4": -6798996681743515122,
           "sizeX:3": 24,
@@ -50137,13 +50101,21 @@
         },
         "4:10": {
           "questIDHigh:4": 0,
+          "questIDLow:4": 0,
+          "sizeX:3": 0,
+          "sizeY:3": 0,
+          "x:3": 0,
+          "y:3": 0
+        },
+        "5:10": {
+          "questIDHigh:4": 0,
           "questIDLow:4": 11,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": 24
         },
-        "5:10": {
+        "6:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 14,
           "sizeX:3": 24,
@@ -50151,7 +50123,7 @@
           "x:3": -204,
           "y:3": 108
         },
-        "6:10": {
+        "7:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 27,
           "sizeX:3": 24,
@@ -50159,7 +50131,7 @@
           "x:3": -300,
           "y:3": 180
         },
-        "7:10": {
+        "8:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 30,
           "sizeX:3": 48,
@@ -50167,7 +50139,7 @@
           "x:3": -168,
           "y:3": 48
         },
-        "8:10": {
+        "9:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 32,
           "sizeX:3": 24,
@@ -50175,7 +50147,7 @@
           "x:3": -156,
           "y:3": 216
         },
-        "9:10": {
+        "10:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 35,
           "sizeX:3": 24,
@@ -50183,7 +50155,7 @@
           "x:3": -48,
           "y:3": 120
         },
-        "10:10": {
+        "11:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 41,
           "sizeX:3": 24,
@@ -50191,7 +50163,7 @@
           "x:3": -180,
           "y:3": -60
         },
-        "11:10": {
+        "12:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 43,
           "sizeX:3": 48,
@@ -50199,7 +50171,7 @@
           "x:3": -24,
           "y:3": -96
         },
-        "12:10": {
+        "13:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 44,
           "sizeX:3": 48,
@@ -50207,7 +50179,7 @@
           "x:3": -312,
           "y:3": -72
         },
-        "13:10": {
+        "14:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 47,
           "sizeX:3": 48,
@@ -50215,7 +50187,7 @@
           "x:3": -24,
           "y:3": -24
         },
-        "14:10": {
+        "15:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 58,
           "sizeX:3": 24,
@@ -50223,7 +50195,7 @@
           "x:3": -156,
           "y:3": -12
         },
-        "15:10": {
+        "16:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 59,
           "sizeX:3": 48,
@@ -50231,7 +50203,7 @@
           "x:3": 72,
           "y:3": 60
         },
-        "16:10": {
+        "17:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 60,
           "sizeX:3": 48,
@@ -50239,7 +50211,7 @@
           "x:3": 168,
           "y:3": -24
         },
-        "17:10": {
+        "18:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 63,
           "sizeX:3": 24,
@@ -50247,7 +50219,7 @@
           "x:3": -156,
           "y:3": -60
         },
-        "18:10": {
+        "19:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 64,
           "sizeX:3": 24,
@@ -50255,7 +50227,7 @@
           "x:3": 84,
           "y:3": 120
         },
-        "19:10": {
+        "20:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 65,
           "sizeX:3": 24,
@@ -50263,7 +50235,7 @@
           "x:3": 24,
           "y:3": 72
         },
-        "20:10": {
+        "21:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 66,
           "sizeX:3": 24,
@@ -50271,7 +50243,7 @@
           "x:3": 84,
           "y:3": -12
         },
-        "21:10": {
+        "22:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 68,
           "sizeX:3": 48,
@@ -50279,7 +50251,7 @@
           "x:3": -264,
           "y:3": 216
         },
-        "22:10": {
+        "23:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 69,
           "sizeX:3": 48,
@@ -50287,7 +50259,7 @@
           "x:3": 132,
           "y:3": 108
         },
-        "23:10": {
+        "24:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 72,
           "sizeX:3": 24,
@@ -50295,7 +50267,7 @@
           "x:3": 240,
           "y:3": -24
         },
-        "24:10": {
+        "25:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 75,
           "sizeX:3": 48,
@@ -50303,7 +50275,7 @@
           "x:3": -168,
           "y:3": 264
         },
-        "25:10": {
+        "26:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 78,
           "sizeX:3": 24,
@@ -50311,7 +50283,7 @@
           "x:3": 120,
           "y:3": 24
         },
-        "26:10": {
+        "27:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 79,
           "sizeX:3": 48,
@@ -50319,7 +50291,7 @@
           "x:3": -60,
           "y:3": 204
         },
-        "27:10": {
+        "28:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 81,
           "sizeX:3": 48,
@@ -50327,7 +50299,7 @@
           "x:3": 72,
           "y:3": -96
         },
-        "28:10": {
+        "29:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 82,
           "sizeX:3": 48,
@@ -50335,7 +50307,7 @@
           "x:3": -240,
           "y:3": -72
         },
-        "29:10": {
+        "30:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 83,
           "sizeX:3": 24,
@@ -50343,7 +50315,7 @@
           "x:3": 240,
           "y:3": 0
         },
-        "30:10": {
+        "31:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 87,
           "sizeX:3": 24,
@@ -50351,7 +50323,7 @@
           "x:3": -216,
           "y:3": 24
         },
-        "31:10": {
+        "32:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 88,
           "sizeX:3": 24,
@@ -50359,7 +50331,7 @@
           "x:3": -252,
           "y:3": 24
         },
-        "32:10": {
+        "33:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 94,
           "sizeX:3": 24,
@@ -50367,7 +50339,7 @@
           "x:3": 36,
           "y:3": -60
         },
-        "33:10": {
+        "34:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 95,
           "sizeX:3": 24,
@@ -50375,7 +50347,7 @@
           "x:3": -120,
           "y:3": 180
         },
-        "34:10": {
+        "35:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 96,
           "sizeX:3": 24,
@@ -50383,7 +50355,7 @@
           "x:3": -24,
           "y:3": 156
         },
-        "35:10": {
+        "36:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 107,
           "sizeX:3": 48,
@@ -50391,7 +50363,7 @@
           "x:3": -60,
           "y:3": 60
         },
-        "36:10": {
+        "37:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 118,
           "sizeX:3": 24,
@@ -50399,7 +50371,7 @@
           "x:3": -120,
           "y:3": 252
         },
-        "37:10": {
+        "38:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 139,
           "sizeX:3": 24,
@@ -50407,7 +50379,7 @@
           "x:3": -12,
           "y:3": -144
         },
-        "38:10": {
+        "39:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 204,
           "sizeX:3": 48,
@@ -50415,7 +50387,7 @@
           "x:3": -264,
           "y:3": 264
         },
-        "39:10": {
+        "40:10": {
           "questIDHigh:4": 67635641994265110,
           "questIDLow:4": -5379878541328069900,
           "sizeX:3": 24,
@@ -50423,7 +50395,7 @@
           "x:3": -216,
           "y:3": -108
         },
-        "40:10": {
+        "41:10": {
           "questIDHigh:4": 101073958437276490,
           "questIDLow:4": -4755669698362144810,
           "sizeX:3": 24,
@@ -50431,7 +50403,7 @@
           "x:3": 84,
           "y:3": 168
         },
-        "41:10": {
+        "42:10": {
           "questIDHigh:4": 1116049069011979303,
           "questIDLow:4": -7185323151443508001,
           "sizeX:3": 24,
@@ -50439,7 +50411,7 @@
           "x:3": -108,
           "y:3": 60
         },
-        "42:10": {
+        "43:10": {
           "questIDHigh:4": 1125968860657764845,
           "questIDLow:4": -4783387497391578625,
           "sizeX:3": 24,
@@ -50447,7 +50419,7 @@
           "x:3": -324,
           "y:3": 24
         },
-        "43:10": {
+        "44:10": {
           "questIDHigh:4": 3300935411432441238,
           "questIDLow:4": -5423491499164788343,
           "sizeX:3": 24,
@@ -50455,7 +50427,7 @@
           "x:3": -156,
           "y:3": 120
         },
-        "44:10": {
+        "45:10": {
           "questIDHigh:4": 4862972034957069671,
           "questIDLow:4": -5033068548638187769,
           "sizeX:3": 24,
@@ -50463,7 +50435,7 @@
           "x:3": 12,
           "y:3": 240
         },
-        "45:10": {
+        "46:10": {
           "questIDHigh:4": 5864639435657593340,
           "questIDLow:4": -6254646907849459501,
           "sizeX:3": 24,
@@ -50471,7 +50443,7 @@
           "x:3": -60,
           "y:3": -60
         },
-        "46:10": {
+        "47:10": {
           "questIDHigh:4": 6274986781435840262,
           "questIDLow:4": -6232493383470159511,
           "sizeX:3": 24,
@@ -50479,7 +50451,7 @@
           "x:3": -240,
           "y:3": -108
         },
-        "47:10": {
+        "48:10": {
           "questIDHigh:4": 7294403272883979501,
           "questIDLow:4": -8510059672642066327,
           "sizeX:3": 24,
@@ -50487,15 +50459,15 @@
           "x:3": -204,
           "y:3": 132
         },
-        "48:10": {
+        "49:10": {
           "questIDHigh:4": -8298516097724104305,
           "questIDLow:4": -5803257503394996761,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -120,
-          "y:3": 216
+          "x:3": -192,
+          "y:3": 252
         },
-        "49:10": {
+        "50:10": {
           "questIDHigh:4": -7517402119794504946,
           "questIDLow:4": -7327734234354752994,
           "sizeX:3": 24,
@@ -50503,7 +50475,7 @@
           "x:3": -192,
           "y:3": 180
         },
-        "50:10": {
+        "51:10": {
           "questIDHigh:4": -7514485711485907442,
           "questIDLow:4": -5776680351498983601,
           "sizeX:3": 24,
@@ -50511,7 +50483,7 @@
           "x:3": -288,
           "y:3": 24
         },
-        "51:10": {
+        "52:10": {
           "questIDHigh:4": -6989423679982976452,
           "questIDLow:4": -6606127452354854541,
           "sizeX:3": 24,
@@ -50519,7 +50491,7 @@
           "x:3": -216,
           "y:3": -12
         },
-        "52:10": {
+        "53:10": {
           "questIDHigh:4": -5915511152843930842,
           "questIDLow:4": -5788200798426524013,
           "sizeX:3": 24,
@@ -50527,7 +50499,7 @@
           "x:3": -72,
           "y:3": 156
         },
-        "53:10": {
+        "54:10": {
           "questIDHigh:4": -5211961584424694718,
           "questIDLow:4": -5683747536137921863,
           "sizeX:3": 24,
@@ -50535,7 +50507,7 @@
           "x:3": 36,
           "y:3": -96
         },
-        "54:10": {
+        "55:10": {
           "questIDHigh:4": -5427783828413726290,
           "questIDLow:4": -5558476693263304964,
           "sizeX:3": 24,
@@ -50543,7 +50515,7 @@
           "x:3": 12,
           "y:3": 216
         },
-        "55:10": {
+        "56:10": {
           "questIDHigh:4": -4323201697992913312,
           "questIDLow:4": -6878916538940468111,
           "sizeX:3": 24,
@@ -50551,7 +50523,7 @@
           "x:3": 192,
           "y:3": 120
         },
-        "56:10": {
+        "57:10": {
           "questIDHigh:4": -3637578079703577877,
           "questIDLow:4": -8336080721120338866,
           "sizeX:3": 24,
@@ -50559,7 +50531,7 @@
           "x:3": 12,
           "y:3": 192
         },
-        "57:10": {
+        "58:10": {
           "questIDHigh:4": -3581465447835940086,
           "questIDLow:4": -6140714886735732721,
           "sizeX:3": 24,
@@ -50678,6 +50650,14 @@
           "y:3": 636
         },
         "11:10": {
+          "questIDHigh:4": -752295393661006599,
+          "questIDLow:4": -8666504435509807597,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 180,
+          "y:3": 732
+        },
+        "12:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 209,
           "sizeX:3": 24,
@@ -50685,7 +50665,7 @@
           "x:3": -84,
           "y:3": 588
         },
-        "12:10": {
+        "13:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 213,
           "sizeX:3": 48,
@@ -50693,7 +50673,7 @@
           "x:3": -144,
           "y:3": 300
         },
-        "13:10": {
+        "14:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 0,
           "sizeX:3": 48,
@@ -50701,7 +50681,7 @@
           "x:3": 312,
           "y:3": 60
         },
-        "14:10": {
+        "15:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 6,
           "sizeX:3": 24,
@@ -50709,7 +50689,7 @@
           "x:3": -84,
           "y:3": 288
         },
-        "15:10": {
+        "16:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 10,
           "sizeX:3": 48,
@@ -50717,7 +50697,7 @@
           "x:3": -48,
           "y:3": 12
         },
-        "16:10": {
+        "17:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 13,
           "sizeX:3": 24,
@@ -50725,7 +50705,7 @@
           "x:3": 108,
           "y:3": 288
         },
-        "17:10": {
+        "18:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 39,
           "sizeX:3": 24,
@@ -50733,7 +50713,7 @@
           "x:3": 276,
           "y:3": 432
         },
-        "18:10": {
+        "19:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 40,
           "sizeX:3": 24,
@@ -50741,7 +50721,7 @@
           "x:3": 156,
           "y:3": 240
         },
-        "19:10": {
+        "20:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 45,
           "sizeX:3": 24,
@@ -50749,7 +50729,7 @@
           "x:3": 372,
           "y:3": 72
         },
-        "20:10": {
+        "21:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 48,
           "sizeX:3": 24,
@@ -50757,7 +50737,7 @@
           "x:3": 156,
           "y:3": 336
         },
-        "21:10": {
+        "22:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 52,
           "sizeX:3": 24,
@@ -50765,7 +50745,7 @@
           "x:3": 276,
           "y:3": 336
         },
-        "22:10": {
+        "23:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 54,
           "sizeX:3": 48,
@@ -50773,7 +50753,7 @@
           "x:3": 216,
           "y:3": 228
         },
-        "23:10": {
+        "24:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 62,
           "sizeX:3": 24,
@@ -50781,7 +50761,7 @@
           "x:3": 108,
           "y:3": 384
         },
-        "24:10": {
+        "25:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 67,
           "sizeX:3": 48,
@@ -50789,7 +50769,7 @@
           "x:3": 264,
           "y:3": 132
         },
-        "25:10": {
+        "26:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 73,
           "sizeX:3": 24,
@@ -50797,7 +50777,7 @@
           "x:3": 108,
           "y:3": 432
         },
-        "26:10": {
+        "27:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 74,
           "sizeX:3": 24,
@@ -50805,7 +50785,7 @@
           "x:3": 372,
           "y:3": 528
         },
-        "27:10": {
+        "28:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 86,
           "sizeX:3": 24,
@@ -50813,7 +50793,7 @@
           "x:3": 324,
           "y:3": 528
         },
-        "28:10": {
+        "29:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 91,
           "sizeX:3": 48,
@@ -50821,7 +50801,7 @@
           "x:3": 96,
           "y:3": 324
         },
-        "29:10": {
+        "30:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 103,
           "sizeX:3": 48,
@@ -50829,7 +50809,7 @@
           "x:3": 216,
           "y:3": 564
         },
-        "30:10": {
+        "31:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 111,
           "sizeX:3": 24,
@@ -50837,7 +50817,7 @@
           "x:3": -180,
           "y:3": 144
         },
-        "31:10": {
+        "32:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 112,
           "sizeX:3": 24,
@@ -50845,7 +50825,7 @@
           "x:3": 228,
           "y:3": 384
         },
-        "32:10": {
+        "33:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 114,
           "sizeX:3": 48,
@@ -50853,7 +50833,7 @@
           "x:3": -144,
           "y:3": 12
         },
-        "33:10": {
+        "34:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 117,
           "sizeX:3": 24,
@@ -50861,7 +50841,7 @@
           "x:3": -216,
           "y:3": 156
         },
-        "34:10": {
+        "35:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 120,
           "sizeX:3": 24,
@@ -50869,7 +50849,7 @@
           "x:3": 276,
           "y:3": 576
         },
-        "35:10": {
+        "36:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 132,
           "sizeX:3": 24,
@@ -50877,7 +50857,7 @@
           "x:3": -216,
           "y:3": 132
         },
-        "36:10": {
+        "37:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 135,
           "sizeX:3": 24,
@@ -50885,7 +50865,7 @@
           "x:3": 156,
           "y:3": 192
         },
-        "37:10": {
+        "38:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 139,
           "sizeX:3": 24,
@@ -50893,7 +50873,7 @@
           "x:3": 156,
           "y:3": 432
         },
-        "38:10": {
+        "39:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 142,
           "sizeX:3": 24,
@@ -50901,7 +50881,7 @@
           "x:3": -84,
           "y:3": 552
         },
-        "39:10": {
+        "40:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 143,
           "sizeX:3": 48,
@@ -50909,7 +50889,7 @@
           "x:3": -144,
           "y:3": 540
         },
-        "40:10": {
+        "41:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 144,
           "sizeX:3": 48,
@@ -50917,7 +50897,7 @@
           "x:3": 12,
           "y:3": 420
         },
-        "41:10": {
+        "42:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 147,
           "sizeX:3": 48,
@@ -50925,7 +50905,7 @@
           "x:3": 96,
           "y:3": 228
         },
-        "42:10": {
+        "43:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 158,
           "sizeX:3": 24,
@@ -50933,7 +50913,7 @@
           "x:3": 276,
           "y:3": 288
         },
-        "43:10": {
+        "44:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 166,
           "sizeX:3": 48,
@@ -50941,7 +50921,7 @@
           "x:3": 144,
           "y:3": 516
         },
-        "44:10": {
+        "45:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 173,
           "sizeX:3": 24,
@@ -50949,7 +50929,7 @@
           "x:3": 324,
           "y:3": 480
         },
-        "45:10": {
+        "46:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 184,
           "sizeX:3": 24,
@@ -50957,7 +50937,7 @@
           "x:3": 324,
           "y:3": 576
         },
-        "46:10": {
+        "47:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 185,
           "sizeX:3": 24,
@@ -50965,7 +50945,7 @@
           "x:3": 276,
           "y:3": 528
         },
-        "47:10": {
+        "48:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 186,
           "sizeX:3": 24,
@@ -50973,7 +50953,7 @@
           "x:3": 276,
           "y:3": 480
         },
-        "48:10": {
+        "49:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 195,
           "sizeX:3": 24,
@@ -50981,7 +50961,7 @@
           "x:3": 276,
           "y:3": 240
         },
-        "49:10": {
+        "50:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 317,
           "sizeX:3": 24,
@@ -50989,7 +50969,7 @@
           "x:3": 324,
           "y:3": 240
         },
-        "50:10": {
+        "51:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 376,
           "sizeX:3": 24,
@@ -50997,7 +50977,7 @@
           "x:3": 324,
           "y:3": 432
         },
-        "51:10": {
+        "52:10": {
           "questIDHigh:4": 686450562342733119,
           "questIDLow:4": -8413777266776803579,
           "sizeX:3": 24,
@@ -51005,7 +50985,7 @@
           "x:3": -36,
           "y:3": -72
         },
-        "52:10": {
+        "53:10": {
           "questIDHigh:4": 687731528747535133,
           "questIDLow:4": -8048369294660925893,
           "sizeX:3": 24,
@@ -51013,7 +50993,7 @@
           "x:3": -132,
           "y:3": 192
         },
-        "53:10": {
+        "54:10": {
           "questIDHigh:4": 1142299974232917545,
           "questIDLow:4": -5829411958012694499,
           "sizeX:3": 24,
@@ -51021,7 +51001,7 @@
           "x:3": 276,
           "y:3": 648
         },
-        "54:10": {
+        "55:10": {
           "questIDHigh:4": 918930596238870758,
           "questIDLow:4": -5768670882837134147,
           "sizeX:3": 24,
@@ -51029,7 +51009,7 @@
           "x:3": 180,
           "y:3": 672
         },
-        "55:10": {
+        "56:10": {
           "questIDHigh:4": 1229244653325468642,
           "questIDLow:4": -4771297512635936621,
           "sizeX:3": 24,
@@ -51037,7 +51017,7 @@
           "x:3": 204,
           "y:3": 696
         },
-        "56:10": {
+        "57:10": {
           "questIDHigh:4": 1266995841114196128,
           "questIDLow:4": -9220536438992474788,
           "sizeX:3": 24,
@@ -51045,7 +51025,7 @@
           "x:3": 324,
           "y:3": 24
         },
-        "57:10": {
+        "58:10": {
           "questIDHigh:4": 2781868893309911755,
           "questIDLow:4": -4729103834110492440,
           "sizeX:3": 36,
@@ -51053,7 +51033,7 @@
           "x:3": 60,
           "y:3": 684
         },
-        "58:10": {
+        "59:10": {
           "questIDHigh:4": 3082326315203579725,
           "questIDLow:4": -7740764792266340039,
           "sizeX:3": 24,
@@ -51061,7 +51041,7 @@
           "x:3": 228,
           "y:3": 696
         },
-        "59:10": {
+        "60:10": {
           "questIDHigh:4": 3484693296683631117,
           "questIDLow:4": -8359853017917347591,
           "sizeX:3": 24,
@@ -51069,7 +51049,7 @@
           "x:3": -216,
           "y:3": 192
         },
-        "60:10": {
+        "61:10": {
           "questIDHigh:4": 3755626826330359926,
           "questIDLow:4": -7429487321805089850,
           "sizeX:3": 24,
@@ -51077,7 +51057,7 @@
           "x:3": 264,
           "y:3": 384
         },
-        "61:10": {
+        "62:10": {
           "questIDHigh:4": 4525230689685946928,
           "questIDLow:4": -8703660919680246660,
           "sizeX:3": 48,
@@ -51085,7 +51065,7 @@
           "x:3": 36,
           "y:3": 636
         },
-        "62:10": {
+        "63:10": {
           "questIDHigh:4": 4821959902488317033,
           "questIDLow:4": -9126468844681286619,
           "sizeX:3": 24,
@@ -51093,7 +51073,7 @@
           "x:3": 360,
           "y:3": 228
         },
-        "63:10": {
+        "64:10": {
           "questIDHigh:4": 6425989287058951801,
           "questIDLow:4": -7163810957099777374,
           "sizeX:3": 36,
@@ -51101,7 +51081,7 @@
           "x:3": -24,
           "y:3": 684
         },
-        "64:10": {
+        "65:10": {
           "questIDHigh:4": 6893274293400650058,
           "questIDLow:4": -7295631490063183097,
           "sizeX:3": 24,
@@ -51109,7 +51089,7 @@
           "x:3": -132,
           "y:3": 384
         },
-        "65:10": {
+        "66:10": {
           "questIDHigh:4": 7729884605621357672,
           "questIDLow:4": -8947567275185996784,
           "sizeX:3": 24,
@@ -51117,7 +51097,7 @@
           "x:3": 156,
           "y:3": 144
         },
-        "66:10": {
+        "67:10": {
           "questIDHigh:4": 8766072050074665268,
           "questIDLow:4": -5191243698307793385,
           "sizeX:3": 24,
@@ -51125,7 +51105,7 @@
           "x:3": -12,
           "y:3": 144
         },
-        "67:10": {
+        "68:10": {
           "questIDHigh:4": -8974339268513084308,
           "questIDLow:4": -8058516045398907419,
           "sizeX:3": 48,
@@ -51133,7 +51113,7 @@
           "x:3": -48,
           "y:3": 180
         },
-        "68:10": {
+        "69:10": {
           "questIDHigh:4": -8952569304068829753,
           "questIDLow:4": -7428806490616029659,
           "sizeX:3": 48,
@@ -51141,7 +51121,7 @@
           "x:3": 144,
           "y:3": 12
         },
-        "69:10": {
+        "70:10": {
           "questIDHigh:4": -8814956637734549230,
           "questIDLow:4": -8250445017214510036,
           "sizeX:3": 24,
@@ -51149,7 +51129,7 @@
           "x:3": -84,
           "y:3": 72
         },
-        "70:10": {
+        "71:10": {
           "questIDHigh:4": -8603960035130193895,
           "questIDLow:4": -6517325018119370583,
           "sizeX:3": 24,
@@ -51157,7 +51137,7 @@
           "x:3": -84,
           "y:3": 240
         },
-        "71:10": {
+        "72:10": {
           "questIDHigh:4": -8230734542605238237,
           "questIDLow:4": -9014159122841897299,
           "sizeX:3": 24,
@@ -51165,7 +51145,7 @@
           "x:3": 108,
           "y:3": 24
         },
-        "72:10": {
+        "73:10": {
           "questIDHigh:4": -7945120878890693769,
           "questIDLow:4": -8607204662424598155,
           "sizeX:3": 24,
@@ -51173,7 +51153,7 @@
           "x:3": 228,
           "y:3": 432
         },
-        "73:10": {
+        "74:10": {
           "questIDHigh:4": -7578527000934595783,
           "questIDLow:4": -5215178375060126913,
           "sizeX:3": 24,
@@ -51181,7 +51161,7 @@
           "x:3": 324,
           "y:3": 648
         },
-        "74:10": {
+        "75:10": {
           "questIDHigh:4": -7425924978364234072,
           "questIDLow:4": -4998034444795286910,
           "sizeX:3": 48,
@@ -51189,7 +51169,7 @@
           "x:3": -12,
           "y:3": 636
         },
-        "75:10": {
+        "76:10": {
           "questIDHigh:4": -6787868727436752418,
           "questIDLow:4": -6054408173306640877,
           "sizeX:3": 48,
@@ -51197,7 +51177,7 @@
           "x:3": 216,
           "y:3": 636
         },
-        "76:10": {
+        "77:10": {
           "questIDHigh:4": -6145456419115874513,
           "questIDLow:4": -7947392824633644104,
           "sizeX:3": 24,
@@ -51205,7 +51185,7 @@
           "x:3": 180,
           "y:3": 624
         },
-        "77:10": {
+        "78:10": {
           "questIDHigh:4": -6019261448661808939,
           "questIDLow:4": -8593779678639308033,
           "sizeX:3": 24,
@@ -51213,7 +51193,7 @@
           "x:3": -180,
           "y:3": 192
         },
-        "78:10": {
+        "79:10": {
           "questIDHigh:4": -5975608864161641094,
           "questIDLow:4": -6251019688253981844,
           "sizeX:3": 24,
@@ -51221,7 +51201,7 @@
           "x:3": -36,
           "y:3": -24
         },
-        "79:10": {
+        "80:10": {
           "questIDHigh:4": -5753423036809461689,
           "questIDLow:4": -8309903994045989533,
           "sizeX:3": 48,
@@ -51229,7 +51209,7 @@
           "x:3": -144,
           "y:3": 420
         },
-        "80:10": {
+        "81:10": {
           "questIDHigh:4": -5329374405835404860,
           "questIDLow:4": -5578858652425408103,
           "sizeX:3": 24,
@@ -51237,7 +51217,7 @@
           "x:3": 360,
           "y:3": 252
         },
-        "81:10": {
+        "82:10": {
           "questIDHigh:4": -4251094234834910081,
           "questIDLow:4": -8044941034984126769,
           "sizeX:3": 24,
@@ -51245,21 +51225,13 @@
           "x:3": 180,
           "y:3": 648
         },
-        "82:10": {
+        "83:10": {
           "questIDHigh:4": -3923607225156025021,
           "questIDLow:4": -5917780351011169770,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -96,
           "y:3": 636
-        },
-        "83:10": {
-          "questIDHigh:4": -752295393661006599,
-          "questIDLow:4": -8666504435509807597,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": 180,
-          "y:3": 732
         }
       }
     },
