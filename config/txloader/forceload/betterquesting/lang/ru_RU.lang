@@ -137,10 +137,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJA.desc=§3Машина непреры�
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJQ.name=Быстрорежущая сталь
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJQ.desc=§6High-speed steel§r is an advanced and specialized form of standard steel. It is alloyed from §6steel§r, §6tungsten§r and §6cobalt§r in a §3Crucible§r and must be cast from liquid metal. It used in many recipes, such as the §3Oil Derrick§r and the §3Industrial Mixer§r.
 
-# Quest: Conveyor Belt
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAKg.name=Конвейерная лента
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAKg.desc=§3Конвейеры§r, пожалуй, самый простой способ перемещения предметов. Есть несколько блоков, способных взаимодействовать как с механизмами, так и предметами, движущимися по конвейеру. %n%n§3Конвейер§r - блок, перевозящий предметы. Они способны подбирать брошенные или поданные с конвейерного извлекателя предметы. Если конвейерного вставщика на конце ленты нет, предмет упадёт на землю в конце пути.%n%n§3Конвейерный вставщик§r - блок, забирающий предметы с конвейерной ленты и помещающий их в хранилище. Конвейерные извлекатели (противоположность вставщика) выводят предметы из хранилища на ленту. %n%nВставщики имеют функцию удаления излишних предметов: если подключённое хранилище заполнено, излишки будут безвозвратно удалены. В случае если предмет не может быть помещен ни в хранилище, ни в буфер вставщика - он просто выбрасывается.%n%nИзвлекатели имеют функцию белых/черных списков (по стандарту стоит режим черного списка без ограничений - все предметы будут проходить без ограничений). Нажатие правой кнопкой мыши на иконку стрелки в интерфейсе извлекателя переключит режим списка. Чтобы добавить предмет в черный/белый список, перетащите его в синюю сетку инвентаря - сам предмет утрачен не будет.%n%n§3Конвейерный разделитель§r - блок, который равномерно разделяет предметы с одной ленты на 2 раздельные.%n%n§3Конвейерные сортировщики§r - блок, сортирующий предметы на конвейерной ленте, позволяя поставить белые/черные списки на каждую из сторон блока. В отличие от вставщиков и извлекателей, сортировщик не имеет буфера и моментально перемещает предметы в присоединенные конвейеры на основе их настроек фильтрации. Вследствие этого Сортировщик способен сортировать предметы с той же скоростью, с которой он их получает. %nСортировщик имеет 6 выходов и 5 слотов для белого/черного списка на каждый выход, позволяя пропускать несколько определённых типов предметов на один конвейер.
-
 # Quest: Settings Tool
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAMQ.name=Инструмент настройки
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAMQ.desc=§6Устройство настройки§r используется для копирования настроек машин. Он особенно полезен при создании крупных нефтеперерабатывающих заводов.
@@ -229,6 +225,10 @@ betterquesting.quest.HTaQEgJ8QCWYNMB8n7Awug.desc=§dКлючи для ящико
 betterquesting.quest.IAP1AGA2TV-TtMAv_QMrIA.name=Бобмазон
 betterquesting.quest.IAP1AGA2TV-TtMAv_QMrIA.desc=§6Бобмазон§r - это внутриигровой магазин, где игроки могут тратить §6Крышки от бутылок§r на покупку различных предметов, таких как строительные блоки, растения, ресурсы и многое другое. Для покупки предметов необходимо разблокировать достижения, перечисленные ниже как "Рейтинги".
 
+# Quest: Servo Set
+betterquesting.quest.IZ2vyQHDRneeRMbWhPrzXw.name=Servo Set
+betterquesting.quest.IZ2vyQHDRneeRMbWhPrzXw.desc=The §6Servo Set§r is an armor modification which grants various buffs, such as §eHaste§r, §eStrength§r, §eSpeed§r and §eJump Boost§r. It can be equiped both for the chestplate and leggings.%n%nIt can later be upgraded with §6Desh§r to further boost its buffs.
+
 # Quest: Charcoal Automation
 betterquesting.quest.ItX_qnZpQCuDSxSoHuKmsA.name=Автоматизация древесного угля
 betterquesting.quest.ItX_qnZpQCuDSxSoHuKmsA.desc=§6Wood§r obtained from a tree farm can be smelted or processed in a §3Combination Oven§r to produce §6Charcoal§r, which has many uses, such as fuel for §3Furnaces§r, §6Flux§r or §6Carbon§r in a Crucible for §6Steel§r production, or even §6Gunpowder§r for ammunition.
@@ -257,9 +257,9 @@ betterquesting.quest.OlMZZGTaSz6VhzaeJdR6QQ.desc=§3Станция зарядк�
 betterquesting.quest.RBJS7D2ATpq7GUingAewuQ.name=Упаковочная лента
 betterquesting.quest.RBJS7D2ATpq7GUingAewuQ.desc=§6Упаковочная лента§r позволяет ломать и перемещать ящики без того, чтобы все предметы выпадали на пол.
 
-# Quest: New Quest
-betterquesting.quest.Ss4wOkCPR6OsjwT8BQs1XA.name=New Quest
-betterquesting.quest.Ss4wOkCPR6OsjwT8BQs1XA.desc=No Description
+# Quest: Depth Ores
+betterquesting.quest.Ss4wOkCPR6OsjwT8BQs1XA.name=Depth Ores
+betterquesting.quest.Ss4wOkCPR6OsjwT8BQs1XA.desc=§6Depth Ores§r are large ore deposits found at bedrock level. There are many types of deposits, most of them giving ore crystals which can be smelted for 3 ingots per. §3Mining Charges§r of any kind are required to extract the resources from the depth rock.%n%nTwo important resources found in depth deposits are §6Borax§r, which can later be put in an §3Arc Furnace§r or §3Acidizer§r to yield §6Boron§r used in reactors, and §6Zirconium§r which is used in reactor fuel rods.
 
 # Quest: Cladding
 betterquesting.quest.UKkcpXk3SEWHXLIVC5VTDg.name=Обшивки
@@ -288,6 +288,10 @@ betterquesting.quest.Zd1HNIsxSRees_4of0ezDw.desc=Этот мод добавля�
 # Quest: Stirling Sawmill
 betterquesting.quest._qJt02i4ST2iccmkHudKCg.name=Лесопика на генераторе Стирлинга
 betterquesting.quest._qJt02i4ST2iccmkHudKCg.desc=§3Лесопилка на генераторе Стирлинга§r использует тепло для распиливания деревянных предметов, производя §6Опилки§r в процессе. Опилки можно использовать для получения §6Бумаги§r, и при дальнейшей обработке их можно превратить в §6Древесный уголь§r в §3Коксовой печи§r.
+
+# Quest: Rock Mill
+betterquesting.quest.a45q5izgTseDEdlAlTOVWg.name=Rock Mill
+betterquesting.quest.a45q5izgTseDEdlAlTOVWg.desc=The §3Rock Mill§r is an early game material grinding machine which grinds down stones into finer items while producing additional byproducts, such as §6Boron§r, §6Niobium§r and §6Titanium§r. It is also used to get big amounts of §bColloid§r, which can be used for making clay.%n%nThe machine consumes §e500HE/s§r.
 
 # Quest: Chainsaw
 betterquesting.quest.bKzHBx2ZTBWFD1BGHBfHWg.name=Бензопила
@@ -348,10 +352,6 @@ betterquesting.quest.npgCRfZdSFeBom6eL3qIMg.desc=Мод §dRandomThings§r до�
 # Quest: The Actual Beginning
 betterquesting.quest.npi9qvVzRleG6SsA5DQozg.name=Настоящее начало
 betterquesting.quest.npi9qvVzRleG6SsA5DQozg.desc=Теперь ты готов к полному погружению в эту сборку! Приятной игры!
-
-# Quest: Pneumatic Pipes
-betterquesting.quest.pTXtLJnPRu6lyiOqGVP7lw.name=Пневмотрубы
-betterquesting.quest.pTXtLJnPRu6lyiOqGVP7lw.desc=§3Пневмотрубы§r - это мгновенная форма транспортировки предметов, которая может покрывать большие расстояния. Трубы должны иметь сжатый газ внутри для работы.%n%n§6Отвёртка§r необходима для создания соединения, и клик правой кнопкой мыши по соединению с идентификатором жидкости установит газообразную жидкость, которую она будет использовать.
 
 # Quest: Graphite
 betterquesting.quest.pbwyXfgDRaCxA1R8YmlTIQ.name=Графит
@@ -530,10 +530,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAYA.desc=§6Cканер§r - это по
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAaw.name=Компактная пусковая площадка
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAaw.desc=The §3Launch Pad§r is the main launch table for most missiles. This is the missile launch table, not the §3Rocket Launch Pad§r used for space rockets. Although it is the earliest available, missiles must first be erected before launch, resulting in a small delay.%n%nThe §3Silo Launch Pad§r is a miniaturized version of the launch pad. It can launch every generic missile with a delay of only 5 seconds. A rusted variant can be found in the naturally-occurring silo structure, holding the damaged Doomsday Missile.
 
-# Quest: Transport Drones
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdg.name=Транспортные дроны
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdg.desc=§3Транспортные дроны§r - это летающие машины, которые будут перемещать предметы и жидкости между различными контейнерами. Дроны не требуют энергии и могут перемещаться как вверх, так и вниз. §3Путевые точки§r могут использоваться для создания лучшего маршрута для движения транспортных дронов.
-
 # Quest: Electrolysis Machine
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAzA.name=Электролизёр
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAzA.desc=§3Электролизёр§r позволяет разделять элементы из жидкостей и проводить продвинутую переработку руд, что делает её важной машиной в процессе переработки руды. Работа машины потребляет §e200kHE/s§r.%n%nЭлектролизная машина имеет 2 функции: одну для разделения жидкостей и одну для переработки руды.%n%nВ первом режиме машина принимает совместимую жидкость и разделяет её на 2 другие жидкости.%n%nВо втором режиме ей потребуется §bАзотная кислота§r, и она будет обрабатывать любой вид кристалла, полученного из руды, обеспечивая максимальный выход руды. Есть 2 выхода: для расплавленного основного продукта - выход, отмеченный зеленым, а для вторичного - отмеченный красным, плюс побочный продукт, сохраняемый в форме предмета. Выходы следуют той же механике, что и §3Плавильня§r.%n%n§2Рассмотрите возможность установки улучшения энергосбережения выше уровня 2, так как это значительно снизит энергопотребление с минимальным штрафом к скорости.
@@ -558,9 +554,17 @@ betterquesting.quest.Q3y_TPhGTWe6JvLSRDrfBw.desc=Положив песок в §
 betterquesting.quest.UWNifpoeQfypMwfGniM40w.name=Силовой бур
 betterquesting.quest.UWNifpoeQfypMwfGniM40w.desc=§6Силовой бур§r - это модульное устройство для добычи, которое может сделать сбор ресурсов и раскопки намного быстрее, чем обычные кирки. %n%nРазличные модификации могут быть установлены на §3Столе модификации оружия§r, такие как новые буровые головки для большего радиуса добычи или даже новые двигатели, позволяющие ей работать от электричества.
 
+# Quest: Ilmenite
+betterquesting.quest.VxU7Oz3BRwapgbxJ9UnpaQ.name=Ilmenite
+betterquesting.quest.VxU7Oz3BRwapgbxJ9UnpaQ.desc=§6Ilmenite§r is a mineral that serves as a natural source of titanium. It is produced by centrifuging §6Titanium Ore§r. By itself, it can be placed in an §3Arc Furnace§r to produce 3 §6Titanium Ingots§r, or it can be further processed in a §3Chemical Plant§r using §bTitanium Tetrachloride§r to increase its yield. The most efficient recipe is in the §3Pyrolysis Oven§r, where on top of giving the most titanium per Ilmenite, it also recycles back all the §bChlorine§r.%n%nQuest requirements: Obtain §6Ilmenite§r by centrifuging §6Titanium Ore§r. Build an §3Arc Furnace§r, §3Chemical Plant§r, or §3Pyrolysis Oven§r. Produce at least one §6Titanium Ingot§r from §6Ilmenite§r. For maximum efficiency, use the §3Pyrolysis Oven§r and recover §bChlorine§r.%n%n[F1] For more information.
+
 # Quest: Redstone Fluid Overflow
 betterquesting.quest.ZTrtIRiyRO2J5jHQ4sroaQ.name=Управление потоком с помощью редстоуна
 betterquesting.quest.ZTrtIRiyRO2J5jHQ4sroaQ.desc=§6§6§3Редстоун-по-радио§r в сочетании с §3Редстоуновым жидкостным клапаном§r может использоваться для обнаружения момента, когда резервуар начинает заполняться, и высвобождения содержимого. Это полезно для создания буферов без потери всех жидкостей.%n%n§2Вот пример резервуара, который будет выводить жидкость только после полного заполнения:§r%n%nВо-первых, поместите §6Передатчик РПР§r на один порт резервуара, задайте ID и включите Polling.%n%n[img height=1000]betterquesting:textures/QB_Fluid1.png[/img]%n%nПосле этого поместите §6Логический приемник РПР§r рядом с жидкостным клапаном и введите желаемые настройки. Убедитесь, что ваш сигнал >= желаемого буфера. Один уровень редстоуна равен 16k mb.%n%n[img height=1000]betterquesting:textures/QB_Fluid2.png[/img]%n%n§3Помпа контроля потока§r также может использоваться для ограничения пропускной способности жидкостей и добавления приоритетов.
+
+# Quest: Electric Press
+betterquesting.quest.jNW_k5hLQY-vdrAMMgVd5w.name=Electric Press
+betterquesting.quest.jNW_k5hLQY-vdrAMMgVd5w.desc=The §3Electric Press§r is a version of the §3Burner Press§r which runs on electricity. It runs on the max speed, so there is no need to wait for it to heat up and go faster. It also has upgrade slots inside it.
 
 # Quest: Jetpack
 betterquesting.quest.l6zSmdfhSw6aTqiJsNDiHg.name=Реактивный ранец
@@ -623,6 +627,10 @@ betterquesting.quest.7xvtGouAQxKJ5rWXHykczg.desc=The §3Wideband Radio Emission 
 betterquesting.quest.8DXv-b9sRxalmY8yovSQuw.name=Термоядерный реактор
 betterquesting.quest.8DXv-b9sRxalmY8yovSQuw.desc=§3Термоядерный Реактор§r — большой, дорогой и продвинутый тип реактора, который работает за счёт синтеза различных видов плазмы для генерации тепла.%n%nОсновная часть термоядерного реактора, §3"Тор"§r, имеет четыре соединительных порта для внешних компонентов. Для работы требуется электричество и охлаждение §bПерфторметилом§r.%n%n§3Клистрон§r — основной источник энергии термоядерного реактора, который использует электричество и сжатый воздух для генерации входной энергии, §eKyU§r, для подключённого тора. Он будет снижать мощность, если запас электричества или сжатого воздуха упадёт ниже §e50%%§r, а если он упадёт ниже требуемого тором уровня, плазма погаснет.%n%nРазные виды плазмы также производят разные полезные побочные продукты и различные уровни нейтронного потока для наработки больших количеств материалов, таких как §6Литий§r в §6Тритий§r.%n%nДля сварки катушек потребуется §6Паяльная Лампа§r или §6Ацетиленовая Сварочная Горелка§r.%n%n§2Для получения информации о дополнительных компонентах и методах выработки энергии, пожалуйста, ознакомьтесь с двумя квестами ниже.§r
 
+# Quest: Supercomputer
+betterquesting.quest.8H2PVtL2St-WzTCmhZfCNg.name=Supercomputer
+betterquesting.quest.8H2PVtL2St-WzTCmhZfCNg.desc=The §3Supercomputer§r is a late-game machine essential for processing both §6Flash Drives§r and §6Disk Drives§r. It is made in an §3Assembly Machine§r. The machine measures 12x5x9 blocks and requires energy to operate, with consumption depending on the operation. It does not require heat.%n%nFlash Drives are inserted into the §3Supercomputer§r and can be made into §eFlight Simulation Data§r, used in making the §6Soyuz§r and §6Orbital Module§r, or §eParticle Simulation Data§r, used in the §3Fusion Reactor§r.%n%nMost of the Supercomputer's operations work like those of the §3Precision Assembly Machine§r: they have a chance of returning a broken version of the input, which can be recycled for a portion of its materials. Operations involving data drives require cooling. Compatible coolants, from slowest to fastest, are §bWater§r, §bCold Perfluoromethyl§r, and §bHelium-4§r. Faster fluids speed up the process substantially but also increase the chance of a broken output. Overall, this makes for more successful outputs on average. The Supercomputer can also manufacture cheaper §6Blueprint Booklets§r and §6Klaus§r.%n%n§2Processing drives is extremely time consuming. The fastest operations take 60 seconds, while the longest can take up to 1 hour of real time. Plan your resource and energy usage accordingly.%n%nQuest requirements: Build a §3Supercomputer§r, supply it with §bWater§r, §bCold Perfluoromethyl§r, or §bHelium-4§r as coolant, and process at least one §6Flash Drive§r into §eFlight Simulation Data§r or §eParticle Simulation Data§r.%n%n[F1] For more information.
+
 # Quest: Large Factory Multiblocks
 betterquesting.quest.8XHLo-wQRN28gu4AwCtHVQ.name=Большие мультиблочные заводы
 betterquesting.quest.8XHLo-wQRN28gu4AwCtHVQ.desc=§3Химический Завод§r - увеличенная версия §3Химической Установки§r, способная выполнять 4 рецепта параллельно. Он работает в два раза быстрее химической установки, но потребляет в два раза больше энергии. Кроме того, он потребляет §bВоду§r в качестве охладителя и производит §bПар Низкого Давления§r, поэтому рекомендуется замкнутый цикл воды.%n%n§3Сборочный Завод§r - увеличенная версия §3Сборочной Машины§r, способная выполнять 4 рецепта параллельно. Он функционирует так же, как химический завод.
@@ -634,6 +642,10 @@ betterquesting.quest.8sIzBzykSPqskvhCp-Tsmw.desc=§6Кирка из Звёздн
 # Quest: Cadmium
 betterquesting.quest.9BjXTD5CSTOQ-_OroVdJmg.name=Кадмий
 betterquesting.quest.9BjXTD5CSTOQ-_OroVdJmg.desc=§6Cadmium§r is a material needed to make §6Cadmium Steel§r, which is a substitute of §6Technetium Steel§r.%n%nCadmium can be obtained by smelting cadmium powder, which can be obtained acidizing 10 §6Mustard Willow leaves§r with 250mB of §bHigh-Performance Solvent§r in the §3Ore Acidizer§r.%n%nThe mustard willow is a plant that can be found near §eBedrock Oil Deposits§r. When it's fully matured, the main item can be obtained, that being the mustard willow leaf.
+
+# Quest: Lambda-98
+betterquesting.quest.9PngQWDKQNCWI50sDbf3Eg.name=Lambda-98
+betterquesting.quest.9PngQWDKQNCWI50sDbf3Eg.desc=The §3Lambda Launch Pad§r is a mechanism for launching the §6Lambda-98 Rocket§r, which can be used to launch satellites for cheaper and faster than the Soyuz. This launch pad works much faster than the Soyuz facility: loading the rocket and fueling takes noticeably less time, and instead of a 30 second wait after pressing the launch button, Lambda offers only 10 seconds. It also supports automatic launch after all preparation procedures are complete.%n%nThe launch pad constantly consumes §e200kHE/s§r. Each launch consumes 16000mB of §bLeaded Gasoline§r and §bHydrogen Peroxide§r. If the pad is in auto-launch mode, a countdown begins after all required slots and buffers are filled. In manual mode, the pad waits for your signal.%n%nQuest requirements: Build a §3Lambda Launch Pad§r, supply it with §e200kHE/s§r and stock §bLeaded Gasoline§r and §bHydrogen Peroxide§r. Launch a §6Lambda-98 Rocket§r. Optionally, enable auto-launch mode for automatic countdown and launch.%n%n[F1] For more information.
 
 # Quest: High-Power Steam Condenser
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0Q.name=Мощный конденсатор пара
@@ -743,9 +755,9 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAhw.desc=§6Висмут§r - это в�
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjg.name=Сваренная пластина из технециевой/кадмиевой стали
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjg.desc=§6Сварная пластина из технециевой/кадмиевой стали§r - это сварной вариант литой пластины из технециевой/кадмиевой стали, используемый в некоторых рецептах, требующих прочных материалов. %n%n§2Убедитесь, что у вас есть хорошая инфраструктура генерации и хранения энергии, так как каждая пластина стоит 1.2 миллиарда HE.
 
-# Quest: Big-Ass Tank
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjw.name=Цистернище
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjw.desc=§3Big-Ass Tank§r является крупнейшим контейнером для хранения жидкостей, способным хранить 2048000mB жидкости, а также быть в состоянии держать сильно агрессивные жидкости. а также выдерживать воздействие высокоагрессивных жидкостей. Его необходимо устанавливать на твердую поверхность, иначе сломается.
+# Quest: Big-Ass Tank (9000)
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjw.name=Big-Ass Tank (9000)
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjw.desc=The §3Big-Ass Tank 9000§r is the largest fluid storage container, capable of storing 16000000mB of fluids, aswell as being able to hold strongly corrosive fluids. It has to be placed on the solid surface, otherwise it is going to break.%n%nThere is also a cheaper version available - §3Big-Ass Tank§r (no 9000 suffix). It is only capable of storing 2048000mB of fluids, but it is twice as cheap and does not require a solid surface,
 
 # Quest: Heavy Magnetic Storage Tank
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkA.name=Тяжелый магнитный контейнер для антиматерии
@@ -798,6 +810,10 @@ betterquesting.quest.CYbDJkRORT-LPEInaoL3BQ.desc=Вместо использов
 # Quest: Uranium-238
 betterquesting.quest.CYtQLn_VSx2QTnLEwpMGOw.name=Уран-238
 betterquesting.quest.CYtQLn_VSx2QTnLEwpMGOw.desc=§6Уран-238§r - это наиболее распространённый изотоп урана в игре. %n%nЭтот материал имеет множество применений, некоторые из которых: §6Ферроуран§r, МОКС топливо, боеприпасы из обеднённого урана, поглощающие пеллеты для §3Ватцз§r, а также может быть превращён в §6Шрабидий§r позже в §3Камере облучения§r.
+
+# Quest: Space Laboratory
+betterquesting.quest.D9pDxj8XRimvGcS1sT0wHQ.name=Space Laboratory
+betterquesting.quest.D9pDxj8XRimvGcS1sT0wHQ.desc=Attaching a §3Drive Enclosure§r to one of the ports of a §3Satellite Ground Station§r which is linked to a satellite will allow it to receive data. §2A linked satellite ground station, when looking at it, will reveal information about the satellite.§r The §6Space Laboratory§r is a modular satellite which produces data for drives. §2All of the Space Laboratory related satellites must have the same ID.§r%n%nQuest requirements: Attach a §3Drive Enclosure§r to a §3Satellite Ground Station§r that is linked to a §6Space Laboratory§r satellite. Ensure all Space Laboratory related satellites share the same ID. Receive data from the satellite.%n%n[F1] For more information.
 
 # Quest: Narrowband Emission Scanning Satellite
 betterquesting.quest.DMCygjIOSOav8ZBlUlqEvQ.name=Спутник-сканер узкополосного излучения
@@ -853,7 +869,7 @@ betterquesting.quest.g3S9-75wTGyQKmZaQTZl5Q.desc=§3Пьюрекс§r - это �
 
 # Quest: Chicago Pile
 betterquesting.quest.g8IVppPpTceY55PbNbceJQ.name=Чикагская Поленница
-betterquesting.quest.g8IVppPpTceY55PbNbceJQ.desc=§3Чикагская полленица§r - это модульный реактор размножения без интерфейса, созданный для трансмутации §6Природного урана§r в изотопы плутония через нейтронные бомбардировки. Он должен управляться вручную или с помощью §dРедстоуна-по-радио§r.%n%nПостройте куб §6Графитовых блоков§r, не менее 5*5*5 и не более 15*15*15. После сборки, нажмите на любой не крайний блок на одной из его боковых граней с помощью §6Ручной дрели§r чтобы установить ядро и установить ориентацию канала реактора. Каналы просверлены прямыми линиями через полленицу и не могут пересекаться. Топливные каналы находятся на одной стороне с ядром, и используют §3Загрузчик топлива§r для ввода топлива; обеднённые стержни выбрасываются с противоположной стороны. Каналы вентиляции ставятся перпендикулярно ядру и требуют §3Вентили§r с §bсжатым воздухом§r в §e1 PU§r - каждый Вентиль охлаждает только каналы топлива в пределах одного блока выше или ниже него. Вертикальные каналы управления являются необязательными и уменьшают скорость реакции. %n%nКаждая реакция требует источника нейтрона. §6Источник нейтронов Ra226Be§r является стартовым; более мощный §6Po210Be источник нейтронов может заменить его позже. §6Стержни природного урана§r обедняются в §6Стержни плутония-239§r, которые можно переделать дальше в §6Плутоний реакторного качества§r. Если оставить стержеть после его обеднения, начнут создаваться §6Стержни ядерных отходов§r, которые генерируют экстремальные температуры. Чтобы безопасно выталкивать стержни без свежего топлива, используйте §6Циркониевые стержни§r - они нереактивны и прозрачны для нейтронов.%n%n§2Проверьте работу охлаждения перед загрузкой любого топлива. Полленица расплавляется при температуре 800°C, вызывает взрыв и пожар.%n%nЗадание запрашивает §3Чикагскую полленицу§r не менее 5*5*5 с установленным ядром, §3Загрузчик топлива§r и §3Вентиль§r, а также §6Ra226Be Источник нейтронов§r вместе с по крайней мере одним §6Стержнем природного урана§r.
+betterquesting.quest.g8IVppPpTceY55PbNbceJQ.desc=The §3Chicago Pile§r is a low-tech, modular breeding reactor with no GUI, built to transmute §6Natural Uranium§r into plutonium isotopes such as §6Plutonium-239§r and §6Reactor-Grade Plutonium§r through neutron bombardment. It must be operated manually or via §dRedstone-over-Radio§r; §3Chicago Pile Fuel Loaders§r, §3Chicago Pile Vents§r, and §3Chicago Pile Control Rods§r can be automated with Redstone-over-Radio.%n%nBuild a filled rectangular prism of §6Chicago Pile Graphite Bricks§r, at minimum 5x5x5 and at most 15x15x15. It does not need to be a perfect cube. Shapes like 5x7x9 are valid as long as all dimensions stay within limits and the shape is filled. Once assembled, right-click with the §6Hand Drill§r on a non-edge block on one lateral face to establish the core and fix the reactor's channel orientation. Using the hand drill on other sides creates holes needed for the reactor's mechanisms. Channels are straight lines drilled through the pile and may not intersect.%n%nThe front side of the reactor houses the fuel inputs, and the opposite side houses the fuel outputs. Fuel channels share the core's face orientation and accept rods via a §3Chicago Pile Fuel Loader§r on the input port; spent rods are ejected from the opposite side. Ventilation channels run perpendicular to the core and require a §3Chicago Pile Vent§r supplied with §bCompressed Air§r at §e1 PU§r. Each vent cools only the fuel channels within one block above or below it. Vertical control rod channels on top are optional and reduce reactivity between channels; they are useful for more precise fuel breeding. None of these mechanisms can intersect with each other.%n%nEvery reaction requires a neutron source. The §6Ra226Be Neutron Source§r is the starter option; the more powerful §6Po210Be Neutron Source§r can replace it later. §6Natural Uranium Rods§r breed into §6Plutonium-239 Rods§r, which can be bred further into §6Reactor-Grade Plutonium Rods§r. Leaving fuel beyond that point produces §6Nuclear Waste Rods§r, which generate extreme heat and risk meltdown. To safely push out spent rods without fresh fuel, use §6Zirconium Rods§r. They are inert and transparent to neutrons.%n%n§2Verify cooling is working before loading any fuel. The pile melts down at 800°C, causing an explosion and widespread fire.%n%nQuest requirements: Build a §3Chicago Pile§r of at least 5x5x5 with a core established, attach a §3Chicago Pile Fuel Loader§r and a §3Chicago Pile Vent§r, and load a §6Ra226Be Neutron Source§r alongside at least one §6Natural Uranium Rod§r.%n%n[F1] For more information.
 
 # Quest: Spent Fuel Pool Drum
 betterquesting.quest.har7pEFcSRKNgIf4NgmcLA.name=Бочка с отработанным топливом
@@ -867,13 +883,17 @@ betterquesting.quest.iJiX7wxoSBmljc9tITqIqQ.desc=§6Technetium-99§r is a common
 betterquesting.quest.kb1Cp9wuS3eIjRD2YxiJdQ.name=Cargo Landing Pad§r and Asteroid Mining Ship
 betterquesting.quest.kb1Cp9wuS3eIjRD2YxiJdQ.desc=The §3Cargo Landing Pad§r receives resource shipments from §3Asteroid Mining Ships§r.%n%nAssign a §bSatellite ID§r to an Asteroid Mining Ship and launch it using a fueled §3Soyuz§r. Insert a §bSatellite ID Chip§r with the same ID into the landing pad. The miner operates at §6Dres§r and prepares a shipment every §b15 minutes of running game time§r, while the pad can receive deliveries on any planet.%n%nKeep the pad’s chunk loaded and the space above it unobstructed. If multiple pads share the same ID, the §efirst to request a ready shipment§r receives it; no planet has priority.
 
+# Quest: Flight Data
+betterquesting.quest.ltOp2GyWQzm3n_bmKj4DPw.name=Flight Data
+betterquesting.quest.ltOp2GyWQzm3n_bmKj4DPw.desc=One Space Laboratory will produce §eFlight Data§r for §6Disk Drives§r every 15 minutes.%n%nFlight data needs to be processed in the §3Supercomputer§r.
+
 # Quest: Helium-4
 betterquesting.quest.mPHQk4_mRqi6o2onNs9qgg.name=Гелий-4
 betterquesting.quest.mPHQk4_mRqi6o2onNs9qgg.desc=§bГелий-4§r является продуктом термоядерного синтеза и в основном используется в создании §6Устройства квантовой обработки§r.
 
 # Quest: Houston, We Have a Signal
 betterquesting.quest.ocylWycmSd6r-mvYENYGEw.name=Хьюстон, у нас сигнал
-betterquesting.quest.ocylWycmSd6r-mvYENYGEw.desc=Satellites require dedicated infrastructure to launch, identify, and communicate with.%n%nBefore anything leaves the ground, every satellite must be assigned a unique frequency using the §3Satellite ID Manager§r. Place the satellite in its right slot to generate a random frequency, then use the left and center slots to copy that frequency onto §6Satellite ID Chips§r or other linked devices such as designators. ID Chips must be prepared in advance. The assigned frequency appears in the item's tooltip.%n%nSatellites can be launching using a custom rocket or Soyuz-FG.%n%nOnce a satellite is in orbit, a §3Satellite Ground Station§r handles communication. It does not process §dRedstone-over-Radio§r signals directly - it requires an external RoR receiver or transmitter. It connects to one satellite at a time, switched via the appropriate §6Satellite ID Chip§r or an RoR command. RX reads data transmitted down from the satellite; TX sends commands up to it.%n%n§2The Ground Station's capabilities expand significantly when paired with an §3AUTOCAL§r§2, enabling automated satellite tracking, data processing, and chained multi-satellite logic.
+betterquesting.quest.ocylWycmSd6r-mvYENYGEw.desc=Satellites require dedicated infrastructure to launch, identify, and communicate with. Before anything leaves the ground, every satellite must be assigned a unique frequency using the §3Satellite ID Manager§r. Place the satellite in its right slot to generate a random frequency, then use the left and center slots to copy that frequency onto §6Satellite ID Chips§r or other linked devices such as designators. ID Chips must be prepared in advance. The assigned frequency appears in the item's tooltip. It is highly recommended that the ID of the satellite is copied over into a separate ID chip so as not to lose it. To copy an ID, simply place the ID chip in the ID slot and the desired satellite next to it.%n%nSatellites can be launched using a custom rocket or Soyuz-FG. Once a satellite is in orbit, a §3Satellite Ground Station§r handles communication. It does not process §dRedstone-over-Radio§r signals directly. It requires an external RoR receiver or transmitter. It connects to one satellite at a time, switched via the appropriate §6Satellite ID Chip§r or an RoR command. RX reads data transmitted down from the satellite; TX sends commands up to it. The §3Satellite Ground Station§r is used to send and receive Redstone-Over Radio signals from satellites in orbit. §2The Ground Station's capabilities expand significantly when paired with an §3AUTOCAL§r§2, enabling automated satellite tracking, data processing, and chained multi-satellite logic.§r%n%nQuest requirements: Build a §3Satellite ID Manager§r and a §3Satellite Ground Station§r. Assign a unique frequency to a §6Satellite§r using the ID Manager, copy that frequency onto a §6Satellite ID Chip§r, and launch the satellite into orbit using a custom rocket or Soyuz-FG. Then use the Ground Station with an external RoR receiver or transmitter to communicate with the satellite.%n%n[F1] For more information.
 
 # Quest: Xenium Resonator Satellite
 betterquesting.quest.qrbz8mP0Ry-RtTBVRTkruA.name=Спутник с Зен-Резонатором
@@ -1044,10 +1064,6 @@ betterquesting.quest.aZBaZGfVRHeXWmLqDHjuUw.desc=§3Atmospheric Compressor§r с
 betterquesting.quest.dVwxKlQ5SzaxZjGNcLFMEw.name=Солнечная панель
 betterquesting.quest.dVwxKlQ5SzaxZjGNcLFMEw.desc=§3Солнечная панель§r превращает солнечный свет в §eэлектричество§r. §2(Невероятно)§r%n%nОна может работать на поверхности планеты или в космосе. Устройство использует общий уровень освещенности, поэтому пространственная ориентация панели не влияет на выработку энергии. Выходной разъем расположен на задней стороне.%n%n§2Расчеты выработки энергии для планет и их орбит:%n%nКербин - §e2kHE/s§2%nЛуна - §e2kHE/s§2%nМинмус - §e2kHE/s§2%nДюна - §e880HE/s§2%nИке - §e880HE/s§2%nМохо - §e13. He/s§2%nДрес - §e240HE/s§2%nЕва - §e3.84kHE/s§2%nЛейт - §e80HE/s§r
 
-# Quest: Space Map
-betterquesting.quest.eItNlZ6bRS2kA-0Ymm_pdA.name=Крсмическая карта
-betterquesting.quest.eItNlZ6bRS2kA-0Ymm_pdA.desc=Вот моя (Bufka2011) собственная карта нашей Кербольной системы!%n[img height=300]resources:SpaceMap_by_Bufka2011.png[/img]
-
 # Quest: Magma Drill
 betterquesting.quest.gaeSExcOTaawSPifbbIVtg.name=Магмовый бур
 betterquesting.quest.gaeSExcOTaawSPifbbIVtg.desc=В отличие от своего аналога из оригинального мода, Магматический Бур не бурит буквально вглубь земли. Он предназначен для добычи магмы из Мохо, которой, как известно, на этой планете в избытке - как на поверхности, так и в пещерах. Чтобы начать работу, механизм необходимо установить непосредственно на поверхности лавового озера так, чтобы лава касалась буровой головки и достигала краёв углубления. Подайте питание к буру, и он будет работать автоматически.%n%nМагма выводится через литейные каналы в формы. Остывшая магма образует Вулканит, который затем следует переработать для получения полезных ресурсов.%n%nПомимо вулканита, устройство извлекает обычный шлак (в значительно большем количестве, чем Вулканит).
@@ -1217,6 +1233,10 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABMA.desc=The §6Schrabidium Hammer§r is
 betterquesting.quest.DOSq2NdFQ3Ojsk2F4OtgMQ.name=Магнитогидродинамические турбины
 betterquesting.quest.DOSq2NdFQ3Ojsk2F4OtgMQ.desc=§3Magnetohydrodynamic Turbines§r are advanced components of the fusion reactor that make electricity out of the plasma energy directly without needing additional turbines. While more expensive and requiring §bPerfluoromethyl§r cooling, they have a §e+35%%§r convertion bonus from §eTU§r to §eHE§r. In addition, the MHD turbine requires a minimum input of%n§e5MTU/t§r of plasma energy to operate normally, otherwise efficiency will be halved.
 
+# Quest: Crystal Circuit Board
+betterquesting.quest.EmH6dgR3QM-VsLSlbNmeyQ.name=Crystal Circuit Board
+betterquesting.quest.EmH6dgR3QM-VsLSlbNmeyQ.desc=The §6Crystal Circuit Board§r is an end game circuit used for making §6Gerald§r and the §3DFC§r. The finished item will be received via the §3Cargo Landing Pad§r.
+
 # Quest: Done
 betterquesting.quest.FmWwl9ntTjeMSWhXcVcTdg.name=§cВсе
 betterquesting.quest.FmWwl9ntTjeMSWhXcVcTdg.desc=Фух, ну и путь это был... Надеюсь, впереди нас ждет еще больше интересного благодаря обновлениям модпака!%n%nА теперь [warn]СРОЧНО ИДИ ПОТРОГАЙ ТРАВУ[/warn].%n%n§6§lОЦЕНИ НАШ МОДПАК: §r[url]https://moddex.gg/modpack/ntnewhorizons[/url]
@@ -1225,9 +1245,17 @@ betterquesting.quest.FmWwl9ntTjeMSWhXcVcTdg.desc=Фух, ну и путь это
 betterquesting.quest.J9dwgncgSUydHFPUoI85oQ.name=Секретный каталог
 betterquesting.quest.J9dwgncgSUydHFPUoI85oQ.desc=Для открытия скрытого каталога, вы должны сделать несколько вещей:%n%nПолучить регулярную табличку%nОтветьте на четыре вопроса и разместите ответы на указанной табличке в том же порядке "строчными буквами".%nНажмите правой кнопкой мыши на табличку с надписью.%nВстретятся ответы, превышающие допустимое количество символов, просто введите столько, сколько возможно.%n%nПодсказки отсутствуют, так что даже не попробуйте.%nЧтобы что-либо заказать, вам понадобится достижение "Bobmazon" 6-го уровня.%n%n%n%n1%nКогда мы кричим в даль, кто откликнется?%n%n2%nНевидимая сила порой едва уловимая, а порой явная, застилает нам глаза, устремленные в небо.%n%n3%nФлуоресцентный осциллограф выдает нам код из случайных чисел. У кого находятся ответы?%n%n4%nВечно вращаясь, ни на миг не замирая, зрелище для терпеливого наблюдателя, пропитанное запахом табака и исполняющее свой нескончаемый танец.
 
+# Quest: 0G Assembler
+betterquesting.quest.JPSr8DfOQY2PeUK1AsgLvA.name=0G Assembler
+betterquesting.quest.JPSr8DfOQY2PeUK1AsgLvA.desc=§60G Assemblers§r allow for the production of certain items in orbit, mainly the §6Crystal Circuite Board§r. Launching more assemblers will speed up the recipe. The input items must be launched from a rocket.
+
+# Quest: Sensor Relay
+betterquesting.quest.Z7AE9BtERMKxVRrSH2Zo3Q.name=Sensor Relay
+betterquesting.quest.Z7AE9BtERMKxVRrSH2Zo3Q.desc=The §6Sensor Relay Satellite§r is used to produce §eOrbital Data§r. A single relay takes §e100 hours§r to produce one drive worth of orbital data. It can be sped up by installing more relays. Each additional Relay reduces the time linearly, meaning that a satellite with 100 relays will produce orbital data in just §eone hour§r.
+
 # Quest: Particle Accelerator
 betterquesting.quest._nmJ1zrSQp22psctX6Uq2A.name=Ускоритель частиц
-betterquesting.quest._nmJ1zrSQp22psctX6Uq2A.desc=The §3Particle Accelerator§r is a highly modular machine that uses high strength superconducting magnets to accelerate particles to relativistic speeds in order to collide them together.%n%nDue to the complex and expansive nature of the particle accelerator, it is highly recommend that the wiki is checked out as it provides more information.%n%n[url]https://nucleartech.wiki/wiki/Particle_Accelerator[/url]%n%n§2This quest demands the most essential parts of the particle accelerator, and does not represent the amount needed for it to function. The in-game QMAW manual's PA Guide chapter gives a tested starter ring (source, beamlines, dipoles with gold coils, RFC, quadrupole and detector, plus power and cold-PFM cooling) - follow it before scaling up.
+betterquesting.quest._nmJ1zrSQp22psctX6Uq2A.desc=The §3Particle Accelerator§r is a highly modular machine that uses high strength superconducting magnets to accelerate particles to relativistic speeds in order to collide them together. For recipes that demand high momentum, additional loops are needed. This quest serves as a guide on how to change the direction of particles.%n%nBelow is a miniature particle accelerator built for showcasing purposes. It is not connected to power or coolant and does not have any coils. It does not have RF cavities and uses two particle detectors as outputs. A compass is also provided in the image.%n%n[img height=1000]betterquesting:textures/QB_PA1.png[/img]%n%nAfter constructing your Particle Accelerator, assuming the beamlines face the right directions, head over to the magnet that bridges the first and second loops.%n%n[img height=1000]betterquesting:textures/QB_PA2.png[/img]%n%nOpen its GUI and configure the dipole magnet. The first line is for particles that have not reached the desired momentum. The second line is for particles that have reached the desired momentum. The third line is for particles that have reached the desired momentum AND are powered by redstone. The §cRed Line§r shows the direction the particle will travel towards and the §9Blue Line§r shows where the player is facing.%n%n[img height=1000]betterquesting:textures/QB_PA3.png[/img]%n%nMake sure that for this specific dipole magnet the third line has the particle orientation facing towards the second loop, NORTH in this case.%n%nAfter this, the redstone logic must be set in order to be able to turn the particle orientation when powered. Simply provide power underneath the dipole magnet as such. A redstone signal should only exist when a particle needs momentum greater than what the first tier of coil allows.%n%n[img height=1000]betterquesting:textures/QB_PA4.png[/img]%n%nHead over, WEST in this case, to the dipole magnet which is after the transitionary dipole and right before the detector, and which connects to the rest of the loop.%n%n[img height=1000]betterquesting:textures/QB_PA5.png[/img]%n%nOpen its GUI and configure it. Make sure the second line is facing towards the particle detector and the first line towards the other dipole magnets.%n%n[img height=1000]betterquesting:textures/QB_PA6.png[/img]%n%nDue to the complex and expansive nature of the particle accelerator, it is highly recommended that the wiki is checked out as it provides more information.%n%n[url]https://nucleartech.wiki/wiki/Particle_Accelerator[/url]%n%n§2This quest demands the most essential parts of the particle accelerator, and does not represent the amount needed for it to function.§r%n%nQuest requirements: Build a §3Particle Accelerator§r with at least two loops, two dipole magnets, and two particle detectors. Configure the first dipole magnet so its third line faces toward the second loop when powered by redstone. Configure the second dipole magnet so its second line faces the particle detector and its first line faces the other dipole magnets. Provide redstone power underneath the first dipole magnet. Visit the Particle Physics quest chapter.%n%n[F1] For more information.
 
 # Quest: HOW THE FUCK?!
 betterquesting.quest.fbvQbC3JTKOtI2b8e3cB0A.name=§c§l§4§lТВОЮ МАТЬ, КАК?!
@@ -1236,6 +1264,10 @@ betterquesting.quest.fbvQbC3JTKOtI2b8e3cB0A.desc=Лови, твоя наград
 # Quest: ICF Laser Turbocharger
 betterquesting.quest.hmwBFeuMQXiUrjE-WdD6-g.name=Турбоусилитель лазера ICF
 betterquesting.quest.hmwBFeuMQXiUrjE-WdD6-g.desc=§3ICF Laser Turbocharger§r можно разместить рядом с §3ICF Laser Capacitors§r что значительно увеличить мощность лазера и вы сможете использовать в §3ICF§r более качественное топливо.
+
+# Quest: Orbital Data
+betterquesting.quest.iBuyLOsSRcGJ6QBSIPZgMA.name=Orbital Data
+betterquesting.quest.iBuyLOsSRcGJ6QBSIPZgMA.desc=Orbital Data is used for making §6Gerald§r. Due the amount it requires, it is highly recommended that a large amount of §6Satellite Sensor Relays§r are launched.
 
 # Quest: Balls-O-Tron
 betterquesting.quest.k-HwTdGiQVmikRwAeg_fkQ.name=Баллс-О-Трон
@@ -1247,7 +1279,7 @@ betterquesting.quest.nqmqybchRzWn-T46-3vHmQ.desc=§2Это задание пре
 
 # Quest: UFO
 betterquesting.quest.q0Q4S7F-QlCzGWDkdOBMqw.name=НЛО
-betterquesting.quest.q0Q4S7F-QlCzGWDkdOBMqw.desc=Марсианский корабль вторжения - это босс поздней игры, которого убивают, чтобы получить §6Монету НЛО§r, используемую в крафте Геральда.%n%nЭто задание предоставляет альтернативный способ получения монеты.%n%n§2Это задание может быть повторено.
+betterquesting.quest.q0Q4S7F-QlCzGWDkdOBMqw.desc=The Martian Invasion Ship is a late-game boss which is killed to get the §6UFO Coin§r, used in crafting Gerald.
 
 # Quest: Welded Osmiridium Plate
 betterquesting.quest.xYmNHPDAQkSwXHOow8--4g.name=Сварные пластины из Осмиридия
@@ -1263,9 +1295,73 @@ betterquesting.quest.xlNjQwC6S3S5o_B7nIciBQ.name=Источники бескон
 betterquesting.quest.xlNjQwC6S3S5o_B7nIciBQ.desc=Tired of using buckets to give water to your machines? Try using water pumps or infinite water tanks!%n%nInfinite Water Tank will give 50mb/t%nLarge Infinite Water Tank will give 500mb/t%nPump will give 1000mb/t but requires steam to operate. Pumps must sit below Y:70; the Electric Groundwater Pump moves up to 10,000 mB/t.
 
 
-## Quest Line: Farming and Cooking
-betterquesting.questline.UJ4N6pDhQ5aGBxBW9j-BVw.name=Сельское хозяйство и кулинария
-betterquesting.questline.UJ4N6pDhQ5aGBxBW9j-BVw.desc=Всё что нужно знать о том, как готовить еду и добывать её.
+## Quest Line: Advanced Logistics
+betterquesting.questline.vNAB2bS7S9uSc1gAlAccnA.name=Advanced Logistics
+betterquesting.questline.vNAB2bS7S9uSc1gAlAccnA.desc=Manage your factory and tackle logistical challenges with advanced redstone features.
+
+# Quest: Displays, Buttons and More
+betterquesting.quest.CXh5IW4AQaqb-p6bJlX2-A.name=Displays, Buttons and More
+betterquesting.quest.CXh5IW4AQaqb-p6bJlX2-A.desc=ROR §3Panels§r can be used to craft useful ROR components such as Gauges, Switches, Graphs and more. Shift-Click with a screwdriver to configure them once placed.
+
+# Quest: Network Separator
+betterquesting.quest.E6WKf8t9SO2uzwcUHfkMtQ.name=Network Separator
+betterquesting.quest.E6WKf8t9SO2uzwcUHfkMtQ.desc=The §3Network Separator§r can be used to split up a power network into multiple. It has a power gauge integrated into it and can be shut off by providing power from beneath.%n%nYou can control the priority and throughput of each network separator.
+
+# Quest: Conveyor Upgrades
+betterquesting.quest.Hw_8hujlQsGL2XyuZe-ndw.name=Conveyor Upgrades
+betterquesting.quest.Hw_8hujlQsGL2XyuZe-ndw.desc=Conveyors ejectors can be equiped with two different types of upgrades.%n%n§6Stack Ejection§r, which outputs more items at once.%n%n§6Ejection Speed§r, which outputs items at a faster rate.
+
+# Quest: Better Conveyors
+betterquesting.quest.Jss-h7UPRO2s89rbuH-28g.name=Better Conveyors
+betterquesting.quest.Jss-h7UPRO2s89rbuH-28g.desc=Multi-Lane Conveyor Belts can be used to transport items on different lanes on the same block, while the Express Conveyor transfers the items twice as fast.
+
+# Quest: Fluid Overflow
+betterquesting.quest.MTiLxFNwSxKjViwIaQJePA.name=Fluid Overflow
+betterquesting.quest.MTiLxFNwSxKjViwIaQJePA.desc=Redstone-Over Radio§r in combination with a §3Redstone Fluid Valve§r can be used to detect when a tank is starting to fill up, and release the insides. This is useful for having buffers without having all the fluids being wasted.%n%n§2Here is an exmaple of a tank that will only output fluid once its full:§r%n%nFirstly, place a §6ROR Transmitter§r on one port of the tank, provide an ID and enable Polling.%n%n[img height=1000]betterquesting:textures/QB_Fluid1.png[/img]%n%nAfter that, place a §6ROR Logic Receiver§r next to the fluid valve and input the desired settings. Make sure that your signal is >= of your desired buffer. One redstone level equals to 16k mb.%n%n[img height=1000]betterquesting:textures/QB_Fluid2.png[/img]
+
+# Quest: Gauges
+betterquesting.quest.P_IpX7K7QbGEwCyd3wB2bQ.name=Gauges
+betterquesting.quest.P_IpX7K7QbGEwCyd3wB2bQ.desc=§3Gauges§r are used to measure the amount of energy or fluid passing through the network.
+
+# Quest: Conveyor Grabber
+betterquesting.quest.QaxG5jTfQv2p5_rvauacdg.name=Conveyor Grabber
+betterquesting.quest.QaxG5jTfQv2p5_rvauacdg.desc=The §3Conveyor Grabber§r grabs items straight off of the conveyor belt without having the line go into it. It does not have an internal buffer.%n%n§2Factorio inserter says "Hi!"
+
+# Quest: Item Counter
+betterquesting.quest.WvfpO4ICRQSzLpydFY-pTA.name=Item Counter
+betterquesting.quest.WvfpO4ICRQSzLpydFY-pTA.desc=The ROR §6Item Counter§r is used to count the amount of items inside a container. It can transmit up to 3 signals, the items of which need to be specified with filters.
+
+# Quest: Conveyor Boxers
+betterquesting.quest.ZOQcs7g_SfylNX4zb39yGQ.name=Conveyor Boxers
+betterquesting.quest.ZOQcs7g_SfylNX4zb39yGQ.desc=§3Conveyor Boxers§r package a certain amount of items into a box, configurable inside a §3Conveyor Boxer§r, and output them as a single item on a conveyor belt. They are then unpackaged at the §3Conveyor Unboxer§r.
+
+# Quest: Combinator Funnel
+betterquesting.quest.c3lGUKvHQpOUIBi6XoRoLQ.name=Combinator Funnel
+betterquesting.quest.c3lGUKvHQpOUIBi6XoRoLQ.desc=The Combinator Funnel is used to perform crafts of the same item in a 3x3 or 2x2 grid. It becomes extremely useful for §eBedrock Ore Processing§r.
+
+# Quest: New Quest
+betterquesting.quest.c4m68dpfQXyH4q-ilwLZcQ.name=New Quest
+betterquesting.quest.c4m68dpfQXyH4q-ilwLZcQ.desc=§2This quest serves as a guide on how to precisely input items in an arc furnace as not to waste electrode durability.§r%n%n§2By SkippyPlaysMC§r%n%nAssuming no upgrades are inserted in the §3Arc Furnace§r, there are exactly 20 slots available for items. To start, route all input items into a §3Conveyor Boxer§r which will send items into a §3Conveyor Unboxer§r. Adding speed ejection and stack ejection upgrades to the unboxer is highly recommended as so the items are inputed fast enough.%n%n[img height=1000]betterquesting:textures/BQ_ARC1.png[/img]%n%nPlace a §3Redstone-Over-Radio Item Counter§r on one side of the boxer, set the item filter and give it an ID.%n%n[img height=1000]betterquesting:textures/BQ_ARC2.png[/img]%n%nThen place a Redstone-Over-Radio Logic Receiver, give it the correct ID, and set it to emit redstone when item count is 20.%n%n[img height=1000]betterquesting:textures/BQ_ARC3.png[/img]%n%nMake sure that the boxer has its mode set to redstone.%n%n[img height=1000]betterquesting:textures/BQ_ARC4.png[/img]
+
+# Quest: Redstone-Over Radio
+betterquesting.quest.pj-4ZmrUToOlwxPjWw3m7A.name=Redstone-Over Radio
+betterquesting.quest.pj-4ZmrUToOlwxPjWw3m7A.desc=§dNTM§r introduces §eRedstone-Over Radio§r, which is a system of sending redstone signals wirelessly. There are many ROR components which serve different purposes, from maintaining a certain amount of fluid in a tank to reading item amounts in containers.%n%nThe foundational components of this system are the ROR §6Transmitter§r and §6Receiver§r. As their name suggests, they can send and receive redstone signals. For them to be linked together, both need the same §eID§r.
+
+# Quest: Telex
+betterquesting.quest.q7VK8XTHQBOwq1mXC4RadA.name=Telex
+betterquesting.quest.q7VK8XTHQBOwq1mXC4RadA.desc=The §3Telex Machine§r is used to send signals to other Telex Machines. It can also send signals if it receives a message and can print out messages on a piece of paper.
+
+# Quest: AUTOCAL Automatic Calculator
+betterquesting.quest.t2HnBelkRiKkjGv9JoKjLw.name=AUTOCAL Automatic Calculator
+betterquesting.quest.t2HnBelkRiKkjGv9JoKjLw.desc=The §3AUTOCAL Automatic Calculator§r is a basic machine that reads a script, line by line, and performs actions based on those lines. This means it can be programmed with behavior, doing math, and handling signals. It communicates with the outside world exclusively using ROR signals, allowing RoR to supply it with values to be processed, and returning RoR signals to be displayed or for controlling RoR receiving devices.%n%n§2A documentation button exists inside the machine for people that want to learn how to use it.§r
+
+# Quest: Logic Receiver
+betterquesting.quest.v7HxbdInTsWOGVEmy4zaow.name=Logic Receiver
+betterquesting.quest.v7HxbdInTsWOGVEmy4zaow.desc=The ROR §6Logic Receiver§r is a more advanced version of the receiver with a more extensive UI which can be used to specify the conditions that are needed for a signal to be received.
+
+# Quest: Automatic Crafting Table
+betterquesting.quest.z9LdlLLQRP64Psk4rxEDhQ.name=Automatic Crafting Table
+betterquesting.quest.z9LdlLLQRP64Psk4rxEDhQ.desc=The §3Automatic Crafting Table§r is able to perform crafts when supplied with power and a blueprint inside of it is set. The Blueprint is located at the blue crafting area and the items can be defined by using either items inside the player's inventory or by dragging them fron the NEI menu.
 
 
 ## Quest Line: Building and Decorating
@@ -1303,6 +1399,11 @@ betterquesting.quest.p7NNm2NvRgWz37LQO6yraw.desc=§dArchitectureCraft§r пре�
 # Quest: Sign Pictures
 betterquesting.quest.wAu-q390TlKihyp-bEI2lw.name=Изображения на табличказ
 betterquesting.quest.wAu-q390TlKihyp-bEI2lw.desc=Мод §dSignPicture§r позволяет размещать любое изображение на табличке, открывая двери к множеству уникальных строительных дизайнов. Нажмите \\, чтобы начать.
+
+
+## Quest Line: Farming and Cooking
+betterquesting.questline.UJ4N6pDhQ5aGBxBW9j-BVw.name=Сельское хозяйство и кулинария
+betterquesting.questline.UJ4N6pDhQ5aGBxBW9j-BVw.desc=Всё что нужно знать о том, как готовить еду и добывать её.
 
 
 ## Quest Line: Applied Energistics 2
@@ -1389,9 +1490,17 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAgg.desc=§3ME Export Bus§r это ко
 betterquesting.quest.EPrM6umbSw2e8c3-9XF9Wg.name=Карта квантового моста
 betterquesting.quest.EPrM6umbSw2e8c3-9XF9Wg.desc=§6Infinity Booster Card§r позволяет получить доступ к системе ME на любом расстоянии и в любом измерении. Чтобы применить просто откройте §6Wireless Crafting Terminal§r и вставьте в него карту.
 
+# Quest: Void ME Storage Cell
+betterquesting.quest.IPYh87hoSIS50cO0v3TkRQ.name=Void ME Storage Cell
+betterquesting.quest.IPYh87hoSIS50cO0v3TkRQ.desc=The §6Void ME Storage Cell§r, when filtered, will void all of that specific item that enters the ME system.
+
 # Quest: P2P
 betterquesting.quest.Ig84-U5cRH-rxH76bIGE9A.name=P2P
 betterquesting.quest.Ig84-U5cRH-rxH76bIGE9A.desc=§6P2P§r Туннель или "Точка-точка туннель" это универсальная настраиваемая система для перемещения предметов / редстоуна / питания / и жидкости из одной точки в другую, через существующую сеть ME без использования хранилища.%n%nТуннели работают по принципу «§e1 вход — N выходов§r». Это означает, что вы можете выводить данные в любое количество точек, но для каждого туннеля ввод осуществляется только в одной точке.%n%nСети могут поддерживать любое количество туннелей различных типов, и все они работают самостоятельно.%n%nТуннели ME могут использоваться для прокладки каналов из одного места в другое и могут пропускать до §e32-ух каналов§r, столько же, сколько §6ME Dense Cable§r, при этом занимая всего по одному каналу с каждой стороны. Это делает туннели мощным инструментом для расширения ME сетей, особенно на больших расстояниях. Однако высокая гибкость, которую они обеспечивают, сопряжена с ограничением: канал P2P туннеля не может быть передан внутри другого P2P туннеля, то есть их нельзя вкладывать друг в друга рекурсивно.%n%nДля настройки P2P туннеля необходимо сначала настроить его для передачи нужных данных, а затем сконфигурировать выходы в соответствии с входами. Настройка соединений осуществляется с помощью §6Memory Card§r. Сначала нажмите правой кнопкой мыши на вход, удерживая клавишу Shift, чтобы сохранить его на карту памяти, а затем просто нажмите правой кнопкой мыши на нужные выходы, чтобы назначить им этот вход; при этом тип выхода автоматически приводится в соответствие с типом входа.%n%n§2Можно создать усовершенствованную версию карты памяти, взаимодействующую со всей сетью.
+
+# Quest: ME Storage Reshuffle
+betterquesting.quest.InB-Oh2tQ_eQ5zN69917QA.name=ME Storage Reshuffle
+betterquesting.quest.InB-Oh2tQ_eQ5zN69917QA.desc=The §3ME Storage Reshuffle§r organises the items in your ME Storage Cells, reducing item type uses by combining them to save up space.%n%n[warn]Disconnect Storage Buses or else the system will pull them in and deposit them in Storage Cells.[/warn]
 
 # Quest: Wireless Crafting Terminal
 betterquesting.quest.Iyj0bDhVRpCgzmAF4vP30A.name=Беспроводной терминал крафта
@@ -1599,10 +1708,6 @@ betterquesting.quest.Q70rGIFTR6uMPmobimGr9g.desc=С этой задачей сл
 betterquesting.quest.Q8FZdwiURgC2PoD4IziLJg.name=Марсианский корабль вторжения
 betterquesting.quest.Q8FZdwiURgC2PoD4IziLJg.desc=«Марсианский корабль вторжения» это босс позднего этапа игры; за его убийство можно получить «Монету НЛО», которая используется для создания Геральда.%n%nЕго можно призвать, создав предмет «Корабль марсианского вторжения».
 
-# Quest: Time to Kill (Wither Skeleton)
-betterquesting.quest.R08JrEz2SLGeV9zwAFydaQ.name=Время убивать (Скелет-иссушитель)
-betterquesting.quest.R08JrEz2SLGeV9zwAFydaQ.desc=«Дай мне свой §oчееереееп!!!§r» <-- так явно думает любой опытный игрок, завидев его.%n%nКстати, если не знали: Иссушителя можно призвать, разместив 4 блока песка душ в форме буквы «T» и установив сверху 3 черепа иссушителя. Не делайте этого на своей базе.
-
 # Quest: Time to Kill (Slime)
 betterquesting.quest.Z-RsAsrVRM2a3zWP5a0OsQ.name=Время убивать (Слайм)
 betterquesting.quest.Z-RsAsrVRM2a3zWP5a0OsQ.desc=Липкий и прыгучий! Теперь во множестве вариантов. Познакомьтесь с моим маленьким другом, Лимонной долькой!
@@ -1630,10 +1735,6 @@ betterquesting.quest.hGvVPGL0SHmF0FpB4r600A.desc=Вкусные кальмары
 # Quest: Time to Kill (Ghast)
 betterquesting.quest.j_v3k9rtT0CrTh_RsbyO6g.name=Время убивать (Гаст)
 betterquesting.quest.j_v3k9rtT0CrTh_RsbyO6g.desc=Они стреляют в вас фаерболами, но уязвимы, если атаковать их или отбивать эти шары оружием. Лучше улучшить броню, добавив защиту от огня и взрывов.
-
-# Quest: Time to Kill (Enderman)
-betterquesting.quest.krQA1CjtRA2eMTLNCHn7iA.name=Время убивать (Странник Края)
-betterquesting.quest.krQA1CjtRA2eMTLNCHn7iA.desc=О, шикарные эндерпёрлы. Они тебе нужны. Все до единой. Прямо сейчас!
 
 # Quest: Time to Kill (Skeleton)
 betterquesting.quest.lf-pKhIVShSHFv38Gg56lg.name=Время убивать (Скелет)
@@ -1682,6 +1783,14 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAABQ.desc=§6Глифиды§r Это к�
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAACA.name=Полезные инструменты
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAACA.desc=Существует множество инструментов, которые помогут вам продвигаться по моду, к наиболее важным относятся:%n%n§6Вольфрамовые хваталки§r — они снижают уровень радиационного облучения, получаемого игроком от предметов в инвентаре, а также позволяют удерживать в руках особо горячие предметы.%n%n§6Mk. V Устройство Для Вскрытия Ящиков "Лом"§r — используется для вскрытия ящиков, в которых можно найти еду и боеприпасы, на территории различных сооружений.
 
+# Quest: Conveyor Belt
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAKg.name=Конвейерная лента
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAKg.desc=§3Конвейеры§r, пожалуй, самый простой способ перемещения предметов. Есть несколько блоков, способных взаимодействовать как с механизмами, так и предметами, движущимися по конвейеру. %n%n§3Конвейер§r - блок, перевозящий предметы. Они способны подбирать брошенные или поданные с конвейерного извлекателя предметы. Если конвейерного вставщика на конце ленты нет, предмет упадёт на землю в конце пути.%n%n§3Конвейерный вставщик§r - блок, забирающий предметы с конвейерной ленты и помещающий их в хранилище. Конвейерные извлекатели (противоположность вставщика) выводят предметы из хранилища на ленту. %n%nВставщики имеют функцию удаления излишних предметов: если подключённое хранилище заполнено, излишки будут безвозвратно удалены. В случае если предмет не может быть помещен ни в хранилище, ни в буфер вставщика - он просто выбрасывается.%n%nИзвлекатели имеют функцию белых/черных списков (по стандарту стоит режим черного списка без ограничений - все предметы будут проходить без ограничений). Нажатие правой кнопкой мыши на иконку стрелки в интерфейсе извлекателя переключит режим списка. Чтобы добавить предмет в черный/белый список, перетащите его в синюю сетку инвентаря - сам предмет утрачен не будет.%n%n§3Конвейерный разделитель§r - блок, который равномерно разделяет предметы с одной ленты на 2 раздельные.%n%n§3Конвейерные сортировщики§r - блок, сортирующий предметы на конвейерной ленте, позволяя поставить белые/черные списки на каждую из сторон блока. В отличие от вставщиков и извлекателей, сортировщик не имеет буфера и моментально перемещает предметы в присоединенные конвейеры на основе их настроек фильтрации. Вследствие этого Сортировщик способен сортировать предметы с той же скоростью, с которой он их получает. %nСортировщик имеет 6 выходов и 5 слотов для белого/черного списка на каждый выход, позволяя пропускать несколько определённых типов предметов на один конвейер.
+
+# Quest: Transport Drones
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdg.name=Транспортные дроны
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdg.desc=§3Транспортные дроны§r - это летающие машины, которые будут перемещать предметы и жидкости между различными контейнерами. Дроны не требуют энергии и могут перемещаться как вверх, так и вниз. §3Путевые точки§r могут использоваться для создания лучшего маршрута для движения транспортных дронов.
+
 # Quest: Tantalium
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAiw.name=Тантал
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAiw.desc=§6Tantalium§r is a material needed for the creation of some items, most importantly §6Capacitor Boards§r, which are crucial for the control units of most nuclear bombs. Tantalium Polycrystal production requires §6Coltan§r which can be located by the use of a §6Coltas§r. Coltan can also be obtained by using the mining drill in a §eBedrock Ore Coltan Deposit§r located randomly on planet Dres. Tantalum can also be obtained via §3Watz Reactor§r.%n%n§2Coltan Processing at its early stage can provide Niobium needed for Catalytic Cracking Towers.
@@ -1709,6 +1818,14 @@ betterquesting.quest.Zpwlu-OeTpCvf7vTFz-BIA.desc=Три модификации �
 # Quest: Compressor
 betterquesting.quest.jcaOirN6QCOC50YJbil2rQ.name=Компрессор
 betterquesting.quest.jcaOirN6QCOC50YJbil2rQ.desc=The §3Compressor§r is a specialized multiblock machine for compressing fluids. It can perform this operation on any fluid to increase its pressure, for use in other machines. Some of these fluids are compressed into different fluids entirely as special recipes for this machine. Each compressor only does a single PU increase step, compressed fluids cannot be stored in tanks, and compressing perfluoromethyl to 2 PU turns it into cold PFM.
+
+# Quest: Pneumatic Pipes
+betterquesting.quest.pTXtLJnPRu6lyiOqGVP7lw.name=Пневмотрубы
+betterquesting.quest.pTXtLJnPRu6lyiOqGVP7lw.desc=§3Пневмотрубы§r - это мгновенная форма транспортировки предметов, которая может покрывать большие расстояния. Трубы должны иметь сжатый газ внутри для работы.%n%n§6Отвёртка§r необходима для создания соединения, и клик правой кнопкой мыши по соединению с идентификатором жидкости установит газообразную жидкость, которую она будет использовать.
+
+# Quest: Flow Control Pump
+betterquesting.quest.qHqokbvIRPSKbDzjTfQE0g.name=Flow Control Pump
+betterquesting.quest.qHqokbvIRPSKbDzjTfQE0g.desc=The §3Flow Control Pump§r is used to set priorities for fluid pipes aswell as to limit fluid throughput.
 
 
 ### Quests in no quest lines ###
