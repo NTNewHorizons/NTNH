@@ -5,25 +5,34 @@ labels:
 - "Type: Mod Addition"
 - "Suggestion"
 body:
-- type: textarea
-  id: environment
+- type: input
+  id: discord
   attributes:
-    label: Pack Version and Contact Details
-    description: Include your pack version and optionally your NTNH Discord username so we can contact you.
-    value: |
-      Pack version:
-      NTNH Discord username (optional):
+    label: Your NTNH Discord Username
+    description: Leave empty if you don't have one, but this will make it harder to contact you if we need additional info.
+    placeholder: "Example: Fake"
+- type: input
+  id: version
+  attributes:
+    label: Your Pack Version
+    description: What version of the pack are you playing?
+    placeholder: "Example: 2.1.1.0"
+  validations:
+    required: true
+- type: input
+  id: proposal
+  attributes:
+    label: Mod Name
+    description: What mod do you propose to add?
+    placeholder: "Example: GigaGramFab"
   validations:
     required: true
 - type: textarea
-  id: proposal
+  id: features
   attributes:
-    label: Mod Name and Features
-    description: What mod do you propose to add, and what are its main features? For example, GigaGramFab adds more processing lines, ores, and dimensions.
-    value: |
-      Mod name:
-
-      Main features:
+    label: The Mod to Add
+    description: What is the main feature of this mod?
+    placeholder: "Example: More processing lines. More ores. More dimensions."
   validations:
     required: true
 - type: textarea
