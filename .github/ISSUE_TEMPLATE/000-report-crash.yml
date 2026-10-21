@@ -10,42 +10,20 @@ body:
       Examples of this category include: crashing to desktop, game window disappearing, uncommanded computer shutdown. ~~Please blame your local power grid if your neighbor's computer also shut down due to power outage.~~
 
       Please note if you merely want a change, e.g. think something is too OP, you should use the Suggest a Change template instead.
-- type: input
-  id: discord
+- type: textarea
+  id: environment
   attributes:
-    label: Your NTNH Discord Username
-    description: Leave empty if you don't have one, but this will make it harder to contact you if we need additional info. 
-    placeholder: "Example: Fake"
-- type: input
-  id: version
-  attributes:
-    label: Your Pack Version
-    description: What version of the pack are you playing? If you're using an ancient version maybe first try updating the pack. We usually fix hundreds of issues per release, so there is a good chance your problem have been fixed already in the latest version. There are also usually Dev releases inbetween Official releases that may not show up on other platforms.
-    placeholder: "Example: 2.1.1.0"
+    label: Pack, Server, and Contact Details
+    description: |
+      Include your pack version and server name (use SP if you are not on a dedicated server). Try updating an old pack first; releases fix hundreds of issues, and Dev releases may not appear on other platforms.
+      Optionally include your NTNH Discord username so we can contact you, and your server type: Single Player, Open To LAN, Vanilla Forge, Crucible, Thermos, Ultramine, Other MCPC+ fork, or Don't know. Listed server types are not necessarily supported. Open To LAN means opening a local world through the ESC menu without dedicated server software.
+    value: |
+      Pack version:
+      Server name (or SP):
+      Server type (optional):
+      NTNH Discord username (optional):
   validations:
     required: true
-- type: input
-  id: server
-  attributes:
-    label: Your Server
-    description: On which server does this happen? Type SP if you are not playing on a dedicated server.
-    placeholder: "Example: Eta, ProsperCraft, private server, SP"
-  validations:
-    required: true
-- type: dropdown
-  id: thermos
-  attributes:
-    label: Type of Server
-    description: The brand of your server. Please note your server brand being listed here does not mean it is supported. Here Open To LAN means you started the world without any dedicated server software and clicked the Open To LAN button in ESC menu.
-    options:
-    - Single Player
-    - Open To LAN
-    - Vanilla Forge
-    - Crucible
-    - Thermos
-    - Ultramine
-    - Other MCPC+ fork
-    - "Don't know"
 - type: textarea
   id: reproduce
   attributes:

@@ -26,20 +26,14 @@ body:
     placeholder: "Example: Official Server Eta"
   validations:
     required: true
-- type: input
+- type: textarea
   id: language
   attributes:
-    label: Primary Language(s)
-    description: You expect players to communicate in one of these languages.
-    placeholder: "Example: English"
-  validations:
-    required: true
-- type: input
-  id: region
-  attributes:
-    label: Region(s) of Service
-    description: The location of your server. Players usually won't want to choose a server with 500ms+ ping.
-    placeholder: "Example: EU/US/Germany"
+    label: Languages and Region(s) of Service
+    description: Include the languages players should communicate in and your server's location. Players usually won't want to choose a server with 500ms+ ping.
+    value: |
+      Primary language(s):
+      Server region(s):
   validations:
     required: true
 - type: input

@@ -10,18 +10,14 @@ body:
       Examples of this category include: The One Ring is too OP, remove all small pile of dusts.
 
       Please note that if you found something game breaking, e.g. a dupe exploit, something voiding your items, or you can't do something that you think you should be able to do, you should use the Report Bug template instead.
-- type: input
-  id: discord
+- type: textarea
+  id: environment
   attributes:
-    label: Your NTNH Discord Username
-    description: Leave empty if you don't have one, but this will make it harder to contact you if we need additional info.
-    placeholder: "Example: Fake"
-- type: input
-  id: version
-  attributes:
-    label: Your Pack Version
-    description: What version of the pack are you playing? If you're using an ancient version maybe first try updating the pack. There are usually numerous changes per release, so there is a reasonable chance your idea might have already been implemented already in the latest version. There are also usually Dev releases inbetween Official releases that may not show up on other platforms.
-    placeholder: "Example: 2.1.1.0"
+    label: Pack Version and Contact Details
+    description: Include your pack version and optionally your NTNH Discord username so we can contact you. Check the latest pack first; your idea may already be implemented. Dev releases may not appear on other platforms.
+    value: |
+      Pack version:
+      NTNH Discord username (optional):
   validations:
     required: true
 - type: textarea
@@ -35,17 +31,12 @@ body:
 - type: textarea
   id: goal
   attributes:
-    label: Your Goal
-    description: Why is this feature needed?
-    placeholder: "Example: Void miners are too OP."
-  validations:
-    required: true
-- type: textarea
-  id: vision
-  attributes:
-    label: Your Vision
-    description: How do you think your vision would improve the pack?
-    placeholder: "Example: Void miner would be made less OP and help people enjoy the pack."
+    label: Goal and Expected Improvement
+    description: Why is this change needed, and how would it improve the pack? For example, explain why void miners are too OP and how rebalancing them would help people enjoy the pack.
+    value: |
+      Why this change is needed:
+
+      How it would improve the pack:
   validations:
     required: true
 - type: checkboxes

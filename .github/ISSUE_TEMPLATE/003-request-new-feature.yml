@@ -10,18 +10,14 @@ body:
       Examples of this category include: add void miners, add a naquadah processing line.
 
       Please note that if you want to change an existing feature, e.g. think something is too OP, you should use the Suggest a Change template instead.
-- type: input
-  id: discord
+- type: textarea
+  id: environment
   attributes:
-    label: Your NTNH Discord Username
-    description: Leave empty if you don't have one, but this will make it harder to contact you if we need additional info.
-    placeholder: "Example: Fake"
-- type: input
-  id: version
-  attributes:
-    label: Your Pack Version
-    description: What version of the pack are you playing? If you're using an ancient version maybe first try updating the pack. We add new features all the time, so your feature may already be in the latest version. There are also usually Dev releases inbetween Official releases that may not show up on other platforms.
-    placeholder: "Example: 2.1.1.0"
+    label: Pack Version and Contact Details
+    description: Include your pack version and optionally your NTNH Discord username so we can contact you. Check the latest pack first; your feature may already exist. Dev releases may not appear on other platforms.
+    value: |
+      Pack version:
+      NTNH Discord username (optional):
   validations:
     required: true
 - type: textarea
@@ -35,17 +31,12 @@ body:
 - type: textarea
   id: goal
   attributes:
-    label: Your Goal
-    description: Why is this feature needed?
-    placeholder: "Example: PAs are too small for my tastes."
-  validations:
-    required: true
-- type: textarea
-  id: vision
-  attributes:
-    label: Your Vision
-    description: How do you think your vision would improve the pack?
-    placeholder: "Example: A mega PA would make everyone's base a nicer place and improve the overall quality of game experience."
+    label: Goal and Expected Improvement
+    description: Why is this feature needed, and how would it improve the pack? For example, explain why existing PAs are too small and how a mega PA would improve bases and the game experience.
+    value: |
+      Why this feature is needed:
+
+      How it would improve the pack:
   validations:
     required: true
 - type: checkboxes
