@@ -1,0 +1,184 @@
+name: Build and Publish Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to build the release from (defaults to the branch the workflow is run on)'
+        required: false
+        type: string
+        default: ''
+      release_name:
+        description: 'Name for the release (leave empty to use the version from pack.toml). Spaces are fine here; the git tag will have them replaced with hyphens.'
+        required: false
+        type: string
+        default: ''
+      release_type:
+        description: 'Release type'
+        required: true
+        type: choice
+        default: latest
+        options:
+          - release
+          - prerelease
+          - latest
+  release:
+    types: [published]
+
+concurrency:
+  group: stable-release
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+env:
+  PACKWIZ_VERSION: ef87d964f8cbd52b3b13ea42453ef322290e2b9e
+
+jobs:
+  release:
+    name: Build and publish packages
+    runs-on: ubuntu-24.04
+    steps:
+      # release-published events always build from main and use fully
+      # default settings, regardless of what the human typed when
+      # publishing the release (tag, title, target branch, etc.) - that
+      # release object is only used as a trigger button.
+      - name: Determine target branch
+        id: target
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_BRANCH: ${{ github.event_name == 'workflow_dispatch' && inputs.branch || '' }}
+          REF_NAME: ${{ github.ref_name }}
+        run: |
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            BRANCH="${INPUT_BRANCH:-$REF_NAME}"
+          else
+            BRANCH="main"
+          fi
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.target.outputs.branch }}
+          fetch-depth: 0
+          lfs: true
+
+      - name: Pull Git LFS files
+        run: |
+          git lfs pull
+          git lfs fsck
+
+      - name: Read and validate version
+        id: version
+        run: |
+          VERSION=$(awk -F '"' '/^version = / { print $2; exit }' pack.toml)
+          if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "Invalid release version in pack.toml: $VERSION" >&2
+            exit 1
+          fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Determine release metadata
+        id: release_info
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_RELEASE_NAME: ${{ github.event_name == 'workflow_dispatch' && inputs.release_name || '' }}
+          INPUT_RELEASE_TYPE: ${{ github.event_name == 'workflow_dispatch' && inputs.release_type || '' }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            TITLE="${INPUT_RELEASE_NAME:-$VERSION}"
+            RELEASE_TYPE="${INPUT_RELEASE_TYPE:-latest}"
+          else
+            # release-published events fall back to fully default settings:
+            # tag/title come from pack.toml, marked as the latest release.
+            TITLE="$VERSION"
+            RELEASE_TYPE="latest"
+          fi
+
+          # Git tag/ref names can't contain spaces or ~ ^ : ? * [ \, so the
+          # tag is a sanitized version of the title (spaces -> hyphens,
+          # disallowed characters stripped) while the title keeps whatever
+          # the user typed, e.g. title "2.15.0 B-1" -> tag "2.15.0-B-1".
+          TAG="${TITLE// /-}"
+          TAG="$(echo "$TAG" | tr -d '~^:?*[\\')"
+
+          case "$RELEASE_TYPE" in
+            prerelease) EXTRA_FLAG="--prerelease" ;;
+            latest) EXTRA_FLAG="--latest" ;;
+            *) EXTRA_FLAG="" ;;
+          esac
+
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "title=$TITLE" >> "$GITHUB_OUTPUT"
+          echo "extra_flag=$EXTRA_FLAG" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.25.x'
+
+      - name: Install Packwiz
+        run: go install github.com/packwiz/packwiz@${PACKWIZ_VERSION}
+
+      - name: Build release packages
+        run: |
+          python3 dev/test-package-release.py
+          ./build-packwiz.sh
+
+      - name: Verify package names
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          test -f "dist/NTNH-$VERSION-CurseForge.zip"
+          test -f "dist/NTNH-$VERSION-Modrinth.mrpack"
+          test -f "dist/NTNH-$VERSION-Native.zip"
+          test -f "dist/NTNH-$VERSION-MMC_Prism.zip"
+
+      - name: Upload workflow artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: NTNH-${{ steps.version.outputs.version }}
+          path: |
+            dist/NTNH-${{ steps.version.outputs.version }}-CurseForge.zip
+            dist/NTNH-${{ steps.version.outputs.version }}-Modrinth.mrpack
+            dist/NTNH-${{ steps.version.outputs.version }}-Native.zip
+            dist/NTNH-${{ steps.version.outputs.version }}-MMC_Prism.zip
+          if-no-files-found: error
+
+      # Use the default GITHUB_TOKEN rather than a PAT for the actual
+      # release operations. GitHub does not start new workflow runs for
+      # events produced by GITHUB_TOKEN, so this create/delete step will
+      # NOT itself re-trigger this workflow's `release: published` handler,
+      # which avoids an infinite create -> publish -> create loop.
+      - name: Delete old release if it already exists
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ steps.release_info.outputs.tag }}
+        run: gh release delete --yes "$TAG"
+        continue-on-error: true
+
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ steps.version.outputs.version }}
+          TAG: ${{ steps.release_info.outputs.tag }}
+          TITLE: ${{ steps.release_info.outputs.title }}
+          TARGET: ${{ steps.target.outputs.branch }}
+          EXTRA_FLAG: ${{ steps.release_info.outputs.extra_flag }}
+        run: |
+          FILES=(
+            "dist/NTNH-$VERSION-CurseForge.zip"
+            "dist/NTNH-$VERSION-Modrinth.mrpack"
+            "dist/NTNH-$VERSION-Native.zip"
+            "dist/NTNH-$VERSION-MMC_Prism.zip"
+          )
+
+          gh release create "$TAG" \
+            "${FILES[@]}" \
+            --target "$TARGET" \
+            --title "$TITLE" \
+            --notes-file CHANGELOG.md \
+            $EXTRA_FLAG

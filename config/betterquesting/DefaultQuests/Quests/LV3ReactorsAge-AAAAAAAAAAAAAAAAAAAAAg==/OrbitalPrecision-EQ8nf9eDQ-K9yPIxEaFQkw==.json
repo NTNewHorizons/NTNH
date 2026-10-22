@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §3Orbital Precision Laser§r is a solar-powered orbital weapon, a lighter alternative to the §3Orbital Death Ray§r. It fires an instantaneous beam dealing massive damage to entities within a 5-block radius, though its explosive yield is only roughly equivalent to a single block of TNT. Recharge time between shots is §e5 seconds§r.\n\nIt can be aimed with a §6Satellite (Laser) Designator§r or controlled via §dRedstone-over-Radio§r through a §3Satellite Ground Station§r. The \"fire\" command fires at the current target coordinates, or at a tracked entity if one has been set - entity target data is consumed after a single shot. The \"canfire\" command writes TRUE or FALSE to RX depending on whether the laser has finished recharging. The \"setentitytarget\" command accepts an entity ID from a §3Radar Satellite§r for precision tracking.\n\n§2Entity target data is consumed after one shot, reverting back to coordinate targeting.",
+      "desc:8": "The §3Orbital Precision Laser§r is a solar-powered orbital weapon, a lighter alternative to the §3Orbital Death Ray§r. It fires an instantaneous beam dealing massive damage to entities within a 5-block radius, though its explosive yield is only roughly equivalent to a single block of TNT. Recharge time between shots is §e5 seconds§r.\n\nIt is controlled via §dRedstone-over-Radio§r through a §3Satellite Ground Station§r. When paired with targeting data from a §3Radar Survey Satellite§r it can shoot down missiles. The \"fire\" command fires at the current target coordinates, or at a tracked entity if one has been set - entity target data is consumed after a single shot. The \"canfire\" command writes TRUE or FALSE to RX depending on whether the laser has finished recharging. The \"setentitytarget\" command accepts an entity ID from a §3Radar Satellite§r for precision tracking.\n\n§2Entity target data is consumed after one shot, reverting back to coordinate targeting.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -38,6 +38,7 @@
       },
       "isMain:1": 0,
       "isSilent:1": 0,
+      "is_final:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Orbital Precision Laser",
       "notification_duration:5": -1.0,
@@ -55,6 +56,9 @@
       "notification_title:8": "",
       "notification_title_scale:5": -1.0,
       "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,

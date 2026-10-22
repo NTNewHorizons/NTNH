@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §3Xenium Resonator Satellite§r provides unlimited on-demand teleportation with no cooldown. Before launch, its frequency must be linked to a §6Satellite Designator§r using the §3Satellite ID Manager§r.\n\nA standard §6Satellite Designator§r requires coordinates to be entered manually. A §6Satellite (Laser) Designator§r is simpler - aim the crosshair at a block and right-click.\n\n§2Interdimensional teleportation is not supported.",
+      "desc:8": "The §3Xenium Resonator Satellite§r provides teleportation within the same dimension. Before launch, its frequency must be linked to a §6Satellite Designator§r using the §3Satellite ID Manager§r. When using the standard designator, the Y value may be omitted to default to surface level.\n\nA standard §6Satellite Designator§r requires coordinates to be entered manually. A §6Satellite (Laser) Designator§r is simpler - aim the crosshair at a block and right-click.\n\n§2Interdimensional teleportation is not supported.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -38,6 +38,7 @@
       },
       "isMain:1": 0,
       "isSilent:1": 0,
+      "is_final:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Xenium Resonator Satellite",
       "notification_duration:5": -1.0,
@@ -55,6 +56,9 @@
       "notification_title:8": "",
       "notification_title_scale:5": -1.0,
       "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,

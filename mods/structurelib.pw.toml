@@ -1,0 +1,14 @@
+name = "structurelib-1.4.46"
+filename = "structurelib-1.4.46.jar"
+side = "both"
+pin = true
+
+[download]
+hash-format = "sha256"
+hash = "e8460e006af869a465b938f89fcb61dc5e75d3b14a3f766f4f3c23e01b2d1b7a"
+url = "https://github.com/GTNewHorizons/StructureLib/releases/download/1.4.46/structurelib-1.4.46.jar"
+
+[update.github]
+slug = "GTNewHorizons/StructureLib"
+tag = "1.4.46"
+regex = "^structurelib\\-.+\\.jar$"

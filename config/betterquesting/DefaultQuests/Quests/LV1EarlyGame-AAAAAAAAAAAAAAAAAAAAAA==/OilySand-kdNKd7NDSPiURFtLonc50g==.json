@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "§6Oily Sand§r is a surface-level block that generates among normal sand, typically in deserts. It acts as a marker for §bBedrock Oil§r deposits directly beneath it - if you find it, there is oil underground.\n\nIt can be ground in a §3Grinder§r into §6Oil Waste§r, which can then be processed to obtain §6Arsenic§r - a really important mid-game material.",
+      "desc:8": "§6Oily Sand§r is a surface-level block that generates among normal sand, typically in deserts. It acts as a marker for §bBedrock Oil§r deposits directly beneath it - if you find it, there is oil underground.\n\nShred polluted blocks from fracking in a §3Shredder§r into §6oily scraps§r, then treat them with §bhigh-performance solvent§r in an §3Ore Acidizer§r to obtain §6Arsenic§r - a really important mid-game material.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -27,6 +27,7 @@
       },
       "isMain:1": 0,
       "isSilent:1": 0,
+      "is_final:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Oily Sand",
       "notification_duration:5": -1.0,
@@ -44,6 +45,9 @@
       "notification_title:8": "",
       "notification_title_scale:5": -1.0,
       "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,

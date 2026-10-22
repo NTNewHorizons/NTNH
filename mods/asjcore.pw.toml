@@ -1,0 +1,16 @@
+name = "ASJCore"
+filename = "1.7.10-ASJCore-1.7.0.2.1.jar"
+side = "both"
+pin = true
+
+[download]
+url = "https://github.com/NTNewHorizons/ASJCore/releases/download/1.7.0.2.1/1.7.10-ASJCore-1.7.0.2.1.jar"
+hash-format = "sha256"
+hash = "41423bc0ac65588e9e04391f84a26d72eb75c2dd2d688007a67346ff0373d838"
+
+[update]
+[update.github]
+branch = "main"
+regex = "^1\\.7\\.10-ASJCore-[0-9.]+\\.jar$"
+slug = "NTNewHorizons/ASJCore"
+tag = "1.7.0.2.1"
