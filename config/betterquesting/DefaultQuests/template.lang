@@ -119,7 +119,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAHQ.desc=The §3Crucible§r is an import
 
 # Quest: Arc Welder
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAHw.name=Arc Welder
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAHw.desc=The §3Arc Welder§r is a machine needed for the creation of many components, such as §6Welded Plates§r, §6Missile Parts§r and more. Some Recipes will require a fluid inserted into the welder to work. Make one §6dense copper or gold wire§r here first - it unlocks the crucible casting mold.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAHw.desc=The §3Arc Welder§r is a [warn]§lpower hungry§r[/warn] machine needed for the creation of many components, such as §6Welded Plates§r, §6Missile Parts§r and more. Some Recipes will require a fluid inserted into the welder to work. Make one §6dense copper or gold wire§r here first - it unlocks the crucible casting mold.
 
 # Quest: Combination Oven
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIQ.name=Combination Oven
@@ -131,7 +131,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIg.desc=The §3Chemical Plant§r is a m
 
 # Quest: Strand Caster
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJA.name=Strand Caster
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJA.desc=The §3Strand Caster§r is a large basin that can cast items in batches of 9. It also requires §bWater§r in order to cast, where it makes §bLow-Pressure Steam§r that can be turned back into water.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJA.desc=The §3Strand Caster§r is a large basin that can cast items in batches of 9. It also requires §bWater§r in order to cast, where it makes §bLow-Pressure Steam§r that can be turned back into water.%n%nPlacing one §1§3§bSteam Condenser §ron one of it's holes after filling the caster with water will solve your problem with §bLow-Pressure Stea§r§bm§r it produces
 
 # Quest: High-Speed Steel
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJQ.name=High-Speed Steel
@@ -241,9 +241,9 @@ betterquesting.quest.JcBabPI8RzGGmai3SwlcLw.desc=The §3HE to RF Converter§r wi
 betterquesting.quest.K-eTce6PTLGe1htaZlPiHg.name=Fluids
 betterquesting.quest.K-eTce6PTLGe1htaZlPiHg.desc=Fluids are measured in §emB§r (§emilli-Buckets§r) and §eB§r (§eBuckets§r).%n%n1 bucket = 1000mB.%n%nThere are two fluid systems - §6Forge Fluids§r, which is the system that most of the mods are using, and §6NTM Fluids§r, which is the fluid system that is exclusive to NTM.%n%nThe §6Multi Fluid Identifier§r is used to select the type of NTM fluid one needs. Shift-Click while holding it to select a fluid.%n%nThose two systems are fully compatible between each other! Feel free to automate your factory with AE2 and other mods!
 
-# Quest: Known Issues
-betterquesting.quest.MNH6qakfTrC7Jbky4i_Epw.name=Known Issues
-betterquesting.quest.MNH6qakfTrC7Jbky4i_Epw.desc=Not a bug, a &q&zFEATURE§r!%n%nWhen you consume food your hands may shake weirdly, as if Steve was EXTREMELY happy for that lunch.%n%nIf you experience any stutters/micro-lags while playing, try turning Vsync on/off. If that does not help, contact in Discord #help.%n%nCurrently we have no idea how to fix those bugs, but we are trying our best!
+# Quest: Bugs
+betterquesting.quest.MNH6qakfTrC7Jbky4i_Epw.name=Bugs
+betterquesting.quest.MNH6qakfTrC7Jbky4i_Epw.desc=Not a bug, a &q&zFEATURE§r!%n%nWhen you consume food your hands may shake weirdly, as if Steve was EXTREMELY happy for that lunch.%n%nIf you experience any stutters/micro-lags while playing, try turning Vsync on/off. If that does not help, contact in Discord #help.%n%nCurrently we have no idea how to fix those bugs, but we are trying our best!%n%nIf you experience any performance issues, bugs, or glitches please contact in §1Discord§r #help.%n%nOr better yet, report these on the §6github§r page, so we can better track what to fix.%n%n§1Discord server:§r%n[url]https://discord.com/invite/wtNVzeE5QB[/url]%n%n§6Github:§§§r%n[url]https://github.com/NTNewHorizons/NTNH[/url]%n%n§r
 
 # Quest: Additional NTM Modes
 betterquesting.quest.MWwrY8PcTaam9T_sc4yDtQ.name=Additional NTM Modes
@@ -252,6 +252,10 @@ betterquesting.quest.MWwrY8PcTaam9T_sc4yDtQ.desc=§cNTNH§r is a modular modpack
 # Quest: Charging Station
 betterquesting.quest.OlMZZGTaSz6VhzaeJdR6QQ.name=Charging Station
 betterquesting.quest.OlMZZGTaSz6VhzaeJdR6QQ.desc=The §3Charging Station§r will charge electric tools aswell as electric suits when standing near it. Placing more next to eachother will increase the speed at which items are being recharged.
+
+# Quest: Schist Layers
+betterquesting.quest.R6tUq_gTQ6-SlFFGefmzJA.name=Schist Layers
+betterquesting.quest.R6tUq_gTQ6-SlFFGefmzJA.desc=§3§6Schist§r§r layers are vast clusters of §3Graphitic Schis§f§3t§r, which are usually generated deep underground. %n%nThese layers contain much higher amount of ores, and are the most common source of§r §3Rare Earth Ore§r early game.
 
 # Quest: Packing Tape
 betterquesting.quest.RBJS7D2ATpq7GUingAewuQ.name=Packing Tape
@@ -468,7 +472,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQQ.desc=§6Bakelite§r is an alternativ
 
 # Quest: Desh
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQg.name=Desh
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQg.desc=§6Desh§r is an alloy made up of 9 rare earth metals to make its blend form, which is solidified and refined using §bMercury§r and §bLight oil§r in the §3Chemical Plant§r. Desh is an almost unbreakable material and as such its tools have infinite durability. %n%n§a§2Desh can also be made using DeshReady™ in a Rotary Furnace, or later on, in an Ore Acidizer.§r%n%nMercury at this stage of the game can be obtained from centrifuging §eRedstone Ore§r or putting §eCinnabar§r in a §3Combination Oven§r. Large cinnabar veins can be found as depth ore.%n%nLater on, mercury can be obtained from processing §bOre Slop§r or §bVitriol§r in an §3Electrolyzer§r.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQg.desc=§6Desh§r is an alloy made up of 9 rare earth metals to make its blend form, which is solidified and refined using §bMercury§r and §bLight oil§r in the §3Chemical Plant§r. Desh is an almost unbreakable material and as such its tools have infinite durability. %n%nThe §6Rare Earth Ore§r can be most commonly found in §1§3schist§r§3§r layers which can generate deep underground,%n%n§a§2Desh can also be made using DeshReady™ in a Rotary Furnace, or later on, in an Ore Acidizer.§r%n%nMercury at this stage of the game can be obtained from centrifuging §eRedstone Ore§r or putting §eCinnabar§r in a §3Combination Oven§r. Large cinnabar veins can be found as depth ore.%n%nLater on, mercury can be obtained from processing §bOre Slop§r or §bVitriol§r in an §3Electrolyzer§r.
 
 # Quest: Industrial Steam Turbine
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAARA.name=Industrial Steam Turbine
@@ -524,7 +528,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAXw.desc=The §6Geiger counter§r is a d
 
 # Quest: Survey Scanner
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAYA.name=Survey Scanner
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAYA.desc=The §6Survey Scanner§r is a handheld device that will point out underground resourse deposits, such as §eDepth Rock§r and §eBedrock Ores§r.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAYA.desc=The §6Survey Scanner§r is a handheld device that will point out underground resourse deposits, such as §eDepth Rock§r§e,§r §eBedrock Ores,§r §eSchist layers, Bedrock Oil deposits and Oil deposits§r.
 
 # Quest: Launch Pad
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAaw.name=Launch Pad
@@ -537,6 +541,14 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAzA.desc=The §3Electrolysis Machine§r 
 # Quest: Sodalite and Sodium
 betterquesting.quest.APBKQg85Qha1VtT4cWTK9A.name=Sodalite and Sodium
 betterquesting.quest.APBKQg85Qha1VtT4cWTK9A.desc=§6Sodalite§r is a gem recovered as a §3Centrifuge§r byproduct of many ores. Run lapis through a §3Combination Oven§r to get §bChlorine Gas§r plus sodium§r. Melt sodium down to §bLiquid Sodium§r: a powerful §3Pressurized Water Reactor§r coolant, far stronger than water loops. Stockpile it before your first PWR core.
+
+# Quest: Curvy Pipes
+betterquesting.quest.AWcWOsyyS0q-AHebIAkH1g.name=Curvy Pipes
+betterquesting.quest.AWcWOsyyS0q-AHebIAkH1g.desc=§6Curvy pipes§r are a very convienet mode of transporation for§3 items, fluids, and power§r.%n%n
+
+# Quest: AE2
+betterquesting.quest.D30AtxZdTCecSJqpydHE3w.name=AE2
+betterquesting.quest.D30AtxZdTCecSJqpydHE3w.desc=With §6silicion§r unlocked you are now able to make a simple §5AE2§r system using §6Storage buses§r, but without any drives, since they can be unlocked later on.%n%n[note]Go check the §6§rApplied Energistics 2§r§5§r Chapter for more information![/note]§r§r
 
 # Quest: Semtex
 betterquesting.quest.D6A-to-oSe29nf5qIu4h_w.name=Semtex
@@ -598,6 +610,10 @@ betterquesting.quest.xADm9gLETmCgiS3amOTUcQ.desc=§6Weapon steel§r is a steel a
 betterquesting.quest.zYS6AlyFSuuMUErAJqPcTg.name=Mining Laser
 betterquesting.quest.zYS6AlyFSuuMUErAJqPcTg.desc=The §3Mining Laser§r is a laser drill which can be used to quickly dig large areas. It has a §e100 MHE§r internal power buffer and a 64,000mB internal §bCrude Oil§r buffer. Its default radius is 3, which can be increased by the use of an effectiveness upgrade. It can also be equiped with various upgrades to unlock new functions such as shredding or voiding.
 
+# Quest: Geothermal Power
+betterquesting.quest.zkwUJo5nSwqqx8xYbSngDw.name=Geothermal Power
+betterquesting.quest.zkwUJo5nSwqqx8xYbSngDw.desc=The §6§3Geothermal Heat Exchang§3e§r§3r§r§r§r is essentially a boiler powered by heat from §6lava§r or §6geothermal vents§r underneath it in a 15x15x10 box below it, making it require no fuel to operate.%n%n[note]Only 3 things can contribute heat to the heat exchanger:%n%nLava (source or flowing blocks): 5 TU%nVolcanic lava: 150 TU%nGeothermal vents: 300 TU (effectively always 900)[/note]
+
 
 ## Quest Line: LV3 - Reactors Age
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAg.name=LV3 - Reactors Age
@@ -647,6 +663,10 @@ betterquesting.quest.9BjXTD5CSTOQ-_OroVdJmg.desc=§6Cadmium§r is a material nee
 betterquesting.quest.9PngQWDKQNCWI50sDbf3Eg.name=Lambda-98
 betterquesting.quest.9PngQWDKQNCWI50sDbf3Eg.desc=The §3Lambda Launch Pad§r is a mechanism for launching the §6Lambda-98 Rocket§r, which can be used to launch satellites for cheaper and faster than the Soyuz. This launch pad works much faster than the Soyuz facility: loading the rocket and fueling takes noticeably less time, and instead of a 30 second wait after pressing the launch button, Lambda offers only 10 seconds. It also supports automatic launch after all preparation procedures are complete.%n%nThe launch pad constantly consumes §e200kHE/s§r. Each launch consumes 16000mB of §bLeaded Gasoline§r and §bHydrogen Peroxide§r. If the pad is in auto-launch mode, a countdown begins after all required slots and buffers are filled. In manual mode, the pad waits for your signal.%n%nQuest requirements: Build a §3Lambda Launch Pad§r, supply it with §e200kHE/s§r and stock §bLeaded Gasoline§r and §bHydrogen Peroxide§r. Launch a §6Lambda-98 Rocket§r. Optionally, enable auto-launch mode for automatic countdown and launch.%n%n[F1] For more information.
 
+# Quest: Depth-Resource Scanning Satellite
+betterquesting.quest.9Y9PU0asTPmHumQiDRc2Ew.name=Depth-Resource Scanning Satellite
+betterquesting.quest.9Y9PU0asTPmHumQiDRc2Ew.desc=The §3Depth-Resource Scanning Satellite§r maps underground ore deposits across loaded chunks. It is operated via §dRedstone-over-Radio§r through a §3Satellite Ground Station§r.%n%nThe map lacks labels and detail on its own. Pairing the satellite with §6Neutrino Lenses§r - an armor module linked to the same frequency via the §3Satellite ID Manager§r - overlays ores as glowing labeled outlines, making the data far more usable.
+
 # Quest: High-Power Steam Condenser
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0Q.name=High-Power Steam Condenser
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0Q.desc=The §3High-Power Steam Condenser§r is a steam condenser which runs on electricity. It processes up to 1,000,000 mB/t of §bLow-Pressure Steam§r.
@@ -654,10 +674,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0Q.desc=The §3High-Power Steam Condens
 # Quest: Leviathan Steam Turbine
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAA1Q.name=Leviathan Steam Turbine
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAA1Q.desc=The §3Leviathan Steam Turbine§r is a massive turbine capable of processing gargantuan amounts of §bSteam§r at once, only hindered by the fluid system's transfer rate. It is significantly more powerful than even the §3Industrial Steam Turbine§r in terms of raw steam processing power. This turbine runs on §e85%%§r Efficiency, so it is recommended that only 1-2 are used for very large reactors.
-
-# Quest: RBMK
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAAA.name=RBMK
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAAA.desc=The §3RBMK§r is a modular boiling-water type nuclear fission reactor which consists entirely of concrete columns. Each of these columns is either blank or has a specific function that it performs such as holding fuel rods, moderating neutrons, or storing §bWater§r to be boiled into §bSteam§r. Each column will also exchange heat with the column next to it such that temperature differences between columns will gradually equalize within the reactor. If any column reaches §e1500°C§r, the reactor will explode incredibly violently, spraying scrap and immensely radioactive material in every direction.%n%nDue to the complex and expansive nature of the RBMK, it is highly recommend that the wiki is checked out as it provides more information.%n%n[url]https://nucleartech.wiki/wiki/RBMK[/url]%n%n§2This quest provides an optional retrieval task for a cheap and safe RBMK design which can produce High-Performance Solvent§r §2without cooling. Simply Place the RBMK Irradiation Channel next to the RBMK Fuel Rod, apply the covers on the collumns and surround them with a solid block. Watch the RBMK Console neutron-flux graph for spikes, insert control rods gradually (AZ-5), and cool with 50 mB/t cold PFM per cooler.
 
 # Quest: Technetium/Cadmium Steel
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAABg.name=Technetium/Cadmium Steel
@@ -1405,6 +1421,14 @@ betterquesting.quest.wAu-q390TlKihyp-bEI2lw.desc=The §dSignPicture§r mod allow
 betterquesting.questline.UJ4N6pDhQ5aGBxBW9j-BVw.name=Farming and Cooking
 betterquesting.questline.UJ4N6pDhQ5aGBxBW9j-BVw.desc=Everything about how to farm and cook.
 
+# Quest: Where is the quest line?
+betterquesting.quest.9uVhWowwQ3Kxf6N_O6UYng.name=Where is the quest line?
+betterquesting.quest.9uVhWowwQ3Kxf6N_O6UYng.desc=So you might be wondering where the farming quest line is well its not coming... this update that is, due to my busy schedule i didnt have enough time to finish it so here is a stack of cookies as a gift, have fun!
+
+# Quest: What the hell does this all mean?
+betterquesting.quest.BPCkaNHKSKKuyUffPYa7ZQ.name=What the hell does this all mean?
+betterquesting.quest.BPCkaNHKSKKuyUffPYa7ZQ.desc=So, you spent something like 20 minuets reading the other 2 quests and are wondering, "so... what the hell does any of that mean?" or you didnt read it at all, go back and read them you lazy bum or everything from here on will seem unclear. these food mods give a GTNH feel to hunger, you cant eat the same foods to many times in a row and eating a certain new foods can give extra hearts. this quest line will walk you thru how to use the food mods this pack ofers to there fullest potential (yes some of this is repeating what was said in the other 2 quests, no i will not be changing what this or the other quests say, if you want to complain DM I DARE YOU. gamernaut12)
+
 
 ## Quest Line: Applied Energistics 2
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAABQ.name=Applied Energistics 2
@@ -1773,7 +1797,11 @@ betterquesting.quest.6k-JrbD-S8GO9PRRthWNRA.desc=The §3Dyson Anatmogenesis Terr
 
 # Quest: Maskman
 betterquesting.quest.8b6batCvQvCiGknitRMrSQ.name=Maskman
-betterquesting.quest.8b6batCvQvCiGknitRMrSQ.desc=Maskman is the first NTM boss. To summon it, you need to be under radiation poisoning (50 rad). A 20-minute timer starts per player when requirements are met. Once it runs out, Mask Man spawns. A warning appears 1 minute before spawn. If you are no longer irradiated, the timer resets.
+betterquesting.quest.8b6batCvQvCiGknitRMrSQ.desc=Maskman is the first NTM boss. To summon it, you need to be under radiation poisoning (50 rad). A 20-minute timer starts per player when requirements are met. Once it runs out, Mask Man spawns. A warning appears 1 minute before spawn. If you are no longer irradiated, the timer resets.%n%n§2The player must be underground and have crafted or placed at least one Ore Acidizer to start the timer. Maskman spawns on the surface.§r
+
+# Quest: RBMK
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAAA.name=RBMK
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAAA.desc=The §3RBMK§r is a modular boiling-water type nuclear fission reactor which consists entirely of concrete columns. Each of these columns is either blank or has a specific function that it performs such as holding fuel rods, moderating neutrons, or storing §bWater§r to be boiled into §bSteam§r. Each column will also exchange heat with the column next to it such that temperature differences between columns will gradually equalize within the reactor. If any column reaches §e1500°C§r, the reactor will explode incredibly violently, spraying scrap and immensely radioactive material in every direction.%n%nDue to the complex and expansive nature of the RBMK, it is highly recommend that the wiki is checked out as it provides more information.%n%n[url]https://nucleartech.wiki/wiki/RBMK[/url]%n%n§2This quest provides an optional retrieval task for a cheap and safe RBMK design which can produce High-Performance Solvent§r §2without cooling. Simply Place the RBMK Irradiation Channel next to the RBMK Fuel Rod, apply the covers on the collumns and surround them with a solid block. Watch the RBMK Console neutron-flux graph for spikes, insert control rods gradually (AZ-5), and cool with 50 mB/t cold PFM per cooler.
 
 # Quest: Glyphids
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAABQ.name=Glyphids
@@ -1789,7 +1817,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAKg.desc=§3Conveyors§r provide the sim
 
 # Quest: Transport Drones
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdg.name=Transport Drones
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdg.desc=§3Transport Drones§r are flying machines which will transport items and fluids between different containers. The drones require no power, and can transport both up and down. §3Waypoints§r can be used to make a better path for the transport drones to move around.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdg.desc=§3Transport Drones§r are flying machines which will transport items and fluids between different containers. The drones require no power, and can transport both up and down. §3Waypoints§r can be used to make a better path for the transport drones to move around. They are recommended if you don't like making large conveyor belts around your base.
 
 # Quest: Tantalium
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAiw.name=Tantalium
