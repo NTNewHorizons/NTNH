@@ -145,6 +145,7 @@
 * Fixed a potential issue where conveyor grabbers could pick up expired conveyor entities or stacks with a stacksize of 0
 * Hopefully fixed artillery rockets oscillating when the target is reached
 * Fixed a weird-ass dupe w/ crucible
+* Fixed WAILA errors
 
 
 
