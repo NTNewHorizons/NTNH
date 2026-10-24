@@ -1,0 +1,104 @@
+<!-- =================================================================
+     NTNH Custom Ore Generation: Global Presets Module
+     Defines ultra-diffuse, anti-veinminer tier presets for Overworld.
+     OreDensity calibrated to 8-14% with low noise cutoff (0.25)
+     to disperse ore evenly as isolated 1-2 block inclusions throughout
+     the 3D rock volume, preventing VeinMiner chain reactions.
+     Frequencies calibrated to 0.014 - 0.019 to prevent ore carpets across all biomes.
+     ================================================================= -->
+<ConfigSection>
+
+    <!-- Master Coal Seam (Wide diffuse bi-convex lens cloud) -->
+    <CloudPreset name="PresetCoalSeamCloud">
+        <Setting name="DistributionFrequency" avg=":= 0.015 * oreFreq" />
+        <Setting name="CloudRadius" avg=":= 30 * oreSize" range=":= 6 * oreSize" />
+        <Setting name="CloudThickness" avg=":= 10 * oreSize" range=":= 3 * oreSize" />
+        <Setting name="CloudHeight" avg="40" range="20" type="uniform" />
+        <Setting name="CloudInclination" avg="0" range="0.35" />
+        <Setting name="OreDensity" avg="0.14" />
+        <Setting name="OreVolumeNoiseCutoff" avg="0.25" />
+        <ReplacesOre block="stone" />
+    </CloudPreset>
+
+    <!-- Tier 2/3 Very Small Cloud (Ultra-diffuse rare metals: 8% density, calibrated frequency) -->
+    <CloudPreset name="PresetBiomeCloudVerySmall">
+        <Setting name="DistributionFrequency" avg=":= 0.016 * oreFreq" />
+        <Setting name="ParentRangeLimit" avg="32" range="32" type="normal" />
+        <Setting name="CloudRadius" avg=":= 16 * oreSize" range=":= 4 * oreSize" />
+        <Setting name="CloudThickness" avg=":= 8 * oreSize" range=":= 2 * oreSize" />
+        <Setting name="CloudSizeNoise" avg="0.25" />
+        <Setting name="CloudHeight" avg="24" range="16" type="uniform" />
+        <Setting name="CloudInclination" avg="0" range="0.35" />
+        <Setting name="OreRadiusMult" avg="1" range="0.1" />
+        <Setting name="OreDensity" avg="0.08" />
+        <Setting name="OreVolumeNoiseCutoff" avg="0.25" />
+        <ReplacesOre block="stone" />
+    </CloudPreset>
+
+    <!-- Tier 1/2 Small Cloud (Ultra-diffuse medium-small deposits: 9% density, calibrated frequency) -->
+    <CloudPreset name="PresetBiomeCloudSmall">
+        <Setting name="DistributionFrequency" avg=":= 0.018 * oreFreq" />
+        <Setting name="ParentRangeLimit" avg="32" range="32" type="normal" />
+        <Setting name="CloudRadius" avg=":= 20 * oreSize" range=":= 4 * oreSize" />
+        <Setting name="CloudThickness" avg=":= 10 * oreSize" range=":= 2 * oreSize" />
+        <Setting name="CloudSizeNoise" avg="0.25" />
+        <Setting name="CloudHeight" avg="32" range="16" type="uniform" />
+        <Setting name="CloudInclination" avg="0" range="0.35" />
+        <Setting name="OreRadiusMult" avg="1" range="0.1" />
+        <Setting name="OreDensity" avg="0.09" />
+        <Setting name="OreVolumeNoiseCutoff" avg="0.25" />
+        <ReplacesOre block="stone" />
+    </CloudPreset>
+
+    <!-- Tier 1 Medium Cloud (Ultra-diffuse industrial deposits: 10% density, calibrated frequency 0.019) -->
+    <CloudPreset name="PresetBiomeCloudMedium">
+        <Setting name="DistributionFrequency" avg=":= 0.019 * oreFreq" />
+        <Setting name="ParentRangeLimit" avg="32" range="32" type="normal" />
+        <Setting name="CloudRadius" avg=":= 26 * oreSize" range=":= 5 * oreSize" />
+        <Setting name="CloudThickness" avg=":= 12 * oreSize" range=":= 3 * oreSize" />
+        <Setting name="CloudSizeNoise" avg="0.25" />
+        <Setting name="CloudHeight" avg="36" range="20" type="uniform" />
+        <Setting name="CloudInclination" avg="0" range="0.35" />
+        <Setting name="OreRadiusMult" avg="1" range="0.1" />
+        <Setting name="OreDensity" avg="0.10" />
+        <Setting name="OreVolumeNoiseCutoff" avg="0.25" />
+        <ReplacesOre block="stone" />
+    </CloudPreset>
+
+    <!-- Tier 1 Large Cloud (Ultra-diffuse massive formations: 11% density, calibrated frequency 0.014) -->
+    <CloudPreset name="PresetBiomeCloudLarge">
+        <Setting name="DistributionFrequency" avg=":= 0.014 * oreFreq" />
+        <Setting name="ParentRangeLimit" avg="32" range="32" type="normal" />
+        <Setting name="CloudRadius" avg=":= 30 * oreSize" range=":= 6 * oreSize" />
+        <Setting name="CloudThickness" avg=":= 14 * oreSize" range=":= 3 * oreSize" />
+        <Setting name="CloudSizeNoise" avg="0.25" />
+        <Setting name="CloudHeight" avg="36" range="20" type="uniform" />
+        <Setting name="CloudInclination" avg="0" range="0.35" />
+        <Setting name="OreRadiusMult" avg="1" range="0.1" />
+        <Setting name="OreDensity" avg="0.11" />
+        <Setting name="OreVolumeNoiseCutoff" avg="0.25" />
+        <ReplacesOre block="stone" />
+    </CloudPreset>
+
+    <!-- Tier 3 Strategic Rare Jackpot Cloud (12% density) -->
+    <CloudPreset name="PresetStrategicOreCloud">
+        <Setting name="DistributionFrequency" avg=":= 0.005 * oreFreq" />
+        <Setting name="CloudRadius" avg=":= 30 * oreSize" range=":= 4 * oreSize" />
+        <Setting name="CloudThickness" avg=":= 12 * oreSize" range=":= 3 * oreSize" />
+        <Setting name="CloudHeight" avg="26" range="14" type="uniform" />
+        <Setting name="CloudSizeNoise" avg="0.2" />
+        <Setting name="OreDensity" avg="0.12" />
+        <Setting name="OreVolumeNoiseCutoff" avg="0.25" />
+        <ReplacesOre block="stone" />
+        <Replaces block="hbm:tile.moon_rock:0" />
+        <Replaces block="hbm:tile.duna_rock:0" />
+        <Replaces block="hbm:tile.stone_laythe:0" />
+        <Replaces block="hbm:tile.basalt:0" />
+        <Replaces block="hbm:tile.eve_rock:0" />
+        <Replaces block="hbm:tile.dres_rock:0" />
+        <Replaces block="hbm:tile.moho_stone:0" />
+        <Replaces block="hbm:tile.ike_stone:0" />
+        <Replaces block="hbm:tile.minmus_stone:0" />
+    </CloudPreset>
+
+</ConfigSection>

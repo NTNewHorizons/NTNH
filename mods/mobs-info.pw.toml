@@ -1,0 +1,14 @@
+name = "mobsinfo-0.6.0-GTNH"
+filename = "mobsinfo-0.6.0-GTNH.jar"
+side = "both"
+pin = true
+
+[download]
+hash-format = "sha256"
+hash = "32635cb0ed072bed35ddd95a09955f49e470cf5bbc04ed062ca904c9b611e377"
+url = "https://github.com/GTNewHorizons/Mobs-Info/releases/download/0.6.0-GTNH/mobsinfo-0.6.0-GTNH.jar"
+
+[update.github]
+slug = "GTNewHorizons/Mobs-Info"
+tag = "0.6.0-GTNH"
+regex = "^mobsinfo\\-.+\\.jar$"

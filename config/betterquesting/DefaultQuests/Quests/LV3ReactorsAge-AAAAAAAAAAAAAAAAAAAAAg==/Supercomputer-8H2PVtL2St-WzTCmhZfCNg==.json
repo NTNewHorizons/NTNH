@@ -1,0 +1,113 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 0,
+      "questIDLow:4": 48
+    },
+    "1:10": {
+      "questIDHigh:4": 0,
+      "questIDLow:4": 6,
+      "type:1": 1
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "completion_animation:8": "default",
+      "completion_particle:8": "default",
+      "confetti_icon:10": {
+        "Count:3": 0,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "minecraft:stick"
+      },
+      "countAsQuest:1": 1,
+      "desc:8": "The §3Supercomputer§r is a late-game machine essential for processing both §6Flash Drives§r and §6Disk Drives§r. It is made in an §3Assembly Machine§r. The machine measures 12x5x9 blocks and requires energy to operate, with consumption depending on the operation. It does not require heat.\n\nFlash Drives are inserted into the §3Supercomputer§r and can be made into §eFlight Simulation Data§r, used in making the §6Soyuz§r and §6Orbital Module§r, or §eParticle Simulation Data§r, used in the §3Fusion Reactor§r.\n\nMost of the Supercomputer\u0027s operations work like those of the §3Precision Assembly Machine§r: they have a chance of returning a broken version of the input, which can be recycled for a portion of its materials. Operations involving data drives require cooling. Compatible coolants, from slowest to fastest, are §bWater§r, §bCold Perfluoromethyl§r, and §bHelium-4§r. Faster fluids speed up the process substantially but also increase the chance of a broken output. Overall, this makes for more successful outputs on average. The Supercomputer can also manufacture cheaper §6Blueprint Booklets§r and §6Klaus§r.\n\n§2Processing drives is extremely time consuming. The fastest operations take 60 seconds, while the longest can take up to 1 hour of real time. Plan your resource and energy usage accordingly.\n\nQuest requirements: Build a §3Supercomputer§r, supply it with §bWater§r, §bCold Perfluoromethyl§r, or §bHelium-4§r as coolant, and process at least one §6Flash Drive§r into §eFlight Simulation Data§r or §eParticle Simulation Data§r.\n\n[F1] For more information.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:tile.machine_supercomputer"
+      },
+      "isMain:1": 1,
+      "isSilent:1": 0,
+      "is_final:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Supercomputer",
+      "notification_duration:5": -1.0,
+      "notification_effect:3": -1,
+      "notification_fade_in:5": -1.0,
+      "notification_fade_out:5": -1.0,
+      "notification_icon_offset_y:3": -2147483648,
+      "notification_icon_scale:5": -1.0,
+      "notification_pos_x:3": -2147483648,
+      "notification_pos_y:3": -2147483648,
+      "notification_show_icon:8": "default",
+      "notification_style:8": "default",
+      "notification_subtitle:8": "",
+      "notification_subtitle_scale:5": -1.0,
+      "notification_title:8": "",
+      "notification_title_scale:5": -1.0,
+      "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": -1117579529448699169,
+  "questIDLow:4": -7580349106030656970,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 0,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.machine_supercomputer"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "1:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 1,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.drive"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "OreDict:8": "",
+          "id:8": "hbm:item.drive"
+        }
+      },
+      "taskID:8": "bq_standard:optional_retrieval"
+    }
+  }
+}

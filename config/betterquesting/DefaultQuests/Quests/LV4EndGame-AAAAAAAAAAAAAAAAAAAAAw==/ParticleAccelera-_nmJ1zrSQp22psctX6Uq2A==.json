@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §3Particle Accelerator§r is a highly modular machine that uses high strength superconducting magnets to accelerate particles to relativistic speeds in order to collide them together.\n\nDue to the complex and expansive nature of the particle accelerator, it is highly recommend that the wiki is checked out as it provides more information.\n\n[url]https://nucleartech.wiki/wiki/Particle_Accelerator[/url]\n\n§2This quest demands the most essential parts of the particle accelerator, and does not represent the amount needed for it to function.",
+      "desc:8": "The §3Particle Accelerator§r is a highly modular machine that uses high strength superconducting magnets to accelerate particles to relativistic speeds in order to collide them together. For recipes that demand high momentum, additional loops are needed. This quest serves as a guide on how to change the direction of particles.\n\nBelow is a miniature particle accelerator built for showcasing purposes. It is not connected to power or coolant and does not have any coils. It does not have RF cavities and uses two particle detectors as outputs. A compass is also provided in the image.\n\n[img height\u003d1000]betterquesting:textures/QB_PA1.png[/img]\n\nAfter constructing your Particle Accelerator, assuming the beamlines face the right directions, head over to the magnet that bridges the first and second loops.\n\n[img height\u003d1000]betterquesting:textures/QB_PA2.png[/img]\n\nOpen its GUI and configure the dipole magnet. The first line is for particles that have not reached the desired momentum. The second line is for particles that have reached the desired momentum. The third line is for particles that have reached the desired momentum AND are powered by redstone. The §cRed Line§r shows the direction the particle will travel towards and the §9Blue Line§r shows where the player is facing.\n\n[img height\u003d1000]betterquesting:textures/QB_PA3.png[/img]\n\nMake sure that for this specific dipole magnet the third line has the particle orientation facing towards the second loop, NORTH in this case.\n\nAfter this, the redstone logic must be set in order to be able to turn the particle orientation when powered. Simply provide power underneath the dipole magnet as such. A redstone signal should only exist when a particle needs momentum greater than what the first tier of coil allows.\n\n[img height\u003d1000]betterquesting:textures/QB_PA4.png[/img]\n\nHead over, WEST in this case, to the dipole magnet which is after the transitionary dipole and right before the detector, and which connects to the rest of the loop.\n\n[img height\u003d1000]betterquesting:textures/QB_PA5.png[/img]\n\nOpen its GUI and configure it. Make sure the second line is facing towards the particle detector and the first line towards the other dipole magnets.\n\n[img height\u003d1000]betterquesting:textures/QB_PA6.png[/img]\n\nDue to the complex and expansive nature of the particle accelerator, it is highly recommended that the wiki is checked out as it provides more information.\n\n[url]https://nucleartech.wiki/wiki/Particle_Accelerator[/url]\n\n§2This quest demands the most essential parts of the particle accelerator, and does not represent the amount needed for it to function.§r\n\nQuest requirements: Build a §3Particle Accelerator§r with at least two loops, two dipole magnets, and two particle detectors. Configure the first dipole magnet so its third line faces toward the second loop when powered by redstone. Configure the second dipole magnet so its second line faces the particle detector and its first line faces the other dipole magnets. Provide redstone power underneath the first dipole magnet. Visit the Particle Physics quest chapter.\n\n[F1] For more information.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -27,6 +27,7 @@
       },
       "isMain:1": 1,
       "isSilent:1": 0,
+      "is_final:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Particle Accelerator",
       "notification_duration:5": -1.0,
@@ -44,6 +45,9 @@
       "notification_title:8": "",
       "notification_title_scale:5": -1.0,
       "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,
@@ -73,7 +77,7 @@
         },
         "1:10": {
           "Count:3": 1,
-          "Damage:2": 5,
+          "Damage:2": 72,
           "OreDict:8": "",
           "id:8": "enhancedlootbags:lootbag",
           "tag:10": {

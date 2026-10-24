@@ -46,66 +46,56 @@
       "type:1": 2
     },
     "9:10": {
-      "questIDHigh:4": -7875668937144450035,
-      "questIDLow:4": -7047796085666219128,
-      "type:1": 2
-    },
-    "10:10": {
       "questIDHigh:4": 4881104955388413867,
       "questIDLow:4": -8341112793325261834,
       "type:1": 2
     },
-    "11:10": {
+    "10:10": {
       "questIDHigh:4": 2001442794807247195,
       "questIDLow:4": -7506056115323692423,
       "type:1": 2
     },
-    "12:10": {
+    "11:10": {
       "questIDHigh:4": 3748275996550251421,
       "questIDLow:4": -8546787816869149087,
       "type:1": 2
     },
-    "13:10": {
+    "12:10": {
       "questIDHigh:4": 7486227239845315789,
       "questIDLow:4": -7287046779912253775,
       "type:1": 2
     },
-    "14:10": {
+    "13:10": {
       "questIDHigh:4": 9135382564129426290,
       "questIDLow:4": -9092348455014731738,
       "type:1": 2
     },
-    "15:10": {
-      "questIDHigh:4": 5138336335483259057,
-      "questIDLow:4": -7036912969386779287,
-      "type:1": 2
-    },
-    "16:10": {
+    "14:10": {
       "questIDHigh:4": -9173064316113892845,
       "questIDLow:4": -6316942445886882333,
       "type:1": 2
     },
-    "17:10": {
+    "15:10": {
       "questIDHigh:4": -3408123065194623258,
       "questIDLow:4": -5593967109489629132,
       "type:1": 2
     },
-    "18:10": {
+    "16:10": {
       "questIDHigh:4": 4882281838826243584,
       "questIDLow:4": -5314668707019453658,
       "type:1": 2
     },
-    "19:10": {
+    "17:10": {
       "questIDHigh:4": -6545365725160124537,
       "questIDLow:4": -6209457741238451931,
       "type:1": 2
     },
-    "20:10": {
+    "18:10": {
       "questIDHigh:4": 2688782006671067092,
       "questIDLow:4": -8585709469103528141,
       "type:1": 2
     },
-    "21:10": {
+    "19:10": {
       "questIDHigh:4": 7340950136418159549,
       "questIDLow:4": -8718094580956053538,
       "type:1": 2
@@ -133,6 +123,7 @@
       },
       "isMain:1": 1,
       "isSilent:1": 0,
+      "is_final:1": 0,
       "lockedProgress:1": 0,
       "name:8": "§4§lMEGAKILL!",
       "notification_duration:5": -1.0,
@@ -150,6 +141,9 @@
       "notification_title:8": "",
       "notification_title_scale:5": -1.0,
       "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,
@@ -176,7 +170,7 @@
         },
         "1:10": {
           "Count:3": 4,
-          "Damage:2": 5,
+          "Damage:2": 102,
           "OreDict:8": "",
           "id:8": "enhancedlootbags:lootbag",
           "tag:10": {

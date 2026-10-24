@@ -44,6 +44,13 @@ jobs:
             --exclude='eula.txt' \
             --exclude='start.sh' \
             --exclude='start.bat' \
+            --exclude='install.sh' \
+            --exclude='install.bat' \
+            --exclude='install-packwiz.sh' \
+            --exclude='install-packwiz.bat' \
+            --exclude='update.sh' \
+            --exclude='update.bat' \
+            --exclude='docker-compose.yml' \
             --exclude='server-args.txt' \
             --exclude='server.jar' \
             --exclude='minecraft_server.1.7.10.jar' \
@@ -56,6 +63,12 @@ jobs:
             --exclude='SECURITY.md' \
             --exclude='.gitattributes' \
             --exclude='.gitignore' \
+            --exclude='.packwizignore' \
+            --exclude='index.toml' \
+            --exclude='packwiz-sources.json' \
+            --exclude='MOD_UPDATE_CHANGELOG.md' \
+            --exclude='build-packwiz.sh' \
+            --exclude='dev/' \
             --exclude='index.toml' \
             --exclude='.packwizignore' \
             --exclude='packwiz-sources.json' \

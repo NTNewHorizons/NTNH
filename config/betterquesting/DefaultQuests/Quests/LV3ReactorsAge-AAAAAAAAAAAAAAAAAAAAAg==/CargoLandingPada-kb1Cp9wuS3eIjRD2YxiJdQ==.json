@@ -1,0 +1,116 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 0,
+      "questIDLow:4": 103
+    },
+    "1:10": {
+      "questIDHigh:4": 0,
+      "questIDLow:4": 73
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "completion_animation:8": "default",
+      "completion_particle:8": "default",
+      "confetti_icon:10": {
+        "Count:3": 0,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "minecraft:stick"
+      },
+      "countAsQuest:1": 1,
+      "desc:8": "The §3Cargo Landing Pad§r receives resource shipments from §3Asteroid Mining Ships§r.\n\nAssign a §bSatellite ID§r to an Asteroid Mining Ship and launch it using a fueled §3Soyuz§r. Insert a §bSatellite ID Chip§r with the same ID into the landing pad. The miner operates at §6Dres§r and prepares a shipment every §b15 minutes of running game time§r, while the pad can receive deliveries on any planet.\n\nKeep the pad’s chunk loaded and the space above it unobstructed. If multiple pads share the same ID, the §efirst to request a ready shipment§r receives it; no planet has priority.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:item.sat_miner",
+        "tag:10": {
+          "satAltitude:5": 100.0,
+          "satBlink:5": 0.3,
+          "satColorB:5": 0.68,
+          "satColorG:5": 0.56,
+          "satColorR:5": 0.46,
+          "satInclination:5": 0.0,
+          "satIsBlinking:1": 0,
+          "satOwner:8": "None",
+          "satPhaseOffset:5": 0.0
+        }
+      },
+      "isMain:1": 0,
+      "isSilent:1": 0,
+      "is_final:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Cargo Landing Pad§r and Asteroid Mining Ship",
+      "notification_duration:5": -1.0,
+      "notification_effect:3": -1,
+      "notification_fade_in:5": -1.0,
+      "notification_fade_out:5": -1.0,
+      "notification_icon_offset_y:3": -2147483648,
+      "notification_icon_scale:5": -1.0,
+      "notification_pos_x:3": -2147483648,
+      "notification_pos_y:3": -2147483648,
+      "notification_show_icon:8": "default",
+      "notification_style:8": "default",
+      "notification_subtitle:8": "",
+      "notification_subtitle_scale:5": -1.0,
+      "notification_title:8": "",
+      "notification_title_scale:5": -1.0,
+      "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": -7945120878890693769,
+  "questIDLow:4": -8607204662424598155,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 0,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.sat_miner",
+          "tag:10": {
+            "satAltitude:5": 100.0,
+            "satBlink:5": 0.3,
+            "satColorB:5": 0.68,
+            "satColorG:5": 0.56,
+            "satColorR:5": 0.46,
+            "satInclination:5": 0.0,
+            "satIsBlinking:1": 0,
+            "satOwner:8": "None",
+            "satPhaseOffset:5": 0.0
+          }
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.sat_dock"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

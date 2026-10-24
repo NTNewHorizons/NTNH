@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "Oil products can be combusted or burnt to produce massive amounts of energy.\n\nThe §3Industrial Combustion Engine§r combusts fuels, such as §bHeating Oil§r or §bDiesel§r to produce power. Various piston sets exist, which are needed for the engine to work, each one giving its own efficiency bonuses to fuel grades.\n\nThe §4§3Turbofan§r is the best place to use aviation type fuels, such as §bKerosene§r, as it provides §e100%§r power efficiency. Be careful not to stand infront of it while its operational!\n\nThe §3Combined Cycle Gas Turbine§r is the only generator that can burn gaseous fuels at §e100%§r efficiency. The CCGT uses §3§bEngine Lubricant§r, and produces §bDense Steam§r.\n\nThe §3Flare Stack§r is used for burning gasses such as §bUnsaturated Hydrocarbons§r for power, as well as dealing with excess fluids.\n\nThe §3Fluid Burner§r is a much more efficient way of producing power from gases. Place a §3Boiler§r ontop and run the §bSteam§r through a turbine to generate power.\n\nConsider installing a §6Muffler§r on some of these machines as they are very loud. Shift-Click on a machine while holding a Muffler to apply.",
+      "desc:8": "Oil products can be combusted or burnt to produce massive amounts of energy.\n\nThe §3Industrial Combustion Engine§r combusts fuels, such as §bHeating Oil§r or §bDiesel§r to produce power. Various piston sets exist, which are needed for the engine to work, each one giving its own efficiency bonuses to fuel grades. Check the fuel-grade table: each fuel grade has an optimal piston set.\n\nThe §4§3Turbofan§r is the best place to use aviation type fuels, such as §bKerosene§r, as it provides §e100%§r power efficiency. Be careful not to stand infront of it while its operational!\n\nThe §3Combined Cycle Gas Turbine§r is the only generator that can burn gaseous fuels at §e100%§r efficiency. The CCGT uses §3§bEngine Lubricant§r, and produces §bDense Steam§r.\n\nThe §3Flare Stack§r is used for burning gasses such as §bUnsaturated Hydrocarbons§r for power, as well as dealing with excess fluids.\n\nThe §3Fluid Burner§r is a much more efficient way of producing power from gases. Place a §3Boiler§r ontop and run the §bSteam§r through a turbine to generate power.\n\nConsider installing a §6Muffler§r on some of these machines as they are very loud. Shift-Click on a machine while holding a Muffler to apply.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -27,6 +27,7 @@
       },
       "isMain:1": 1,
       "isSilent:1": 0,
+      "is_final:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Refinery Power",
       "notification_duration:5": -1.0,
@@ -44,6 +45,9 @@
       "notification_title:8": "",
       "notification_title_scale:5": -1.0,
       "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,

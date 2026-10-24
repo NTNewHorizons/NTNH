@@ -28,4 +28,5 @@ recipes.remove(<minecraft:iron_door>);
 
 // ================================================================================
 //#MARKER ADD SHAPED
+recipes.addShaped(<ProjRed|Core:projectred.core.part:56> * 4, [[<ore:dustLapis>, <ore:dustMingrade>]]);
 
