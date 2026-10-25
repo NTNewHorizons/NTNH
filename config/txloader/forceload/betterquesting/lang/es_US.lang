@@ -1064,10 +1064,6 @@ betterquesting.quest.aZBaZGfVRHeXWmLqDHjuUw.desc=The §3Atmospheric Compressor§
 betterquesting.quest.dVwxKlQ5SzaxZjGNcLFMEw.name=Solar Panel
 betterquesting.quest.dVwxKlQ5SzaxZjGNcLFMEw.desc=The §3Solar Panel§r converts sunlight into §eelectricity§r. §2(Incredible)§r%n%nIt can operate on planet surfaces or in space. The device uses the general light level, so the panel's spatial orientation does not affect energy production. The energy output port is at the back.%n%n§2Energy production calculations for planets and their orbits:%n%nKerbin - §e2kHE/s§2%nMun - §e2kHE/s§2%nMinmus - §e2kHE/s§2%nDuna - §e880HE/s§2%nIke - §e880HE/s§2%nMoho - §e13.3kHE/s§2%nDres - §e240HE/s§2%nEve - §e3.84kHE/s§2%nLaythe - §e80HE/s§r
 
-# Quest: Space Map
-betterquesting.quest.eItNlZ6bRS2kA-0Ymm_pdA.name=Space Map
-betterquesting.quest.eItNlZ6bRS2kA-0Ymm_pdA.desc=Here is my own (Bufka2011) map of our Kerbol system!%n[img height=300]resources:SpaceMap_by_Bufka2011.png[/img]
-
 # Quest: Magma Drill
 betterquesting.quest.gaeSExcOTaawSPifbbIVtg.name=Magma Drill
 betterquesting.quest.gaeSExcOTaawSPifbbIVtg.desc=Unlike its counterpart from the original mod, the Magma Drill does not literally drill into the depths. It is designed for extracting magma from Moho, which, as known, is abundant on this planet both on the surface and in caves. To start working, the mechanism must be installed directly on the surface of a lava lake so that the lava touches the drill head and reaches the edges of the recess. Supply power to the drill, and it will operate automatically.%n%nMagma is output through casting channels into molds. Cooled magma forms Vulcanite, which should then be processed to obtain useful resources.%n%nIn addition to volcanite, the device extracts regular slag (much more than Vulcanite).
@@ -1078,7 +1074,7 @@ betterquesting.quest.hG3STfQVT8uxD0PMB58DOQ.desc=The §3Orbital Station Computer
 
 # Quest: Alkylation Unit
 betterquesting.quest.icj9Y8q0QiWjFk2g7dTnww.name=Alkylation Unit
-betterquesting.quest.icj9Y8q0QiWjFk2g7dTnww.desc=The §3Alkylation Unit§r is designed to convert lighter hydrocarbons into useful heavier hydrocarbon products. From §bNatural Gas§r it can produce §bUnsaturated§r and §bAromatic hydrocarbons§r, commonly used for §6Rubber§r and §6Bakelite§r, and even produce §bBTX§r via the use of §bHigh-Performance Solvent§r. As a utility, it can also alkylate §bPetroleum Gas§r into §bLight Oil§r.
+betterquesting.quest.icj9Y8q0QiWjFk2g7dTnww.desc=The §3Alkylation Unit§r is designed to convert lighter hydrocarbons into useful heavier hydrocarbon products. From §bNatural Gas§r it can produce §bUnsaturated Hydrocarbons§r, commonly used for §6Rubber§r and §6Bakelite§r, and even produce §bBTX§r via the use of §bHigh-Performance Solvent§r. As a utility, it can also alkylate §bPetroleum Gas§r into §bLight Oil§r.
 
 # Quest: Microgravity Algae Film
 betterquesting.quest.nfgxBE2jRE2InE-vMVEfRQ.name=Microgravity Algae Film
@@ -1343,8 +1339,8 @@ betterquesting.quest.ZOQcs7g_SfylNX4zb39yGQ.desc=§3Conveyor Boxers§r package a
 betterquesting.quest.c3lGUKvHQpOUIBi6XoRoLQ.name=Combinator Funnel
 betterquesting.quest.c3lGUKvHQpOUIBi6XoRoLQ.desc=The Combinator Funnel is used to perform crafts of the same item in a 3x3 or 2x2 grid. It becomes extremely useful for §eBedrock Ore Processing§r.
 
-# Quest: New Quest
-betterquesting.quest.c4m68dpfQXyH4q-ilwLZcQ.name=New Quest
+# Quest: Arc Furnace Automation
+betterquesting.quest.c4m68dpfQXyH4q-ilwLZcQ.name=Arc Furnace Automation
 betterquesting.quest.c4m68dpfQXyH4q-ilwLZcQ.desc=§2This quest serves as a guide on how to precisely input items in an arc furnace as not to waste electrode durability.§r%n%n§2By SkippyPlaysMC§r%n%nAssuming no upgrades are inserted in the §3Arc Furnace§r, there are exactly 20 slots available for items. To start, route all input items into a §3Conveyor Boxer§r which will send items into a §3Conveyor Unboxer§r. Adding speed ejection and stack ejection upgrades to the unboxer is highly recommended as so the items are inputed fast enough.%n%n[img height=1000]betterquesting:textures/BQ_ARC1.png[/img]%n%nPlace a §3Redstone-Over-Radio Item Counter§r on one side of the boxer, set the item filter and give it an ID.%n%n[img height=1000]betterquesting:textures/BQ_ARC2.png[/img]%n%nThen place a Redstone-Over-Radio Logic Receiver, give it the correct ID, and set it to emit redstone when item count is 20.%n%n[img height=1000]betterquesting:textures/BQ_ARC3.png[/img]%n%nMake sure that the boxer has its mode set to redstone.%n%n[img height=1000]betterquesting:textures/BQ_ARC4.png[/img]
 
 # Quest: Redstone-Over Radio
