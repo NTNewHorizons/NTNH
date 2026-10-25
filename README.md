@@ -21,7 +21,7 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
 
 <h2 style="text-align:center">🌟 Our Amazing Contributors 🌟</h2>
 
-<table><tr><td align="center"><a href="https://github.com/Bufka2011"><img src="https://avatars.githubusercontent.com/u/85364803?v=4" width="50" alt="Bufka2011" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>Bufka2011</b></sub><br/><span>4201 🏆</span></td>
+<table><tr><td align="center"><a href="https://github.com/Bufka2011"><img src="https://avatars.githubusercontent.com/u/85364803?v=4" width="50" alt="Bufka2011" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>Bufka2011</b></sub><br/><span>4204 🏆</span></td>
 <td align="center"><a href="https://github.com/BufkaSecond"><img src="https://avatars.githubusercontent.com/u/190631137?v=4" width="50" alt="BufkaSecond" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>BufkaSecond</b></sub><br/><span>456 🏆</span></td>
 <td align="center"><a href="https://github.com/AniviaFlome"><img src="https://avatars.githubusercontent.com/u/66728147?v=4" width="50" alt="AniviaFlome" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>AniviaFlome</b></sub><br/><span>92 🏆</span></td>
 <td align="center"><a href="https://github.com/THOMASS47"><img src="https://avatars.githubusercontent.com/u/63131669?v=4" width="50" alt="THOMASS47" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>THOMASS47</b></sub><br/><span>64 🏆</span></td>
@@ -54,7 +54,7 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
           <br />
           <sub><b>Bufka2011</b></sub></a>
         <br />
-        <sub><b>920346 words</b></sub>
+        <sub><b>944494 words</b></sub>
       </td>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/BufkaSecond"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/16895253/medium/0b29547a406506ea79d4bbd68608d6ed.png" />
@@ -68,7 +68,7 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
           <br />
           <sub><b>igrokkk_</b></sub></a>
         <br />
-        <sub><b>37929 words</b></sub>
+        <sub><b>41153 words</b></sub>
       </td>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/GamerRabbit22"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17800493/medium/3dbe0ae2f49f1047180c8b2511069764.png" />
@@ -415,6 +415,15 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
         <sub><b>217 words</b></sub>
       </td>
       <td align="center" valign="top">
+        <a href="https://crowdin.com/profile/serafim719"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17949569/medium/4c717003cbae95950f884af95fe33ad9.jpeg" />
+          <br />
+          <sub><b>Зачем Вам</b></sub>
+          <br />
+          <sub><b>(serafim719)</b></sub></a>
+        <br />
+        <sub><b>208 words</b></sub>
+      </td>
+      <td align="center" valign="top">
         <a href="https://crowdin.com/profile/gustawj21"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17808885/medium/41a38de3530925ca564594a43378a165.jpeg" />
           <br />
           <sub><b>Gustaw</b></sub>
@@ -439,6 +448,8 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
         <br />
         <sub><b>143 words</b></sub>
       </td>
+    </tr>
+    <tr>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/porbis-dev"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17924105/medium/42897a540d79675542b91a5f589c4e7d.png" />
           <br />
@@ -447,17 +458,6 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
           <sub><b>(porbis-dev)</b></sub></a>
         <br />
         <sub><b>127 words</b></sub>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" valign="top">
-        <a href="https://crowdin.com/profile/Alex6_"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/14881780/medium/b951ed53df012b560385ee8b96e8af2d.jpg" />
-          <br />
-          <sub><b>Alex6</b></sub>
-          <br />
-          <sub><b>(Alex6_)</b></sub></a>
-        <br />
-        <sub><b>126 words</b></sub>
       </td>
     </tr>
   </tbody>
