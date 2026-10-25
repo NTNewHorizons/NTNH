@@ -124,7 +124,9 @@ jobs:
         run: go install github.com/packwiz/packwiz@${PACKWIZ_VERSION}
 
       - name: Build release packages
-        run: ./build-packwiz.sh
+        run: |
+          python3 dev/test-package-release.py
+          ./build-packwiz.sh
 
       - name: Verify package names
         env:
@@ -133,6 +135,7 @@ jobs:
           test -f "dist/NTNH-$VERSION-CurseForge.zip"
           test -f "dist/NTNH-$VERSION-Modrinth.mrpack"
           test -f "dist/NTNH-$VERSION-Native.zip"
+          test -f "dist/NTNH-$VERSION-MMC_Prism.zip"
 
       - name: Upload workflow artifacts
         uses: actions/upload-artifact@v4
@@ -142,6 +145,7 @@ jobs:
             dist/NTNH-${{ steps.version.outputs.version }}-CurseForge.zip
             dist/NTNH-${{ steps.version.outputs.version }}-Modrinth.mrpack
             dist/NTNH-${{ steps.version.outputs.version }}-Native.zip
+            dist/NTNH-${{ steps.version.outputs.version }}-MMC_Prism.zip
           if-no-files-found: error
 
       # Use the default GITHUB_TOKEN rather than a PAT for the actual
@@ -169,6 +173,7 @@ jobs:
             "dist/NTNH-$VERSION-CurseForge.zip"
             "dist/NTNH-$VERSION-Modrinth.mrpack"
             "dist/NTNH-$VERSION-Native.zip"
+            "dist/NTNH-$VERSION-MMC_Prism.zip"
           )
 
           gh release create "$TAG" \
