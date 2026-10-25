@@ -22,6 +22,7 @@
   * Airplane
 * Added the ability to hold backspace in the qb search bar
 * Added colored AE2 interfaces textures
+* Added a recipe to craft dense smart ME cables from 4 smart cables (#207)
 * Added fishing handler to NEI
 * Added new barrel recipes and upgrades
 * Backported modern wither spawning behavior
