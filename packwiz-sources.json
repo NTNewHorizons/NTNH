@@ -85,10 +85,10 @@
     "metafile": "mods/asielib.pw.toml"
   },
   {
-    "path": "mods/BaublesExpanded-2.2.25-GTNH.jar",
+    "path": "mods/BaublesExpanded-2.2.26-GTNH.jar",
     "source": "gtnh",
-    "url": "https://github.com/GTNewHorizons/Baubles-Expanded/releases/download/2.2.25-GTNH/BaublesExpanded-2.2.25-GTNH.jar",
-    "sha256": "942f2a9e7d97582a9b1ec9302f1fa3bb86cc547f2873aa902dc44aa919f7ceee",
+    "url": "https://github.com/GTNewHorizons/Baubles-Expanded/releases/download/2.2.26-GTNH/BaublesExpanded-2.2.26-GTNH.jar",
+    "sha256": "554624dd865489d852dd463abe17cebc546961f1a288a78f5712aeb6d8253d8d",
     "side": "both",
     "metafile": "mods/baubles-expanded.pw.toml",
     "project": "GTNewHorizons/Baubles-Expanded"
@@ -334,6 +334,17 @@
     "metafile": "mods/fast-leaf-decay.pw.toml"
   },
   {
+    "path": "mods/fentlib-0.0.55-curseforge.jar",
+    "source": "curseforge",
+    "url": "https://edge.forgecdn.net/files/8821/564/fentlib-0.0.55-curseforge.jar",
+    "sha256": "1a376df9536a70c26221cf59d1ed1fa504809e49e91d517c7d954eeb35e879a4",
+    "side": "both",
+    "metafile": "mods/fentlib.pw.toml",
+    "project-id": 1482661,
+    "file-id": 8821564,
+    "hold": "angellib 1.0.0 is a breaking rename (org.fentanylsolutions.fentlib -> industries.angelic.angellib); minemoticon 51385c9-snapshot and anextratouch 0.0.12 still link the old namespace and no updated builds exist yet. Unhold once both mods ship angellib-compatible builds."
+  },
+  {
     "path": "mods/FoamFix-1.7.10-universal-1.0.4.jar",
     "source": "modrinth",
     "url": "https://cdn.modrinth.com/data/jupr7Bf5/versions/H4Y7YwTd/FoamFix-1.7.10-universal-1.0.4.jar",
@@ -381,10 +392,10 @@
     "project": "NTNewHorizons/Hbm-s-Nuclear-Tech-GIT"
   },
   {
-    "path": "mods/HardcoreEnderExpansion-1.12.28-GTNH.jar",
+    "path": "mods/HardcoreEnderExpansion-1.12.29-GTNH.jar",
     "source": "gtnh",
-    "url": "https://github.com/GTNewHorizons/Hardcore-Ender-Expansion/releases/download/1.12.28-GTNH/HardcoreEnderExpansion-1.12.28-GTNH.jar",
-    "sha256": "4cf7bf8e87ea39e0476771e7d20e93a378db83ca514d3454e3df3df37116321b",
+    "url": "https://github.com/GTNewHorizons/Hardcore-Ender-Expansion/releases/download/1.12.29-GTNH/HardcoreEnderExpansion-1.12.29-GTNH.jar",
+    "sha256": "3611c72a922df5b96e1f60265d45ae438f3802905c45cda926f254c242b608e3",
     "side": "both",
     "metafile": "mods/hardcore-ender-expansion.pw.toml",
     "project": "GTNewHorizons/Hardcore-Ender-Expansion"
@@ -553,19 +564,19 @@
     "metafile": "mods/no-more-recipe-conflict.pw.toml"
   },
   {
-    "path": "mods/NotEnoughEnergistics-1.7.48.jar",
+    "path": "mods/NotEnoughEnergistics-1.7.49.jar",
     "source": "gtnh",
-    "url": "https://github.com/GTNewHorizons/NotEnoughEnergistics/releases/download/1.7.48/NotEnoughEnergistics-1.7.48.jar",
-    "sha256": "731c31a2a9087cf74d22b719066dfda5103c401bf3de60c034b93fd60460ef11",
+    "url": "https://github.com/GTNewHorizons/NotEnoughEnergistics/releases/download/1.7.49/NotEnoughEnergistics-1.7.49.jar",
+    "sha256": "3e452d916673bb8b5e05693db6d8fbdaa2ac98e97456016a7e4d5ef0d9382ea5",
     "side": "both",
     "metafile": "mods/notenoughenergistics.pw.toml",
     "project": "GTNewHorizons/NotEnoughEnergistics"
   },
   {
-    "path": "mods/NotEnoughItems-2.8.161-GTNH.jar",
+    "path": "mods/NotEnoughItems-2.8.167-GTNH.jar",
     "source": "gtnh",
-    "url": "https://github.com/GTNewHorizons/NotEnoughItems/releases/download/2.8.161-GTNH/NotEnoughItems-2.8.161-GTNH.jar",
-    "sha256": "bbf322fcb3e7d662460624a585b5a65e508b93740710526e637f7ccb713c09ab",
+    "url": "https://github.com/GTNewHorizons/NotEnoughItems/releases/download/2.8.167-GTNH/NotEnoughItems-2.8.167-GTNH.jar",
+    "sha256": "fab35cd516acc1f8dad98cf89082e4b93a411cee3b28bbc8814895e3bae5a9fc",
     "side": "both",
     "metafile": "mods/notenoughitems.pw.toml",
     "project": "GTNewHorizons/NotEnoughItems"
@@ -618,13 +629,13 @@
     "metafile": "mods/openfm.pw.toml"
   },
   {
-    "path": "mods/OpenModsLibs-0.10.14.jar",
+    "path": "mods/OpenModsLibs-0.10.15.jar",
     "source": "gtnh",
-    "url": "https://github.com/GTNewHorizons/OpenModsLib/releases/download/0.10.14/OpenModsLibs-0.10.14.jar",
-    "project": "GTNewHorizons/OpenModsLib",
-    "sha256": "050c5faa4683bee04aa51ac5763f30d61438b4ac01b0ae9b23f0171b4688985d",
+    "url": "https://github.com/GTNewHorizons/OpenModsLib/releases/download/0.10.15/OpenModsLibs-0.10.15.jar",
+    "sha256": "b9bd3adacea71cb2c4c52143d513d2570fd33e9d5ac7a071c7e94edbfb1ed283",
     "side": "both",
-    "metafile": "mods/openmodslib.pw.toml"
+    "metafile": "mods/openmodslib.pw.toml",
+    "project": "GTNewHorizons/OpenModsLib"
   },
   {
     "path": "mods/Opis-1.4.12-mapless.jar",
@@ -656,10 +667,10 @@
     "metafile": "mods/pams-harvestcraft.pw.toml"
   },
   {
-    "path": "mods/ProjRed-4.12.47-GTNH.jar",
+    "path": "mods/ProjRed-4.12.48-GTNH.jar",
     "source": "gtnh",
-    "url": "https://github.com/GTNewHorizons/ProjectRed/releases/download/4.12.47-GTNH/ProjRed-4.12.47-GTNH.jar",
-    "sha256": "642ed242325bf9e5b097ade572162d8fbec387c7a26c5951defdf4a4fd22ee5a",
+    "url": "https://github.com/GTNewHorizons/ProjectRed/releases/download/4.12.48-GTNH/ProjRed-4.12.48-GTNH.jar",
+    "sha256": "d84b6bdee77142bee7809b139061928b6ff72ce9b0fad2239294773d11dd91eb",
     "side": "both",
     "metafile": "mods/projectred.pw.toml",
     "project": "GTNewHorizons/ProjectRed"
@@ -683,10 +694,10 @@
     "metafile": "mods/realistic-terrain-generation.pw.toml"
   },
   {
-    "path": "mods/RandomThings-2.7.11.jar",
+    "path": "mods/RandomThings-2.7.13.jar",
     "source": "gtnh",
-    "url": "https://github.com/GTNewHorizons/Random-Things/releases/download/2.7.11/RandomThings-2.7.11.jar",
-    "sha256": "b2d197c3e2a1cd82ba58baa983903e07b61dee24cfaccbe7e722602ac7d2feb9",
+    "url": "https://github.com/GTNewHorizons/Random-Things/releases/download/2.7.13/RandomThings-2.7.13.jar",
+    "sha256": "0ec3b49ac0b0a0a3cbf8463115f1e3a92188c37d685828978b243d4cbdd465d3",
     "side": "both",
     "metafile": "mods/random-things.pw.toml",
     "project": "GTNewHorizons/Random-Things"
@@ -759,19 +770,19 @@
     "metafile": "mods/specialai.pw.toml"
   },
   {
-    "path": "mods/SpecialMobs-3.7.9.jar",
+    "path": "mods/SpecialMobs-3.7.10.jar",
     "source": "gtnh",
-    "url": "https://github.com/GTNewHorizons/SpecialMobs/releases/download/3.7.9/SpecialMobs-3.7.9.jar",
-    "sha256": "80f97fc3f3094277346abc29269517a018d1c00a642d60a4c1250898e1cd332c",
+    "url": "https://github.com/GTNewHorizons/SpecialMobs/releases/download/3.7.10/SpecialMobs-3.7.10.jar",
+    "sha256": "9097cc21fe5956cdba704edff7b2b3d38a1b72a401b066f419d435ce25a786ad",
     "side": "both",
     "metafile": "mods/specialmobs.pw.toml",
     "project": "GTNewHorizons/SpecialMobs"
   },
   {
-    "path": "mods/SpiceOfLife-2.2.11-carrot.jar",
+    "path": "mods/SpiceOfLife-2.2.12-carrot.jar",
     "source": "gtnh",
-    "url": "https://github.com/GTNewHorizons/SpiceOfLife/releases/download/2.2.11-carrot/SpiceOfLife-2.2.11-carrot.jar",
-    "sha256": "a63b4e9ea7912bc1c53e90bf08df6db5f2cd2f8cced6627b4ba797b9a33770c1",
+    "url": "https://github.com/GTNewHorizons/SpiceOfLife/releases/download/2.2.12-carrot/SpiceOfLife-2.2.12-carrot.jar",
+    "sha256": "4f44a95eccb9435089dc9c9cf23a3a68342c9863a53d79f6866deeabdbfc4cba",
     "side": "both",
     "metafile": "mods/spiceoflife.pw.toml",
     "project": "GTNewHorizons/SpiceOfLife"
@@ -834,13 +845,13 @@
     "metafile": "mods/vending-block-revived.pw.toml"
   },
   {
-    "path": "mods/WirelessCraftingTerminal-1.12.16.jar",
+    "path": "mods/WirelessCraftingTerminal-1.12.17.jar",
     "source": "gtnh",
-    "url": "https://github.com/GTNewHorizons/WirelessCraftingTerminal/releases/download/1.12.16/WirelessCraftingTerminal-1.12.16.jar",
-    "project": "GTNewHorizons/WirelessCraftingTerminal",
-    "sha256": "4bbce873a01e867c91e9b84e2f32e00852a6e50d37e707fdebda1e835017cf56",
+    "url": "https://github.com/GTNewHorizons/WirelessCraftingTerminal/releases/download/1.12.17/WirelessCraftingTerminal-1.12.17.jar",
+    "sha256": "334216e53507d8a02742f710acf896be664d593e8093f797d293ba737f6f355f",
     "side": "both",
-    "metafile": "mods/wirelesscraftingterminal.pw.toml"
+    "metafile": "mods/wirelesscraftingterminal.pw.toml",
+    "project": "GTNewHorizons/WirelessCraftingTerminal"
   },
   {
     "path": "mods/XaerosWorldMap_1.14.1.33_Forge_1.7.10.jar",
@@ -880,10 +891,10 @@
     "metafile": "mods/adventure-backpack.pw.toml"
   },
   {
-    "path": "mods/ae2fc-1.5.114-gtnh.jar",
+    "path": "mods/ae2fc-1.5.116-gtnh.jar",
     "source": "gtnh",
-    "url": "https://github.com/GTNewHorizons/AE2FluidCraft-Rework/releases/download/1.5.114-gtnh/ae2fc-1.5.114-gtnh.jar",
-    "sha256": "e8ae08b8146f427774a6546d6a41c7a79f48b66ae32132eea0d715c33bdd0553",
+    "url": "https://github.com/GTNewHorizons/AE2FluidCraft-Rework/releases/download/1.5.116-gtnh/ae2fc-1.5.116-gtnh.jar",
+    "sha256": "ce71695d3ce1c5369cfe5e3af008f86d6a8efa76948a9484ec914214565bd760",
     "side": "both",
     "metafile": "mods/ae2fluidcraft-rework.pw.toml",
     "project": "GTNewHorizons/AE2FluidCraft-Rework"
@@ -917,10 +928,10 @@
     "version": "JYIJrPLm"
   },
   {
-    "path": "mods/angelica-2.2.33.jar",
+    "path": "mods/angelica-2.2.37.jar",
     "source": "gtnh",
-    "url": "https://github.com/GTNewHorizons/Angelica/releases/download/2.2.33/angelica-2.2.33.jar",
-    "sha256": "3d4cf526d4bbb86ca347ec03a24397d48c2b91e73ffd4f61d03447dc998c2b18",
+    "url": "https://github.com/GTNewHorizons/Angelica/releases/download/2.2.37/angelica-2.2.37.jar",
+    "sha256": "2125183d9f3c11a401be61e6273e1e813a51e41d892ba035b99cdfdb83e2677b",
     "side": "both",
     "metafile": "mods/angelica.pw.toml",
     "project": "GTNewHorizons/Angelica"
@@ -936,10 +947,10 @@
     "metafile": "mods/fastgelica.pw.toml"
   },
   {
-    "path": "mods/appliedenergistics2-rv3-beta-1086-GTNH.jar",
+    "path": "mods/appliedenergistics2-rv3-beta-1092-GTNH.jar",
     "source": "gtnh",
-    "url": "https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/releases/download/rv3-beta-1086-GTNH/appliedenergistics2-rv3-beta-1086-GTNH.jar",
-    "sha256": "411d1672e21de8ffc24b0e84d9f7baa2998c5f34eb43711a77e0df51234e1665",
+    "url": "https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/releases/download/rv3-beta-1092-GTNH/appliedenergistics2-rv3-beta-1092-GTNH.jar",
+    "sha256": "5167e8e3158722ae5a8f38fcc2bf8ebf850b38e0fb81c40ef7e93c8bb548b40e",
     "side": "both",
     "metafile": "mods/applied-energistics-2-unofficial.pw.toml",
     "project": "GTNewHorizons/Applied-Energistics-2-Unofficial"
@@ -955,14 +966,14 @@
     "metafile": "mods/aqua-acrobatics-legacy-(ragecraft-version).pw.toml"
   },
   {
-    "path": "mods/archaicfix-0.8.0.jar",
+    "path": "mods/archaicfix-0.8.2.jar",
     "source": "modrinth",
-    "url": "https://cdn.modrinth.com/data/xTJanN3v/versions/pHrxpfYF/archaicfix-0.8.0.jar",
-    "mod-id": "xTJanN3v",
-    "version": "pHrxpfYF",
-    "sha256": "15d0de52361ab20057e14c2a0bec7b8614c63bcef1b010490506ea00ae79011e",
+    "url": "https://cdn.modrinth.com/data/xTJanN3v/versions/HagnT2ce/archaicfix-0.8.2.jar",
+    "sha256": "cf51b3af5b948ec963c8dbfb26d25340bbb66c71e2c857984183de718e3e2f43",
     "side": "both",
-    "metafile": "mods/archaicfix.pw.toml"
+    "metafile": "mods/archaicfix.pw.toml",
+    "mod-id": "xTJanN3v",
+    "version": "HagnT2ce"
   },
   {
     "path": "mods/emvforge-1.7.10-1.3.0.jar",
@@ -1233,16 +1244,6 @@
     "metafile": "mods/fastcraft.pw.toml"
   },
   {
-    "path": "mods/fentlib-0.0.55-curseforge.jar",
-    "source": "curseforge",
-    "url": "https://edge.forgecdn.net/files/8821/564/fentlib-0.0.55-curseforge.jar",
-    "sha256": "1a376df9536a70c26221cf59d1ed1fa504809e49e91d517c7d954eeb35e879a4",
-    "side": "both",
-    "metafile": "mods/fentlib.pw.toml",
-    "project-id": 1482661,
-    "file-id": 8821564
-  },
-  {
     "path": "mods/findit-1.4.7.jar",
     "source": "gtnh",
     "url": "https://github.com/GTNewHorizons/FindIt/releases/download/1.4.7/findit-1.4.7.jar",
@@ -1299,19 +1300,19 @@
     "project": "GTNewHorizons/GTNHLib"
   },
   {
-    "path": "mods/guidenh-1.3.47.jar",
+    "path": "mods/guidenh-1.3.52.jar",
     "source": "gtnh",
-    "url": "https://github.com/GTNewHorizons/GuideNH/releases/download/1.3.47/guidenh-1.3.47.jar",
-    "sha256": "5bcfdbb57fa8663213f9c85e4e05b3252e9c8e8de1d114db33c206a670d18924",
+    "url": "https://github.com/GTNewHorizons/GuideNH/releases/download/1.3.52/guidenh-1.3.52.jar",
+    "sha256": "65b8b378dc2b8f3a66eada5ce125d38a7afb091f83ad86db4b316074878bc313",
     "side": "both",
     "metafile": "mods/guidenh.pw.toml",
     "project": "GTNewHorizons/GuideNH"
   },
   {
-    "path": "mods/hodgepodge-2.7.216.jar",
+    "path": "mods/hodgepodge-2.7.219.jar",
     "source": "gtnh",
-    "url": "https://github.com/GTNewHorizons/Hodgepodge/releases/download/2.7.216/hodgepodge-2.7.216.jar",
-    "sha256": "65fd4da1fde675e7bc18df674626958bd90c39972ee53b232c931d51f4ff82e5",
+    "url": "https://github.com/GTNewHorizons/Hodgepodge/releases/download/2.7.219/hodgepodge-2.7.219.jar",
+    "sha256": "0bf958115463c9841610e2d0183dfde26db46e3a7756b8eb88740e382eaf1184",
     "side": "both",
     "metafile": "mods/hodgepodge.pw.toml",
     "project": "GTNewHorizons/Hodgepodge"
@@ -1345,10 +1346,10 @@
     "metafile": "mods/itlt.pw.toml"
   },
   {
-    "path": "mods/matter-manipulator-0.1.68-GTNH.jar",
+    "path": "mods/matter-manipulator-0.1.74-GTNH.jar",
     "source": "gtnh",
-    "url": "https://github.com/GTNewHorizons/MatterManipulator/releases/download/0.1.68-GTNH/matter-manipulator-0.1.68-GTNH.jar",
-    "sha256": "6a706a9a1f1176b0f330d80c82f835e99052af852697df21b8cd0e0814fecc2f",
+    "url": "https://github.com/GTNewHorizons/MatterManipulator/releases/download/0.1.74-GTNH/matter-manipulator-0.1.74-GTNH.jar",
+    "sha256": "6f4bed2ea63718b2864c7d99bc83b5fbd374d91140bc9e6fb2a8ac1b63c33dc4",
     "side": "both",
     "metafile": "mods/mattermanipulator.pw.toml",
     "project": "GTNewHorizons/MatterManipulator"
@@ -1391,10 +1392,10 @@
     "metafile": "mods/modularui.pw.toml"
   },
   {
-    "path": "mods/modularui2-2.3.92-1.7.10.jar",
+    "path": "mods/modularui2-2.3.93-1.7.10.jar",
     "source": "gtnh",
-    "url": "https://github.com/GTNewHorizons/ModularUI2/releases/download/2.3.92-1.7.10/modularui2-2.3.92-1.7.10.jar",
-    "sha256": "b6fb3b9c33d2b059ab7e9af75fea255f52f9f2fb752c6cc27bf3616ebd9b9e86",
+    "url": "https://github.com/GTNewHorizons/ModularUI2/releases/download/2.3.93-1.7.10/modularui2-2.3.93-1.7.10.jar",
+    "sha256": "0aa25185e01556c8b4bd2ee86885240694f4ada26a7b9933319ff799da2984b8",
     "side": "both",
     "metafile": "mods/modularui2.pw.toml",
     "project": "GTNewHorizons/ModularUI2"
@@ -1501,10 +1502,10 @@
     "project": "GTNewHorizons/StructureCompat"
   },
   {
-    "path": "mods/structurelib-1.4.46.jar",
+    "path": "mods/structurelib-1.4.47.jar",
     "source": "gtnh",
-    "url": "https://github.com/GTNewHorizons/StructureLib/releases/download/1.4.46/structurelib-1.4.46.jar",
-    "sha256": "e8460e006af869a465b938f89fcb61dc5e75d3b14a3f766f4f3c23e01b2d1b7a",
+    "url": "https://github.com/GTNewHorizons/StructureLib/releases/download/1.4.47/structurelib-1.4.47.jar",
+    "sha256": "b434f3fa8be3e3f9d27bbba028a6284654bead5d4a5eb5ada88b5116187b9d90",
     "side": "both",
     "metafile": "mods/structurelib.pw.toml",
     "project": "GTNewHorizons/StructureLib"

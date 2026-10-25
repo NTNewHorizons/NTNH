@@ -1,9 +1,14 @@
-name = "OpenModsLibs-0.10.14"
-filename = "OpenModsLibs-0.10.14.jar"
+name = "OpenModsLibs-0.10.15"
+filename = "OpenModsLibs-0.10.15.jar"
 side = "both"
 pin = true
 
 [download]
 hash-format = "sha256"
-hash = "050c5faa4683bee04aa51ac5763f30d61438b4ac01b0ae9b23f0171b4688985d"
-url = "https://github.com/GTNewHorizons/OpenModsLib/releases/download/0.10.14/OpenModsLibs-0.10.14.jar"
+hash = "b9bd3adacea71cb2c4c52143d513d2570fd33e9d5ac7a071c7e94edbfb1ed283"
+url = "https://github.com/GTNewHorizons/OpenModsLib/releases/download/0.10.15/OpenModsLibs-0.10.15.jar"
+
+[update.github]
+slug = "GTNewHorizons/OpenModsLib"
+tag = "0.10.15"
+regex = "^OpenModsLibs\\-.+\\.jar$"
