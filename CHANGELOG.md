@@ -82,6 +82,15 @@
   * Ilmenite can also be arc smelted directly for lower efficiency but faster output (liquid smelting mode also yields iron byproduct)
 * Pneumatic and exhaust pipe anchors
 * Crafting Tree feature in NEI
+* Louis the railgun turret
+* Conveyor-like placement for fluid ducts and cables
+* Conveyor combinator
+  * Just like a regular combinator, but conveyor
+* Machine and fluid network overlays
+  * They just tell you some info like:
+  * How much energy and fluids is there in chemical plant
+  * How big is the fluid pipe network
+* RBMK and PWR fuel rods neutron flow function display
 
 
 
