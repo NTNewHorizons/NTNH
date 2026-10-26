@@ -21,7 +21,7 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
 
 <h2 style="text-align:center">🌟 Our Amazing Contributors 🌟</h2>
 
-<table><tr><td align="center"><a href="https://github.com/Bufka2011"><img src="https://avatars.githubusercontent.com/u/85364803?v=4" width="50" alt="Bufka2011" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>Bufka2011</b></sub><br/><span>4204 🏆</span></td>
+<table><tr><td align="center"><a href="https://github.com/Bufka2011"><img src="https://avatars.githubusercontent.com/u/85364803?v=4" width="50" alt="Bufka2011" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>Bufka2011</b></sub><br/><span>4210 🏆</span></td>
 <td align="center"><a href="https://github.com/BufkaSecond"><img src="https://avatars.githubusercontent.com/u/190631137?v=4" width="50" alt="BufkaSecond" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>BufkaSecond</b></sub><br/><span>456 🏆</span></td>
 <td align="center"><a href="https://github.com/AniviaFlome"><img src="https://avatars.githubusercontent.com/u/66728147?v=4" width="50" alt="AniviaFlome" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>AniviaFlome</b></sub><br/><span>92 🏆</span></td>
 <td align="center"><a href="https://github.com/THOMASS47"><img src="https://avatars.githubusercontent.com/u/63131669?v=4" width="50" alt="THOMASS47" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>THOMASS47</b></sub><br/><span>64 🏆</span></td>
@@ -68,7 +68,7 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
           <br />
           <sub><b>igrokkk_</b></sub></a>
         <br />
-        <sub><b>41153 words</b></sub>
+        <sub><b>49691 words</b></sub>
       </td>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/GamerRabbit22"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17800493/medium/3dbe0ae2f49f1047180c8b2511069764.png" />
@@ -194,6 +194,15 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
         <sub><b>1363 words</b></sub>
       </td>
       <td align="center" valign="top">
+        <a href="https://crowdin.com/profile/serafim719"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17949569/medium/4c717003cbae95950f884af95fe33ad9.jpeg" />
+          <br />
+          <sub><b>Зачем Вам</b></sub>
+          <br />
+          <sub><b>(serafim719)</b></sub></a>
+        <br />
+        <sub><b>2566 words</b></sub>
+      </td>
+      <td align="center" valign="top">
         <a href="https://crowdin.com/profile/Daxtarah"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17783017/medium/d7511b473da842d2fbf482be32a33b91.png" />
           <br />
           <sub><b>Daxtarah</b></sub></a>
@@ -209,6 +218,8 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
         <br />
         <sub><b>1091 words</b></sub>
       </td>
+    </tr>
+    <tr>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/ItsNeverLight"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/16662049/medium/083e47975b1ca499c068c40cdd65caa7.png" />
           <br />
@@ -218,8 +229,6 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
         <br />
         <sub><b>1071 words</b></sub>
       </td>
-    </tr>
-    <tr>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/rooto"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17746689/medium/f3028a63bae2cb2744d5aabf7d1a0460.png" />
           <br />
@@ -270,6 +279,8 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
         <br />
         <sub><b>759 words</b></sub>
       </td>
+    </tr>
+    <tr>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/Q-Cold"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17768555/medium/db0502d3deb1defd7d857d2244fe79a7.png" />
           <br />
@@ -279,8 +290,6 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
         <br />
         <sub><b>693 words</b></sub>
       </td>
-    </tr>
-    <tr>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/FOlkvangrField"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17559874/medium/8a8eba2951e60af080fab42d8d076c8a.png" />
           <br />
@@ -327,6 +336,8 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
         <br />
         <sub><b>547 words</b></sub>
       </td>
+    </tr>
+    <tr>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/fosterchild"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17924581/medium/3fceb5ab254e47d5f2653acbf5336a25.png" />
           <br />
@@ -334,8 +345,6 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
         <br />
         <sub><b>540 words</b></sub>
       </td>
-    </tr>
-    <tr>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/Suciiiiii"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17798435/medium/9f9b771efa6800629c89413c5d197118.jpeg" />
           <br />
@@ -384,6 +393,8 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
         <br />
         <sub><b>275 words</b></sub>
       </td>
+    </tr>
+    <tr>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/nuuh2_0"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17830683/medium/c50d392dcc1334d8612fb7e53d81ed19_default.png" />
           <br />
@@ -391,8 +402,6 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
         <br />
         <sub><b>431 words</b></sub>
       </td>
-    </tr>
-    <tr>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/Alchar1"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/16070608/medium/4ebca41fad482e8b72c8133e31dc72d7_default.png" />
           <br />
@@ -413,15 +422,6 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
           <sub><b>_Savik</b></sub></a>
         <br />
         <sub><b>217 words</b></sub>
-      </td>
-      <td align="center" valign="top">
-        <a href="https://crowdin.com/profile/serafim719"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17949569/medium/4c717003cbae95950f884af95fe33ad9.jpeg" />
-          <br />
-          <sub><b>Зачем Вам</b></sub>
-          <br />
-          <sub><b>(serafim719)</b></sub></a>
-        <br />
-        <sub><b>208 words</b></sub>
       </td>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/gustawj21"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17808885/medium/41a38de3530925ca564594a43378a165.jpeg" />
