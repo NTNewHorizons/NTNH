@@ -34,7 +34,7 @@ betterquesting.quest.4d7s5-1MQxyI3YcrDSL98g.name=Estructuras Abandonadas
 betterquesting.quest.4d7s5-1MQxyI3YcrDSL98g.desc=Las estructuras se generan a lo largo del mundo y están entre las mejores fuentes de recursos tempranos. Saquearlas antes de invertir fuertemente en producción puede salvarte una cantidad significativa de tiempo y recursos.%n%n§2La exploración rinde temprano - checa tus alrededores antes de farmear recursos que puede que encuentres gratis.§r
 
 # Quest: Flare Stack
-betterquesting.quest.4i9qqJhbSgC0UQ8pB9PD4g.name=Chimenea de Antorcha
+betterquesting.quest.4i9qqJhbSgC0UQ8pB9PD4g.name=Antorcha de quemado
 betterquesting.quest.4i9qqJhbSgC0UQ8pB9PD4g.desc=La §3Chimenea de Antorcha§r es un generador que produce energía quemando líquidos y gases inflamables. Cualquier fluido marcado como inflamable puede servir de combustible - suminístralo a través de tuberías o directamente con contenedores.%n%nOperarla requiere tres pasos. Primero, llena él deposito interno (capacidad: §e64,000 mB§r) con combustible. Segundo, abre la §6válvula de flujo§r en la parte superior de la sección central para pasar combustible del depósito al sistema de combustión. Tercero, enciende el interruptor de §6ignición§r en la parte inferior de la sección central para quemar el combustible y comenzar a generar energía.%n%nLa eficiencia es baja: los gases se queman al §e50%%§r y los líquidos solo al §e10%%§r. La producción también varía según el tipo de combustible.%n%nDos mejoras están disponibles: la §6Mejora de Velocidad§r incrementa el consumo, y la §6Mejora de Efectividad§r mejora la eficiencia del combustible.
 
 # Quest: Batteries
@@ -840,8 +840,8 @@ betterquesting.quest.MFweFzQDQg2L-9X4_I8o-Q.name=Sellos de desh
 betterquesting.quest.MFweFzQDQg2L-9X4_I8o-Q.desc=Los §6Sellos de desh§r tienen durabilidad infinita, perfectos para automatizar.
 
 # Quest: Chlorophyte
-betterquesting.quest.PszZViltQjCHNmKB7QJcfA.name=Chlorophyte
-betterquesting.quest.PszZViltQjCHNmKB7QJcfA.desc=El §6Chlorophyte§r es un producto de fusión y se usa en el §3DFC§r y la §6Partícula Digamma§r.
+betterquesting.quest.PszZViltQjCHNmKB7QJcfA.name=Clorofita
+betterquesting.quest.PszZViltQjCHNmKB7QJcfA.desc=La §clorofita§r es un producto de fusión y se usa en el §3DFC§r y la §6Partícula Digamma§r.
 
 # Quest: High-Performance Solvent Bedrock Ore Processing
 betterquesting.quest.QusK-8T-TGmBWETwmxosJQ.name=Procesado de menas de piedra base con disolvente de alto rendimiento
@@ -868,7 +868,7 @@ betterquesting.quest.g3S9-75wTGyQKmZaQTZl5Q.name=PUREX
 betterquesting.quest.g3S9-75wTGyQKmZaQTZl5Q.desc=La §3PUREX§r es una máquina que reprocesa combustible gastado en varios materiales. La mayoría de recetas necesitan §bÁcido nítrico§r y §bQueroseno§r para funcionar.%n%nEl §6Schrabidium§r también puede sacarse de ciertas recetas que necesitan §bÁcido schrabídico§r. El schrabidium obtenido dobla el usado para hacer el ácido.
 
 # Quest: Chicago Pile
-betterquesting.quest.g8IVppPpTceY55PbNbceJQ.name=Chicago Pile
+betterquesting.quest.g8IVppPpTceY55PbNbceJQ.name=Pila de Chicago
 betterquesting.quest.g8IVppPpTceY55PbNbceJQ.desc=La §3Chicago Pile§r es un reactor reproductor modular de baja tecnología sin GUI que transmuta §6Uranio natural§r en isótopos de plutonio como §6Plutonio-239§r y §6Plutonio de grado reactor§r por bombardeo de neutrones. Funciona a mano o por §dRedstone por radio§r; los §3Cargadores de combustible de Chicago Pile§r, §3Ventilaciones de Chicago Pile§r y §3Barras de control de Chicago Pile§r pueden automatizarse con Redstone por radio.%n%nConstruye un prisma rectangular lleno de §6Ladrillos de grafito de Chicago Pile§r, de mínimo 5x5x5 y máximo 15x15x15. No hace falta que sea un cubo perfecto. Valen formas como 5x7x9 mientras estén dentro de los límites y la forma esté llena. Una vez montado, clic derecho con el §6Taladro de mano§r en un bloque no lateral de borde en una cara lateral para fijar el núcleo y la orientación de canales del reactor. Usar el taladro de mano en otros lados abre agujeros para los mecanismos del reactor. Los canales son líneas rectas perforadas en la pila y no pueden cruzarse.%n%nLa parte delantera aloja las entradas de combustible y la trasera las salidas. Los canales de combustible comparten la orientación de la cara del núcleo y aceptan varillas con un §3Cargador de combustible de Chicago Pile§r en el puerto de entrada; las varillas gastadas salen por el lado opuesto. Los canales de ventilación van perpendiculares al núcleo y necesitan una §3Ventilación de Chicago Pile§r con §bAire comprimido§r a §e1 PU§r. Cada ventilación solo enfría los canales de combustible una manzana por encima o por debajo. Las varillas verticales de control arriba son opcionales y reducen la reactividad entre canales; sirven para una cría más precisa. Ningún mecanismo puede cruzarse con otro.%n%nCada reacción necesita una fuente de neutrones. La §6Fuente de neutrones Ra226Be§r es la inicial; la más potente §6Fuente de neutrones Po210Be§r puede sustituirla después. Las §6Varillas de uranio natural§r crían §6Varillas de plutonio-239§r, que pueden criarse más en §6Varillas de plutonio de grado reactor§r. Dejarlas más allá produce §6Varillas de residuos nucleares§r, que generan calor extremo y riesgo de fusión. Para sacar varillas gastadas sin meter frescas usa §6Varillas de circonio§r. Son inertes y transparentes a los neutrones.%n%n§2Comprueba que la refrigeración funciona antes de cargar combustible. La pila se funde a 800°C, con explosión e incendio extendido.%n%nRequisitos: construye una §3Chicago Pile§r de al menos 5x5x5 con núcleo fijado, pon un §3Cargador de combustible de Chicago Pile§r y una §3Ventilación de Chicago Pile§r y carga una §6Fuente de neutrones Ra226Be§r junto con al menos una §6Varilla de uranio natural§r.%n%n[F1] Para más información.
 
 # Quest: Spent Fuel Pool Drum
@@ -1287,8 +1287,8 @@ betterquesting.quest.xYmNHPDAQkSwXHOow8--4g.desc=Las §6Placas de osmiridio sold
 
 
 ## Quest Line: Tips and Tricks
-betterquesting.questline.MJP4MeAmSTm_Di0iRHoQuw.name=Trucos y consejos
-betterquesting.questline.MJP4MeAmSTm_Di0iRHoQuw.desc=Trucos y consejos. Hace lo que dice.
+betterquesting.questline.MJP4MeAmSTm_Di0iRHoQuw.name=Consejos y trucos
+betterquesting.questline.MJP4MeAmSTm_Di0iRHoQuw.desc=Consejos y trucos. Hace lo que dice.
 
 # Quest: Infinite Water Sources
 betterquesting.quest.xlNjQwC6S3S5o_B7nIciBQ.name=Fuentes de agua infinitas
@@ -1389,7 +1389,7 @@ betterquesting.quest.j9eLuGnhRVWn5uJS_KI5lg.name=Modern Markings
 betterquesting.quest.j9eLuGnhRVWn5uJS_KI5lg.desc=§dModern Markings§r añade decoración de paredes y suelos para todo. Usa el §6Cincel§r en carteles de suelo o pared para cambiar el diseño.
 
 # Quest: Better Builder's Wands
-betterquesting.quest.mPZ8D32cT5WrvlKuPNq90g.name=Better Builder's Wands
+betterquesting.quest.mPZ8D32cT5WrvlKuPNq90g.name=Varitas de Better Builder's
 betterquesting.quest.mPZ8D32cT5WrvlKuPNq90g.desc=La §6Vara de construcción§r pone muchos bloques a la vez, ideal muros y caminos. Mejor material, más bloques.%n%n§2Para cambiar bloques de agua con varas asigna la tecla Cambiar modo de fluido en ajustes.
 
 # Quest: ArchitectureCraft
@@ -1698,7 +1698,7 @@ betterquesting.quest.JVB4_UIXR9SI2W66FWBnMw.desc=¡Ahora un slime del infierno!
 
 # Quest: Time to Kill (Sheep)
 betterquesting.quest.NASNKN6AQ52JY7XDbODGYQ.name=Hora de matar (oveja)
-betterquesting.quest.NASNKN6AQ52JY7XDbODGYQ.desc=Oh no, las pobres ovejas! Esponjosas y rojas, qué pena.
+betterquesting.quest.NASNKN6AQ52JY7XDbODGYQ.desc=¡Oh no, las pobres ovejas! Esponjosas y rojas, qué pena.
 
 # Quest: Time to Kill (Blaze)
 betterquesting.quest.Q70rGIFTR6uMPmobimGr9g.name=Hora de matar (blaze)
