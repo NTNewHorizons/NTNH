@@ -1,0 +1,74 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 7269967256698702332,
+      "questIDLow:4": -6542184124306722279
+    },
+    "1:10": {
+      "questIDHigh:4": 6554964224454575364,
+      "questIDLow:4": -5535314693506225844
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "completion_animation:8": "default",
+      "completion_particle:8": "default",
+      "confetti_icon:10": {
+        "Count:3": 0,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "minecraft:stick"
+      },
+      "countAsQuest:1": 1,
+      "desc:8": "§2This quest serves as a guide on how to precisely input items in an arc furnace as not to waste electrode durability.§r\n\n§2By SkippyPlaysMC§r\n\nAssuming no upgrades are inserted in the §3Arc Furnace§r, there are exactly 20 slots available for items. To start, route all input items into a §3Conveyor Boxer§r which will send items into a §3Conveyor Unboxer§r. Adding speed ejection and stack ejection upgrades to the unboxer is highly recommended as so the items are inputed fast enough.\n\n[img height\u003d1000]betterquesting:textures/BQ_ARC1.png[/img]\n\nPlace a §3Redstone-Over-Radio Item Counter§r on one side of the boxer, set the item filter and give it an ID.\n\n[img height\u003d1000]betterquesting:textures/BQ_ARC2.png[/img]\n\nThen place a Redstone-Over-Radio Logic Receiver, give it the correct ID, and set it to emit redstone when item count is 20.\n\n[img height\u003d1000]betterquesting:textures/BQ_ARC3.png[/img]\n\nMake sure that the boxer has its mode set to redstone.\n\n[img height\u003d1000]betterquesting:textures/BQ_ARC4.png[/img]",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:tile.machine_arc_furnace"
+      },
+      "isMain:1": 0,
+      "isSilent:1": 0,
+      "is_final:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Arc Furnace Automation",
+      "notification_duration:5": -1.0,
+      "notification_effect:3": -1,
+      "notification_fade_in:5": -1.0,
+      "notification_fade_out:5": -1.0,
+      "notification_icon_offset_y:3": -2147483648,
+      "notification_icon_scale:5": -1.0,
+      "notification_pos_x:3": -2147483648,
+      "notification_pos_y:3": -2147483648,
+      "notification_show_icon:8": "default",
+      "notification_style:8": "default",
+      "notification_subtitle:8": "",
+      "notification_subtitle_scale:5": -1.0,
+      "notification_title:8": "",
+      "notification_title_scale:5": -1.0,
+      "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": 8325390934084632956,
+  "questIDLow:4": -8655162420999562895,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

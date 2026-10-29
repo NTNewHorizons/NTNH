@@ -145,6 +145,38 @@ def minecraft_track(value):
     return match.group(1).lower() if match else None
 
 
+def file_brand(filename_stem):
+    match = re.match(r"^(?P<slug>.+?)(?P<sep>[\s_\-._]+)(?P<version>[vV]?[\d_\-._]+)", filename_stem)
+    if not match:
+        return None
+    slug = match["slug"].strip("_-. ")
+    return slug if re.search(r"[A-Za-z]", slug) else None
+
+
+def metafile_rename(source_item, update):
+    """Return a new pinned metafile name when the provider renamed the mod itself.
+
+    Guarded so it only fires when the metadata stem matches the current download
+    identity (for example a mod called fentlib.pw.toml hosting fentlib-0.0.55.jar),
+    the new file brand differs from that stem, and the target slot is free. This
+    skips all version bumps and metadata deliberately named against convention.
+    """
+    metafile = PurePosixPath(source_item["metafile"])
+    stem = metafile.name.removesuffix(".pw.toml") or metafile.stem
+    old_name = Path(source_item["path"]).name
+    if not old_name.lower().startswith(stem.lower()):
+        return None
+    slug = file_brand(Path(update["filename"]).stem)
+    if not slug or slug.lower() == stem.lower():
+        return None
+    proposed = (metafile.parent / f"{slug}.pw.toml").as_posix()
+    if (ROOT / proposed).exists():
+        print(f"RENAME SKIPPED {metafile.as_posix()}: {proposed} already exists", flush=True)
+        return None
+    print(f"RENAME {metafile.as_posix()} -> {proposed}", flush=True)
+    return proposed
+
+
 def plan_github(item, api, args):
     current_tag, current_asset, prefix, suffix, regex = github_asset_template(item["url"])
     track = minecraft_track(current_tag) or minecraft_track(current_asset)
@@ -357,6 +389,13 @@ def matches_only(item, patterns):
     )
 
 
+def hold_reason(item):
+    note = item.get("hold")
+    if isinstance(note, str) and note.strip():
+        return note.strip()
+    return "marked held"
+
+
 def plan_item(item, api, args):
     try:
         if item["source"] in GITHUB_SOURCES:
@@ -410,7 +449,7 @@ def render_metafile(path, update, sha256):
     return "\n".join(lines) + "\n"
 
 
-def write_changelog(path, updates, manual):
+def write_changelog(path, updates, manual, held):
     lines = [
         "# Mod Update Changelog",
         "",
@@ -437,10 +476,15 @@ def write_changelog(path, updates, manual):
         for item in manual:
             lines.append(f"- `{item['metafile']}`: {item['reason']}")
         lines.append("")
+    if held:
+        lines += ["## Held Mods", ""]
+        for item in held:
+            lines.append(f"- `{item['metafile']}`: {hold_reason(item)}")
+        lines.append("")
     path.write_text("\n".join(lines))
 
 
-def apply_updates(updates, manual, sources, args):
+def apply_updates(updates, manual, held, sources, args):
     packwiz = shutil.which(args.packwiz)
     if not packwiz:
         raise RuntimeError(f"Packwiz executable not found: {args.packwiz}")
@@ -470,8 +514,14 @@ def apply_updates(updates, manual, sources, args):
             if old_path != new_path:
                 old_paths.append(old_path)
 
+            old_metafile = source_item["metafile"]
+            update["metafile"] = update.get("new_metafile") or old_metafile
             metafile = ROOT / update["metafile"]
-            metafile.write_text(render_metafile(metafile, update, sha256))
+            metafile.parent.mkdir(parents=True, exist_ok=True)
+            metafile.write_text(render_metafile(ROOT / old_metafile, update, sha256))
+            source_item["metafile"] = update["metafile"]
+            if update["metafile"] != old_metafile:
+                (ROOT / old_metafile).unlink()
             source_item.update(
                 {
                     "path": new_path.relative_to(ROOT).as_posix(),
@@ -493,7 +543,7 @@ def apply_updates(updates, manual, sources, args):
         for old_path in old_paths:
             old_path.unlink(missing_ok=True)
         SOURCES_FILE.write_text(json.dumps(sources, indent=2) + "\n")
-        write_changelog(ROOT / args.changelog, updates, manual)
+        write_changelog(ROOT / args.changelog, updates, manual, held)
         subprocess.run([packwiz, "refresh"], cwd=ROOT, check=True)
 
 
@@ -515,6 +565,8 @@ def main():
 
     sources = json.loads(SOURCES_FILE.read_text())
     selected = [item for item in sources if matches_only(item, args.only)]
+    held = [item for item in selected if item.get("hold")]
+    selected = [item for item in selected if not item.get("hold")]
     token = github_token(args.github_token)
     if any(item["source"] in GITHUB_SOURCES for item in selected) and not token:
         raise RuntimeError("GitHub authentication is required; run `gh auth login` or set GITHUB_TOKEN")
@@ -531,10 +583,13 @@ def main():
     current = [item for item in plans if item["status"] == "current"]
     print(
         f"\nUpdates: {len(updates)}; current: {len(current)}; "
-        f"manual: {len(manual)}; errors: {len(errors)}"
+        f"manual: {len(manual)}; held: {len(held)}; errors: {len(errors)}"
     )
     for update in updates:
         print(f"UPDATE {update['metafile']}: {update['old_version']} -> {update['new_version']}")
+        update["new_metafile"] = metafile_rename(update, update)
+    for item in held:
+        print(f"HELD {item['metafile']}: {hold_reason(item)}")
     for item in manual:
         print(f"MANUAL {item['metafile']}: {item['reason']}")
     for item in errors:
@@ -545,7 +600,7 @@ def main():
         return
     if errors:
         raise RuntimeError("Refusing to apply updates while provider checks have errors")
-    apply_updates(updates, manual, sources, args)
+    apply_updates(updates, manual, held, sources, args)
     print(f"\nApplied {len(updates)} updates and wrote {args.changelog}.")
 
 

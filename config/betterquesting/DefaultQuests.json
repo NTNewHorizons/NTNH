@@ -10592,6 +10592,11 @@
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
+          "questIDLow:4": 96,
+          "type:1": 1
+        },
+        "1:10": {
+          "questIDHigh:4": 0,
           "questIDLow:4": 82
         }
       },
@@ -14927,7 +14932,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "The §6Survey Scanner§r is a handheld device that will point out underground resourse deposits, such as §eDepth Rock§r§e,§r §eBedrock Ores,§r §eSchist layers, Bedrock Oil deposits and Oil deposits§r.",
+          "desc:8": "The §6Survey Scanner§r is a handheld device that will point out underground resourse deposits, such as §eDepth Rock§r, §eBedrock Ores§r, §eSchist layers§r, §eBedrock Oil Deposits§r, §eOil Deposits§r and §eRich Ore Deposits§r.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14935,7 +14940,7 @@
             "OreDict:8": "",
             "id:8": "hbm:item.survey_scanner"
           },
-          "isMain:1": 0,
+          "isMain:1": 1,
           "isSilent:1": 0,
           "is_final:1": 0,
           "lockedProgress:1": 0,
@@ -16604,7 +16609,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "The §3ZIRNOX§r is the first and cheapest nuclear reactor one can make. Unlike the §3PWR§r and §3RBMK§r, it is a fully assembled reactor which requires §bWater§r and §bCarbon Dioxide§r to operate.\n\nDue to its modest steam output, the ZIRNOX can be paired with several §3Steam Engines§r, though an §3Industrial Turbine§r is recommended for its §e100%§r efficiency. A single §3Steam Condenser§r handles the exhaust on lower power fuels. 24 §6Natural Uranium Fuel Rods§r using 14kmB of carbon dioxide will yield a power output of around §e240kHE/s§r.",
+          "desc:8": "The §3ZIRNOX§r is the first and cheapest nuclear reactor one can make. Unlike the §3PWR§r and §3RBMK§r, it is a fully assembled reactor which requires §bWater§r and §bCarbon Dioxide§r to operate.%n%nDue to its modest heat output, the ZIRNOX must be paired with an §3Industrial Turbine§r for its §e100%§r efficiency, as §3Steam Engines§r can only process regular steam. A single §3Steam Condenser§r handles the exhaust on lower power fuels. 24 §6Natural Uranium Fuel Rods§r using 14kmB of carbon dioxide will yield a power output of around §e280kHE/s§r.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21762,7 +21767,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "§3Barrels§r are storage blocks that can hold both fluids and solid blocks. Wooden barrels will leak liquids over time and burn down if filled with lava, so use a stone barrel for those recipes.\n\nBarrels placed under open sky will collect rainwater during downfall.\n\nWhen filled with organic material, a barrel will begin composting once completely full. After roughly 100 seconds it produces a dirt block, ejected by right-clicking. Dirt left near mycelium will slowly convert into a mycelium block, no Silk Touch needed.\n\nA wooden barrel filled with §bWater§r placed next to cobblestone will slowly convert it into mossy cobblestone, costing §e100 mB§r per block. The surrounding blocks must be unaffected by rain. Placing a barrel on mycelium converts its water into §5Witch Water§r, though the barrel itself may disappear in the process. Water flowing above a barrel filled with lava transforms into obsidian.\n\nStone barrels can spawn creatures when tapped with a doll: a barrel of lava with an Angry Doll summons a Blaze, and a barrel of §5Witch Water§r with a Creepy Doll summons an Enderman.\n\nBarrels can convert items using fluids: §5Witch Water§r turns sand into soul sand, lava turns redstone into netherrack or glowstone dust into end stone, and §bWater§r can turn dust into clay, milk into slime balls, or mushroom stew into §5Witch Water§r.\n\n§2Hoppers can be used to insert and eject items from barrels, making composting easy to automate.§r",
+          "desc:8": "§3Barrels§r are storage blocks that can hold both fluids and solid blocks. Wooden barrels will leak liquids over time and burn down if filled with lava, so use a stone barrel for those recipes.\n\nBarrels placed under open sky will collect rainwater during downfall.\n\nWhen filled with organic material, a barrel will begin composting once completely full. After roughly 100 seconds it produces a dirt block, ejected by right-clicking. Dirt left near mycelium will slowly convert into a mycelium block, no Silk Touch needed.\n\nA wooden barrel filled with §bWater§r placed next to cobblestone will slowly convert it into mossy cobblestone, costing §e100 mB§r per block. The surrounding blocks must be unaffected by rain. Placing a barrel on mycelium converts its water into §5Witch Water§r, though the barrel itself may disappear in the process. Water flowing above a barrel filled with lava transforms it into obsidian.\n\nStone barrels can spawn creatures when tapped with a doll: a barrel of lava with an Angry Doll summons a Blaze, and a barrel of §5Witch Water§r with a Creepy Doll summons an Enderman.\n\nBarrels can convert items using fluids: §5Witch Water§r turns sand into soul sand, lava turns redstone into netherrack or glowstone dust into end stone, and §bWater§r can turn dust into clay, milk into slime balls, or mushroom stew into §5Witch Water§r.\n\n§2Hoppers can be used to insert and eject items from barrels, making composting easy to automate.§r",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -30108,7 +30113,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "Your first destination! Absolutely chock full of §6Lithium§r, §6Quartz§r and most importantly your first source of §6Nickel§r to start producing §6Stainless Steel§r for space-grade machinery. The §eMun§r is the first atmosphere-less body available in a regular playthrough, necessary for making the first tier of §6Drive Processors§r in the §3Vacuum Solderer§r.\n\nThe B-Side destination alternative to the Mun, §eMinmus§r is characterized by a distinctive mint-choc-chip ice-cream aesthetic. §3Pumps§r function here, but instead of producing §bWater§r, this moon bizarrely produces §bMilk§r, allowing for full automation of §6Butter§r, §6Milkshakes§r and §6Ice-Cream§r.",
+          "desc:8": "Your first destination! Home to §6Fluorite§r, §6Iron§r, §6Lead§r, and §6Sulfur§r ore patches, and most importantly your first source of §6Nickel§r to start producing §6Stainless Steel§r for space-grade machinery. The §eMun§r is the first atmosphere-less body available in a regular playthrough, necessary for making the first tier of §6Drive Processors§r in the §3Vacuum Solderer§r.\n\nThe B-Side destination alternative to the Mun, §eMinmus§r is characterized by a distinctive mint-choc-chip ice-cream aesthetic. §3Pumps§r function here, but instead of producing §bWater§r, this moon bizarrely produces §bMilk§r, allowing for full automation of §6Butter§r, §6Milkshakes§r and §6Ice-Cream§r.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34276,7 +34281,7 @@
           "isSilent:1": 0,
           "is_final:1": 0,
           "lockedProgress:1": 0,
-          "name:8": "New Quest",
+          "name:8": "Arc Furnace Automation",
           "notification_duration:5": -1.0,
           "notification_effect:3": -1,
           "notification_fade_in:5": -1.0,
@@ -37438,7 +37443,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "The §3Alkylation Unit§r is designed to convert lighter hydrocarbons into useful heavier hydrocarbon products. From §bNatural Gas§r it can produce §bUnsaturated§r and §bAromatic hydrocarbons§r, commonly used for §6Rubber§r and §6Bakelite§r, and even produce §bBTX§r via the use of §bHigh-Performance Solvent§r. As a utility, it can also alkylate §bPetroleum Gas§r into §bLight Oil§r.",
+          "desc:8": "The §3Alkylation Unit§r is designed to convert lighter hydrocarbons into useful heavier hydrocarbon products. From §bNatural Gas§r it can produce §bUnsaturated Hydrocarbons§r, commonly used for §6Rubber§r and §6Bakelite§r, and even produce §bBTX§r via the use of §bHigh-Performance Solvent§r. As a utility, it can also alkylate §bPetroleum Gas§r into §bLight Oil§r.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40874,7 +40879,12 @@
       }
     },
     "409:10": {
-      "preRequisites:9": {},
+      "preRequisites:9": {
+        "0:10": {
+          "questIDHigh:4": -7623698422531862605,
+          "questIDLow:4": -5854221629152364784
+        }
+      },
       "properties:10": {
         "betterquesting:10": {
           "autoClaim:1": 0,
@@ -41226,6 +41236,90 @@
     "412:10": {
       "preRequisites:9": {
         "0:10": {
+          "questIDHigh:4": 0,
+          "questIDLow:4": 96
+        }
+      },
+      "properties:10": {
+        "betterquesting:10": {
+          "autoClaim:1": 0,
+          "completion_animation:8": "default",
+          "completion_particle:8": "default",
+          "confetti_icon:10": {
+            "Count:3": 0,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:stick"
+          },
+          "countAsQuest:1": 1,
+          "desc:8": "§eRich Ore Deposits§r are multi‑unit ore blocks that deplete to stone and drop \"rich chunks\". They spawn in big patches of 5-8 blocks each and can be found using §6Neutrino Lenses§r or §6Survey Scanner§r.",
+          "globalShare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 7900,
+            "OreDict:8": "",
+            "id:8": "hbm:item.chunk_rich"
+          },
+          "isMain:1": 0,
+          "isSilent:1": 0,
+          "is_final:1": 0,
+          "lockedProgress:1": 0,
+          "name:8": "Rich Ore Deposits",
+          "notification_duration:5": -1.0,
+          "notification_effect:3": -1,
+          "notification_fade_in:5": -1.0,
+          "notification_fade_out:5": -1.0,
+          "notification_icon_offset_y:3": -2147483648,
+          "notification_icon_scale:5": -1.0,
+          "notification_pos_x:3": -2147483648,
+          "notification_pos_y:3": -2147483648,
+          "notification_show_icon:8": "default",
+          "notification_style:8": "default",
+          "notification_subtitle:8": "",
+          "notification_subtitle_scale:5": -1.0,
+          "notification_title:8": "",
+          "notification_title_scale:5": -1.0,
+          "particle_count:3": -1,
+          "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+          "poem_music:8": "",
+          "poem_text:8": "betterquesting:texts/end_poem",
+          "questLogic:8": "AND",
+          "repeatTime:3": -1,
+          "repeat_relative:1": 1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "random.levelup",
+          "snd_update:8": "random.levelup",
+          "taskLogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questIDHigh:4": -6157919519401424437,
+      "questIDLow:4": -8434810360993122688,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requireOnlyOneItem:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "hbm:tile.machine_excavator"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "413:10": {
+      "preRequisites:9": {
+        "0:10": {
           "questIDHigh:4": -6787868727436752418,
           "questIDLow:4": -6054408173306640877
         }
@@ -41329,7 +41423,7 @@
         }
       }
     },
-    "413:10": {
+    "414:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 687731528747535133,
@@ -41413,7 +41507,7 @@
         }
       }
     },
-    "414:10": {
+    "415:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -41523,7 +41617,7 @@
         }
       }
     },
-    "415:10": {
+    "416:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -41611,7 +41705,7 @@
         }
       }
     },
-    "416:10": {
+    "417:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -41701,7 +41795,7 @@
         }
       }
     },
-    "417:10": {
+    "418:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 4706895528217954200,
@@ -41797,7 +41891,7 @@
         }
       }
     },
-    "418:10": {
+    "419:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -41906,7 +42000,7 @@
         }
       }
     },
-    "419:10": {
+    "420:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -42283,7 +42377,7 @@
         }
       }
     },
-    "420:10": {
+    "421:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 7275503112583856267,
@@ -42371,7 +42465,7 @@
         }
       }
     },
-    "421:10": {
+    "422:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -42459,7 +42553,7 @@
         }
       }
     },
-    "422:10": {
+    "423:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -42561,7 +42655,7 @@
         }
       }
     },
-    "423:10": {
+    "424:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -42650,7 +42744,7 @@
         }
       }
     },
-    "424:10": {
+    "425:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -42738,7 +42832,7 @@
         }
       }
     },
-    "425:10": {
+    "426:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 3216936886722971351,
@@ -42834,7 +42928,7 @@
         }
       }
     },
-    "426:10": {
+    "427:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6467247789862269309,
@@ -42918,7 +43012,7 @@
         }
       }
     },
-    "427:10": {
+    "428:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 654278939527758023,
@@ -42988,7 +43082,7 @@
         }
       }
     },
-    "428:10": {
+    "429:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2451141085209015770,
@@ -43096,7 +43190,7 @@
         }
       }
     },
-    "429:10": {
+    "430:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -43200,7 +43294,7 @@
         }
       }
     },
-    "430:10": {
+    "431:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -43284,7 +43378,7 @@
         }
       }
     },
-    "431:10": {
+    "432:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -43368,7 +43462,7 @@
         }
       }
     },
-    "432:10": {
+    "433:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -43452,7 +43546,7 @@
         }
       }
     },
-    "433:10": {
+    "434:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6787868727436752418,
@@ -43558,7 +43652,7 @@
         }
       }
     },
-    "434:10": {
+    "435:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -43642,7 +43736,7 @@
         }
       }
     },
-    "435:10": {
+    "436:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -4812035679007519365,
@@ -43762,7 +43856,7 @@
         }
       }
     },
-    "436:10": {
+    "437:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -43904,7 +43998,7 @@
         }
       }
     },
-    "437:10": {
+    "438:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1276458623384728704,
@@ -43988,7 +44082,7 @@
         }
       }
     },
-    "438:10": {
+    "439:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 4835946095099397745,
@@ -44080,7 +44174,7 @@
         }
       }
     },
-    "439:10": {
+    "440:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 5414272911860649617,
@@ -44182,7 +44276,7 @@
         }
       }
     },
-    "440:10": {
+    "441:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -44266,7 +44360,7 @@
         }
       }
     },
-    "441:10": {
+    "442:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 6191132467602672579,
@@ -44362,7 +44456,7 @@
         }
       }
     },
-    "442:10": {
+    "443:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -44452,7 +44546,7 @@
         }
       }
     },
-    "443:10": {
+    "444:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -44542,7 +44636,7 @@
         }
       }
     },
-    "444:10": {
+    "445:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 5414272911860649617,
@@ -44626,7 +44720,7 @@
         }
       }
     },
-    "445:10": {
+    "446:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -44710,7 +44804,7 @@
         }
       }
     },
-    "446:10": {
+    "447:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 9020305243522809957,
@@ -46645,7 +46739,7 @@
         }
       }
     },
-    "447:10": {
+    "448:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -46743,7 +46837,7 @@
         }
       }
     },
-    "448:10": {
+    "449:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -46841,7 +46935,7 @@
         }
       }
     },
-    "449:10": {
+    "450:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1480799430013988952,
@@ -50492,6 +50586,14 @@
           "y:3": -12
         },
         "53:10": {
+          "questIDHigh:4": -6157919519401424437,
+          "questIDLow:4": -8434810360993122688,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -240,
+          "y:3": 156
+        },
+        "54:10": {
           "questIDHigh:4": -5915511152843930842,
           "questIDLow:4": -5788200798426524013,
           "sizeX:3": 24,
@@ -50499,7 +50601,7 @@
           "x:3": -72,
           "y:3": 156
         },
-        "54:10": {
+        "55:10": {
           "questIDHigh:4": -5211961584424694718,
           "questIDLow:4": -5683747536137921863,
           "sizeX:3": 24,
@@ -50507,7 +50609,7 @@
           "x:3": 36,
           "y:3": -96
         },
-        "55:10": {
+        "56:10": {
           "questIDHigh:4": -5427783828413726290,
           "questIDLow:4": -5558476693263304964,
           "sizeX:3": 24,
@@ -50515,7 +50617,7 @@
           "x:3": 12,
           "y:3": 216
         },
-        "56:10": {
+        "57:10": {
           "questIDHigh:4": -4323201697992913312,
           "questIDLow:4": -6878916538940468111,
           "sizeX:3": 24,
@@ -50523,7 +50625,7 @@
           "x:3": 192,
           "y:3": 120
         },
-        "57:10": {
+        "58:10": {
           "questIDHigh:4": -3637578079703577877,
           "questIDLow:4": -8336080721120338866,
           "sizeX:3": 24,
@@ -50531,7 +50633,7 @@
           "x:3": 12,
           "y:3": 192
         },
-        "58:10": {
+        "59:10": {
           "questIDHigh:4": -3581465447835940086,
           "questIDLow:4": -6140714886735732721,
           "sizeX:3": 24,
@@ -52760,48 +52862,48 @@
           "questIDLow:4": 42,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
-          "y:3": 12
+          "x:3": 132,
+          "y:3": 36
         },
         "1:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 118,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -132,
-          "y:3": 36
+          "x:3": -180,
+          "y:3": -60
         },
         "2:10": {
           "questIDHigh:4": 682428528033022378,
           "questIDLow:4": -7207273864452770056,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 36,
-          "y:3": 0
+          "x:3": 0,
+          "y:3": 36
         },
         "3:10": {
           "questIDHigh:4": 1415689939357354221,
           "questIDLow:4": -5850449607947383627,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -180,
-          "y:3": 84
+          "x:3": -228,
+          "y:3": -12
         },
         "4:10": {
           "questIDHigh:4": 2238285196189582017,
           "questIDLow:4": -8369521344014997641,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 108,
-          "y:3": 12
+          "x:3": 180,
+          "y:3": 36
         },
         "5:10": {
           "questIDHigh:4": 2795396746292708589,
           "questIDLow:4": -5984198842617186574,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 108,
-          "y:3": 36
+          "x:3": 180,
+          "y:3": 60
         },
         "6:10": {
           "questIDHigh:4": 3546738381883984658,
@@ -52809,7 +52911,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": 84
+          "y:3": 36
         },
         "7:10": {
           "questIDHigh:4": 4607790859750687153,
@@ -52817,15 +52919,15 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
-          "y:3": -12
+          "y:3": -60
         },
         "8:10": {
           "questIDHigh:4": 4732235263003017981,
           "questIDLow:4": -6203714055481942922,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 108,
-          "y:3": -12
+          "x:3": 180,
+          "y:3": 12
         },
         "9:10": {
           "questIDHigh:4": 6554964224454575364,
@@ -52833,22 +52935,22 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
-          "y:3": 24
+          "y:3": -12
         },
         "10:10": {
           "questIDHigh:4": 7269967256698702332,
           "questIDLow:4": -6542184124306722279,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
-          "y:3": 84
+          "x:3": 84,
+          "y:3": 36
         },
         "11:10": {
           "questIDHigh:4": 8320759098836992659,
           "questIDLow:4": -7773185768112756691,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -180,
+          "x:3": -132,
           "y:3": -12
         },
         "12:10": {
@@ -52857,7 +52959,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
-          "y:3": 84
+          "y:3": 36
         },
         "13:10": {
           "questIDHigh:4": -6542062107870935314,
@@ -52865,7 +52967,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
-          "y:3": -12
+          "y:3": -60
         },
         "14:10": {
           "questIDHigh:4": -6467247789862269309,
@@ -52873,31 +52975,31 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 12
+          "y:3": -12
         },
         "15:10": {
           "questIDHigh:4": -6073866121532456941,
           "questIDLow:4": -5716376796748555660,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -60,
-          "y:3": 0
+          "x:3": -24,
+          "y:3": 36
         },
         "16:10": {
           "questIDHigh:4": -6306542984304769804,
           "questIDLow:4": -8472329852027665198,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -132,
-          "y:3": 84
+          "x:3": -180,
+          "y:3": 36
         },
         "17:10": {
           "questIDHigh:4": -5232647279451290078,
           "questIDLow:4": -6589773419732884689,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -24,
-          "y:3": 48
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": -60
         },
         "18:10": {
           "questIDHigh:4": -4633657087608009019,
@@ -52905,7 +53007,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": 24
+          "y:3": -12
         },
         "19:10": {
           "questIDHigh:4": -3471468732024339202,
@@ -52913,7 +53015,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -180,
-          "y:3": 36
+          "y:3": -12
         }
       }
     }

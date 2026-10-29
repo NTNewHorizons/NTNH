@@ -187,7 +187,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABdg.desc=The §3Drainage Pipe§r allows 
 
 # Quest: Do a Barrel!
 betterquesting.quest.Ba9zHp22SvGkBCr8xF5oQQ.name=Do a Barrel!
-betterquesting.quest.Ba9zHp22SvGkBCr8xF5oQQ.desc=§3Barrels§r are storage blocks that can hold both fluids and solid blocks. Wooden barrels will leak liquids over time and burn down if filled with lava, so use a stone barrel for those recipes.%n%nBarrels placed under open sky will collect rainwater during downfall.%n%nWhen filled with organic material, a barrel will begin composting once completely full. After roughly 100 seconds it produces a dirt block, ejected by right-clicking. Dirt left near mycelium will slowly convert into a mycelium block, no Silk Touch needed.%n%nA wooden barrel filled with §bWater§r placed next to cobblestone will slowly convert it into mossy cobblestone, costing §e100 mB§r per block. The surrounding blocks must be unaffected by rain. Placing a barrel on mycelium converts its water into §5Witch Water§r, though the barrel itself may disappear in the process. Water flowing above a barrel filled with lava transforms into obsidian.%n%nStone barrels can spawn creatures when tapped with a doll: a barrel of lava with an Angry Doll summons a Blaze, and a barrel of §5Witch Water§r with a Creepy Doll summons an Enderman.%n%nBarrels can convert items using fluids: §5Witch Water§r turns sand into soul sand, lava turns redstone into netherrack or glowstone dust into end stone, and §bWater§r can turn dust into clay, milk into slime balls, or mushroom stew into §5Witch Water§r.%n%n§2Hoppers can be used to insert and eject items from barrels, making composting easy to automate.§r
+betterquesting.quest.Ba9zHp22SvGkBCr8xF5oQQ.desc=§3Barrels§r are storage blocks that can hold both fluids and solid blocks. Wooden barrels will leak liquids over time and burn down if filled with lava, so use a stone barrel for those recipes.%n%nBarrels placed under open sky will collect rainwater during downfall.%n%nWhen filled with organic material, a barrel will begin composting once completely full. After roughly 100 seconds it produces a dirt block, ejected by right-clicking. Dirt left near mycelium will slowly convert into a mycelium block, no Silk Touch needed.%n%nA wooden barrel filled with §bWater§r placed next to cobblestone will slowly convert it into mossy cobblestone, costing §e100 mB§r per block. The surrounding blocks must be unaffected by rain. Placing a barrel on mycelium converts its water into §5Witch Water§r, though the barrel itself may disappear in the process. Water flowing above a barrel filled with lava transforms it into obsidian.%n%nStone barrels can spawn creatures when tapped with a doll: a barrel of lava with an Angry Doll summons a Blaze, and a barrel of §5Witch Water§r with a Creepy Doll summons an Enderman.%n%nBarrels can convert items using fluids: §5Witch Water§r turns sand into soul sand, lava turns redstone into netherrack or glowstone dust into end stone, and §bWater§r can turn dust into clay, milk into slime balls, or mushroom stew into §5Witch Water§r.%n%n§2Hoppers can be used to insert and eject items from barrels, making composting easy to automate.§r
 
 # Quest: Sieving
 betterquesting.quest.CAGBwqHLQBStKodq03kwyw.name=Sieving
@@ -528,7 +528,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAXw.desc=The §6Geiger counter§r is a d
 
 # Quest: Survey Scanner
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAYA.name=Survey Scanner
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAYA.desc=The §6Survey Scanner§r is a handheld device that will point out underground resourse deposits, such as §eDepth Rock§r§e,§r §eBedrock Ores,§r §eSchist layers, Bedrock Oil deposits and Oil deposits§r.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAYA.desc=The §6Survey Scanner§r is a handheld device that will point out underground resourse deposits, such as §eDepth Rock§r, §eBedrock Ores§r, §eSchist layers§r, §eBedrock Oil Deposits§r, §eOil Deposits§r and §eRich Ore Deposits§r.
 
 # Quest: Launch Pad
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAaw.name=Launch Pad
@@ -589,6 +589,10 @@ betterquesting.quest.l7cvDxEiTg6v1RvTk-ynTw.desc=§6Solid Fuel§r is a compact s
 # Quest: Delinquent
 betterquesting.quest.nwCUMdHpQjykUlIVNW7Bcw.name=Delinquent
 betterquesting.quest.nwCUMdHpQjykUlIVNW7Bcw.desc=Be mean.
+
+# Quest: Rich Ore Deposits
+betterquesting.quest.qoqs0rqiScuK8YiqjTh2gA.name=Rich Ore Deposits
+betterquesting.quest.qoqs0rqiScuK8YiqjTh2gA.desc=§eRich Ore Deposits§r are multi‑unit ore blocks that deplete to stone and drop "rich chunks". They spawn in big patches of 5-8 blocks each and can be found using §6Neutrino Lenses§r or §6Survey Scanner§r.
 
 # Quest: Teleporter
 betterquesting.quest.refh8r3gQyavrC4KgSeWkw.name=Teleporter
@@ -749,7 +753,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcA.desc=The §6Neutrino Lens§r is an a
 
 # Quest: ZIRNOX
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcg.name=ZIRNOX
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcg.desc=The §3ZIRNOX§r is the first and cheapest nuclear reactor one can make. Unlike the §3PWR§r and §3RBMK§r, it is a fully assembled reactor which requires §bWater§r and §bCarbon Dioxide§r to operate.%n%nDue to its modest steam output, the ZIRNOX can be paired with several §3Steam Engines§r, though an §3Industrial Turbine§r is recommended for its §e100%%§r efficiency. A single §3Steam Condenser§r handles the exhaust on lower power fuels. 24 §6Natural Uranium Fuel Rods§r using 14kmB of carbon dioxide will yield a power output of around §e240kHE/s§r.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcg.desc=The §3ZIRNOX§r is the first and cheapest nuclear reactor one can make. Unlike the §3PWR§r and §3RBMK§r, it is a fully assembled reactor which requires §bWater§r and §bCarbon Dioxide§r to operate.%%n%%nDue to its modest heat output, the ZIRNOX must be paired with an §3Industrial Turbine§r for its §e100%%§r efficiency, as §3Steam Engines§r can only process regular steam. A single §3Steam Condenser§r handles the exhaust on lower power fuels. 24 §6Natural Uranium Fuel Rods§r using 14kmB of carbon dioxide will yield a power output of around §e280kHE/s§r.
 
 # Quest: Cooling Tower
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdQ.name=Cooling Tower
@@ -1038,7 +1042,7 @@ betterquesting.quest.S0AQWdCYSeiUnhi2CmLszA.desc=§6Hafnium§r is a rare light m
 
 # Quest: Mun/Minmus
 betterquesting.quest.SyNchvx5TpG6S7lF4jtiOA.name=Mun/Minmus
-betterquesting.quest.SyNchvx5TpG6S7lF4jtiOA.desc=Your first destination! Absolutely chock full of §6Lithium§r, §6Quartz§r and most importantly your first source of §6Nickel§r to start producing §6Stainless Steel§r for space-grade machinery. The §eMun§r is the first atmosphere-less body available in a regular playthrough, necessary for making the first tier of §6Drive Processors§r in the §3Vacuum Solderer§r.%n%nThe B-Side destination alternative to the Mun, §eMinmus§r is characterized by a distinctive mint-choc-chip ice-cream aesthetic. §3Pumps§r function here, but instead of producing §bWater§r, this moon bizarrely produces §bMilk§r, allowing for full automation of §6Butter§r, §6Milkshakes§r and §6Ice-Cream§r.
+betterquesting.quest.SyNchvx5TpG6S7lF4jtiOA.desc=Your first destination! Home to §6Fluorite§r, §6Iron§r, §6Lead§r, and §6Sulfur§r ore patches, and most importantly your first source of §6Nickel§r to start producing §6Stainless Steel§r for space-grade machinery. The §eMun§r is the first atmosphere-less body available in a regular playthrough, necessary for making the first tier of §6Drive Processors§r in the §3Vacuum Solderer§r.%n%nThe B-Side destination alternative to the Mun, §eMinmus§r is characterized by a distinctive mint-choc-chip ice-cream aesthetic. §3Pumps§r function here, but instead of producing §bWater§r, this moon bizarrely produces §bMilk§r, allowing for full automation of §6Butter§r, §6Milkshakes§r and §6Ice-Cream§r.
 
 # Quest: Laythe
 betterquesting.quest.Tz9bzhSZQLGbAIEh4Zckbg.name=Laythe
@@ -1090,7 +1094,7 @@ betterquesting.quest.hG3STfQVT8uxD0PMB58DOQ.desc=The §3Orbital Station Computer
 
 # Quest: Alkylation Unit
 betterquesting.quest.icj9Y8q0QiWjFk2g7dTnww.name=Alkylation Unit
-betterquesting.quest.icj9Y8q0QiWjFk2g7dTnww.desc=The §3Alkylation Unit§r is designed to convert lighter hydrocarbons into useful heavier hydrocarbon products. From §bNatural Gas§r it can produce §bUnsaturated§r and §bAromatic hydrocarbons§r, commonly used for §6Rubber§r and §6Bakelite§r, and even produce §bBTX§r via the use of §bHigh-Performance Solvent§r. As a utility, it can also alkylate §bPetroleum Gas§r into §bLight Oil§r.
+betterquesting.quest.icj9Y8q0QiWjFk2g7dTnww.desc=The §3Alkylation Unit§r is designed to convert lighter hydrocarbons into useful heavier hydrocarbon products. From §bNatural Gas§r it can produce §bUnsaturated Hydrocarbons§r, commonly used for §6Rubber§r and §6Bakelite§r, and even produce §bBTX§r via the use of §bHigh-Performance Solvent§r. As a utility, it can also alkylate §bPetroleum Gas§r into §bLight Oil§r.
 
 # Quest: Microgravity Algae Film
 betterquesting.quest.nfgxBE2jRE2InE-vMVEfRQ.name=Microgravity Algae Film
@@ -1355,8 +1359,8 @@ betterquesting.quest.ZOQcs7g_SfylNX4zb39yGQ.desc=§3Conveyor Boxers§r package a
 betterquesting.quest.c3lGUKvHQpOUIBi6XoRoLQ.name=Combinator Funnel
 betterquesting.quest.c3lGUKvHQpOUIBi6XoRoLQ.desc=The Combinator Funnel is used to perform crafts of the same item in a 3x3 or 2x2 grid. It becomes extremely useful for §eBedrock Ore Processing§r.
 
-# Quest: New Quest
-betterquesting.quest.c4m68dpfQXyH4q-ilwLZcQ.name=New Quest
+# Quest: Arc Furnace Automation
+betterquesting.quest.c4m68dpfQXyH4q-ilwLZcQ.name=Arc Furnace Automation
 betterquesting.quest.c4m68dpfQXyH4q-ilwLZcQ.desc=§2This quest serves as a guide on how to precisely input items in an arc furnace as not to waste electrode durability.§r%n%n§2By SkippyPlaysMC§r%n%nAssuming no upgrades are inserted in the §3Arc Furnace§r, there are exactly 20 slots available for items. To start, route all input items into a §3Conveyor Boxer§r which will send items into a §3Conveyor Unboxer§r. Adding speed ejection and stack ejection upgrades to the unboxer is highly recommended as so the items are inputed fast enough.%n%n[img height=1000]betterquesting:textures/BQ_ARC1.png[/img]%n%nPlace a §3Redstone-Over-Radio Item Counter§r on one side of the boxer, set the item filter and give it an ID.%n%n[img height=1000]betterquesting:textures/BQ_ARC2.png[/img]%n%nThen place a Redstone-Over-Radio Logic Receiver, give it the correct ID, and set it to emit redstone when item count is 20.%n%n[img height=1000]betterquesting:textures/BQ_ARC3.png[/img]%n%nMake sure that the boxer has its mode set to redstone.%n%n[img height=1000]betterquesting:textures/BQ_ARC4.png[/img]
 
 # Quest: Redstone-Over Radio

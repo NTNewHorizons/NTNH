@@ -187,7 +187,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABdg.desc=§3排液管§r允许将流体�
 
 # Quest: Do a Barrel!
 betterquesting.quest.Ba9zHp22SvGkBCr8xF5oQQ.name=来点"桶"技！
-betterquesting.quest.Ba9zHp22SvGkBCr8xF5oQQ.desc=§3桶§r可以存储流体或固体的方块。木桶会逐渐泄漏液体，而且装入岩浆时会烧起来，所以需要使用石桶。%n%n在下雨时，露天的桶将会收集雨水。%n%n当完全装满有机材料时，桶会开始堆肥，在约 100 秒后生成一个泥土方块，右键取出。放在菌丝旁的泥土也会缓慢变为菌丝，不需要精准采集。%n%n装有§b水§r的木桶如果放在圆石旁边，会将它缓慢转变为苔石，每个方块耗费 §e100 mB§r 水。附近的方块必须不受雨的影响。在菌丝上放置桶会将水转换为§5巫水§r，但同时桶可能会消失。如果水流过一个装着岩浆的桶，水将变为黑曜石。%n%n拿着人偶点击石桶可以生成怪物：装岩浆的桶和愤怒的人偶会生成烈焰人，装着§5巫水§r的桶加上可怕的人偶会生成末影人。%n%n桶也可以用流体来转化物品：§5巫水§r会把沙子转化为灵魂沙，岩浆会将红石变为地狱岩、萤石变为末地石，而§b水§r则会将尘土变为黏土、牛奶变为史莱姆球、蘑菇煲变为§5巫水§r。%n%n§2漏斗可以从桶中取出或放入物品，这可以简化堆肥的自动化。§r
+betterquesting.quest.Ba9zHp22SvGkBCr8xF5oQQ.desc=§3Barrels§r are storage blocks that can hold both fluids and solid blocks. Wooden barrels will leak liquids over time and burn down if filled with lava, so use a stone barrel for those recipes.%n%nBarrels placed under open sky will collect rainwater during downfall.%n%nWhen filled with organic material, a barrel will begin composting once completely full. After roughly 100 seconds it produces a dirt block, ejected by right-clicking. Dirt left near mycelium will slowly convert into a mycelium block, no Silk Touch needed.%n%nA wooden barrel filled with §bWater§r placed next to cobblestone will slowly convert it into mossy cobblestone, costing §e100 mB§r per block. The surrounding blocks must be unaffected by rain. Placing a barrel on mycelium converts its water into §5Witch Water§r, though the barrel itself may disappear in the process. Water flowing above a barrel filled with lava transforms it into obsidian.%n%nStone barrels can spawn creatures when tapped with a doll: a barrel of lava with an Angry Doll summons a Blaze, and a barrel of §5Witch Water§r with a Creepy Doll summons an Enderman.%n%nBarrels can convert items using fluids: §5Witch Water§r turns sand into soul sand, lava turns redstone into netherrack or glowstone dust into end stone, and §bWater§r can turn dust into clay, milk into slime balls, or mushroom stew into §5Witch Water§r.%n%n§2Hoppers can be used to insert and eject items from barrels, making composting easy to automate.§r
 
 # Quest: Sieving
 betterquesting.quest.CAGBwqHLQBStKodq03kwyw.name=筛
@@ -524,7 +524,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAXw.desc=§6盖革计数器§r是一种�
 
 # Quest: Survey Scanner
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAYA.name=勘测扫描仪
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAYA.desc=§6勘测扫描仪§r是一种便携式设备，能够识别地下的资源矿藏，例如§e深层岩石§r和§e基岩矿石§r。
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAYA.desc=The §6Survey Scanner§r is a handheld device that will point out underground resourse deposits, such as §eDepth Rock§r, §eBedrock Ores§r, §eBedrock Oil Deposits§r and §eRich Ore Deposits§r.
 
 # Quest: Launch Pad
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAaw.name=导弹发射台
@@ -577,6 +577,10 @@ betterquesting.quest.l7cvDxEiTg6v1RvTk-ynTw.desc=§6Solid Fuel§r is a compact s
 # Quest: Delinquent
 betterquesting.quest.nwCUMdHpQjykUlIVNW7Bcw.name=残忍
 betterquesting.quest.nwCUMdHpQjykUlIVNW7Bcw.desc=卑鄙
+
+# Quest: Rich Ore Deposits
+betterquesting.quest.qoqs0rqiScuK8YiqjTh2gA.name=Rich Ore Deposits
+betterquesting.quest.qoqs0rqiScuK8YiqjTh2gA.desc=§eRich Ore Deposits§r are multi‑unit ore blocks that deplete to stone and drop "rich chunks". They spawn in big patches of 5-8 blocks each and can be found using §6Neutrino Lenses§r or §6Survey Scanner§r.
 
 # Quest: Teleporter
 betterquesting.quest.refh8r3gQyavrC4KgSeWkw.name=传送机
@@ -1074,7 +1078,7 @@ betterquesting.quest.hG3STfQVT8uxD0PMB58DOQ.desc=§3轨道站电脑§r在插入�
 
 # Quest: Alkylation Unit
 betterquesting.quest.icj9Y8q0QiWjFk2g7dTnww.name=烷基化单元
-betterquesting.quest.icj9Y8q0QiWjFk2g7dTnww.desc=§3烷基化单元§r旨在将较轻的碳氢化合物转化为有用的较重碳氢化合物产品。从§b天然气§r中可以生产出通常用于§6橡胶§r和§6电木§r的§b不饱和烃§r和§b芳香烃§r，甚至可以通过使用§b高性能溶剂§r生产§b轻质芳烃（BTX）§r。作为一种实用功能，它还可以将§b石油气§r烷基化为§b轻油§r。
+betterquesting.quest.icj9Y8q0QiWjFk2g7dTnww.desc=The §3Alkylation Unit§r is designed to convert lighter hydrocarbons into useful heavier hydrocarbon products. From §bNatural Gas§r it can produce §bUnsaturated Hydrocarbons§r, commonly used for §6Rubber§r and §6Bakelite§r, and even produce §bBTX§r via the use of §bHigh-Performance Solvent§r. As a utility, it can also alkylate §bPetroleum Gas§r into §bLight Oil§r.
 
 # Quest: Microgravity Algae Film
 betterquesting.quest.nfgxBE2jRE2InE-vMVEfRQ.name=微重力藻类透膜过滤器
@@ -1339,8 +1343,8 @@ betterquesting.quest.ZOQcs7g_SfylNX4zb39yGQ.desc=§3Conveyor Boxers§r package a
 betterquesting.quest.c3lGUKvHQpOUIBi6XoRoLQ.name=Combinator Funnel
 betterquesting.quest.c3lGUKvHQpOUIBi6XoRoLQ.desc=The Combinator Funnel is used to perform crafts of the same item in a 3x3 or 2x2 grid. It becomes extremely useful for §eBedrock Ore Processing§r.
 
-# Quest: New Quest
-betterquesting.quest.c4m68dpfQXyH4q-ilwLZcQ.name=New Quest
+# Quest: Arc Furnace Automation
+betterquesting.quest.c4m68dpfQXyH4q-ilwLZcQ.name=Arc Furnace Automation
 betterquesting.quest.c4m68dpfQXyH4q-ilwLZcQ.desc=§2This quest serves as a guide on how to precisely input items in an arc furnace as not to waste electrode durability.§r%n%n§2By SkippyPlaysMC§r%n%nAssuming no upgrades are inserted in the §3Arc Furnace§r, there are exactly 20 slots available for items. To start, route all input items into a §3Conveyor Boxer§r which will send items into a §3Conveyor Unboxer§r. Adding speed ejection and stack ejection upgrades to the unboxer is highly recommended as so the items are inputed fast enough.%n%n[img height=1000]betterquesting:textures/BQ_ARC1.png[/img]%n%nPlace a §3Redstone-Over-Radio Item Counter§r on one side of the boxer, set the item filter and give it an ID.%n%n[img height=1000]betterquesting:textures/BQ_ARC2.png[/img]%n%nThen place a Redstone-Over-Radio Logic Receiver, give it the correct ID, and set it to emit redstone when item count is 20.%n%n[img height=1000]betterquesting:textures/BQ_ARC3.png[/img]%n%nMake sure that the boxer has its mode set to redstone.%n%n[img height=1000]betterquesting:textures/BQ_ARC4.png[/img]
 
 # Quest: Redstone-Over Radio

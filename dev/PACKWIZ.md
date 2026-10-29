@@ -143,7 +143,17 @@ python dev/update-mods.py --only angelica --apply
 
 Use `--include-prereleases` only when beta, alpha, or prerelease builds are intentional.
 
-The updater downloads and verifies replacements, updates JARs and metadata, keeps them pinned, refreshes `index.toml`, and writes `MOD_UPDATE_CHANGELOG.md`. Directly hosted mods without an update API are listed for manual handling.
+The updater downloads and verifies replacements, updates JARs and metadata, keeps them pinned, refreshes `index.toml`, and writes `MOD_UPDATE_CHANGELOG.md`. When a provider renames a mod (for example fentlib became angellib), the pinned metadata file is renamed to the new slug as well, keeping [`packwiz-sources.json`](../packwiz-sources.json) in sync. Metadata deliberately named differently from the download filename (for example `ae2fluidcraft-rework.pw.toml` hosting `ae2fc-*.jar`) is never renamed. Directly hosted mods without an update API are listed for manual handling.
+
+## Hold a mod
+
+The updater cannot see cross-mod dependencies, so an update can break other mods (for example angellib 1.0.0 renamed the fentlib packages, and minemoticon/anextratouch still linked the old namespace). To keep a mod on its current version, set a truthy `hold` field on its [`packwiz-sources.json`](../packwiz-sources.json) entry:
+
+```json
+"hold": "angellib 1.0.0 is a breaking rename; minemoticon/anextratouch still link the old namespace."
+```
+
+Held mods are skipped before any provider call and reported as `HELD <metafile>: <reason>`; a dry run lists them in a **Held Mods** changelog section, and `--apply` never rewrites their entries. Remove the field to release the hold.
 
 ## Finish any change
 

@@ -22,6 +22,7 @@
   * Airplane
 * Added the ability to hold backspace in the qb search bar
 * Added colored AE2 interfaces textures
+* Added a recipe to craft dense smart ME cables from 4 smart cables (#207)
 * Added fishing handler to NEI
 * Added new barrel recipes and upgrades
 * Backported modern wither spawning behavior
@@ -82,6 +83,15 @@
   * Ilmenite can also be arc smelted directly for lower efficiency but faster output (liquid smelting mode also yields iron byproduct)
 * Pneumatic and exhaust pipe anchors
 * Crafting Tree feature in NEI
+* Louis the railgun turret
+* Conveyor-like placement for fluid ducts and cables
+* Conveyor combinator
+  * Just like a regular combinator, but conveyor
+* Machine and fluid network overlays
+  * They just tell you some info like:
+  * How much energy and fluids is there in chemical plant
+  * How big is the fluid pipe network
+* RBMK and PWR fuel rods neutron flow function display
 
 
 
@@ -145,6 +155,7 @@
 * Fixed a potential issue where conveyor grabbers could pick up expired conveyor entities or stacks with a stacksize of 0
 * Hopefully fixed artillery rockets oscillating when the target is reached
 * Fixed a weird-ass dupe w/ crucible
+* Fixed WAILA errors
 
 
 
