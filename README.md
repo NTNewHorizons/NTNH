@@ -68,7 +68,7 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
           <br />
           <sub><b>igrokkk_</b></sub></a>
         <br />
-        <sub><b>49691 words</b></sub>
+        <sub><b>76412 words</b></sub>
       </td>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/GamerRabbit22"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17800493/medium/3dbe0ae2f49f1047180c8b2511069764.png" />
