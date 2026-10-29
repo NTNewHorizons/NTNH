@@ -1,9 +1,16 @@
-name = "Modpack Version Checker"
-filename = "modpackversionchecker-1.0.0.jar"
+name = "modpackVersionChecker"
+filename = "modpackversionchecker-1.1.0.jar"
 side = "both"
 pin = true
 
 [download]
+url = "https://github.com/THOMASS47/modpackVersionChecker/releases/download/1.1.0/modpackversionchecker-1.1.0.jar"
 hash-format = "sha256"
-hash = "3f4395f9b4baaf5e1f68a14f0254927b176b699c2cd1335f406529457676161a"
-url = "https://github.com/THOMASS47/modpackVersionChecker/releases/download/1.0.0/modpackversionchecker-1.0.0.jar"
+hash = "7b589cdece55d04e22cb3875e294eff8df9e47a047f601a518eb82babacee818"
+
+[update]
+[update.github]
+branch = "main"
+regex = "^modpackversionchecker-[0-9.]+\\.jar$"
+slug = "THOMASS47/modpackVersionChecker"
+tag = "1.1.0"
