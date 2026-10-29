@@ -92,6 +92,14 @@
   * How much energy and fluids is there in chemical plant
   * How big is the fluid pipe network
 * RBMK and PWR fuel rods neutron flow function display
+* RoR reader support for crates and Storage Drawers
+  * The type value returns the name of the item in the first slot or drawer, including custom names
+  * Allows renamed items to encode signals for more advanced automation
+  * Empty storage returns None, while locked drawers retain their configured item type even when empty
+* RoR controller support for changing fluids in barrels and compatible machines
+  * Use setfluid!<fluid name or ID> to configure the machine's fluid identifier tank
+  * Tanks must be empty before switching to a different fluid
+  * Allows a single machine to handle different fluids using advanced automation
 
 
 
@@ -308,6 +316,7 @@
   * Examples are now "custom metal demo" and "custom shape demo" instead of "bronze" and "gear" to avoid confusion
 * Some common materials like tungsten, copper, aluminium and boron now have nugget forms
   * This allows foundry setups to use up materials with nugget precision
+* Increased the capacity of SILEX product tank from 16,000mb to 24,000mb
 
 
 
