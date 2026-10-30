@@ -1,8 +1,8 @@
 {
   "preRequisites:9": {
     "0:10": {
-      "questIDHigh:4": -1922987534854173511,
-      "questIDLow:4": -8847684645341758176
+      "questIDHigh:4": 0,
+      "questIDLow:4": 64
     }
   },
   "properties:10": {
@@ -17,19 +17,19 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "Not a bug, a \u0026q\u0026zFEATURE§r!\n\nWhen you consume food your hands may shake weirdly, as if Steve was EXTREMELY happy for that lunch.\n\nIf you experience any stutters/micro-lags while playing, try turning Vsync on/off. If that does not help, contact in Discord #help.\n\nCurrently we have no idea how to fix those bugs, but we are trying our best!",
+      "desc:8": "§6Curvy pipes§r are a very convienet mode of transporation for§3 items, fluids, and power§r.\n\n",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
-        "Damage:2": 0,
+        "Damage:2": 1,
         "OreDict:8": "",
-        "id:8": "betterquesting:placeholder"
+        "id:8": "curvy_pipes:pipe"
       },
       "isMain:1": 0,
       "isSilent:1": 0,
       "is_final:1": 0,
       "lockedProgress:1": 0,
-      "name:8": "Known Issues",
+      "name:8": "Curvy Pipes",
       "notification_duration:5": -1.0,
       "notification_effect:3": -1,
       "notification_fade_in:5": -1.0,
@@ -48,7 +48,7 @@
       "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
       "poem_music:8": "",
       "poem_text:8": "betterquesting:texts/end_poem",
-      "questLogic:8": "AND",
+      "questLogic:8": "OR",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,
       "simultaneous:1": 0,
@@ -58,13 +58,63 @@
       "visibility:8": "NORMAL"
     }
   },
-  "questIDHigh:4": 3517868390546886320,
-  "questIDLow:4": -4961355786284448601,
+  "questIDHigh:4": 101073958437276490,
+  "questIDLow:4": -4755669698362144810,
   "rewards:9": {},
   "tasks:9": {
     "0:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
       "index:3": 0,
-      "taskID:8": "bq_standard:checkbox"
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "OreDict:8": "",
+          "id:8": "curvy_pipes:pipe"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "1:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 1,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 6,
+          "OreDict:8": "",
+          "id:8": "curvy_pipes:pipe"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "2:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 2,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 11,
+          "OreDict:8": "",
+          "id:8": "curvy_pipes:pipe"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
     }
   }
 }
