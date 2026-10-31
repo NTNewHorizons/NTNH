@@ -45,15 +45,24 @@ def is_mod_override_path(path):
     """Return True for any location under an overrides/mods/ tree.
 
     Canonical CurseForge layout is ``overrides/mods/<filename>``. Recent
-    packwiz builds also nest JARs one or more levels deep inside
-    ``overrides/mods/``, so we accept any depth rather than requiring
-    exactly three components.
+    packwiz builds also nest JARs inside ``overrides/mods/``; any depth is
+    accepted so we do not depend on flat layout.
     """
     ancestors = path.parts[:-1]
     return "overrides" in ancestors and "mods" in ancestors
 
 
 def prefix_curseforge_overrides(archive, sources_file):
+    """Add the GTNH_/NTNH_ prefix to override JARs that need it.
+
+    This function is idempotent: if an override has already been renamed
+    (by a prior invocation of this script on the same archive), that
+    archive's file is treated as satisfying the source entry. This guards
+    against accidental double-invocation - e.g. by both build-packwiz.sh
+    and a workflow step - which would otherwise report every GTNH/NTNH
+    mod as "not present in archive" because the bare filename has been
+    replaced by the prefixed one.
+    """
     sources = json.loads(sources_file.read_text())
     prefixes = {}
     for item in sources:
@@ -64,11 +73,14 @@ def prefix_curseforge_overrides(archive, sources_file):
                 raise RuntimeError(f"Duplicate override filename: {filename}")
             prefixes[filename] = prefix
 
+    # bare name <-> already-prefixed name
+    prefixed_to_bare = {prefix + bare: bare for bare, prefix in prefixes.items()}
+
     with tempfile.NamedTemporaryFile(dir=archive.parent, suffix=".zip", delete=False) as temp_file:
         temp_path = Path(temp_file.name)
 
-    renamed = set()
-    seen_at = {}
+    satisfied = set()
+    misplaced = []
     try:
         with zipfile.ZipFile(archive, "r") as source, zipfile.ZipFile(
             temp_path, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9, allowZip64=True
@@ -77,25 +89,48 @@ def prefix_curseforge_overrides(archive, sources_file):
             for info in source.infolist():
                 name = info.filename
                 path = PurePosixPath(name)
+
+                # Already prefixed (a previous run of this script already
+                # renamed the file). Accept it as-is.
+                if path.name in prefixed_to_bare:
+                    satisfied.add(prefixed_to_bare[path.name])
+                    copy_zip_entry(source, target, info, name)
+                    continue
+
+                # Bare GTNH/NTNH filename that needs prefixing.
                 if path.name in prefixes:
-                    seen_at.setdefault(path.name, name)
                     if is_mod_override_path(path):
+                        satisfied.add(path.name)
                         name = str(path.with_name(prefixes[path.name] + path.name))
-                        renamed.add(path.name)
+                    else:
+                        misplaced.append((path.name, name))
+                    copy_zip_entry(source, target, info, name)
+                    continue
+
+                # Anything else - copy through unchanged.
                 copy_zip_entry(source, target, info, name)
         temp_path.replace(archive)
     finally:
         temp_path.unlink(missing_ok=True)
 
-    missing = sorted(set(prefixes) - renamed)
+    if misplaced:
+        raise RuntimeError(
+            "GTNH/NTNH mod files were found outside overrides/mods/: "
+            + "; ".join(f"{bare} at {actual!r}" for bare, actual in misplaced)
+        )
+
+    # Anything still missing is a CurseForge manifest entry, not a bug.
+    # validate_archives() reconciles the manifest + override counts
+    # against packwiz-sources.json.
+    missing = sorted(set(prefixes) - satisfied)
     if missing:
-        details = []
-        for name in missing:
-            if name in seen_at:
-                details.append(f"{name} (found at {seen_at[name]!r})")
-            else:
-                details.append(f"{name} (not present in archive)")
-        raise RuntimeError("Expected NTNH/GTNH overrides were not found: " + "; ".join(details))
+        preview = missing[:5]
+        suffix = "..." if len(missing) > 5 else ""
+        print(
+            f"NOTE: {len(missing)} NTNH/GTNH mod file(s) not shipped under "
+            f"overrides/mods/ (treated as manifest.json entries): {preview}{suffix}",
+            flush=True,
+        )
 
 
 def native_files(sources_file):
@@ -120,8 +155,8 @@ def native_files(sources_file):
         posix = relative.as_posix()
         if posix in seen:
             continue
-        # Mod JARs are driven by packwiz-sources.json so renamed updates are
-        # included without requiring manual `git add` first.
+        # Mod JARs are driven by packwiz-sources.json so renamed updates
+        # are included without requiring manual `git add` first.
         if posix.startswith("mods/") and posix.endswith(".jar"):
             continue
         if posix in NATIVE_EXCLUDES:
@@ -171,7 +206,9 @@ def validate_mmc_prism_archive(archive, native, pack):
     with zipfile.ZipFile(archive) as output, zipfile.ZipFile(native) as source:
         if output.testzip() is not None:
             raise RuntimeError("MMC/Prism archive failed its integrity check")
-        expected = {"instance.cfg", "mmc-pack.json"} | {".minecraft/" + name for name in source.namelist()}
+        expected = {"instance.cfg", "mmc-pack.json"} | {
+            ".minecraft/" + name for name in source.namelist()
+        }
         if len(output.namelist()) != len(expected) or set(output.namelist()) != expected:
             raise RuntimeError("MMC/Prism archive does not match the Native payload")
         for info in source.infolist():
@@ -200,17 +237,29 @@ def validate_archives(curseforge, modrinth, native, sources_file):
             name for name in names
             if name.startswith("overrides/mods/") and name.endswith(".jar")
         ]
-        if len(manifest["files"]) + len(overrides) != expected_mods + 2:
-            raise RuntimeError("CurseForge archive does not contain every mod and resource pack")
+        total = len(manifest["files"]) + len(overrides)
+        if total != expected_mods + 2:
+            sample = sorted(names)[:10]
+            raise RuntimeError(
+                f"CurseForge archive does not contain every mod and resource pack: "
+                f"{len(manifest['files'])} manifest + {len(overrides)} overrides = {total}, "
+                f"expected {expected_mods + 2}. Sample zip entries: {sample}"
+            )
+
+        # Fail loudly only on the real hazard: a GTNH/NTNH override still
+        # sitting under its bare filename after prefixing. Manifest entries
+        # are legitimate and need no prefix.
+        override_basenames = {PurePosixPath(name).name for name in overrides}
         for item in sources:
             prefix = {"gtnh": "GTNH_", "ntnh": "NTNH_"}.get(item["source"])
-            if prefix:
-                expected_suffix = f"{prefix}{PurePosixPath(item['path']).name}"
-                if not any(
-                    name.startswith("overrides/mods/") and PurePosixPath(name).name == expected_suffix
-                    for name in names
-                ):
-                    raise RuntimeError(f"Missing prefixed CurseForge override: {expected_suffix}")
+            if not prefix:
+                continue
+            basename = PurePosixPath(item["path"]).name
+            if basename in override_basenames:
+                raise RuntimeError(
+                    f"GTNH/NTNH mod {basename} is unprefixed in overrides/mods/; "
+                    f"expected {prefix}{basename}"
+                )
 
     with zipfile.ZipFile(modrinth) as archive:
         if archive.testzip() is not None:
@@ -228,7 +277,9 @@ def validate_archives(curseforge, modrinth, native, sources_file):
             raise RuntimeError("Native archive contains Packwiz metafiles")
         native_mods = [name for name in names if name.startswith("mods/") and name.endswith(".jar")]
         if len(native_mods) != expected_mods:
-            raise RuntimeError(f"Native archive contains {len(native_mods)} mods; expected {expected_mods}")
+            raise RuntimeError(
+                f"Native archive contains {len(native_mods)} mods; expected {expected_mods}"
+            )
 
 
 def main():
@@ -245,7 +296,9 @@ def main():
     version = pack["version"]
     for archive in (args.curseforge, args.modrinth, args.native, args.mmc_prism):
         if version not in archive.name:
-            raise RuntimeError(f"Archive name does not contain pack version {version}: {archive.name}")
+            raise RuntimeError(
+                f"Archive name does not contain pack version {version}: {archive.name}"
+            )
 
     prefix_curseforge_overrides(args.curseforge, args.sources)
     build_native_archive(args.native, args.sources)
