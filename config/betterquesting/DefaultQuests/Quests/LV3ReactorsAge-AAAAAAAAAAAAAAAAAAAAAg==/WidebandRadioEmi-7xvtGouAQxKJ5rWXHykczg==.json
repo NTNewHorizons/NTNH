@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §3Wideband Radio Emission Detector Satellite§r monitors the entire map for high-energy events with no range limit, returning only an approximate location. Use it as a first-pass detection layer - once a hit is found, follow up with the §3Narrowband Emission Scanning Satellite§r or §3Radar Satellite§r to pinpoint the source.\n\nEvents are grouped by intensity. LOW covers mini-nuke detonations, accurate to within 10,000 m. MEDIUM covers active radars and particle accelerators, accurate to within 2,500 m. HIGH covers nuclear explosions, accurate to within 500 m. MEDIUM events persist for only half a second while others last up to a minute, so rapid repeated scans are recommended.\n\nRoR commands: \"esurvey\" collects all active results; \"ecount\" writes the total to RX; \"egettype\" writes LOW, MEDIUM, or HIGH for a given index; \"egetposition\" writes approximate X/Z coordinates for a given index.\n\n§2Route this satellite\u0027s output through an §3AUTOCAL§r§2 to automatically cue more precise instruments when a hit is detected.",
+      "desc:8": "The §3Wideband Radio Emission Detector Satellite§r monitors the entire map for high-energy events with no range limit, returning only an approximate location. Use it as a first-pass detection layer - once a hit is found, follow up with the §3Narrowband Emission Scanning Satellite§r or §3Spy Satellite§r to pinpoint the source.\n\nEvents are grouped by intensity. LOW covers mini-nuke detonations, accurate to within 10,000 m. MEDIUM covers active radars and particle accelerators, accurate to within 2,500 m. HIGH covers nuclear explosions, accurate to within 500 m. MEDIUM events persist for only half a second while others last up to a minute, so rapid repeated scans are recommended.\n\nRoR commands: \"esurvey\" collects all active results; \"ecount\" writes the total to RX; \"egettype\" writes LOW, MEDIUM, or HIGH for a given index; \"egetposition\" writes approximate X/Z coordinates for a given index.\n\n§2Route this satellite\u0027s output through an §3AUTOCAL§r§2 to automatically cue more precise instruments when a hit is detected.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -38,6 +38,7 @@
       },
       "isMain:1": 0,
       "isSilent:1": 0,
+      "is_final:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Wideband Radio Emission Detector Satellite",
       "notification_duration:5": -1.0,
@@ -55,6 +56,9 @@
       "notification_title:8": "",
       "notification_title_scale:5": -1.0,
       "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,

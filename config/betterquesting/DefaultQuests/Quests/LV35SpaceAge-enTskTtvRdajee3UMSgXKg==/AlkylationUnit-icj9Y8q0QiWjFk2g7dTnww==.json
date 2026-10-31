@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §3Alkylation Unit§r is designed to convert lighter hydrocarbons into useful heavier hydrocarbon products. From §bNatural Gas§r it can produce §bUnsaturated§r and §bAromatic hydrocarbons§r, commonly used for §6Rubber§r and §6Bakelite§r, and even produce §bBTX§r via the use of §bHigh-Performance Solvent§r. As a utility, it can also alkylate §bPetroleum Gas§r into §bLight Oil§r.",
+      "desc:8": "The §3Alkylation Unit§r is designed to convert lighter hydrocarbons into useful heavier hydrocarbon products. From §bNatural Gas§r it can produce §bUnsaturated Hydrocarbons§r, commonly used for §6Rubber§r and §6Bakelite§r, and even produce §bBTX§r via the use of §bHigh-Performance Solvent§r. As a utility, it can also alkylate §bPetroleum Gas§r into §bLight Oil§r.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -27,6 +27,7 @@
       },
       "isMain:1": 1,
       "isSilent:1": 0,
+      "is_final:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Alkylation Unit",
       "notification_duration:5": -1.0,
@@ -44,6 +45,9 @@
       "notification_title:8": "",
       "notification_title_scale:5": -1.0,
       "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,
@@ -64,7 +68,7 @@
       "rewards:9": {
         "0:10": {
           "Count:3": 1,
-          "Damage:2": 4,
+          "Damage:2": 222,
           "OreDict:8": "",
           "id:8": "enhancedlootbags:lootbag"
         }

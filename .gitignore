@@ -46,4 +46,15 @@ config/minemoticon/emoji_data.json
 !config/txloader/**
 
 config/CustomOreGen/CustomOreGen_Config_Default.xml
-config/CustomOreGen/modules/
+.agents/
+
+# Packwiz build output
+dist/
+*.mrpack
+NTNH-*.zip
+__pycache__/
+
+mods/World-Stripper*.jar
+angelica/shadercache/
+packwiz.exe
+natives

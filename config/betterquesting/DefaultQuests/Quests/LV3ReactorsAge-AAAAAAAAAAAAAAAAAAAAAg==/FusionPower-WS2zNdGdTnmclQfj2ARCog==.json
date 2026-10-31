@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §3Fusion Reactor Boiler§r is simplest method of extracting power from a fusion reactor, outputting §bSuper Dense Steam§r to be run through normal turbines.\n\nDue to using plasma energy, both the MHDT and the boiler are affected by port sharing rules, meaning that having multiple connected MHTDs, or boilers, decreases the amount of energy each turbine gets, but overall increases the total amount of extracted from the torus.\n",
+      "desc:8": "The §3Fusion Reactor Boiler§r is simplest method of extracting power from a fusion reactor, outputting §bSuper Dense Steam§r to be run through normal turbines.\n\nDue to using plasma energy, both the MHDT and the boiler are affected by port sharing rules, meaning that having multiple connected MHDTs, or boilers, decreases the amount of energy each turbine gets, but overall increases the total amount of extracted from the torus. MHD turbines need at least 5 MTU/t plasma input or efficiency halves, and convert TU to HE with a +35% bonus.\n",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -27,6 +27,7 @@
       },
       "isMain:1": 1,
       "isSilent:1": 0,
+      "is_final:1": 0,
       "lockedProgress:1": 0,
       "name:8": "Fusion Power",
       "notification_duration:5": -1.0,
@@ -44,6 +45,9 @@
       "notification_title:8": "",
       "notification_title_scale:5": -1.0,
       "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
       "questLogic:8": "AND",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,

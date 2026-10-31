@@ -8,7 +8,7 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
 
 * For Developers (Recommended): Downloads the full history but skips heavy old files.
   ```bash
-  git clone --filter=blob:none https://github.com/NTNewHotizons/NTNH
+  git clone --filter=blob:none https://github.com/NTNewHorizons/NTNH
   ```
 * For Testing / Playing Only: Downloads only the latest files, skipping all past history.
   ```bash

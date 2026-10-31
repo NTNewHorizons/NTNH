@@ -1,0 +1,34 @@
+<!-- =================================================================
+     NTNH Custom Ore Generation: Nether Module
+     Vanilla Quartz Generation
+
+     Parameters copied from CustomOreGen/modules/default/Vanilla.xml
+     ("vnlaNetherQuartzStandard", the Vanilla preset) so quartz matches
+     vanilla Minecraft's vein pattern, frequency and depth spread.
+
+     Needed because vanillaOreGen is disabled in the master config
+     (CustomOreGen_Config.xml), which cancels the vanilla quartz pass.
+     No other vanilla ore is generated here on purpose: iron, gold,
+     redstone, diamond, lapis and coal are all handled by the biome
+     distributions in 01_Overworld.xml instead.
+
+     Size/Frequency keep the vanilla base values but are multiplied by
+     the pack's global oreSize/oreFreq sliders so they stay consistent
+     with every other distribution in this pack.
+     ================================================================= -->
+<ConfigSection>
+
+    <IfCondition condition=':= dimension.generator.class = "ChunkProviderHell"'>
+
+        <StandardGen name="NetherQuartzVanilla" block="minecraft:quartz_ore:0">
+            <Description>Vanilla-style quartz ore generation, scoped to the Nether.</Description>
+            <Setting name="Size" avg=":= 10.667 * oreSize" range=":= 5.33 * oreSize" type="normal" />
+            <Setting name="Frequency" avg=":= 8.667 * oreFreq" range=":= 4.33 * oreFreq" type="normal" scaleTo="base" />
+            <Setting name="Height" avg="59" range="49" type="uniform" scaleTo="base" />
+            <ReplacesOre block="minecraft:netherrack" />
+            <Biome name=".*" />
+        </StandardGen>
+
+    </IfCondition>
+
+</ConfigSection>

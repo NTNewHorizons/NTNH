@@ -1,0 +1,14 @@
+name = "guidenh-1.3.52"
+filename = "guidenh-1.3.52.jar"
+side = "both"
+pin = true
+
+[download]
+hash-format = "sha256"
+hash = "65b8b378dc2b8f3a66eada5ce125d38a7afb091f83ad86db4b316074878bc313"
+url = "https://github.com/GTNewHorizons/GuideNH/releases/download/1.3.52/guidenh-1.3.52.jar"
+
+[update.github]
+slug = "GTNewHorizons/GuideNH"
+tag = "1.3.52"
+regex = "^guidenh\\-.+\\.jar$"

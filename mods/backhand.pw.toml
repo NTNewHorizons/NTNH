@@ -1,0 +1,14 @@
+name = "backhand-1.8.17"
+filename = "backhand-1.8.17.jar"
+side = "both"
+pin = true
+
+[download]
+hash-format = "sha256"
+hash = "232aa0a2ab6cfc34405aff76c18730e901877463d1df819b6b133a1ca448f93a"
+url = "https://github.com/GTNewHorizons/Backhand/releases/download/1.8.17/backhand-1.8.17.jar"
+
+[update.github]
+slug = "GTNewHorizons/Backhand"
+tag = "1.8.17"
+regex = "^backhand\\-.+\\.jar$"

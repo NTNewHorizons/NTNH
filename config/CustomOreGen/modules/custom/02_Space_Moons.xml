@@ -1,0 +1,71 @@
+<!-- =================================================================
+     NTNH Custom Ore Generation: Space Moons Module
+     Mun (Dim 15, Meta :2) and Minmus (Dim 21, Meta :3).
+     Strict uniform height bounds for performance and clipping prevention.
+     ================================================================= -->
+<ConfigSection>
+
+    <!-- === Mun (Dimension 15, Host Rock: moon_rock, Ore Meta :2) === -->
+    <CloudPreset name="PresetMun">
+        <Setting name="DistributionFrequency" avg=":= 0.03 * oreFreq" />
+        <Setting name="CloudRadius" avg=":= 14 * oreSize" range=":= 4 * oreSize" />
+        <Setting name="CloudThickness" avg=":= 12 * oreSize" range=":= 4 * oreSize" />
+        <Setting name="OreDensity" avg="0.8" />
+        <Replaces block="hbm:tile.moon_rock:0" />
+        <Biome name="Mun" />
+    </CloudPreset>
+
+    <Substitute name="Mun_Cleanup" block="hbm:tile.moon_rock:0">
+        <Replaces block="hbm:tile.ore_iron:2" />
+        <Replaces block="hbm:tile.ore_quartz:2" />
+        <Replaces block="hbm:tile.ore_gold:2" />
+        <Replaces block="hbm:tile.ore_redstone:2" />
+        <Replaces block="hbm:tile.ore_diamond:2" />
+        <Replaces block="hbm:tile.ore_cinnebar:2" />
+    </Substitute>
+
+    <Cloud name="Mun_Nickel" block="hbm:tile.ore_nickel:2" inherits="PresetMun">
+        <Setting name="CloudHeight" avg="30" range="15" type="uniform" />
+    </Cloud>
+    <Cloud name="Mun_Iron" block="hbm:tile.ore_iron:2" inherits="PresetMun">
+        <Setting name="CloudHeight" avg="45" range="15" type="uniform" />
+    </Cloud>
+    <Cloud name="Mun_Lead" block="hbm:tile.ore_lead:2" inherits="PresetMun">
+        <Setting name="CloudHeight" avg="20" range="10" type="uniform" />
+    </Cloud>
+    <Cloud name="Mun_Sulfur" block="hbm:tile.ore_sulfur:2" inherits="PresetMun">
+        <Setting name="CloudHeight" avg="55" range="10" type="uniform" />
+    </Cloud>
+    <Cloud name="Mun_Fluorite" block="hbm:tile.ore_fluorite:2" inherits="PresetMun">
+        <Setting name="CloudHeight" avg="35" range="10" type="uniform" />
+    </Cloud>
+
+    <!-- === Minmus (Dimension 21, Host Rock: minmus_stone, Ore Meta :3) === -->
+    <CloudPreset name="PresetMinmus">
+        <Setting name="DistributionFrequency" avg=":= 0.04 * oreFreq" />
+        <Setting name="CloudRadius" avg=":= 12 * oreSize" range=":= 4 * oreSize" />
+        <Setting name="CloudThickness" avg=":= 12 * oreSize" range=":= 4 * oreSize" />
+        <Setting name="OreDensity" avg="0.7" />
+        <Replaces block="hbm:tile.minmus_stone:0" />
+        <Biome name="Minmus Basins" />
+        <Biome name="Minmus Hills" />
+    </CloudPreset>
+
+    <Substitute name="Minmus_Cleanup" block="hbm:tile.minmus_stone:0">
+        <Replaces block="hbm:tile.ore_iron:3" />
+        <Replaces block="hbm:tile.ore_diamond:3" />
+        <Replaces block="hbm:tile.ore_gold:3" />
+        <Replaces block="hbm:tile.ore_redstone:3" />
+    </Substitute>
+
+    <Cloud name="Minmus_Copper" block="hbm:tile.ore_copper:3" inherits="PresetMinmus">
+        <Setting name="CloudHeight" avg="45" range="15" type="uniform" />
+    </Cloud>
+    <Cloud name="Minmus_Niter" block="hbm:tile.ore_niter:3" inherits="PresetMinmus">
+        <Setting name="CloudHeight" avg="25" range="10" type="uniform" />
+    </Cloud>
+    <Cloud name="Minmus_quartz" block="hbm:tile.ore_quartz:3" inherits="PresetMinmus">
+        <Setting name="CloudHeight" avg="25" range="10" type="uniform" />
+    </Cloud>
+
+</ConfigSection>
