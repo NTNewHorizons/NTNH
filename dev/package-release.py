@@ -41,6 +41,18 @@ def copy_zip_entry(source, target, info, name):
         shutil.copyfileobj(input_file, output_file, length=1024 * 1024)
 
 
+def is_mod_override_path(path):
+    """Return True for any location under an overrides/mods/ tree.
+
+    Canonical CurseForge layout is ``overrides/mods/<filename>``. Recent
+    packwiz builds also nest JARs one or more levels deep inside
+    ``overrides/mods/``, so we accept any depth rather than requiring
+    exactly three components.
+    """
+    ancestors = path.parts[:-1]
+    return "overrides" in ancestors and "mods" in ancestors
+
+
 def prefix_curseforge_overrides(archive, sources_file):
     sources = json.loads(sources_file.read_text())
     prefixes = {}
@@ -56,6 +68,7 @@ def prefix_curseforge_overrides(archive, sources_file):
         temp_path = Path(temp_file.name)
 
     renamed = set()
+    seen_at = {}
     try:
         with zipfile.ZipFile(archive, "r") as source, zipfile.ZipFile(
             temp_path, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9, allowZip64=True
@@ -64,10 +77,10 @@ def prefix_curseforge_overrides(archive, sources_file):
             for info in source.infolist():
                 name = info.filename
                 path = PurePosixPath(name)
-                if len(path.parts) == 3 and path.parts[:2] == ("overrides", "mods"):
-                    prefix = prefixes.get(path.name)
-                    if prefix:
-                        name = str(path.with_name(prefix + path.name))
+                if path.name in prefixes:
+                    seen_at.setdefault(path.name, name)
+                    if is_mod_override_path(path):
+                        name = str(path.with_name(prefixes[path.name] + path.name))
                         renamed.add(path.name)
                 copy_zip_entry(source, target, info, name)
         temp_path.replace(archive)
@@ -76,7 +89,13 @@ def prefix_curseforge_overrides(archive, sources_file):
 
     missing = sorted(set(prefixes) - renamed)
     if missing:
-        raise RuntimeError("Expected NTNH/GTNH overrides were not found: " + ", ".join(missing))
+        details = []
+        for name in missing:
+            if name in seen_at:
+                details.append(f"{name} (found at {seen_at[name]!r})")
+            else:
+                details.append(f"{name} (not present in archive)")
+        raise RuntimeError("Expected NTNH/GTNH overrides were not found: " + "; ".join(details))
 
 
 def native_files(sources_file):
@@ -177,15 +196,21 @@ def validate_archives(curseforge, modrinth, native, sources_file):
             raise RuntimeError("CurseForge archive failed its integrity check")
         names = set(archive.namelist())
         manifest = json.loads(archive.read("manifest.json"))
-        overrides = [name for name in names if name.startswith("overrides/mods/") and name.endswith(".jar")]
+        overrides = [
+            name for name in names
+            if name.startswith("overrides/mods/") and name.endswith(".jar")
+        ]
         if len(manifest["files"]) + len(overrides) != expected_mods + 2:
             raise RuntimeError("CurseForge archive does not contain every mod and resource pack")
         for item in sources:
             prefix = {"gtnh": "GTNH_", "ntnh": "NTNH_"}.get(item["source"])
             if prefix:
-                expected = f"overrides/mods/{prefix}{PurePosixPath(item['path']).name}"
-                if expected not in names:
-                    raise RuntimeError(f"Missing prefixed CurseForge override: {expected}")
+                expected_suffix = f"{prefix}{PurePosixPath(item['path']).name}"
+                if not any(
+                    name.startswith("overrides/mods/") and PurePosixPath(name).name == expected_suffix
+                    for name in names
+                ):
+                    raise RuntimeError(f"Missing prefixed CurseForge override: {expected_suffix}")
 
     with zipfile.ZipFile(modrinth) as archive:
         if archive.testzip() is not None:
