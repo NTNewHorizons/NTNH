@@ -557,7 +557,8 @@ def main():
     )
     parser.add_argument("--only", action="append", default=[], help="Only process matching mod globs")
     parser.add_argument("--changelog", default="MOD_UPDATE_CHANGELOG.md")
-    parser.add_argument("--packwiz", default=os.environ.get("PACKWIZ_BIN", "packwiz"))
+    default_packwiz = "packwiz.exe" if os.name == "nt" else "packwiz"
+    parser.add_argument("--packwiz", default=os.environ.get("PACKWIZ_BIN", default_packwiz))
     parser.add_argument("--github-token")
     parser.add_argument("--max-github-pages", type=int, default=10)
     parser.add_argument("--download-workers", type=int, default=4)

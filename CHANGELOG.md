@@ -317,6 +317,7 @@
 * Some common materials like tungsten, copper, aluminium and boron now have nugget forms
   * This allows foundry setups to use up materials with nugget precision
 * Increased the capacity of SILEX product tank from 16,000mb to 24,000mb
+* Now you can craft the bred variant again using the chicago pile as a replacement for zirnox
 
 
 
