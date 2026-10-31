@@ -92,16 +92,10 @@ jobs:
             TITLE="${INPUT_RELEASE_NAME:-$VERSION}"
             RELEASE_TYPE="${INPUT_RELEASE_TYPE:-latest}"
           else
-            # release-published events fall back to fully default settings:
-            # tag/title come from pack.toml, marked as the latest release.
             TITLE="$VERSION"
             RELEASE_TYPE="latest"
           fi
 
-          # Git tag/ref names can't contain spaces or ~ ^ : ? * [ \, so the
-          # tag is a sanitized version of the title (spaces -> hyphens,
-          # disallowed characters stripped) while the title keeps whatever
-          # the user typed, e.g. title "2.15.0 B-1" -> tag "2.15.0-B-1".
           TAG="${TITLE// /-}"
           TAG="$(echo "$TAG" | tr -d '~^:?*[\\')"
 
@@ -123,16 +117,16 @@ jobs:
       - name: Install Packwiz
         run: go install github.com/packwiz/packwiz@${PACKWIZ_VERSION}
 
+      # build-packwiz.sh is the single entry point: it exports the
+      # CurseForge and Modrinth archives, prefixes overrides, builds the
+      # Native and MMC/Prism archives, and validates everything. Do NOT
+      # call package-release.py from here - that is already done inside
+      # the script, and calling it again on an already-prefixed archive
+      # makes every GTNH/NTNH override look missing.
       - name: Build release packages
         env:
           VERSION: ${{ steps.version.outputs.version }}
-        run: |
-          ./build-packwiz.sh
-          python3 dev/package-release.py \
-            --curseforge "dist/NTNH-${VERSION}-CurseForge.zip" \
-            --modrinth "dist/NTNH-${VERSION}-Modrinth.mrpack" \
-            --native "dist/NTNH-${VERSION}-Native.zip" \
-            --mmc-prism "dist/NTNH-${VERSION}-MMC_Prism.zip"
+        run: ./build-packwiz.sh
 
       - name: Verify package names
         env:
