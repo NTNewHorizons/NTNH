@@ -124,13 +124,15 @@ jobs:
         run: go install github.com/packwiz/packwiz@${PACKWIZ_VERSION}
 
       - name: Build release packages
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
         run: |
+          ./build-packwiz.sh
           python3 dev/package-release.py \
             --curseforge "dist/NTNH-${VERSION}-CurseForge.zip" \
             --modrinth "dist/NTNH-${VERSION}-Modrinth.mrpack" \
             --native "dist/NTNH-${VERSION}-Native.zip" \
             --mmc-prism "dist/NTNH-${VERSION}-MMC_Prism.zip"
-          ./build-packwiz.sh
 
       - name: Verify package names
         env:
