@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "§3Gauges§r are used to measure the amount of energy or fluid passing through the network.",
+      "desc:8": "§3Gauges§r measure how much energy or fluid is moving through your network, so you can spot bottlenecks and tune your setups.\n\nThe §6Flow Gauge Pipe§r works like a normal fluid pipe but also reports flow rate in mB/s and mB/t. Just hover over it to see the values. It connects to any universal fluid pipe, including Boxcar pipes, and treats branched pipe systems joined by a single tank as one system. It does not work with exhaust pipes.\n\nThe §6Power Gauge§r sits inline with your cables and measures the energy passing through per tick and per second. Because it is a variation of red copper cable, it conducts power normally, so you can place it in the middle of a wire without breaking the connection. Separate networks linked by energy storage blocks are treated as one network.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,

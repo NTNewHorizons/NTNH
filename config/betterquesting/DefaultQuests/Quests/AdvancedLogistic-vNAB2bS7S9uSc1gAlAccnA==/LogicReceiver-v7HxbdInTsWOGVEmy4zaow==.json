@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The ROR §6Logic Receiver§r is a more advanced version of the receiver with a more extensive UI which can be used to specify the conditions that are needed for a signal to be received.",
+      "desc:8": "The RoR §6Logic Receiver§r is an advanced receiver with an extended interface that lets you define conditions for when it should output a redstone signal. Instead of simply passing a signal through, it compares the received signal against constants you set, using operators such as MATCHES, DOES NOT MATCH, CONTAINS, DOES NOT CONTAIN, GREATER, GREATER OR EQUAL, LESS, and LESS OR EQUAL. Each condition is evaluated in order, and higher outputs take priority - you can flip the evaluation order with the button near the ID field.\n\nThis makes the Logic Receiver especially useful with the Item Counter, since item counts can exceed the normal redstone limit of 15. Set a condition like GREATER than 1000, and the receiver will output only when your container holds more than that many items.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,

@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §3Network Separator§r can be used to split up a power network into multiple. It has a power gauge integrated into it and can be shut off by providing power from beneath.\n\nYou can control the priority and throughput of each network separator.",
+      "desc:8": "§3Network Separator§r splits a power network into separate segments and lets you control how power flows between them. It only outputs energy from the port marked with a red arrow and only accepts energy on the green arrow side, so power cannot flow back from the output network into the input network. A power gauge on the device shows how much electricity is passing through.\n\nPriority and throughput are set in its GUI. Energy always flows to the separator with the highest priority. All other machines have NORMAL priority, so a HIGH priority separator will draw power first while possible, and a LOW priority separator will only receive power after the buffers of all other machines are full. You can also shut the separator off by supplying redstone power from beneath it.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,

@@ -21,7 +21,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §3AUTOCAL Automatic Calculator§r is a basic machine that reads a script, line by line, and performs actions based on those lines. This means it can be programmed with behavior, doing math, and handling signals. It communicates with the outside world exclusively using ROR signals, allowing RoR to supply it with values to be processed, and returning RoR signals to be displayed or for controlling RoR receiving devices.\n\n§2A documentation button exists inside the machine for people that want to learn how to use it.§r",
+      "desc:8": "§3AUTOCAL Automatic Calculator§r is an earlygame 1x1x2 programmable machine that runs MS-ES1 scripts line by line. Use it to do math, store values in a buffer or named variables, make comparisons and branches, and send or receive Redstone-over-Radio signals - especially useful for automating RoR devices and controlling satellites.\n\nTo program it, open hbmComputerUpload/script.txt with the machine’s file button, write your MS-ES1 script, upload it, then press ON/OFF to run or stop it. Keep Ignore Errors off while debugging; Automatic Reboot restarts the script after it ends but wipes saved variables. Use clockspeed to control lines processed per tick, and endtick if you need to avoid overwriting multiple RoR signals sent on the same channel in one tick.\n\n§2The in-machine documentation button is your best reference for commands.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,

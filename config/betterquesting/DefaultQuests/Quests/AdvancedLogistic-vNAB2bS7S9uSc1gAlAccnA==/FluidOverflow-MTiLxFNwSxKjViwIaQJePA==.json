@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "Redstone-Over Radio§r in combination with a §3Redstone Fluid Valve§r can be used to detect when a tank is starting to fill up, and release the insides. This is useful for having buffers without having all the fluids being wasted.\n\n§2Here is an exmaple of a tank that will only output fluid once its full:§r\n\nFirstly, place a §6ROR Transmitter§r on one port of the tank, provide an ID and enable Polling.\n\n[img height\u003d1000]betterquesting:textures/QB_Fluid1.png[/img]\n\nAfter that, place a §6ROR Logic Receiver§r next to the fluid valve and input the desired settings. Make sure that your signal is \u003e\u003d of your desired buffer. One redstone level equals to 16k mb.\n\n[img height\u003d1000]betterquesting:textures/QB_Fluid2.png[/img]",
+      "desc:8": "§eRedstone-Over-Radio§r can be combined with a §3Redstone Fluid Valve§r to detect when a tank is starting to fill and then release its contents. This lets you use tanks as buffers without wasting fluid.\n\nA typical setup is a tank that only outputs fluid once it is full. Place a §6RoR Transmitter§r on one port of the tank, give it an ID, and enable Polling.\n\n[img height\u003d1000]betterquesting:textures/QB_Fluid1.png[/img]\n\nThen place a §6RoR Logic Receiver§r next to the fluid valve and configure it so the received signal must be greater than or equal to your desired buffer threshold. Each redstone level equals 16,000 mB, so set the condition based on how large a buffer you want.\n\n[img height\u003d1000]betterquesting:textures/QB_Fluid2.png[/img]",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,

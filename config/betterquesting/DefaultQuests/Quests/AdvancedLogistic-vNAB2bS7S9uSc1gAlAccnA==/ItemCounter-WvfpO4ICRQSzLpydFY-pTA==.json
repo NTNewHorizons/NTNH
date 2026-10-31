@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The ROR §6Item Counter§r is used to count the amount of items inside a container. It can transmit up to 3 signals, the items of which need to be specified with filters.",
+      "desc:8": "The RoR §6Item Counter§r counts individual items inside a container rather than just measuring how full it is. Place it on any block with an inventory - including item ports on multiblock machines - and specify which item to count using the filter slots on the right side of its interface. Right-click a filter to switch between Item Matches and Item and Meta Matches.\n\nIt can transmit to up to 3 different receivers using separate ID fields. Unlike vanilla comparators, the Item Counter\u0027s signal strength is not limited to 15, so it can report exact counts even for large inventories. Pair it with a Logic Receiver to trigger outputs based on specific item thresholds.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,

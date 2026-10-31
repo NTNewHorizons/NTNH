@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §3Conveyor Grabber§r grabs items straight off of the conveyor belt without having the line go into it. It does not have an internal buffer.\n\n§2Factorio inserter says \"Hi!\"",
+      "desc:8": "§3Conveyor Grabber§r grabs items directly off a conveyor belt without needing the belt to feed into it. It has no internal buffer, so items are pulled straight from the belt and placed into an adjacent inventory or machine. It includes whitelist and blacklist filters with 9 slots each, and without the Stack Amount upgrade it only grabs one item at a time - a full stack on the belt will be taken one piece per operation. With the upgrade it can grab groups. Use a screwdriver to set its orientation and input/output sides: right-click sets input, Shift-right-click sets output, and double right-click places ports on opposite sides.\n\n§2Factorio inserter says \"Hi!\"§r",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,

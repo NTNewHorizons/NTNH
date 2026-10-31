@@ -10156,7 +10156,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "§3Conveyors§r provide the simplest way of moving items around. There are multiple blocks that can interface with machines as well as items moving along conveyor belts.\n\n§3Conveyor Belts§r are blocks used to transport items. They can pick up dropped items or items from conveyor ejectors. Conveyor inserters can take items from conveyor belts. If there are no conveyor inserters present, the item will be dropped at the end of the conveyor belt line.\n\n§3Conveyor Inserters§r are blocks that take items from conveyor belts and outputs them into a storage space. Conveyor ejectors are the opposite, they take items from storage and place them onto conveyor belts. \n\nInserters have an option to destroy surplus items if the input buffer has run full, otherwise the items that can neither be inserted in the target nor the inserter\u0027s buffer is simply dropped.\n\nThe ejector has a whitelist/blacklist system (the default mode is blacklist with no restrictions - this means that everything will go through). Right-clicking the white arrow will toggle between whitelist and blacklist. An item can be added to the blacklist/whitelist by \"depositing\" it into the blue inventory square - the item will not be consumed, however.\n\nThe §3Conveyor Splitter§r is a type of conveyor belt that splits items evenly onto 2 lanes.\n\n§3Conveyor Sorters§r are blocks that can sort various items to a specific conveyor belt. They do not have a buffer and simple move items to connected conveyor belts based on their filter options, therefore they can sort items as quickly as they receive them.\nThe sorter has six outputs with five slots each, making it able to route multiple items to one belt.",
+          "desc:8": "§3Conveyors§r are the simplest way to move items around your base. They are cheap and easy to set up, but items move slowly and belts need a little planning. §3Conveyor Belts§r pick up dropped items or items placed by ejectors. If nothing takes the item at the end of the line, it drops on the ground. Standard belts are yellow, double-lane belts are red, triple-lane belts are purple, and express belts are green and three times faster. Multi-lane belts are mainly useful for looks or for grabbers, since items do not collide on belts.\n\n§3Conveyor Ejectors§r pull items from storage and place them onto belts. They have 9 slots, can be upgraded with speed and stack ejection up to level 3, and use a whitelist/blacklist filter. By default they are blacklist with no restrictions, so everything passes. Right-click the white arrow to toggle the filter mode, then deposit an item into the blue slot to add it - the item is not consumed. A redstone signal disables an ejector.\n\n§3Conveyor Inserters§r take items from belts and push them into storage. They have 21 slots and can destroy surplus items if their buffer fills, otherwise leftover items are dropped. The §3Conveyor Splitter§r evenly splits items onto 2 lanes. Be careful: an ejector facing a splitter with no belt between them will place items directly on the splitter\u0027s output belt and skip the splitting section.\n\n§3Conveyor Sorters§r route items to specific belts using six outputs with five filter slots each. Each output can be set to whitelist, blacklist, wildcard, or off. Sorters have no buffer and move items as fast as they receive them, but they require integrated circuits, so you need silicon and an electric arc furnace first. If you cannot make a sorter yet, an inserter feeding a crate with several filtered ejectors works as a slower substitute.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21841,7 +21841,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "ROR §3Panels§r can be used to craft useful ROR components such as Gauges, Switches, Graphs and more. Shift-Click with a screwdriver to configure them once placed.",
+          "desc:8": "§3RoR Panels§r are crafted from a blank panel and act as control panel blocks. Interactive types like Keypads and Levers send commands to controllers, while aesthetic types like Gauges, Graphs, Digital Displays, and Indicator Lamps show values received from readers. Each component must be enabled with the red buttons in its GUI. Once placed, Shift-Click with a screwdriver to open the configuration screen and set IDs, colors, labels, and modes.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -22785,7 +22785,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "The §3Network Separator§r can be used to split up a power network into multiple. It has a power gauge integrated into it and can be shut off by providing power from beneath.\n\nYou can control the priority and throughput of each network separator.",
+          "desc:8": "§3Network Separator§r splits a power network into separate segments and lets you control how power flows between them. It only outputs energy from the port marked with a red arrow and only accepts energy on the green arrow side, so power cannot flow back from the output network into the input network. A power gauge on the device shows how much electricity is passing through.\n\nPriority and throughput are set in its GUI. Energy always flows to the separator with the highest priority. All other machines have NORMAL priority, so a HIGH priority separator will draw power first while possible, and a LOW priority separator will only receive power after the buffers of all other machines are full. You can also shut the separator off by supplying redstone power from beneath it.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -24863,7 +24863,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "Conveyors ejectors can be equiped with two different types of upgrades.\n\n§6Stack Ejection§r, which outputs more items at once.\n\n§6Ejection Speed§r, which outputs items at a faster rate.",
+          "desc:8": "§3Conveyor Ejectors§r can be fitted with two upgrade types. §6Stack Ejection§r increases how many items are output at once, while §6Ejection Speed§r increases how quickly items are output. Both upgrades can be applied up to level 3.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26141,7 +26141,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "Multi-Lane Conveyor Belts can be used to transport items on different lanes on the same block, while the Express Conveyor transfers the items twice as fast.",
+          "desc:8": "§3Multi-Lane Conveyor Belts§r let you transport items on separate lanes within the same block, so you can run multiple item streams side by side. §6Express Conveyor Belts§r move items twice as fast as standard belts, making them useful when throughput or travel distance becomes a bottleneck.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -27061,7 +27061,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "Redstone-Over Radio§r in combination with a §3Redstone Fluid Valve§r can be used to detect when a tank is starting to fill up, and release the insides. This is useful for having buffers without having all the fluids being wasted.\n\n§2Here is an exmaple of a tank that will only output fluid once its full:§r\n\nFirstly, place a §6ROR Transmitter§r on one port of the tank, provide an ID and enable Polling.\n\n[img height\u003d1000]betterquesting:textures/QB_Fluid1.png[/img]\n\nAfter that, place a §6ROR Logic Receiver§r next to the fluid valve and input the desired settings. Make sure that your signal is \u003e\u003d of your desired buffer. One redstone level equals to 16k mb.\n\n[img height\u003d1000]betterquesting:textures/QB_Fluid2.png[/img]",
+          "desc:8": "§eRedstone-Over-Radio§r can be combined with a §3Redstone Fluid Valve§r to detect when a tank is starting to fill and then release its contents. This lets you use tanks as buffers without wasting fluid.\n\nA typical setup is a tank that only outputs fluid once it is full. Place a §6RoR Transmitter§r on one port of the tank, give it an ID, and enable Polling.\n\n[img height\u003d1000]betterquesting:textures/QB_Fluid1.png[/img]\n\nThen place a §6RoR Logic Receiver§r next to the fluid valve and configure it so the received signal must be greater than or equal to your desired buffer threshold. Each redstone level equals 16,000 mB, so set the condition based on how large a buffer you want.\n\n[img height\u003d1000]betterquesting:textures/QB_Fluid2.png[/img]",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -27918,7 +27918,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "§3Gauges§r are used to measure the amount of energy or fluid passing through the network.",
+          "desc:8": "§3Gauges§r measure how much energy or fluid is moving through your network, so you can spot bottlenecks and tune your setups.\n\nThe §6Flow Gauge Pipe§r works like a normal fluid pipe but also reports flow rate in mB/s and mB/t. Just hover over it to see the values. It connects to any universal fluid pipe, including Boxcar pipes, and treats branched pipe systems joined by a single tank as one system. It does not work with exhaust pipes.\n\nThe §6Power Gauge§r sits inline with your cables and measures the energy passing through per tick and per second. Because it is a variation of red copper cable, it conducts power normally, so you can place it in the middle of a wire without breaking the connection. Separate networks linked by energy storage blocks are treated as one network.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -28850,7 +28850,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "The §3Conveyor Grabber§r grabs items straight off of the conveyor belt without having the line go into it. It does not have an internal buffer.\n\n§2Factorio inserter says \"Hi!\"",
+          "desc:8": "§3Conveyor Grabber§r grabs items directly off a conveyor belt without needing the belt to feed into it. It has no internal buffer, so items are pulled straight from the belt and placed into an adjacent inventory or machine. It includes whitelist and blacklist filters with 9 slots each, and without the Stack Amount upgrade it only grabs one item at a time - a full stack on the belt will be taken one piece per operation. With the upgrade it can grab groups. Use a screwdriver to set its orientation and input/output sides: right-click sets input, Shift-right-click sets output, and double right-click places ports on opposite sides.\n\n§2Factorio inserter says \"Hi!\"§r",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -30780,7 +30780,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "The ROR §6Item Counter§r is used to count the amount of items inside a container. It can transmit up to 3 signals, the items of which need to be specified with filters.",
+          "desc:8": "The RoR §6Item Counter§r counts individual items inside a container rather than just measuring how full it is. Place it on any block with an inventory - including item ports on multiblock machines - and specify which item to count using the filter slots on the right side of its interface. Right-click a filter to switch between Item Matches and Item and Meta Matches.\n\nIt can transmit to up to 3 different receivers using separate ID fields. Unlike vanilla comparators, the Item Counter\u0027s signal strength is not limited to 15, so it can report exact counts even for large inventories. Pair it with a Logic Receiver to trigger outputs based on specific item thresholds.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -33632,7 +33632,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "The Combinator Funnel is used to perform crafts of the same item in a 3x3 or 2x2 grid. It becomes extremely useful for §eBedrock Ore Processing§r.",
+          "desc:8": "The §3Combinator Funnel§r is a cheap, unpowered machine that automates 2x2 or 3x3 recipes using the same item, like nuggets into ingots or small powder into full powder. It is very useful for §eBedrock Ore Processing§r.\n\nPick the recipe pattern with the toggle in the bottom-right of the GUI. Input goes in the top slot, output comes out the bottom, and items can be pulled from the sides to avoid clogging. It has 9 top and 9 bottom slots, works with normal hoppers, and can run up to 9 operations per tick.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -33720,7 +33720,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "§2This quest serves as a guide on how to precisely input items in an arc furnace as not to waste electrode durability.§r\n\n§2By SkippyPlaysMC§r\n\nAssuming no upgrades are inserted in the §3Arc Furnace§r, there are exactly 20 slots available for items. To start, route all input items into a §3Conveyor Boxer§r which will send items into a §3Conveyor Unboxer§r. Adding speed ejection and stack ejection upgrades to the unboxer is highly recommended as so the items are inputed fast enough.\n\n[img height\u003d1000]betterquesting:textures/BQ_ARC1.png[/img]\n\nPlace a §3Redstone-Over-Radio Item Counter§r on one side of the boxer, set the item filter and give it an ID.\n\n[img height\u003d1000]betterquesting:textures/BQ_ARC2.png[/img]\n\nThen place a Redstone-Over-Radio Logic Receiver, give it the correct ID, and set it to emit redstone when item count is 20.\n\n[img height\u003d1000]betterquesting:textures/BQ_ARC3.png[/img]\n\nMake sure that the boxer has its mode set to redstone.\n\n[img height\u003d1000]betterquesting:textures/BQ_ARC4.png[/img]",
+          "desc:8": "§2This quest is a guide to feeding items into an Arc Furnace precisely, so you don\u0027t waste electrode durability.§r\n\nWith no upgrades in the §3Arc Furnace§r, you have exactly 20 item slots to work with. Start by routing all input items into a §3Conveyor Boxer§r, which then feeds a §3Conveyor Unboxer§r. Add Speed Ejection and Stack Ejection upgrades to the unboxer - this is strongly recommended so items enter fast enough to keep up.\n\n[img height\u003d1000]betterquesting:textures/BQ_ARC1.png[/img]\n\nPlace a §3Redstone-Over-Radio Item Counter§r on one side of the boxer, set the item filter, and give it an ID.\n\n[img height\u003d1000]betterquesting:textures/BQ_ARC2.png[/img]\n\nNext, place a §3Redstone-Over-Radio Logic Receiver§r, set it to the same ID, and configure it to emit redstone when the item count reaches 20.\n\n[img height\u003d1000]betterquesting:textures/BQ_ARC3.png[/img]\n\nFinally, make sure the boxer is set to redstone mode.\n\n[img height\u003d1000]betterquesting:textures/BQ_ARC4.png[/img]",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40173,7 +40173,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "§dNTM§r introduces §eRedstone-Over Radio§r, which is a system of sending redstone signals wirelessly. There are many ROR components which serve different purposes, from maintaining a certain amount of fluid in a tank to reading item amounts in containers.\n\nThe foundational components of this system are the ROR §6Transmitter§r and §6Receiver§r. As their name suggests, they can send and receive redstone signals. For them to be linked together, both need the same §eID§r.",
+          "desc:8": "§dNTM§r introduces §eRedstone-Over-Radio§r (RoR), a system for sending redstone signals wirelessly across your base. Every RoR component requires glowstone, so you\u0027ll need to visit the Nether first.\n\nThe core components are the §6Transmitter§r and §6Receiver§r. Place a transmitter on a block that outputs a comparator signal (like a fluid tank or crate), set an §eID§r (any 10 characters), and set the same ID on a receiver. Press \"Save Settings\" on both - changes are not saved automatically. The receiver will then output a redstone signal matching the transmitter\u0027s input. Multiple receivers can listen to one transmitter, but multiple transmitters on the same ID will overwrite each other, with the last one winning.\n\nRoR can replace vanilla comparators for remote monitoring and control. Advanced components like the Item Counter, Logic Receiver, Reader, and Controller unlock more possibilities, such as reading exact item counts beyond 15 or sending commands to machines.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40538,7 +40538,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "The §3Telex Machine§r is used to send signals to other Telex Machines. It can also send signals if it receives a message and can print out messages on a piece of paper.",
+          "desc:8": "§3Telex Machine§r sends and receives text messages between Telex units. Set the recipient\u0027s ID and your own ID, type a message up to 33 characters, then press SND to send. Incoming messages appear in the lower field and can be printed to paper with PRT. It needs no energy, can be found in rocket silos and towers, and crafts two at a time. Special characters add useful effects - BEL rings a bell at the destination, PRT auto-prints the message for all recipients, and PSE delays sending. It also works as an infinite paper source since PRT functions even on an empty message.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40622,7 +40622,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "The §3Flow Control Pump§r is used to set priorities for fluid pipes aswell as to limit fluid throughput.",
+          "desc:8": "The §3Flow Control Pump§r controls how fluids move through your pipe network. Use it to set priorities between fluid networks and to limit fluid throughput, similar to how a Network Separator manages power. It passes a maximum of 10,000 mB per tick and supports fluid pressure from 0 to 5 PU. Configure it through its GUI and hover over the pump to see current flow data. It needs no power, has no upgrades, and is 3x1x1. Note that drain pipes, incinerators, and gas towers have low fluid priority by default.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -41942,7 +41942,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "The §3AUTOCAL Automatic Calculator§r is a basic machine that reads a script, line by line, and performs actions based on those lines. This means it can be programmed with behavior, doing math, and handling signals. It communicates with the outside world exclusively using ROR signals, allowing RoR to supply it with values to be processed, and returning RoR signals to be displayed or for controlling RoR receiving devices.\n\n§2A documentation button exists inside the machine for people that want to learn how to use it.§r",
+          "desc:8": "§3AUTOCAL Automatic Calculator§r is an earlygame 1x1x2 programmable machine that runs MS-ES1 scripts line by line. Use it to do math, store values in a buffer or named variables, make comparisons and branches, and send or receive Redstone-over-Radio signals - especially useful for automating RoR devices and controlling satellites.\n\nTo program it, open hbmComputerUpload/script.txt with the machine’s file button, write your MS-ES1 script, upload it, then press ON/OFF to run or stop it. Keep Ignore Errors off while debugging; Automatic Reboot restarts the script after it ends but wipes saved variables. Use clockspeed to control lines processed per tick, and endtick if you need to avoid overwriting multiple RoR signals sent on the same channel in one tick.\n\n§2The in-machine documentation button is your best reference for commands.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42401,7 +42401,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "The ROR §6Logic Receiver§r is a more advanced version of the receiver with a more extensive UI which can be used to specify the conditions that are needed for a signal to be received.",
+          "desc:8": "The RoR §6Logic Receiver§r is an advanced receiver with an extended interface that lets you define conditions for when it should output a redstone signal. Instead of simply passing a signal through, it compares the received signal against constants you set, using operators such as MATCHES, DOES NOT MATCH, CONTAINS, DOES NOT CONTAIN, GREATER, GREATER OR EQUAL, LESS, and LESS OR EQUAL. Each condition is evaluated in order, and higher outputs take priority - you can flip the evaluation order with the button near the ID field.\n\nThis makes the Logic Receiver especially useful with the Item Counter, since item counts can exceed the normal redstone limit of 15. Set a condition like GREATER than 1000, and the receiver will output only when your container holds more than that many items.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -44193,7 +44193,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "The §3Automatic Crafting Table§r is able to perform crafts when supplied with power and a blueprint inside of it is set. The Blueprint is located at the blue crafting area and the items can be defined by using either items inside the player\u0027s inventory or by dragging them fron the NEI menu.",
+          "desc:8": "The §3Automatic Crafting Table§r performs a set recipe automatically as long as it has power. Define the recipe by placing ingredients into the blue crafting grid - you can use items from your inventory or drag them from NEI. Once set, input items go into the gray grid and are consumed, with the product appearing in the gray output slot. It costs 100 HE per operation and runs one operation per tick regardless of recipe complexity.\n\nIt works with hoppers, crates, and conveyor machines for full automation. For 2x2 or 3x3 recipes where every ingredient is the same item, use the §6Combinator Funnel§r instead - it needs no power.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,

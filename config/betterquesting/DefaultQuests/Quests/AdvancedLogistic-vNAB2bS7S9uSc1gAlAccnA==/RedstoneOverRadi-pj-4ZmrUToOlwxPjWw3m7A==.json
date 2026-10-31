@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "§dNTM§r introduces §eRedstone-Over Radio§r, which is a system of sending redstone signals wirelessly. There are many ROR components which serve different purposes, from maintaining a certain amount of fluid in a tank to reading item amounts in containers.\n\nThe foundational components of this system are the ROR §6Transmitter§r and §6Receiver§r. As their name suggests, they can send and receive redstone signals. For them to be linked together, both need the same §eID§r.",
+      "desc:8": "§dNTM§r introduces §eRedstone-Over-Radio§r (RoR), a system for sending redstone signals wirelessly across your base. Every RoR component requires glowstone, so you\u0027ll need to visit the Nether first.\n\nThe core components are the §6Transmitter§r and §6Receiver§r. Place a transmitter on a block that outputs a comparator signal (like a fluid tank or crate), set an §eID§r (any 10 characters), and set the same ID on a receiver. Press \"Save Settings\" on both - changes are not saved automatically. The receiver will then output a redstone signal matching the transmitter\u0027s input. Multiple receivers can listen to one transmitter, but multiple transmitters on the same ID will overwrite each other, with the last one winning.\n\nRoR can replace vanilla comparators for remote monitoring and control. Advanced components like the Item Counter, Logic Receiver, Reader, and Controller unlock more possibilities, such as reading exact item counts beyond 15 or sending commands to machines.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
