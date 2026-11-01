@@ -4,6 +4,20 @@ on:
   release:
     types: [published]
   workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release tag/version to sync (defaults to triggering release tag)'
+        required: false
+        type: string
+      ref:
+        description: 'Git ref to sync (defaults to triggering release tag)'
+        required: false
+        type: string
+      prerelease:
+        description: 'Publish the server release as a prerelease'
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   sync:
@@ -11,6 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.inputs.ref || github.event.release.tag_name || github.ref }}
           fetch-depth: 0
           lfs: true
 
@@ -76,7 +91,7 @@ jobs:
             echo "No changes to sync."
             echo "has_changes=false" >> "$GITHUB_OUTPUT"
           else
-            git commit -m "sync: release ${{ github.event.release.tag_name || github.sha }} from NTNH main"
+            git commit -m "sync: release ${{ github.event.inputs.version || github.event.release.tag_name || github.sha }} from NTNH main"
             git push origin main
             echo "has_changes=true" >> "$GITHUB_OUTPUT"
           fi
@@ -106,15 +121,24 @@ jobs:
             sudo apt-get install -y zip >/dev/null 2>&1
           fi
 
-          VERSION="${{ github.event.release.tag_name || github.sha }}"
+          VERSION="${{ github.event.inputs.version }}"
+          if [ -z "$VERSION" ]; then
+            VERSION="${{ github.event.release.tag_name || github.sha }}"
+          fi
           VERSION="${VERSION#v}"
           VERSION="$(printf '%s' "$VERSION" | tr '/ ' '--')"
+
+          PRERELEASE="${{ github.event.inputs.prerelease }}"
+          if [ -z "$PRERELEASE" ]; then
+            PRERELEASE="${{ github.event.release.prerelease }}"
+          fi
 
           rm -rf .git
           zip -rq "/tmp/ntnh-server-$VERSION.zip" .
           (cd /tmp && sha256sum "ntnh-server-$VERSION.zip" > "ntnh-server-$VERSION.zip.sha256")
 
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "prerelease=$PRERELEASE" >> "$GITHUB_OUTPUT"
           echo "archive=/tmp/ntnh-server-$VERSION.zip" >> "$GITHUB_OUTPUT"
           echo "checksum=/tmp/ntnh-server-$VERSION.zip.sha256" >> "$GITHUB_OUTPUT"
 
@@ -127,7 +151,7 @@ jobs:
           echo "Publishing release tag: $TAG"
 
           # Source release notes (safe: fetched via API, not shell interpolation).
-          gh release view "${{ github.event.release.tag_name }}" \
+          gh release view "$TAG" \
             --repo NTNewHorizons/NTNH --json body --jq '.body' \
             > /tmp/release-body.md 2>/dev/null || true
 
@@ -149,7 +173,7 @@ jobs:
             --title "NTNH Server $TAG"
             --notes-file /tmp/release-notes.md
           )
-          if [ "${{ github.event.release.prerelease }}" = "true" ]; then
+          if [ "${{ steps.build.outputs.prerelease }}" = "true" ]; then
             ARGS+=(--prerelease)
           fi
 

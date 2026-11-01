@@ -31,6 +31,7 @@ concurrency:
 
 permissions:
   contents: write
+  actions: write
 
 env:
   PACKWIZ_VERSION: ef87d964f8cbd52b3b13ea42453ef322290e2b9e
@@ -100,14 +101,15 @@ jobs:
           TAG="$(echo "$TAG" | tr -d '~^:?*[\\')"
 
           case "$RELEASE_TYPE" in
-            prerelease) EXTRA_FLAG="--prerelease" ;;
-            latest) EXTRA_FLAG="--latest" ;;
-            *) EXTRA_FLAG="" ;;
+            prerelease) EXTRA_FLAG="--prerelease"; PRERELEASE="true" ;;
+            latest) EXTRA_FLAG="--latest"; PRERELEASE="false" ;;
+            *) EXTRA_FLAG=""; PRERELEASE="false" ;;
           esac
 
           echo "tag=$TAG" >> "$GITHUB_OUTPUT"
           echo "title=$TITLE" >> "$GITHUB_OUTPUT"
           echo "extra_flag=$EXTRA_FLAG" >> "$GITHUB_OUTPUT"
+          echo "prerelease=$PRERELEASE" >> "$GITHUB_OUTPUT"
 
       - name: Set up Go
         uses: actions/setup-go@v5
@@ -182,3 +184,20 @@ jobs:
             --title "$TITLE" \
             --notes-file CHANGELOG.md \
             $EXTRA_FLAG
+
+      # Releases published with GITHUB_TOKEN do not emit a release event, so
+      # trigger the server sync explicitly. workflow_dispatch is exempt from
+      # GitHub's token recursion guard.
+      - name: Trigger server pack sync
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ steps.release_info.outputs.tag }}
+          TARGET: ${{ steps.target.outputs.branch }}
+          PRERELEASE: ${{ steps.release_info.outputs.prerelease }}
+        run: |
+          gh workflow run sync-server.yml \
+            --repo "$GITHUB_REPOSITORY" \
+            --ref "$TARGET" \
+            -f version="$TAG" \
+            -f ref="$TAG" \
+            -f prerelease="$PRERELEASE"
