@@ -41,6 +41,8 @@
 
 
 **Changed**
+* Removed Chunk Generator, as it doesn't work anymore
+	* It is also All Rights Reserved, we don't have a permission to have it
 * NotEnoughItems: reverted missing item count rendering changes
 * OpenComputers: rendering modernization
 * OpenComputers: fluid regulator tier/speed aligned in transposer names
