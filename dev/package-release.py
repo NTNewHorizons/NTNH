@@ -28,6 +28,13 @@ NATIVE_EXCLUDES = {
     "packwiz-sources.json",
 }
 
+# Mods that cannot use Packwiz metadata (for example, a mod that is not
+# open-source yet). They stay as raw JARs in mods/ and are injected into every
+# release archive instead of being resolved from a Packwiz download source.
+RAW_MODS = (
+    "mods/immersivevehicleslegacy-0.1.0-ntmv2.jar",
+)
+
 
 def copy_zip_entry(source, target, info, name):
     output_info = zipfile.ZipInfo(name, date_time=info.date_time)
@@ -133,9 +140,33 @@ def prefix_curseforge_overrides(archive, sources_file):
         )
 
 
-def native_files(sources_file):
+def raw_mod_paths(sources_file):
+    """Yield tracked raw mods that must be shipped without Packwiz metadata."""
+    sources = json.loads(sources_file.read_text())
+    source_paths = {Path(item["path"]).as_posix() for item in sources}
+    seen = set()
+    for posix in RAW_MODS:
+        relative = Path(posix)
+        normalized = relative.as_posix()
+        if normalized in seen:
+            raise RuntimeError(f"Duplicate raw mod path: {normalized}")
+        seen.add(normalized)
+        if normalized in source_paths:
+            raise RuntimeError(
+                f"Raw mod {normalized} must not also be listed in packwiz-sources.json"
+            )
+        path = ROOT / relative
+        if not path.is_file():
+            raise RuntimeError(f"Expected raw mod file is missing: {normalized}")
+        yield relative, path
+
+
+def native_files(sources_file, raw):
     sources = json.loads(sources_file.read_text())
     seen = set()
+    for relative, path in raw:
+        seen.add(relative.as_posix())
+        yield relative, path
     for item in sources:
         relative = Path(item["path"])
         posix = relative.as_posix()
@@ -170,13 +201,30 @@ def native_files(sources_file):
             yield relative, path
 
 
-def build_native_archive(archive, sources_file):
+def build_native_archive(archive, sources_file, raw):
     archive.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(
         archive, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9, allowZip64=True
     ) as output:
-        for relative, path in native_files(sources_file):
+        for relative, path in native_files(sources_file, raw):
             info = zipfile.ZipInfo(relative.as_posix(), date_time=(1980, 1, 1, 0, 0, 0))
+            info.compress_type = zipfile.ZIP_DEFLATED
+            info.external_attr = 0o100644 << 16
+            with path.open("rb") as input_file, output.open(info, "w", force_zip64=True) as output_file:
+                shutil.copyfileobj(input_file, output_file, length=1024 * 1024)
+
+
+def inject_raw_mods(archive, raw, directory):
+    """Copy raw JARs into an exported CurseForge/Modrinth archive."""
+    with zipfile.ZipFile(
+        archive, "a", compression=zipfile.ZIP_DEFLATED, compresslevel=9, allowZip64=True
+    ) as output:
+        existing = set(output.namelist())
+        for relative, path in raw:
+            name = f"{directory}/{relative.name}"
+            if name in existing:
+                continue
+            info = zipfile.ZipInfo(name, date_time=(1980, 1, 1, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o100644 << 16
             with path.open("rb") as input_file, output.open(info, "w", force_zip64=True) as output_file:
@@ -224,9 +272,11 @@ def validate_mmc_prism_archive(archive, native, pack):
             raise RuntimeError("MMC/Prism component versions do not match pack.toml")
 
 
-def validate_archives(curseforge, modrinth, native, sources_file):
+def validate_archives(curseforge, modrinth, native, sources_file, raw):
     sources = json.loads(sources_file.read_text())
     expected_mods = len(sources)
+    expected_raw = len(raw)
+    raw_mod_names = {f"overrides/mods/{relative.name}" for relative, _ in raw}
 
     with zipfile.ZipFile(curseforge) as archive:
         if archive.testzip() is not None:
@@ -238,12 +288,17 @@ def validate_archives(curseforge, modrinth, native, sources_file):
             if name.startswith("overrides/mods/") and name.endswith(".jar")
         ]
         total = len(manifest["files"]) + len(overrides)
-        if total != expected_mods + 2:
+        if total != expected_mods + expected_raw + 2:
             sample = sorted(names)[:10]
             raise RuntimeError(
                 f"CurseForge archive does not contain every mod and resource pack: "
                 f"{len(manifest['files'])} manifest + {len(overrides)} overrides = {total}, "
-                f"expected {expected_mods + 2}. Sample zip entries: {sample}"
+                f"expected {expected_mods + expected_raw + 2}. Sample zip entries: {sample}"
+            )
+        missing_raw = sorted(raw_mod_names - names)
+        if missing_raw:
+            raise RuntimeError(
+                f"CurseForge archive is missing raw mod(s): {missing_raw}"
             )
 
         # Fail loudly only on the real hazard: a GTNH/NTNH override still
@@ -268,6 +323,12 @@ def validate_archives(curseforge, modrinth, native, sources_file):
         mod_files = [item for item in index["files"] if item["path"].startswith("mods/")]
         if len(mod_files) != expected_mods:
             raise RuntimeError("Modrinth archive does not contain every mod")
+        names = set(archive.namelist())
+        missing_raw = sorted(raw_mod_names - names)
+        if missing_raw:
+            raise RuntimeError(
+                f"Modrinth archive is missing raw mod(s): {missing_raw}"
+            )
 
     with zipfile.ZipFile(native) as archive:
         if archive.testzip() is not None:
@@ -276,10 +337,17 @@ def validate_archives(curseforge, modrinth, native, sources_file):
         if any(name.endswith(".pw.toml") for name in names):
             raise RuntimeError("Native archive contains Packwiz metafiles")
         native_mods = [name for name in names if name.startswith("mods/") and name.endswith(".jar")]
-        if len(native_mods) != expected_mods:
+        if len(native_mods) != expected_mods + expected_raw:
             raise RuntimeError(
-                f"Native archive contains {len(native_mods)} mods; expected {expected_mods}"
+                f"Native archive contains {len(native_mods)} mods; "
+                f"expected {expected_mods + expected_raw}"
             )
+        missing_raw = sorted(
+            f"mods/{relative.name}" for relative, _ in raw
+            if f"mods/{relative.name}" not in names
+        )
+        if missing_raw:
+            raise RuntimeError(f"Native archive is missing raw mod(s): {missing_raw}")
 
 
 def main():
@@ -300,9 +368,12 @@ def main():
                 f"Archive name does not contain pack version {version}: {archive.name}"
             )
 
+    raw = tuple(raw_mod_paths(args.sources))
     prefix_curseforge_overrides(args.curseforge, args.sources)
-    build_native_archive(args.native, args.sources)
-    validate_archives(args.curseforge, args.modrinth, args.native, args.sources)
+    inject_raw_mods(args.curseforge, raw, "overrides/mods")
+    inject_raw_mods(args.modrinth, raw, "overrides/mods")
+    build_native_archive(args.native, args.sources, raw)
+    validate_archives(args.curseforge, args.modrinth, args.native, args.sources, raw)
     build_mmc_prism_archive(args.mmc_prism, args.native, pack)
     validate_mmc_prism_archive(args.mmc_prism, args.native, pack)
 

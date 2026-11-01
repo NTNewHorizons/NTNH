@@ -26,6 +26,8 @@
 # Mod JARs use Packwiz metadata URLs instead of GitHub/LFS copies.
 /mods/*.jar
 /mods/*/*.jar
+# IVL has no Packwiz metadata; distribute the raw JAR from the server pack.
+!/mods/immersivevehicleslegacy-0.1.0-ntmv2.jar
 
 # Runtime state
 /.ntnh-*/
