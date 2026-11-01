@@ -31,6 +31,7 @@ Run these from the repository root. NTNH is already initialized, so do not run `
 - Set `pin = true` on every mod.
 - Add every mod to [`packwiz-sources.json`](../packwiz-sources.json), unless it is listed in `RAW_MODS` in [`package-release.py`](package-release.py).
 - Run `packwiz refresh` after every add, removal, or metadata edit.
+- Refresh from a clean checkout. A launched dev instance rewrites `config/` files (for example `fastcraft.ini`, `guidenh.cfg`, `splash.properties`), so refreshing the live instance records hashes for files that are not in the pack.
 - Source priority: NTNH GitHub -> GTNH GitHub -> other GitHub -> Modrinth/CurseForge.
 - Client-only mods need `side = "client"` and an entry in [`server/client-only.txt`](../server/client-only.txt).
 
