@@ -29,7 +29,7 @@ Run these from the repository root. NTNH is already initialized, so do not run `
 - Keep its metadata in `mods/<project-slug>.pw.toml`.
 - Use a stable project slug without the mod version, such as `angelica.pw.toml`.
 - Set `pin = true` on every mod.
-- Add every mod to [`packwiz-sources.json`](../packwiz-sources.json).
+- Add every mod to [`packwiz-sources.json`](../packwiz-sources.json), unless it is listed in `RAW_MODS` in [`package-release.py`](package-release.py).
 - Run `packwiz refresh` after every add, removal, or metadata edit.
 - Source priority: NTNH GitHub -> GTNH GitHub -> other GitHub -> Modrinth/CurseForge.
 - Client-only mods need `side = "client"` and an entry in [`server/client-only.txt`](../server/client-only.txt).
@@ -80,6 +80,17 @@ packwiz refresh
 ```
 
 Direct-download mods are reported as manual by the automated updater.
+
+## Raw mods
+
+Use raw mode when Packwiz cannot distribute a mod, such as a mod that is not open-source yet. Immersive Vehicles: Legacy is currently distributed this way.
+
+- Keep the JAR in `mods/`.
+- Do not create a `.pw.toml` file.
+- Do not add the mod to `packwiz-sources.json`.
+- Add the JAR path to `RAW_MODS` in [`package-release.py`](package-release.py).
+
+Release packaging copies raw JARs into `overrides/mods/` for CurseForge and Modrinth, and into `mods/` for Native and MMC/Prism.
 
 ## Update `packwiz-sources.json`
 
