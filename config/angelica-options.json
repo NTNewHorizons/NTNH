@@ -5,7 +5,9 @@
     "grass_quality": "DEFAULT",
     "use_celeritas_smooth_lighting": true,
     "texture_filter_mode": "ANISOTROPIC",
-    "texel_sampling": "LINEAR"
+    "texel_sampling": "LINEAR",
+    "mipmap_generation": "MODERN_VANILLA",
+    "gui_block_supersampling": 1
   },
   "advanced": {
     "vsync_mode": "OFF",
