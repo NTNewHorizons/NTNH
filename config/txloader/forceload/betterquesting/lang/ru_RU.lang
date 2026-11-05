@@ -555,7 +555,7 @@ betterquesting.quest.UWNifpoeQfypMwfGniM40w.name=Силовой бур
 betterquesting.quest.UWNifpoeQfypMwfGniM40w.desc=§6Силовой бур§r - это модульное устройство для добычи, которое может сделать сбор ресурсов и раскопки намного быстрее, чем обычные кирки. %n%nРазличные модификации могут быть установлены на §3Столе модификации оружия§r, такие как новые буровые головки для большего радиуса добычи или даже новые двигатели, позволяющие ей работать от электричества.
 
 # Quest: Ilmenite
-betterquesting.quest.VxU7Oz3BRwapgbxJ9UnpaQ.name=Ilmenite
+betterquesting.quest.VxU7Oz3BRwapgbxJ9UnpaQ.name=Ильменит
 betterquesting.quest.VxU7Oz3BRwapgbxJ9UnpaQ.desc=§6Ilmenite§r is a mineral that serves as a natural source of titanium. It is produced by centrifuging §6Titanium Ore§r. By itself, it can be placed in an §3Arc Furnace§r to produce 3 §6Titanium Ingots§r, or it can be further processed in a §3Chemical Plant§r using §bTitanium Tetrachloride§r to increase its yield. The most efficient recipe is in the §3Pyrolysis Oven§r, where on top of giving the most titanium per Ilmenite, it also recycles back all the §bChlorine§r.%n%nQuest requirements: Obtain §6Ilmenite§r by centrifuging §6Titanium Ore§r. Build an §3Arc Furnace§r, §3Chemical Plant§r, or §3Pyrolysis Oven§r. Produce at least one §6Titanium Ingot§r from §6Ilmenite§r. For maximum efficiency, use the §3Pyrolysis Oven§r and recover §bChlorine§r.%n%n[F1] For more information.
 
 # Quest: Redstone Fluid Overflow
@@ -563,8 +563,8 @@ betterquesting.quest.ZTrtIRiyRO2J5jHQ4sroaQ.name=Управление поток
 betterquesting.quest.ZTrtIRiyRO2J5jHQ4sroaQ.desc=§6§6§3Редстоун-по-радио§r в сочетании с §3Редстоуновым жидкостным клапаном§r может использоваться для обнаружения момента, когда резервуар начинает заполняться, и высвобождения содержимого. Это полезно для создания буферов без потери всех жидкостей.%n%n§2Вот пример резервуара, который будет выводить жидкость только после полного заполнения:§r%n%nВо-первых, поместите §6Передатчик РПР§r на один порт резервуара, задайте ID и включите Polling.%n%n[img height=1000]betterquesting:textures/QB_Fluid1.png[/img]%n%nПосле этого поместите §6Логический приемник РПР§r рядом с жидкостным клапаном и введите желаемые настройки. Убедитесь, что ваш сигнал >= желаемого буфера. Один уровень редстоуна равен 16k mb.%n%n[img height=1000]betterquesting:textures/QB_Fluid2.png[/img]%n%n§3Помпа контроля потока§r также может использоваться для ограничения пропускной способности жидкостей и добавления приоритетов.
 
 # Quest: Electric Press
-betterquesting.quest.jNW_k5hLQY-vdrAMMgVd5w.name=Electric Press
-betterquesting.quest.jNW_k5hLQY-vdrAMMgVd5w.desc=The §3Electric Press§r is a version of the §3Burner Press§r which runs on electricity. It runs on the max speed, so there is no need to wait for it to heat up and go faster. It also has upgrade slots inside it.
+betterquesting.quest.jNW_k5hLQY-vdrAMMgVd5w.name=Электрический пресс
+betterquesting.quest.jNW_k5hLQY-vdrAMMgVd5w.desc=§3Электрический пресс§r - это версия §3пресса§r, которая работает на электричестве. Он работает на максимальной скорости, поэтому нет необходимости ждать его нагрева. Он также имеет слот для улучшений.
 
 # Quest: Jetpack
 betterquesting.quest.l6zSmdfhSw6aTqiJsNDiHg.name=Реактивный ранец
@@ -572,14 +572,14 @@ betterquesting.quest.l6zSmdfhSw6aTqiJsNDiHg.desc=§6Реактивный ран�
 
 # Quest: Solid Fuel
 betterquesting.quest.l7cvDxEiTg6v1RvTk-ynTw.name=Твёрдое топливо
-betterquesting.quest.l7cvDxEiTg6v1RvTk-ynTw.desc=§6Solid Fuel§r is a compact solidified petroleum product with superior burn time and heat output compared to coal. Make it in an §3Industrial Solidifier§r or §3Pyrolysis Oven§r; it burns twice as long as coal and is used in solid rocket propellant.
+betterquesting.quest.l7cvDxEiTg6v1RvTk-ynTw.desc=§6Твердый топлив§r - это компактный уплотненный нефтепродукт с превосходным временем горения и тепловой отдачей, если сравнивать с углём. Создаётся в §3Индустриальном отвердителе§r или в §3Пиролизной печи§r; он горит в два раза дольше, чем уголь и используется в твердом ракетном топливе.
 
 # Quest: Delinquent
 betterquesting.quest.nwCUMdHpQjykUlIVNW7Bcw.name=Нарушитель
 betterquesting.quest.nwCUMdHpQjykUlIVNW7Bcw.desc=Будь жёстким.
 
 # Quest: Rich Ore Deposits
-betterquesting.quest.qoqs0rqiScuK8YiqjTh2gA.name=Rich Ore Deposits
+betterquesting.quest.qoqs0rqiScuK8YiqjTh2gA.name=Богатое месторождение руды
 betterquesting.quest.qoqs0rqiScuK8YiqjTh2gA.desc=§eRich Ore Deposits§r are multi‑unit ore blocks that deplete to stone and drop "rich chunks". They spawn in big patches of 5-8 blocks each and can be found using §6Neutrino Lenses§r or §6Survey Scanner§r.
 
 # Quest: Teleporter
