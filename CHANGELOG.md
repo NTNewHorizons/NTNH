@@ -1,15 +1,16 @@
-# 2.15.2 Release
+# 2.15.3 Release
 
 ## What's changed?
 **Fixed**
-* Fixed mouse input bugs
+* Fixed a lot of machine ports issues
+* Fixed some security issues
 
 
 
-[Full Changelog](https://github.com/NTNewHorizons/NTNH/compare/2.15.1...2.15.2)
+[Full Changelog](https://github.com/NTNewHorizons/NTNH/compare/2.15.2...2.15.3)
 
 ## Download
-[GitHub](https://github.com/NTNewHorizons/NTNH/releases/tag/2.15.2)
+[GitHub](https://github.com/NTNewHorizons/NTNH/releases/tag/2.15.3)
 [CurseForge](https://www.curseforge.com/minecraft/modpacks/ntnewhorizons)
 [Website](https://ntnewhorizons.com/download)
 [Technic](https://www.technicpack.net/modpack/nuclear-tech-new-horizons)
