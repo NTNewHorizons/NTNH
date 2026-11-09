@@ -55,7 +55,11 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.UNIVERSAL_FINE }}
         run: |
-          curl -sf -L \
+          # Retry transient GitHub release/CDN errors and show the HTTP error if downloading fails.
+          curl --fail --silent --show-error --location \
+            --retry 5 --retry-all-errors --retry-delay 5 \
+            --connect-timeout 30 --max-time 120 \
+            --write-out 'Download HTTP status: %{http_code}\n' \
             -H "Authorization: Bearer $GH_TOKEN" \
             -o translations.zip \
             "${{ steps.get_release.outputs.download_url }}"
