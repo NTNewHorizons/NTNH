@@ -49,6 +49,10 @@ betterquesting.quest.63Mkw5ZqT6iefbQvFZ_EDQ.desc=Welcome to the Stone Age. This 
 betterquesting.quest.6l98ozdcQFqJOan6BC4kMA.name=Nailed It!
 betterquesting.quest.6l98ozdcQFqJOan6BC4kMA.desc=The §6Hammer§r is a tool from §dEx Nihilo§r used to crush blocks down into finer forms. Its primary role is producing the materials needed for the §3Sieve§r: cobblestone is crushed into gravel, gravel into sand, and sand into dust, each of which can be sieved for different resources.%n%nTo use it, simply break a target block with the §6Hammer§r as you would with a pickaxe. Hammers come in the standard tool tiers -%nwood through diamond - and differ only in durability. They can be enchanted, though the available enchantments differ from those on a pickaxe.%n%nOres can also be hammered down through a multi-step crushing chain. Each step has a small chance to yield bonus%nmaterial, making the §6Hammer§r a basic form of ore multiplication before dedicated processing machines are available.%n%n§2Hammering can be automated with machines that simulate block breaking, such as the Auto Hammer from §dEx Compressum§r§2.%n§2Check NEI for the full crushing chain of any block.
 
+# Quest: Stimpaks
+betterquesting.quest.76oBlzp0Rbq4DfJd6s0N1A.name=Stimpaks
+betterquesting.quest.76oBlzp0Rbq4DfJd6s0N1A.desc=A §6Stimpak§r heals you instantly - a lifesaver when food regeneration is too slow.%n%nFirst craft §6Metal Syringes§r from an iron plate, iron bars and an empty rod made of steel and lead. Then fill a syringe with nether wart from your trip to the Nether. If you have no wart, three small nitra crystals or a carrot with a foxglove flower work as well.
+
 # Quest: Cable Network Analysis Tool
 betterquesting.quest.9FPuQxhjSHmPmrCwdfRZRw.name=Cable Network Analysis Tool
 betterquesting.quest.9FPuQxhjSHmPmrCwdfRZRw.desc=The §6Cable Network Analysis Tool§r is used to check the integrity of power grids and analyze their main functional components. To perform a test, right-click the analyzer on wires or mechanisms in the power grid. The device displays the following data:%n%n§eLinks§r - these include wires and mechanisms that can conduct energy (e.g., energy storage units, utility poles).%n%n§cProviders§r - all mechanisms capable of producing energy and/or feeding it into the grid (energy storage units in "§agreen§r" and "§6orange§r" modes, turbines, etc.).%n%n§9Receivers§r - everything that absorbs energy from the grid (energy storage units in "§9blue§r" mode, grinders, and other mechanisms).%n%n§2The analyzer not only displays the above components but also counts them. Each grid is assigned a unique code.%n%nParticles only spawn in a 20 block radius!
@@ -71,11 +75,11 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAAw.desc=§3Anvils§r are a tiered craft
 
 # Quest: Burner Press
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAABA.name=Burner Press
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAABA.desc=The §3Presses§r are machines that can be used to make §6Plates§r, §6Wires§r, §6Circuits§r, §6Bullet Casings§r as well as §6Compressing§r non-smeltable powders back into their normal form. They require §6Stamps§r to work, which are converted from the basic §6Flat Stamp§r into plate or wire stamps using the template folder. The burner press burns solid fuel like coal to run.%n%n§2A preheater can be placed next to the Burner Press to increase its speed.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAABA.desc=The §3Presses§r are machines that can be used to make §6Plates§r, §6Wires§r, §6Circuits§r, §6Bullet Casings§r as well as §6Compressing§r non-smeltable powders back into their normal form. The burner press burns solid fuel like coal to run.%n%nEvery press operation needs a §6Stamp§r in the top slot. Stamps start out as §6Flat Stamps§r, which are turned into §6Plate§r, §6Wire§r or §6Circuit Stamps§r of the same material on an §3Anvil§r. Stone and iron stamps can be converted on the basic anvil, steel, titanium and obsidian stamps need the steel anvil.%n%nStamps lose durability with every use. Stone stamps break very quickly and are only worth it for your first few plates, iron stamps are the sensible starting point, and steel or obsidian stamps last much longer. Keep a spare stamp next to the press: a broken stamp silently stops an automated line.%n%n§2A preheater can be placed next to the Burner Press to increase its speed.
 
 # Quest: Blast Furnace
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAACQ.name=Blast Furnace
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAACQ.desc=The §3Blast Furnace§r is a furnace that only burns hot fuels like coal, coke or solid fuel, used to create different alloys out of two inputs. The main starter alloys are: §6Minecraft Grade Copper§r and §6Steel§r. Inserting §bHot Air Blast§r, made by putting §bCompressed Air§r in a §3Boiler§r, grants all recipes a §e3x§r boost.%n§bFlue Gas§r produced from operating the machine can be burnt for energy or vented into the atmosphere.%n%nSteel tools come equiped with vein mining, making them an excellent early-game tool.%n%n§2For more advanced tools later on, pressing the ALT key will bring up a menu from which one can select multiple abilities at once.§r
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAACQ.desc=The §3Blast Furnace§r is a furnace that only burns hot fuels like coal, coke or solid fuel, used to create different alloys out of two inputs. The main starter alloys are: §6Minecraft Grade Copper§r and §6Steel§r. Inserting §bHot Air Blast§r, made by putting §bCompressed Air§r in a §3Boiler§r, grants all recipes a §e3x§r boost.%n§bFlue Gas§r produced from operating the machine can be burnt for energy or vented into the atmosphere.
 
 # Quest: Trench Mask
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAADA.name=Trench Mask
@@ -193,9 +197,17 @@ betterquesting.quest.Ba9zHp22SvGkBCr8xF5oQQ.desc=§3Barrels§r are storage block
 betterquesting.quest.CAGBwqHLQBStKodq03kwyw.name=Sieving
 betterquesting.quest.CAGBwqHLQBStKodq03kwyw.desc=The §3Sieve§r filters gravel, dirt, stone, and other blocks to yield useful material fragments - including iron, copper, lead, and more.%n%nUse §3Heavy Sieve§r with §6Compressed Blocks§r to get more fragments.%n%n§2Use NEI to list all possible drops.
 
+# Quest: Medicine Cabinet
+betterquesting.quest.CeJyIEqkTX29Ihgx2YbX7A.name=Medicine Cabinet
+betterquesting.quest.CeJyIEqkTX29Ihgx2YbX7A.desc=Once you have a shredder, coal, fluorite and asbestos can be turned into dust - and dust into medicine.%n%n§6Rad-X§r is crafted from coal and fluorite dust. Take it before entering a contaminated area: it reduces the radiation you absorb for a while. It does not remove radiation you already have.%n%n§6SiOX§r is made from coal dust, asbestos dust and a gold or bismuth nugget and treats both mesothelioma and black lung. §6Herbal Paste§r is the cheap early cure, but it comes with side effects.
+
 # Quest: Charm of Protection
 betterquesting.quest.D0bv2vfWSkK1soyqHDwqjQ.name=Charm of Protection
 betterquesting.quest.D0bv2vfWSkK1soyqHDwqjQ.desc=The §6Charm of Protection§r diverts meteorites away from the player and prevents them from destoying blocks. It is recommended that one is obtained as soon as possible as to prevent costly damages in the future.
+
+# Quest: Fluid Containers
+betterquesting.quest.EbKriLWHRO2GQinc1QU0FA.name=Fluid Containers
+betterquesting.quest.EbKriLWHRO2GQinc1QU0FA.desc=Buckets are not enough for NTM fluids. A §6Universal Fluid Tank§r holds 1,000 mB of any NTM fluid and is the standard way to move fluids by hand and to load them into machines. The §6Fluid Barrel§r holds 16,000 mB. §6Canisters§r are meant for liquid fuels.%n%nFor storage, place a §3Steel Barrel§r: it holds 16,000 mB, can be filled and emptied with containers or pipes, and accepts hot and corrosive fluids. Highly corrosive fluids eat through it, though, and turn it into a leaking §3Corroded Barrel§r.%n%nAll of them need aluminium plates, so you will want the combination oven running on cryolite first.
 
 # Quest: Diesel Generator
 betterquesting.quest.Eh_ylJU8TiiScjLN2_qmMA.name=Diesel Generator
@@ -209,9 +221,17 @@ betterquesting.quest.Ek7Xr3XfSm-U7BYuBOACSA.desc=The §3Wood-Burning Generator§
 betterquesting.quest.F5fyyqAZREWe-rhgYcbXZg.name=Flint Tools
 betterquesting.quest.F5fyyqAZREWe-rhgYcbXZg.desc=§6Flint Tools§r are required to obtain first wood and stone. Break some tree leaves and get saplings, to recraft them into sticks.%n%nAxes automatically break tree blocks from top to bottom to prevent floating trees. Hold Shift to disable this and break blocks normally.
 
+# Quest: Steel Gear
+betterquesting.quest.FJLvn9pXSNqN5V7wMa5EGg.name=Steel Gear
+betterquesting.quest.FJLvn9pXSNqN5V7wMa5EGg.desc=Your first steel should go into tools. NTM tools are more than a durability upgrade: they carry §6abilities§r. The steel pickaxe comes with §6Vein Miner§r, which breaks a whole connected ore vein at once. Right-click to cycle through the abilities of a tool, and shift-right-click to go back to the first one.%n%nLater tools have several abilities at the same time (silk touch, auto-smelting, shredding and more). Holding §6ALT§r opens a menu where you can combine them freely.%n%nSteel armor is a simple but solid upgrade over iron for the early game.
+
 # Quest: Steel Furnace
 betterquesting.quest.GOACXA8jRc-SMNzk2CsNUQ.name=Steel Furnace
 betterquesting.quest.GOACXA8jRc-SMNzk2CsNUQ.desc=The §3Steel Furnace§r, unlike the other furnaces, runs off of §eTU§r. It can also process up to 3 items at a time, but each slot consumes more TU, which makes it slow without a strong heat source. It also has a bonus output for ores and wood, where every smelted item gives §e25%%§r to the bonus output meter, which means every 4 items give an extra 5th item for free (§e+15 items from a single stack§r).
+
+# Quest: Storage Crates
+betterquesting.quest.GqVnizZ6SZ63drxiAO5USg.name=Storage Crates
+betterquesting.quest.GqVnizZ6SZ63drxiAO5USg.desc=NTM crates have one big advantage over chests: when you break them, they keep their contents. Pick up a full crate and carry it to your new base in one inventory slot.%n%nThe §3Iron Crate§r has 36 slots, the §3Steel Crate§r 54. Larger crates follow later.%n%nBe careful with crates full of radioactive or hot items - their hazards still apply to you while you carry them.
 
 # Quest: Electric Furnace
 betterquesting.quest.HONUf7SQRl-jcf3BC5242A.name=Electric Furnace
@@ -257,6 +277,10 @@ betterquesting.quest.OlMZZGTaSz6VhzaeJdR6QQ.desc=The §3Charging Station§r will
 betterquesting.quest.RBJS7D2ATpq7GUingAewuQ.name=Packing Tape
 betterquesting.quest.RBJS7D2ATpq7GUingAewuQ.desc=The §6Packing Tape§r allows one to break and move drawers without all the items falling on the floor.
 
+# Quest: Padlocks and Keys
+betterquesting.quest.SAnieueOQIe-pjfTZGvy6g.name=Padlocks and Keys
+betterquesting.quest.SAnieueOQIe-pjfTZGvy6g.desc=Safes in structures are locked - and you can lock your own containers too. Right-click a lockable container with a §6Padlock§r to lock it. Only a §6Key§r with the matching pin pattern opens it again, although a skilled thief with a screwdriver and bobby pins may still pick it.%n%nThe §6Rusty Padlock§r is the easiest to pick, the steel §6Padlock§r is considerably harder.%n%nThe §3Locksmith Table§r copies the pin pattern from the item in its first slot onto the key or padlock in the second, so you can make spare keys or a set of locks that all open with one key.
+
 # Quest: Depth Ores
 betterquesting.quest.Ss4wOkCPR6OsjwT8BQs1XA.name=Depth Ores
 betterquesting.quest.Ss4wOkCPR6OsjwT8BQs1XA.desc=§6Depth Ores§r are large ore deposits found at bedrock level. There are many types of deposits, most of them giving ore crystals which can be smelted for 3 ingots per. §3Mining Charges§r of any kind are required to extract the resources from the depth rock.%n%nTwo important resources found in depth deposits are §6Borax§r, which can later be put in an §3Arc Furnace§r or §3Acidizer§r to yield §6Boron§r used in reactors, and §6Zirconium§r which is used in reactor fuel rods.
@@ -269,9 +293,13 @@ betterquesting.quest.UKkcpXk3SEWHXLIVC5VTDg.desc=§6Cladding§r is one of the mo
 betterquesting.quest.VMLB88YjRb26RVJcRmvxeA.name=Ore Generation System
 betterquesting.quest.VMLB88YjRb26RVJcRmvxeA.desc=In §6NTNH§r, ore generation has been §ocompletely§r overhauled and is still receiving updates and fixes. If you don’t like it and/or find it too complicated, you have two options:%n1) Report it to us, the developers%n2) Disable the Custom Ore Generation mod and configure ore generation in hbm.cfg to your liking (ask for help with this on the Discord server)%n%n[warn]Important![/warn]%nThe old online Google Docs spreadsheet was DEPRECATED, use the one in the Guide Book.
 
+# Quest: Gas Mask
+betterquesting.quest.WrJLq7_bQi6KICt3AIlgWQ.name=Gas Mask
+betterquesting.quest.WrJLq7_bQi6KICt3AIlgWQ.desc=The trench mask was a start. A proper §6Gas Mask§r made from steel plates gives real protection against asbestos, coal dust and toxic gases - as long as a §6filter§r is installed. Right-click with a filter to insert it, and keep a few spares: filters wear out while they are protecting you.%n%nThe §6Leather Gas Mask§r is a cheaper alternative, and §6Protection Goggles§r shield your eyes from blinding flashes.
+
 # Quest: Dosimeter
 betterquesting.quest.X1wMtj-xQR6M4Qzm6Rk2vA.name=Dosimeter
-betterquesting.quest.X1wMtj-xQR6M4Qzm6Rk2vA.desc=The §6Dosimeter§r is an tool for detecting radiation and assessing radioactive contamination.%n%nIt is functionally similar to a §6Geiger Counter§r, but it collects much less data - only the general radiation contamination of the environment. Only a handheld version of the dosimeter is available. To obtain radiation information, right-click while holding the dosimeter.%n%nLike a counter, it makes a characteristic crackling sound when radiation is detected.%n%n§2The maximum radiation displayed is 3.6 RAD/S.%n%nNot great, not terrible.
+betterquesting.quest.X1wMtj-xQR6M4Qzm6Rk2vA.desc=The §6Dosimeter§r is a tool for detecting radiation and assessing radioactive contamination.%n%nIt is functionally similar to a §6Geiger Counter§r, but it collects much less data - only the general radiation contamination of the environment. Only a handheld version of the dosimeter is available. To obtain radiation information, right-click while holding the dosimeter.%n%nLike a counter, it makes a characteristic crackling sound when radiation is detected.%n%n§2The maximum radiation displayed is 3.6 RAD/S.%n%nNot great, not terrible.
 
 # Quest: Borax
 betterquesting.quest.X2y9x1t8TU2ou8QN6k-24g.name=Borax
@@ -284,6 +312,10 @@ betterquesting.quest.XNHsXFGWTvW9dhuen9iEFg.desc=The §3Radial Performance Engin
 # Quest: Hazards
 betterquesting.quest.Zd1HNIsxSRees_4of0ezDw.name=Hazards
 betterquesting.quest.Zd1HNIsxSRees_4of0ezDw.desc=This mod adds several environmental hazards that will kill you if ignored.%n%n§6Radiation§r is measured in RAD. Effects begin at §e200 RAD§r and worsen steadily - instant death occurs at §c1000 RAD§r. Use a §6Geiger Counter§r to monitor your dose. Radiation-resistant armor and §6Rad-X§r reduce incoming RAD; a §3Player Decontaminator§r or §6Antirads§r remove accumulated dose.%n%n§lMesothelioma§r develops from asbestos exposure. Items tagged §c[Contains Asbestos]§r and certain blocks like Chrysotile release asbestos particles. Progresses to death if untreated.%n%n§lBlack Lung§r develops from coal dust exposure. Mining coal ore and carrying items tagged §c[Coal Dust]§r are the main sources. Also fatal.%n%nA gas mask protects against both mesothelioma and black lung simultaneously. Both diseases are cured by §6SIOX Cancer Medication§r or, early-game, §6Herbal Paste§r - the latter being weaker and carrying side effects.
+
+# Quest: Machine Upgrades
+betterquesting.quest._WjoAoCaRfixI1YkRecbbA.name=Machine Upgrades
+betterquesting.quest._WjoAoCaRfixI1YkRecbbA.desc=The first upgrades are soldered from a template, vacuum tubes and a capacitor in the §3Soldering Station§r.%n%n§6Speed§r makes a machine work faster at the cost of more power. §6Power Saving§r lowers the power draw. §6Effectiveness§r increases the output or the range, depending on the machine. Hover over the upgrade slot of a machine to see which upgrades it accepts and what each level does.%n%nHigher levels (Mk.II and Mk.III) are made later in the Precision Assembler.%n%nThe §6Muffler§r is crafted from rubber or latex and wool. Shift-right-click a loud machine with it to silence it.
 
 # Quest: Stirling Sawmill
 betterquesting.quest._qJt02i4ST2iccmkHudKCg.name=Stirling Sawmill
@@ -340,6 +372,10 @@ betterquesting.quest.k52bjd5MTbefEXwVh0HLiw.desc=This modpack makes it possible 
 # Quest: Oily Sand
 betterquesting.quest.kdNKd7NDSPiURFtLonc50g.name=Oily Sand
 betterquesting.quest.kdNKd7NDSPiURFtLonc50g.desc=§6Oily Sand§r is a surface-level block that generates among normal sand, typically in deserts. It acts as a marker for §bBedrock Oil§r deposits directly beneath it - if you find it, there is oil underground.%n%nShred polluted blocks from fracking in a §3Shredder§r into §6oily scraps§r, then treat them with §bhigh-performance solvent§r in an §3Ore Acidizer§r to obtain §6Arsenic§r - a really important mid-game material.
+
+# Quest: Foundry Network
+betterquesting.quest.lYk_f5TfRQibVHlK-pUsIg.name=Foundry Network
+betterquesting.quest.lYk_f5TfRQibVHlK-pUsIg.desc=Pouring every mold directly under the crucible quickly becomes a mess. §3Foundry Channels§r, made from firebricks, carry molten metal sideways. They fill outlets and shallow molds first and pass the rest on to the next channel. Leftovers can be removed with a shovel.%n%nA §3Foundry Outlet§r pours the metal down into a mold or basin. Right-click it with scraps of a material to let only that material through, use a hand drill to invert the filter and a screwdriver to clear it. An empty-handed right-click toggles whether redstone opens or closes the outlet.%n%nThe §3Storage Basin§r buffers molten metal, and the §3Spill Outlet§r dumps unwanted material onto the ground as slag instead of letting it clog your crucible.
 
 # Quest: Highway To Hell
 betterquesting.quest.ljMurUJIT7OuwaBx_fb3EA.name=Highway To Hell
@@ -1303,6 +1339,10 @@ betterquesting.quest.xlNjQwC6S3S5o_B7nIciBQ.desc=Tired of using buckets to give 
 betterquesting.questline.vNAB2bS7S9uSc1gAlAccnA.name=Advanced Logistics
 betterquesting.questline.vNAB2bS7S9uSc1gAlAccnA.desc=Manage your factory and tackle logistical challenges with advanced redstone features.
 
+# Quest: Rails
+betterquesting.quest.1o48G8SRTzWannGld4xy-Q.name=Rails
+betterquesting.quest.1o48G8SRTzWannGld4xy-Q.desc=Minecarts are still a good way to move things over long distances. §6High Speed Rails§r, made from steel and iron plates, let carts travel at 1.0 blocks per tick - two and a half times the vanilla limit.%n%nThe §6High Speed Booster Rail§r needs no power: it multiplies a passing cart's speed by 1.15 every time it rolls over it, but it cannot be placed in curves. §6Wooden Tracks§r are cheap but limit carts to half the vanilla speed.%n%nPut a steel crate on a minecart to get a §6Crate Minecart§r with 54 slots.
+
 # Quest: Displays, Buttons and More
 betterquesting.quest.CXh5IW4AQaqb-p6bJlX2-A.name=Displays, Buttons and More
 betterquesting.quest.CXh5IW4AQaqb-p6bJlX2-A.desc=§3RoR Panels§r are crafted from a blank panel and act as control panel blocks. Interactive types like Keypads and Levers send commands to controllers, while aesthetic types like Gauges, Graphs, Digital Displays, and Indicator Lamps show values received from readers. Each component must be enabled with the red buttons in its GUI. Once placed, Shift-Click with a screwdriver to open the configuration screen and set IDs, colors, labels, and modes.
@@ -1368,13 +1408,70 @@ betterquesting.quest.z9LdlLLQRP64Psk4rxEDhQ.name=Automatic Crafting Table
 betterquesting.quest.z9LdlLLQRP64Psk4rxEDhQ.desc=The §3Automatic Crafting Table§r performs a set recipe automatically as long as it has power. Define the recipe by placing ingredients into the blue crafting grid - you can use items from your inventory or drag them from NEI. Once set, input items go into the gray grid and are consumed, with the product appearing in the gray output slot. It costs 100 HE per operation and runs one operation per tick regardless of recipe complexity.%n%nIt works with hoppers, crates, and conveyor machines for full automation. For 2x2 or 3x3 recipes where every ingredient is the same item, use the §6Combinator Funnel§r instead - it needs no power.
 
 
+## Quest Line: Arsenal
+betterquesting.questline.OZJv86d2QQmFjj0k9oaGZw.name=Arsenal
+betterquesting.questline.OZJv86d2QQmFjj0k9oaGZw.desc=Firearms, explosives and armor. NTM weapons are built from cast parts, and every new metal you unlock opens up a new tier of guns. Each quest here requires the material quest of its tier, so the chapter grows together with your factory.
+
+# Quest: .22 Submachine Gun
+betterquesting.quest.2LONN5VkTSuxkyM09NYIog.name=.22 Submachine Gun
+betterquesting.quest.2LONN5VkTSuxkyM09NYIog.desc=High-speed steel opens the next tier of guns. The §6.22 Submachine Gun§r uses a high-speed steel barrel and receiver and carries a huge §6177-round pan magazine§r of .22 rounds.%n%nThe small caliber deals little damage per hit, but you will rarely need to reload.
+
+# Quest: Flamethrower
+betterquesting.quest.8JnqipakQy6NcqWmLRcVBA.name=Flamethrower
+betterquesting.quest.8JnqipakQy6NcqWmLRcVBA.desc=The §6Flamethrower§r sprays burning fuel from a 300-unit tank. Diesel and gas give an ordinary flame, napalm sticks to targets and burns much longer, and balefire fuel is something you will meet much later.%n%nDo not use it indoors, near your crops or anywhere near your own wooden buildings.
+
+# Quest: Liberator
+betterquesting.quest.D4QKcL3dR4SZP8kB62fEGg.name=Liberator
+betterquesting.quest.D4QKcL3dR4SZP8kB62fEGg.desc=The §6Liberator§r is a four-barreled shotgun made from high-speed steel. It holds four 12 gauge shells and can fire them in quick succession - devastating at point-blank range, almost useless at a distance.
+
+# Quest: Grease Gun
+betterquesting.quest.YoYseqIHR7G9e6Lk7dV2XQ.name=Grease Gun
+betterquesting.quest.YoYseqIHR7G9e6Lk7dV2XQ.desc=The §6Grease Gun§r is a cheap, all-steel submachine gun with a gunmetal mechanism. It is the first fully automatic weapon you can build.%n%nIt fires §69mm§r rounds from a 30-round magazine. Each bullet is weak, but the rate of fire makes it excellent against groups of weak enemies at close range.
+
+# Quest: Congo Lake
+betterquesting.quest.asxCjNm5QaiJ2dZhzutgQA.name=Congo Lake
+betterquesting.quest.asxCjNm5QaiJ2dZhzutgQA.desc=§6Congo Lake§r is a pump-action grenade launcher that holds four §640mm grenades§r and fires them in an arc - perfect for hitting enemies behind cover.%n%nAvailable grenades include high explosive, HEAT, demolition, incendiary and white phosphorus. Mind the blast radius when shooting at close targets.
+
+# Quest: Charge Thrower
+betterquesting.quest.bpPTCFQ0REmJ7UV9tgH76Q.name=Charge Thrower
+betterquesting.quest.bpPTCFQ0REmJ7UV9tgH76Q.desc=The §6Charge Thrower§r is more of a tool than a weapon. It launches a §6Grappling Hook§r that pulls you towards where it lands, or §6mortar§r and §6demolition charges§r for clearing terrain from a safe distance.%n%nIt is built from gunmetal mechanisms, a steel heavy barrel and grip, and leather or rubber.
+
+# Quest: Flare Gun
+betterquesting.quest.eKIjMVxvTGi0kcDpq_aTAg.name=Flare Gun
+betterquesting.quest.eKIjMVxvTGi0kcDpq_aTAg.desc=The §6Flare Gun§r fires single 26mm flares that light up the area and set whatever they hit on fire.%n%nIt also has two special loads. A §6Supply Flare§r calls in a cargo plane that drops a crate of supplies where it lands, and a §6Weapon Flare§r calls in a drop of weapons. Both are rare and valuable - save them for when you really need them.
+
+# Quest: Pepperbox
+betterquesting.quest.jiVjM3qqR6mnDcChU4aOlA.name=Pepperbox
+betterquesting.quest.jiVjM3qqR6mnDcChU4aOlA.desc=The §6Pepperbox§r is the most primitive firearm in NTM: a bundle of six iron barrels on a wooden handle, crafted from iron, copper and planks. It needs no cast parts at all.%n%nIt fires black powder loads: plain stone balls, flint for better penetration, iron balls that ricochet, and shot for a spread at close range. Slow and inaccurate, but a big step up from a sword when a glyphid nest attacks.
+
+# Quest: Lever Action Rifle
+betterquesting.quest.ln-xh8tVQPi4yAyhUhLh1g.name=Lever Action Rifle
+betterquesting.quest.ln-xh8tVQPi4yAyhUhLh1g.desc=Your first proper long gun. The §6Lever Action Rifle§r is assembled from a cast steel light barrel, a gunmetal light receiver and mechanism, a gunmetal plate and a wooden stock.%n%nIt holds fourteen §6.44 Magnum§r rounds. Start with black powder loads and move on to smokeless and jacketed rounds as your ammo press production grows.
+
+# Quest: Dynamite
+betterquesting.quest.uk-pCxLXRnOcm2T6EzjOXQ.name=Dynamite
+betterquesting.quest.uk-pCxLXRnOcm2T6EzjOXQ.desc=Dynamite is the first explosive that is stronger than vanilla TNT. Mix niter dust, sugar and sand with §6Laboratory Glassware§r to get dynamite, then wrap it in paper with a §6Safety Fuse§r to make sticks. A §6Stick of Dynamite§r can be thrown, and eight of them make a placeable dynamite block.%n%nThree sticks taped together make a §6Time Bomb§r that can be stuck to any surface and set to go off after a delay. §6Det Cord§r, crafted from paper and gunpowder, chains several charges together so they detonate at once.
+
+
 ## Quest Line: Building and Decorating
 betterquesting.questline.7-1bBIkKRc6xhh5bwIGsjg.name=Building and Decorating
 betterquesting.questline.7-1bBIkKRc6xhh5bwIGsjg.desc=Improve your builds by using Chisel, Architecturecraft and Better Builder's Wands.
 
+# Quest: Steel Construction
+betterquesting.quest.1vfDAYnaTruXvHONx0hdbA.name=Steel Construction
+betterquesting.quest.1vfDAYnaTruXvHONx0hdbA.desc=Steel is not only for machines. §6Steel Beams§r and §6Scaffolding§r (which can be dyed grey, red, white or yellow) are the backbone of industrial buildings and give you something to climb while building multiblocks.%n%n§6Grates§r let items and light through, while §6Steel Walls§r, §6Corners§r and §6Roofs§r give your factory a proper hangar look.
+
 # Quest: Building Gadget
 betterquesting.quest.8voIl_BdSZWqZcTPQVjo9Q.name=Building Gadget
 betterquesting.quest.8voIl_BdSZWqZcTPQVjo9Q.desc=The §6Building Gadget§r is an advanced building tool which allows the user to create many complex shapes with ease. Press the ALT key to open its menu.%n%n§2It consumes power for blocks placed.§r
+
+# Quest: Barbed Wire
+betterquesting.quest.KI42MO76Q_-ML4wdGOMDNg.name=Barbed Wire
+betterquesting.quest.KI42MO76Q_-ML4wdGOMDNg.desc=Glyphids and raiders have to get to you first. §6Barbed Wire§r, crafted from steel wire and iron, slows down and hurts anything that walks into it.%n%nA double ring of wire around your base buys you the seconds you need to grab a gun.
+
+# Quest: Cage Lamps
+betterquesting.quest.Nvz-QdoyQ_OcGQinzgN1gQ.name=Cage Lamps
+betterquesting.quest.Nvz-QdoyQ_OcGQinzgN1gQ.desc=Torches do not belong in a factory. §6Cage Lamps§r are crafted from glass, tungsten wire and iron, eight at a time, and light up a large area.%n%nThey shine without any power. A redstone signal switches them off, so a single lever can control a whole hall.
 
 # Quest: Auto Chisel
 betterquesting.quest.QS-1ophNScaPpKGGoCqFMQ.name=Auto Chisel
@@ -1383,6 +1480,10 @@ betterquesting.quest.QS-1ophNScaPpKGGoCqFMQ.desc=The §3Auto Chisel§r allows fo
 # Quest: Chisel
 betterquesting.quest.TA6SPr3KTbKsgRFceNMZmA.name=Chisel
 betterquesting.quest.TA6SPr3KTbKsgRFceNMZmA.desc=The §6Chisel§r is a building tool which can be used to change the textures of blocks, and even unlock new and unique designs.
+
+# Quest: Reinforced Stone
+betterquesting.quest.Vw7w4WNGQamyVDkVK_MC3w.name=Reinforced Stone
+betterquesting.quest.Vw7w4WNGQamyVDkVK_MC3w.desc=Explosions are part of everyday life in NTM. §6Reinforced Stone§r is crafted from stone and cobblestone and resists blasts far better than normal stone - use it for the walls around anything that might blow up, like boilers and early reactors.%n%nBlocks of §6Firebrick§r are a heat-resistant building material and look right at home around furnaces and the crucible.
 
 # Quest: Schematica
 betterquesting.quest.VyF-RUbsSuS8J2hbI5CIkw.name=Schematica
@@ -1399,6 +1500,10 @@ betterquesting.quest.mPZ8D32cT5WrvlKuPNq90g.desc=The §6Building Wand§r allows 
 # Quest: ArchitectureCraft
 betterquesting.quest.p7NNm2NvRgWz37LQO6yraw.name=ArchitectureCraft
 betterquesting.quest.p7NNm2NvRgWz37LQO6yraw.desc=§dArchitectureCraft§r introduces the §3Architect's Workbench§r which can be used to change the shapes blocks.%n%nThe §6Architect's Hammer§r can be used to easily rotate the blocks.%n%nThe §6Architect's Glowbrush§r can be used to apply light to any block.
+
+# Quest: Doors
+betterquesting.quest.t8EmgjkxSK6HQNnU6NskNg.name=Doors
+betterquesting.quest.t8EmgjkxSK6HQNnU6NskNg.desc=NTM adds sturdier doors with their own style: the §6Metal Door§r made of iron and steel, the wooden §6Office Door§r and the heavy §6Bunker Door§r made of steel and lead.
 
 # Quest: Sign Pictures
 betterquesting.quest.wAu-q390TlKihyp-bEI2lw.name=Sign Pictures
