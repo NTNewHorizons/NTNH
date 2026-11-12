@@ -2222,6 +2222,188 @@ betterquesting.quest.q1ilrpayTHWJ-bajd9WM1A.name=Time to Kill (Wither)
 betterquesting.quest.q1ilrpayTHWJ-bajd9WM1A.desc=After collecting a couple of those wither skeleton heads, you feel like you could use some more action. So why not kill a wither?
 
 
+## Quest Line: Nuclear Fuels
+betterquesting.questline.y9TwGO1qR8i9OT3cykMuAg.name=Nuclear Fuels
+betterquesting.questline.y9TwGO1qR8i9OT3cykMuAg.desc=Every nuclear fuel in NTM behaves differently. This chapter follows the fuel cycle: each fuel you burn leaves behind spent fuel that reprocesses into the material for the next one. A quest accepts its fuel in whichever reactor you run - ZIRNOX, PWR, RBMK or Watz - and explains how it behaves in each of them.
+
+# Quest: Reactor Fuel Basics
+betterquesting.quest.eSM0xSV9TumYwygzoFeC6A.name=Reactor Fuel Basics
+betterquesting.quest.eSM0xSV9TumYwygzoFeC6A.desc=Fuel names follow one scheme: §6N§r is natural, §6L§r, §6M§r and §6HE§r are low, medium and highly enriched, followed by the element and isotope - §6MEU§r is medium enriched uranium, §6HEP-239§r highly enriched plutonium-239.%n%nAll fuels start as billets. A §3ZIRNOX§r rod takes two billets, a §3PWR§r rod two billets around a polymer plate, an §3RBMK§r rod eight billets in an empty RBMK rod, and a §3Watz§r pellet four ingots around graphite. The tooltip of every rod shows its exact stats.%n%nSpent fuel comes out hot. Cool it in the Spent Fuel Pool Drum, then reprocess ZIRNOX, PWR and Watz fuel in the PUREX. Spent RBMK rods are taken apart into pellets for the SILEX. What you get back is the start of the next quest.
+
+# Quest: Natural Uranium Fuel
+betterquesting.quest.mTAQANa3QdKifJYLtZWRpQ.name=Natural Uranium Fuel
+betterquesting.quest.mTAQANa3QdKifJYLtZWRpQ.desc=The cheapest fuel: plain uranium billets, no enrichment needed.%n%n§3ZIRNOX:§r the longest-lasting rod and the coolest one - a safe first fuel.%n§3RBMK:§r a medium, logarithmic fuel. Plutonium builds up as it burns, so it becomes more reactive over its life instead of less.%n%nSpent natural uranium is the main source of §6plutonium-239§r and reactor-grade plutonium.
+
+# Quest: MEU Fuel
+betterquesting.quest.REkJrtyiRwW7a5b-749gqg.name=MEU Fuel
+betterquesting.quest.REkJrtyiRwW7a5b-749gqg.desc=Uranium fuel billets are five parts uranium-238 to one part uranium-235, straight from the gas centrifuge cascade. MEU is the workhorse fuel of every reactor.%n%n§3ZIRNOX:§r more heat than natural uranium at a slightly shorter life.%n§3PWR:§r the gentlest PWR fuel, with a logarithmic reaction and the lowest heat per flux.%n§3RBMK:§r like natural uranium it gains reactivity as plutonium builds up.%n§3Watz:§r not self-igniting - it needs neighbouring pellets to start reacting.%n%nSpent MEU reprocesses into reactor-grade plutonium.
+
+# Quest: HEU-235 Fuel
+betterquesting.quest.KXKNuhWWQq6NpHM0mjI6SQ.name=HEU-235 Fuel
+betterquesting.quest.KXKNuhWWQq6NpHM0mjI6SQ.desc=Pure uranium-235 from a four-centrifuge cascade with the overclocking upgrade.%n%n§3ZIRNOX:§r much hotter than MEU, but burns out sooner.%n§3PWR:§r a square-root reaction: strong at low flux and flattening out at high flux.%n§3RBMK:§r a medium fuel with high reactivity and no extra heat multiplier.%n%nSpent HEU-235 is valuable: reprocessing gives §6neptunium-237§r and §6plutonium-238§r, the materials for neptunium fuels, neutron sources and RTG pellets.
+
+# Quest: Thorium Fuel
+betterquesting.quest.pTi2Yp6VR1mmH1QXgYn4FA.name=Thorium Fuel
+betterquesting.quest.pTi2Yp6VR1mmH1QXgYn4FA.desc=Thorium-232 does not split on its own, but it can be turned into fuel.%n%n§3ZIRNOX:§r place a §6Thorium-232 Rod§r next to burning fuel rods. It is a breeding rod and turns into a §6Thorium Fuel Rod§r over time.%n§3RBMK:§r ThMEU is thorium with an MEU driver. Its reaction is rated safe, it has the highest melting point of all uranium-family fuels and it gains reactivity strongly as it breeds.%n%nThorium fuel billets are crafted from five parts thorium-232 and one part uranium-233. Reprocessing spent thorium fuel gives back §6uranium-233§r.
+
+# Quest: HEU-233 Fuel
+betterquesting.quest.eP70vLRcQcypZfhpDH-K2A.name=HEU-233 Fuel
+betterquesting.quest.eP70vLRcQcypZfhpDH-K2A.desc=Uranium-233 bred from thorium is a stronger fuel than uranium-235.%n%n§3ZIRNOX:§r the hottest uranium rod, with a short life.%n§3PWR:§r a square-root reaction slightly stronger than HEU-235.%n§3RBMK:§r a §cdangerous§r linear fuel with 1.25x heat. The hotter the flux, the harder it reacts - keep control rods ready.%n%nSpent HEU-233 PWR fuel reprocesses into plutonium-238.
+
+# Quest: UZrH Fuel
+betterquesting.quest.knT6ramqQ8OFe5KshSI_xQ.name=UZrH Fuel
+betterquesting.quest.knT6ramqQ8OFe5KshSI_xQ.desc=Uranium zirconium hydride is made in the PUREX from an MEU billet and three zirconium billets with nitric acid and hydrogen. It exists only as an RBMK rod.%n%nIts special trait is a negative temperature coefficient: once the core passes §61000°C§r, the reaction weakens and stops completely at §61500°C§r, safely below its melting point. A UZrH core regulates itself.%n%nThe price is half the lifetime of other fuels, and its hull heats up much faster than usual.
+
+# Quest: Plutonium Fuel
+betterquesting.quest.cmZC5HBKRsyEA759v2ZQ_g.name=Plutonium Fuel
+betterquesting.quest.cmZC5HBKRsyEA759v2ZQ_g.desc=Plutonium fuel billets are two parts uranium-238 and one part reactor-grade plutonium from reprocessed uranium fuel.%n%n§3ZIRNOX:§r hotter than MEU, slightly shorter life.%n§3RBMK:§r LEP-239 is a medium logarithmic fuel that keeps gaining reactivity as it burns.
+
+# Quest: MEP Fuel
+betterquesting.quest.jG-nBEhpSlSgsXdAoAZjRg.name=MEP Fuel
+betterquesting.quest.jG-nBEhpSlSgsXdAoAZjRg.desc=Reactor-grade plutonium, a mix of plutonium-239 and plutonium-240, used without any dilution.%n%n§3PWR:§r a logarithmic fuel slightly stronger than MEU.%n§3RBMK:§r a medium square-root fuel.%n§3Watz:§r not self-igniting, but with more heat per flux than MEU pellets.%n%nSpent MEP Watz pellets are a source of §6plutonium-241§r.
+
+# Quest: HEP-239 Fuel
+betterquesting.quest.DkRZC9CeQZyO1Xx68EYaYA.name=HEP-239 Fuel
+betterquesting.quest.DkRZC9CeQZyO1Xx68EYaYA.desc=Pure plutonium-239, extracted from spent natural uranium.%n%n§3PWR:§r a square-root fuel with more heat per flux than any uranium rod.%n§3RBMK:§r a §cdangerous§r linear fuel with 1.25x heat.
+
+# Quest: MOX Fuel
+betterquesting.quest.dFFWl5mkTqmou3Nnkyv_gQ.name=MOX Fuel
+betterquesting.quest.dFFWl5mkTqmou3Nnkyv_gQ.desc=Mixed oxide fuel combines uranium fuel with plutonium. It is a way to burn the plutonium from reprocessing in the same reactor that produced it.%n%n§3ZIRNOX:§r noticeably hotter than MEU.%n§3PWR:§r logarithmic like MEU, but with more heat per flux.%n§3RBMK:§r a stronger logarithmic fuel that gains reactivity over its life.
+
+# Quest: HEP-241 Fuel
+betterquesting.quest.ywF-EbEGTxuU4G6sLZ8nVA.name=HEP-241 Fuel
+betterquesting.quest.ywF-EbEGTxuU4G6sLZ8nVA.desc=Plutonium-241 comes from spent MEP Watz pellets in the PUREX and from many spent RBMK pellets in the SILEX.%n%n§3PWR:§r a strong square-root fuel.%n§3RBMK:§r a §cdangerous§r linear fuel with 1.75x heat - one of the hottest fission fuels.%n§3Watz:§r self-igniting.%n%nSpent plutonium-241 Watz pellets reprocess into §6americium§r.
+
+# Quest: MEN Fuel
+betterquesting.quest.3GR4ga6zQuOR9GSOIeSwMw.name=MEN Fuel
+betterquesting.quest.3GR4ga6zQuOR9GSOIeSwMw.desc=Neptunium fuel billets dilute neptunium-237 from spent HEU with uranium-238.%n%n§3PWR:§r a logarithmic fuel as strong as MEP.%n§3RBMK:§r a medium square-root fuel that gains reactivity as plutonium-239 builds up, and reacts to both slow and fast neutrons.%n%nSpent MEN reprocesses into plutonium-239.
+
+# Quest: HEN Fuel
+betterquesting.quest.cEj-UqQBSqqy4Yv0sweYKA.name=HEN Fuel
+betterquesting.quest.cEj-UqQBSqqy4Yv0sweYKA.desc=Pure neptunium-237.%n%n§3PWR:§r one of the strongest PWR fuels - only schrabidium fuels have a stronger square-root reaction.%n§3RBMK:§r a fast neutron fuel - it reacts best to fast neutrons and releases fast neutrons, so moderators work against it.%n§3Watz:§r not self-igniting.
+
+# Quest: Neutron Sources
+betterquesting.quest.qKTjnxpbQqm5hFapT4fhWw.name=Neutron Sources
+betterquesting.quest.qKTjnxpbQqm5hFapT4fhWw.desc=A reactor needs neutrons to start. The radium-beryllium source works, but it is weak and melts at only 700°C.%n%n§6Pu238Be§r uses plutonium-238 from spent HEU. It emits twice as many neutrons and also reacts to incoming flux.%n§6Po210Be§r uses polonium-210, made by irradiating bismuth. It is a passive source with a strong output, but its yield is only a quarter of a normal rod.%n%nBoth are beryllium-moderated and emit slow neutrons.
+
+# Quest: LEA Fuel
+betterquesting.quest.NU73f1dPTHGvAFhsbzNWpg.name=LEA Fuel
+betterquesting.quest.NU73f1dPTHGvAFhsbzNWpg.desc=Americium fuel billets are two parts uranium-238 and one part reactor-grade americium.%n%n§3RBMK:§r §6self-igniting§r - it generates its own flux, so it keeps reacting with no other fuel around. Strong, with 1.5x heat, and gains reactivity over its life.%n§3Watz:§r the americium fuel pellet is self-igniting and produces a lot of heat.
+
+# Quest: MEA Fuel
+betterquesting.quest.pyJ4Sel7T5-77Qafc4V5ew.name=MEA Fuel
+betterquesting.quest.pyJ4Sel7T5-77Qafc4V5ew.desc=Reactor-grade americium, one part americium-241 to two parts americium-242.%n%n§3PWR:§r the strongest logarithmic PWR fuel.%n§3RBMK:§r §cdangerous§r: a negative-quadratic reaction peaks at medium flux and drops again above it. Self-igniting, 1.75x heat.%n§3Watz:§r self-igniting, with even more heat than the americium fuel pellet.
+
+# Quest: HEA-241 Fuel
+betterquesting.quest.AxdnMzTHTfiqorwhgQhpuA.name=HEA-241 Fuel
+betterquesting.quest.AxdnMzTHTfiqorwhgQhpuA.desc=Pure americium-241 exists only as an RBMK rod. It is a fast neutron fuel: it reacts to fast neutrons and releases fast neutrons, so it fits cores without moderators.%n%nSelf-igniting, with very high reactivity and 1.85x heat.
+
+# Quest: HEA-242 Fuel
+betterquesting.quest.uJzhb_PFQ3CCAipvJousxg.name=HEA-242 Fuel
+betterquesting.quest.uJzhb_PFQ3CCAipvJousxg.desc=Pure americium-242.%n%n§3PWR:§r a strong square-root fuel with high heat per flux.%n§3RBMK:§r a §cdangerous§r linear fuel with double heat. It does not self-ignite, unlike the other americium fuels.
+
+# Quest: LECm Fuel
+betterquesting.quest.nVH0uhHCTJ6CakCugUe9Ug.name=LECm Fuel
+betterquesting.quest.nVH0uhHCTJ6CakCugUe9Ug.desc=Curium is extracted from spent americium Watz pellets in the PUREX. Curium fuel billets dilute it with uranium-238.%n%n§3RBMK:§r a slow linear reaction, self-igniting, with 1.25x heat. Curium rods have a short life, a low melting point and a hull that heats up quickly - watch the hull temperature, not just the core.%n§3Watz:§r the curium fuel pellet is self-igniting.
+
+# Quest: MECm Fuel
+betterquesting.quest.VlkAaAMfRCiSLT5WSdJ6qg.name=MECm Fuel
+betterquesting.quest.VlkAaAMfRCiSLT5WSdJ6qg.desc=Reactor-grade curium, a mix of curium-244 and curium-245.%n%n§3RBMK:§r stronger than LECm with a higher self-ignition rate and melting point.%n§3Watz:§r the reactor-grade curium pellet is self-igniting and very hot. Spent pellets are the source of §6californium-252§r.
+
+# Quest: HECm Fuel
+betterquesting.quest.lMDSMZlRQdqFWCxgddIMjw.name=HECm Fuel
+betterquesting.quest.lMDSMZlRQdqFWCxgddIMjw.desc=Pure curium-245 is separated in the SILEX and exists only as an RBMK rod. It has the strongest self-ignition of the curium fuels and high reactivity, but the shortest life of them all.
+
+# Quest: Berkelium-247 Fuel
+betterquesting.quest.VHNWLt83R9eWrPoXAvT8fg.name=Berkelium-247 Fuel
+betterquesting.quest.VHNWLt83R9eWrPoXAvT8fg.desc=Berkelium-247 is recovered from spent americium Watz pellets.%n%n§3RBMK:§r a §cdangerous§r linear fuel with double heat and very high reactivity.%n§3Watz:§r self-igniting and hot, but its main trait is mud: it produces far more poisonous mud per flux than any other pellet. Use it when CMB steel production matters more than power.
+
+# Quest: Californium-251 Fuel
+betterquesting.quest.7VVzbp2IRgef-_wpOV1YJQ.name=Californium-251 Fuel
+betterquesting.quest.7VVzbp2IRgef-_wpOV1YJQ.desc=Californium-251 is separated in the SILEX from spent berkelium-247 RBMK pellets and berkelium waste. It is a Watz-only fuel: self-igniting, hot and with a high thermal multiplier.
+
+# Quest: Californium-252 Fuel
+betterquesting.quest.oDfAFUHiQZyGPd0vZa9RiA.name=Californium-252 Fuel
+betterquesting.quest.oDfAFUHiQZyGPd0vZa9RiA.desc=Californium-252 comes from spent reactor-grade curium Watz pellets. It has the highest heat emission of any Watz pellet - twice that of californium-251. Mix it carefully with absorber pellets.
+
+# Quest: Einsteinium-253 Fuel
+betterquesting.quest.z3Di7BybRq-r2NtwlXD-5A.name=Einsteinium-253 Fuel
+betterquesting.quest.z3Di7BybRq-r2NtwlXD-5A.desc=Einsteinium-253 comes from spent curium fuel Watz pellets. It has the strongest passive emission of all pellets, so it ignites a Watz on its own, but it produces almost no mud.
+
+# Quest: LES Fuel
+betterquesting.quest.X4tCxCkQThegxEDtxoxbJw.name=LES Fuel
+betterquesting.quest.X4tCxCkQThegxEDtxoxbJw.desc=LES ingots are crafted from schrabidium, neptunium-237 and beryllium.%n%n§3ZIRNOX:§r by far the hottest ZIRNOX rod.%n§3RBMK:§r beryllium-moderated: it reacts to and releases slow neutrons. A strong square-root fuel.%n§3Watz:§r self-igniting, like every schrabidium pellet.
+
+# Quest: MES Fuel
+betterquesting.quest.Tc-sfZIrRqiy_UUs3NK2ug.name=MES Fuel
+betterquesting.quest.Tc-sfZIrRqiy_UUs3NK2ug.desc=More schrabidium per ingot.%n%n§3RBMK:§r §cdangerous§r: a negative-quadratic reaction with very high reactivity that peaks at medium flux.%n§3Watz:§r self-igniting, more mud than LES.
+
+# Quest: HES Fuel
+betterquesting.quest.U8Bm3FWjSLW1WHqCk6xZCw.name=HES Fuel
+betterquesting.quest.U8Bm3FWjSLW1WHqCk6xZCw.desc=Highly enriched schrabidium.%n%n§3RBMK:§r a §cdangerous§r linear fuel with the highest reactivity of all regular fission fuels and 1.75x heat.%n§3Watz:§r self-igniting with strong passive emission.
+
+# Quest: Schrabidium-326 Fuel
+betterquesting.quest.oyxDU-q7QMqJzjp-JgxzmQ.name=Schrabidium-326 Fuel
+betterquesting.quest.oyxDU-q7QMqJzjp-JgxzmQ.desc=Pure, undiluted schrabidium-326 can be burned directly.%n%n§3PWR:§r the HES-326 rod shares the highest heat per flux of all PWR fuels with HES-327.%n§3Watz:§r the pure schrabidium pellet has the strongest emission and most mud of the schrabidium pellets.%n%nReprocessing spent schrabidium fuel gives §6solinium§r.
+
+# Quest: Solinium Fuel
+betterquesting.quest.0pEM_nLPTYWZ7_yKQOsikA.name=Solinium Fuel
+betterquesting.quest.0pEM_nLPTYWZ7_yKQOsikA.desc=Solinium (schrabidium-327) comes from schrabidium ore and from reprocessing spent schrabidium fuels. As the HES-327 PWR rod it is the strongest PWR fuel, and spent rods reprocess into australium.
+
+# Quest: Australium Fuels
+betterquesting.quest.uyNWYzD4SY29l8XIGU411Q.name=Australium Fuels
+betterquesting.quest.uyNWYzD4SY29l8XIGU411Q.desc=Australian Ore is found on Moho. The SILEX separates australium into lesser (tasmanite) and greater (ayerite) australium, the materials for two RBMK fuels.%n%n§6LEAus§r has a sigmoid reaction rated safe, and §6HEAus§r a dangerous linear one. Both have 1.5x heat and produce ten times less xenon than other fuels, so they barely poison themselves.
+
+# Quest: Fast Breeder Fuels
+betterquesting.quest.B7fZFEezTbetmz4Asl3ewA.name=Fast Breeder Fuels
+betterquesting.quest.B7fZFEezTbetmz4Asl3ewA.desc=Breeder fuels are not about power - they burn a small amount of fissile material to transmute the rest into something rarer. They last only a fraction of a normal rod.%n%n§3RBMK ZFB:§r zirconium fast breeder rods with bismuth, plutonium-241 or americium.%n§3ZIRNOX ZFB MOX:§r MOX fuel with zirconium.%n§3PWR BFB:§r plutonium-241 or americium with bismuth and a shell of nuggets.%n%nReprocess the spent rods to collect plutonium-241, americium and bismuth.
+
+# Quest: ZIRNOX Lithium Rods
+betterquesting.quest.Yo_I4tLDRPud8y-I3ARWlw.name=ZIRNOX Lithium Rods
+betterquesting.quest.Yo_I4tLDRPud8y-I3ARWlw.desc=A §6ZIRNOX Lithium Rod§r is a breeding rod made from two lithium ingots. Placed next to burning fuel rods, it turns into a §6ZIRNOX Tritium Rod§r.%n%nThe tritium rod is a fluid container: empty it like any other container to get tritium and the empty ZIRNOX rod back.
+
+# Quest: Watz Absorber Pellets
+betterquesting.quest.nLRRzLYLQD6dwAhDmXiWFg.name=Watz Absorber Pellets
+betterquesting.quest.nLRRzLYLQD6dwAhDmXiWFg.desc=Absorber pellets produce no heat and only capture flux. They are how you tune a Watz stack.%n%n§6Lead§r is the standard absorber: it captures less the more flux it gets.%n§6Boron§r captures flux linearly and stays effective at high flux.%n§6Depleted uranium§r captures more the more flux it gets, so it steps in hardest when the reactor runs hot.
+
+# Quest: Balefire Fuel
+betterquesting.quest.bP6nO8IqSW-eD542ybP1Zg.name=Balefire Fuel
+betterquesting.quest.bP6nO8IqSW-eD542ybP1Zg.desc=Eight balefire shards in an RBMK rod make a fuel unlike any fission fuel: extreme reactivity, strong self-ignition, triple heat and no xenon poisoning. It melts only at 3652°C, but it is more than capable of reaching that.
+
+# Quest: Flashgold Fuel
+betterquesting.quest.86nioP9zS0-MrDOA5Rehag.name=Flashgold Fuel
+betterquesting.quest.86nioP9zS0-MrDOA5Rehag.desc=Flashgold is antihydrogen held in a magnetized gold-198 lattice. It is made in the PUREX from gold-198 billets, ionized particles and antimatter.%n%nIn the RBMK it is a self-igniting negative-quadratic fuel without xenon poisoning.
+
+# Quest: Flashlead Fuel
+betterquesting.quest.UHp4O8BURJa4VpnvFazIvQ.name=Flashlead Fuel
+betterquesting.quest.UHp4O8BURJa4VpnvFazIvQ.desc=Flashlead adds lead-209 to the flashgold lattice, again with antimatter in the PUREX. Its self-ignition is five times stronger than flashgold, and a rod lasts two and a half times as long as a normal one.
+
+# Quest: Digamma Fuel
+betterquesting.quest.goO8TjFKQJSliKGm5iLl8g.name=Digamma Fuel
+betterquesting.quest.goO8TjFKQJSliKGm5iLl8g.desc=Combine a balefire rod with the digamma particle and you get the most reactive fuel in existence: a quadratic reaction with more than ten times the reactivity of HES. It barely produces heat and practically cannot melt.%n%nIt is also the most dangerous item to carry in your inventory.
+
+# Quest: RTG Generator
+betterquesting.quest.iPfGHnjgRgWCBu6sUmogOA.name=RTG Generator
+betterquesting.quest.iPfGHnjgRgWCBu6sUmogOA.desc=The RTG turns the decay heat of radioisotope pellets into power - no cooling, no fuel handling, no meltdowns. It is assembled from three RTG units, steel, wire and plastic.%n%nIt holds 15 pellets. Their combined heat, capped at 200, gives 5 HE per tick for each point of heat. Pellets slowly decay into depleted pellets that you have to replace.
+
+# Quest: Starter RTG Pellets
+betterquesting.quest.niZAwDo9SUSYhGbcCiEn-Q.name=Starter RTG Pellets
+betterquesting.quest.niZAwDo9SUSYhGbcCiEn-Q.desc=Every pellet is three billets of an isotope on an iron plate.%n%n§6Radium-226§r comes from centrifuging uranium ore. It is weak, but practically never runs out.%n§6Weak Uranium§r pellets stretch one billet of plutonium-238 with uranium-238.%n§6Plutonium-238§r, from spent HEU fuel, is the classic RTG fuel: three times the heat of radium for decades of operation.
+
+# Quest: Advanced RTG Pellets
+betterquesting.quest.GfJ5MHf5SzuVsPZUBVmGlg.name=Advanced RTG Pellets
+betterquesting.quest.GfJ5MHf5SzuVsPZUBVmGlg.desc=Isotopes from reprocessing and irradiation trade lifetime for heat.%n%n§6Strontium-90§r and §6Cobalt-60§r give more heat than plutonium-238; cobalt comes from irradiating cobalt and decays quickly.%n§6Actinium-227§r and §6Americium-241§r are stronger still - americium lasts for centuries.%n§6Polonium-210§r, from irradiated bismuth, gives five times the heat of plutonium-238 but decays far faster.
+
+# Quest: High-Power RTG Pellets
+betterquesting.quest.LnlMD716QMqbVWizytdzlw.name=High-Power RTG Pellets
+betterquesting.quest.LnlMD716QMqbVWizytdzlw.desc=The strongest pellets sit on a nickel plate instead of iron.%n%n§6Gold-198§r (irradiated gold) and §6Lead-209§r (from the SILEX) burn extremely hot but decay very quickly. A single lead-209 pellet already fills the RTG's heat cap.%n§6Berkelium§r is a long-lived alpha source, and the §6Californium§r pellets are as hot as lead-209 and last longer.
+
+# Quest: RTG with Radiolysis Chamber
+betterquesting.quest.Z7Udn_Y0SCql4YFUlRA7Hw.name=RTG with Radiolysis Chamber
+betterquesting.quest.Z7Udn_Y0SCql4YFUlRA7Hw.desc=This RTG also uses its pellets' radiation. It splits water into hydrogen peroxide and hydrogen, performs every cracking recipe without a cracking tower, and removes contagion from items placed in its sterilization slot.
+
+
+
 ### Quests in multiple quest lines ###
 
 # Quest: Armor Modifications

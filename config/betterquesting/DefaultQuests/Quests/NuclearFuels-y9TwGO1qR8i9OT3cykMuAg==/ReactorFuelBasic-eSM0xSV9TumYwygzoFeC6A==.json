@@ -2,15 +2,15 @@
   "preRequisites:9": {
     "0:10": {
       "questIDHigh:4": 0,
-      "questIDLow:4": 73
+      "questIDLow:4": 0
     },
     "1:10": {
       "questIDHigh:4": 0,
-      "questIDLow:4": 135
+      "questIDLow:4": 114
     },
     "2:10": {
-      "questIDHigh:4": -5329374405835404860,
-      "questIDLow:4": -5578858652425408103
+      "questIDHigh:4": 0,
+      "questIDLow:4": 10
     }
   },
   "properties:10": {
@@ -25,19 +25,19 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The next anvil tier can be reached three ways. Smith a basic iron or lead anvil with ten ingots of \u00a76saturnite\u00a7r, \u00a76bismuth bronze\u00a7r or \u00a76arsenic bronze\u00a7r - whichever you can make first. The \u00a73Saturnite Anvil\u00a7r, \u00a73Bismuth Bronze Anvil\u00a7r and \u00a73Arsenic Bronze Anvil\u00a7r are the same tier and unlock the same construction recipes of the reactor age.\n\nBoth bronzes are alloyed in the crucible from copper, flux and bismuth or arsenic.",
+      "desc:8": "Fuel names follow one scheme: §6N§r is natural, §6L§r, §6M§r and §6HE§r are low, medium and highly enriched, followed by the element and isotope - §6MEU§r is medium enriched uranium, §6HEP-239§r highly enriched plutonium-239.\n\nAll fuels start as billets. A §3ZIRNOX§r rod takes two billets, a §3PWR§r rod two billets around a polymer plate, an §3RBMK§r rod eight billets in an empty RBMK rod, and a §3Watz§r pellet four ingots around graphite. The tooltip of every rod shows its exact stats.\n\nSpent fuel comes out hot. Cool it in the Spent Fuel Pool Drum, then reprocess ZIRNOX, PWR and Watz fuel in the PUREX. Spent RBMK rods are taken apart into pellets for the SILEX. What you get back is the start of the next quest.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
         "Damage:2": 0,
         "OreDict:8": "",
-        "id:8": "hbm:tile.anvil_saturnite"
+        "id:8": "hbm:item.rbmk_fuel_meu"
       },
-      "isMain:1": 0,
+      "isMain:1": 1,
       "isSilent:1": 0,
       "is_final:1": 0,
       "lockedProgress:1": 0,
-      "name:8": "Reactor Age Anvils",
+      "name:8": "Reactor Fuel Basics",
       "notification_duration:5": -1.0,
       "notification_effect:3": -1,
       "notification_fade_in:5": -1.0,
@@ -66,39 +66,27 @@
       "visibility:8": "NORMAL"
     }
   },
-  "questIDHigh:4": -3862147968578074343,
-  "questIDLow:4": -5673614576401704362,
-  "rewards:9": {},
-  "tasks:9": {
+  "questIDHigh:4": 8728878524116324073,
+  "questIDLow:4": -7439057957287394584,
+  "rewards:9": {
     "0:10": {
-      "autoConsume:1": 0,
-      "consume:1": 0,
-      "groupDetect:1": 0,
-      "ignoreNBT:1": 1,
+      "ignoreDisabled:1": 0,
       "index:3": 0,
-      "partialMatch:1": 1,
-      "requireOnlyOneItem:1": 1,
-      "requiredItems:9": {
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
         "0:10": {
           "Count:3": 1,
-          "Damage:2": 0,
+          "Damage:2": 310,
           "OreDict:8": "",
-          "id:8": "hbm:tile.anvil_saturnite"
-        },
-        "1:10": {
-          "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
-          "id:8": "hbm:tile.anvil_bismuth_bronze"
-        },
-        "2:10": {
-          "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
-          "id:8": "hbm:tile.anvil_arsenic_bronze"
+          "id:8": "enhancedlootbags:lootbag"
         }
-      },
-      "taskID:8": "bq_standard:retrieval"
+      }
+    }
+  },
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "taskID:8": "bq_standard:checkbox"
     }
   }
 }
