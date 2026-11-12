@@ -429,6 +429,14 @@ betterquesting.quest.a0bouserRme9QTL62wzWmA.desc=Lining advanced hazmat cloth wi
 betterquesting.quest.Wb1-riYXTUOKjc7EBCAmTg.name=Gunmetal
 betterquesting.quest.Wb1-riYXTUOKjc7EBCAmTg.desc=§6Gunmetal§r is the first weapons-grade alloy. It is made in the §3Rotary Furnace§r from three copper ingots and one zinc ingot, which give four ingots of molten gunmetal to cast.%n%nEvery firearm is built around its §6mechanism§r, and the mechanism material decides the generation of the gun: §6Gunmetal§r for the first guns, §6Weapon Steel§r for the next generation and §6Saturnite§r for the most advanced ones.%n%nBarrels and receivers are cast from a second material that rises within each generation: steel, then high-speed steel, desh, weapon steel, ferrouranium, technetium or cadmium steel, and finally saturnite.
 
+# Quest: Fortune and Afterburner Upgrades
+betterquesting.quest.AQ3WryLxRB6gqxVD2_hNAg.name=Fortune and Afterburner Upgrades
+betterquesting.quest.AQ3WryLxRB6gqxVD2_hNAg.desc=Two more upgrades are soldered from vacuum tubes and capacitors. §6Fortune§r (which also needs niobium) increases the ore output of mining machines. §6Afterburner§r makes engines and turbines burn their fuel faster for a higher power output.%n%nLike the basic upgrades, higher levels are made later in the Precision Assembler.
+
+# Quest: Smelter Upgrade
+betterquesting.quest.QoZC41bBRIq_VXQUETg3rw.name=Smelter Upgrade
+betterquesting.quest.QoZC41bBRIq_VXQUETg3rw.desc=The §6Smelter Upgrade§r, made from copper plates, copper and tungsten coils and a template, smelts everything a mining machine digs up right away. It is also the first step of a chain: the shredder, centrifuge and crystallizer upgrades are each built on top of the previous one.
+
 
 ## Quest Line: LV2 - Oil Age
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAQ.name=LV2 - Oil Age
@@ -693,6 +701,14 @@ betterquesting.quest.QPt3cE-2RDWXe44KCNXSOQ.desc=The §6T-51b§r is the first el
 # Quest: Kevlar
 betterquesting.quest.NtkXGmpjSVall505biSQuQ.name=Kevlar
 betterquesting.quest.NtkXGmpjSVall505biSQuQ.desc=§6Kevlar Sheets§r are made in the Chemical Plant from aromatic hydrocarbons, nitric acid and chlorine. Four sheets, rubber and duct tape make a §6Kevlar Insert§r - the first armor insert, which goes into a chestplate at the Armor Modification Table and adds damage resistance.
+
+# Quest: Ore Processing Upgrades
+betterquesting.quest.VvJYIAi2T2mSpxNnJAr8_A.name=Ore Processing Upgrades
+betterquesting.quest.VvJYIAi2T2mSpxNnJAr8_A.desc=The smelter upgrade can be rebuilt step by step. The §6Shredder Upgrade§r (titanium blades and a motor) grinds mined ore instead of smelting it. The §6Centrifuge Upgrade§r adds a centrifuge element and separates the ore further, and the §6Crystallizer Upgrade§r, built with a military grade circuit and a barrel of hydrogen peroxide, crystallizes it for the highest yield.%n%nEach upgrade is crafted from the previous one, so decide how far you want to take it.
+
+# Quest: Emitter Upgrades
+betterquesting.quest.689AwMYdQ0euKTXEhExyLw.name=Emitter Upgrades
+betterquesting.quest.689AwMYdQ0euKTXEhExyLw.desc=The §6Emitter Radius§r and §6Emitter Health§r upgrades are soldered from microchips and capacitors. They are used by emitter machines like the forcefield emitter to cover a larger area and to absorb more damage.
 
 
 ## Quest Line: LV3 - Reactors Age
@@ -1018,6 +1034,86 @@ betterquesting.quest.xQEUURH0RH-QWqDAqs7Gzw.desc=The §3Radar Survey Satellite§
 # Quest: Deuterium Extraction Tower
 betterquesting.quest.yYyMBFJrRUOt39If3zFaFg.name=Deuterium Extraction Tower
 betterquesting.quest.yYyMBFJrRUOt39If3zFaFg.desc=The §3Deuterium Extraction Tower§r is a much larger version of the Deuterium Extractor, making it an easy and viable way of making cheap fuel for the §b§r§3Fusion Reactor§r.%n%n§2A Ferrouranium Anvil is required.§r
+
+# Quest: RBMK Control Rods
+betterquesting.quest.DcBXJ8ejTGW-a6MxbqRzrQ.name=RBMK Control Rods
+betterquesting.quest.DcBXJ8ejTGW-a6MxbqRzrQ.desc=§3Control Rods§r are columns that absorb neutrons. Lowering them slows the chain reaction down, raising them lets it run faster - this is how you keep an RBMK under control.%n%n§3Moderated Control Rods§r also slow neutrons down when extracted, and §3Automatic Control Rods§r move on their own depending on the heat of the reactor, keeping it near the temperature you set.%n%nNever pull every rod out at once on a hot core.
+
+# Quest: RBMK Steam Channels
+betterquesting.quest.aBLTlbL2QaOsEdYDrDNuAA.name=RBMK Steam Channels
+betterquesting.quest.aBLTlbL2QaOsEdYDrDNuAA.desc=A reactor is useless until its heat goes somewhere. §3Steam Channels§r take heat from neighbouring columns and boil water into steam for your turbines.%n%nFluids are connected at the bottom of the columns. If a column needs both water in and steam out, place a §3Steam Connector§r: water pipe below the column, then the connector, and the steam duct goes into the connector.
+
+# Quest: RBMK Moderators and Reflectors
+betterquesting.quest.lW1g4eODRcGR_ITVn-zxqA.name=RBMK Moderators and Reflectors
+betterquesting.quest.lW1g4eODRcGR_ITVn-zxqA.desc=Passive columns shape the neutron flux. §3Graphite Moderators§r slow fast neutrons down so they cause more fission, §3Tungsten Carbide Reflectors§r send neutrons back into the core, and §3Boron Absorbers§r swallow them. §3Structural Columns§r fill gaps without affecting anything.%n%nThe §3Moderated Fuel Channel§r is a fuel channel with a moderator built in, for fuels that need slow neutrons.
+
+# Quest: RBMK Cooling and Storage
+betterquesting.quest.BK8W7DNgRGWwzux4q_ZAYA.name=RBMK Cooling and Storage
+betterquesting.quest.BK8W7DNgRGWwzux4q_ZAYA.desc=The §3RBMK Cooler§r pulls excess heat out of its neighbours with a coolant fluid - an emergency brake for hot spots in your core. The §3Fluid Heater§r does the opposite and uses reactor heat to heat up other fluids.%n%nThe §3Storage Column§r holds spent fuel rods while they cool down inside the reactor. §6Glass Cover Panels§r let you see what is inside a column.
+
+# Quest: RBMK Automation
+betterquesting.quest.j50W-HVSThSHEvK9B_M1Hw.name=RBMK Automation
+betterquesting.quest.j50W-HVSThSHEvK9B_M1Hw.desc=Columns are linked to consoles with the §6RBMK Console Linking Device§r. The §3Crane Console§r controls a crane that moves fuel rods in and out of the core without anyone standing on top of a running reactor, and the §3Autoloader§r swaps rods automatically.%n%nThe §3Display Panel§r shows the state of linked columns, and the §3Redstone-over-Radio Terminal§r lets you control the reactor remotely.
+
+# Quest: RBMK ReaSim Columns
+betterquesting.quest.60Iqw2PsTqisQwiGBgMS6w.name=RBMK ReaSim Columns
+betterquesting.quest.60Iqw2PsTqisQwiGBgMS6w.desc=The §6ReaSim§r columns use a more realistic simulation of neutron flux and boiling. Instead of separate steam channels, water is fed into the core through §3Water Inlets§r and leaves as steam through §3Steam Outlets§r.%n%nReaSim fuel channels and control rods do not mix with the regular ones - plan your reactor for one system or the other.
+
+# Quest: RBMK Debris
+betterquesting.quest.9lioRg7zQ-qrWBtR2B2cQQ.name=RBMK Debris
+betterquesting.quest.9lioRg7zQ-qrWBtR2B2cQQ.desc=If an RBMK explodes, it scatters §6debris§r all around: graphite, metal, burning fuel chunks, concrete and pieces of heat exchangers. Every piece is intensely radioactive.%n%nPick them up only in full radiation protection, and recycle them instead of leaving them to contaminate the area for years.
+
+# Quest: PWR Core Components
+betterquesting.quest.aAuh9o1iTsuyn0JyOeFENw.name=PWR Core Components
+betterquesting.quest.aAuh9o1iTsuyn0JyOeFENw.desc=Besides fuel rods, neutron sources and ports, a PWR core is built from several more blocks. §3Control Rods§r regulate the reaction, §3Coolant Channels§r carry coolant through the core, §3Heat Exchangers§r and §3Heatsinks§r move heat from the fuel into the coolant, and §3Neutron Reflectors§r keep neutrons inside.%n%nThe whole core has to be enclosed in §3Casing§r blocks. Experiment with the layout: it decides both the reactivity and how well heat leaves the core.
+
+# Quest: Nuclear Waste
+betterquesting.quest.8am9kV6dTtCfxxKCpeaFrw.name=Nuclear Waste
+betterquesting.quest.8am9kV6dTtCfxxKCpeaFrw.desc=Reprocessing spent fuel leaves §6short-lived§r and §6long-lived nuclear waste§r. Both are extremely radioactive - never carry more than you need.%n%nIn the §3Nuclear Waste Disposal Drum§r the waste slowly decays into much less dangerous §6decayed waste§r. §6Vitrified waste§r is locked in glass for safe long-term storage, and waste can also be compressed into blocks - which are just as radioactive.
+
+# Quest: Gas Cells
+betterquesting.quest.A5iYSFmXRCy15l8H2WT8Sw.name=Gas Cells
+betterquesting.quest.A5iYSFmXRCy15l8H2WT8Sw.desc=§6Cells§r are small sealed steel containers for dangerous gases: plutonium hexafluoride for enrichment, deuterium and tritium for fusion fuels and thermonuclear bombs.%n%nLarger amounts of uranium and plutonium hexafluoride are kept in dedicated §3Hexafluoride Tanks§r.
+
+# Quest: Breeding Rods
+betterquesting.quest.qsuZMbmZRhSDpZCQ75LKaw.name=Breeding Rods
+betterquesting.quest.qsuZMbmZRhSDpZCQ75LKaw.desc=Empty single, dual and quad rods can be filled with a breeding material such as lithium or uranium-238 and placed into the §3Fusion Breeder§r. The neutrons from the plasma slowly transmute the material - lithium into tritium, uranium into plutonium and so on.
+
+# Quest: Saturnite Anvil
+betterquesting.quest.ymbk4pboSRmxQ0WaVRkaVg.name=Saturnite Anvil
+betterquesting.quest.ymbk4pboSRmxQ0WaVRkaVg.desc=Like every higher anvil, the §3Saturnite Anvil§r is smithed from a basic iron or lead anvil and ten ingots - here, saturnite. It is the next anvil tier after ferrouranium and unlocks the construction recipes of the reactor age.
+
+# Quest: Bronze Anvils
+betterquesting.quest.clgHvoIISwG1QARooycq1Q.name=Bronze Anvils
+betterquesting.quest.clgHvoIISwG1QARooycq1Q.desc=The §3Bismuth Bronze§r and §3Arsenic Bronze Anvils§r are the same tier as the saturnite anvil. Smith one from a basic anvil and ten bronze ingots if bronze is easier for you to get than saturnite.
+
+# Quest: Ferric Schrabidate Anvil
+betterquesting.quest.m1-buTDCQQmBK-ARjkKpSw.name=Ferric Schrabidate Anvil
+betterquesting.quest.m1-buTDCQQmBK-ARjkKpSw.desc=The §3Ferric Schrabidate Anvil§r, smithed from a basic anvil and ten ferric schrabidate ingots, is the fusion-age anvil tier and is needed for the most advanced construction recipes.
+
+# Quest: Forcefield Emitter
+betterquesting.quest.Cq0EUOVkS3KTRKq6_yDkUQ.name=Forcefield Emitter
+betterquesting.quest.Cq0EUOVkS3KTRKq6_yDkUQ.desc=The §3Forcefield Emitter§r projects a protective dome that blocks projectiles and keeps mobs out. It is made in the Assembly Machine from high-speed steel, desh, gold and magnetized tungsten coils, a motor and both emitter upgrades.%n%nInstall more §6Emitter Radius§r and §6Emitter Health§r upgrades to make the dome larger and sturdier. The field consumes a lot of power while active.
+
+# Quest: Overdrive Upgrades
+betterquesting.quest.mx-MZSYXTemFnu1FrsW6Zg.name=Overdrive Upgrades
+betterquesting.quest.mx-MZSYXTemFnu1FrsW6Zg.desc=§6Overdrive§r upgrades are built from the highest speed and effectiveness upgrades, saturnite and hard plastic. They push a machine far beyond its normal speed - at a huge power cost.
+
+# Quest: Cobalt Gear
+betterquesting.quest.gAxXLf12Qv2aaWyHk3xDBg.name=Cobalt Gear
+betterquesting.quest.gAxXLf12Qv2aaWyHk3xDBg.desc=Cobalt tools have stronger abilities than steel ones. Smithing them on the anvil with blocks of cobalt turns them into §6Decorated Cobalt§r tools, which are better still and are the base for starmetal tools.%n%n§6Cobalt Armor§r is steel armor reinforced with cobalt billets and is likewise the base for starmetal armor.
+
+# Quest: Starmetal Gear
+betterquesting.quest.MEYINQuMSDO32fiIVOdL1A.name=Starmetal Gear
+betterquesting.quest.MEYINQuMSDO32fiIVOdL1A.desc=Starmetal tools are built from decorated cobalt tools and §6Starmetal Rings§r, and starmetal armor from cobalt armor. Both are a big step up in durability and abilities. The pickaxe has its own quest, since it is the base of the molten and bismuth pickaxes.
+
+# Quest: CMB Steel Gear
+betterquesting.quest.UmfCgE6mQjemH_KsZl_UuA.name=CMB Steel Gear
+betterquesting.quest.UmfCgE6mQjemH_KsZl_UuA.desc=CMB Steel is one of the toughest materials in the game, and so are the tools and armor made from it. CMB tools are nearly indestructible and come with powerful abilities.
+
+# Quest: Schrabidium Gear
+betterquesting.quest.ImJAgHWbSfG-bw4scSQjhw.name=Schrabidium Gear
+betterquesting.quest.ImJAgHWbSfG-bw4scSQjhw.desc=Schrabidium tools are built on desh tools, schrabidium and plastic, and have the strongest abilities of any regular tool set. Schrabidium armor goes on top of starmetal armor and also needs ionized particles from fusion. A full set grants strong effects - but it is also radioactive.
 
 
 ## Quest Line: LV3.5 - Space Age
@@ -1639,6 +1735,94 @@ betterquesting.quest.WtkSt3eWRo6ZQhlX22r4mQ.desc=The §3Radar§r detects missile
 # Quest: Target Designators
 betterquesting.quest.o4Y_mZofRWiki9oFhU1w4Q.name=Target Designators
 betterquesting.quest.o4Y_mZofRWiki9oFhU1w4Q.desc=A launch pad needs to know where to send its missile. Right-click a block with the §6Short Range Target Designator§r to save its coordinates, then put the designator into the launch pad. The §6Long Range Target Designator§r, made from a short range one and a §6Rangefinder§r, reaches much further.
+
+# Quest: Anti-Materiel Rifle
+betterquesting.quest.2Y3HmfI4SVu2jlwlnGGJGw.name=Anti-Materiel Rifle
+betterquesting.quest.2Y3HmfI4SVu2jlwlnGGJGw.desc=Ferrouranium makes heavy barrels possible. The §6Anti-Materiel Rifle§r fires seven §6.50 BMG§r rounds - including armor-piercing, depleted uranium, explosive and special starmetal rounds - over extreme distances. It comes with a scope.
+
+# Quest: Ma Deuce
+betterquesting.quest.nBKMQxpgReKbB7eR5pZWhQ.name=Ma Deuce
+betterquesting.quest.nBKMQxpgReKbB7eR5pZWhQ.desc=The §6Ma Deuce§r is a belt-fed heavy machine gun with a ferrouranium barrel, firing §6.50 BMG§r rounds. Heavy, loud and extremely effective.
+
+# Quest: Auto Shotgun
+betterquesting.quest.96Fooa1xTUKf_pardYJTdg.name=Auto Shotgun
+betterquesting.quest.96Fooa1xTUKf_pardYJTdg.desc=The §6Auto Shotgun§r has a ferrouranium barrel and a 20-shell magazine and fires 12 gauge shells in full auto. It shreds anything at close range in seconds.
+
+# Quest: Quad Rocket Launcher
+betterquesting.quest.Psfz99PLSEm5LB1ki6_1DQ.name=Quad Rocket Launcher
+betterquesting.quest.Psfz99PLSEm5LB1ki6_1DQ.desc=The §6Quad Rocket Launcher§r holds four rockets and fires them in rapid succession. Its circuit allows it to lock on to targets.
+
+# Quest: Comically Long Pistol
+betterquesting.quest.6bQtMPLAQjOBwV5lvR8P6w.name=Comically Long Pistol
+betterquesting.quest.6bQtMPLAQjOBwV5lvR8P6w.desc=Exactly what the name says. Its barrel is cast from technetium or cadmium steel and is far too long, which makes this §69mm§r pistol with a 17-round magazine surprisingly accurate.
+
+# Quest: Minigun
+betterquesting.quest.BJxZu0HcRHmFyT1naFjVkQ.name=Minigun
+betterquesting.quest.BJxZu0HcRHmFyT1naFjVkQ.desc=The §6M134 Minigun§r spins up its barrels and then unleashes a stream of §67.62mm§r rounds. It needs a moment to start firing, so it works best from a prepared position.
+
+# Quest: Missile Launcher
+betterquesting.quest.qFTwQZW9S5aGdvCgezboOQ.name=Missile Launcher
+betterquesting.quest.qFTwQZW9S5aGdvCgezboOQ.desc=The §6Missile Launcher§r fires one heavy missile at a time. Each missile is strong enough to destroy small buildings.
+
+# Quest: Tesla Cannon
+betterquesting.quest.o29OUp_zR_--PQp009pT1g.name=Tesla Cannon
+betterquesting.quest.o29OUp_zR_--PQp009pT1g.desc=The §6Tesla Cannon§r fires arcs of electricity from energy cells; overcharged and infrared cells change how the arcs behave. Excellent against crowds.
+
+# Quest: Laser Pistol
+betterquesting.quest.DoM54D1vQy28cumKEnQExQ.name=Laser Pistol
+betterquesting.quest.DoM54D1vQy28cumKEnQExQ.desc=Saturnite mechanisms start the third generation of guns. The §6Laser Pistol§r focuses energy through a redstone crystal and fires instant laser shots from energy cells, 30 per charge.%n%nRebuilt with more saturnite mechanisms, it becomes the §6Pew Pew§r.
+
+# Quest: StG 77
+betterquesting.quest.2pLBHhtST0Wf4HylMtTz1A.name=StG 77
+betterquesting.quest.2pLBHhtST0Wf4HylMtTz1A.desc=The §6StG 77§r is a bullpup assault rifle with a saturnite build and a built-in scope, firing §65.56mm§r rounds from a 30-round magazine with excellent accuracy.
+
+# Quest: Fat Man
+betterquesting.quest.SqE3lHSgScGU3uAi-cO3Jg.name=Fat Man
+betterquesting.quest.SqE3lHSgScGU3uAi-cO3Jg.desc=The §6Fat Man§r launches miniature nuclear warheads one at a time: standard, demolition, high yield, a hive of smaller nukes and even balefire. The blast is small by nuke standards, but it is still a nuke - keep your distance.
+
+# Quest: Tau Cannon
+betterquesting.quest.tdHUi_fRThCZ4G_qNa6o0w.name=Tau Cannon
+betterquesting.quest.tdHUi_fRThCZ4G_qNa6o0w.desc=The §6Tau Cannon§r fires tau particles using uranium as ammunition. Hold fire to charge a shot that passes through walls and pushes you backwards.
+
+# Quest: Laser Rifle
+betterquesting.quest.63VohT0WRGKEsxSG8paz7g.name=Laser Rifle
+betterquesting.quest.63VohT0WRGKEsxSG8paz7g.desc=The §6Laser Rifle§r has a barrel and receiver cast from bismuth bronze and a saturnite mechanism. It fires 24 powerful laser shots per energy cell and comes with a scope.
+
+# Quest: Saturnite Refits
+betterquesting.quest.CQMGpZHrQN2l9vT3kHZHwg.name=Saturnite Refits
+betterquesting.quest.CQMGpZHrQN2l9vT3kHZHwg.desc=Saturnite mechanisms upgrade three guns into named versions: a pair of §6Target Pistols§r, the §6Zebra Rifle§r and the §6Shredder§r auto shotgun.
+
+# Quest: Ballistic Inserts
+betterquesting.quest.vRKlntSnQgetOcpVZBIigg.name=Ballistic Inserts
+betterquesting.quest.vRKlntSnQgetOcpVZBIigg.desc=The kevlar insert can be upgraded. The §6SAPI Plate§r adds plastic to it, and the §6ESAPI Plate§r adds weapon steel on top of that. The §6Uranium Plate§r is a depleted uranium alternative. Each step gives more damage resistance.
+
+# Quest: Advanced Jetpacks
+betterquesting.quest.vVEwAflPQeSuhsNvSBcJDA.name=Advanced Jetpacks
+betterquesting.quest.vVEwAflPQeSuhsNvSBcJDA.desc=The §6Vectored Jetpack§r is built on the builder's jetpack with high-speed steel and a military grade circuit and allows precise flight in every direction. Adding saturnite, desh and copper turns it into the §6Boostpack§r, which gives powerful bursts of speed.
+
+# Quest: Medium Missiles
+betterquesting.quest.0aqrO0lsRdyMsaD1x302pw.name=Medium Missiles
+betterquesting.quest.0aqrO0lsRdyMsaD1x302pw.desc=Tier 2 missiles use a §6Medium Thruster§r made from graphite, steel and a motor, a titanium §6Medium Fuel Tank§r and a §6Medium Warhead§r. They fly further and hit much harder than small missiles. Three EMP devices welded onto a medium thruster and fuel tank give the §6Strong EMP Missile§r.
+
+# Quest: Nuclear Missiles
+betterquesting.quest.3TSisRpPSFalHXpU-BMAQA.name=Nuclear Missiles
+betterquesting.quest.3TSisRpPSFalHXpU-BMAQA.desc=The largest missiles need a §6Large Thruster§r of high-speed steel and tungsten carbide and a saturnite §6Large Fuel Tank§r. The §6Nuclear Warhead§r is built from uranium-235, lead, titanium and a control unit.%n%nThe §6Nuclear Missile§r and the multi-warhead §6Thermonuclear Missile§r are the most destructive payloads a launch pad can deliver.
+
+# Quest: Tsar Bomba
+betterquesting.quest.vL5-YdoKS6Kcwncl5cGpHQ.name=Tsar Bomba
+betterquesting.quest.vL5-YdoKS6Kcwncl5cGpHQ.desc=The §6Tsar Bomba§r is the largest thermonuclear bomb you can build, assembled around a §6Tsar Bomba Core§r with titanium, steel and an advanced control unit. It flattens an enormous area and spreads fallout far and wide - do not build it anywhere near something you care about.
+
+# Quest: N² Mine
+betterquesting.quest.Nkh_8YLFRbOm9AByh5o9Fw.name=N² Mine
+betterquesting.quest.Nkh_8YLFRbOm9AByh5o9Fw.desc=The §6N² Mine§r is a weapon of mass destruction without any radiation: a huge cluster of §6Large Explosive Charges§r around magnetized tungsten. It leaves an enormous crater, but no fallout.
+
+# Quest: Custom Nuke
+betterquesting.quest.cGCqCw04Sr2DI5y1Tdfilg.name=Custom Nuke
+betterquesting.quest.cGCqCw04Sr2DI5y1Tdfilg.desc=The §6Custom Nuke§r is an empty bomb casing that you fill yourself. Explosive charges set the conventional yield, and nuclear, hydrogen, dirty and schrabidium rods turn it into the kind of nuclear explosion you want. A drop upgrade makes it fall when triggered, so it can be used as an air-dropped bomb.
+
+# Quest: Balefire Bomb
+betterquesting.quest.4Bj_SJ-mSCCcv9fF3wzyVg.name=Balefire Bomb
+betterquesting.quest.4Bj_SJ-mSCCcv9fF3wzyVg.desc=The §6Balefire Bomb§r is loaded with a §6Balefire Egg§r and has to be armed with a §6Spark Battery§r before it can go off. Its explosion leaves behind green balefire that spreads and burns for a very long time.
 
 
 ## Quest Line: Building and Decorating
