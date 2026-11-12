@@ -2,11 +2,15 @@
   "preRequisites:9": {
     "0:10": {
       "questIDHigh:4": 0,
-      "questIDLow:4": 135
+      "questIDLow:4": 73
     },
     "1:10": {
       "questIDHigh:4": 0,
-      "questIDLow:4": 111
+      "questIDLow:4": 135
+    },
+    "2:10": {
+      "questIDHigh:4": -5329374405835404860,
+      "questIDLow:4": -5578858652425408103
     }
   },
   "properties:10": {
@@ -21,19 +25,19 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §3Bismuth Bronze§r and §3Arsenic Bronze Anvils§r are the same tier as the saturnite anvil. Smith one from a basic anvil and ten bronze ingots if bronze is easier for you to get than saturnite.",
+      "desc:8": "The next anvil tier can be reached three ways. Smith a basic iron or lead anvil with ten ingots of \u00a76saturnite\u00a7r, \u00a76bismuth bronze\u00a7r or \u00a76arsenic bronze\u00a7r - whichever you can make first. The \u00a73Saturnite Anvil\u00a7r, \u00a73Bismuth Bronze Anvil\u00a7r and \u00a73Arsenic Bronze Anvil\u00a7r are the same tier and unlock the same construction recipes of the reactor age.\n\nBoth bronzes are alloyed in the crucible from copper, flux and bismuth or arsenic.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
         "Damage:2": 0,
         "OreDict:8": "",
-        "id:8": "hbm:tile.anvil_bismuth_bronze"
+        "id:8": "hbm:tile.anvil_saturnite"
       },
       "isMain:1": 0,
       "isSilent:1": 0,
       "is_final:1": 0,
       "lockedProgress:1": 0,
-      "name:8": "Bronze Anvils",
+      "name:8": "Reactor Age Anvils",
       "notification_duration:5": -1.0,
       "notification_effect:3": -1,
       "notification_fade_in:5": -1.0,
@@ -52,7 +56,7 @@
       "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
       "poem_music:8": "",
       "poem_text:8": "betterquesting:texts/end_poem",
-      "questLogic:8": "AND",
+      "questLogic:8": "OR",
       "repeatTime:3": -1,
       "repeat_relative:1": 1,
       "simultaneous:1": 0,
@@ -62,37 +66,39 @@
       "visibility:8": "NORMAL"
     }
   },
-  "questIDHigh:4": 8239344033081084673,
-  "questIDLow:4": -5386300306874750251,
+  "questIDHigh:4": -3862147968578074343,
+  "questIDLow:4": -5673614576401704362,
   "rewards:9": {},
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
-      "taskID:8": "bq_standard:checkbox"
-    },
-    "1:10": {
       "autoConsume:1": 0,
       "consume:1": 0,
       "groupDetect:1": 0,
       "ignoreNBT:1": 1,
-      "index:3": 1,
+      "index:3": 0,
       "partialMatch:1": 1,
-      "requireOnlyOneItem:1": 0,
+      "requireOnlyOneItem:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "hbm:tile.anvil_bismuth_bronze"
+          "id:8": "hbm:tile.anvil_saturnite"
         },
         "1:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.anvil_bismuth_bronze"
+        },
+        "2:10": {
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
           "id:8": "hbm:tile.anvil_arsenic_bronze"
         }
       },
-      "taskID:8": "bq_standard:optional_retrieval"
+      "taskID:8": "bq_standard:retrieval"
     }
   }
 }

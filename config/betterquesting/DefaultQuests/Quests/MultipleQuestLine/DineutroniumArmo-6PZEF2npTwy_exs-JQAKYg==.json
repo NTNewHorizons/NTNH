@@ -2,11 +2,7 @@
   "preRequisites:9": {
     "0:10": {
       "questIDHigh:4": 0,
-      "questIDLow:4": 73
-    },
-    "1:10": {
-      "questIDHigh:4": 0,
-      "questIDLow:4": 111
+      "questIDLow:4": 253
     }
   },
   "properties:10": {
@@ -21,19 +17,19 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "Like every higher anvil, the §3Saturnite Anvil§r is smithed from a basic iron or lead anvil and ten ingots - here, saturnite. It is the next anvil tier after ferrouranium and unlocks the construction recipes of the reactor age.",
+      "desc:8": "\u00a76Dineutronium armor\u00a7r (helmet, plate, legs and boots): an endgame protective suit crafted from \u00a76dineutronium\u00a7r.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
         "Damage:2": 0,
         "OreDict:8": "",
-        "id:8": "hbm:tile.anvil_saturnite"
+        "id:8": "hbm:item.dnt_helmet"
       },
       "isMain:1": 0,
       "isSilent:1": 0,
       "is_final:1": 0,
       "lockedProgress:1": 0,
-      "name:8": "Saturnite Anvil",
+      "name:8": "Dineutronium Armor",
       "notification_duration:5": -1.0,
       "notification_effect:3": -1,
       "notification_fade_in:5": -1.0,
@@ -62,9 +58,23 @@
       "visibility:8": "NORMAL"
     }
   },
-  "questIDHigh:4": -3862147968578074343,
-  "questIDLow:4": -5673614576401704362,
-  "rewards:9": {},
+  "questIDHigh:4": -1660064545287614708,
+  "questIDLow:4": -4649092236607223198,
+  "rewards:9": {
+    "0:10": {
+      "ignoreDisabled:1": 0,
+      "index:3": 0,
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.dust_tiny"
+        }
+      }
+    }
+  },
   "tasks:9": {
     "0:10": {
       "autoConsume:1": 0,
@@ -79,7 +89,25 @@
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "hbm:tile.anvil_saturnite"
+          "id:8": "hbm:item.dnt_helmet"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.dnt_plate"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.dnt_legs"
+        },
+        "3:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.dnt_boots"
         }
       },
       "taskID:8": "bq_standard:retrieval"
