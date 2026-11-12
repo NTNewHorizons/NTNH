@@ -21,7 +21,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "Glyphids and raiders have to get to you first. §6Barbed Wire§r, crafted from steel wire and iron, slows down and hurts anything that walks into it.\n\nA double ring of wire around your base buys you the seconds you need to grab a gun.",
+      "desc:8": "Glyphids and raiders have to get to you first. §6Barbed Wire§r, crafted from steel wire and iron, slows down anything that walks into it and deals 2 damage every tick it stays inside.\n\nSurround eight pieces of wire with an additive to get a stronger variant:\n§6Flaming Barbed Wire§r (red phosphorus) also sets its victims on fire.\n§6Poisoned Barbed Wire§r (poison powder) inflicts Poison III.\n§6Caustic Barbed Wire§r (a tank of hydrogen peroxide) eats away at every piece of armor the player wears.\n§6Withered Barbed Wire§r (a wither skeleton skull) inflicts Wither V.\n\n§6Radioactive Barbed Wire§r is made later from yellowcake and nuclear waste: it deals 5 damage and irradiates everything caught in it.\n\nA double ring of wire around your base buys you the seconds you need to grab a gun.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -83,6 +83,48 @@
         }
       },
       "taskID:8": "bq_standard:retrieval"
+    },
+    "1:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 1,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.barbed_wire_fire"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.barbed_wire_poison"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.barbed_wire_acid"
+        },
+        "3:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.barbed_wire_wither"
+        },
+        "4:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.barbed_wire_ultradeath"
+        }
+      },
+      "taskID:8": "bq_standard:optional_retrieval"
     }
   }
 }
