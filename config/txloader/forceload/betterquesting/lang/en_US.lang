@@ -1304,6 +1304,66 @@ betterquesting.quest.y2yrIQ6QRve-p9fRVJD0YA.desc=The §3Rocket Transporter Stati
 betterquesting.quest.yWu2LtytQjGg65tFXTo2ow.name=Moho
 betterquesting.quest.yWu2LtytQjGg65tFXTo2ow.desc=A fair-dinkum planet, hot as hell, and full of rare resources generally only found in the Nether. §6Australium§r is only found here, in vast quantities deep under the surface. Some of the largest caves ever generated within Minecraft can be found here.
 
+# Quest: Rocket Stage Design
+betterquesting.quest.klRSms4cRjaCXsBqz3fMRw.name=Rocket Stage Design
+betterquesting.quest.klRSms4cRjaCXsBqz3fMRw.desc=Every stage in the Vehicle Assembly Base is a §6fuel tank§r with a §6thruster§r under it. A few rules decide whether it flies:%n%n- A stage cannot have more thrusters than tanks, and the tank count must divide evenly between the thrusters.%n- The engine and the tank must use the same fuel. Only space-grade tanks accept any fuel.%n- Every stage above the first needs §6Landing Legs§r. A rocket that lands on a stage without legs topples over and explodes.%n- A rocket has at most 5 stages, and the payload on top must be a crewed capsule or a station core.%n%nThrust has to lift the whole rocket, and the specific impulse (ISP) decides how much fuel the trip takes. The assembly screen shows both, together with the fuel needed for the selected trip.
+
+# Quest: Space-Grade Fuel Tanks
+betterquesting.quest.hF99cqJWR2imXRMMgL-SUg.name=Space-Grade Fuel Tanks
+betterquesting.quest.hF99cqJWR2imXRMMgL-SUg.desc=Size 20 tanks come in four lengths - 1, 3, 6 and 12 meters - holding 6,000, 16,000, 32,000 and 64,000 mB of fuel, plus as much oxidizer if the engine needs one. They accept §6any fuel§r, so one tank design works with every engine.%n%nThe Assembly Machine builds them from titanium shells and welded aluminium. Once you have stainless steel, the Arc Welder makes each length from the previous one with welded stainless steel, which is much cheaper.
+
+# Quest: Landing Legs
+betterquesting.quest.S_ByYThqQB-o9O-sgarv7w.name=Landing Legs
+betterquesting.quest.S_ByYThqQB-o9O-sgarv7w.desc=The first stage only has to get off the ground. Every stage after it ends its trip on the surface of another world, and a rocket that touches down without §6Landing Legs§r tips over and explodes. The assembly screen warns you about every stage that is missing them.
+
+# Quest: Kerosene Engines
+betterquesting.quest.XiZkglLlSCO9Px7x4coeww.name=Kerosene Engines
+betterquesting.quest.XiZkglLlSCO9Px7x4coeww.desc=The first engines you can build burn §6kerosene§r with §6hydrogen peroxide§r as the oxidizer. They have the highest thrust of the liquid engines with a decent specific impulse of 308, which makes them good first stages.%n%nDual and triple versions of the size 20 engine give more thrust in one part, at a higher mass.
+
+# Quest: Methalox Engines
+betterquesting.quest.wGzebJ4GQHakj2Cj19Kvuw.name=Methalox Engines
+betterquesting.quest.wGzebJ4GQHakj2Cj19Kvuw.desc=Methalox engines burn §6natural gas§r with §6liquid oxygen§r. They have less thrust than kerosene engines but a better ISP of 320, so they need less fuel for the same trip - and natural gas is easy to come by.
+
+# Quest: Hydrogen Engines
+betterquesting.quest.bgWkrfy7Sq2SoKUWbzCkSQ.name=Hydrogen Engines
+betterquesting.quest.bgWkrfy7Sq2SoKUWbzCkSQ.desc=Hydrogen and liquid oxygen give the best ISP of all chemical engines - 380 - but the lowest thrust. Saturnite combustion chambers are needed to handle it.%n%nUse them where efficiency matters more than raw power: upper stages and long transfers between worlds.
+
+# Quest: Solid Fuel Engines
+betterquesting.quest.Kxl--JsASrueoQz37h0_EQ.name=Solid Fuel Engines
+betterquesting.quest.Kxl--JsASrueoQz37h0_EQ.desc=Solid fuel engines do not use fluids. The launch pad loads them with §6Solid Fuel (Rocket Propellant)§r, made in the Chemical Plant from solid fuel, petroleum gas and nitric acid.%n%nThey deliver huge thrust, but with an ISP of only 195 they burn through fuel quickly. That makes them ideal boosters for a heavy first stage and poor engines for anything after it.
+
+# Quest: Xenon Ion Engine
+betterquesting.quest.t30B2pq2Sw6rLpMvnrFtGw.name=Xenon Ion Engine
+betterquesting.quest.t30B2pq2Sw6rLpMvnrFtGw.desc=The ion engine runs on §6xenon gas§r alone, which comes from cryogenically distilling Neidon air. Its ISP of 4200 is more than ten times that of any chemical engine, but its thrust is tiny.%n%nIt cannot lift anything off a surface. Its place is on a light final stage, where it makes long journeys almost free.
+
+# Quest: Balefire Engines
+betterquesting.quest.-8kUKsfDSa-wcZVHOv7icA.name=Balefire Engines
+betterquesting.quest.-8kUKsfDSa-wcZVHOv7icA.desc=Balefire engines burn §6BF rocket fuel§r with hydrogen peroxide, heated further by a nuclear core built from PWR fuel rods. At only size 15 they come close to the thrust of a size 20 kerosene engine, with an ISP of 666.%n%nThe three lengths trade mass for thrust. Only the ion engine is more efficient.
+
+# Quest: Orbital Station Launching Port
+betterquesting.quest.vhBmjN7xSTCNkIE5f2z2dA.name=Orbital Station Launching Port
+betterquesting.quest.vhBmjN7xSTCNkIE5f2z2dA.desc=The §3Orbital Station Launching Port§r assembles and launches rockets directly from your station. A rocket that starts in orbit does not have to fight a planet's gravity first, so the same trip takes far less fuel than from the ground.
+
+# Quest: Air Vents and Airlocks
+betterquesting.quest.qRMJT0bHT4STCpZziZR-bQ.name=Air Vents and Airlocks
+betterquesting.quest.qRMJT0bHT4STCpZziZR-bQ.desc=An §3Air Vent§r fills a sealed room with breathable air from its oxygen tank - one mB per block of volume - and then keeps topping it up. The used air is passed to a CO2 scrubber if one is in the room.%n%nThe room must be completely sealed. Use the §6Round Airlock Door§r for entrances, and build an airlock chamber so that opening the door does not vent the whole base.
+
+# Quest: Atmospheric Emitter
+betterquesting.quest.uIV-JMIhSRCI6MKXJ7OOfA.name=Atmospheric Emitter
+betterquesting.quest.uIV-JMIhSRCI6MKXJ7OOfA.desc=The §3Atmospheric Emitter§r releases any gas into the open air of the world it stands on, spending 10 HE per mB. Set the gas with a fluid identifier and check the result with the atmospheric scanner - it is the small-scale way to change a planet's atmosphere.%n%n§cDo not feed it antimatter.§r
+
+# Quest: HTR-F4 NEO Station Thruster
+betterquesting.quest.OWiGEgujRL2pSgR4bZ0Reg.name=HTR-F4 NEO Station Thruster
+betterquesting.quest.OWiGEgujRL2pSgR4bZ0Reg.desc=The strongest station thruster does not burn fuel at all. Connect it to a running §3Fusion Reactor§r torus on your station, and the plasma provides the thrust.
+
+# Quest: Dyson Heat Converter
+betterquesting.quest.Iegeo70qTSOovCnu9g7e9Q.name=Dyson Heat Converter
+betterquesting.quest.Iegeo70qTSOovCnu9g7e9Q.desc=Instead of electricity, the §3Dyson Heat Converter§r turns the beam from a Dyson Receiver into heat (TU). Place heat-powered machines on it to run them directly on star power.
+
+# Quest: Tektonic Crude
+betterquesting.quest.tYbpy8NJTYuFmTJiZccDlQ.name=Tektonic Crude
+betterquesting.quest.tYbpy8NJTYuFmTJiZccDlQ.desc=Oil deposits on Tekto hold §6Tektonic Crude§r instead of normal oil, and its gas deposits hold halide gas. A derrick pumps it like any oil.%n%nThe Vacuum Refinery splits tektonic crude into halogenated light oil, chloromethane, hydrochloric acid and halide gas - a chlorine-rich product line that normal oil cannot give you.
+
 
 ## Quest Line: LV4 - End Game
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAw.name=LV4 - End Game

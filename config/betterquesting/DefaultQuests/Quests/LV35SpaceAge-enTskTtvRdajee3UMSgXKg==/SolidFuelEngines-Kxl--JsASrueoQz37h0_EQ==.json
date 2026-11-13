@@ -1,0 +1,148 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": -7902600621291977162,
+      "questIDLow:4": -9052586635988317113
+    },
+    "1:10": {
+      "questIDHigh:4": 0,
+      "questIDLow:4": 37
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "completion_animation:8": "default",
+      "completion_particle:8": "default",
+      "confetti_icon:10": {
+        "Count:3": 0,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "minecraft:stick"
+      },
+      "countAsQuest:1": 1,
+      "desc:8": "Solid fuel engines do not use fluids. The launch pad loads them with §6Solid Fuel (Rocket Propellant)§r, made in the Chemical Plant from solid fuel, petroleum gas and nitric acid.\n\nThey deliver huge thrust, but with an ISP of only 195 they burn through fuel quickly. That makes them ideal boosters for a heavy first stage and poor engines for anything after it.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:item.mp_thruster_20_solid"
+      },
+      "isMain:1": 0,
+      "isSilent:1": 0,
+      "is_final:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Solid Fuel Engines",
+      "notification_duration:5": -1.0,
+      "notification_effect:3": -1,
+      "notification_fade_in:5": -1.0,
+      "notification_fade_out:5": -1.0,
+      "notification_icon_offset_y:3": -2147483648,
+      "notification_icon_scale:5": -1.0,
+      "notification_pos_x:3": -2147483648,
+      "notification_pos_y:3": -2147483648,
+      "notification_show_icon:8": "default",
+      "notification_style:8": "default",
+      "notification_subtitle:8": "",
+      "notification_subtitle_scale:5": -1.0,
+      "notification_title:8": "",
+      "notification_title_scale:5": -1.0,
+      "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": 3105653024266144443,
+  "questIDLow:4": -7016312485475172591,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 0,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.mp_thruster_20_solid"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.mp_thruster_20_solid_multi"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.mp_thruster_20_solid_multier"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "1:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 1,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.rocket_fuel"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "2:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 2,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.mp_thruster_15_solid"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.mp_thruster_15_solid_hexdecuple"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.mp_thruster_10_solid"
+        }
+      },
+      "taskID:8": "bq_standard:optional_retrieval"
+    }
+  }
+}
