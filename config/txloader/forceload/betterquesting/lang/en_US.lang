@@ -710,6 +710,10 @@ betterquesting.quest.VvJYIAi2T2mSpxNnJAr8_A.desc=The smelter upgrade can be rebu
 betterquesting.quest.689AwMYdQ0euKTXEhExyLw.name=Emitter Upgrades
 betterquesting.quest.689AwMYdQ0euKTXEhExyLw.desc=The §6Emitter Radius§r and §6Emitter Health§r upgrades are soldered from microchips and capacitors. They are used by emitter machines like the forcefield emitter to cover a larger area and to absorb more damage.
 
+# Quest: Meteorite Metal
+betterquesting.quest.KSqXQ1jmSZ2W9QeP0P7GNg.name=Meteorite Metal
+betterquesting.quest.KSqXQ1jmSZ2W9QeP0P7GNg.desc=Meteorites fall from the sky and leave craters of meteorite blocks. Shred them into §6Meteorite Powder§r and smelt it with cobalt in the Blast Furnace to get §6Meteorite Ingots§r - the material behind starmetal and decorated cobalt tools.%n%nMeteorite ingots come out hot. On a desh anvil, two hot ingots are smithed into a §6Forged Meteorite Ingot§r, and two hot forged ingots into a §6Meteorite Blade§r.
+
 
 ## Quest Line: LV3 - Reactors Age
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAg.name=LV3 - Reactors Age
@@ -1093,7 +1097,7 @@ betterquesting.quest.mx-MZSYXTemFnu1FrsW6Zg.desc=§6Overdrive§r upgrades are bu
 
 # Quest: Cobalt Gear
 betterquesting.quest.gAxXLf12Qv2aaWyHk3xDBg.name=Cobalt Gear
-betterquesting.quest.gAxXLf12Qv2aaWyHk3xDBg.desc=Cobalt tools have stronger abilities than steel ones. Smithing them on the anvil with blocks of cobalt turns them into §6Decorated Cobalt§r tools, which are better still and are the base for starmetal tools.%n%n§6Cobalt Armor§r is steel armor reinforced with cobalt billets and is likewise the base for starmetal armor.
+betterquesting.quest.gAxXLf12Qv2aaWyHk3xDBg.desc=Cobalt tools have stronger abilities than steel ones. Heat a cobalt tool and smith it with a §6Meteorite Ingot§r on a desh anvil to get its §6Decorated Cobalt§r version, which is better still and is the base for starmetal tools.%n%n§6Cobalt Armor§r is steel armor reinforced with cobalt billets and is likewise the base for starmetal armor.
 
 # Quest: Starmetal Gear
 betterquesting.quest.MEYINQuMSDO32fiIVOdL1A.name=Starmetal Gear
@@ -1106,6 +1110,10 @@ betterquesting.quest.UmfCgE6mQjemH_KsZl_UuA.desc=CMB Steel is one of the toughes
 # Quest: Schrabidium Gear
 betterquesting.quest.ImJAgHWbSfG-bw4scSQjhw.name=Schrabidium Gear
 betterquesting.quest.ImJAgHWbSfG-bw4scSQjhw.desc=Schrabidium tools are built on desh tools, schrabidium and plastic, and have the strongest abilities of any regular tool set. Schrabidium armor goes on top of starmetal armor and also needs ionized particles from fusion. A full set grants strong effects - but it is also radioactive.
+
+# Quest: FEL Laser Crystals
+betterquesting.quest.5_KLTUedQvi2RktZhFVJuA.name=FEL Laser Crystals
+betterquesting.quest.5_KLTUedQvi2RktZhFVJuA.desc=The crystal in the FEL decides the laser's wavelength, and every SILEX recipe needs a minimum wavelength: infrared, visible, ultraviolet, X-ray, gamma and finally digamma. A stronger laser also runs weaker recipes much faster.%n%n§6Bismuth§r (visible) - uranium, thorium-232, bismuth and a rare earth crystal.%n§6Iron-Arsenide§r (X-ray) - gallium arsenide and iron crystals.%n§6CMB-Schrabidate§r (ultraviolet) - CMB steel, ferric schrabidate and an anti-schrabidium cell.
 
 
 ## Quest Line: LV3.5 - Space Age
@@ -1528,6 +1536,46 @@ betterquesting.quest.q0Q4S7F-QlCzGWDkdOBMqw.desc=The Martian Invasion Ship is a 
 # Quest: Welded Osmiridium Plate
 betterquesting.quest.xYmNHPDAQkSwXHOow8--4g.name=Welded Osmiridium Plate
 betterquesting.quest.xYmNHPDAQkSwXHOow8--4g.desc=§6Welded Osmiridium Plates§r cost 300 Billion §eHE§r to produce, so good energy generation and storage infrastructure is needed.
+
+# Quest: Ion Capsules
+betterquesting.quest.8OQg6nWaSKuAAIR6Wt9NDw.name=Ion Capsules
+betterquesting.quest.8OQg6nWaSKuAAIR6Wt9NDw.desc=Every collision starts with ions. §6Empty Particle Capsules§r are made from cast lead plates, gold coils and glass.%n%n§6Hydrogen Ion Capsules§r are filled like a fluid container, with 1,000 mB of hydrogen. §6Copper§r and §6Lead Ion Capsules§r are crafted from an empty capsule, the metal's dust and ionized particles.
+
+# Quest: Antimatter Capsules
+betterquesting.quest.Sospn1o9QPKjhBQFJga5ug.name=Antimatter Capsules
+betterquesting.quest.Sospn1o9QPKjhBQFJga5ug.desc=Colliding hydrogen and copper ions at a momentum of 300 gives an §6Antimatter Capsule§r - the easiest collision in the accelerator. Two antimatter capsules at 400 make §6Antischrabidium§r.
+
+# Quest: Muon Capsule
+betterquesting.quest.FtYfwsavTUm-xnncSumr2w.name=Muon Capsule
+betterquesting.quest.FtYfwsavTUm-xnncSumr2w.desc=Hydrogen ions against antimatter at a momentum of 2,500 produce §6Muons§r. Applied to an ICF fuel pellet, a muon lowers the laser power the pellet needs to ignite.
+
+# Quest: Higgs Boson Capsule
+betterquesting.quest.-veb1BArRXCDf16eEPwiMg.name=Higgs Boson Capsule
+betterquesting.quest.-veb1BArRXCDf16eEPwiMg.desc=Hydrogen against lead ions at a momentum of 6,500. In the §3Exposure Chamber§r, the §6Higgs Boson§r turns uranium ingots into schraranium and uranium-238 ingots into schrabidium.
+
+# Quest: Dark Matter Capsule
+betterquesting.quest.VSP5jYe9RDCm_1wK74ny1g.name=Dark Matter Capsule
+betterquesting.quest.VSP5jYe9RDCm_1wK74ny1g.desc=Two antischrabidium capsules at a momentum of 10,000 give §6Dark Matter§r. Its main use is the Exposure Chamber, where it turns plutonium ingots into §6euphemium§r.
+
+# Quest: Tachyon Capsule
+betterquesting.quest.5di7qgh7SGeOQV_MgO5WEg.name=Tachyon Capsule
+betterquesting.quest.5di7qgh7SGeOQV_MgO5WEg.desc=Muons against Higgs bosons at a momentum of 5,000 produce §6Tachyons§r. On the Murky Anvil, a tachyon turns limp wings into §6Murky Wings§r.
+
+# Quest: Strange Quark Capsule
+betterquesting.quest.TAA5pD3nQtG8acE_UYCf3g.name=Strange Quark Capsule
+betterquesting.quest.TAA5pD3nQtG8acE_UYCf3g.desc=Muons against dark matter at a momentum of 12,500 produce §6Strange Quarks§r. They are the next step towards the sparkticle, and with tungsten dust and a crystal horn they grow a crystal virus.
+
+# Quest: Sparkticle Capsule
+betterquesting.quest.4YkuEIBMSD63TGr8fZfnjw.name=Sparkticle Capsule
+betterquesting.quest.4YkuEIBMSD63TGr8fZfnjw.desc=A strange quark smashed into magic powder at a momentum of 12,500 becomes a §6Sparkticle§r. In the Exposure Chamber it turns ferric schrabidate into §6dineutronium§r, and it is part of the DNT armor plating.%n%nCollide it with a Higgs boson at 70,000 and you get the digamma particle.
+
+# Quest: DFC Catalysts
+betterquesting.quest.TDprpiPrRUOaFnW8JLtmXg.name=DFC Catalysts
+betterquesting.quest.TDprpiPrRUOaFnW8JLtmXg.desc=A blank catalyst is filled with a material and runes. The two catalysts in the core decide how the DFC behaves, and they fall into three groups:%n%n§6Copper, Beryllium, Cobalt, Lithium, Tungsten§r - +25% power.%n§6Aluminium, Cerium, Iron, Niobium, Strontium§r - +15% power and a flat power bonus.%n§6Caesium, Dineutronium, Euphemium, Schrabidium, Thorium§r - no multiplier, but the largest flat bonus.%n%nMost of them also trade heat for fuel use or the other way around - check the tooltip and pair them so the core stays stable.
+
+# Quest: Singularities
+betterquesting.quest.SODWeSyJSb-vxvL9SdGcrQ.name=Singularities
+betterquesting.quest.SODWeSyJSb-vxvL9SdGcrQ.desc=A §6Singularity§r is made from euphemium, schrabidium-326 and an anti-schrabidium cell. Wrapped in CMB steel and magnetized tungsten it becomes a §6Counter-Resonant Singularity§r; with saturnite and power powder, a §6Superheated Resonating Singularity§r. All types together are needed for the spark singularity.%n%nSurrounded by §6Artificial Xen Crystals§r, a singularity becomes a §6Miniature Black Hole§r - the payload of the black hole missile.
 
 
 ## Quest Line: Tips and Tricks
@@ -1955,6 +2003,34 @@ betterquesting.quest.koiSMnGxTh--XkYKz5V4ww.desc=§6Manual Target Designator§r 
 # Quest: Large Radar
 betterquesting.quest.QNMeMYVYTBKCgfnEttNS7A.name=Large Radar
 betterquesting.quest.QNMeMYVYTBKCgfnEttNS7A.desc=The §3Large Radar§r works like the regular radar, but covers a much larger area. It is built from technetium or cadmium steel, magnetrons and a desh motor.
+
+# Quest: Meteorite Sword
+betterquesting.quest.jnm2B5uCQmywtlowulKOJA.name=Meteorite Sword
+betterquesting.quest.jnm2B5uCQmywtlowulKOJA.desc=A meteorite blade on a gold-plated hilt makes the §6Meteorite Sword§r, and it can be improved step by step:%n%n§6Seared§r - heated in a furnace.%n§6Reforged§r - the hot sword smithed with a forged meteorite ingot on a desh anvil.%n§6Hardened§r - pressed with a flat stamp.%n§6Alloyed§r - smelted with cobalt in the Blast Furnace.
+
+# Quest: Steel Ranger Power Armor
+betterquesting.quest.HLxQVqj-Q6yLo4DWXsDtEA.name=Steel Ranger Power Armor
+betterquesting.quest.HLxQVqj-Q6yLo4DWXsDtEA.desc=The next power armor after the T-51b. Its §6Iron-Shod Armor Plating§r is smithed on a desh anvil, and the pieces are assembled with titanium armor, an M65 gas mask and integrated circuits.%n%nA powered, sealed suit with 95% radiation resistance, a Geiger counter, V.A.T.S. and strength and jump boosts. Dye it red and black for the §6AJR§r paint scheme.
+
+# Quest: Remnants Power Armor
+betterquesting.quest.YBMp_N7iTLeKt5htR1GVaQ.name=Remnants Power Armor
+betterquesting.quest.YBMp_N7iTLeKt5htR1GVaQ.desc=The Remnants armor is built on CMB gear with saturnite, a military grade circuit and §6Legendary Parts§r. Legendary parts are crafted from §6Heavy Chainsteel§r (smithed hot on a desh anvil) and rare §6Alexandrite§r gems.%n%nIt gives 99% radiation resistance and a strong strength boost.
+
+# Quest: Lunar Cybernetic Armor
+betterquesting.quest.iHD-hU2bSL-Jb3J86U6IsQ.name=Lunar Cybernetic Armor
+betterquesting.quest.iHD-hU2bSL-Jb3J86U6IsQ.desc=Starmetal and §6Lunar Plating§r make a powered suit that gives speed, jump, saturation and Rad-X effects. Add titanium fins and a tank of xenon to the plating for the §6Winged§r version, which can fly.%n%nThe lunar helmet and winged plating are also the base of the DNT nanosuit.
+
+# Quest: Fau Armor
+betterquesting.quest.ll0_WmvMS2Spdwi5OhCLWQ.name=Fau Armor
+betterquesting.quest.ll0_WmvMS2Spdwi5OhCLWQ.desc=§6Fau Armor Plating§r is smithed on a tier 6 anvil from forged meteorite ingots, desh and yharonite, and fitted onto starmetal armor. The powered suit has thermal sight and 99.99% radiation resistance.%n%nIts plating is also needed for the DNT armor plating.
+
+# Quest: Euphemium Armor
+betterquesting.quest.HkMlbNXuTVeBUXF_GjWhFg.name=Euphemium Armor
+betterquesting.quest.HkMlbNXuTVeBUXF_GjWhFg.desc=§6Euphemium Compound Plates§r come from the Plasma Forge, made with euphemium and astatine. A full set grants maximum regeneration, resistance, fire resistance and saturation, and slows every fall - practically nothing can hurt its wearer.
+
+# Quest: Penance and Subtlety
+betterquesting.quest.SL0sIt-ET-6NyPswe4S49g.name=Penance and Subtlety
+betterquesting.quest.SL0sIt-ET-6NyPswe4S49g.desc=Two special versions of the anti-materiel rifle are made on §6Pedestals§r: place the rifle on a central pedestal and the other ingredients on the eight pedestals around it. Pedestals cannot be crafted - they are found in secret dungeon rooms.%n%n§6Subtlety§r - starmetal and cast aluminium plates.%n§6Penance§r - starmetal, cast high-speed steel plates, a silencer and black furniture.
 
 
 ## Quest Line: Building and Decorating
