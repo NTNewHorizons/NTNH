@@ -1,9 +1,14 @@
-name = "bdlib-1.11.0-GTNH"
-filename = "bdlib-1.11.0-GTNH.jar"
+name = "bdlib-1.11.1-GTNH"
+filename = "bdlib-1.11.1-GTNH.jar"
 side = "both"
 pin = true
 
 [download]
 hash-format = "sha256"
-hash = "130e6e88b8a3340a7518eef3ba313877b7a08149693980fa10c5d8b4f9da3095"
-url = "https://github.com/GTNewHorizons/bdlib/releases/download/1.11.0-GTNH/bdlib-1.11.0-GTNH.jar"
+hash = "67d5a01ad7595b4e8ccff7d264f0ae1b53a0902181f097af022e5c7d0e609c8c"
+url = "https://github.com/GTNewHorizons/bdlib/releases/download/1.11.1-GTNH/bdlib-1.11.1-GTNH.jar"
+
+[update.github]
+slug = "GTNewHorizons/bdlib"
+tag = "1.11.1-GTNH"
+regex = "^bdlib\\-.+\\.jar$"

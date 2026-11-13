@@ -1,9 +1,14 @@
-name = "duradisplay-1.4.6"
-filename = "duradisplay-1.4.6.jar"
+name = "duradisplay-1.4.7"
+filename = "duradisplay-1.4.7.jar"
 side = "client"
 pin = true
 
 [download]
 hash-format = "sha256"
-hash = "3da716c3a88e1a18fd9d128cecbde091b56381c310776b9050c685e7e24d98ed"
-url = "https://github.com/GTNewHorizons/DuraDisplay/releases/download/1.4.6/duradisplay-1.4.6.jar"
+hash = "d9b9bdc02b932a107ad68dfb8eaa96abecd3e8e90302050a75a8567a71974781"
+url = "https://github.com/GTNewHorizons/DuraDisplay/releases/download/1.4.7/duradisplay-1.4.7.jar"
+
+[update.github]
+slug = "GTNewHorizons/DuraDisplay"
+tag = "1.4.7"
+regex = "^duradisplay\\-.+\\.jar$"

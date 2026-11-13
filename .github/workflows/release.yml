@@ -31,6 +31,7 @@ concurrency:
 
 permissions:
   contents: write
+  actions: write
 
 env:
   PACKWIZ_VERSION: ef87d964f8cbd52b3b13ea42453ef322290e2b9e
@@ -92,28 +93,23 @@ jobs:
             TITLE="${INPUT_RELEASE_NAME:-$VERSION}"
             RELEASE_TYPE="${INPUT_RELEASE_TYPE:-latest}"
           else
-            # release-published events fall back to fully default settings:
-            # tag/title come from pack.toml, marked as the latest release.
             TITLE="$VERSION"
             RELEASE_TYPE="latest"
           fi
 
-          # Git tag/ref names can't contain spaces or ~ ^ : ? * [ \, so the
-          # tag is a sanitized version of the title (spaces -> hyphens,
-          # disallowed characters stripped) while the title keeps whatever
-          # the user typed, e.g. title "2.15.0 B-1" -> tag "2.15.0-B-1".
           TAG="${TITLE// /-}"
           TAG="$(echo "$TAG" | tr -d '~^:?*[\\')"
 
           case "$RELEASE_TYPE" in
-            prerelease) EXTRA_FLAG="--prerelease" ;;
-            latest) EXTRA_FLAG="--latest" ;;
-            *) EXTRA_FLAG="" ;;
+            prerelease) EXTRA_FLAG="--prerelease"; PRERELEASE="true" ;;
+            latest) EXTRA_FLAG="--latest"; PRERELEASE="false" ;;
+            *) EXTRA_FLAG=""; PRERELEASE="false" ;;
           esac
 
           echo "tag=$TAG" >> "$GITHUB_OUTPUT"
           echo "title=$TITLE" >> "$GITHUB_OUTPUT"
           echo "extra_flag=$EXTRA_FLAG" >> "$GITHUB_OUTPUT"
+          echo "prerelease=$PRERELEASE" >> "$GITHUB_OUTPUT"
 
       - name: Set up Go
         uses: actions/setup-go@v5
@@ -123,10 +119,16 @@ jobs:
       - name: Install Packwiz
         run: go install github.com/packwiz/packwiz@${PACKWIZ_VERSION}
 
+      # build-packwiz.sh is the single entry point: it exports the
+      # CurseForge and Modrinth archives, prefixes overrides, builds the
+      # Native and MMC/Prism archives, and validates everything. Do NOT
+      # call package-release.py from here - that is already done inside
+      # the script, and calling it again on an already-prefixed archive
+      # makes every GTNH/NTNH override look missing.
       - name: Build release packages
-        run: |
-          python3 dev/test-package-release.py
-          ./build-packwiz.sh
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: ./build-packwiz.sh
 
       - name: Verify package names
         env:
@@ -182,3 +184,20 @@ jobs:
             --title "$TITLE" \
             --notes-file CHANGELOG.md \
             $EXTRA_FLAG
+
+      # Releases published with GITHUB_TOKEN do not emit a release event, so
+      # trigger the server sync explicitly. workflow_dispatch is exempt from
+      # GitHub's token recursion guard.
+      - name: Trigger server pack sync
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ steps.release_info.outputs.tag }}
+          TARGET: ${{ steps.target.outputs.branch }}
+          PRERELEASE: ${{ steps.release_info.outputs.prerelease }}
+        run: |
+          gh workflow run sync-server.yml \
+            --repo "$GITHUB_REPOSITORY" \
+            --ref "$TARGET" \
+            -f version="$TAG" \
+            -f ref="$TAG" \
+            -f prerelease="$PRERELEASE"

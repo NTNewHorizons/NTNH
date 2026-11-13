@@ -21,21 +21,22 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
 
 <h2 style="text-align:center">🌟 Our Amazing Contributors 🌟</h2>
 
-<table><tr><td align="center"><a href="https://github.com/Bufka2011"><img src="https://avatars.githubusercontent.com/u/85364803?v=4" width="50" alt="Bufka2011" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>Bufka2011</b></sub><br/><span>4089 🏆</span></td>
-<td align="center"><a href="https://github.com/BufkaSecond"><img src="https://avatars.githubusercontent.com/u/190631137?v=4" width="50" alt="BufkaSecond" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>BufkaSecond</b></sub><br/><span>451 🏆</span></td>
+<table><tr><td align="center"><a href="https://github.com/Bufka2011"><img src="https://avatars.githubusercontent.com/u/85364803?v=4" width="50" alt="Bufka2011" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>Bufka2011</b></sub><br/><span>4592 🏆</span></td>
+<td align="center"><a href="https://github.com/Rerserder"><img src="https://avatars.githubusercontent.com/u/251956539?v=4" width="50" alt="Rerserder" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>Rerserder</b></sub><br/><span>749 🏆</span></td>
+<td align="center"><a href="https://github.com/BufkaSecond"><img src="https://avatars.githubusercontent.com/u/190631137?v=4" width="50" alt="BufkaSecond" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>BufkaSecond</b></sub><br/><span>463 🏆</span></td>
+<td align="center"><a href="https://github.com/THOMASS47"><img src="https://avatars.githubusercontent.com/u/63131669?v=4" width="50" alt="THOMASS47" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>THOMASS47</b></sub><br/><span>93 🏆</span></td>
 <td align="center"><a href="https://github.com/AniviaFlome"><img src="https://avatars.githubusercontent.com/u/66728147?v=4" width="50" alt="AniviaFlome" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>AniviaFlome</b></sub><br/><span>92 🏆</span></td>
-<td align="center"><a href="https://github.com/THOMASS47"><img src="https://avatars.githubusercontent.com/u/63131669?v=4" width="50" alt="THOMASS47" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>THOMASS47</b></sub><br/><span>64 🏆</span></td>
-<td align="center"><a href="https://github.com/Rerserder"><img src="https://avatars.githubusercontent.com/u/251956539?v=4" width="50" alt="Rerserder" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>Rerserder</b></sub><br/><span>63 🏆</span></td>
 <td align="center"><a href="https://github.com/Rt194646"><img src="https://avatars.githubusercontent.com/u/209053148?v=4" width="50" alt="Rt194646" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>Rt194646</b></sub><br/><span>31 🏆</span></td>
 <td align="center"><a href="https://github.com/bocan225"><img src="https://avatars.githubusercontent.com/u/209335201?v=4" width="50" alt="bocan225" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>bocan225</b></sub><br/><span>20 🏆</span></td></tr>
-<tr><td align="center"><a href="https://github.com/actions-user"><img src="https://avatars.githubusercontent.com/u/65916846?v=4" width="50" alt="actions-user" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>actions-user</b></sub><br/><span>12 🏆</span></td>
+<tr><td align="center"><a href="https://github.com/Tony20494"><img src="https://avatars.githubusercontent.com/u/205044951?v=4" width="50" alt="Tony20494" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>Tony20494</b></sub><br/><span>20 🏆</span></td>
+<td align="center"><a href="https://github.com/actions-user"><img src="https://avatars.githubusercontent.com/u/65916846?v=4" width="50" alt="actions-user" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>actions-user</b></sub><br/><span>16 🏆</span></td>
 <td align="center"><a href="https://github.com/AxeleronPlay"><img src="https://avatars.githubusercontent.com/u/155234618?v=4" width="50" alt="AxeleronPlay" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>AxeleronPlay</b></sub><br/><span>8 🏆</span></td>
 <td align="center"><a href="https://github.com/Spagles"><img src="https://avatars.githubusercontent.com/u/106791090?v=4" width="50" alt="Spagles" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>Spagles</b></sub><br/><span>4 🏆</span></td>
 <td align="center"><a href="https://github.com/FOlkvangrField"><img src="https://avatars.githubusercontent.com/u/153828961?v=4" width="50" alt="FOlkvangrField" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>FOlkvangrField</b></sub><br/><span>3 🏆</span></td>
 <td align="center"><a href="https://github.com/intelcore13900k"><img src="https://avatars.githubusercontent.com/u/203885009?v=4" width="50" alt="intelcore13900k" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>intelcore13900k</b></sub><br/><span>2 🏆</span></td>
-<td align="center"><a href="https://github.com/Xekitan"><img src="https://avatars.githubusercontent.com/u/84423252?v=4" width="50" alt="Xekitan" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>Xekitan</b></sub><br/><span>2 🏆</span></td>
-<td align="center"><a href="https://github.com/ShamansJackal"><img src="https://avatars.githubusercontent.com/u/74203576?v=4" width="50" alt="ShamansJackal" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>ShamansJackal</b></sub><br/><span>1 🏆</span></td></tr>
-<tr><td align="center"><a href="https://github.com/MrHome655"><img src="https://avatars.githubusercontent.com/u/193831595?v=4" width="50" alt="MrHome655" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>MrHome655</b></sub><br/><span>1 🏆</span></td>
+<td align="center"><a href="https://github.com/Xekitan"><img src="https://avatars.githubusercontent.com/u/84423252?v=4" width="50" alt="Xekitan" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>Xekitan</b></sub><br/><span>2 🏆</span></td></tr>
+<tr><td align="center"><a href="https://github.com/ShamansJackal"><img src="https://avatars.githubusercontent.com/u/74203576?v=4" width="50" alt="ShamansJackal" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>ShamansJackal</b></sub><br/><span>1 🏆</span></td>
+<td align="center"><a href="https://github.com/MrHome655"><img src="https://avatars.githubusercontent.com/u/193831595?v=4" width="50" alt="MrHome655" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>MrHome655</b></sub><br/><span>1 🏆</span></td>
 <td align="center"><a href="https://github.com/AdUhTkJm"><img src="https://avatars.githubusercontent.com/u/30948580?v=4" width="50" alt="AdUhTkJm" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>AdUhTkJm</b></sub><br/><span>1 🏆</span></td>
 <td align="center"><a href="https://github.com/Zockernext"><img src="https://avatars.githubusercontent.com/u/113124644?v=4" width="50" alt="Zockernext" style="border-radius:50%;margin:5px;"/></a><br/><sub><b>Zockernext</b></sub><br/><span>1 🏆</span></td></tr></table>
 
@@ -54,21 +55,21 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
           <br />
           <sub><b>Bufka2011</b></sub></a>
         <br />
-        <sub><b>920346 words</b></sub>
+        <sub><b>944494 words</b></sub>
       </td>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/BufkaSecond"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/16895253/medium/0b29547a406506ea79d4bbd68608d6ed.png" />
           <br />
           <sub><b>BufkaSecond</b></sub></a>
         <br />
-        <sub><b>203803 words</b></sub>
+        <sub><b>209810 words</b></sub>
       </td>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/igrokkk_"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17943833/medium/212702a60357b1b0ca5a109a938a9013.jpg" />
           <br />
           <sub><b>igrokkk_</b></sub></a>
         <br />
-        <sub><b>37858 words</b></sub>
+        <sub><b>81482 words</b></sub>
       </td>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/GamerRabbit22"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17800493/medium/3dbe0ae2f49f1047180c8b2511069764.png" />
@@ -105,13 +106,22 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
     </tr>
     <tr>
       <td align="center" valign="top">
+        <a href="https://crowdin.com/profile/serafim719"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17949569/medium/4c717003cbae95950f884af95fe33ad9.jpeg" />
+          <br />
+          <sub><b>Зачем Вам</b></sub>
+          <br />
+          <sub><b>(serafim719)</b></sub></a>
+        <br />
+        <sub><b>15575 words</b></sub>
+      </td>
+      <td align="center" valign="top">
         <a href="https://crowdin.com/profile/imnotdonat1k"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/16737111/medium/39ec062e0d2078eb4fcd9feabf8c343f.jpg" />
           <br />
           <sub><b>donatik</b></sub>
           <br />
           <sub><b>(imnotdonat1k)</b></sub></a>
         <br />
-        <sub><b>5622 words</b></sub>
+        <sub><b>5727 words</b></sub>
       </td>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/AdUhTkJm"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17757327/medium/918854712a4e8aa172ca9a61537e7f26.png" />
@@ -150,6 +160,15 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
         <br />
         <sub><b>2352 words</b></sub>
       </td>
+    </tr>
+    <tr>
+      <td align="center" valign="top">
+        <a href="https://crowdin.com/profile/Tvonvan"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17644946/medium/3d92f36e97cbdfeff82ba88bf007d525.jpg" />
+          <br />
+          <sub><b>Tvonvan</b></sub></a>
+        <br />
+        <sub><b>1908 words</b></sub>
+      </td>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/Scumbrt"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17781689/medium/803ed2c55c1f11c1bbce3631395beea0.png" />
           <br />
@@ -157,8 +176,6 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
         <br />
         <sub><b>1765 words</b></sub>
       </td>
-    </tr>
-    <tr>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/chusatkovv"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17788095/medium/c6287fe1974b757ee1190d016c391e2b.png" />
           <br />
@@ -200,6 +217,8 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
         <br />
         <sub><b>1218 words</b></sub>
       </td>
+    </tr>
+    <tr>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/CommandNinja"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17833459/medium/f9a02e0a97ff98dd703fee1ed5949bda.png" />
           <br />
@@ -218,8 +237,6 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
         <br />
         <sub><b>1071 words</b></sub>
       </td>
-    </tr>
-    <tr>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/rooto"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17746689/medium/f3028a63bae2cb2744d5aabf7d1a0460.png" />
           <br />
@@ -246,13 +263,6 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
         <sub><b>868 words</b></sub>
       </td>
       <td align="center" valign="top">
-        <a href="https://crowdin.com/profile/Tvonvan"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17644946/medium/3d92f36e97cbdfeff82ba88bf007d525.jpg" />
-          <br />
-          <sub><b>Tvonvan</b></sub></a>
-        <br />
-        <sub><b>785 words</b></sub>
-      </td>
-      <td align="center" valign="top">
         <a href="https://crowdin.com/profile/Dorito64"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17661920/medium/57974a2732c0aa9e8be92407e026a8b5.gif" />
           <br />
           <sub><b>Dorito Loco</b></sub>
@@ -270,6 +280,8 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
         <br />
         <sub><b>759 words</b></sub>
       </td>
+    </tr>
+    <tr>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/Q-Cold"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17768555/medium/db0502d3deb1defd7d857d2244fe79a7.png" />
           <br />
@@ -279,8 +291,6 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
         <br />
         <sub><b>693 words</b></sub>
       </td>
-    </tr>
-    <tr>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/FOlkvangrField"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17559874/medium/8a8eba2951e60af080fab42d8d076c8a.png" />
           <br />
@@ -327,6 +337,8 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
         <br />
         <sub><b>547 words</b></sub>
       </td>
+    </tr>
+    <tr>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/fosterchild"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17924581/medium/3fceb5ab254e47d5f2653acbf5336a25.png" />
           <br />
@@ -334,8 +346,13 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
         <br />
         <sub><b>540 words</b></sub>
       </td>
-    </tr>
-    <tr>
+      <td align="center" valign="top">
+        <a href="https://crowdin.com/profile/andreglandi"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17961433/medium/7f0e8caaaa14374edf265385104b40bb_default.png" />
+          <br />
+          <sub><b>andreglandi</b></sub></a>
+        <br />
+        <sub><b>490 words</b></sub>
+      </td>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/Suciiiiii"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17798435/medium/9f9b771efa6800629c89413c5d197118.jpeg" />
           <br />
@@ -375,6 +392,8 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
         <br />
         <sub><b>284 words</b></sub>
       </td>
+    </tr>
+    <tr>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/Syks"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/15430690/medium/37828ce414bcd9335e2bcaa86c014930.jpeg" />
           <br />
@@ -391,8 +410,6 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
         <br />
         <sub><b>431 words</b></sub>
       </td>
-    </tr>
-    <tr>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/Alchar1"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/16070608/medium/4ebca41fad482e8b72c8133e31dc72d7_default.png" />
           <br />
@@ -432,32 +449,14 @@ Do not use a regular git clone. The history is over 2 GB and will bloat your dri
         <br />
         <sub><b>162 words</b></sub>
       </td>
+    </tr>
+    <tr>
       <td align="center" valign="top">
         <a href="https://crowdin.com/profile/LordJiriX"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/16932143/medium/f3c6cf61e0e32366d285cd2828100d41_default.png" />
           <br />
           <sub><b>LordJiriX</b></sub></a>
         <br />
         <sub><b>143 words</b></sub>
-      </td>
-      <td align="center" valign="top">
-        <a href="https://crowdin.com/profile/porbis-dev"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/17924105/medium/42897a540d79675542b91a5f589c4e7d.png" />
-          <br />
-          <sub><b>Fico</b></sub>
-          <br />
-          <sub><b>(porbis-dev)</b></sub></a>
-        <br />
-        <sub><b>127 words</b></sub>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" valign="top">
-        <a href="https://crowdin.com/profile/Alex6_"><img alt="logo" style="width: 50px" src="https://crowdin-static.cf-downloads.crowdin.com/avatar/14881780/medium/b951ed53df012b560385ee8b96e8af2d.jpg" />
-          <br />
-          <sub><b>Alex6</b></sub>
-          <br />
-          <sub><b>(Alex6_)</b></sub></a>
-        <br />
-        <sub><b>126 words</b></sub>
       </td>
     </tr>
   </tbody>
