@@ -49,6 +49,10 @@ betterquesting.quest.63Mkw5ZqT6iefbQvFZ_EDQ.desc=Welcome to the Stone Age. This 
 betterquesting.quest.6l98ozdcQFqJOan6BC4kMA.name=Nailed It!
 betterquesting.quest.6l98ozdcQFqJOan6BC4kMA.desc=The §6Hammer§r is a tool from §dEx Nihilo§r used to crush blocks down into finer forms. Its primary role is producing the materials needed for the §3Sieve§r: cobblestone is crushed into gravel, gravel into sand, and sand into dust, each of which can be sieved for different resources.%n%nTo use it, simply break a target block with the §6Hammer§r as you would with a pickaxe. Hammers come in the standard tool tiers -%nwood through diamond - and differ only in durability. They can be enchanted, though the available enchantments differ from those on a pickaxe.%n%nOres can also be hammered down through a multi-step crushing chain. Each step has a small chance to yield bonus%nmaterial, making the §6Hammer§r a basic form of ore multiplication before dedicated processing machines are available.%n%n§2Hammering can be automated with machines that simulate block breaking, such as the Auto Hammer from §dEx Compressum§r§2.%n§2Check NEI for the full crushing chain of any block.
 
+# Quest: Stimpaks
+betterquesting.quest.76oBlzp0Rbq4DfJd6s0N1A.name=Stimpaks
+betterquesting.quest.76oBlzp0Rbq4DfJd6s0N1A.desc=A §6Stimpak§r heals you instantly - a lifesaver when food regeneration is too slow.%n%nFirst craft §6Metal Syringes§r from an iron plate, iron bars and an empty rod made of steel and lead. Then fill a syringe with nether wart from your trip to the Nether. If you have no wart, three small nitra crystals or a carrot with a foxglove flower work as well.
+
 # Quest: Cable Network Analysis Tool
 betterquesting.quest.9FPuQxhjSHmPmrCwdfRZRw.name=Strumento per Analisi di Rete Cablata
 betterquesting.quest.9FPuQxhjSHmPmrCwdfRZRw.desc=Il §6Cable Network Analysis Tool§r (Strumento per Analisi di Rete Cablata) viene utilizzato per verificare l'integrità delle reti elettriche e analizzare i loro principali componenti funzionali. Per eseguire un test, con lo strumento in mano fai click destro sui cavi o sui macchinari della rete elettrica. Il dispositivo mostrerà i seguenti dati:%n%n§eLinks§r - includono cavi e meccanismi in grado di condurre energia (es. accumulatori di energia, pali della luce).%n%n§cProviders§r - tutti i meccanismi capaci di produrre energia e/o di immetterla nella rete (accumulatori in modalità "§averde§r" e "§6arancione§r", turbine, ecc.).%n%n§9Receivers§r - tutto ciò che assorbe energia dalla rete (accumulatori in modalità "§9blu§r", grinder e altri macchinari).%n%n§2L'analizzatore non solo mostra i componenti sopra citati, ma li conta anche. A ogni rete viene assegnato un codice univoco.%n%nLe particelle appaiono solo in un raggio di 20 blocchi!
@@ -71,11 +75,11 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAAw.desc=§3Anvils§r are a tiered craft
 
 # Quest: Burner Press
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAABA.name=Pressa a Bruciatore
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAABA.desc=The §3Presses§r are machines that can be used to make §6Plates§r, §6Wires§r, §6Circuits§r, §6Bullet Casings§r as well as §6Compressing§r non-smeltable powders back into their normal form. They require §6Stamps§r to work, which are converted from the basic §6Flat Stamp§r into plate or wire stamps using the template folder. The burner press burns solid fuel like coal to run.%n%n§2A preheater can be placed next to the Burner Press to increase its speed.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAABA.desc=The §3Presses§r are machines that can be used to make §6Plates§r, §6Wires§r, §6Circuits§r, §6Bullet Casings§r as well as §6Compressing§r non-smeltable powders back into their normal form. The burner press burns solid fuel like coal to run.%n%nEvery press operation needs a §6Stamp§r in the top slot. Stamps start out as §6Flat Stamps§r, which are turned into §6Plate§r, §6Wire§r or §6Circuit Stamps§r of the same material on an §3Anvil§r. Stone and iron stamps can be converted on the basic anvil, steel, titanium and obsidian stamps need the steel anvil.%n%nStamps lose durability with every use. Stone stamps break very quickly and are only worth it for your first few plates, iron stamps are the sensible starting point, and steel or obsidian stamps last much longer. Keep a spare stamp next to the press: a broken stamp silently stops an automated line.%n%n§2A preheater can be placed next to the Burner Press to increase its speed.
 
 # Quest: Blast Furnace
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAACQ.name=Altoforno
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAACQ.desc=The §3Blast Furnace§r is a furnace that only burns hot fuels like coal, coke or solid fuel, used to create different alloys out of two inputs. The main starter alloys are: §6Minecraft Grade Copper§r and §6Steel§r. Inserting §bHot Air Blast§r, made by putting §bCompressed Air§r in a §3Boiler§r, grants all recipes a §e3x§r boost.%n§bFlue Gas§r produced from operating the machine can be burnt for energy or vented into the atmosphere.%n%nSteel tools come equiped with vein mining, making them an excellent early-game tool.%n%n§2For more advanced tools later on, pressing the ALT key will bring up a menu from which one can select multiple abilities at once.§r
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAACQ.desc=The §3Blast Furnace§r is a furnace that only burns hot fuels like coal, coke or solid fuel, used to create different alloys out of two inputs. The main starter alloys are: §6Minecraft Grade Copper§r and §6Steel§r. Inserting §bHot Air Blast§r, made by putting §bCompressed Air§r in a §3Boiler§r, grants all recipes a §e3x§r boost.%n§bFlue Gas§r produced from operating the machine can be burnt for energy or vented into the atmosphere.
 
 # Quest: Trench Mask
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAADA.name=Maschera da Trincea
@@ -193,9 +197,17 @@ betterquesting.quest.Ba9zHp22SvGkBCr8xF5oQQ.desc=§3Barrels§r are storage block
 betterquesting.quest.CAGBwqHLQBStKodq03kwyw.name=Sieving
 betterquesting.quest.CAGBwqHLQBStKodq03kwyw.desc=The §3Sieve§r filters gravel, dirt, stone, and other blocks to yield useful material fragments - including iron, copper, lead, and more.%n%nUse §3Heavy Sieve§r with §6Compressed Blocks§r to get more fragments.%n%n§2Use NEI to list all possible drops.
 
+# Quest: Medicine Cabinet
+betterquesting.quest.CeJyIEqkTX29Ihgx2YbX7A.name=Medicine Cabinet
+betterquesting.quest.CeJyIEqkTX29Ihgx2YbX7A.desc=Once you have a shredder, coal, fluorite and asbestos can be turned into dust - and dust into medicine.%n%n§6Rad-X§r is crafted from coal and fluorite dust. Take it before entering a contaminated area: it reduces the radiation you absorb for a while. It does not remove radiation you already have.%n%n§6SiOX§r is made from coal dust, asbestos dust and a gold or bismuth nugget and treats both mesothelioma and black lung. §6Herbal Paste§r is the cheap early cure, but it comes with side effects.
+
 # Quest: Charm of Protection
 betterquesting.quest.D0bv2vfWSkK1soyqHDwqjQ.name=Amuleto di Protezione
 betterquesting.quest.D0bv2vfWSkK1soyqHDwqjQ.desc=Il §6Charm of Protection§r (Amuleto di Protezione) devia i meteoriti lontano dal giocatore e impedisce loro di distruggere i blocchi. Si raccomanda di ottenerne uno il prima possibile per evitare danni costosi in futuro.
+
+# Quest: Fluid Containers
+betterquesting.quest.EbKriLWHRO2GQinc1QU0FA.name=Fluid Containers
+betterquesting.quest.EbKriLWHRO2GQinc1QU0FA.desc=Buckets are not enough for NTM fluids. A §6Universal Fluid Tank§r holds 1,000 mB of any NTM fluid and is the standard way to move fluids by hand and to load them into machines. The §6Fluid Barrel§r holds 16,000 mB. §6Canisters§r are meant for liquid fuels.%n%nFor storage, place a §3Steel Barrel§r: it holds 16,000 mB, can be filled and emptied with containers or pipes, and accepts hot and corrosive fluids. Highly corrosive fluids eat through it, though, and turn it into a leaking §3Corroded Barrel§r.%n%nAll of them need aluminium plates, so you will want the combination oven running on cryolite first.
 
 # Quest: Diesel Generator
 betterquesting.quest.Eh_ylJU8TiiScjLN2_qmMA.name=Diesel Generator
@@ -209,9 +221,17 @@ betterquesting.quest.Ek7Xr3XfSm-U7BYuBOACSA.desc=The §3Wood-Burning Generator§
 betterquesting.quest.F5fyyqAZREWe-rhgYcbXZg.name=Flint Tools
 betterquesting.quest.F5fyyqAZREWe-rhgYcbXZg.desc=§6Flint Tools§r are required to obtain first wood and stone. Break some tree leaves and get saplings, to recraft them into sticks.%n%nAxes automatically break tree blocks from top to bottom to prevent floating trees. Hold Shift to disable this and break blocks normally.
 
+# Quest: Steel Gear
+betterquesting.quest.FJLvn9pXSNqN5V7wMa5EGg.name=Steel Gear
+betterquesting.quest.FJLvn9pXSNqN5V7wMa5EGg.desc=Your first steel should go into tools. NTM tools are more than a durability upgrade: they carry §6abilities§r. The steel pickaxe comes with §6Vein Miner§r, which breaks a whole connected ore vein at once. Right-click to cycle through the abilities of a tool, and shift-right-click to go back to the first one.%n%nLater tools have several abilities at the same time (silk touch, auto-smelting, shredding and more). Holding §6ALT§r opens a menu where you can combine them freely.%n%nSteel armor is a simple but solid upgrade over iron for the early game.
+
 # Quest: Steel Furnace
 betterquesting.quest.GOACXA8jRc-SMNzk2CsNUQ.name=Fornace in Acciao
 betterquesting.quest.GOACXA8jRc-SMNzk2CsNUQ.desc=La §3Steel Furnace§r (Fornace in Acciaio), a differenza delle altre fornaci, funziona a §eTU§r. Può processare fino a 3 oggetti contemporaneamente, ma ogni slot consuma ulteriori TU, il che la rende lenta senza una fonte di calore potente. Possiede inoltre un output bonus per minerali e legna: ogni oggetto fuso aggiunge il §e25%%§r alla barra del bonus, il che significa che ogni 4 oggetti ne otterrai un quinto gratis (§e+15 oggetti da un singolo stack§r).
+
+# Quest: Storage Crates
+betterquesting.quest.GqVnizZ6SZ63drxiAO5USg.name=Storage Crates
+betterquesting.quest.GqVnizZ6SZ63drxiAO5USg.desc=NTM crates have one big advantage over chests: when you break them, they keep their contents. Pick up a full crate and carry it to your new base in one inventory slot.%n%nThe §3Iron Crate§r has 36 slots, the §3Steel Crate§r 54. Larger crates follow later.%n%nBe careful with crates full of radioactive or hot items - their hazards still apply to you while you carry them.
 
 # Quest: Electric Furnace
 betterquesting.quest.HONUf7SQRl-jcf3BC5242A.name=Fornace Elettrica
@@ -257,6 +277,10 @@ betterquesting.quest.OlMZZGTaSz6VhzaeJdR6QQ.desc=The §3Charging Station§r will
 betterquesting.quest.RBJS7D2ATpq7GUingAewuQ.name=Nastro d'Imballaggio
 betterquesting.quest.RBJS7D2ATpq7GUingAewuQ.desc=Il §6Packing Tape§r (Nastro d'Imballaggio) permette di rompere e spostare i drawer senza che gli oggetti cadano tutti per terra.
 
+# Quest: Padlocks and Keys
+betterquesting.quest.SAnieueOQIe-pjfTZGvy6g.name=Padlocks and Keys
+betterquesting.quest.SAnieueOQIe-pjfTZGvy6g.desc=Safes in structures are locked - and you can lock your own containers too. Right-click a lockable container with a §6Padlock§r to lock it. Only a §6Key§r with the matching pin pattern opens it again, although a skilled thief with a screwdriver and bobby pins may still pick it.%n%nThe §6Rusty Padlock§r is the easiest to pick, the steel §6Padlock§r is considerably harder.%n%nThe §3Locksmith Table§r copies the pin pattern from the item in its first slot onto the key or padlock in the second, so you can make spare keys or a set of locks that all open with one key.
+
 # Quest: Depth Ores
 betterquesting.quest.Ss4wOkCPR6OsjwT8BQs1XA.name=Depth Ores
 betterquesting.quest.Ss4wOkCPR6OsjwT8BQs1XA.desc=§6Depth Ores§r are large ore deposits found at bedrock level. There are many types of deposits, most of them giving ore crystals which can be smelted for 3 ingots per. §3Mining Charges§r of any kind are required to extract the resources from the depth rock.%n%nTwo important resources found in depth deposits are §6Borax§r, which can later be put in an §3Arc Furnace§r or §3Acidizer§r to yield §6Boron§r used in reactors, and §6Zirconium§r which is used in reactor fuel rods.
@@ -269,9 +293,13 @@ betterquesting.quest.UKkcpXk3SEWHXLIVC5VTDg.desc=§6Cladding§r is one of the mo
 betterquesting.quest.VMLB88YjRb26RVJcRmvxeA.name=Ore Generation System
 betterquesting.quest.VMLB88YjRb26RVJcRmvxeA.desc=In §6NTNH§r, ore generation has been §ocompletely§r overhauled and is still receiving updates and fixes. If you don’t like it and/or find it too complicated, you have two options:%n1) Report it to us, the developers%n2) Disable the Custom Ore Generation mod and configure ore generation in hbm.cfg to your liking (ask for help with this on the Discord server)%n%n[warn]Important![/warn]%nThe old online Google Docs spreadsheet was DEPRECATED, use the one in the Guide Book.
 
+# Quest: Gas Mask
+betterquesting.quest.WrJLq7_bQi6KICt3AIlgWQ.name=Gas Mask
+betterquesting.quest.WrJLq7_bQi6KICt3AIlgWQ.desc=The trench mask was a start. A proper §6Gas Mask§r made from steel plates gives real protection against asbestos, coal dust and toxic gases - as long as a §6filter§r is installed. Right-click with a filter to insert it, and keep a few spares: filters wear out while they are protecting you.%n%nThe §6Leather Gas Mask§r is a cheaper alternative, and §6Protection Goggles§r shield your eyes from blinding flashes.
+
 # Quest: Dosimeter
 betterquesting.quest.X1wMtj-xQR6M4Qzm6Rk2vA.name=Dosimetro
-betterquesting.quest.X1wMtj-xQR6M4Qzm6Rk2vA.desc=The §6Dosimeter§r is an tool for detecting radiation and assessing radioactive contamination.%n%nIt is functionally similar to a §6Geiger Counter§r, but it collects much less data - only the general radiation contamination of the environment. Only a handheld version of the dosimeter is available. To obtain radiation information, right-click while holding the dosimeter.%n%nLike a counter, it makes a characteristic crackling sound when radiation is detected.%n%n§2The maximum radiation displayed is 3.6 RAD/S.%n%nNot great, not terrible.
+betterquesting.quest.X1wMtj-xQR6M4Qzm6Rk2vA.desc=The §6Dosimeter§r is a tool for detecting radiation and assessing radioactive contamination.%n%nIt is functionally similar to a §6Geiger Counter§r, but it collects much less data - only the general radiation contamination of the environment. Only a handheld version of the dosimeter is available. To obtain radiation information, right-click while holding the dosimeter.%n%nLike a counter, it makes a characteristic crackling sound when radiation is detected.%n%n§2The maximum radiation displayed is 3.6 RAD/S.%n%nNot great, not terrible.
 
 # Quest: Borax
 betterquesting.quest.X2y9x1t8TU2ou8QN6k-24g.name=Borax
@@ -284,6 +312,10 @@ betterquesting.quest.XNHsXFGWTvW9dhuen9iEFg.desc=The §3Radial Performance Engin
 # Quest: Hazards
 betterquesting.quest.Zd1HNIsxSRees_4of0ezDw.name=Hazards
 betterquesting.quest.Zd1HNIsxSRees_4of0ezDw.desc=This mod adds several environmental hazards that will kill you if ignored.%n%n§6Radiation§r is measured in RAD. Effects begin at §e200 RAD§r and worsen steadily - instant death occurs at §c1000 RAD§r. Use a §6Geiger Counter§r to monitor your dose. Radiation-resistant armor and §6Rad-X§r reduce incoming RAD; a §3Player Decontaminator§r or §6Antirads§r remove accumulated dose.%n%n§lMesothelioma§r develops from asbestos exposure. Items tagged §c[Contains Asbestos]§r and certain blocks like Chrysotile release asbestos particles. Progresses to death if untreated.%n%n§lBlack Lung§r develops from coal dust exposure. Mining coal ore and carrying items tagged §c[Coal Dust]§r are the main sources. Also fatal.%n%nA gas mask protects against both mesothelioma and black lung simultaneously. Both diseases are cured by §6SIOX Cancer Medication§r or, early-game, §6Herbal Paste§r - the latter being weaker and carrying side effects.
+
+# Quest: Machine Upgrades
+betterquesting.quest._WjoAoCaRfixI1YkRecbbA.name=Machine Upgrades
+betterquesting.quest._WjoAoCaRfixI1YkRecbbA.desc=The first upgrades are soldered from a template, vacuum tubes and a capacitor in the §3Soldering Station§r.%n%n§6Speed§r makes a machine work faster at the cost of more power. §6Power Saving§r lowers the power draw. §6Effectiveness§r increases the output or the range, depending on the machine. Hover over the upgrade slot of a machine to see which upgrades it accepts and what each level does.%n%nHigher levels (Mk.II and Mk.III) are made later in the Precision Assembler.%n%nThe §6Muffler§r is crafted from rubber or latex and wool. Shift-right-click a loud machine with it to silence it.
 
 # Quest: Stirling Sawmill
 betterquesting.quest._qJt02i4ST2iccmkHudKCg.name=Segheria Stirling
@@ -341,6 +373,10 @@ betterquesting.quest.k52bjd5MTbefEXwVh0HLiw.desc=This modpack makes it possible 
 betterquesting.quest.kdNKd7NDSPiURFtLonc50g.name=Oily Sand
 betterquesting.quest.kdNKd7NDSPiURFtLonc50g.desc=§6Oily Sand§r is a surface-level block that generates among normal sand, typically in deserts. It acts as a marker for §bBedrock Oil§r deposits directly beneath it - if you find it, there is oil underground.%n%nShred polluted blocks from fracking in a §3Shredder§r into §6oily scraps§r, then treat them with §bhigh-performance solvent§r in an §3Ore Acidizer§r to obtain §6Arsenic§r - a really important mid-game material.
 
+# Quest: Foundry Network
+betterquesting.quest.lYk_f5TfRQibVHlK-pUsIg.name=Foundry Network
+betterquesting.quest.lYk_f5TfRQibVHlK-pUsIg.desc=Pouring every mold directly under the crucible quickly becomes a mess. §3Foundry Channels§r, made from firebricks, carry molten metal sideways. They fill outlets and shallow molds first and pass the rest on to the next channel. Leftovers can be removed with a shovel.%n%nA §3Foundry Outlet§r pours the metal down into a mold or basin. Right-click it with scraps of a material to let only that material through, use a hand drill to invert the filter and a screwdriver to clear it. An empty-handed right-click toggles whether redstone opens or closes the outlet.%n%nThe §3Storage Basin§r buffers molten metal, and the §3Spill Outlet§r dumps unwanted material onto the ground as slag instead of letting it clog your crucible.
+
 # Quest: Highway To Hell
 betterquesting.quest.ljMurUJIT7OuwaBx_fb3EA.name=Highway To Hell
 betterquesting.quest.ljMurUJIT7OuwaBx_fb3EA.desc=§6The Nether§r is §c§lACTUALLY HOT§r causing your skin to burn.%n%n§6Fire Proximity Armor Set§r is essential for your first Nerther trip, as it protects you from burning fire.
@@ -380,6 +416,26 @@ betterquesting.quest.yfQ7hs9tTwSE5FpNCoeGAA.desc=§6Silkworms§r are items from 
 # Quest: Industrial Hemp & Mustard Willow
 betterquesting.quest.ztJLZeOsSq6hpRyKY55CDg.name=Canapa Industriale & Salice Senape
 betterquesting.quest.ztJLZeOsSq6hpRyKY55CDg.desc=Camminando per il mondo, puoi trovare un §6Mustard Willow§r (Salice Senape) su terra morta o su §6Oily Dirt§r (Terra Oleosa). Il salice in sé non ti servirà nell'immediato, ma è meglio raccoglierlo insieme al terreno sottostante.%n%nL'§6Industrial Hemp§r (Canapa Industriale) viene utilizzata per fabbricare corde, stringhe e biomassa.
+
+# Quest: Advanced Hazmat Suit
+betterquesting.quest.7-jaXVNtTausgOChundX0w.name=Advanced Hazmat Suit
+betterquesting.quest.7-jaXVNtTausgOChundX0w.desc=The basic hazmat suit will not be enough once you start handling enriched uranium and fallout. Combine hazmat cloth with redstone to get §6Advanced Hazmat Cloth§r and sew it into the §6Advanced Hazmat Suit§r, which blocks considerably more radiation.%n%nLike every suit, it only protects you fully when all four pieces are worn.
+
+# Quest: High-Performance Hazmat Suit
+betterquesting.quest.a0bouserRme9QTL62wzWmA.name=High-Performance Hazmat Suit
+betterquesting.quest.a0bouserRme9QTL62wzWmA.desc=Lining advanced hazmat cloth with lead and iron plates and rubber or latex gives §6Lead-Lined Hazmat Cloth§r. The §6High-Performance Hazmat Suit§r made from it offers the best radiation protection of all hazmat suits - the right choice for working around reactors and nuclear waste.
+
+# Quest: Gunmetal
+betterquesting.quest.Wb1-riYXTUOKjc7EBCAmTg.name=Gunmetal
+betterquesting.quest.Wb1-riYXTUOKjc7EBCAmTg.desc=§6Gunmetal§r is the first weapons-grade alloy. It is made in the §3Rotary Furnace§r from three copper ingots and one zinc ingot, which give four ingots of molten gunmetal to cast.%n%nEvery firearm is built around its §6mechanism§r, and the mechanism material decides the generation of the gun: §6Gunmetal§r for the first guns, §6Weapon Steel§r for the next generation and §6Saturnite§r for the most advanced ones.%n%nBarrels and receivers are cast from a second material that rises within each generation: steel, then high-speed steel, desh, weapon steel, ferrouranium, technetium or cadmium steel, and finally saturnite.
+
+# Quest: Fortune and Afterburner Upgrades
+betterquesting.quest.AQ3WryLxRB6gqxVD2_hNAg.name=Fortune and Afterburner Upgrades
+betterquesting.quest.AQ3WryLxRB6gqxVD2_hNAg.desc=Two more upgrades are soldered from vacuum tubes and capacitors. §6Fortune§r (which also needs niobium) increases the ore output of mining machines. §6Afterburner§r makes engines and turbines burn their fuel faster for a higher power output.%n%nLike the basic upgrades, higher levels are made later in the Precision Assembler.
+
+# Quest: Smelter Upgrade
+betterquesting.quest.QoZC41bBRIq_VXQUETg3rw.name=Smelter Upgrade
+betterquesting.quest.QoZC41bBRIq_VXQUETg3rw.desc=The §6Smelter Upgrade§r, made from copper plates, copper and tungsten coils and a template, smelts everything a mining machine digs up right away. It is also the first step of a chain: the shredder, centrifuge and crystallizer upgrades are each built on top of the previous one.
 
 
 ## Quest Line: LV2 - Oil Age
@@ -601,6 +657,62 @@ betterquesting.quest.xADm9gLETmCgiS3amOTUcQ.desc=§6Weapon steel§r is a steel a
 # Quest: Mining Laser
 betterquesting.quest.zYS6AlyFSuuMUErAJqPcTg.name=Mining Laser
 betterquesting.quest.zYS6AlyFSuuMUErAJqPcTg.desc=The §3Mining Laser§r is a laser drill which can be used to quickly dig large areas. It has a §e100 MHE§r internal power buffer and a 64,000mB internal §bCrude Oil§r buffer. Its default radius is 3, which can be increased by the use of an effectiveness upgrade. It can also be equiped with various upgrades to unlock new functions such as shredding or voiding.
+
+# Quest: Desh Tools
+betterquesting.quest.2K56fWcrSEWw2w8Zwg0Uag.name=Desh Tools
+betterquesting.quest.2K56fWcrSEWw2w8Zwg0Uag.desc=Desh tools never break. The §6Desh Sword§r, axe, shovel and hoe have no durability limit and strong abilities - one set will last you the rest of the game.%n%nThe §6Desh Screwdriver§r and §6Desh Hand Drill§r, made with plastic handles, are the unbreakable versions of the tools you use to configure machines, pick locks and work on the Chicago Pile.
+
+# Quest: Titanium Gear
+betterquesting.quest.UUkrjt9XQfq-9E5P06IfVg.name=Titanium Gear
+betterquesting.quest.UUkrjt9XQfq-9E5P06IfVg.desc=With a steady titanium supply from ilmenite, titanium tools and armor become affordable. They are more durable than steel, and titanium tools come with better abilities than the steel ones.
+
+# Quest: Desh Crate
+betterquesting.quest.4lMaTH3cQzqRgi3YSqPyCw.name=Desh Crate
+betterquesting.quest.4lMaTH3cQzqRgi3YSqPyCw.desc=Surround a steel crate with desh plates to upgrade it into a §3Desh Crate§r with 104 slots. The upgrade keeps everything that was already inside the crate.%n%nLike all NTM crates, it keeps its contents when broken.
+
+# Quest: Siren
+betterquesting.quest.56DAjjckQduwOCyFmtG1BA.name=Siren
+betterquesting.quest.56DAjjckQduwOCyFmtG1BA.desc=The §3Siren§r plays a warning over a huge area while it receives a redstone signal. Which sound it plays depends on the §6Siren Track§r inserted into it: air raid, nuclear alert, evacuation and many more.%n%nTracks are made on the anvil from a steel plate and a polymer plate. Hook the siren up to a geiger counter or a reactor and you will never miss a disaster again.
+
+# Quest: Electric Heater
+betterquesting.quest.y5X_GkG2QziXhOeMVtKCyA.name=Electric Heater
+betterquesting.quest.y5X_GkG2QziXhOeMVtKCyA.desc=The §3Electric Heater§r supplies heat to the machine above it, just like a firebox, but runs on electricity instead of fuel. Its heat output is adjustable in the GUI, and higher settings draw more power.%n%nIt makes heat-hungry machines like the crucible and the stirling engine independent from fuel logistics - and produces no pollution.
+
+# Quest: Tesla Coil
+betterquesting.quest.36xYKfDUSNq8HMCUWfk6tw.name=Tesla Coil
+betterquesting.quest.36xYKfDUSNq8HMCUWfk6tw.desc=The §3Tesla Coil§r is built on top of a transformer and zaps nearby mobs with arcs of electricity as long as it is powered. It is a simple, ammunition-free defense against glyphids - but it draws a lot of power and does not care who it hits.
+
+# Quest: Rubber Equipment
+betterquesting.quest.ZzLvPvslQRqxRD_r27DSuQ.name=Rubber Equipment
+betterquesting.quest.ZzLvPvslQRqxRD_r27DSuQ.desc=Real rubber opens up a few useful pieces of equipment. §6Flippers§r make you swim much faster. The §6M65-Z Gas Mask§r is a rubber gas mask that works with the same filters as the steel one.%n%nAn §6IV Bag§r can draw your own blood to store it as a §6Blood Bag§r, which you can use later to heal yourself.
+
+# Quest: Builder's Jetpack
+betterquesting.quest.29G7ZU9QSsOzQKTBCcpe9Q.name=Builder's Jetpack
+betterquesting.quest.29G7ZU9QSsOzQKTBCcpe9Q.desc=The §6Builder's Jetpack§r is an upgrade of the basic jetpack with high-speed steel and an integrated circuit. It can hover in place, which makes it ideal for building tall structures and multiblocks.
+
+# Quest: Steam Suit
+betterquesting.quest.pDSQqXoMTqyf-k8b2X1WjA.name=Steam Suit
+betterquesting.quest.pDSQqXoMTqyf-k8b2X1WjA.desc=The §6Steam Suit§r is the first powered armor: steel armor reinforced with desh and copper, with a steam tank built into the chestplate. It burns steam while worn to provide protection and movement bonuses. Refill it by right-clicking with a container of steam.
+
+# Quest: T-51b Power Armor
+betterquesting.quest.QPt3cE-2RDWXe44KCNXSOQ.name=T-51b Power Armor
+betterquesting.quest.QPt3cE-2RDWXe44KCNXSOQ.desc=The §6T-51b§r is the first electric power armor. Each piece is assembled in the Assembly Machine from titanium armor, §6Titanium Armor Plating§r forged on the steel anvil, motors and integrated circuits, and requires a blueprint.%n%nPower armor runs on electricity: it drains its charge while worn and gives high damage resistance in return. Recharge it at a §3Charging Station§r, or carry a §6Power Armor Battery Pack§r to top it up in the field.
+
+# Quest: Kevlar
+betterquesting.quest.NtkXGmpjSVall505biSQuQ.name=Kevlar
+betterquesting.quest.NtkXGmpjSVall505biSQuQ.desc=§6Kevlar Sheets§r are made in the Chemical Plant from aromatic hydrocarbons, nitric acid and chlorine. Four sheets, rubber and duct tape make a §6Kevlar Insert§r - the first armor insert, which goes into a chestplate at the Armor Modification Table and adds damage resistance.
+
+# Quest: Ore Processing Upgrades
+betterquesting.quest.VvJYIAi2T2mSpxNnJAr8_A.name=Ore Processing Upgrades
+betterquesting.quest.VvJYIAi2T2mSpxNnJAr8_A.desc=The smelter upgrade can be rebuilt step by step. The §6Shredder Upgrade§r (titanium blades and a motor) grinds mined ore instead of smelting it. The §6Centrifuge Upgrade§r adds a centrifuge element and separates the ore further, and the §6Crystallizer Upgrade§r, built with a military grade circuit and a barrel of hydrogen peroxide, crystallizes it for the highest yield.%n%nEach upgrade is crafted from the previous one, so decide how far you want to take it.
+
+# Quest: Emitter Upgrades
+betterquesting.quest.689AwMYdQ0euKTXEhExyLw.name=Emitter Upgrades
+betterquesting.quest.689AwMYdQ0euKTXEhExyLw.desc=The §6Emitter Radius§r and §6Emitter Health§r upgrades are soldered from microchips and capacitors. They are used by emitter machines like the forcefield emitter to cover a larger area and to absorb more damage.
+
+# Quest: Meteorite Metal
+betterquesting.quest.KSqXQ1jmSZ2W9QeP0P7GNg.name=Meteorite Metal
+betterquesting.quest.KSqXQ1jmSZ2W9QeP0P7GNg.desc=Meteorites fall from the sky and leave craters of meteorite blocks. Shred them into §6Meteorite Powder§r and smelt it with cobalt in the Blast Furnace to get §6Meteorite Ingots§r - the material behind starmetal and decorated cobalt tools.%n%nMeteorite ingots come out hot. On a desh anvil, two hot ingots are smithed into a §6Forged Meteorite Ingot§r, and two hot forged ingots into a §6Meteorite Blade§r.
 
 
 ## Quest Line: LV3 - Reactors Age
@@ -927,6 +1039,82 @@ betterquesting.quest.xQEUURH0RH-QWqDAqs7Gzw.desc=The §3Radar Survey Satellite§
 betterquesting.quest.yYyMBFJrRUOt39If3zFaFg.name=Deuterium Extraction Tower
 betterquesting.quest.yYyMBFJrRUOt39If3zFaFg.desc=The §3Deuterium Extraction Tower§r is a much larger version of the Deuterium Extractor, making it an easy and viable way of making cheap fuel for the §b§r§3Fusion Reactor§r.%n%n§2A Ferrouranium Anvil is required.§r
 
+# Quest: RBMK Control Rods
+betterquesting.quest.DcBXJ8ejTGW-a6MxbqRzrQ.name=RBMK Control Rods
+betterquesting.quest.DcBXJ8ejTGW-a6MxbqRzrQ.desc=§3Control Rods§r are columns that absorb neutrons. Lowering them slows the chain reaction down, raising them lets it run faster - this is how you keep an RBMK under control.%n%n§3Moderated Control Rods§r also slow neutrons down when extracted, and §3Automatic Control Rods§r move on their own depending on the heat of the reactor, keeping it near the temperature you set.%n%nNever pull every rod out at once on a hot core.
+
+# Quest: RBMK Steam Channels
+betterquesting.quest.aBLTlbL2QaOsEdYDrDNuAA.name=RBMK Steam Channels
+betterquesting.quest.aBLTlbL2QaOsEdYDrDNuAA.desc=A reactor is useless until its heat goes somewhere. §3Steam Channels§r take heat from neighbouring columns and boil water into steam for your turbines.%n%nFluids are connected at the bottom of the columns. If a column needs both water in and steam out, place a §3Steam Connector§r: water pipe below the column, then the connector, and the steam duct goes into the connector.
+
+# Quest: RBMK Moderators and Reflectors
+betterquesting.quest.lW1g4eODRcGR_ITVn-zxqA.name=RBMK Moderators and Reflectors
+betterquesting.quest.lW1g4eODRcGR_ITVn-zxqA.desc=Passive columns shape the neutron flux. §3Graphite Moderators§r slow fast neutrons down so they cause more fission, §3Tungsten Carbide Reflectors§r send neutrons back into the core, and §3Boron Absorbers§r swallow them. §3Structural Columns§r fill gaps without affecting anything.%n%nThe §3Moderated Fuel Channel§r is a fuel channel with a moderator built in, for fuels that need slow neutrons.
+
+# Quest: RBMK Cooling and Storage
+betterquesting.quest.BK8W7DNgRGWwzux4q_ZAYA.name=RBMK Cooling and Storage
+betterquesting.quest.BK8W7DNgRGWwzux4q_ZAYA.desc=The §3RBMK Cooler§r pulls excess heat out of its neighbours with a coolant fluid - an emergency brake for hot spots in your core. The §3Fluid Heater§r does the opposite and uses reactor heat to heat up other fluids.%n%nThe §3Storage Column§r holds spent fuel rods while they cool down inside the reactor. §6Glass Cover Panels§r let you see what is inside a column.
+
+# Quest: RBMK Automation
+betterquesting.quest.j50W-HVSThSHEvK9B_M1Hw.name=RBMK Automation
+betterquesting.quest.j50W-HVSThSHEvK9B_M1Hw.desc=Columns are linked to consoles with the §6RBMK Console Linking Device§r. The §3Crane Console§r controls a crane that moves fuel rods in and out of the core without anyone standing on top of a running reactor, and the §3Autoloader§r swaps rods automatically.%n%nThe §3Display Panel§r shows the state of linked columns, and the §3Redstone-over-Radio Terminal§r lets you control the reactor remotely.
+
+# Quest: RBMK ReaSim Columns
+betterquesting.quest.60Iqw2PsTqisQwiGBgMS6w.name=RBMK ReaSim Columns
+betterquesting.quest.60Iqw2PsTqisQwiGBgMS6w.desc=The §6ReaSim§r columns use a more realistic simulation of neutron flux and boiling. Instead of separate steam channels, water is fed into the core through §3Water Inlets§r and leaves as steam through §3Steam Outlets§r.%n%nReaSim fuel channels and control rods do not mix with the regular ones - plan your reactor for one system or the other.
+
+# Quest: RBMK Debris
+betterquesting.quest.9lioRg7zQ-qrWBtR2B2cQQ.name=RBMK Debris
+betterquesting.quest.9lioRg7zQ-qrWBtR2B2cQQ.desc=If an RBMK explodes, it scatters §6debris§r all around: graphite, metal, burning fuel chunks, concrete and pieces of heat exchangers. Every piece is intensely radioactive.%n%nPick them up only in full radiation protection, and recycle them instead of leaving them to contaminate the area for years.
+
+# Quest: PWR Core Components
+betterquesting.quest.aAuh9o1iTsuyn0JyOeFENw.name=PWR Core Components
+betterquesting.quest.aAuh9o1iTsuyn0JyOeFENw.desc=Besides fuel rods, neutron sources and ports, a PWR core is built from several more blocks. §3Control Rods§r regulate the reaction, §3Coolant Channels§r carry coolant through the core, §3Heat Exchangers§r and §3Heatsinks§r move heat from the fuel into the coolant, and §3Neutron Reflectors§r keep neutrons inside.%n%nThe whole core has to be enclosed in §3Casing§r blocks. Experiment with the layout: it decides both the reactivity and how well heat leaves the core.
+
+# Quest: Nuclear Waste
+betterquesting.quest.8am9kV6dTtCfxxKCpeaFrw.name=Nuclear Waste
+betterquesting.quest.8am9kV6dTtCfxxKCpeaFrw.desc=Reprocessing spent fuel leaves §6short-lived§r and §6long-lived nuclear waste§r. Both are extremely radioactive - never carry more than you need.%n%nIn the §3Nuclear Waste Disposal Drum§r the waste slowly decays into much less dangerous §6decayed waste§r. §6Vitrified waste§r is locked in glass for safe long-term storage, and waste can also be compressed into blocks - which are just as radioactive.
+
+# Quest: Gas Cells
+betterquesting.quest.A5iYSFmXRCy15l8H2WT8Sw.name=Gas Cells
+betterquesting.quest.A5iYSFmXRCy15l8H2WT8Sw.desc=§6Cells§r are small sealed steel containers for dangerous gases: plutonium hexafluoride for enrichment, deuterium and tritium for fusion fuels and thermonuclear bombs.%n%nLarger amounts of uranium and plutonium hexafluoride are kept in dedicated §3Hexafluoride Tanks§r.
+
+# Quest: Reactor Age Anvils
+betterquesting.quest.ymbk4pboSRmxQ0WaVRkaVg.name=Reactor Age Anvils
+betterquesting.quest.ymbk4pboSRmxQ0WaVRkaVg.desc=The next anvil tier can be reached three ways. Smith a basic iron or lead anvil with ten ingots of §6saturnite§r, §6bismuth bronze§r or §6arsenic bronze§r - whichever you can make first. The §3Saturnite Anvil§r, §3Bismuth Bronze Anvil§r and §3Arsenic Bronze Anvil§r are the same tier and unlock the same construction recipes of the reactor age.%n%nBoth bronzes are alloyed in the crucible from copper, flux and bismuth or arsenic.
+
+# Quest: Ferric Schrabidate Anvil
+betterquesting.quest.m1-buTDCQQmBK-ARjkKpSw.name=Ferric Schrabidate Anvil
+betterquesting.quest.m1-buTDCQQmBK-ARjkKpSw.desc=The §3Ferric Schrabidate Anvil§r, smithed from a basic anvil and ten ferric schrabidate ingots, is the fusion-age anvil tier and is needed for the most advanced construction recipes.
+
+# Quest: Forcefield Emitter
+betterquesting.quest.Cq0EUOVkS3KTRKq6_yDkUQ.name=Forcefield Emitter
+betterquesting.quest.Cq0EUOVkS3KTRKq6_yDkUQ.desc=The §3Forcefield Emitter§r projects a protective dome that blocks projectiles and keeps mobs out. It is made in the Assembly Machine from high-speed steel, desh, gold and magnetized tungsten coils, a motor and both emitter upgrades.%n%nInstall more §6Emitter Radius§r and §6Emitter Health§r upgrades to make the dome larger and sturdier. The field consumes a lot of power while active.
+
+# Quest: Overdrive Upgrades
+betterquesting.quest.mx-MZSYXTemFnu1FrsW6Zg.name=Overdrive Upgrades
+betterquesting.quest.mx-MZSYXTemFnu1FrsW6Zg.desc=§6Overdrive§r upgrades are built from the highest speed and effectiveness upgrades, saturnite and hard plastic. They push a machine far beyond its normal speed - at a huge power cost.
+
+# Quest: Cobalt Gear
+betterquesting.quest.gAxXLf12Qv2aaWyHk3xDBg.name=Cobalt Gear
+betterquesting.quest.gAxXLf12Qv2aaWyHk3xDBg.desc=Cobalt tools have stronger abilities than steel ones. Heat a cobalt tool and smith it with a §6Meteorite Ingot§r on a desh anvil to get its §6Decorated Cobalt§r version, which is better still and is the base for starmetal tools.%n%n§6Cobalt Armor§r is steel armor reinforced with cobalt billets and is likewise the base for starmetal armor.
+
+# Quest: Starmetal Gear
+betterquesting.quest.MEYINQuMSDO32fiIVOdL1A.name=Starmetal Gear
+betterquesting.quest.MEYINQuMSDO32fiIVOdL1A.desc=Starmetal tools are built from decorated cobalt tools and §6Starmetal Rings§r, and starmetal armor from cobalt armor. Both are a big step up in durability and abilities. The pickaxe has its own quest, since it is the base of the molten and bismuth pickaxes.
+
+# Quest: CMB Steel Gear
+betterquesting.quest.UmfCgE6mQjemH_KsZl_UuA.name=CMB Steel Gear
+betterquesting.quest.UmfCgE6mQjemH_KsZl_UuA.desc=CMB Steel is one of the toughest materials in the game, and so are the tools and armor made from it. CMB tools are nearly indestructible and come with powerful abilities.
+
+# Quest: Schrabidium Gear
+betterquesting.quest.ImJAgHWbSfG-bw4scSQjhw.name=Schrabidium Gear
+betterquesting.quest.ImJAgHWbSfG-bw4scSQjhw.desc=Schrabidium tools are built on desh tools, schrabidium and plastic, and have the strongest abilities of any regular tool set. Schrabidium armor goes on top of starmetal armor and also needs ionized particles from fusion. A full set grants strong effects - but it is also radioactive.
+
+# Quest: FEL Laser Crystals
+betterquesting.quest.5_KLTUedQvi2RktZhFVJuA.name=FEL Laser Crystals
+betterquesting.quest.5_KLTUedQvi2RktZhFVJuA.desc=The crystal in the FEL decides the laser's wavelength, and every SILEX recipe needs a minimum wavelength: infrared, visible, ultraviolet, X-ray, gamma and finally digamma. A stronger laser also runs weaker recipes much faster.%n%n§6Bismuth§r (visible) - uranium, thorium-232, bismuth and a rare earth crystal.%n§6Iron-Arsenide§r (X-ray) - gallium arsenide and iron crystals.%n§6CMB-Schrabidate§r (ultraviolet) - CMB steel, ferric schrabidate and an anti-schrabidium cell.
+
 
 ## Quest Line: LV3.5 - Space Age
 betterquesting.questline.enTskTtvRdajee3UMSgXKg.name=LV3.5 - Space Age
@@ -1124,6 +1312,66 @@ betterquesting.quest.y2yrIQ6QRve-p9fRVJD0YA.desc=The §3Rocket Transporter Stati
 betterquesting.quest.yWu2LtytQjGg65tFXTo2ow.name=Moho
 betterquesting.quest.yWu2LtytQjGg65tFXTo2ow.desc=A fair-dinkum planet, hot as hell, and full of rare resources generally only found in the Nether. §6Australium§r is only found here, in vast quantities deep under the surface. Some of the largest caves ever generated within Minecraft can be found here.
 
+# Quest: Rocket Stage Design
+betterquesting.quest.klRSms4cRjaCXsBqz3fMRw.name=Rocket Stage Design
+betterquesting.quest.klRSms4cRjaCXsBqz3fMRw.desc=Every stage in the Vehicle Assembly Base is a §6fuel tank§r with a §6thruster§r under it. A few rules decide whether it flies:%n%n- A stage cannot have more thrusters than tanks, and the tank count must divide evenly between the thrusters.%n- The engine and the tank must use the same fuel. Only space-grade tanks accept any fuel.%n- Every stage above the first needs §6Landing Legs§r. A rocket that lands on a stage without legs topples over and explodes.%n- A rocket has at most 5 stages, and the payload on top must be a crewed capsule or a station core.%n%nThrust has to lift the whole rocket, and the specific impulse (ISP) decides how much fuel the trip takes. The assembly screen shows both, together with the fuel needed for the selected trip.
+
+# Quest: Space-Grade Fuel Tanks
+betterquesting.quest.hF99cqJWR2imXRMMgL-SUg.name=Space-Grade Fuel Tanks
+betterquesting.quest.hF99cqJWR2imXRMMgL-SUg.desc=Size 20 tanks come in four lengths - 1, 3, 6 and 12 meters - holding 6,000, 16,000, 32,000 and 64,000 mB of fuel, plus as much oxidizer if the engine needs one. They accept §6any fuel§r, so one tank design works with every engine.%n%nThe Assembly Machine builds them from titanium shells and welded aluminium. Once you have stainless steel, the Arc Welder makes each length from the previous one with welded stainless steel, which is much cheaper.
+
+# Quest: Landing Legs
+betterquesting.quest.S_ByYThqQB-o9O-sgarv7w.name=Landing Legs
+betterquesting.quest.S_ByYThqQB-o9O-sgarv7w.desc=The first stage only has to get off the ground. Every stage after it ends its trip on the surface of another world, and a rocket that touches down without §6Landing Legs§r tips over and explodes. The assembly screen warns you about every stage that is missing them.
+
+# Quest: Kerosene Engines
+betterquesting.quest.XiZkglLlSCO9Px7x4coeww.name=Kerosene Engines
+betterquesting.quest.XiZkglLlSCO9Px7x4coeww.desc=The first engines you can build burn §6kerosene§r with §6hydrogen peroxide§r as the oxidizer. They have the highest thrust of the liquid engines with a decent specific impulse of 308, which makes them good first stages.%n%nDual and triple versions of the size 20 engine give more thrust in one part, at a higher mass.
+
+# Quest: Methalox Engines
+betterquesting.quest.wGzebJ4GQHakj2Cj19Kvuw.name=Methalox Engines
+betterquesting.quest.wGzebJ4GQHakj2Cj19Kvuw.desc=Methalox engines burn §6natural gas§r with §6liquid oxygen§r. They have less thrust than kerosene engines but a better ISP of 320, so they need less fuel for the same trip - and natural gas is easy to come by.
+
+# Quest: Hydrogen Engines
+betterquesting.quest.bgWkrfy7Sq2SoKUWbzCkSQ.name=Hydrogen Engines
+betterquesting.quest.bgWkrfy7Sq2SoKUWbzCkSQ.desc=Hydrogen and liquid oxygen give the best ISP of all chemical engines - 380 - but the lowest thrust. Saturnite combustion chambers are needed to handle it.%n%nUse them where efficiency matters more than raw power: upper stages and long transfers between worlds.
+
+# Quest: Solid Fuel Engines
+betterquesting.quest.Kxl--JsASrueoQz37h0_EQ.name=Solid Fuel Engines
+betterquesting.quest.Kxl--JsASrueoQz37h0_EQ.desc=Solid fuel engines do not use fluids. The launch pad loads them with §6Solid Fuel (Rocket Propellant)§r, made in the Chemical Plant from solid fuel, petroleum gas and nitric acid.%n%nThey deliver huge thrust, but with an ISP of only 195 they burn through fuel quickly. That makes them ideal boosters for a heavy first stage and poor engines for anything after it.
+
+# Quest: Xenon Ion Engine
+betterquesting.quest.t30B2pq2Sw6rLpMvnrFtGw.name=Xenon Ion Engine
+betterquesting.quest.t30B2pq2Sw6rLpMvnrFtGw.desc=The ion engine runs on §6xenon gas§r alone, which comes from cryogenically distilling Neidon air. Its ISP of 4200 is more than ten times that of any chemical engine, but its thrust is tiny.%n%nIt cannot lift anything off a surface. Its place is on a light final stage, where it makes long journeys almost free.
+
+# Quest: Balefire Engines
+betterquesting.quest.-8kUKsfDSa-wcZVHOv7icA.name=Balefire Engines
+betterquesting.quest.-8kUKsfDSa-wcZVHOv7icA.desc=Balefire engines burn §6BF rocket fuel§r with hydrogen peroxide, heated further by a nuclear core built from PWR fuel rods. At only size 15 they come close to the thrust of a size 20 kerosene engine, with an ISP of 666.%n%nThe three lengths trade mass for thrust. Only the ion engine is more efficient.
+
+# Quest: Orbital Station Launching Port
+betterquesting.quest.vhBmjN7xSTCNkIE5f2z2dA.name=Orbital Station Launching Port
+betterquesting.quest.vhBmjN7xSTCNkIE5f2z2dA.desc=The §3Orbital Station Launching Port§r assembles and launches rockets directly from your station. A rocket that starts in orbit does not have to fight a planet's gravity first, so the same trip takes far less fuel than from the ground.
+
+# Quest: Air Vents and Airlocks
+betterquesting.quest.qRMJT0bHT4STCpZziZR-bQ.name=Air Vents and Airlocks
+betterquesting.quest.qRMJT0bHT4STCpZziZR-bQ.desc=An §3Air Vent§r fills a sealed room with breathable air from its oxygen tank - one mB per block of volume - and then keeps topping it up. The used air is passed to a CO2 scrubber if one is in the room.%n%nThe room must be completely sealed. Use the §6Round Airlock Door§r for entrances, and build an airlock chamber so that opening the door does not vent the whole base.
+
+# Quest: Atmospheric Emitter
+betterquesting.quest.uIV-JMIhSRCI6MKXJ7OOfA.name=Atmospheric Emitter
+betterquesting.quest.uIV-JMIhSRCI6MKXJ7OOfA.desc=The §3Atmospheric Emitter§r releases any gas into the open air of the world it stands on, spending 10 HE per mB. Set the gas with a fluid identifier and check the result with the atmospheric scanner - it is the small-scale way to change a planet's atmosphere.%n%n§cDo not feed it antimatter.§r
+
+# Quest: HTR-F4 NEO Station Thruster
+betterquesting.quest.OWiGEgujRL2pSgR4bZ0Reg.name=HTR-F4 NEO Station Thruster
+betterquesting.quest.OWiGEgujRL2pSgR4bZ0Reg.desc=The strongest station thruster does not burn fuel at all. Connect it to a running §3Fusion Reactor§r torus on your station, and the plasma provides the thrust.
+
+# Quest: Dyson Heat Converter
+betterquesting.quest.Iegeo70qTSOovCnu9g7e9Q.name=Dyson Heat Converter
+betterquesting.quest.Iegeo70qTSOovCnu9g7e9Q.desc=Instead of electricity, the §3Dyson Heat Converter§r turns the beam from a Dyson Receiver into heat (TU). Place heat-powered machines on it to run them directly on star power.
+
+# Quest: Tektonic Crude
+betterquesting.quest.tYbpy8NJTYuFmTJiZccDlQ.name=Tektonic Crude
+betterquesting.quest.tYbpy8NJTYuFmTJiZccDlQ.desc=Oil deposits on Tekto hold §6Tektonic Crude§r instead of normal oil, and its gas deposits hold halide gas. A derrick pumps it like any oil.%n%nThe Vacuum Refinery splits tektonic crude into halogenated light oil, chloromethane, hydrochloric acid and halide gas - a chlorine-rich product line that normal oil cannot give you.
+
 
 ## Quest Line: LV4 - End Game
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAw.name=LV4 - End Game
@@ -1289,6 +1537,46 @@ betterquesting.quest.q0Q4S7F-QlCzGWDkdOBMqw.desc=The Martian Invasion Ship is a 
 betterquesting.quest.xYmNHPDAQkSwXHOow8--4g.name=Welded Osmiridium Plate
 betterquesting.quest.xYmNHPDAQkSwXHOow8--4g.desc=§6Welded Osmiridium Plates§r cost 300 Billion §eHE§r to produce, so good energy generation and storage infrastructure is needed.
 
+# Quest: Ion Capsules
+betterquesting.quest.8OQg6nWaSKuAAIR6Wt9NDw.name=Ion Capsules
+betterquesting.quest.8OQg6nWaSKuAAIR6Wt9NDw.desc=Every collision starts with ions. §6Empty Particle Capsules§r are made from cast lead plates, gold coils and glass.%n%n§6Hydrogen Ion Capsules§r are filled like a fluid container, with 1,000 mB of hydrogen. §6Copper§r and §6Lead Ion Capsules§r are crafted from an empty capsule, the metal's dust and ionized particles.
+
+# Quest: Antimatter Capsules
+betterquesting.quest.Sospn1o9QPKjhBQFJga5ug.name=Antimatter Capsules
+betterquesting.quest.Sospn1o9QPKjhBQFJga5ug.desc=Colliding hydrogen and copper ions at a momentum of 300 gives an §6Antimatter Capsule§r - the easiest collision in the accelerator. Two antimatter capsules at 400 make §6Antischrabidium§r.
+
+# Quest: Muon Capsule
+betterquesting.quest.FtYfwsavTUm-xnncSumr2w.name=Muon Capsule
+betterquesting.quest.FtYfwsavTUm-xnncSumr2w.desc=Hydrogen ions against antimatter at a momentum of 2,500 produce §6Muons§r. Applied to an ICF fuel pellet, a muon lowers the laser power the pellet needs to ignite.
+
+# Quest: Higgs Boson Capsule
+betterquesting.quest.-veb1BArRXCDf16eEPwiMg.name=Higgs Boson Capsule
+betterquesting.quest.-veb1BArRXCDf16eEPwiMg.desc=Hydrogen against lead ions at a momentum of 6,500. In the §3Exposure Chamber§r, the §6Higgs Boson§r turns uranium ingots into schraranium and uranium-238 ingots into schrabidium.
+
+# Quest: Dark Matter Capsule
+betterquesting.quest.VSP5jYe9RDCm_1wK74ny1g.name=Dark Matter Capsule
+betterquesting.quest.VSP5jYe9RDCm_1wK74ny1g.desc=Two antischrabidium capsules at a momentum of 10,000 give §6Dark Matter§r. Its main use is the Exposure Chamber, where it turns plutonium ingots into §6euphemium§r.
+
+# Quest: Tachyon Capsule
+betterquesting.quest.5di7qgh7SGeOQV_MgO5WEg.name=Tachyon Capsule
+betterquesting.quest.5di7qgh7SGeOQV_MgO5WEg.desc=Muons against Higgs bosons at a momentum of 5,000 produce §6Tachyons§r. On the Murky Anvil, a tachyon turns limp wings into §6Murky Wings§r.
+
+# Quest: Strange Quark Capsule
+betterquesting.quest.TAA5pD3nQtG8acE_UYCf3g.name=Strange Quark Capsule
+betterquesting.quest.TAA5pD3nQtG8acE_UYCf3g.desc=Muons against dark matter at a momentum of 12,500 produce §6Strange Quarks§r. They are the next step towards the sparkticle, and with tungsten dust and a crystal horn they grow a crystal virus.
+
+# Quest: Sparkticle Capsule
+betterquesting.quest.4YkuEIBMSD63TGr8fZfnjw.name=Sparkticle Capsule
+betterquesting.quest.4YkuEIBMSD63TGr8fZfnjw.desc=A strange quark smashed into magic powder at a momentum of 12,500 becomes a §6Sparkticle§r. In the Exposure Chamber it turns ferric schrabidate into §6dineutronium§r, and it is part of the DNT armor plating.%n%nCollide it with a Higgs boson at 70,000 and you get the digamma particle.
+
+# Quest: DFC Catalysts
+betterquesting.quest.TDprpiPrRUOaFnW8JLtmXg.name=DFC Catalysts
+betterquesting.quest.TDprpiPrRUOaFnW8JLtmXg.desc=A blank catalyst is filled with a material and runes. The two catalysts in the core decide how the DFC behaves, and they fall into three groups:%n%n§6Copper, Beryllium, Cobalt, Lithium, Tungsten§r - +25% power.%n§6Aluminium, Cerium, Iron, Niobium, Strontium§r - +15% power and a flat power bonus.%n§6Caesium, Dineutronium, Euphemium, Schrabidium, Thorium§r - no multiplier, but the largest flat bonus.%n%nMost of them also trade heat for fuel use or the other way around - check the tooltip and pair them so the core stays stable.
+
+# Quest: Singularities
+betterquesting.quest.SODWeSyJSb-vxvL9SdGcrQ.name=Singularities
+betterquesting.quest.SODWeSyJSb-vxvL9SdGcrQ.desc=A §6Singularity§r is made from euphemium, schrabidium-326 and an anti-schrabidium cell. Wrapped in CMB steel and magnetized tungsten it becomes a §6Counter-Resonant Singularity§r; with saturnite and power powder, a §6Superheated Resonating Singularity§r. All types together are needed for the spark singularity.%n%nSurrounded by §6Artificial Xen Crystals§r, a singularity becomes a §6Miniature Black Hole§r - the payload of the black hole missile.
+
 
 ## Quest Line: Tips and Tricks
 betterquesting.questline.MJP4MeAmSTm_Di0iRHoQuw.name=Trucchi e Consigli
@@ -1302,6 +1590,10 @@ betterquesting.quest.xlNjQwC6S3S5o_B7nIciBQ.desc=Tired of using buckets to give 
 ## Quest Line: Advanced Logistics
 betterquesting.questline.vNAB2bS7S9uSc1gAlAccnA.name=Advanced Logistics
 betterquesting.questline.vNAB2bS7S9uSc1gAlAccnA.desc=Manage your factory and tackle logistical challenges with advanced redstone features.
+
+# Quest: Rails
+betterquesting.quest.1o48G8SRTzWannGld4xy-Q.name=Rails
+betterquesting.quest.1o48G8SRTzWannGld4xy-Q.desc=Minecarts are still a good way to move things over long distances. §6High Speed Rails§r, made from steel and iron plates, let carts travel at 1.0 blocks per tick - two and a half times the vanilla limit.%n%nThe §6High Speed Booster Rail§r needs no power: it multiplies a passing cart's speed by 1.15 every time it rolls over it, but it cannot be placed in curves. §6Wooden Tracks§r are cheap but limit carts to half the vanilla speed.%n%nPut a steel crate on a minecart to get a §6Crate Minecart§r with 54 slots.
 
 # Quest: Displays, Buttons and More
 betterquesting.quest.CXh5IW4AQaqb-p6bJlX2-A.name=Displays, Buttons and More
@@ -1367,14 +1659,399 @@ betterquesting.quest.v7HxbdInTsWOGVEmy4zaow.desc=The RoR §6Logic Receiver§r is
 betterquesting.quest.z9LdlLLQRP64Psk4rxEDhQ.name=Automatic Crafting Table
 betterquesting.quest.z9LdlLLQRP64Psk4rxEDhQ.desc=The §3Automatic Crafting Table§r performs a set recipe automatically as long as it has power. Define the recipe by placing ingredients into the blue crafting grid - you can use items from your inventory or drag them from NEI. Once set, input items go into the gray grid and are consumed, with the product appearing in the gray output slot. It costs 100 HE per operation and runs one operation per tick regardless of recipe complexity.%n%nIt works with hoppers, crates, and conveyor machines for full automation. For 2x2 or 3x3 recipes where every ingredient is the same item, use the §6Combinator Funnel§r instead - it needs no power.
 
+# Quest: Power Detector
+betterquesting.quest.XA_QYdAVRk22U165zQ1Gdw.name=Power Detector
+betterquesting.quest.XA_QYdAVRk22U165zQ1Gdw.desc=The §3Power Detector§r is placed into a power line and emits a redstone signal while energy flows through it - useful for alarms, backup generators and automatic shutdowns.%n%n§6Coated Red Copper Cable§r is an insulated version of the thin cable, made with polymer plates.
+
+# Quest: RoR Reader and Controller
+betterquesting.quest.ugWkuYphQCKCeelNsDvKJg.name=RoR Reader and Controller
+betterquesting.quest.ugWkuYphQCKCeelNsDvKJg.desc=The §3RoR Reader§r is attached directly to a machine and broadcasts values read from it - like tank fill levels or reactor heat - on a radio channel, without any extra sensors.%n%nThe §3RoR Controller§r works the other way around: it listens on a channel and sends the received commands to the machine it is attached to. Together they let you monitor and control your whole factory from a single control room.
+
+# Quest: Drone Logistics Network
+betterquesting.quest.g51BSrcJQAKIyl-CHwBpAw.name=Drone Logistics Network
+betterquesting.quest.g51BSrcJQAKIyl-CHwBpAw.desc=Simple drone routes are fine for fixed transfers, but a logistics network is smarter. §3Provider Crates§r offer their contents to the network, §3Requester Crates§r order the items they are missing, and the §3Drone Dock§r stores drones and sends them out to fulfil the requests.%n%n§3Logistics Waypoints§r mark the paths drones are allowed to fly along between the crates and the dock.
+
+# Quest: Fluid Valve with Counter
+betterquesting.quest.LXd2_iAxRP-cveht4mJR7Q.name=Fluid Valve with Counter
+betterquesting.quest.LXd2_iAxRP-cveht4mJR7Q.desc=The §3Fluid Valve with Counter§r is a redstone valve with a microchip that measures how much fluid has passed through it, so you can dose exact amounts or monitor a pipeline. The §3Fluid Regulator Valve§r adds a comparator to the valve for finer control.
+
+
+## Quest Line: Arsenal
+betterquesting.questline.OZJv86d2QQmFjj0k9oaGZw.name=Arsenal
+betterquesting.questline.OZJv86d2QQmFjj0k9oaGZw.desc=Firearms, explosives and armor. NTM weapons are built from cast parts, and every new metal you unlock opens up a new tier of guns. Each quest here requires the material quest of its tier, so the chapter grows together with your factory.
+
+# Quest: .22 Submachine Gun
+betterquesting.quest.2LONN5VkTSuxkyM09NYIog.name=.22 Submachine Gun
+betterquesting.quest.2LONN5VkTSuxkyM09NYIog.desc=High-speed steel opens the next tier of guns. The §6.22 Submachine Gun§r uses a high-speed steel barrel and receiver and carries a huge §6177-round pan magazine§r of .22 rounds.%n%nThe small caliber deals little damage per hit, but you will rarely need to reload.
+
+# Quest: Flamethrower
+betterquesting.quest.8JnqipakQy6NcqWmLRcVBA.name=Flamethrower
+betterquesting.quest.8JnqipakQy6NcqWmLRcVBA.desc=The §6Flamethrower§r sprays burning fuel from a 300-unit tank. Diesel and gas give an ordinary flame, napalm sticks to targets and burns much longer, and balefire fuel is something you will meet much later.%n%nDo not use it indoors, near your crops or anywhere near your own wooden buildings.
+
+# Quest: Liberator
+betterquesting.quest.D4QKcL3dR4SZP8kB62fEGg.name=Liberator
+betterquesting.quest.D4QKcL3dR4SZP8kB62fEGg.desc=The §6Liberator§r is a four-barreled shotgun made from high-speed steel. It holds four 12 gauge shells and can fire them in quick succession - devastating at point-blank range, almost useless at a distance.
+
+# Quest: Grease Gun
+betterquesting.quest.YoYseqIHR7G9e6Lk7dV2XQ.name=Grease Gun
+betterquesting.quest.YoYseqIHR7G9e6Lk7dV2XQ.desc=The §6Grease Gun§r is a cheap, all-steel submachine gun with a gunmetal mechanism. It is the first fully automatic weapon you can build.%n%nIt fires §69mm§r rounds from a 30-round magazine. Each bullet is weak, but the rate of fire makes it excellent against groups of weak enemies at close range.
+
+# Quest: Congo Lake
+betterquesting.quest.asxCjNm5QaiJ2dZhzutgQA.name=Congo Lake
+betterquesting.quest.asxCjNm5QaiJ2dZhzutgQA.desc=§6Congo Lake§r is a pump-action grenade launcher that holds four §640mm grenades§r and fires them in an arc - perfect for hitting enemies behind cover.%n%nAvailable grenades include high explosive, HEAT, demolition, incendiary and white phosphorus. Mind the blast radius when shooting at close targets.
+
+# Quest: Charge Thrower
+betterquesting.quest.bpPTCFQ0REmJ7UV9tgH76Q.name=Charge Thrower
+betterquesting.quest.bpPTCFQ0REmJ7UV9tgH76Q.desc=The §6Charge Thrower§r is more of a tool than a weapon. It launches a §6Grappling Hook§r that pulls you towards where it lands, or §6mortar§r and §6demolition charges§r for clearing terrain from a safe distance.%n%nIt is built from gunmetal mechanisms, a steel heavy barrel and grip, and leather or rubber.
+
+# Quest: Flare Gun
+betterquesting.quest.eKIjMVxvTGi0kcDpq_aTAg.name=Flare Gun
+betterquesting.quest.eKIjMVxvTGi0kcDpq_aTAg.desc=The §6Flare Gun§r fires single 26mm flares that light up the area and set whatever they hit on fire.%n%nIt also has two special loads. A §6Supply Flare§r calls in a cargo plane that drops a crate of supplies where it lands, and a §6Weapon Flare§r calls in a drop of weapons. Both are rare and valuable - save them for when you really need them.
+
+# Quest: Pepperbox
+betterquesting.quest.jiVjM3qqR6mnDcChU4aOlA.name=Pepperbox
+betterquesting.quest.jiVjM3qqR6mnDcChU4aOlA.desc=The §6Pepperbox§r is the most primitive firearm in NTM: a bundle of six iron barrels on a wooden handle, crafted from iron, copper and planks. It needs no cast parts at all.%n%nIt fires black powder loads: plain stone balls, flint for better penetration, iron balls that ricochet, and shot for a spread at close range. Slow and inaccurate, but a big step up from a sword when a glyphid nest attacks.
+
+# Quest: Lever Action Rifle
+betterquesting.quest.ln-xh8tVQPi4yAyhUhLh1g.name=Lever Action Rifle
+betterquesting.quest.ln-xh8tVQPi4yAyhUhLh1g.desc=Your first proper long gun. The §6Lever Action Rifle§r is assembled from a cast steel light barrel, a gunmetal light receiver and mechanism, a gunmetal plate and a wooden stock.%n%nIt holds fourteen §6.44 Magnum§r rounds. Start with black powder loads and move on to smokeless and jacketed rounds as your ammo press production grows.
+
+# Quest: Dynamite
+betterquesting.quest.uk-pCxLXRnOcm2T6EzjOXQ.name=Dynamite
+betterquesting.quest.uk-pCxLXRnOcm2T6EzjOXQ.desc=Dynamite is the first explosive that is stronger than vanilla TNT. Mix niter dust, sugar and sand with §6Laboratory Glassware§r to get dynamite, then wrap it in paper with a §6Safety Fuse§r to make sticks. A §6Stick of Dynamite§r can be thrown, and eight of them make a placeable dynamite block.%n%nThree sticks taped together make a §6Time Bomb§r that can be stuck to any surface and set to go off after a delay. §6Det Cord§r, crafted from paper and gunpowder, chains several charges together so they detonate at once.
+
+# Quest: Heavy Revolver
+betterquesting.quest.-hlxCnJ_Th2HrxP3dFCMPw.name=Heavy Revolver
+betterquesting.quest.-hlxCnJ_Th2HrxP3dFCMPw.desc=Desh opens the next tier of firearms. The §6Heavy Revolver§r has a desh barrel and receiver and fires six §6.44 Magnum§r rounds - the same ammunition as the lever action rifle, but with much more punch per shot.
+
+# Quest: Carbine
+betterquesting.quest.K-5iJtH2SI6KbZ3dM2qmzg.name=Carbine
+betterquesting.quest.K-5iJtH2SI6KbZ3dM2qmzg.desc=The §6Carbine§r is a semi-automatic rifle with a desh barrel. It fires §67.62mm§r rounds from a 14-round magazine, including depleted uranium and explosive loads later on.
+
+# Quest: Uzi
+betterquesting.quest.7GYOYzstSGueInr2oo07-Q.name=Uzi
+betterquesting.quest.7GYOYzstSGueInr2oo07-Q.desc=The §6Uzi§r is a compact submachine gun with a desh barrel and a plastic stock and grip. It fires §69mm§r rounds from a 30-round magazine at a high rate of fire.
+
+# Quest: SPAS-12
+betterquesting.quest.g4scyRUIR8ScneG9YiaNNw.name=SPAS-12
+betterquesting.quest.g4scyRUIR8ScneG9YiaNNw.desc=The §6SPAS-12§r is a combat shotgun with a desh barrel and stock. It holds eight 12 gauge shells and is far more practical than the four-shot Liberator.
+
+# Quest: Panzerschreck
+betterquesting.quest.l5Qi0pA6QE-6RugIDen5oA.name=Panzerschreck
+betterquesting.quest.l5Qi0pA6QE-6RugIDen5oA.desc=The §6Panzerschreck§r is a reusable rocket launcher with a desh heavy barrel. It fires one unguided rocket at a time - slow to reload, but devastating against armored enemies and structures.
+
+# Quest: Target Pistol
+betterquesting.quest.uxCSty5_T1yQZpu7jnzLPg.name=Target Pistol
+betterquesting.quest.uxCSty5_T1yQZpu7jnzLPg.desc=Weapon steel is the material of the next gun tier. The §6Target Pistol§r is an accurate weapon steel pistol with a 15-round magazine of §6.22§r rounds and very little recoil.
+
+# Quest: Assault Rifle
+betterquesting.quest.JzY_N83_Tke3lJSA4GfIpA.name=Assault Rifle
+betterquesting.quest.JzY_N83_Tke3lJSA4GfIpA.desc=The §6Assault Rifle§r is a fully automatic weapon steel battle rifle firing §65.56mm§r rounds from a 30-round magazine. Good range, high damage and automatic fire make it one of the best general-purpose guns in the game.
+
+# Quest: Grenade Machinegun
+betterquesting.quest.moj5wRUBTbCVCr4w5ZToKA.name=Grenade Machinegun
+betterquesting.quest.moj5wRUBTbCVCr4w5ZToKA.desc=The §6Grenade Machinegun§r fires the same §640mm grenades§r as Congo Lake, but fully automatic from a 30-round belt. It clears out entire glyphid swarms - and everything around them.
+
+# Quest: FIM-92 Stinger
+betterquesting.quest.U9NUADauQeym6cIna-PvNA.name=FIM-92 Stinger
+betterquesting.quest.U9NUADauQeym6cIna-PvNA.desc=The §6FIM-92 Stinger§r uses the same rockets as the Panzerschreck, but its military grade circuit lets it lock on to a target before firing - the rocket then follows its target. Especially useful against flying enemies.
+
+# Quest: Chemthrower
+betterquesting.quest.pZOL_9ehQVmcDf82_sNzrw.name=Chemthrower
+betterquesting.quest.pZOL_9ehQVmcDf82_sNzrw.desc=The §6Chemthrower§r sprays almost any fluid instead of a fixed fuel: fuels burn, acids corrode, toxins poison and coolants freeze. What it does depends entirely on what you load into it.
+
+# Quest: Weapon Steel Refits
+betterquesting.quest.yOupbtAaRXC5j1qsKZ0UQw.name=Weapon Steel Refits
+betterquesting.quest.yOupbtAaRXC5j1qsKZ0UQw.desc=Several early guns can be rebuilt with weapon steel mechanisms into improved, named versions:%n%n§6Atlas§r - the light revolver with a better build.%n§6Lincoln's Repeater§r - a gold-plated lever action rifle.%n§6Lever Action Shotguns§r - two shotguns, one for each hand.%n§6Mister Topaz§r - a flamethrower with a 500-unit tank and a hotter flame.%n§6Uzis§r - two Uzis at once.
+
+# Quest: C-4
+betterquesting.quest.xYtTqpupTGO-I3EDRU7nOQ.name=C-4
+betterquesting.quest.xYtTqpupTGO-I3EDRU7nOQ.desc=§6C-4§r is mixed in the Chemical Plant from unsaturated hydrocarbons and niter. It is far stronger than dynamite and is used in many advanced explosives.%n%nC-4 sticks make a §6Demolition Charge§r (with duct tape) and a placeable C-4 block. The §6Explosive Charge§r, built from det cord, steel plates and plastic explosive, is designed to be triggered remotely.
+
+# Quest: Detonators
+betterquesting.quest.yjugmauQSmqJX22c_gCmDA.name=Detonators
+betterquesting.quest.yjugmauQSmqJX22c_gCmDA.desc=Shift-right-click a remote charge with a §6Detonator§r to link it, then right-click anywhere to set it off. The §6Multi Detonator§r stores several linked charges, and the §6Laser Detonator§r triggers whatever explosive you point it at, without linking.
+
+# Quest: Grenades
+betterquesting.quest.dSK3jwxyR9KHDbQmHze_mQ.name=Grenades
+betterquesting.quest.dSK3jwxyR9KHDbQmHze_mQ.desc=Grenades are assembled freely in the crafting grid from three parts and an optional fourth:%n%nThe §6Shell§r: fragmentation, stick (thrown farther), tech (for EMP, plasma and laser fillings) or nuke casing.%nThe §6Filling§r: gunpowder, high explosive, demolition, incendiary, white phosphorus, cluster and more.%nThe §6Fuze§r: 3, 7 or 15 second timers, impact, or airburst (explodes high above the target).%nAn optional §6Extra§r: glue for sticky grenades, a proximity fuze or a fragmentation sleeve.%n%nNot every filling fits every shell - the recipe simply does not work if they are incompatible.
+
+# Quest: Mines
+betterquesting.quest.J3vRSUS5Txu5WqCyATefFQ.name=Mines
+betterquesting.quest.J3vRSUS5Txu5WqCyATefFQ.desc=The §6Anti-Personnel Mine§r goes off when something steps on it. Top it with buckshot to get a §6Shrapnel Mine§r. The §6Anti-Tank Mine§r uses high explosives and an integrated circuit and hits much harder.%n%nMark your minefields - mines do not know friend from foe.
+
+# Quest: Sentry Turret "Brown"
+betterquesting.quest.8n_61rp-RV-wqiLPbrUhEQ.name=Sentry Turret "Brown"
+betterquesting.quest.8n_61rp-RV-wqiLPbrUhEQ.desc=Turrets defend your base on their own. They need power and ammunition in their internal inventory; open the GUI to choose which kinds of targets to attack and to whitelist friendly players.%n%nThe §3Sentry Turret "Brown"§r is the simplest one and is crafted by hand. It fires §69mm§r rounds - the same ammo as the Grease Gun.
+
+# Quest: Turret "Mister Friendly"
+betterquesting.quest.pXnS0KNRRXyi9upjnJBzUA.name=Turret "Mister Friendly"
+betterquesting.quest.pXnS0KNRRXyi9upjnJBzUA.desc=§3Mister Friendly§r is a chaingun turret made in the Assembly Machine. It sprays §65.56mm§r rounds at a high rate of fire and is a solid general-purpose perimeter turret.
+
+# Quest: Turret AI-Chip
+betterquesting.quest.rWT_BH4BS-qI7_SBqn66vA.name=Turret AI-Chip
+betterquesting.quest.rWT_BH4BS-qI7_SBqn66vA.desc=The heavier turrets need a proper brain. The §6Turret AI-Chip§r is made from military grade circuits, gold wire and plastic and is part of all advanced turret recipes.
+
+# Quest: Turret "Chekhov's Gun"
+betterquesting.quest.lxf5pQlVSQqslxv8CGp5PQ.name=Turret "Chekhov's Gun"
+betterquesting.quest.lxf5pQlVSQqslxv8CGp5PQ.desc=§3Chekhov's Gun§r is a heavy machine gun turret firing §6.50 BMG§r rounds, including armor-piercing and depleted uranium loads. Long range and high damage per shot.
+
+# Quest: Turret "Jeremy"
+betterquesting.quest.grTUKQmKRGWdht6bsRWvKw.name=Turret "Jeremy"
+betterquesting.quest.grTUKQmKRGWdht6bsRWvKw.desc=§3Jeremy§r is an autocannon turret firing §6240mm shells§r: standard, explosive, armor-piercing (tungsten or depleted uranium) and even a nuclear W9 shell. Slow, but each hit is devastating.
+
+# Quest: Turret "Richard"
+betterquesting.quest.2T_06asATtKVkWVT5rhAag.name=Turret "Richard"
+betterquesting.quest.2T_06asATtKVkWVT5rhAag.desc=§3Richard§r fires rockets at its targets. It is very effective against groups and armored enemies, but its explosions will damage your own buildings just as happily.
+
+# Quest: Turret "Howard"
+betterquesting.quest.k_Li2p-bQ0m5rWnjAX3Lug.name=Turret "Howard"
+betterquesting.quest.k_Li2p-bQ0m5rWnjAX3Lug.desc=§3Howard§r is a close-in weapon system with twin chainguns. It is built to shoot down incoming missiles and aircraft before they reach your base, and is fed with §6100-round belts§r from the ammo press.
+
+# Quest: Turret "Fritz"
+betterquesting.quest.RM1hcjg1Sk6hPo5ehM8-sg.name=Turret "Fritz"
+betterquesting.quest.RM1hcjg1Sk6hPo5ehM8-sg.desc=§3Fritz§r is a heavy flamethrower turret. Instead of ammunition it takes fuel through pipes - diesel and other flammable fluids - and sets everything in front of it on fire.
+
+# Quest: Turret "Greg"
+betterquesting.quest.d0iXj2V-QrGiRZTMOb5ayA.name=Turret "Greg"
+betterquesting.quest.d0iXj2V-QrGiRZTMOb5ayA.desc=§3Greg§r is long-range artillery firing §616" artillery shells§r: high explosive, incendiary, white phosphorus and more. It can engage targets far beyond your view distance.
+
+# Quest: Turret "Henry"
+betterquesting.quest.0ewDSw9YQtiDaJ2EoFe31A.name=Turret "Henry"
+betterquesting.quest.0ewDSw9YQtiDaJ2EoFe31A.desc=§3Henry§r is rocket artillery: it fires salvos of rockets from replaceable rocket pods and covers a huge area with explosions at long range.
+
+# Quest: Turret "Tauon"
+betterquesting.quest.OefauRgDTKCOqzrcnTdeBw.name=Turret "Tauon"
+betterquesting.quest.OefauRgDTKCOqzrcnTdeBw.desc=§3Tauon§r is a prototype energy turret that fires tau particles using uranium as ammunition. Its shots pass through targets and deal heavy damage.
+
+# Quest: Small Missiles
+betterquesting.quest.fLburJ9dSuOncKMewGqS9Q.name=Small Missiles
+betterquesting.quest.fLburJ9dSuOncKMewGqS9Q.desc=Missiles are welded together in the §3Arc Welder§r from a §6warhead§r, a §6fuel tank§r and a §6thruster§r. Small warheads are made in the Assembly Machine from titanium plates, dynamite and a microchip, and come in several types: §6Incendiary§r, §6Cluster§r and §6Bunker Buster§r.%n%nThe §6Decoy Missile§r confuses enemy radars, and the §6Anti-Ballistic Missile§r, built from a §6Small Missile Assembly§r, intercepts incoming missiles automatically.
+
+# Quest: Radar
+betterquesting.quest.WtkSt3eWRo6ZQhlX22r4mQ.name=Radar
+betterquesting.quest.WtkSt3eWRo6ZQhlX22r4mQ.desc=The §3Radar§r detects missiles, players and mobs in a large radius and shows them on its display. It can also launch anti-ballistic missiles automatically when an attack is detected.%n%nA §3Radar Screen§r linked to a radar with the §6Radar Linker§r shows the same picture anywhere in your base.
+
+# Quest: Target Designators
+betterquesting.quest.o4Y_mZofRWiki9oFhU1w4Q.name=Target Designators
+betterquesting.quest.o4Y_mZofRWiki9oFhU1w4Q.desc=A launch pad needs to know where to send its missile. Right-click a block with the §6Short Range Target Designator§r to save its coordinates, then put the designator into the launch pad. The §6Long Range Target Designator§r, made from a short range one and a §6Rangefinder§r, reaches much further.
+
+# Quest: Anti-Materiel Rifle
+betterquesting.quest.2Y3HmfI4SVu2jlwlnGGJGw.name=Anti-Materiel Rifle
+betterquesting.quest.2Y3HmfI4SVu2jlwlnGGJGw.desc=Ferrouranium makes heavy barrels possible. The §6Anti-Materiel Rifle§r fires seven §6.50 BMG§r rounds - including armor-piercing, depleted uranium, explosive and special starmetal rounds - over extreme distances. It comes with a scope.
+
+# Quest: Ma Deuce
+betterquesting.quest.nBKMQxpgReKbB7eR5pZWhQ.name=Ma Deuce
+betterquesting.quest.nBKMQxpgReKbB7eR5pZWhQ.desc=The §6Ma Deuce§r is a belt-fed heavy machine gun with a ferrouranium barrel, firing §6.50 BMG§r rounds. Heavy, loud and extremely effective.
+
+# Quest: Auto Shotgun
+betterquesting.quest.96Fooa1xTUKf_pardYJTdg.name=Auto Shotgun
+betterquesting.quest.96Fooa1xTUKf_pardYJTdg.desc=The §6Auto Shotgun§r has a ferrouranium barrel and a 20-shell magazine and fires 12 gauge shells in full auto. It shreds anything at close range in seconds.
+
+# Quest: Quad Rocket Launcher
+betterquesting.quest.Psfz99PLSEm5LB1ki6_1DQ.name=Quad Rocket Launcher
+betterquesting.quest.Psfz99PLSEm5LB1ki6_1DQ.desc=The §6Quad Rocket Launcher§r holds four rockets and fires them in rapid succession. Its circuit allows it to lock on to targets.
+
+# Quest: Comically Long Pistol
+betterquesting.quest.6bQtMPLAQjOBwV5lvR8P6w.name=Comically Long Pistol
+betterquesting.quest.6bQtMPLAQjOBwV5lvR8P6w.desc=Exactly what the name says. Its barrel is cast from technetium or cadmium steel and is far too long, which makes this §69mm§r pistol with a 17-round magazine surprisingly accurate.
+
+# Quest: Minigun
+betterquesting.quest.BJxZu0HcRHmFyT1naFjVkQ.name=Minigun
+betterquesting.quest.BJxZu0HcRHmFyT1naFjVkQ.desc=The §6M134 Minigun§r spins up its barrels and then unleashes a stream of §67.62mm§r rounds. It needs a moment to start firing, so it works best from a prepared position.
+
+# Quest: Missile Launcher
+betterquesting.quest.qFTwQZW9S5aGdvCgezboOQ.name=Missile Launcher
+betterquesting.quest.qFTwQZW9S5aGdvCgezboOQ.desc=The §6Missile Launcher§r fires one heavy missile at a time. Each missile is strong enough to destroy small buildings.
+
+# Quest: Tesla Cannon
+betterquesting.quest.o29OUp_zR_--PQp009pT1g.name=Tesla Cannon
+betterquesting.quest.o29OUp_zR_--PQp009pT1g.desc=The §6Tesla Cannon§r fires arcs of electricity from energy cells; overcharged and infrared cells change how the arcs behave. Excellent against crowds.
+
+# Quest: Laser Pistol
+betterquesting.quest.DoM54D1vQy28cumKEnQExQ.name=Laser Pistol
+betterquesting.quest.DoM54D1vQy28cumKEnQExQ.desc=Saturnite mechanisms start the third generation of guns. The §6Laser Pistol§r focuses energy through a redstone crystal and fires instant laser shots from energy cells, 30 per charge.%n%nRebuilt with more saturnite mechanisms, it becomes the §6Pew Pew§r.
+
+# Quest: StG 77
+betterquesting.quest.2pLBHhtST0Wf4HylMtTz1A.name=StG 77
+betterquesting.quest.2pLBHhtST0Wf4HylMtTz1A.desc=The §6StG 77§r is a bullpup assault rifle with a saturnite build and a built-in scope, firing §65.56mm§r rounds from a 30-round magazine with excellent accuracy.
+
+# Quest: Fat Man
+betterquesting.quest.SqE3lHSgScGU3uAi-cO3Jg.name=Fat Man
+betterquesting.quest.SqE3lHSgScGU3uAi-cO3Jg.desc=The §6Fat Man§r launches miniature nuclear warheads one at a time: standard, demolition, high yield, a hive of smaller nukes and even balefire. The blast is small by nuke standards, but it is still a nuke - keep your distance.
+
+# Quest: Tau Cannon
+betterquesting.quest.tdHUi_fRThCZ4G_qNa6o0w.name=Tau Cannon
+betterquesting.quest.tdHUi_fRThCZ4G_qNa6o0w.desc=The §6Tau Cannon§r fires tau particles using uranium as ammunition. Hold fire to charge a shot that passes through walls and pushes you backwards.
+
+# Quest: Laser Rifle
+betterquesting.quest.63VohT0WRGKEsxSG8paz7g.name=Laser Rifle
+betterquesting.quest.63VohT0WRGKEsxSG8paz7g.desc=The §6Laser Rifle§r has a barrel and receiver cast from bismuth bronze and a saturnite mechanism. It fires 24 powerful laser shots per energy cell and comes with a scope.
+
+# Quest: Saturnite Refits
+betterquesting.quest.CQMGpZHrQN2l9vT3kHZHwg.name=Saturnite Refits
+betterquesting.quest.CQMGpZHrQN2l9vT3kHZHwg.desc=Saturnite mechanisms upgrade three guns into named versions: a pair of §6Target Pistols§r, the §6Zebra Rifle§r and the §6Shredder§r auto shotgun.
+
+# Quest: Ballistic Inserts
+betterquesting.quest.vRKlntSnQgetOcpVZBIigg.name=Ballistic Inserts
+betterquesting.quest.vRKlntSnQgetOcpVZBIigg.desc=The kevlar insert can be upgraded. The §6SAPI Plate§r adds plastic to it, and the §6ESAPI Plate§r adds weapon steel on top of that. The §6Uranium Plate§r is a depleted uranium alternative. Each step gives more damage resistance.
+
+# Quest: Advanced Jetpacks
+betterquesting.quest.vVEwAflPQeSuhsNvSBcJDA.name=Advanced Jetpacks
+betterquesting.quest.vVEwAflPQeSuhsNvSBcJDA.desc=The §6Vectored Jetpack§r is built on the builder's jetpack with high-speed steel and a military grade circuit and allows precise flight in every direction. Adding saturnite, desh and copper turns it into the §6Boostpack§r, which gives powerful bursts of speed.
+
+# Quest: Medium Missiles
+betterquesting.quest.0aqrO0lsRdyMsaD1x302pw.name=Medium Missiles
+betterquesting.quest.0aqrO0lsRdyMsaD1x302pw.desc=Tier 2 missiles use a §6Medium Thruster§r made from graphite, steel and a motor, a titanium §6Medium Fuel Tank§r and a §6Medium Warhead§r. They fly further and hit much harder than small missiles. Three EMP devices welded onto a medium thruster and fuel tank give the §6Strong EMP Missile§r.
+
+# Quest: Nuclear Missiles
+betterquesting.quest.3TSisRpPSFalHXpU-BMAQA.name=Nuclear Missiles
+betterquesting.quest.3TSisRpPSFalHXpU-BMAQA.desc=The largest missiles need a §6Large Thruster§r of high-speed steel and tungsten carbide and a saturnite §6Large Fuel Tank§r. The §6Nuclear Warhead§r is built from uranium-235, lead, titanium and a control unit.%n%nThe §6Nuclear Missile§r and the multi-warhead §6Thermonuclear Missile§r are the most destructive payloads a launch pad can deliver.
+
+# Quest: Tsar Bomba
+betterquesting.quest.vL5-YdoKS6Kcwncl5cGpHQ.name=Tsar Bomba
+betterquesting.quest.vL5-YdoKS6Kcwncl5cGpHQ.desc=The §6Tsar Bomba§r is the largest thermonuclear bomb you can build, assembled around a §6Tsar Bomba Core§r with titanium, steel and an advanced control unit. It flattens an enormous area and spreads fallout far and wide - do not build it anywhere near something you care about.
+
+# Quest: N² Mine
+betterquesting.quest.Nkh_8YLFRbOm9AByh5o9Fw.name=N² Mine
+betterquesting.quest.Nkh_8YLFRbOm9AByh5o9Fw.desc=The §6N² Mine§r is a weapon of mass destruction without any radiation: a huge cluster of §6Large Explosive Charges§r around magnetized tungsten. It leaves an enormous crater, but no fallout.
+
+# Quest: Custom Nuke
+betterquesting.quest.cGCqCw04Sr2DI5y1Tdfilg.name=Custom Nuke
+betterquesting.quest.cGCqCw04Sr2DI5y1Tdfilg.desc=The §6Custom Nuke§r is an empty bomb casing that you fill yourself. Explosive charges set the conventional yield, and nuclear, hydrogen, dirty and schrabidium rods turn it into the kind of nuclear explosion you want. A drop upgrade makes it fall when triggered, so it can be used as an air-dropped bomb.
+
+# Quest: Balefire Bomb
+betterquesting.quest.4Bj_SJ-mSCCcv9fF3wzyVg.name=Balefire Bomb
+betterquesting.quest.4Bj_SJ-mSCCcv9fF3wzyVg.desc=The §6Balefire Bomb§r is loaded with a §6Balefire Egg§r and has to be armed with a §6Spark Battery§r before it can go off. Its explosion leaves behind green balefire that spreads and burns for a very long time.
+
+# Quest: Strong Missile Variants
+betterquesting.quest.AkrpmfAGTxWf9FQttnnwPA.name=Strong Missile Variants
+betterquesting.quest.AkrpmfAGTxWf9FQttnnwPA.desc=Medium warheads come in the same types as small ones. Weld one onto a medium fuel tank and thruster for the tier 2 version:%n%n§6Strong Cluster Missile§r - scatters fifty bomblets around the impact.%n§6Strong Incendiary Missile§r - a large explosion that sets everything flammable around it on fire.%n§6Enhanced Bunker Buster§r - twenty explosions in a column, digging straight down into a bunker.
+
+# Quest: Heavy Missiles
+betterquesting.quest.cf_uLA_QQv2CI-i9YV14rg.name=Heavy Missiles
+betterquesting.quest.cf_uLA_QQv2CI-i9YV14rg.desc=Tier 3 missiles carry a large warhead on two medium fuel tanks and four medium thrusters. Large warheads are built around a military grade circuit.%n%n§6Spare Missile§r - a massive high explosive blast.%n§6Inferno Missile§r - the same blast, followed by setting every block in the area on fire.%n§6Bomblet Rain§r - a hundred bomblets.%n§6The Concrete Cracker§r - thirty eroding explosions that bore through almost anything.
+
+# Quest: Stealth Missile
+betterquesting.quest.rAsMrYHUThezu4Jzc7EOxA.name=Stealth Missile
+betterquesting.quest.rAsMrYHUThezu4Jzc7EOxA.desc=Coated in hard plastic and black paint, the §6Stealth Missile§r cannot be seen by any radar - which also means anti-ballistic missiles never get a chance to intercept it.
+
+# Quest: Improvised Missiles
+betterquesting.quest.Iu31A2DLSeeDBEGN582zpw.name=Improvised Missiles
+betterquesting.quest.Iu31A2DLSeeDBEGN582zpw.desc=A §6Small Missile Assembly§r and some duct tape turn a payload into a missile.%n%n§6EMP Missile§r - an EMP device taped on. It shuts down machines and energy storage around the impact.%n§6Micro-Nuclear Missile§r - a high yield mini nuke from the Fat Man, delivered over a much longer distance.
+
+# Quest: Taint-Tipped Missile
+betterquesting.quest.nLA4ZI0BSGCJ3qZJN6NlXg.name=Taint-Tipped Missile
+betterquesting.quest.nLA4ZI0BSGCJ3qZJN6NlXg.desc=A Small Missile Assembly filled with poisonous mud from the Watz, spark mix and magic powder. On impact a small explosion spreads taint across the area.
+
+# Quest: Schrabidium Missile
+betterquesting.quest.s3F__6BXSEuiB1RtsEieRQ.name=Schrabidium Missile
+betterquesting.quest.s3F__6BXSEuiB1RtsEieRQ.desc=An anti-schrabidium cell and a quantum circuit taped to a Small Missile Assembly. The resulting antimatter explosion erases everything in a large sphere.
+
+# Quest: Black Hole Missile
+betterquesting.quest.6-B_BBXyRgyZvHBu_XqQCg.name=Black Hole Missile
+betterquesting.quest.6-B_BBXyRgyZvHBu_XqQCg.desc=A black hole - a singularity wrapped in xen crystals - on a Small Missile Assembly, guided by an advanced control unit. On impact it opens a black hole that swallows the area.
+
+# Quest: The Old Silo
+betterquesting.quest.pGANe4ADSTywPKCgsehWSw.name=The Old Silo
+betterquesting.quest.pGANe4ADSTywPKCgsehWSw.desc=Abandoned missile silos are hidden around the world, with an §6Old Launch Pad§r under a large silo hatch. The pad still holds its §6Damaged Doomsday Missile§r.%n%nTo launch it, you need a §6Silo Launch Key§r from the silo itself and a §6Silo Launch Code§r, assembled from eight §6Launch Code Pieces§r found in loot around the world. Put the code, the key and a designator into the old pad to launch it - or release the missile from the pad and take it with you.%n%nSilo hatches are also craftable, if you want to build a silo of your own.
+
+# Quest: Doomsday Missile
+betterquesting.quest.48YJ6QlRRSmaMfwaP5HjoA.name=Doomsday Missile
+betterquesting.quest.48YJ6QlRRSmaMfwaP5HjoA.desc=A damaged doomsday missile can be restored on a tier 5 anvil with hard plastic, welded aluminium and plutonium-239. The damaged one already hits as hard as a nuclear missile; the restored §6Doomsday Missile§r has twice the radius and spreads far more fallout.
+
+# Quest: Missile Assembly Station
+betterquesting.quest.LnR6BjmpRr2oLTPLLLSQag.name=Missile Assembly Station
+betterquesting.quest.LnR6BjmpRr2oLTPLLLSQag.desc=Custom missiles are designed part by part. The §3Missile Assembly Station§r takes a §6targeting circuit§r, a §6warhead§r, a §6fuselage§r, optional §6fins§r and a §6thruster§r, and turns them into a §6Custom Missile§r. The rules:%n%n- The warhead must match the top size of the fuselage, and the thruster its bottom size.%n- The thruster must burn the same fuel as the fuselage.%n- The thruster's lift must be at least the warhead's mass. Heavy warheads need a size 10/15 fuselage with a size 15 thruster.%n%nCustom missiles are launched from the compact or the large launch pad, not the regular one.
+
+# Quest: Missile Targeting Circuits
+betterquesting.quest.rgtJthQ1Q16_MPiPiaUHAw.name=Missile Targeting Circuits
+betterquesting.quest.rgtJthQ1Q16_MPiPiaUHAw.desc=Every custom missile needs a targeting circuit. The five tiers are built from rubber, steel scaffolding and a circuit: a vacuum tube, an analog, an integrated, a military grade and a versatile circuit board.%n%nEach tier cuts the missile's inaccuracy - from 10% at tier 1 down to none at all at tier 5.
+
+# Quest: Missile Fuselages
+betterquesting.quest.9glSJYXoQtuCDwDLrUShkw.name=Missile Fuselages
+betterquesting.quest.9glSJYXoQtuCDwDLrUShkw.desc=The fuselage holds the fuel and decides the missile's size and fuel type: kerosene, solid fuel, hydrogen, balefire or xenon. Size 15 fuselages carry six times the fuel of size 10 ones and fly much further. The 10/15 adapters take a size 10 warhead on a size 15 body.%n%nSurrounding a fuselage with materials in the crafting grid gives it a new paint job. These variants are purely cosmetic.
+
+# Quest: Missile Fins
+betterquesting.quest._MnRBEyMQSicsvZ1w4C4-Q.name=Missile Fins
+betterquesting.quest._MnRBEyMQSicsvZ1w4C4-Q.desc=Fins are optional, but they reduce how far off course the missile drifts. §6Cruise fins§r are the most precise size 10 fins, followed by space fins and flat fins. At size 15, thin fins beat flat fins.
+
+# Quest: Conventional Warheads
+betterquesting.quest.aLMvhA-JTo-EsUerD06GzA.name=Conventional Warheads
+betterquesting.quest.aLMvhA-JTo-EsUerD06GzA.desc=High explosive, incendiary and bunker buster warheads, built in the Assembly Machine around an integrated circuit. The size 15 versions hit several times harder but weigh more, so they need a size 15 thruster.
+
+# Quest: Nuclear Warheads
+betterquesting.quest.88TaiXegST698VlKu90GHw.name=Nuclear Warheads
+betterquesting.quest.88TaiXegST698VlKu90GHw.desc=Plutonium-239, a neutron reflector and a control unit make a nuclear warhead. The size 10 micro and regular warheads fit small missiles; the size 15 nuclear warhead is among the heaviest payloads a custom missile can carry.%n%nThe size 15 §6N² Mine§r warhead destroys on a nuclear scale without any radiation.
+
+# Quest: Exotic Warheads
+betterquesting.quest.8zgvKFFwTFuwEPa_kRi5_g.name=Exotic Warheads
+betterquesting.quest.8zgvKFFwTFuwEPa_kRi5_g.desc=§6Balefire§r - a balefire shard and magic powder; the explosion leaves balefire burning in its wake.%n§6Tainted§r and §6Pink Cloud§r - magic powder payloads that spread taint or a pink cloud instead of exploding.%n§6Boxcar?§r - a starmetal thermonuclear warhead with the highest yield of any custom warhead.
+
+# Quest: Compact Launch Pad
+betterquesting.quest.T_uazOsiRnifrG-0In7WFg.name=Compact Launch Pad
+betterquesting.quest.T_uazOsiRnifrG-0In7WFg.desc=Place the §3Compact Launcher Core Component§r and surround it with eight §6Launch Pad Structure Blocks§r to build the §3Compact Launch Pad§r.%n%nIt launches size 10 custom missiles. Fill it with the missile's fuel, charge it to at least 75% and insert a designator, then apply a redstone signal.
+
+# Quest: Large Launch Pad
+betterquesting.quest.QGgb3OOOR8yxM66hKOyWwg.name=Large Launch Pad
+betterquesting.quest.QGgb3OOOR8yxM66hKOyWwg.desc=The §3Large Launch Pad§r is built from the large core component, 80 launch pad structure blocks and 11 scaffold blocks. Its interface lets you switch the pad between missile sizes, so it can launch the biggest custom missiles you can design.
+
+# Quest: Advanced Designators
+betterquesting.quest.koiSMnGxTh--XkYKz5V4ww.name=Advanced Designators
+betterquesting.quest.koiSMnGxTh--XkYKz5V4ww.desc=§6Manual Target Designator§r - enter the target coordinates by hand instead of pointing at them.%n§6Redstone-over-Radio Designator§r - broadcasts the coordinates of the block you aim at on a radio channel, so any linked launcher can fire at it.%n§6Long Range Artillery Remote§r - link it to an artillery turret, then aim from anywhere to call in a strike.
+
+# Quest: Large Radar
+betterquesting.quest.QNMeMYVYTBKCgfnEttNS7A.name=Large Radar
+betterquesting.quest.QNMeMYVYTBKCgfnEttNS7A.desc=The §3Large Radar§r works like the regular radar, but covers a much larger area. It is built from technetium or cadmium steel, magnetrons and a desh motor.
+
+# Quest: Meteorite Sword
+betterquesting.quest.jnm2B5uCQmywtlowulKOJA.name=Meteorite Sword
+betterquesting.quest.jnm2B5uCQmywtlowulKOJA.desc=A meteorite blade on a gold-plated hilt makes the §6Meteorite Sword§r, and it can be improved step by step:%n%n§6Seared§r - heated in a furnace.%n§6Reforged§r - the hot sword smithed with a forged meteorite ingot on a desh anvil.%n§6Hardened§r - pressed with a flat stamp.%n§6Alloyed§r - smelted with cobalt in the Blast Furnace.
+
+# Quest: Steel Ranger Power Armor
+betterquesting.quest.HLxQVqj-Q6yLo4DWXsDtEA.name=Steel Ranger Power Armor
+betterquesting.quest.HLxQVqj-Q6yLo4DWXsDtEA.desc=The next power armor after the T-51b. Its §6Iron-Shod Armor Plating§r is smithed on a desh anvil, and the pieces are assembled with titanium armor, an M65 gas mask and integrated circuits.%n%nA powered, sealed suit with 95% radiation resistance, a Geiger counter, V.A.T.S. and strength and jump boosts. Dye it red and black for the §6AJR§r paint scheme.
+
+# Quest: Remnants Power Armor
+betterquesting.quest.YBMp_N7iTLeKt5htR1GVaQ.name=Remnants Power Armor
+betterquesting.quest.YBMp_N7iTLeKt5htR1GVaQ.desc=The Remnants armor is built on CMB gear with saturnite, a military grade circuit and §6Legendary Parts§r. Legendary parts are crafted from §6Heavy Chainsteel§r (smithed hot on a desh anvil) and rare §6Alexandrite§r gems.%n%nIt gives 99% radiation resistance and a strong strength boost.
+
+# Quest: Lunar Cybernetic Armor
+betterquesting.quest.iHD-hU2bSL-Jb3J86U6IsQ.name=Lunar Cybernetic Armor
+betterquesting.quest.iHD-hU2bSL-Jb3J86U6IsQ.desc=Starmetal and §6Lunar Plating§r make a powered suit that gives speed, jump, saturation and Rad-X effects. Add titanium fins and a tank of xenon to the plating for the §6Winged§r version, which can fly.%n%nThe lunar helmet and winged plating are also the base of the DNT nanosuit.
+
+# Quest: Fau Armor
+betterquesting.quest.ll0_WmvMS2Spdwi5OhCLWQ.name=Fau Armor
+betterquesting.quest.ll0_WmvMS2Spdwi5OhCLWQ.desc=§6Fau Armor Plating§r is smithed on a tier 6 anvil from forged meteorite ingots, desh and yharonite, and fitted onto starmetal armor. The powered suit has thermal sight and 99.99% radiation resistance.%n%nIts plating is also needed for the DNT armor plating.
+
+# Quest: Euphemium Armor
+betterquesting.quest.HkMlbNXuTVeBUXF_GjWhFg.name=Euphemium Armor
+betterquesting.quest.HkMlbNXuTVeBUXF_GjWhFg.desc=§6Euphemium Compound Plates§r come from the Plasma Forge, made with euphemium and astatine. A full set grants maximum regeneration, resistance, fire resistance and saturation, and slows every fall - practically nothing can hurt its wearer.
+
+# Quest: Penance and Subtlety
+betterquesting.quest.SL0sIt-ET-6NyPswe4S49g.name=Penance and Subtlety
+betterquesting.quest.SL0sIt-ET-6NyPswe4S49g.desc=Two special versions of the anti-materiel rifle are made on §6Pedestals§r: place the rifle on a central pedestal and the other ingredients on the eight pedestals around it. Pedestals cannot be crafted - they are found in secret dungeon rooms.%n%n§6Subtlety§r - starmetal and cast aluminium plates.%n§6Penance§r - starmetal, cast high-speed steel plates, a silencer and black furniture.
+
 
 ## Quest Line: Building and Decorating
 betterquesting.questline.7-1bBIkKRc6xhh5bwIGsjg.name=Building and Decorating
 betterquesting.questline.7-1bBIkKRc6xhh5bwIGsjg.desc=Improve your builds by using Chisel, Architecturecraft and Better Builder's Wands.
 
+# Quest: Steel Construction
+betterquesting.quest.1vfDAYnaTruXvHONx0hdbA.name=Steel Construction
+betterquesting.quest.1vfDAYnaTruXvHONx0hdbA.desc=Steel is not only for machines. §6Steel Beams§r and §6Scaffolding§r (which can be dyed grey, red, white or yellow) are the backbone of industrial buildings and give you something to climb while building multiblocks.%n%n§6Grates§r let items and light through, while §6Steel Walls§r, §6Corners§r and §6Roofs§r give your factory a proper hangar look.
+
 # Quest: Building Gadget
 betterquesting.quest.8voIl_BdSZWqZcTPQVjo9Q.name=Building Gadget
 betterquesting.quest.8voIl_BdSZWqZcTPQVjo9Q.desc=The §6Building Gadget§r is an advanced building tool which allows the user to create many complex shapes with ease. Press the ALT key to open its menu.%n%n§2It consumes power for blocks placed.§r
+
+# Quest: Barbed Wire
+betterquesting.quest.KI42MO76Q_-ML4wdGOMDNg.name=Barbed Wire
+betterquesting.quest.KI42MO76Q_-ML4wdGOMDNg.desc=Glyphids and raiders have to get to you first. §6Barbed Wire§r, crafted from steel wire and iron, slows down anything that walks into it and deals 2 damage every tick it stays inside.%n%nSurround eight pieces of wire with an additive to get a stronger variant:%n§6Flaming Barbed Wire§r (red phosphorus) also sets its victims on fire.%n§6Poisoned Barbed Wire§r (poison powder) inflicts Poison III.%n§6Caustic Barbed Wire§r (a tank of hydrogen peroxide) eats away at every piece of armor the player wears.%n§6Withered Barbed Wire§r (a wither skeleton skull) inflicts Wither V.%n%n§6Radioactive Barbed Wire§r is made later from yellowcake and nuclear waste: it deals 5 damage and irradiates everything caught in it.%n%nA double ring of wire around your base buys you the seconds you need to grab a gun.
+
+# Quest: Cage Lamps
+betterquesting.quest.Nvz-QdoyQ_OcGQinzgN1gQ.name=Cage Lamps
+betterquesting.quest.Nvz-QdoyQ_OcGQinzgN1gQ.desc=Torches do not belong in a factory. §6Cage Lamps§r are crafted from glass, tungsten wire and iron, eight at a time, and light up a large area.%n%nThey shine without any power. A redstone signal switches them off, so a single lever can control a whole hall.
 
 # Quest: Auto Chisel
 betterquesting.quest.QS-1ophNScaPpKGGoCqFMQ.name=Auto Chisel
@@ -1383,6 +2060,10 @@ betterquesting.quest.QS-1ophNScaPpKGGoCqFMQ.desc=The §3Auto Chisel§r allows fo
 # Quest: Chisel
 betterquesting.quest.TA6SPr3KTbKsgRFceNMZmA.name=Chisel
 betterquesting.quest.TA6SPr3KTbKsgRFceNMZmA.desc=The §6Chisel§r is a building tool which can be used to change the textures of blocks, and even unlock new and unique designs.
+
+# Quest: Reinforced Stone
+betterquesting.quest.Vw7w4WNGQamyVDkVK_MC3w.name=Reinforced Stone
+betterquesting.quest.Vw7w4WNGQamyVDkVK_MC3w.desc=Explosions are part of everyday life in NTM. §6Reinforced Stone§r is crafted from stone and cobblestone and resists blasts far better than normal stone - use it for the walls around anything that might blow up, like boilers and early reactors.%n%nBlocks of §6Firebrick§r are a heat-resistant building material and look right at home around furnaces and the crucible.
 
 # Quest: Schematica
 betterquesting.quest.VyF-RUbsSuS8J2hbI5CIkw.name=Schematica
@@ -1400,14 +2081,90 @@ betterquesting.quest.mPZ8D32cT5WrvlKuPNq90g.desc=The §6Building Wand§r allows 
 betterquesting.quest.p7NNm2NvRgWz37LQO6yraw.name=ArchitectureCraft
 betterquesting.quest.p7NNm2NvRgWz37LQO6yraw.desc=§dArchitectureCraft§r introduces the §3Architect's Workbench§r which can be used to change the shapes blocks.%n%nThe §6Architect's Hammer§r can be used to easily rotate the blocks.%n%nThe §6Architect's Glowbrush§r can be used to apply light to any block.
 
+# Quest: Doors
+betterquesting.quest.t8EmgjkxSK6HQNnU6NskNg.name=Doors
+betterquesting.quest.t8EmgjkxSK6HQNnU6NskNg.desc=NTM adds sturdier doors with their own style: the §6Metal Door§r made of iron and steel, the wooden §6Office Door§r and the heavy §6Bunker Door§r made of steel and lead.
+
 # Quest: Sign Pictures
 betterquesting.quest.wAu-q390TlKihyp-bEI2lw.name=Sign Pictures
 betterquesting.quest.wAu-q390TlKihyp-bEI2lw.desc=The §dSignPicture§r mod allows one to put any image on a sign, opening the door to many unique building designs. Press  to get started.
+
+# Quest: Concrete
+betterquesting.quest.1qGZU4j5SqmrXF2tzb297Q.name=Concrete
+betterquesting.quest.1qGZU4j5SqmrXF2tzb297Q.desc=The Chemical Plant mixes cement, gravel, sand and water into 16 blocks of §6Concrete§r. It resists explosions fourteen times better than stone, and mobs cannot spawn on it.%n%nFrom concrete you craft tiles, sixteen dyed colors and concrete bricks. Asbestos concrete is slightly sturdier still.
+
+# Quest: Reinforced Concrete
+betterquesting.quest.db4noMeuQV-CVwGagOhFNw.name=Reinforced Concrete
+betterquesting.quest.db4noMeuQV-CVwGagOhFNw.desc=Craft §6Rebar§r from steel bolts and place it where your wall should be - or feed it into the Crystallizer together with liquid concrete from the Chemical Plant. Rebar filled with concrete becomes §6Reinforced Concrete§r, which resists blasts almost twice as well as plain concrete.
+
+# Quest: Reinforced Bricks and Glass
+betterquesting.quest.ClEAe3kiQvGpTf5nu8sq9A.name=Reinforced Bricks and Glass
+betterquesting.quest.ClEAe3kiQvGpTf5nu8sq9A.desc=Iron bars woven into concrete bricks make §6Reinforced Bricks§r, more than twice as strong as concrete. Add steel bolts and tar for §6Compound Mesh§r, stronger still.%n%n§6Reinforced Glass§r - glass with iron bars - holds up better than stone, but is still far weaker than concrete. For a window that survives a real blast, make §6Reinforced Laminate§r in the Chemical Plant from glass, steel bolts, xylene and phosgene: it is as strong as reinforced bricks.
+
+# Quest: Ducrete
+betterquesting.quest.PyDmcn4NTSa-2YLLktYj_w.name=Ducrete
+betterquesting.quest.PyDmcn4NTSa-2YLLktYj_w.desc=Concrete made with ferrouranium instead of gravel. §6Ducrete§r resists explosions more than three times better than concrete, §6Ducrete Bricks§r even better, and §6Reinforced Ducrete§r - bricks bound with steel plates and a uranium-238 billet - is twice as strong as plain ducrete. Use it for reactor halls and bunkers.
+
+# Quest: Asphalt
+betterquesting.quest.jLFR9FuFQky3wmsWgRDemw.name=Asphalt
+betterquesting.quest.jLFR9FuFQky3wmsWgRDemw.desc=The Chemical Plant turns gravel, sand and bitumen into 16 blocks of §6Asphalt§r. Walking or running on it makes you 1.5 times faster - perfect for the roads between your factory buildings. A glowing variant lights up the road at the same time.
+
+# Quest: Industrial Lighting
+betterquesting.quest.avC298oVTcqUyMhtjxltiA.name=Industrial Lighting
+betterquesting.quest.avC298oVTcqUyMhtjxltiA.desc=§6Fluorescent Lamps§r (glass, mercury, aluminium) shine four times further than cage lamps, and neighbouring lamps join into long tubes.%n§6Halogen Floodlights§r (glass, bromine, steel) reach 32 blocks.%n§6Electric Floodlights§r use 100 HE per tick, but throw a beam wherever you aim them when placing.%n§6Tritium Lamps§r - red phosphorus, a cell of tritium and sulfur or aluminium - glow green or blue when powered by redstone.
+
+# Quest: Special Glass
+betterquesting.quest.9mznD7huQ3GF05IEyjvkOA.name=Special Glass
+betterquesting.quest.9mznD7huQ3GF05IEyjvkOA.desc=Smelting the matching sand mix gives §6Lead Glass§r and §6Boron Glass§r; boron glass is also used for the boron pipette and the boron chemistry set. §6Quartz Glass§r comes from the Arc Furnace and goes into laser crystals. §6Polarized Glass§r and the faintly glowing §6Uranium Glass§r are for decoration.
+
+# Quest: Heavy Doors
+betterquesting.quest.a7YN_kP6Rsmlx0WnWYBjew.name=Heavy Doors
+betterquesting.quest.a7YN_kP6Rsmlx0WnWYBjew.desc=The Assembly Machine builds large animated doors around motors. Open them by hand or with a redstone signal - a powered door stays open, and padlocks lock them like any other door.%n%nThe §6Secure Access Door§r is the strongest, followed by the §6Blast Door§r, §6Vault Door§r, §6Fire Door§r, §6Large Vehicle Door§r and the sliding doors. The §6Sliding Blast Door§r has a reinforced glass window. The §6Water§r and §6Cargo Doors§r are light doors for submarines and warehouses.
+
+# Quest: Metal Decoration
+betterquesting.quest.UyGHIORvTvaKF6WmWEW_Aw.name=Metal Decoration
+betterquesting.quest.UyGHIORvTvaKF6WmWEW_Aw.desc=Decorative metal blocks for every metal, steel grates and poles, wire mesh fences, steel trapdoors, sandbags and sturdier ladders give a factory its industrial look.
+
+# Quest: Decorative Pipes
+betterquesting.quest.9cS75XFCSdWhYjg-ddAgBw.name=Decorative Pipes
+betterquesting.quest.9cS75XFCSdWhYjg-ddAgBw.desc=§6Steel Pipes§r carry nothing - they are purely decorative. They come as single, quad, rimmed and framed pipes, in plain, green, red, marked and rusted versions, so you can dress up walls and ceilings without tangling your real pipe network.
+
+# Quest: Building Stones
+betterquesting.quest.qQ1-xJWWR7KFo-FMM9L9Jw.name=Building Stones
+betterquesting.quest.qQ1-xJWWR7KFo-FMM9L9Jw.desc=Basalt, gneiss, depth rock and meteorite can all be cut into bricks and tiles. Lab tiles and vinyl tiles make clean floors for laboratories and offices, obsidian bricks are a sturdy dark wall, and light bricks a cheap red one.
 
 
 ## Quest Line: Farming and Cooking
 betterquesting.questline.UJ4N6pDhQ5aGBxBW9j-BVw.name=Farming and Cooking
 betterquesting.questline.UJ4N6pDhQ5aGBxBW9j-BVw.desc=Everything about how to farm and cook.
+
+# Quest: Coffee
+betterquesting.quest.JFeyBH60RcaKJmhRv-V94Q.name=Coffee
+betterquesting.quest.JFeyBH60RcaKJmhRv-V94Q.desc=Raw coffee beans turn up in office loot. Plant them on farmland - like every NTM crop, coffee only grows in a breathable atmosphere.%n%nRoast the beans in a furnace, grind them in the Shredder and mix the powder with milk, a water bottle and sugar. A cup of §6Coffee§r heals 5 hearts and gives Speed III for a minute.%n%n§cRadium coffee§r gives the same boost and a lot of radiation.
+
+# Quest: Tea
+betterquesting.quest._9Su2g26SkWvlSQmTr5lNg.name=Tea
+betterquesting.quest._9Su2g26SkWvlSQmTr5lNg.desc=Tea seeds come from office loot. A fully grown tea plant gives §6Tea Leaves§r and more seeds. Steep the leaves in water in the Industrial Mixer and fill an empty teacup with the tea.%n%nA §6Cup of Tea§r heals and gives Resistance V for 30 seconds.
+
+# Quest: Mint
+betterquesting.quest.5pGnPJUbRM2FUo2suXuh4w.name=Mint
+betterquesting.quest.5pGnPJUbRM2FUo2suXuh4w.desc=Wild mint grows in plains, and its leaves can be planted as a crop. The Chemical Plant extracts §6Menthol Crystals§r from the leaves - and with Minmus rock it makes §6Mint Ice Cream§r and §6Mint Slices§r.
+
+# Quest: Wax Crop
+betterquesting.quest.Szmk9xQaQcWQ0Kx8w7fX1Q.name=Wax Crop
+betterquesting.quest.Szmk9xQaQcWQ0Kx8w7fX1Q.desc=The rubber cacti of Tekto drop §6Chlorinated Seeds§r. They only grow on rubber farmland in Tekto's air or chlorine, and a ripe plant yields wax along with more seeds.
+
+# Quest: Energy Drinks
+betterquesting.quest.gMjzpPbyQeOxYJjWNgqPtg.name=Energy Drinks
+betterquesting.quest.gMjzpPbyQeOxYJjWNgqPtg.desc=An empty can made from aluminium plates, a water bottle, sugar and one special ingredient make an energy drink. Each gives a different 30-second mix of speed, resistance, strength, regeneration or jump boost - niter for §6Smart§r, diesel for §6Creature§r, a cluster pellet for §6Red Bomb§r, fluorite for §6Dr. Sugar§r, sulfur for §6Overcharge§r and meteorite dust for §6Black Mesa Luna§r.
+
+# Quest: Nuka-Cola
+betterquesting.quest.W18FmmfIQoiQFuz18UWXyg.name=Nuka-Cola
+betterquesting.quest.W18FmmfIQoiQFuz18UWXyg.desc=Bomb-shaped bottles are blown from glass panes and filled with water, sugar and coal dust for §6Nuka-Cola§r, redstone for Nuka-Cherry or trinitite for Nuka-Cola Quantum. A carrot and a gold nugget turn Nuka-Cola into §6S~Cola§r and Quantum into S~Cola RAD.%n%nYou need a §6Bottle Opener§r in your inventory to drink them, and every bottle leaves a cap behind. 128 caps press into a decorative cap block.
+
+# Quest: Schrabidium Apples
+betterquesting.quest.uiM9X03hRa-RWqKm2E0wDQ.name=Schrabidium Apples
+betterquesting.quest.uiM9X03hRa-RWqKm2E0wDQ.desc=The NTM answer to golden apples: an apple surrounded by schrabidium. With nuggets it gives long regeneration, resistance and fire resistance. With ingots it adds strength, haste, speed, jump boost, health boost, absorption and saturation for a minute. With blocks the effects become permanent.
 
 
 ## Quest Line: Applied Energistics 2
@@ -1751,6 +2508,188 @@ betterquesting.quest.pSowjULQT4ep05MVXa7BJQ.desc=Be wary, they like to disguise 
 # Quest: Time to Kill (Wither)
 betterquesting.quest.q1ilrpayTHWJ-bajd9WM1A.name=Time to Kill (Wither)
 betterquesting.quest.q1ilrpayTHWJ-bajd9WM1A.desc=After collecting a couple of those wither skeleton heads, you feel like you could use some more action. So why not kill a wither?
+
+
+## Quest Line: Nuclear Fuels
+betterquesting.questline.y9TwGO1qR8i9OT3cykMuAg.name=Nuclear Fuels
+betterquesting.questline.y9TwGO1qR8i9OT3cykMuAg.desc=Every nuclear fuel in NTM behaves differently. This chapter follows the fuel cycle: each fuel you burn leaves behind spent fuel that reprocesses into the material for the next one. A quest accepts its fuel in whichever reactor you run - ZIRNOX, PWR, RBMK or Watz - and explains how it behaves in each of them.
+
+# Quest: Reactor Fuel Basics
+betterquesting.quest.eSM0xSV9TumYwygzoFeC6A.name=Reactor Fuel Basics
+betterquesting.quest.eSM0xSV9TumYwygzoFeC6A.desc=Fuel names follow one scheme: §6N§r is natural, §6L§r, §6M§r and §6HE§r are low, medium and highly enriched, followed by the element and isotope - §6MEU§r is medium enriched uranium, §6HEP-239§r highly enriched plutonium-239.%n%nAll fuels start as billets. A §3ZIRNOX§r rod takes two billets, a §3PWR§r rod two billets around a polymer plate, an §3RBMK§r rod eight billets in an empty RBMK rod, and a §3Watz§r pellet four ingots around graphite. The tooltip of every rod shows its exact stats.%n%nSpent fuel comes out hot. Cool it in the Spent Fuel Pool Drum, then reprocess ZIRNOX, PWR and Watz fuel in the PUREX. Spent RBMK rods are taken apart into pellets for the SILEX. What you get back is the start of the next quest.
+
+# Quest: Natural Uranium Fuel
+betterquesting.quest.mTAQANa3QdKifJYLtZWRpQ.name=Natural Uranium Fuel
+betterquesting.quest.mTAQANa3QdKifJYLtZWRpQ.desc=The cheapest fuel: plain uranium billets, no enrichment needed.%n%n§3ZIRNOX:§r the longest-lasting rod and the coolest one - a safe first fuel.%n§3RBMK:§r a medium, logarithmic fuel. Plutonium builds up as it burns, so it becomes more reactive over its life instead of less.%n%nSpent natural uranium is the main source of §6plutonium-239§r and reactor-grade plutonium.
+
+# Quest: MEU Fuel
+betterquesting.quest.REkJrtyiRwW7a5b-749gqg.name=MEU Fuel
+betterquesting.quest.REkJrtyiRwW7a5b-749gqg.desc=Uranium fuel billets are five parts uranium-238 to one part uranium-235, straight from the gas centrifuge cascade. MEU is the workhorse fuel of every reactor.%n%n§3ZIRNOX:§r more heat than natural uranium at a slightly shorter life.%n§3PWR:§r the gentlest PWR fuel, with a logarithmic reaction and the lowest heat per flux.%n§3RBMK:§r like natural uranium it gains reactivity as plutonium builds up.%n§3Watz:§r not self-igniting - it needs neighbouring pellets to start reacting.%n%nSpent MEU reprocesses into reactor-grade plutonium.
+
+# Quest: HEU-235 Fuel
+betterquesting.quest.KXKNuhWWQq6NpHM0mjI6SQ.name=HEU-235 Fuel
+betterquesting.quest.KXKNuhWWQq6NpHM0mjI6SQ.desc=Pure uranium-235 from a four-centrifuge cascade with the overclocking upgrade.%n%n§3ZIRNOX:§r much hotter than MEU, but burns out sooner.%n§3PWR:§r a square-root reaction: strong at low flux and flattening out at high flux.%n§3RBMK:§r a medium fuel with high reactivity and no extra heat multiplier.%n%nSpent HEU-235 is valuable: reprocessing gives §6neptunium-237§r and §6plutonium-238§r, the materials for neptunium fuels, neutron sources and RTG pellets.
+
+# Quest: Thorium Fuel
+betterquesting.quest.pTi2Yp6VR1mmH1QXgYn4FA.name=Thorium Fuel
+betterquesting.quest.pTi2Yp6VR1mmH1QXgYn4FA.desc=Thorium-232 does not split on its own, but it can be turned into fuel.%n%n§3ZIRNOX:§r place a §6Thorium-232 Rod§r next to burning fuel rods. It is a breeding rod and turns into a §6Thorium Fuel Rod§r over time.%n§3RBMK:§r ThMEU is thorium with an MEU driver. Its reaction is rated safe, it has the highest melting point of all uranium-family fuels and it gains reactivity strongly as it breeds.%n%nThorium fuel billets are crafted from five parts thorium-232 and one part uranium-233. Reprocessing spent thorium fuel gives back §6uranium-233§r.
+
+# Quest: HEU-233 Fuel
+betterquesting.quest.eP70vLRcQcypZfhpDH-K2A.name=HEU-233 Fuel
+betterquesting.quest.eP70vLRcQcypZfhpDH-K2A.desc=Uranium-233 bred from thorium is a stronger fuel than uranium-235.%n%n§3ZIRNOX:§r the hottest uranium rod, with a short life.%n§3PWR:§r a square-root reaction slightly stronger than HEU-235.%n§3RBMK:§r a §cdangerous§r linear fuel with 1.25x heat. The hotter the flux, the harder it reacts - keep control rods ready.%n%nSpent HEU-233 PWR fuel reprocesses into plutonium-238.
+
+# Quest: UZrH Fuel
+betterquesting.quest.knT6ramqQ8OFe5KshSI_xQ.name=UZrH Fuel
+betterquesting.quest.knT6ramqQ8OFe5KshSI_xQ.desc=Uranium zirconium hydride is made in the PUREX from an MEU billet and three zirconium billets with nitric acid and hydrogen. It exists only as an RBMK rod.%n%nIts special trait is a negative temperature coefficient: once the core passes §61000°C§r, the reaction weakens and stops completely at §61500°C§r, safely below its melting point. A UZrH core regulates itself.%n%nThe price is half the lifetime of other fuels, and its hull heats up much faster than usual.
+
+# Quest: Plutonium Fuel
+betterquesting.quest.cmZC5HBKRsyEA759v2ZQ_g.name=Plutonium Fuel
+betterquesting.quest.cmZC5HBKRsyEA759v2ZQ_g.desc=Plutonium fuel billets are two parts uranium-238 and one part reactor-grade plutonium from reprocessed uranium fuel.%n%n§3ZIRNOX:§r hotter than MEU, slightly shorter life.%n§3RBMK:§r LEP-239 is a medium logarithmic fuel that keeps gaining reactivity as it burns.
+
+# Quest: MEP Fuel
+betterquesting.quest.jG-nBEhpSlSgsXdAoAZjRg.name=MEP Fuel
+betterquesting.quest.jG-nBEhpSlSgsXdAoAZjRg.desc=Reactor-grade plutonium, a mix of plutonium-239 and plutonium-240, used without any dilution.%n%n§3PWR:§r a logarithmic fuel slightly stronger than MEU.%n§3RBMK:§r a medium square-root fuel.%n§3Watz:§r not self-igniting, but with more heat per flux than MEU pellets.%n%nSpent MEP Watz pellets are a source of §6plutonium-241§r.
+
+# Quest: HEP-239 Fuel
+betterquesting.quest.DkRZC9CeQZyO1Xx68EYaYA.name=HEP-239 Fuel
+betterquesting.quest.DkRZC9CeQZyO1Xx68EYaYA.desc=Pure plutonium-239, extracted from spent natural uranium.%n%n§3PWR:§r a square-root fuel with more heat per flux than any uranium rod.%n§3RBMK:§r a §cdangerous§r linear fuel with 1.25x heat.
+
+# Quest: MOX Fuel
+betterquesting.quest.dFFWl5mkTqmou3Nnkyv_gQ.name=MOX Fuel
+betterquesting.quest.dFFWl5mkTqmou3Nnkyv_gQ.desc=Mixed oxide fuel combines uranium fuel with plutonium. It is a way to burn the plutonium from reprocessing in the same reactor that produced it.%n%n§3ZIRNOX:§r noticeably hotter than MEU.%n§3PWR:§r logarithmic like MEU, but with more heat per flux.%n§3RBMK:§r a stronger logarithmic fuel that gains reactivity over its life.
+
+# Quest: HEP-241 Fuel
+betterquesting.quest.ywF-EbEGTxuU4G6sLZ8nVA.name=HEP-241 Fuel
+betterquesting.quest.ywF-EbEGTxuU4G6sLZ8nVA.desc=Plutonium-241 comes from spent MEP Watz pellets in the PUREX and from many spent RBMK pellets in the SILEX.%n%n§3PWR:§r a strong square-root fuel.%n§3RBMK:§r a §cdangerous§r linear fuel with 1.75x heat - one of the hottest fission fuels.%n§3Watz:§r self-igniting.%n%nSpent plutonium-241 Watz pellets reprocess into §6americium§r.
+
+# Quest: MEN Fuel
+betterquesting.quest.3GR4ga6zQuOR9GSOIeSwMw.name=MEN Fuel
+betterquesting.quest.3GR4ga6zQuOR9GSOIeSwMw.desc=Neptunium fuel billets dilute neptunium-237 from spent HEU with uranium-238.%n%n§3PWR:§r a logarithmic fuel as strong as MEP.%n§3RBMK:§r a medium square-root fuel that gains reactivity as plutonium-239 builds up, and reacts to both slow and fast neutrons.%n%nSpent MEN reprocesses into plutonium-239.
+
+# Quest: HEN Fuel
+betterquesting.quest.cEj-UqQBSqqy4Yv0sweYKA.name=HEN Fuel
+betterquesting.quest.cEj-UqQBSqqy4Yv0sweYKA.desc=Pure neptunium-237.%n%n§3PWR:§r one of the strongest PWR fuels - only schrabidium fuels have a stronger square-root reaction.%n§3RBMK:§r a fast neutron fuel - it reacts best to fast neutrons and releases fast neutrons, so moderators work against it.%n§3Watz:§r not self-igniting.
+
+# Quest: Neutron Sources
+betterquesting.quest.qKTjnxpbQqm5hFapT4fhWw.name=Neutron Sources
+betterquesting.quest.qKTjnxpbQqm5hFapT4fhWw.desc=A reactor needs neutrons to start. The radium-beryllium source works, but it is weak and melts at only 700°C.%n%n§6Pu238Be§r uses plutonium-238 from spent HEU. It emits twice as many neutrons and also reacts to incoming flux.%n§6Po210Be§r uses polonium-210, made by irradiating bismuth. It is a passive source with a strong output, but its yield is only a quarter of a normal rod.%n%nBoth are beryllium-moderated and emit slow neutrons.
+
+# Quest: LEA Fuel
+betterquesting.quest.NU73f1dPTHGvAFhsbzNWpg.name=LEA Fuel
+betterquesting.quest.NU73f1dPTHGvAFhsbzNWpg.desc=Americium fuel billets are two parts uranium-238 and one part reactor-grade americium.%n%n§3RBMK:§r §6self-igniting§r - it generates its own flux, so it keeps reacting with no other fuel around. Strong, with 1.5x heat, and gains reactivity over its life.%n§3Watz:§r the americium fuel pellet is self-igniting and produces a lot of heat.
+
+# Quest: MEA Fuel
+betterquesting.quest.pyJ4Sel7T5-77Qafc4V5ew.name=MEA Fuel
+betterquesting.quest.pyJ4Sel7T5-77Qafc4V5ew.desc=Reactor-grade americium, one part americium-241 to two parts americium-242.%n%n§3PWR:§r the strongest logarithmic PWR fuel.%n§3RBMK:§r §cdangerous§r: a negative-quadratic reaction peaks at medium flux and drops again above it. Self-igniting, 1.75x heat.%n§3Watz:§r self-igniting, with even more heat than the americium fuel pellet.
+
+# Quest: HEA-241 Fuel
+betterquesting.quest.AxdnMzTHTfiqorwhgQhpuA.name=HEA-241 Fuel
+betterquesting.quest.AxdnMzTHTfiqorwhgQhpuA.desc=Pure americium-241 exists only as an RBMK rod. It is a fast neutron fuel: it reacts to fast neutrons and releases fast neutrons, so it fits cores without moderators.%n%nSelf-igniting, with very high reactivity and 1.85x heat.
+
+# Quest: HEA-242 Fuel
+betterquesting.quest.uJzhb_PFQ3CCAipvJousxg.name=HEA-242 Fuel
+betterquesting.quest.uJzhb_PFQ3CCAipvJousxg.desc=Pure americium-242.%n%n§3PWR:§r a strong square-root fuel with high heat per flux.%n§3RBMK:§r a §cdangerous§r linear fuel with double heat. It does not self-ignite, unlike the other americium fuels.
+
+# Quest: LECm Fuel
+betterquesting.quest.nVH0uhHCTJ6CakCugUe9Ug.name=LECm Fuel
+betterquesting.quest.nVH0uhHCTJ6CakCugUe9Ug.desc=Curium is extracted from spent americium Watz pellets in the PUREX. Curium fuel billets dilute it with uranium-238.%n%n§3RBMK:§r a slow linear reaction, self-igniting, with 1.25x heat. Curium rods have a short life, a low melting point and a hull that heats up quickly - watch the hull temperature, not just the core.%n§3Watz:§r the curium fuel pellet is self-igniting.
+
+# Quest: MECm Fuel
+betterquesting.quest.VlkAaAMfRCiSLT5WSdJ6qg.name=MECm Fuel
+betterquesting.quest.VlkAaAMfRCiSLT5WSdJ6qg.desc=Reactor-grade curium, a mix of curium-244 and curium-245.%n%n§3RBMK:§r stronger than LECm with a higher self-ignition rate and melting point.%n§3Watz:§r the reactor-grade curium pellet is self-igniting and very hot. Spent pellets are the source of §6californium-252§r.
+
+# Quest: HECm Fuel
+betterquesting.quest.lMDSMZlRQdqFWCxgddIMjw.name=HECm Fuel
+betterquesting.quest.lMDSMZlRQdqFWCxgddIMjw.desc=Pure curium-245 is separated in the SILEX and exists only as an RBMK rod. It has the strongest self-ignition of the curium fuels and high reactivity, but the shortest life of them all.
+
+# Quest: Berkelium-247 Fuel
+betterquesting.quest.VHNWLt83R9eWrPoXAvT8fg.name=Berkelium-247 Fuel
+betterquesting.quest.VHNWLt83R9eWrPoXAvT8fg.desc=Berkelium-247 is recovered from spent americium Watz pellets.%n%n§3RBMK:§r a §cdangerous§r linear fuel with double heat and very high reactivity.%n§3Watz:§r self-igniting and hot, but its main trait is mud: it produces far more poisonous mud per flux than any other pellet. Use it when CMB steel production matters more than power.
+
+# Quest: Californium-251 Fuel
+betterquesting.quest.7VVzbp2IRgef-_wpOV1YJQ.name=Californium-251 Fuel
+betterquesting.quest.7VVzbp2IRgef-_wpOV1YJQ.desc=Californium-251 is separated in the SILEX from spent berkelium-247 RBMK pellets and berkelium waste. It is a Watz-only fuel: self-igniting, hot and with a high thermal multiplier.
+
+# Quest: Californium-252 Fuel
+betterquesting.quest.oDfAFUHiQZyGPd0vZa9RiA.name=Californium-252 Fuel
+betterquesting.quest.oDfAFUHiQZyGPd0vZa9RiA.desc=Californium-252 comes from spent reactor-grade curium Watz pellets. It has the highest heat emission of any Watz pellet - twice that of californium-251. Mix it carefully with absorber pellets.
+
+# Quest: Einsteinium-253 Fuel
+betterquesting.quest.z3Di7BybRq-r2NtwlXD-5A.name=Einsteinium-253 Fuel
+betterquesting.quest.z3Di7BybRq-r2NtwlXD-5A.desc=Einsteinium-253 comes from spent curium fuel Watz pellets. It has the strongest passive emission of all pellets, so it ignites a Watz on its own, but it produces almost no mud.
+
+# Quest: LES Fuel
+betterquesting.quest.X4tCxCkQThegxEDtxoxbJw.name=LES Fuel
+betterquesting.quest.X4tCxCkQThegxEDtxoxbJw.desc=LES ingots are crafted from schrabidium, neptunium-237 and beryllium.%n%n§3ZIRNOX:§r by far the hottest ZIRNOX rod.%n§3RBMK:§r beryllium-moderated: it reacts to and releases slow neutrons. A strong square-root fuel.%n§3Watz:§r self-igniting, like every schrabidium pellet.
+
+# Quest: MES Fuel
+betterquesting.quest.Tc-sfZIrRqiy_UUs3NK2ug.name=MES Fuel
+betterquesting.quest.Tc-sfZIrRqiy_UUs3NK2ug.desc=More schrabidium per ingot.%n%n§3RBMK:§r §cdangerous§r: a negative-quadratic reaction with very high reactivity that peaks at medium flux.%n§3Watz:§r self-igniting, more mud than LES.
+
+# Quest: HES Fuel
+betterquesting.quest.U8Bm3FWjSLW1WHqCk6xZCw.name=HES Fuel
+betterquesting.quest.U8Bm3FWjSLW1WHqCk6xZCw.desc=Highly enriched schrabidium.%n%n§3RBMK:§r a §cdangerous§r linear fuel with the highest reactivity of all regular fission fuels and 1.75x heat.%n§3Watz:§r self-igniting with strong passive emission.
+
+# Quest: Schrabidium-326 Fuel
+betterquesting.quest.oyxDU-q7QMqJzjp-JgxzmQ.name=Schrabidium-326 Fuel
+betterquesting.quest.oyxDU-q7QMqJzjp-JgxzmQ.desc=Pure, undiluted schrabidium-326 can be burned directly.%n%n§3PWR:§r the HES-326 rod shares the highest heat per flux of all PWR fuels with HES-327.%n§3Watz:§r the pure schrabidium pellet has the strongest emission and most mud of the schrabidium pellets.%n%nReprocessing spent schrabidium fuel gives §6solinium§r.
+
+# Quest: Solinium Fuel
+betterquesting.quest.0pEM_nLPTYWZ7_yKQOsikA.name=Solinium Fuel
+betterquesting.quest.0pEM_nLPTYWZ7_yKQOsikA.desc=Solinium (schrabidium-327) comes from schrabidium ore and from reprocessing spent schrabidium fuels. As the HES-327 PWR rod it is the strongest PWR fuel, and spent rods reprocess into australium.
+
+# Quest: Australium Fuels
+betterquesting.quest.uyNWYzD4SY29l8XIGU411Q.name=Australium Fuels
+betterquesting.quest.uyNWYzD4SY29l8XIGU411Q.desc=Australian Ore is found on Moho. The SILEX separates australium into lesser (tasmanite) and greater (ayerite) australium, the materials for two RBMK fuels.%n%n§6LEAus§r has a sigmoid reaction rated safe, and §6HEAus§r a dangerous linear one. Both have 1.5x heat and produce ten times less xenon than other fuels, so they barely poison themselves.
+
+# Quest: Fast Breeder Fuels
+betterquesting.quest.B7fZFEezTbetmz4Asl3ewA.name=Fast Breeder Fuels
+betterquesting.quest.B7fZFEezTbetmz4Asl3ewA.desc=Breeder fuels are not about power - they burn a small amount of fissile material to transmute the rest into something rarer. They last only a fraction of a normal rod.%n%n§3RBMK ZFB:§r zirconium fast breeder rods with bismuth, plutonium-241 or americium.%n§3ZIRNOX ZFB MOX:§r MOX fuel with zirconium.%n§3PWR BFB:§r plutonium-241 or americium with bismuth and a shell of nuggets.%n%nReprocess the spent rods to collect plutonium-241, americium and bismuth.
+
+# Quest: ZIRNOX Lithium Rods
+betterquesting.quest.Yo_I4tLDRPud8y-I3ARWlw.name=ZIRNOX Lithium Rods
+betterquesting.quest.Yo_I4tLDRPud8y-I3ARWlw.desc=A §6ZIRNOX Lithium Rod§r is a breeding rod made from two lithium ingots. Placed next to burning fuel rods, it turns into a §6ZIRNOX Tritium Rod§r.%n%nThe tritium rod is a fluid container: empty it like any other container to get tritium and the empty ZIRNOX rod back.
+
+# Quest: Watz Absorber Pellets
+betterquesting.quest.nLRRzLYLQD6dwAhDmXiWFg.name=Watz Absorber Pellets
+betterquesting.quest.nLRRzLYLQD6dwAhDmXiWFg.desc=Absorber pellets produce no heat and only capture flux. They are how you tune a Watz stack.%n%n§6Lead§r is the standard absorber: it captures less the more flux it gets.%n§6Boron§r captures flux linearly and stays effective at high flux.%n§6Depleted uranium§r captures more the more flux it gets, so it steps in hardest when the reactor runs hot.
+
+# Quest: Balefire Fuel
+betterquesting.quest.bP6nO8IqSW-eD542ybP1Zg.name=Balefire Fuel
+betterquesting.quest.bP6nO8IqSW-eD542ybP1Zg.desc=Eight balefire shards in an RBMK rod make a fuel unlike any fission fuel: extreme reactivity, strong self-ignition, triple heat and no xenon poisoning. It melts only at 3652°C, but it is more than capable of reaching that.
+
+# Quest: Flashgold Fuel
+betterquesting.quest.86nioP9zS0-MrDOA5Rehag.name=Flashgold Fuel
+betterquesting.quest.86nioP9zS0-MrDOA5Rehag.desc=Flashgold is antihydrogen held in a magnetized gold-198 lattice. It is made in the PUREX from gold-198 billets, ionized particles and antimatter.%n%nIn the RBMK it is a self-igniting negative-quadratic fuel without xenon poisoning.
+
+# Quest: Flashlead Fuel
+betterquesting.quest.UHp4O8BURJa4VpnvFazIvQ.name=Flashlead Fuel
+betterquesting.quest.UHp4O8BURJa4VpnvFazIvQ.desc=Flashlead adds lead-209 to the flashgold lattice, again with antimatter in the PUREX. Its self-ignition is five times stronger than flashgold, and a rod lasts two and a half times as long as a normal one.
+
+# Quest: Digamma Fuel
+betterquesting.quest.goO8TjFKQJSliKGm5iLl8g.name=Digamma Fuel
+betterquesting.quest.goO8TjFKQJSliKGm5iLl8g.desc=Combine a balefire rod with the digamma particle and you get the most reactive fuel in existence: a quadratic reaction with more than ten times the reactivity of HES. It barely produces heat and practically cannot melt.%n%nIt is also the most dangerous item to carry in your inventory.
+
+# Quest: RTG Generator
+betterquesting.quest.iPfGHnjgRgWCBu6sUmogOA.name=RTG Generator
+betterquesting.quest.iPfGHnjgRgWCBu6sUmogOA.desc=The RTG turns the decay heat of radioisotope pellets into power - no cooling, no fuel handling, no meltdowns. It is assembled from three RTG units, steel, wire and plastic.%n%nIt holds 15 pellets. Their combined heat, capped at 200, gives 5 HE per tick for each point of heat. Pellets slowly decay into depleted pellets that you have to replace.
+
+# Quest: Starter RTG Pellets
+betterquesting.quest.niZAwDo9SUSYhGbcCiEn-Q.name=Starter RTG Pellets
+betterquesting.quest.niZAwDo9SUSYhGbcCiEn-Q.desc=Every pellet is three billets of an isotope on an iron plate.%n%n§6Radium-226§r comes from centrifuging uranium ore. It is weak, but practically never runs out.%n§6Weak Uranium§r pellets stretch one billet of plutonium-238 with uranium-238.%n§6Plutonium-238§r, from spent HEU fuel, is the classic RTG fuel: three times the heat of radium for decades of operation.
+
+# Quest: Advanced RTG Pellets
+betterquesting.quest.GfJ5MHf5SzuVsPZUBVmGlg.name=Advanced RTG Pellets
+betterquesting.quest.GfJ5MHf5SzuVsPZUBVmGlg.desc=Isotopes from reprocessing and irradiation trade lifetime for heat.%n%n§6Strontium-90§r and §6Cobalt-60§r give more heat than plutonium-238; cobalt comes from irradiating cobalt and decays quickly.%n§6Actinium-227§r and §6Americium-241§r are stronger still - americium lasts for centuries.%n§6Polonium-210§r, from irradiated bismuth, gives five times the heat of plutonium-238 but decays far faster.
+
+# Quest: High-Power RTG Pellets
+betterquesting.quest.LnlMD716QMqbVWizytdzlw.name=High-Power RTG Pellets
+betterquesting.quest.LnlMD716QMqbVWizytdzlw.desc=The strongest pellets sit on a nickel plate instead of iron.%n%n§6Gold-198§r (irradiated gold) and §6Lead-209§r (from the SILEX) burn extremely hot but decay very quickly. A single lead-209 pellet already fills the RTG's heat cap.%n§6Berkelium§r is a long-lived alpha source, and the §6Californium§r pellets are as hot as lead-209 and last longer.
+
+# Quest: RTG with Radiolysis Chamber
+betterquesting.quest.Z7Udn_Y0SCql4YFUlRA7Hw.name=RTG with Radiolysis Chamber
+betterquesting.quest.Z7Udn_Y0SCql4YFUlRA7Hw.desc=This RTG also uses its pellets' radiation. It splits water into hydrogen peroxide and hydrogen, performs every cracking recipe without a cracking tower, and removes contagion from items placed in its sterilization slot.
+
 
 
 ### Quests in multiple quest lines ###
