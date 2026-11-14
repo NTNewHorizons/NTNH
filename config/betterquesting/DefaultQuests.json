@@ -9201,7 +9201,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 0,
+              "Damage:2": 32767,
               "OreDict:8": "",
               "id:8": "hbm:item.nuclear_waste_short"
             }
@@ -9219,25 +9219,25 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 0,
+              "Damage:2": 32767,
               "OreDict:8": "",
               "id:8": "hbm:item.nuclear_waste_long"
             },
             "1:10": {
               "Count:3": 1,
-              "Damage:2": 0,
+              "Damage:2": 32767,
               "OreDict:8": "",
               "id:8": "hbm:item.nuclear_waste_short_depleted"
             },
             "2:10": {
               "Count:3": 1,
-              "Damage:2": 0,
+              "Damage:2": 32767,
               "OreDict:8": "",
               "id:8": "hbm:item.nuclear_waste_long_depleted"
             },
             "3:10": {
               "Count:3": 1,
-              "Damage:2": 0,
+              "Damage:2": 32767,
               "OreDict:8": "",
               "id:8": "hbm:item.nuclear_waste_vitrified"
             },
@@ -10969,7 +10969,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "§6Cells§r are small sealed steel containers for dangerous gases: plutonium hexafluoride for enrichment, deuterium and tritium for fusion fuels and thermonuclear bombs.\n\nLarger amounts of uranium and plutonium hexafluoride are kept in dedicated §3Hexafluoride Tanks§r.",
+          "desc:8": "§6Cells§r are small sealed steel containers for dangerous gases: plutonium hexafluoride for enrichment, deuterium and tritium for fusion fuels and thermonuclear bombs.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11058,18 +11058,6 @@
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "hbm:item.cell_tritium"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "hbm:tile.machine_uf6_tank"
-            },
-            "4:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "hbm:tile.machine_puf6_tank"
             }
           },
           "taskID:8": "bq_standard:optional_retrieval"
@@ -76211,7 +76199,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
-          "y:3": 60
+          "y:3": 48
         },
         "1:10": {
           "questIDHigh:4": -2877061312423048082,
@@ -76234,16 +76222,16 @@
           "questIDLow:4": -5238694633867319409,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -348,
-          "y:3": 156
+          "x:3": -264,
+          "y:3": 0
         },
         "4:10": {
           "questIDHigh:4": -1884550105093420953,
           "questIDLow:4": -8196164514896521710,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -300,
-          "y:3": 60
+          "x:3": -264,
+          "y:3": 36
         },
         "5:10": {
           "questIDHigh:4": -1660064545287614708,
@@ -76498,8 +76486,8 @@
           "questIDLow:4": -4699935174057940005,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -300,
-          "y:3": 156
+          "x:3": -324,
+          "y:3": 60
         },
         "37:10": {
           "questIDHigh:4": 2870886993118644556,
@@ -76530,15 +76518,15 @@
           "questIDLow:4": -6664179536256124486,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -252,
-          "y:3": 156
+          "x:3": -264,
+          "y:3": 84
         },
         "41:10": {
           "questIDHigh:4": 5476440524458509009,
           "questIDLow:4": -4870149044329996322,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -348,
+          "x:3": -264,
           "y:3": 60
         },
         "42:10": {
@@ -76554,8 +76542,8 @@
           "questIDLow:4": -6413306142314073386,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -252,
-          "y:3": 60
+          "x:3": -204,
+          "y:3": 72
         },
         "44:10": {
           "questIDHigh:4": 6752243041174375590,
