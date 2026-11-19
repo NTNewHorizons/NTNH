@@ -634,6 +634,10 @@ betterquesting.quest.VvJYIAi2T2mSpxNnJAr8_A.desc=The smelter upgrade can be rebu
 betterquesting.quest.VxU7Oz3BRwapgbxJ9UnpaQ.name=Ilmenite
 betterquesting.quest.VxU7Oz3BRwapgbxJ9UnpaQ.desc=§6Ilmenite§r is a mineral that serves as a natural source of titanium. It is produced by centrifuging §6Titanium Ore§r. By itself, it can be placed in an §3Arc Furnace§r to produce 3 §6Titanium Ingots§r, or it can be further processed in a §3Chemical Plant§r using §bTitanium Tetrachloride§r to increase its yield. The most efficient recipe is in the §3Pyrolysis Oven§r, where on top of giving the most titanium per Ilmenite, it also recycles back all the §bChlorine§r.%n%nQuest requirements: Obtain §6Ilmenite§r by centrifuging §6Titanium Ore§r. Build an §3Arc Furnace§r, §3Chemical Plant§r, or §3Pyrolysis Oven§r. Produce at least one §6Titanium Ingot§r from §6Ilmenite§r. For maximum efficiency, use the §3Pyrolysis Oven§r and recover §bChlorine§r.%n%n[F1] For more information.
 
+# Quest: Radiation in Depth
+betterquesting.quest.X1i_xQztQxeBKQiYivboRA.name=Radiation in Depth
+betterquesting.quest.X1i_xQztQxeBKQiYivboRA.desc=Radiation does more than raise your RAD counter.%n%n§lChunk radiation§r spreads through the air from radioactive sources and slowly decays. Solid blocks stop it, and radiation-resistant blocks like concrete and lead stop it best, so a well-built wall keeps a hot room contained. The §6Nether§r always has a background of §e0.1 RAD/s§r.%n%n§lThe world reacts§r - in heavily irradiated chunks grass and leaves die, dead grass rots to dirt, and above §e100 RAD§r radioactive §6fog§r starts to appear. Glowing mycelium from nuclear blasts slowly spreads on its own.%n%n§lItem radiation§r - radioactive items in your inventory irradiate you every tick. Carrying §6Tungsten Reachers§r cuts this down, and lead containers and boxes hold radioactive items safely.%n%n§lRadiation sickness§r - from §e200 RAD§r you get nausea, weakness and hunger, at higher doses you vomit, lose hair and max health, and at §c1000 RAD§r you die. The §cContaminated§r effect from fallout keeps adding RAD and cannot be cured with milk.
+
 # Quest: Redstone Fluid Overflow
 betterquesting.quest.ZTrtIRiyRO2J5jHQ4sroaQ.name=Redstone Fluid Overflow
 betterquesting.quest.ZTrtIRiyRO2J5jHQ4sroaQ.desc=§6§6§3Redstone-Over Radio§r in combination with a §3Redstone Fluid Valve§r can be used to detect when a tank is starting to fill up, and release the insides. This is useful for having buffers without having all the fluids being wasted.%n%n§2Here is an exmaple of a tank that will only output fluid once its full:§r%n%nFirstly, place a §6ROR Transmitter§r on one port of the tank, provide an ID and enable Polling.%n%n[img height=1000]betterquesting:textures/QB_Fluid1.png[/img]%n%nAfter that, place a §6ROR Logic Receiver§r next to the fluid valve and input the desired settings. Make sure that your signal is >= of your desired buffer. One redstone level equals to 16k mb.%n%n[img height=1000]betterquesting:textures/QB_Fluid2.png[/img]%n%nA §3Fluid Control Pump§r can also be used to limit throughput of fluids and to also add priorities.
@@ -1088,6 +1092,10 @@ betterquesting.quest.9S1Tw8UTRbi8Z9wq7frVJA.desc=Temporarily increases gravity o
 betterquesting.quest.AB-0K2UoQF-7uQ9XiO8mqw.name=Steam Radiator
 betterquesting.quest.AB-0K2UoQF-7uQ9XiO8mqw.desc=The §3Steam Radiator§r is a steam condenser that works in the vacuum of space.
 
+# Quest: Life on Other Worlds
+betterquesting.quest.BF7x3CyoSf2OeE-mO1UOGA.name=Life on Other Worlds
+betterquesting.quest.BF7x3CyoSf2OeE-mO1UOGA.desc=Other worlds play by different rules.%n%n- §6Water§r needs atmospheric pressure. Without enough air, a water bucket just evaporates. Build a sealed, pressurized room if you need liquid water.%n- §6Gravity§r differs on every body: you jump much higher on the Mun than on Earth.%n- §6Days§r have their own length. Beds still work and skip to that world's morning.%n- §6Nether portals§r do not work away from Earth.%n- §cCorrosive§r atmospheres like Eve's eat through your armor first, then through you.%n- Gases you vent or leak go into the planet's §6atmosphere§r and can slowly change it.
+
 # Quest: Tectonic Missile
 betterquesting.quest.CRR3Op6SQMefJL6r8uAfrA.name=Tectonic Missile
 betterquesting.quest.CRR3Op6SQMefJL6r8uAfrA.desc=When a §6Tectonic Missile§r hits, it creates a volcano that immediately starts to splash volcanic lava everywhere. Which is what you need to get the volcanic gem!
@@ -1514,9 +1522,33 @@ betterquesting.quest.xYmNHPDAQkSwXHOow8--4g.desc=§6Welded Osmiridium Plates§r 
 betterquesting.questline.MJP4MeAmSTm_Di0iRHoQuw.name=Tips and Tricks
 betterquesting.questline.MJP4MeAmSTm_Di0iRHoQuw.desc=Tips and Tricks. It does what it says.
 
+# Quest: Pollution Effects
+betterquesting.quest.-ZczpvqzQqWXK8Vtr7zjnQ.name=Pollution Effects
+betterquesting.quest.-ZczpvqzQqWXK8Vtr7zjnQ.desc=Pollution is not just a number on the detector.%n%n§6Soot§r makes mobs in the area stronger. §6Poison§r pollution gives Poison to anything breathing it, and at high levels Wither. §6Heavy metal§r pollution causes §cLead Poisoning§r when you break blocks in it - the more metal in the air, the worse it gets.%n%nA gas mask with a filter against fine particles protects you from all of it. Polluted areas also attract §6Glyphids§r, so keep your smokestacks and filters in order.
+
+# Quest: Odds and Ends
+betterquesting.quest.49Z72-6WT0uRG5ej8-yRQQ.name=Odds and Ends
+betterquesting.quest.49Z72-6WT0uRG5ej8-yRQQ.desc=A few small things the mod never tells you.%n%n- §6Storage crates§r keep their contents when broken, and can be opened while held in your hand.%n- §6Conveyor belts§r explode if more than §e25§r items pile up on a single block.%n- Renaming items in an anvil no longer raises their repair cost.%n- §6Landmines§r spawn naturally in the world. Watch your step around ruins.%n- Some mobs can spawn with NTM armor and weapons.%n- NTM has its own §6achievement page§r, §eNuclear Tech§r, in the achievements menu. Some achievements have unusual triggers - try breaking some §6gneiss§r.%n- §e/ntmclient§r lets you change client options such as HUD positions without leaving the game.
+
+# Quest: Weapon Abilities
+betterquesting.quest.TVZ02amsTEO2_nmZj_B4eQ.name=Weapon Abilities
+betterquesting.quest.TVZ02amsTEO2_nmZj_B4eQ.desc=Melee weapons and some tools also carry §6weapon abilities§r, which trigger on every hit. They are always active and listed in the tooltip.%n%n- §6Radioactive Blade§r - contaminates the target with 15 to 500 RAD.%n- §6Vampire§r - heals you for part of the damage, from 2 up to 50 health.%n- §6Stunning§r - Slowness and Weakness V for 2 to 15 seconds.%n- §6Phosphorus Tip§r - §cPhosphorus Burns§r that cannot be put out for 60 or 90 seconds.%n- §6Flaming§r - sets the target on fire.%n- §6Painsaw§r - a killed mob bursts into gore and drops §6Small Piles of Nitra§r and experience, one per 10-15 points of its max health.%n- §6Decapitator§r - a killed mob drops its head: skeleton, zombie, creeper and player skulls, a rare wither skeleton skull, slimeballs from slimes and magma cream from magma cubes.%n- §6Luck of the Collector§r - every kill has a tiny chance to drop a random §6Bobblehead§r.
+
+# Quest: Status Effects
+betterquesting.quest.qVrPGBhATuKm6QUeMN3wOQ.name=Status Effects
+betterquesting.quest.qVrPGBhATuKm6QUeMN3wOQ.desc=NTM adds its own status effects. Most of them are bad news.%n%n- §cTainted§r - from taint blocks and taint weapons. Randomly hurts you while it lasts.%n- §aTainted Heart§r - if a tainted entity is caught in a Tainted Creeper's explosion, the taint turns into this. For an hour you are immune to radiation.%n- §cLead Poisoning§r - deals damage over time. You get it from lead bullets and from breaking blocks in air polluted with heavy metals, unless you wear a mask that filters fine particles.%n- §cPhosphorus Burns§r - you keep burning, water does not help.%n- §cContaminated§r - from fallout, keeps adding radiation.%n- §cPotion Sickness§r - after §6Herbal Paste§r you cannot use pills, energy drinks, canteens and injectors for 10 minutes.%n- §cButterfingers§r - you keep sliding and dropping things.%n- §c! ! !§r - you explode when it runs out.%n- §aStability§r - from §6Enteramine Pills§r, protects you from Digamma radiation.%n- §aAmbrosia§r - a strange effect from a certain flask. Do not push your luck with it.%n%nMilk removes most vanilla effects but not all of these. The §6Spider Milk§r armor mod clears bad effects for you.
+
 # Quest: Infinite Water Sources
 betterquesting.quest.xlNjQwC6S3S5o_B7nIciBQ.name=Infinite Water Sources
 betterquesting.quest.xlNjQwC6S3S5o_B7nIciBQ.desc=Tired of using buckets to give water to your machines? Try using water pumps or infinite water tanks!%n%nInfinite Water Tank will give 50mb/t%nLarge Infinite Water Tank will give 500mb/t%nPump will give 1000mb/t but requires steam to operate. Pumps must sit below Y:70; the Electric Groundwater Pump moves up to 10,000 mB/t.
+
+# Quest: Tool Abilities
+betterquesting.quest.y4ZjfXhYQnCkHioZVaXGuA.name=Tool Abilities
+betterquesting.quest.y4ZjfXhYQnCkHioZVaXGuA.desc=Most NTM tools have §6abilities§r listed in their tooltip. §eRight click§r cycles through them, §eShift + right click§r goes back to the first one, and §eLeft Alt§r opens a menu where you can build your own presets. One area ability and one harvest ability can be active at the same time; better tools unlock higher levels.%n%n§lArea abilities§r%n- §6Vein Miner§r - mines the whole connected vein of the same block.%n- §6AoE§r - mines a cube around the block, radius 1 to 4.%n- §6Flat AoE§r - the same, but only in the plane you are facing. Good for tunnels.%n- §6Explosion§r - blows up the block you hit instead of mining it.%n%n§lHarvest abilities§r%n- §6Silk Touch§r and §6Fortune§r work like the enchantments, Fortune goes up to level 9.%n- §6Auto-Smelter§r drops the furnace result of the block.%n- §6Auto-Shredder§r drops the Shredder result.%n- §6Auto-Centrifuge§r drops the Centrifuge result.%n- §6Auto-Crystallizer§r drops the Ore Acidizer result.%n- §6Mercury Touch§r turns redstone ore and redstone blocks into §6Mercury Droplets§r.
+
+# Quest: Controls and Keybinds
+betterquesting.quest.yxBwLqVCQy6wq28gPQ8WrA.name=Controls and Keybinds
+betterquesting.quest.yxBwLqVCQy6wq28gPQ8WrA.desc=NTM adds its own set of keybinds. All of them can be changed in §6Options - Controls§r under the §6Hbm's Nuclear Tech§r category.%n%n§lGeneral§r%n- §eF1§r - open the §6Quick Manual§r page of the item under your cursor. Hundreds of machines, fluids, materials and weapons have one.%n- §eN§r - open the built-in calculator.%n- §eV§r - toggle the armor HUD and helmet overlays.%n- §eZ§r - toggle the magnet of armor that has one.%n- §eC§r - toggle a jetpack or other back-mounted gear.%n%n§lMovement§r%n- §eLeft Shift§r - dash, for armor sets and items that allow it.%n- §eLeft Ctrl§r - ground slam with power armor that supports hard landing.%n%n§lTools and guns§r%n- §eRight click§r cycles tool abilities, §eLeft Alt§r opens the ability menu.%n- §eR§r - reload. §eLeft click§r, §eright click§r and §emiddle click§r are the primary fire, secondary fire and sights of a gun.%n- §eLeft Alt§r / §eLeft Ctrl§r with the §6Settings Tool§r switch what gets pasted and paste onto whole pipe lines.%n%n§lMachines§r%n- §eArrow keys§r move the §3RBMK crane§r, §eEnter§r loads and unloads it.%n- §eR§r opens the inventory of a train car you are riding.
 
 
 ## Quest Line: Advanced Logistics
@@ -1647,6 +1679,10 @@ betterquesting.quest.37j0JnoDQwmyyLfN0Q7mkg.desc=A nuke does not end at the blas
 # Quest: Nuclear Missiles
 betterquesting.quest.3TSisRpPSFalHXpU-BMAQA.name=Nuclear Missiles
 betterquesting.quest.3TSisRpPSFalHXpU-BMAQA.desc=The largest missiles need a §6Large Thruster§r of high-speed steel and tungsten carbide and a saturnite §6Large Fuel Tank§r. The §6Nuclear Warhead§r is built from uranium-235, lead, titanium and a control unit.%n%nThe §6Nuclear Missile§r and the multi-warhead §6Thermonuclear Missile§r are the most destructive payloads a launch pad can deliver.
+
+# Quest: Damage Threshold and Resistance
+betterquesting.quest.3yuh3zV6RvaY9asLtoQ7TQ.name=Damage Threshold and Resistance
+betterquesting.quest.3yuh3zV6RvaY9asLtoQ7TQ.desc=NTM armor protects with two numbers, shown in the tooltip as §eDT/DR§r for each damage type: §6Physical§r, §6Fire§r, §6Explosion§r and §6Energy§r.%n%n§6Damage Threshold (DT)§r is subtracted from every hit first. If a hit is weaker than the DT, it does nothing at all and you hear a §e"plink"§r. This makes good armor almost immune to weak, fast attacks.%n%n§6Damage Resistance (DR)§r is a percentage cut from what is left.%n%nArmor-piercing ammunition ignores part of the DT and DR, while some ammo is weaker against armor. A full set often gives extra bonuses on top: night or thermal vision, enemy health bars, hard landings, step assist, extra dashes, built-in Geiger counters or a sealed suit. Read the set's tooltip.%n%n§3Armor Modification Table§r inserts, claddings and servos add their own DT and DR on top.
 
 # Quest: Doomsday Missile
 betterquesting.quest.48YJ6QlRRSmaMfwaP5HjoA.name=Doomsday Missile
@@ -1851,6 +1887,10 @@ betterquesting.quest.grTUKQmKRGWdht6bsRWvKw.desc=§3Jeremy§r is an autocannon t
 # Quest: Lunar Cybernetic Armor
 betterquesting.quest.iHD-hU2bSL-Jb3J86U6IsQ.name=Lunar Cybernetic Armor
 betterquesting.quest.iHD-hU2bSL-Jb3J86U6IsQ.desc=Starmetal and §6Lunar Plating§r make a powered suit that gives speed, jump, saturation and Rad-X effects. Add titanium fins and a tank of xenon to the plating for the §6Winged§r version, which can fly.%n%nThe lunar helmet and winged plating are also the base of the DNT nanosuit.
+
+# Quest: Gun Maintenance
+betterquesting.quest.jG-ZfmZ3QgqyBQA7lEVgTg.name=Gun Maintenance
+betterquesting.quest.jG-ZfmZ3QgqyBQA7lEVgTg.desc=§eR§r reloads, §eleft click§r fires, §eright click§r uses the secondary fire or aims, depending on the gun. Many guns accept several ammo types - the one loaded is shown in the HUD.%n%nEvery shot wears the gun down, and stronger ammo wears it faster. A worn gun becomes more and more likely to §cjam§r after reloading, which costs you time to clear in the middle of a fight.%n%n§6Gun Oil§r repairs every gun in your hotbar by 10%%, a §6Gun Repair Kit§r by 50%%. Keep one on you before heading out.
 
 # Quest: Pepperbox
 betterquesting.quest.jiVjM3qqR6mnDcChU4aOlA.name=Pepperbox
@@ -2577,6 +2617,10 @@ betterquesting.quest.C7CLvAjyQUy2aNW1HiA7Ow.desc=You killed them all! §cYou're 
 # Quest: Time to Kill (Chicken)
 betterquesting.quest.G8aNnibAQVuX1SG7XfuaeQ.name=Time to Kill (Chicken)
 betterquesting.quest.G8aNnibAQVuX1SG7XfuaeQ.desc=Screaming doesn't help. You're going in the soup.
+
+# Quest: Lucky Drops
+betterquesting.quest.J3PV7VfYQz6Iwg4d0sTyGA.name=Lucky Drops
+betterquesting.quest.J3PV7VfYQz6Iwg4d0sTyGA.desc=Mobs killed by a player sometimes drop rare items. Most of them are §6armor modifications§r for the §3Armor Modification Table§r.%n%n- §6Bottle of Spider Milk§r - spiders, 1 in 500. Removes bad potion effects.%n- §6Serum§r - cave spiders, 1 in 100. Turns poison into strength.%n- §6Velvet Band-Aid§r - animals, 1 in 500. 3%% chance to fully heal you when you take damage.%n- §6VT-40§r - Cyber Crabs, 1 in 500. Cuts armor wear by 80%% and adds 2 health.%n- §6Heart Piece§r - any hostile mob, 1 in 1000. Adds 2.5 hearts. Four of them, four aluminium ingots and a Creeper coin make a §6Heart Container§r.%n- §6Cracked Key§r - hostile mobs, 1 in 250. Opens a red keyhole once, then breaks.%n- §6Silo Launch Code Piece§r - hostile mobs, 1 in 250. Eight of them and an advanced circuit make a §6Silo Launch Code§r.%n%nZombies also drop the odd copper, aluminium or titanium ingot, and villagers drop flesh. Several of these items can also be found in dungeon and mineshaft chests.
 
 # Quest: Time to Kill (Magma Cube)
 betterquesting.quest.JVB4_UIXR9SI2W66FWBnMw.name=Time to Kill (Magma Cube)

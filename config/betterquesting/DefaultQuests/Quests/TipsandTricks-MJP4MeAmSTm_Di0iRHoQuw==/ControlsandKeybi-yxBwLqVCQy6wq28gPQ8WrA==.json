@@ -1,0 +1,70 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": -2046269294520939250,
+      "questIDLow:4": -8782766154957464139
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "completion_animation:8": "default",
+      "completion_particle:8": "default",
+      "confetti_icon:10": {
+        "Count:3": 0,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "minecraft:stick"
+      },
+      "countAsQuest:1": 1,
+      "desc:8": "NTM adds its own set of keybinds. All of them can be changed in §6Options - Controls§r under the §6Hbm\u0027s Nuclear Tech§r category.\n\n§lGeneral§r\n- §eF1§r - open the §6Quick Manual§r page of the item under your cursor. Hundreds of machines, fluids, materials and weapons have one.\n- §eN§r - open the built-in calculator.\n- §eV§r - toggle the armor HUD and helmet overlays.\n- §eZ§r - toggle the magnet of armor that has one.\n- §eC§r - toggle a jetpack or other back-mounted gear.\n\n§lMovement§r\n- §eLeft Shift§r - dash, for armor sets and items that allow it.\n- §eLeft Ctrl§r - ground slam with power armor that supports hard landing.\n\n§lTools and guns§r\n- §eRight click§r cycles tool abilities, §eLeft Alt§r opens the ability menu.\n- §eR§r - reload. §eLeft click§r, §eright click§r and §emiddle click§r are the primary fire, secondary fire and sights of a gun.\n- §eLeft Alt§r / §eLeft Ctrl§r with the §6Settings Tool§r switch what gets pasted and paste onto whole pipe lines.\n\n§lMachines§r\n- §eArrow keys§r move the §3RBMK crane§r, §eEnter§r loads and unloads it.\n- §eR§r opens the inventory of a train car you are riding.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:item.geiger_counter"
+      },
+      "isMain:1": 0,
+      "isSilent:1": 0,
+      "is_final:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Controls and Keybinds",
+      "notification_duration:5": -1.0,
+      "notification_effect:3": -1,
+      "notification_fade_in:5": -1.0,
+      "notification_fade_out:5": -1.0,
+      "notification_icon_offset_y:3": -2147483648,
+      "notification_icon_scale:5": -1.0,
+      "notification_pos_x:3": -2147483648,
+      "notification_pos_y:3": -2147483648,
+      "notification_show_icon:8": "default",
+      "notification_style:8": "default",
+      "notification_subtitle:8": "",
+      "notification_subtitle_scale:5": -1.0,
+      "notification_title:8": "",
+      "notification_title_scale:5": -1.0,
+      "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": -3814425538739420370,
+  "questIDLow:4": -5716353117762677076,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

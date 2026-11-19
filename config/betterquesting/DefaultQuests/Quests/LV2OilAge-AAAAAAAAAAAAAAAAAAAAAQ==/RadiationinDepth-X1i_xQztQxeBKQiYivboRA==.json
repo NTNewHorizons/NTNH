@@ -1,0 +1,70 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 0,
+      "questIDLow:4": 95
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "completion_animation:8": "default",
+      "completion_particle:8": "default",
+      "confetti_icon:10": {
+        "Count:3": 0,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "minecraft:stick"
+      },
+      "countAsQuest:1": 1,
+      "desc:8": "Radiation does more than raise your RAD counter.\n\n§lChunk radiation§r spreads through the air from radioactive sources and slowly decays. Solid blocks stop it, and radiation-resistant blocks like concrete and lead stop it best, so a well-built wall keeps a hot room contained. The §6Nether§r always has a background of §e0.1 RAD/s§r.\n\n§lThe world reacts§r - in heavily irradiated chunks grass and leaves die, dead grass rots to dirt, and above §e100 RAD§r radioactive §6fog§r starts to appear. Glowing mycelium from nuclear blasts slowly spreads on its own.\n\n§lItem radiation§r - radioactive items in your inventory irradiate you every tick. Carrying §6Tungsten Reachers§r cuts this down, and lead containers and boxes hold radioactive items safely.\n\n§lRadiation sickness§r - from §e200 RAD§r you get nausea, weakness and hunger, at higher doses you vomit, lose hair and max health, and at §c1000 RAD§r you die. The §cContaminated§r effect from fallout keeps adding RAD and cannot be cured with milk.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:item.geiger_counter"
+      },
+      "isMain:1": 0,
+      "isSilent:1": 0,
+      "is_final:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Radiation in Depth",
+      "notification_duration:5": -1.0,
+      "notification_effect:3": -1,
+      "notification_fade_in:5": -1.0,
+      "notification_fade_out:5": -1.0,
+      "notification_icon_offset_y:3": -2147483648,
+      "notification_icon_scale:5": -1.0,
+      "notification_pos_x:3": -2147483648,
+      "notification_pos_y:3": -2147483648,
+      "notification_show_icon:8": "default",
+      "notification_style:8": "default",
+      "notification_subtitle:8": "",
+      "notification_subtitle_scale:5": -1.0,
+      "notification_title:8": "",
+      "notification_title_scale:5": -1.0,
+      "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": 6870452084600029975,
+  "questIDLow:4": -9139764517512222652,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

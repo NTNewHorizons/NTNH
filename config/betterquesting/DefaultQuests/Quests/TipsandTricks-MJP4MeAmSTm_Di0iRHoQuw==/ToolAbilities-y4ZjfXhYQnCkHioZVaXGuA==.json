@@ -1,0 +1,70 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 1482510697200306394,
+      "questIDLow:4": -8222061158976306150
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "completion_animation:8": "default",
+      "completion_particle:8": "default",
+      "confetti_icon:10": {
+        "Count:3": 0,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "minecraft:stick"
+      },
+      "countAsQuest:1": 1,
+      "desc:8": "Most NTM tools have §6abilities§r listed in their tooltip. §eRight click§r cycles through them, §eShift + right click§r goes back to the first one, and §eLeft Alt§r opens a menu where you can build your own presets. One area ability and one harvest ability can be active at the same time; better tools unlock higher levels.\n\n§lArea abilities§r\n- §6Vein Miner§r - mines the whole connected vein of the same block.\n- §6AoE§r - mines a cube around the block, radius 1 to 4.\n- §6Flat AoE§r - the same, but only in the plane you are facing. Good for tunnels.\n- §6Explosion§r - blows up the block you hit instead of mining it.\n\n§lHarvest abilities§r\n- §6Silk Touch§r and §6Fortune§r work like the enchantments, Fortune goes up to level 9.\n- §6Auto-Smelter§r drops the furnace result of the block.\n- §6Auto-Shredder§r drops the Shredder result.\n- §6Auto-Centrifuge§r drops the Centrifuge result.\n- §6Auto-Crystallizer§r drops the Ore Acidizer result.\n- §6Mercury Touch§r turns redstone ore and redstone blocks into §6Mercury Droplets§r.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:item.steel_pickaxe"
+      },
+      "isMain:1": 0,
+      "isSilent:1": 0,
+      "is_final:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Tool Abilities",
+      "notification_duration:5": -1.0,
+      "notification_effect:3": -1,
+      "notification_fade_in:5": -1.0,
+      "notification_fade_out:5": -1.0,
+      "notification_icon_offset_y:3": -2147483648,
+      "notification_icon_scale:5": -1.0,
+      "notification_pos_x:3": -2147483648,
+      "notification_pos_y:3": -2147483648,
+      "notification_show_icon:8": "default",
+      "notification_style:8": "default",
+      "notification_subtitle:8": "",
+      "notification_subtitle_scale:5": -1.0,
+      "notification_title:8": "",
+      "notification_title_scale:5": -1.0,
+      "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": -3781225446589840784,
+  "questIDLow:4": -6620808113888573768,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

@@ -714,6 +714,10 @@ betterquesting.quest.689AwMYdQ0euKTXEhExyLw.desc=The §6Emitter Radius§r and §
 betterquesting.quest.KSqXQ1jmSZ2W9QeP0P7GNg.name=Meteorite Metal
 betterquesting.quest.KSqXQ1jmSZ2W9QeP0P7GNg.desc=Meteorites fall from the sky and leave craters of meteorite blocks. Shred them into §6Meteorite Powder§r and smelt it with cobalt in the Blast Furnace to get §6Meteorite Ingots§r - the material behind starmetal and decorated cobalt tools.%n%nMeteorite ingots come out hot. On a desh anvil, two hot ingots are smithed into a §6Forged Meteorite Ingot§r, and two hot forged ingots into a §6Meteorite Blade§r.%n%nMeteors strike at random near players on the Overworld, and now and then a §emeteor shower§r makes them twenty times as frequent. A rare one comes down as solid meteorite or a ball of ores. A §6Charm of Protection§r in your armor (or on a pedestal within 100 blocks) steers them away and stops them from breaking blocks; a §6Meteor Charm§r, made with a volcanic gem, stops them from falling near you at all - and your meteorite supply with them.
 
+# Quest: Radiation in Depth
+betterquesting.quest.X1i_xQztQxeBKQiYivboRA.name=Radiation in Depth
+betterquesting.quest.X1i_xQztQxeBKQiYivboRA.desc=Radiation does more than raise your RAD counter.%n%n§lChunk radiation§r spreads through the air from radioactive sources and slowly decays. Solid blocks stop it, and radiation-resistant blocks like concrete and lead stop it best, so a well-built wall keeps a hot room contained. The §6Nether§r always has a background of §e0.1 RAD/s§r.%n%n§lThe world reacts§r - in heavily irradiated chunks grass and leaves die, dead grass rots to dirt, and above §e100 RAD§r radioactive §6fog§r starts to appear. Glowing mycelium from nuclear blasts slowly spreads on its own.%n%n§lItem radiation§r - radioactive items in your inventory irradiate you every tick. Carrying §6Tungsten Reachers§r cuts this down, and lead containers and boxes hold radioactive items safely.%n%n§lRadiation sickness§r - from §e200 RAD§r you get nausea, weakness and hunger, at higher doses you vomit, lose hair and max health, and at §c1000 RAD§r you die. The §cContaminated§r effect from fallout keeps adding RAD and cannot be cured with milk.
+
 
 ## Quest Line: LV3 - Reactors Age
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAg.name=LV3 - Reactors Age
@@ -1372,6 +1376,10 @@ betterquesting.quest.Iegeo70qTSOovCnu9g7e9Q.desc=Instead of electricity, the §3
 betterquesting.quest.tYbpy8NJTYuFmTJiZccDlQ.name=Tektonic Crude
 betterquesting.quest.tYbpy8NJTYuFmTJiZccDlQ.desc=Oil deposits on Tekto hold §6Tektonic Crude§r instead of normal oil, and its gas deposits hold halide gas. A derrick pumps it like any oil.%n%nThe Vacuum Refinery splits tektonic crude into halogenated light oil, chloromethane, hydrochloric acid and halide gas - a chlorine-rich product line that normal oil cannot give you.
 
+# Quest: Life on Other Worlds
+betterquesting.quest.BF7x3CyoSf2OeE-mO1UOGA.name=Life on Other Worlds
+betterquesting.quest.BF7x3CyoSf2OeE-mO1UOGA.desc=Other worlds play by different rules.%n%n- §6Water§r needs atmospheric pressure. Without enough air, a water bucket just evaporates. Build a sealed, pressurized room if you need liquid water.%n- §6Gravity§r differs on every body: you jump much higher on the Mun than on Earth.%n- §6Days§r have their own length. Beds still work and skip to that world's morning.%n- §6Nether portals§r do not work away from Earth.%n- §cCorrosive§r atmospheres like Eve's eat through your armor first, then through you.%n- Gases you vent or leak go into the planet's §6atmosphere§r and can slowly change it.
+
 
 ## Quest Line: LV4 - End Game
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAw.name=LV4 - End Game
@@ -1571,7 +1579,7 @@ betterquesting.quest.4YkuEIBMSD63TGr8fZfnjw.desc=A strange quark smashed into ma
 
 # Quest: DFC Catalysts
 betterquesting.quest.TDprpiPrRUOaFnW8JLtmXg.name=DFC Catalysts
-betterquesting.quest.TDprpiPrRUOaFnW8JLtmXg.desc=A blank catalyst is filled with a material and runes. The two catalysts in the core decide how the DFC behaves, and they fall into three groups:%n%n§6Copper, Beryllium, Cobalt, Lithium, Tungsten§r - +25% power.%n§6Aluminium, Cerium, Iron, Niobium, Strontium§r - +15% power and a flat power bonus.%n§6Caesium, Dineutronium, Euphemium, Schrabidium, Thorium§r - no multiplier, but the largest flat bonus.%n%nMost of them also trade heat for fuel use or the other way around - check the tooltip and pair them so the core stays stable.
+betterquesting.quest.TDprpiPrRUOaFnW8JLtmXg.desc=A blank catalyst is filled with a material and runes. The two catalysts in the core decide how the DFC behaves, and they fall into three groups:%n%n§6Copper, Beryllium, Cobalt, Lithium, Tungsten§r - +25%% power.%n§6Aluminium, Cerium, Iron, Niobium, Strontium§r - +15%% power and a flat power bonus.%n§6Caesium, Dineutronium, Euphemium, Schrabidium, Thorium§r - no multiplier, but the largest flat bonus.%n%nMost of them also trade heat for fuel use or the other way around - check the tooltip and pair them so the core stays stable.
 
 # Quest: Singularities
 betterquesting.quest.SODWeSyJSb-vxvL9SdGcrQ.name=Singularities
@@ -1585,6 +1593,30 @@ betterquesting.questline.MJP4MeAmSTm_Di0iRHoQuw.desc=Tips and Tricks. It does wh
 # Quest: Infinite Water Sources
 betterquesting.quest.xlNjQwC6S3S5o_B7nIciBQ.name=Infinite Water Sources
 betterquesting.quest.xlNjQwC6S3S5o_B7nIciBQ.desc=Tired of using buckets to give water to your machines? Try using water pumps or infinite water tanks!%n%nInfinite Water Tank will give 50mb/t%nLarge Infinite Water Tank will give 500mb/t%nPump will give 1000mb/t but requires steam to operate. Pumps must sit below Y:70; the Electric Groundwater Pump moves up to 10,000 mB/t.
+
+# Quest: Controls and Keybinds
+betterquesting.quest.yxBwLqVCQy6wq28gPQ8WrA.name=Controls and Keybinds
+betterquesting.quest.yxBwLqVCQy6wq28gPQ8WrA.desc=NTM adds its own set of keybinds. All of them can be changed in §6Options - Controls§r under the §6Hbm's Nuclear Tech§r category.%n%n§lGeneral§r%n- §eF1§r - open the §6Quick Manual§r page of the item under your cursor. Hundreds of machines, fluids, materials and weapons have one.%n- §eN§r - open the built-in calculator.%n- §eV§r - toggle the armor HUD and helmet overlays.%n- §eZ§r - toggle the magnet of armor that has one.%n- §eC§r - toggle a jetpack or other back-mounted gear.%n%n§lMovement§r%n- §eLeft Shift§r - dash, for armor sets and items that allow it.%n- §eLeft Ctrl§r - ground slam with power armor that supports hard landing.%n%n§lTools and guns§r%n- §eRight click§r cycles tool abilities, §eLeft Alt§r opens the ability menu.%n- §eR§r - reload. §eLeft click§r, §eright click§r and §emiddle click§r are the primary fire, secondary fire and sights of a gun.%n- §eLeft Alt§r / §eLeft Ctrl§r with the §6Settings Tool§r switch what gets pasted and paste onto whole pipe lines.%n%n§lMachines§r%n- §eArrow keys§r move the §3RBMK crane§r, §eEnter§r loads and unloads it.%n- §eR§r opens the inventory of a train car you are riding.
+
+# Quest: Tool Abilities
+betterquesting.quest.y4ZjfXhYQnCkHioZVaXGuA.name=Tool Abilities
+betterquesting.quest.y4ZjfXhYQnCkHioZVaXGuA.desc=Most NTM tools have §6abilities§r listed in their tooltip. §eRight click§r cycles through them, §eShift + right click§r goes back to the first one, and §eLeft Alt§r opens a menu where you can build your own presets. One area ability and one harvest ability can be active at the same time; better tools unlock higher levels.%n%n§lArea abilities§r%n- §6Vein Miner§r - mines the whole connected vein of the same block.%n- §6AoE§r - mines a cube around the block, radius 1 to 4.%n- §6Flat AoE§r - the same, but only in the plane you are facing. Good for tunnels.%n- §6Explosion§r - blows up the block you hit instead of mining it.%n%n§lHarvest abilities§r%n- §6Silk Touch§r and §6Fortune§r work like the enchantments, Fortune goes up to level 9.%n- §6Auto-Smelter§r drops the furnace result of the block.%n- §6Auto-Shredder§r drops the Shredder result.%n- §6Auto-Centrifuge§r drops the Centrifuge result.%n- §6Auto-Crystallizer§r drops the Ore Acidizer result.%n- §6Mercury Touch§r turns redstone ore and redstone blocks into §6Mercury Droplets§r.
+
+# Quest: Weapon Abilities
+betterquesting.quest.TVZ02amsTEO2_nmZj_B4eQ.name=Weapon Abilities
+betterquesting.quest.TVZ02amsTEO2_nmZj_B4eQ.desc=Melee weapons and some tools also carry §6weapon abilities§r, which trigger on every hit. They are always active and listed in the tooltip.%n%n- §6Radioactive Blade§r - contaminates the target with 15 to 500 RAD.%n- §6Vampire§r - heals you for part of the damage, from 2 up to 50 health.%n- §6Stunning§r - Slowness and Weakness V for 2 to 15 seconds.%n- §6Phosphorus Tip§r - §cPhosphorus Burns§r that cannot be put out for 60 or 90 seconds.%n- §6Flaming§r - sets the target on fire.%n- §6Painsaw§r - a killed mob bursts into gore and drops §6Small Piles of Nitra§r and experience, one per 10-15 points of its max health.%n- §6Decapitator§r - a killed mob drops its head: skeleton, zombie, creeper and player skulls, a rare wither skeleton skull, slimeballs from slimes and magma cream from magma cubes.%n- §6Luck of the Collector§r - every kill has a tiny chance to drop a random §6Bobblehead§r.
+
+# Quest: Status Effects
+betterquesting.quest.qVrPGBhATuKm6QUeMN3wOQ.name=Status Effects
+betterquesting.quest.qVrPGBhATuKm6QUeMN3wOQ.desc=NTM adds its own status effects. Most of them are bad news.%n%n- §cTainted§r - from taint blocks and taint weapons. Randomly hurts you while it lasts.%n- §aTainted Heart§r - if a tainted entity is caught in a Tainted Creeper's explosion, the taint turns into this. For an hour you are immune to radiation.%n- §cLead Poisoning§r - deals damage over time. You get it from lead bullets and from breaking blocks in air polluted with heavy metals, unless you wear a mask that filters fine particles.%n- §cPhosphorus Burns§r - you keep burning, water does not help.%n- §cContaminated§r - from fallout, keeps adding radiation.%n- §cPotion Sickness§r - after §6Herbal Paste§r you cannot use pills, energy drinks, canteens and injectors for 10 minutes.%n- §cButterfingers§r - you keep sliding and dropping things.%n- §c! ! !§r - you explode when it runs out.%n- §aStability§r - from §6Enteramine Pills§r, protects you from Digamma radiation.%n- §aAmbrosia§r - a strange effect from a certain flask. Do not push your luck with it.%n%nMilk removes most vanilla effects but not all of these. The §6Spider Milk§r armor mod clears bad effects for you.
+
+# Quest: Pollution Effects
+betterquesting.quest.-ZczpvqzQqWXK8Vtr7zjnQ.name=Pollution Effects
+betterquesting.quest.-ZczpvqzQqWXK8Vtr7zjnQ.desc=Pollution is not just a number on the detector.%n%n§6Soot§r makes mobs in the area stronger. §6Poison§r pollution gives Poison to anything breathing it, and at high levels Wither. §6Heavy metal§r pollution causes §cLead Poisoning§r when you break blocks in it - the more metal in the air, the worse it gets.%n%nA gas mask with a filter against fine particles protects you from all of it. Polluted areas also attract §6Glyphids§r, so keep your smokestacks and filters in order.
+
+# Quest: Odds and Ends
+betterquesting.quest.49Z72-6WT0uRG5ej8-yRQQ.name=Odds and Ends
+betterquesting.quest.49Z72-6WT0uRG5ej8-yRQQ.desc=A few small things the mod never tells you.%n%n- §6Storage crates§r keep their contents when broken, and can be opened while held in your hand.%n- §6Conveyor belts§r explode if more than §e25§r items pile up on a single block.%n- Renaming items in an anvil no longer raises their repair cost.%n- §6Landmines§r spawn naturally in the world. Watch your step around ruins.%n- Some mobs can spawn with NTM armor and weapons.%n- NTM has its own §6achievement page§r, §eNuclear Tech§r, in the achievements menu. Some achievements have unusual triggers - try breaking some §6gneiss§r.%n- §e/ntmclient§r lets you change client options such as HUD positions without leaving the game.
 
 
 ## Quest Line: Advanced Logistics
@@ -1966,7 +1998,7 @@ betterquesting.quest.LnR6BjmpRr2oLTPLLLSQag.desc=Custom missiles are designed pa
 
 # Quest: Missile Targeting Circuits
 betterquesting.quest.rgtJthQ1Q16_MPiPiaUHAw.name=Missile Targeting Circuits
-betterquesting.quest.rgtJthQ1Q16_MPiPiaUHAw.desc=Every custom missile needs a targeting circuit. The five tiers are built from rubber, steel scaffolding and a circuit: a vacuum tube, an analog, an integrated, a military grade and a versatile circuit board.%n%nEach tier cuts the missile's inaccuracy - from 10% at tier 1 down to none at all at tier 5.
+betterquesting.quest.rgtJthQ1Q16_MPiPiaUHAw.desc=Every custom missile needs a targeting circuit. The five tiers are built from rubber, steel scaffolding and a circuit: a vacuum tube, an analog, an integrated, a military grade and a versatile circuit board.%n%nEach tier cuts the missile's inaccuracy - from 10%% at tier 1 down to none at all at tier 5.
 
 # Quest: Missile Fuselages
 betterquesting.quest.9glSJYXoQtuCDwDLrUShkw.name=Missile Fuselages
@@ -1990,7 +2022,7 @@ betterquesting.quest.8zgvKFFwTFuwEPa_kRi5_g.desc=§6Balefire§r - a balefire sha
 
 # Quest: Compact Launch Pad
 betterquesting.quest.T_uazOsiRnifrG-0In7WFg.name=Compact Launch Pad
-betterquesting.quest.T_uazOsiRnifrG-0In7WFg.desc=Place the §3Compact Launcher Core Component§r and surround it with eight §6Launch Pad Structure Blocks§r to build the §3Compact Launch Pad§r.%n%nIt launches size 10 custom missiles. Fill it with the missile's fuel, charge it to at least 75% and insert a designator, then apply a redstone signal.
+betterquesting.quest.T_uazOsiRnifrG-0In7WFg.desc=Place the §3Compact Launcher Core Component§r and surround it with eight §6Launch Pad Structure Blocks§r to build the §3Compact Launch Pad§r.%n%nIt launches size 10 custom missiles. Fill it with the missile's fuel, charge it to at least 75%% and insert a designator, then apply a redstone signal.
 
 # Quest: Large Launch Pad
 betterquesting.quest.QGgb3OOOR8yxM66hKOyWwg.name=Large Launch Pad
@@ -2010,11 +2042,11 @@ betterquesting.quest.jnm2B5uCQmywtlowulKOJA.desc=A meteorite blade on a gold-pla
 
 # Quest: Steel Ranger Power Armor
 betterquesting.quest.HLxQVqj-Q6yLo4DWXsDtEA.name=Steel Ranger Power Armor
-betterquesting.quest.HLxQVqj-Q6yLo4DWXsDtEA.desc=The next power armor after the T-51b. Its §6Iron-Shod Armor Plating§r is smithed on a desh anvil, and the pieces are assembled with titanium armor, an M65 gas mask and integrated circuits.%n%nA powered, sealed suit with 95% radiation resistance, a Geiger counter, V.A.T.S. and strength and jump boosts. Dye it red and black for the §6AJR§r paint scheme.
+betterquesting.quest.HLxQVqj-Q6yLo4DWXsDtEA.desc=The next power armor after the T-51b. Its §6Iron-Shod Armor Plating§r is smithed on a desh anvil, and the pieces are assembled with titanium armor, an M65 gas mask and integrated circuits.%n%nA powered, sealed suit with 95%% radiation resistance, a Geiger counter, V.A.T.S. and strength and jump boosts. Dye it red and black for the §6AJR§r paint scheme.
 
 # Quest: Remnants Power Armor
 betterquesting.quest.YBMp_N7iTLeKt5htR1GVaQ.name=Remnants Power Armor
-betterquesting.quest.YBMp_N7iTLeKt5htR1GVaQ.desc=The Remnants armor is built on CMB gear with saturnite, a military grade circuit and §6Legendary Parts§r. Legendary parts are crafted from §6Heavy Chainsteel§r (smithed hot on a desh anvil) and rare §6Alexandrite§r gems.%n%nIt gives 99% radiation resistance and a strong strength boost.
+betterquesting.quest.YBMp_N7iTLeKt5htR1GVaQ.desc=The Remnants armor is built on CMB gear with saturnite, a military grade circuit and §6Legendary Parts§r. Legendary parts are crafted from §6Heavy Chainsteel§r (smithed hot on a desh anvil) and rare §6Alexandrite§r gems.%n%nIt gives 99%% radiation resistance and a strong strength boost.
 
 # Quest: Lunar Cybernetic Armor
 betterquesting.quest.iHD-hU2bSL-Jb3J86U6IsQ.name=Lunar Cybernetic Armor
@@ -2022,7 +2054,7 @@ betterquesting.quest.iHD-hU2bSL-Jb3J86U6IsQ.desc=Starmetal and §6Lunar Plating�
 
 # Quest: Fau Armor
 betterquesting.quest.ll0_WmvMS2Spdwi5OhCLWQ.name=Fau Armor
-betterquesting.quest.ll0_WmvMS2Spdwi5OhCLWQ.desc=§6Fau Armor Plating§r is smithed on a tier 6 anvil from forged meteorite ingots, desh and yharonite, and fitted onto starmetal armor. The powered suit has thermal sight and 99.99% radiation resistance.%n%nIts plating is also needed for the DNT armor plating.
+betterquesting.quest.ll0_WmvMS2Spdwi5OhCLWQ.desc=§6Fau Armor Plating§r is smithed on a tier 6 anvil from forged meteorite ingots, desh and yharonite, and fitted onto starmetal armor. The powered suit has thermal sight and 99.99%% radiation resistance.%n%nIts plating is also needed for the DNT armor plating.
 
 # Quest: Euphemium Armor
 betterquesting.quest.HkMlbNXuTVeBUXF_GjWhFg.name=Euphemium Armor
@@ -2039,6 +2071,14 @@ betterquesting.quest.mI752nimT8iJ7Fi6_YyIJQ.desc=An §6Airstrike Designator§r i
 # Quest: Nuclear Aftermath
 betterquesting.quest.37j0JnoDQwmyyLfN0Q7mkg.name=Nuclear Aftermath
 betterquesting.quest.37j0JnoDQwmyyLfN0Q7mkg.desc=A nuke does not end at the blast. Fallout rain sweeps the area: trees turn into dead wood, leaves and plants die, and flammable blocks catch fire. §6Fallout§r settles on the ground - walking through it gives you a radiation effect that milk cannot cure. Large blasts leave crater biomes behind.%n%nSand turns into §6Trinitite Ore§r, which smelts into Trinity Glass. Ores exposed near ground zero are transmuted: coal ore becomes Sellafite diamond and emerald ore, diamond ore becomes radioactive gem ore, and close to the center some uranium ore turns into §6Sellafite Schrabidium Ore§r. The stone around it becomes slaked Sellafite.
+
+# Quest: Damage Threshold and Resistance
+betterquesting.quest.3yuh3zV6RvaY9asLtoQ7TQ.name=Damage Threshold and Resistance
+betterquesting.quest.3yuh3zV6RvaY9asLtoQ7TQ.desc=NTM armor protects with two numbers, shown in the tooltip as §eDT/DR§r for each damage type: §6Physical§r, §6Fire§r, §6Explosion§r and §6Energy§r.%n%n§6Damage Threshold (DT)§r is subtracted from every hit first. If a hit is weaker than the DT, it does nothing at all and you hear a §e"plink"§r. This makes good armor almost immune to weak, fast attacks.%n%n§6Damage Resistance (DR)§r is a percentage cut from what is left.%n%nArmor-piercing ammunition ignores part of the DT and DR, while some ammo is weaker against armor. A full set often gives extra bonuses on top: night or thermal vision, enemy health bars, hard landings, step assist, extra dashes, built-in Geiger counters or a sealed suit. Read the set's tooltip.%n%n§3Armor Modification Table§r inserts, claddings and servos add their own DT and DR on top.
+
+# Quest: Gun Maintenance
+betterquesting.quest.jG-ZfmZ3QgqyBQA7lEVgTg.name=Gun Maintenance
+betterquesting.quest.jG-ZfmZ3QgqyBQA7lEVgTg.desc=§eR§r reloads, §eleft click§r fires, §eright click§r uses the secondary fire or aims, depending on the gun. Many guns accept several ammo types - the one loaded is shown in the HUD.%n%nEvery shot wears the gun down, and stronger ammo wears it faster. A worn gun becomes more and more likely to §cjam§r after reloading, which costs you time to clear in the middle of a fight.%n%n§6Gun Oil§r repairs every gun in your hotbar by 10%%, a §6Gun Repair Kit§r by 50%%. Keep one on you before heading out.
 
 
 ## Quest Line: Building and Decorating
@@ -2523,7 +2563,7 @@ betterquesting.quest.fy10fiDjSpaHD4VZ5Y19nA.desc=Radiation changes living things
 
 # Quest: Meltdown Elementals
 betterquesting.quest.ZDBzvNWDQ8GA__8fLncYKg.name=Meltdown Elementals
-betterquesting.quest.ZDBzvNWDQ8GA__8fLncYKg.desc=A ZIRNOX meltdown is not over when the explosion is. Every player within 100 blocks of it is marked.%n%nLater - the game checks every 90 minutes, with a 50% chance each time - you hear a faint clicking, and ten §6Meltdown Elementals§r appear around you, about 32 blocks away. They are immune to fire, have 120 health and hit for 16 damage. Their leader has 360 health and carries the §6Radiation Coin§r, which it always drops.%n%nElementals drop depleted ZIRNOX fuel rods - or nuclear waste if they die wet. A Looting weapon adds polonium nuggets.
+betterquesting.quest.ZDBzvNWDQ8GA__8fLncYKg.desc=A ZIRNOX meltdown is not over when the explosion is. Every player within 100 blocks of it is marked.%n%nLater - the game checks every 90 minutes, with a 50%% chance each time - you hear a faint clicking, and ten §6Meltdown Elementals§r appear around you, about 32 blocks away. They are immune to fire, have 120 health and hit for 16 damage. Their leader has 360 health and carries the §6Radiation Coin§r, which it always drops.%n%nElementals drop depleted ZIRNOX fuel rods - or nuclear waste if they die wet. A Looting weapon adds polonium nuggets.
 
 # Quest: Radioactive Angel
 betterquesting.quest.d_o1VJ-qSt65SYir3fZFfA.name=Radioactive Angel
@@ -2536,6 +2576,10 @@ betterquesting.quest.srZQouhcRC-Dl8PiPODqcg.desc=Killing the Radioactive Angel b
 # Quest: Hunter Chopper
 betterquesting.quest.mOSH3bSzQmu18yfxw-E0oQ.name=Hunter Chopper
 betterquesting.quest.mOSH3bSzQmu18yfxw-E0oQ.desc=The §6Hunter Chopper§r is made in the Assembly Machine from cast CMB steel plates, steel plates, magnetized tungsten wire, desh motors and an advanced control unit - or bought from the Hidden Catalog. Once released it hunts the nearest living thing within 250 blocks, firing machine gun bursts and dropping mines.%n%nIt has 750 health and is almost impossible to hurt directly: it ignores all damage dealt by a player or mob - melee, arrows, bullets, even explosions you cause yourself - and takes only a tenth of most other damage. Explosions with no owner and nuclear blasts hurt it in full, so bring it down with missiles, mines, bombs or nukes.%n%nEvery hit has a chance to blow a piece off it as CMB scrap or a CMB steel plate. When it dies it spins down and explodes on impact, leaving more of both.
+
+# Quest: Lucky Drops
+betterquesting.quest.J3PV7VfYQz6Iwg4d0sTyGA.name=Lucky Drops
+betterquesting.quest.J3PV7VfYQz6Iwg4d0sTyGA.desc=Mobs killed by a player sometimes drop rare items. Most of them are §6armor modifications§r for the §3Armor Modification Table§r.%n%n- §6Bottle of Spider Milk§r - spiders, 1 in 500. Removes bad potion effects.%n- §6Serum§r - cave spiders, 1 in 100. Turns poison into strength.%n- §6Velvet Band-Aid§r - animals, 1 in 500. 3%% chance to fully heal you when you take damage.%n- §6VT-40§r - Cyber Crabs, 1 in 500. Cuts armor wear by 80%% and adds 2 health.%n- §6Heart Piece§r - any hostile mob, 1 in 1000. Adds 2.5 hearts. Four of them, four aluminium ingots and a Creeper coin make a §6Heart Container§r.%n- §6Cracked Key§r - hostile mobs, 1 in 250. Opens a red keyhole once, then breaks.%n- §6Silo Launch Code Piece§r - hostile mobs, 1 in 250. Eight of them and an advanced circuit make a §6Silo Launch Code§r.%n%nZombies also drop the odd copper, aluminium or titanium ingot, and villagers drop flesh. Several of these items can also be found in dungeon and mineshaft chests.
 
 
 ## Quest Line: Nuclear Fuels

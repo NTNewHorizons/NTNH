@@ -1,0 +1,70 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 3952215550215801174,
+      "questIDLow:4": -6514565465981546311
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "completion_animation:8": "default",
+      "completion_particle:8": "default",
+      "confetti_icon:10": {
+        "Count:3": 0,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "minecraft:stick"
+      },
+      "countAsQuest:1": 1,
+      "desc:8": "NTM armor protects with two numbers, shown in the tooltip as §eDT/DR§r for each damage type: §6Physical§r, §6Fire§r, §6Explosion§r and §6Energy§r.\n\n§6Damage Threshold (DT)§r is subtracted from every hit first. If a hit is weaker than the DT, it does nothing at all and you hear a §e\"plink\"§r. This makes good armor almost immune to weak, fast attacks.\n\n§6Damage Resistance (DR)§r is a percentage cut from what is left.\n\nArmor-piercing ammunition ignores part of the DT and DR, while some ammo is weaker against armor. A full set often gives extra bonuses on top: night or thermal vision, enemy health bars, hard landings, step assist, extra dashes, built-in Geiger counters or a sealed suit. Read the set\u0027s tooltip.\n\n§3Armor Modification Table§r inserts, claddings and servos add their own DT and DR on top.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:item.insert_kevlar"
+      },
+      "isMain:1": 0,
+      "isSilent:1": 0,
+      "is_final:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Damage Threshold and Resistance",
+      "notification_duration:5": -1.0,
+      "notification_effect:3": -1,
+      "notification_fade_in:5": -1.0,
+      "notification_fade_out:5": -1.0,
+      "notification_icon_offset_y:3": -2147483648,
+      "notification_icon_scale:5": -1.0,
+      "notification_pos_x:3": -2147483648,
+      "notification_pos_y:3": -2147483648,
+      "notification_show_icon:8": "default",
+      "notification_style:8": "default",
+      "notification_subtitle:8": "",
+      "notification_subtitle_scale:5": -1.0,
+      "notification_title:8": "",
+      "notification_title_scale:5": -1.0,
+      "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": -2365619199206078730,
+  "questIDLow:4": -7424840343855285427,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}
