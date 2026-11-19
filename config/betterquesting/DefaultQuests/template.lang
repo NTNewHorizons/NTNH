@@ -23,7 +23,7 @@ betterquesting.quest.0-Ws1mY3SeeFcyIcv2LKNQ.desc=The §6Siphon§r is a tool used
 
 # Quest: Overworld Ores
 betterquesting.quest.0gF8gPwCSDmOeGw5qV__ag.name=Overworld Ores
-betterquesting.quest.0gF8gPwCSDmOeGw5qV__ag.desc=Most NTM ores are placed by the Custom Ore Generation mod in large veins. Check the Guide Book table for their heights. Besides the ore veins, the ground hides a few other things:%n%n- §6Resource layers§r - big 3D patches of §6Hematite§r, §6Malachite§r and §6Bauxite§r, plus §6Limestone§r veins. Iron, copper and aluminium in bulk.%n- §6Sulfur caves§r with sulfurous stone and pools of sulfuric acid, and §6asbestos caves§r full of Chrysotile. Do not mine the latter without a mask.%n- §6Gas pockets§r between Y 30 and 40. §cFlammable gas§r ignites from fire, lava or a torch, §cexplosive gas§r blows up. Do not carry torches into caves full of it.%n- §6Alexandrite Ore§r - a rare gem, only near the bedrock (Y 1 to 10).%n- §6Tar Sand§r fields in deserts, a source of bitumen.%n- Natural §6Sellafite§r craters in deserts - highly radioactive.
+betterquesting.quest.0gF8gPwCSDmOeGw5qV__ag.desc=Most NTM ores are placed by the Custom Ore Generation mod in large veins. Check the Guide Book table for their heights. Besides the ore veins, the ground hides a few other things:%n%n- §6Resource layers§r - big 3D patches of §6Hematite§r, §6Malachite§r and §6Bauxite§r, plus §6Limestone§r veins. Iron, copper and aluminium in bulk.%n- §6Sulfur caves§r with sulfurous stone and pools of sulfuric acid, and §6asbestos caves§r full of Chrysotile. Do not mine the latter without a mask.%n- §6Gas pockets§r between Y 30 and 40. §cFlammable gas§r ignites from fire, lava or a torch, §cexplosive gas§r blows up. Do not carry torches into caves full of it.%n- §6Alexandrite Ore§r - a rare gem between Y 10 and 15, which only Mining Charges can break.%n- §6Tar Sand§r fields in deserts, a source of bitumen.%n- Natural §6Sellafite§r craters in deserts - highly radioactive.
 
 # Quest: Steam Engine
 betterquesting.quest.1WdjJYUsRMKgt4MYnlmM7A.name=Steam Engine
@@ -40,6 +40,10 @@ betterquesting.quest.4d7s5-1MQxyI3YcrDSL98g.desc=Structures generate throughout 
 # Quest: Flare Stack
 betterquesting.quest.4i9qqJhbSgC0UQ8pB9PD4g.name=Flare Stack
 betterquesting.quest.4i9qqJhbSgC0UQ8pB9PD4g.desc=The §3Flare Stack§r is a generator that produces energy by burning flammable liquids and gases. Any fluid tagged as Flammable can serve as fuel - supply it through pipes or directly via containers.%n%nOperation uses three steps. First, fill the internal buffer (capacity: §e64,000 mB§r) with fuel. Second, open the §6Flow Valve§r at the top of the middle section to release fuel from the buffer into the combustion system. Third, enable the §6Ignition§r switch at the bottom of the middle section to ignite the fuel and begin power generation.%n%nEfficiency is low: gases burn at §e50%%§r and liquids at only §e10%%§r. Output also varies by fuel type.%n%nTwo upgrades are available: the §6Speed Upgrade§r increases throughput, and the §6Effectiveness Upgrade§r improves fuel efficiency.
+
+# Quest: RF to HE Converter
+betterquesting.quest.4rNX3sPHRZq27_ilblG4sA.name=RF to HE Converter
+betterquesting.quest.4rNX3sPHRZq27_ilblG4sA.desc=The reverse of the HE to RF converter: it takes RF from other mods and turns every §e2 RF§r into §e5 HE§r.
 
 # Quest: Batteries
 betterquesting.quest.5Cydbu41QH-GnEo1um0Qjw.name=Batteries
@@ -213,6 +217,10 @@ betterquesting.quest.Ba9zHp22SvGkBCr8xF5oQQ.desc=§3Barrels§r are storage block
 betterquesting.quest.CAGBwqHLQBStKodq03kwyw.name=Sieving
 betterquesting.quest.CAGBwqHLQBStKodq03kwyw.desc=The §3Sieve§r filters gravel, dirt, stone, and other blocks to yield useful material fragments - including iron, copper, lead, and more.%n%nUse §3Heavy Sieve§r with §6Compressed Blocks§r to get more fragments.%n%n§2Use NEI to list all possible drops.
 
+# Quest: Steam Grades
+betterquesting.quest.CNmctzVJQVS6mp5sd3ByNA.name=Steam Grades
+betterquesting.quest.CNmctzVJQVS6mp5sd3ByNA.desc=Steam comes in four grades. The hotter the source, the denser the steam it can make from water:%n%n- §bSteam§r - 100 mB from 1 mB of water.%n- §bDense Steam§r - 10 mB from 1 mB of water.%n- §bSuper Dense Steam§r - 1 mB from 1 mB of water.%n- §bUltra Dense Steam§r - 1 mB from 10 mB of water, and only from very hot sources.%n%nA turbine only takes steam down §eone grade§r: Steam becomes Low-Pressure Steam, Dense Steam becomes Steam, and so on, with every 1 mB of denser steam turning into 10 mB of the next grade. Chain turbines one after another to use all of the energy in dense steam - or let a single turbine take the first step and send the rest to a second one.%n%nBoilers are set to a grade with a fluid identifier. RBMK steam channels and the Fusion Boiler make the denser grades.
+
 # Quest: Medicine Cabinet
 betterquesting.quest.CeJyIEqkTX29Ihgx2YbX7A.name=Medicine Cabinet
 betterquesting.quest.CeJyIEqkTX29Ihgx2YbX7A.desc=Once you have a shredder, coal, fluorite and asbestos can be turned into dust - and dust into medicine.%n%n§6Rad-X§r is crafted from coal and fluorite dust. Take it before entering a contaminated area: it reduces the radiation you absorb for a while. It does not remove radiation you already have.%n%n§6SiOX§r is made from coal dust, asbestos dust and a gold or bismuth nugget and treats both mesothelioma and black lung. §6Herbal Paste§r is the cheap early cure, but it comes with side effects.
@@ -281,6 +289,10 @@ betterquesting.quest.MNH6qakfTrC7Jbky4i_Epw.desc=Not a bug, a &q&zFEATURE§r!%n%
 betterquesting.quest.MWwrY8PcTaam9T_sc4yDtQ.name=Additional NTM Modes
 betterquesting.quest.MWwrY8PcTaam9T_sc4yDtQ.desc=§cNTNH§r is a modular modpack, so you are free to add/remove/modify config/mods if it works!%n%n§dNTM§r offers a very modular config file, which also comes with additional modes one can activate. These can be enabled in the hbm.cfg file.%n%n§2Expensive Mode§r makes everything more expensive by requiring not only more resourses, but also new components. The quest book will not reflect the changes in progression if its enabled.%n%n§2528 Mode§r introduces gates in the form of templates which are unlocked by destroying a certain amount of items in an §3Annihilator§r. Additionally, some items, mainly circuits, are percentage based now to be crafted. Along with that, theres also more changes that make the game harder, such as §6Tantalum§r generating in a certain area, landmines spawning more frequently and all §dAE2§r blocks §4EXPLODE§r when used.%n%nMany recycling probabilities of the §3Precision Assembler§r are massively lowered with expensive mode enabled, increasing effective cost massively.%n%n§2Rampant Mode§r makes glyphids a very big threat as pollution now makes them way stronger and more aggresive. New more destructive types of glyphids will also become more common. If high enough pollution has been reached, glyphid scouts can spawn passively, which makes automated defense systems necessary as to prevent new hives from being created.%n%n§2For modes with recipe changes, the modpack's recipes have to be inserted again after a new hbmrecipes folder has been created and modes enabled.§r %n
 
+# Quest: More Pipes and Cables
+betterquesting.quest.NnO0scFDQlyO8s_k8vy7ng.name=More Pipes and Cables
+betterquesting.quest.NnO0scFDQlyO8s_k8vy7ng.desc=A few extras for tidy networks:%n%n- §6Exhaust Pipe Anchors§r and §6Pneumatic Tube Anchors§r - like the fluid pipe anchor, but for exhaust and pneumatic tubes.%n- §6Paintable§r pipes and cables - right click them with a block to take on its look, so they disappear into your walls.%n- Smaller §6Electricity Pylons§r - wooden, steel and medium ones, for shorter spans than the large pylon.
+
 # Quest: Charging Station
 betterquesting.quest.OlMZZGTaSz6VhzaeJdR6QQ.name=Charging Station
 betterquesting.quest.OlMZZGTaSz6VhzaeJdR6QQ.desc=The §3Charging Station§r will charge electric tools aswell as electric suits when standing near it. Placing more next to eachother will increase the speed at which items are being recharged.
@@ -325,6 +337,10 @@ betterquesting.quest.X2y9x1t8TU2ou8QN6k-24g.desc=§6Borax§r is found as depth d
 betterquesting.quest.XNHsXFGWTvW9dhuen9iEFg.name=Radial Performance Engine
 betterquesting.quest.XNHsXFGWTvW9dhuen9iEFg.desc=The §3Radial Performance Engine§r is a combustion generator that converts liquid fuels into electrical power. It requires a minimum of §e3§r §6Combustion Engine Pistons§r to run, with up to §e9§r installed in its piston slots. Additional pistons increase both power output and fuel consumption linearly.%n%nThe engine accepts fuels of varying grades at different efficiency rates. §bHeating Oil§r and §bIndustrial Oil§r burn at §e75%%§r efficiency, §bPetroil§r at §e50%%§r, and §bDiesel§r and §bGasoline§r at §e25%%§r. Aviation fuels and gaseous fuels are not compatible. Power is output from the bottom face, and the engine stores up to §e250 kHE§r internally, or §e2.5 MHE§r when running §bNITAN§r.%n%nHowever, the engine is most efficient with the heaviest, least-refined feedstocks. Lighter refined fuels produce less power per mB despite their higher grade.%n%n§2The listed efficiency is a multiplier on each fuel's base combustion energy. Higher-grade fuels may have higher base energy, so check the HE/t display in the GUI before settling on a fuel.
 
+# Quest: Special Barrels
+betterquesting.quest.Z3PZSL9BSaWiFe-1PZAAwg.name=Special Barrels
+betterquesting.quest.Z3PZSL9BSaWiFe-1PZAAwg.desc=Not every fluid can go into a steel barrel.%n%n- The §6Safe Barrel§r holds 12,000 mB, but melts if you fill it with anything hot or corrosive.%n- A steel barrel filled with something §chighly corrosive§r corrodes and starts leaking.%n- The §6Technetium Steel Barrel§r holds 24,000 mB and takes highly corrosive fluids without damage.%n- Antimatter needs its own antimatter barrel. Anything else explodes.
+
 # Quest: Hazards
 betterquesting.quest.Zd1HNIsxSRees_4of0ezDw.name=Hazards
 betterquesting.quest.Zd1HNIsxSRees_4of0ezDw.desc=This mod adds several environmental hazards that will kill you if ignored.%n%n§6Radiation§r is measured in RAD. Effects begin at §e200 RAD§r and worsen steadily - instant death occurs at §c1000 RAD§r. Use a §6Geiger Counter§r to monitor your dose. Radiation-resistant armor and §6Rad-X§r reduce incoming RAD; a §3Player Decontaminator§r or §6Antirads§r remove accumulated dose.%n%n§lMesothelioma§r develops from asbestos exposure. Items tagged §c[Contains Asbestos]§r and certain blocks like Chrysotile release asbestos particles. Progresses to death if untreated.%n%n§lBlack Lung§r develops from coal dust exposure. Mining coal ore and carrying items tagged §c[Coal Dust]§r are the main sources. Also fatal.%n%nA gas mask protects against both mesothelioma and black lung simultaneously. Both diseases are cured by §6SIOX Cancer Medication§r or, early-game, §6Herbal Paste§r - the latter being weaker and carrying side effects.%n%n§lItem hazards§r - some items are dangerous just to carry:%n- §cHot§r items (plutonium-238, polonium-210, cobalt-60, white phosphorus, fresh nuclear waste, hot fuel debris) set you on fire unless you carry §6Tungsten Reachers§r or are wet.%n- §cHydroactive§r items (lithium, sodium, strontium, caesium) explode as soon as you get wet - rain included.%n- §cExplosive§r items (gunpowder, TNT, dynamite, propellants) go off if you catch fire.%n- §cBlinding§r items (schrabidium and its compounds) blind you unless you wear §6Protection Goggles§r or a gas mask.
@@ -360,6 +376,10 @@ betterquesting.quest.cUWyKdzATTSYaMg1MxZqYw.desc=The §3Firebox§r and the §3He
 # Quest: Recycling
 betterquesting.quest.ceT8V2MeRz2u-FR9Uckarw.name=Recycling
 betterquesting.quest.ceT8V2MeRz2u-FR9Uckarw.desc=Now, as you have a better anvil, you can start §erecycling§r some stuff you may found in dungeons.
+
+# Quest: Alexandrite
+betterquesting.quest.djQr_pweR9-nluYCHEquAw.name=Alexandrite
+betterquesting.quest.djQr_pweR9-nluYCHEquAw.desc=§6Alexandrite Ore§r is rare: a small cluster in roughly one chunk out of a hundred, between Y 10 and 15. Like depth ores, it can only be broken with §3Mining Charges§r, and it drops up to two gems. Alexandrite can also turn up in Red Rooms and dungeon chests.%n%nYou will need it for the §6Red Key§r, the §3Teleportation Anchor§r and the §6Remnants Power Armor§r.
 
 # Quest: NOT FOR CASUALS
 betterquesting.quest.dvDFzAjEQVucAjcynrfkhA.name=NOT FOR CASUALS
@@ -457,6 +477,10 @@ betterquesting.quest.29G7ZU9QSsOzQKTBCcpe9Q.desc=The §6Builder's Jetpack§r is 
 # Quest: Tesla Coil
 betterquesting.quest.36xYKfDUSNq8HMCUWfk6tw.name=Tesla Coil
 betterquesting.quest.36xYKfDUSNq8HMCUWfk6tw.desc=The §3Tesla Coil§r is built on top of a transformer and zaps nearby mobs with arcs of electricity as long as it is powered. It is a simple, ammunition-free defense against glyphids - but it draws a lot of power and does not care who it hits.
+
+# Quest: Starmetal Static Electricity Generator
+betterquesting.quest.4cv-UUIhQxqc_XwPPvzpYQ.name=Starmetal Static Electricity Generator
+betterquesting.quest.4cv-UUIhQxqc_XwPPvzpYQ.desc=Place a §3Tesla Coil§r on top of a §3Starmetal Static Electricity Generator§r and it never runs out of power - no cables needed.
 
 # Quest: Desh Crate
 betterquesting.quest.4lMaTH3cQzqRgi3YSqPyCw.name=Desh Crate
@@ -622,6 +646,10 @@ betterquesting.quest.APBKQg85Qha1VtT4cWTK9A.desc=§6Sodalite§r is a gem recover
 betterquesting.quest.D6A-to-oSe29nf5qIu4h_w.name=Semtex
 betterquesting.quest.D6A-to-oSe29nf5qIu4h_w.desc=§6Semtex§r is an explosive that is used in conjunction with C-4 in many crafts.%n%nSemtex is used in many crafts of various ammunition and mines, such as the §6Stinger missile§r, §6anti-personnel mines§r, and so on. In all crafts that use Semtex (except, of course, the Semtex block and Semtex bar, as well as the explosive reactive armor plate), it can be replaced with a C-4 bar.%n%nIt is used to create the bomb of the same name.%n%n§2Semtex can be eaten, making you feel like a real American soldier.§r
 
+# Quest: Recall Device
+betterquesting.quest.JsS88quWS7C43Xy101qxVg.name=Recall Device
+betterquesting.quest.JsS88quWS7C43Xy101qxVg.desc=Link the §6Recall Device§r to a §3Teleportation Anchor§r by right clicking the anchor. From then on, using the device teleports you back to the anchor. It runs on a battery charge, so keep it charged.
+
 # Quest: Meteorite Metal
 betterquesting.quest.KSqXQ1jmSZ2W9QeP0P7GNg.name=Meteorite Metal
 betterquesting.quest.KSqXQ1jmSZ2W9QeP0P7GNg.desc=Meteorites fall from the sky and leave craters of meteorite blocks. Shred them into §6Meteorite Powder§r and smelt it with cobalt in the Blast Furnace to get §6Meteorite Ingots§r - the material behind starmetal and decorated cobalt tools.%n%nMeteorite ingots come out hot. On a desh anvil, two hot ingots are smithed into a §6Forged Meteorite Ingot§r, and two hot forged ingots into a §6Meteorite Blade§r.%n%nMeteors strike at random near players on the Overworld, and now and then a §emeteor shower§r makes them twenty times as frequent. A rare one comes down as solid meteorite or a ball of ores. A §6Charm of Protection§r in your armor (or on a pedestal within 100 blocks) steers them away and stops them from breaking blocks; a §6Meteor Charm§r, made with a volcanic gem, stops them from falling near you at all - and your meteorite supply with them.
@@ -658,6 +686,14 @@ betterquesting.quest.VxU7Oz3BRwapgbxJ9UnpaQ.desc=§6Ilmenite§r is a mineral tha
 betterquesting.quest.X1i_xQztQxeBKQiYivboRA.name=Radiation in Depth
 betterquesting.quest.X1i_xQztQxeBKQiYivboRA.desc=Radiation does more than raise your RAD counter.%n%n§lChunk radiation§r spreads through the air from radioactive sources and slowly decays. Solid blocks stop it, and radiation-resistant blocks like concrete and lead stop it best, so a well-built wall keeps a hot room contained. The §6Nether§r always has a background of §e0.1 RAD/s§r.%n%n§lThe world reacts§r - in heavily irradiated chunks grass and leaves die, dead grass rots to dirt, and above §e100 RAD§r radioactive §6fog§r starts to appear. Glowing mycelium from nuclear blasts slowly spreads on its own.%n%n§lItem radiation§r - radioactive items in your inventory irradiate you every tick. Carrying §6Tungsten Reachers§r cuts this down, and lead containers and boxes hold radioactive items safely.%n%n§lRadiation sickness§r - from §e200 RAD§r you get nausea, weakness and hunger, at higher doses you vomit, lose hair and max health, and at §c1000 RAD§r you die. The §cContaminated§r effect from fallout keeps adding RAD and cannot be cured with milk.
 
+# Quest: Deuterium Extractor
+betterquesting.quest.XR0VrcL1Rha0tAhX-Hc9kQ.name=Deuterium Extractor
+betterquesting.quest.XR0VrcL1Rha0tAhX-Hc9kQ.desc=The §3Deuterium Extractor§r is the small brother of the extraction tower. It uses power to pull §bHeavy Water§r out of ordinary water, a little at a time. Several of them side by side are a good start before you can afford the tower.
+
+# Quest: Acidizer Input Partitioner
+betterquesting.quest.YNxy8pW8Q1q3kfbh03FIXQ.name=Acidizer Input Partitioner
+betterquesting.quest.YNxy8pW8Q1q3kfbh03FIXQ.desc=The §3Ore Acidizer§r needs an exact number of items per recipe. The §3Acidizer Input Partitioner§r stores up to 45 inputs and only releases them once there are enough for a full batch. Items that do not belong are kept too - pull them out from the side.
+
 # Quest: Redstone Fluid Overflow
 betterquesting.quest.ZTrtIRiyRO2J5jHQ4sroaQ.name=Redstone Fluid Overflow
 betterquesting.quest.ZTrtIRiyRO2J5jHQ4sroaQ.desc=§6§6§3Redstone-Over Radio§r in combination with a §3Redstone Fluid Valve§r can be used to detect when a tank is starting to fill up, and release the insides. This is useful for having buffers without having all the fluids being wasted.%n%n§2Here is an exmaple of a tank that will only output fluid once its full:§r%n%nFirstly, place a §6ROR Transmitter§r on one port of the tank, provide an ID and enable Polling.%n%n[img height=1000]betterquesting:textures/QB_Fluid1.png[/img]%n%nAfter that, place a §6ROR Logic Receiver§r next to the fluid valve and input the desired settings. Make sure that your signal is >= of your desired buffer. One redstone level equals to 16k mb.%n%n[img height=1000]betterquesting:textures/QB_Fluid2.png[/img]%n%nA §3Fluid Control Pump§r can also be used to limit throughput of fluids and to also add priorities.
@@ -665,6 +701,10 @@ betterquesting.quest.ZTrtIRiyRO2J5jHQ4sroaQ.desc=§6§6§3Redstone-Over Radio§r
 # Quest: Rubber Equipment
 betterquesting.quest.ZzLvPvslQRqxRD_r27DSuQ.name=Rubber Equipment
 betterquesting.quest.ZzLvPvslQRqxRD_r27DSuQ.desc=Real rubber opens up a few useful pieces of equipment. §6Flippers§r make you swim much faster. The §6M65-Z Gas Mask§r is a rubber gas mask that works with the same filters as the steel one.%n%nAn §6IV Bag§r can draw your own blood to store it as a §6Blood Bag§r, which you can use later to heal yourself.
+
+# Quest: Geothermal Heat Exchanger
+betterquesting.quest.eBk-KQOTTASVDKqzRTzAvA.name=Geothermal Heat Exchanger
+betterquesting.quest.eBk-KQOTTASVDKqzRTzAvA.desc=The §3Geothermal Heat Exchanger§r is a tall machine lowered into lava. It reads the heat of the lava around its shaft - up to 7 blocks out - and uses it to heat §bOil§r into §bHot Oil§r. The more lava around it, the faster it works - and volcanic lava gives far more heat than ordinary lava. Hot oil can then heat boilers.
 
 # Quest: Electric Press
 betterquesting.quest.jNW_k5hLQY-vdrAMMgVd5w.name=Electric Press
@@ -692,7 +732,7 @@ betterquesting.quest.qoqs0rqiScuK8YiqjTh2gA.desc=§eRich Ore Deposits§r are mul
 
 # Quest: Teleporter
 betterquesting.quest.refh8r3gQyavrC4KgSeWkw.name=Teleporter
-betterquesting.quest.refh8r3gQyavrC4KgSeWkw.desc=The §3Teleporter§r can be used to teleport players, and entities in general, to a specific location.%n%nRight-click a block with the §6Telelinker§r to set the desired exit position, then shift-click the teleporter with the telelinker to configure the teleporter.%n%n§2The teleporter is a one way trip so it is advised that multiple are made.%n%nInterdimensional teleportation using teleporters requires a very expensive type of fuel, so it is recommended that other teleportations methods are used, such as AE2 Spatial. For fuel-free same-dimension travel, see the §3Xenium Resonator Satellite§r quest.
+betterquesting.quest.refh8r3gQyavrC4KgSeWkw.desc=The §3Teleporter§r can be used to teleport players, and entities in general, to a specific location.%n%nRight-click a block with the §6Telelinker§r to set the desired exit position, then shift-click the teleporter with the telelinker to configure the teleporter.%n%n§2The teleporter is a one way trip so it is advised that multiple are made.%n%nInterdimensional teleportation using teleporters requires a very expensive type of fuel, so it is recommended that other teleportations methods are used, such as AE2 Spatial. For fuel-free same-dimension travel, see the [questlink]qrbz8mP0Ry-RtTBVRTkruA==[/questlink] quest.
 
 # Quest: Trixite
 betterquesting.quest.rl-wwMCtSFeOm4PfbFY9yA.name=Trixite
@@ -1063,6 +1103,10 @@ betterquesting.quest.qrbz8mP0Ry-RtTBVRTkruA.desc=The §3Xenium Resonator Satelli
 betterquesting.quest.rRJfZe74TXqpP-q2faX7bA.name=Heat Exchanging Heater
 betterquesting.quest.rRJfZe74TXqpP-q2faX7bA.desc=The §4§3Heat Exchanging Heater§r is used to cool down coolants used in reactors while also generating §eTU§r. The GUI's top field sets fluid used per cycle, the bottom field the tick delay. A §3Boiler§r can be placed ontop of it to heat up other fluids, such as §bSteam§r, to be used in §3Steam Turbines§r.
 
+# Quest: Inserter
+betterquesting.quest.tNn2ePdQTDSuqzkvL7iDgQ.name=Inserter
+betterquesting.quest.tNn2ePdQTDSuqzkvL7iDgQ.desc=The §3Inserter§r automates the Chicago Pile. It takes one item from automation and, on a redstone signal, pushes it into a row of drilled graphite. Every item in the row moves one block along, so the last one drops out the far end. Leave one block of air between the inserter and the graphite.
+
 # Quest: Arsenic
 betterquesting.quest.tgpCNtEfScSyk-mdGhGxmQ.name=Arsenic
 betterquesting.quest.tgpCNtEfScSyk-mdGhGxmQ.desc=§6Arsenic§r is a substitute of §6Bismuth§r which can be made from acidizing §6Oily Dirt§r, found near §ebedrock oil deposits§r or from the environmental damage the §3Fracking Tower§r does, with §bHigh-Performance Solvent§r.
@@ -1295,6 +1339,10 @@ betterquesting.quest.nfgxBE2jRE2InE-vMVEfRQ.desc=The §3Microgravity Algae Film�
 # Quest: Air Vents and Airlocks
 betterquesting.quest.qRMJT0bHT4STCpZziZR-bQ.name=Air Vents and Airlocks
 betterquesting.quest.qRMJT0bHT4STCpZziZR-bQ.desc=An §3Air Vent§r fills a sealed room with breathable air from its oxygen tank - one mB per block of volume - and then keeps topping it up. The used air is passed to a CO2 scrubber if one is in the room.%n%nThe room must be completely sealed. Use the §6Round Airlock Door§r for entrances, and build an airlock chamber so that opening the door does not vent the whole base.%n%nWithout breathable air the world works differently: torches and fire go out (redstone torches keep working), water cannot stay without enough air pressure, and plants die. Crops and saplings that grow inside a vented room turn some of its used air back into fresh air, so a small garden lowers the vent's oxygen use.
+
+# Quest: Chungus Solar Array
+betterquesting.quest.qUq4XrL8Sgy7TagwzXS8gA.name=Chungus Solar Array
+betterquesting.quest.qUq4XrL8Sgy7TagwzXS8gA.desc=The §3Chungus Solar Array§r is an oversized 17x3 field of gold-plated panels. It produces as much as 9 solar panels with a 50%% bonus - 13.5 panels in total - and stores up to 5,000 HE.
 
 # Quest: Dres
 betterquesting.quest.rkMKa7TCT5u0jJsdH6TWnw.name=Dres
@@ -1568,7 +1616,11 @@ betterquesting.quest.-ZczpvqzQqWXK8Vtr7zjnQ.desc=Pollution is not just a number 
 
 # Quest: Odds and Ends
 betterquesting.quest.49Z72-6WT0uRG5ej8-yRQQ.name=Odds and Ends
-betterquesting.quest.49Z72-6WT0uRG5ej8-yRQQ.desc=A few small things the mod never tells you.%n%n- §6Storage crates§r keep their contents when broken, and can be opened while held in your hand.%n- §6Conveyor belts§r explode if more than §e25§r items pile up on a single block.%n- Renaming items in an anvil no longer raises their repair cost.%n- §6Landmines§r spawn naturally in the world. Watch your step around ruins.%n- Some mobs can spawn with NTM armor and weapons.%n- NTM has its own §6achievement page§r, §eNuclear Tech§r, in the achievements menu. Some achievements have unusual triggers - try breaking some §6gneiss§r.%n- §e/ntmclient§r lets you change client options such as HUD positions without leaving the game.
+betterquesting.quest.49Z72-6WT0uRG5ej8-yRQQ.desc=A few small things the mod never tells you.%n%n- §6Storage crates§r keep their contents when broken, and can be opened while held in your hand.%n- A single §6conveyor belt§r block holds at most §e25§r items. Once it is full, the items behind it stop and wait.%n- Renaming items in an anvil no longer raises their repair cost.%n- §6Landmines§r spawn naturally in the world. Watch your step around ruins.%n- Some mobs can spawn with NTM armor and weapons.%n- NTM has its own §6achievement page§r, §eNuclear Tech§r, in the achievements menu. Some achievements have unusual triggers - try breaking some §6gneiss§r.%n- §e/ntmclient§r lets you change client options such as HUD positions without leaving the game.
+
+# Quest: Custom Machines
+betterquesting.quest.TOfr1kH-SACDra3489xeQQ.name=Custom Machines
+betterquesting.quest.TOfr1kH-SACDra3489xeQQ.desc=NTM lets modpacks add their own multiblock machines through a config file. They are built from §6custom machine parts§r - casings, sheets, ports and more - around a controller crafted from a pack-specific recipe. Look the controller up in NEI to see its shape.%n%nNTNH has two of them:%n- §6Paper Press§r - turns sawdust and water into paper.%n- §6Spatial Rift Synthesizer§r - a late-game machine that turns a shimmer sledge and stellar flux into an end portal block.
 
 # Quest: Weapon Abilities
 betterquesting.quest.TVZ02amsTEO2_nmZj_B4eQ.name=Weapon Abilities
@@ -1631,6 +1683,10 @@ betterquesting.quest.LXd2_iAxRP-cveht4mJR7Q.desc=The §3Fluid Valve with Counter
 betterquesting.quest.MTiLxFNwSxKjViwIaQJePA.name=Fluid Overflow
 betterquesting.quest.MTiLxFNwSxKjViwIaQJePA.desc=§eRedstone-Over-Radio§r can be combined with a §3Redstone Fluid Valve§r to detect when a tank is starting to fill and then release its contents. This lets you use tanks as buffers without wasting fluid.%n%nA typical setup is a tank that only outputs fluid once it is full. Place a §6RoR Transmitter§r on one port of the tank, give it an ID, and enable Polling.%n%n[img height=1000]betterquesting:textures/QB_Fluid1.png[/img]%n%nThen place a §6RoR Logic Receiver§r next to the fluid valve and configure it so the received signal must be greater than or equal to your desired buffer threshold. Each redstone level equals 16,000 mB, so set the condition based on how large a buffer you want.%n%n[img height=1000]betterquesting:textures/QB_Fluid2.png[/img]
 
+# Quest: Conveyor Combinator
+betterquesting.quest.N4lNvwRNSCSbSDbXZb8Wkg.name=Conveyor Combinator
+betterquesting.quest.N4lNvwRNSCSbSDbXZb8Wkg.desc=The §3Conveyor Combinator§r combines items right on the belt, crafting 2x2 or 3x3 squares - nuggets into ingots, ingots into blocks and so on. Right click it with a screwdriver to switch between the two modes. The belt runs left to right.
+
 # Quest: Gauges
 betterquesting.quest.P_IpX7K7QbGEwCyd3wB2bQ.name=Gauges
 betterquesting.quest.P_IpX7K7QbGEwCyd3wB2bQ.desc=§3Gauges§r measure how much energy or fluid is moving through your network, so you can spot bottlenecks and tune your setups.%n%nThe §6Flow Gauge Pipe§r works like a normal fluid pipe but also reports flow rate in mB/s and mB/t. Just hover over it to see the values. It connects to any universal fluid pipe, including Boxcar pipes, and treats branched pipe systems joined by a single tank as one system. It does not work with exhaust pipes.%n%nThe §6Power Gauge§r sits inline with your cables and measures the energy passing through per tick and per second. Because it is a variation of red copper cable, it conducts power normally, so you can place it in the middle of a wire without breaking the connection. Separate networks linked by energy storage blocks are treated as one network.
@@ -1638,6 +1694,10 @@ betterquesting.quest.P_IpX7K7QbGEwCyd3wB2bQ.desc=§3Gauges§r measure how much e
 # Quest: Conveyor Grabber
 betterquesting.quest.QaxG5jTfQv2p5_rvauacdg.name=Conveyor Grabber
 betterquesting.quest.QaxG5jTfQv2p5_rvauacdg.desc=§3Conveyor Grabber§r grabs items directly off a conveyor belt without needing the belt to feed into it. It has no internal buffer, so items are pulled straight from the belt and placed into an adjacent inventory or machine. It includes whitelist and blacklist filters with 9 slots each, and without the Stack Amount upgrade it only grabs one item at a time - a full stack on the belt will be taken one piece per operation. With the upgrade it can grab groups. Use a screwdriver to set its orientation and input/output sides: right-click sets input, Shift-right-click sets output, and double right-click places ports on opposite sides.%n%n§2Factorio inserter says "Hi!"§r
+
+# Quest: Conveyor Press
+betterquesting.quest.S23MCNTZSX6O3KwaKn-Nng.name=Conveyor Press
+betterquesting.quest.S23MCNTZSX6O3KwaKn-Nng.desc=The §3Conveyor Press§r sits over a conveyor belt and presses items as they pass under it, using the same stamps and recipes as the other presses. Right click with a stamp to install it, use a screwdriver to take it out. The belt runs left to right.
 
 # Quest: Item Counter
 betterquesting.quest.WvfpO4ICRQSzLpydFY-pTA.name=Item Counter
@@ -1931,6 +1991,10 @@ betterquesting.quest.g4scyRUIR8ScneG9YiaNNw.desc=The §6SPAS-12§r is a combat s
 # Quest: Turret "Jeremy"
 betterquesting.quest.grTUKQmKRGWdht6bsRWvKw.name=Turret "Jeremy"
 betterquesting.quest.grTUKQmKRGWdht6bsRWvKw.desc=§3Jeremy§r is an autocannon turret firing §6240mm shells§r: standard, explosive, armor-piercing (tungsten or depleted uranium) and even a nuclear W9 shell. Slow, but each hit is devastating.
+
+# Quest: Refueling Station
+betterquesting.quest.gv70D0MXTnWt1EiNzhmJug.name=Refueling Station
+betterquesting.quest.gv70D0MXTnWt1EiNzhmJug.desc=Stand next to a §3Refueling Station§r and it refills the gear you are wearing or holding - jetpacks, armor and other fluid-powered items, including baubles and the offhand. Fill it with the fuel your gear uses; set the type with a fluid identifier.
 
 # Quest: Lunar Cybernetic Armor
 betterquesting.quest.iHD-hU2bSL-Jb3J86U6IsQ.name=Lunar Cybernetic Armor
@@ -2378,6 +2442,10 @@ betterquesting.quest._9Su2g26SkWvlSQmTr5lNg.desc=Tea seeds come from office loot
 # Quest: Energy Drinks
 betterquesting.quest.gMjzpPbyQeOxYJjWNgqPtg.name=Energy Drinks
 betterquesting.quest.gMjzpPbyQeOxYJjWNgqPtg.desc=An empty can made from aluminium plates, a water bottle, sugar and one special ingredient make an energy drink. Each gives a different 30-second mix of speed, resistance, strength, regeneration or jump boost - niter for §6Smart§r, diesel for §6Creature§r, a cluster pellet for §6Red Bomb§r, fluorite for §6Dr. Sugar§r, sulfur for §6Overcharge§r and meteorite dust for §6Black Mesa Luna§r.
+
+# Quest: Microwave
+betterquesting.quest.kGi2vMlgRteo_PX7S2XEbQ.name=Microwave
+betterquesting.quest.kGi2vMlgRteo_PX7S2XEbQ.desc=The §3Microwave§r cooks food with electricity instead of fuel - anything a furnace can cook. It uses 50 HE per tick, and its speed can be turned up.
 
 # Quest: Schrabidium Apples
 betterquesting.quest.uiM9X03hRa-RWqKm2E0wDQ.name=Schrabidium Apples

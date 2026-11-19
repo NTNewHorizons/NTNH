@@ -451,11 +451,31 @@ betterquesting.quest.6qwZelyNSkKyUFsrg0WJ7Q.desc=Structures are full of containe
 
 # Quest: Overworld Ores
 betterquesting.quest.0gF8gPwCSDmOeGw5qV__ag.name=Overworld Ores
-betterquesting.quest.0gF8gPwCSDmOeGw5qV__ag.desc=Most NTM ores are placed by the Custom Ore Generation mod in large veins. Check the Guide Book table for their heights. Besides the ore veins, the ground hides a few other things:%n%n- §6Resource layers§r - big 3D patches of §6Hematite§r, §6Malachite§r and §6Bauxite§r, plus §6Limestone§r veins. Iron, copper and aluminium in bulk.%n- §6Sulfur caves§r with sulfurous stone and pools of sulfuric acid, and §6asbestos caves§r full of Chrysotile. Do not mine the latter without a mask.%n- §6Gas pockets§r between Y 30 and 40. §cFlammable gas§r ignites from fire, lava or a torch, §cexplosive gas§r blows up. Do not carry torches into caves full of it.%n- §6Alexandrite Ore§r - a rare gem, only near the bedrock (Y 1 to 10).%n- §6Tar Sand§r fields in deserts, a source of bitumen.%n- Natural §6Sellafite§r craters in deserts - highly radioactive.
+betterquesting.quest.0gF8gPwCSDmOeGw5qV__ag.desc=Most NTM ores are placed by the Custom Ore Generation mod in large veins. Check the Guide Book table for their heights. Besides the ore veins, the ground hides a few other things:%n%n- §6Resource layers§r - big 3D patches of §6Hematite§r, §6Malachite§r and §6Bauxite§r, plus §6Limestone§r veins. Iron, copper and aluminium in bulk.%n- §6Sulfur caves§r with sulfurous stone and pools of sulfuric acid, and §6asbestos caves§r full of Chrysotile. Do not mine the latter without a mask.%n- §6Gas pockets§r between Y 30 and 40. §cFlammable gas§r ignites from fire, lava or a torch, §cexplosive gas§r blows up. Do not carry torches into caves full of it.%n- §6Alexandrite Ore§r - a rare gem between Y 10 and 15, which only Mining Charges can break.%n- §6Tar Sand§r fields in deserts, a source of bitumen.%n- Natural §6Sellafite§r craters in deserts - highly radioactive.
 
 # Quest: Nether Resources
 betterquesting.quest.pJNXkzbKRLqVpvEPYsTqnA.name=Nether Resources
 betterquesting.quest.pJNXkzbKRLqVpvEPYsTqnA.desc=The Nether has a few NTM resources of its own.%n%n- §6Smoldering Netherrack§r - glowing pillars that set you on fire when you walk on them. Mining them gives §6Red Phosphorus§r.%n- §6Volcanic Geysers§r - erupt from time to time and spray burning debris. Keep your distance.%n- §6Nether Depth Neodymium Ore§r - near the bedrock at the top and the bottom of the Nether.%n- The Nether has its own §6bedrock ores§r - glowstone, phosphorus and quartz.
+
+# Quest: Steam Grades
+betterquesting.quest.CNmctzVJQVS6mp5sd3ByNA.name=Steam Grades
+betterquesting.quest.CNmctzVJQVS6mp5sd3ByNA.desc=Steam comes in four grades. The hotter the source, the denser the steam it can make from water:%n%n- §bSteam§r - 100 mB from 1 mB of water.%n- §bDense Steam§r - 10 mB from 1 mB of water.%n- §bSuper Dense Steam§r - 1 mB from 1 mB of water.%n- §bUltra Dense Steam§r - 1 mB from 10 mB of water, and only from very hot sources.%n%nA turbine only takes steam down §eone grade§r: Steam becomes Low-Pressure Steam, Dense Steam becomes Steam, and so on, with every 1 mB of denser steam turning into 10 mB of the next grade. Chain turbines one after another to use all of the energy in dense steam - or let a single turbine take the first step and send the rest to a second one.%n%nBoilers are set to a grade with a fluid identifier. RBMK steam channels and the Fusion Boiler make the denser grades.
+
+# Quest: RF to HE Converter
+betterquesting.quest.4rNX3sPHRZq27_ilblG4sA.name=RF to HE Converter
+betterquesting.quest.4rNX3sPHRZq27_ilblG4sA.desc=The reverse of the HE to RF converter: it takes RF from other mods and turns every §e2 RF§r into §e5 HE§r.
+
+# Quest: More Pipes and Cables
+betterquesting.quest.NnO0scFDQlyO8s_k8vy7ng.name=More Pipes and Cables
+betterquesting.quest.NnO0scFDQlyO8s_k8vy7ng.desc=A few extras for tidy networks:%n%n- §6Exhaust Pipe Anchors§r and §6Pneumatic Tube Anchors§r - like the fluid pipe anchor, but for exhaust and pneumatic tubes.%n- §6Paintable§r pipes and cables - right click them with a block to take on its look, so they disappear into your walls.%n- Smaller §6Electricity Pylons§r - wooden, steel and medium ones, for shorter spans than the large pylon.
+
+# Quest: Special Barrels
+betterquesting.quest.Z3PZSL9BSaWiFe-1PZAAwg.name=Special Barrels
+betterquesting.quest.Z3PZSL9BSaWiFe-1PZAAwg.desc=Not every fluid can go into a steel barrel.%n%n- The §6Safe Barrel§r holds 12,000 mB, but melts if you fill it with anything hot or corrosive.%n- A steel barrel filled with something §chighly corrosive§r corrodes and starts leaking.%n- The §6Technetium Steel Barrel§r holds 24,000 mB and takes highly corrosive fluids without damage.%n- Antimatter needs its own antimatter barrel. Anything else explodes.
+
+# Quest: Alexandrite
+betterquesting.quest.djQr_pweR9-nluYCHEquAw.name=Alexandrite
+betterquesting.quest.djQr_pweR9-nluYCHEquAw.desc=§6Alexandrite Ore§r is rare: a small cluster in roughly one chunk out of a hundred, between Y 10 and 15. Like depth ores, it can only be broken with §3Mining Charges§r, and it drops up to two gems. Alexandrite can also turn up in Red Rooms and dungeon chests.%n%nYou will need it for the §6Red Key§r, the §3Teleportation Anchor§r and the §6Remnants Power Armor§r.
 
 
 ## Quest Line: LV2 - Oil Age
@@ -741,6 +761,26 @@ betterquesting.quest.X1i_xQztQxeBKQiYivboRA.desc=Radiation does more than raise 
 # Quest: Trixite
 betterquesting.quest.rl-wwMCtSFeOm4PfbFY9yA.name=Trixite
 betterquesting.quest.rl-wwMCtSFeOm4PfbFY9yA.desc=§6Trixite Ore§r generates only in §5The End§r, but it is common there.%n%nIn a §3Centrifuge§r it yields plutonium, cobalt, niobium and lapis powder - one of the few early sources of plutonium. The §3Ore Acidizer§r turns it into trixite crystals instead.
+
+# Quest: Acidizer Input Partitioner
+betterquesting.quest.YNxy8pW8Q1q3kfbh03FIXQ.name=Acidizer Input Partitioner
+betterquesting.quest.YNxy8pW8Q1q3kfbh03FIXQ.desc=The §3Ore Acidizer§r needs an exact number of items per recipe. The §3Acidizer Input Partitioner§r stores up to 45 inputs and only releases them once there are enough for a full batch. Items that do not belong are kept too - pull them out from the side.
+
+# Quest: Deuterium Extractor
+betterquesting.quest.XR0VrcL1Rha0tAhX-Hc9kQ.name=Deuterium Extractor
+betterquesting.quest.XR0VrcL1Rha0tAhX-Hc9kQ.desc=The §3Deuterium Extractor§r is the small brother of the extraction tower. It uses power to pull §bHeavy Water§r out of ordinary water, a little at a time. Several of them side by side are a good start before you can afford the tower.
+
+# Quest: Geothermal Heat Exchanger
+betterquesting.quest.eBk-KQOTTASVDKqzRTzAvA.name=Geothermal Heat Exchanger
+betterquesting.quest.eBk-KQOTTASVDKqzRTzAvA.desc=The §3Geothermal Heat Exchanger§r is a tall machine lowered into lava. It reads the heat of the lava around its shaft - up to 7 blocks out - and uses it to heat §bOil§r into §bHot Oil§r. The more lava around it, the faster it works - and volcanic lava gives far more heat than ordinary lava. Hot oil can then heat boilers.
+
+# Quest: Recall Device
+betterquesting.quest.JsS88quWS7C43Xy101qxVg.name=Recall Device
+betterquesting.quest.JsS88quWS7C43Xy101qxVg.desc=Link the §6Recall Device§r to a §3Teleportation Anchor§r by right clicking the anchor. From then on, using the device teleports you back to the anchor. It runs on a battery charge, so keep it charged.
+
+# Quest: Starmetal Static Electricity Generator
+betterquesting.quest.4cv-UUIhQxqc_XwPPvzpYQ.name=Starmetal Static Electricity Generator
+betterquesting.quest.4cv-UUIhQxqc_XwPPvzpYQ.desc=Place a §3Tesla Coil§r on top of a §3Starmetal Static Electricity Generator§r and it never runs out of power - no cables needed.
 
 
 ## Quest Line: LV3 - Reactors Age
@@ -1143,6 +1183,10 @@ betterquesting.quest.ImJAgHWbSfG-bw4scSQjhw.desc=Schrabidium tools are built on 
 betterquesting.quest.5_KLTUedQvi2RktZhFVJuA.name=FEL Laser Crystals
 betterquesting.quest.5_KLTUedQvi2RktZhFVJuA.desc=The crystal in the FEL decides the laser's wavelength, and every SILEX recipe needs a minimum wavelength: infrared, visible, ultraviolet, X-ray, gamma and finally digamma. A stronger laser also runs weaker recipes much faster.%n%n§6Bismuth§r (visible) - uranium, thorium-232, bismuth and a rare earth crystal.%n§6Iron-Arsenide§r (X-ray) - gallium arsenide and iron crystals.%n§6CMB-Schrabidate§r (ultraviolet) - CMB steel, ferric schrabidate and an anti-schrabidium cell.
 
+# Quest: Inserter
+betterquesting.quest.tNn2ePdQTDSuqzkvL7iDgQ.name=Inserter
+betterquesting.quest.tNn2ePdQTDSuqzkvL7iDgQ.desc=The §3Inserter§r automates the Chicago Pile. It takes one item from automation and, on a redstone signal, pushes it into a row of drilled graphite. Every item in the row moves one block along, so the last one drops out the far end. Leave one block of air between the inserter and the graphite.
+
 
 ## Quest Line: LV3.5 - Space Age
 betterquesting.questline.enTskTtvRdajee3UMSgXKg.name=LV3.5 - Space Age
@@ -1420,6 +1464,10 @@ betterquesting.quest.FK_wNOGpRM2XuHVml-iyTA.desc=Laythe's oceans are alive. Hunt
 betterquesting.quest.8onJDxEJR2mtvvrpHQTLDQ.name=Orrery
 betterquesting.quest.8onJDxEJR2mtvvrpHQTLDQ.desc=The §3Orrery§r is a working model of the solar system. Place it in your mission control to see where every body is right now.
 
+# Quest: Chungus Solar Array
+betterquesting.quest.qUq4XrL8Sgy7TagwzXS8gA.name=Chungus Solar Array
+betterquesting.quest.qUq4XrL8Sgy7TagwzXS8gA.desc=The §3Chungus Solar Array§r is an oversized 17x3 field of gold-plated panels. It produces as much as 9 solar panels with a 50%% bonus - 13.5 panels in total - and stores up to 5,000 HE.
+
 
 ## Quest Line: LV4 - End Game
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAw.name=LV4 - End Game
@@ -1656,11 +1704,15 @@ betterquesting.quest.-ZczpvqzQqWXK8Vtr7zjnQ.desc=Pollution is not just a number 
 
 # Quest: Odds and Ends
 betterquesting.quest.49Z72-6WT0uRG5ej8-yRQQ.name=Odds and Ends
-betterquesting.quest.49Z72-6WT0uRG5ej8-yRQQ.desc=A few small things the mod never tells you.%n%n- §6Storage crates§r keep their contents when broken, and can be opened while held in your hand.%n- §6Conveyor belts§r explode if more than §e25§r items pile up on a single block.%n- Renaming items in an anvil no longer raises their repair cost.%n- §6Landmines§r spawn naturally in the world. Watch your step around ruins.%n- Some mobs can spawn with NTM armor and weapons.%n- NTM has its own §6achievement page§r, §eNuclear Tech§r, in the achievements menu. Some achievements have unusual triggers - try breaking some §6gneiss§r.%n- §e/ntmclient§r lets you change client options such as HUD positions without leaving the game.
+betterquesting.quest.49Z72-6WT0uRG5ej8-yRQQ.desc=A few small things the mod never tells you.%n%n- §6Storage crates§r keep their contents when broken, and can be opened while held in your hand.%n- A single §6conveyor belt§r block holds at most §e25§r items. Once it is full, the items behind it stop and wait.%n- Renaming items in an anvil no longer raises their repair cost.%n- §6Landmines§r spawn naturally in the world. Watch your step around ruins.%n- Some mobs can spawn with NTM armor and weapons.%n- NTM has its own §6achievement page§r, §eNuclear Tech§r, in the achievements menu. Some achievements have unusual triggers - try breaking some §6gneiss§r.%n- §e/ntmclient§r lets you change client options such as HUD positions without leaving the game.
 
 # Quest: Strange Wildlife
 betterquesting.quest.mOunuBA3TAO99IfkAqJSwQ.name=Strange Wildlife
 betterquesting.quest.mOunuBA3TAO99IfkAqJSwQ.desc=Not everything NTM adds wants to kill you.%n%n- §6Pigeons§r flock on plains, and §6Plastic Bags§r drift around in the ocean.%n- Every player gets one §6Duck§r - press §eO§r once to summon it.%n- A duck that soaks up §e200 RAD§r turns into §6Quackos The Elder One§r. It is very hard to kill for good, but when it finally dies it drops three §6Golden Eggs§r, each of which hatches a new duck.%n- Cows that take 50 RAD turn into mooshrooms, villagers that take 500 RAD turn into zombies.%n- If you carry any §cDigamma§r, §6Ghosts§r start appearing near you.
+
+# Quest: Custom Machines
+betterquesting.quest.TOfr1kH-SACDra3489xeQQ.name=Custom Machines
+betterquesting.quest.TOfr1kH-SACDra3489xeQQ.desc=NTM lets modpacks add their own multiblock machines through a config file. They are built from §6custom machine parts§r - casings, sheets, ports and more - around a controller crafted from a pack-specific recipe. Look the controller up in NEI to see its shape.%n%nNTNH has two of them:%n- §6Paper Press§r - turns sawdust and water into paper.%n- §6Spatial Rift Synthesizer§r - a late-game machine that turns a shimmer sledge and stellar flux into an end portal block.
 
 
 ## Quest Line: Advanced Logistics
@@ -1754,6 +1806,14 @@ betterquesting.quest.LXd2_iAxRP-cveht4mJR7Q.desc=The §3Fluid Valve with Counter
 # Quest: Carts and Boats
 betterquesting.quest.8YCwQJgBRnumej8P7gTyJg.name=Carts and Boats
 betterquesting.quest.8YCwQJgBRnumej8P7gTyJg.desc=Besides the steel and crate minecarts, NTM has a few more.%n%n- §6Destroyer Minecart§r - deletes dropped items it rolls over that match the filter in its slots. A moving trash can for item lines.%n- §6Powder Minecart§r and §6Semtex Minecart§r - carts carrying a load of explosives.%n%nThe §6Rubber Boat§r is a boat made of rubber. When it is destroyed, you get the boat back instead of planks and sticks.
+
+# Quest: Conveyor Press
+betterquesting.quest.S23MCNTZSX6O3KwaKn-Nng.name=Conveyor Press
+betterquesting.quest.S23MCNTZSX6O3KwaKn-Nng.desc=The §3Conveyor Press§r sits over a conveyor belt and presses items as they pass under it, using the same stamps and recipes as the other presses. Right click with a stamp to install it, use a screwdriver to take it out. The belt runs left to right.
+
+# Quest: Conveyor Combinator
+betterquesting.quest.N4lNvwRNSCSbSDbXZb8Wkg.name=Conveyor Combinator
+betterquesting.quest.N4lNvwRNSCSbSDbXZb8Wkg.desc=The §3Conveyor Combinator§r combines items right on the belt, crafting 2x2 or 3x3 squares - nuggets into ingots, ingots into blocks and so on. Right click it with a screwdriver to switch between the two modes. The belt runs left to right.
 
 
 ## Quest Line: Arsenal
@@ -2128,6 +2188,10 @@ betterquesting.quest.3yuh3zV6RvaY9asLtoQ7TQ.desc=NTM armor protects with two num
 betterquesting.quest.jG-ZfmZ3QgqyBQA7lEVgTg.name=Gun Maintenance
 betterquesting.quest.jG-ZfmZ3QgqyBQA7lEVgTg.desc=§eR§r reloads, §eleft click§r fires, §eright click§r uses the secondary fire or aims, depending on the gun. Many guns accept several ammo types - the one loaded is shown in the HUD.%n%nEvery shot wears the gun down, and stronger ammo wears it faster. A worn gun becomes more and more likely to §cjam§r after reloading, which costs you time to clear in the middle of a fight.%n%n§6Gun Oil§r repairs every gun in your hotbar by 10%%, a §6Gun Repair Kit§r by 50%%. Keep one on you before heading out.
 
+# Quest: Refueling Station
+betterquesting.quest.gv70D0MXTnWt1EiNzhmJug.name=Refueling Station
+betterquesting.quest.gv70D0MXTnWt1EiNzhmJug.desc=Stand next to a §3Refueling Station§r and it refills the gear you are wearing or holding - jetpacks, armor and other fluid-powered items, including baubles and the offhand. Fill it with the fuel your gear uses; set the type with a fluid identifier.
+
 
 ## Quest Line: Building and Decorating
 betterquesting.questline.7-1bBIkKRc6xhh5bwIGsjg.name=Building and Decorating
@@ -2265,6 +2329,10 @@ betterquesting.quest.uiM9X03hRa-RWqKm2E0wDQ.desc=The NTM answer to golden apples
 # Quest: Wild Plants
 betterquesting.quest.QydYnlK1S4alueDB2NaqJw.name=Wild Plants
 betterquesting.quest.QydYnlK1S4alueDB2NaqJw.desc=NTM adds a few plants that grow in the wild.%n%n- §6Foxglove§r - in forests. Used in medicine.%n- §6Nightshade§r - in dark forests. Crafts into §6Poison Powder§r.%n- §6Tobacco§r - in jungles. Smelt it to dry it.%n- §6Reeds§r - along rivers and beaches.%n- §6Pink Log§r - a rare oak with a pink trunk. You can also make one by combining a log with WD-2004 powder.%n%nFoxglove, tobacco and nightshade can also be bought from Bobmazon.
+
+# Quest: Microwave
+betterquesting.quest.kGi2vMlgRteo_PX7S2XEbQ.name=Microwave
+betterquesting.quest.kGi2vMlgRteo_PX7S2XEbQ.desc=The §3Microwave§r cooks food with electricity instead of fuel - anything a furnace can cook. It uses 50 HE per tick, and its speed can be turned up.
 
 
 ## Quest Line: Applied Energistics 2
