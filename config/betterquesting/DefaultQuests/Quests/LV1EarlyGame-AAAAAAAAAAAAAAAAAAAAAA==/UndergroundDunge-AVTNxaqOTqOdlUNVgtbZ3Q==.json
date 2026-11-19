@@ -1,0 +1,70 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": -2171037489483201764,
+      "questIDLow:4": -8584556695724556814
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "completion_animation:8": "default",
+      "completion_particle:8": "default",
+      "confetti_icon:10": {
+        "Count:3": 0,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "minecraft:stick"
+      },
+      "countAsQuest:1": 1,
+      "desc:8": "Some of the best loot lies below the surface.\n\n- §6Strange Stone§r - a keyhole block hidden deep underground, between Y 6 and 18. It leads to a §cRed Room§r and opens only with a red key.\n- §6Library Dungeons§r - small rooms with a mob spawner and books.\n- §6Arctic Vaults§r - buried deep under the ground.\n- §6Desert Atoms§r - in hot biomes, built around an unexploded bomb, with nuclear loot and rare ores inside.\n- §6Ancient Tombs§r - in very hot biomes. Full of radioactive tomb gas, so bring a gas mask.\n- §6Enargite Labyrinths§r - in jungles, full of traps, with enargite crates at the end.\n- §6Blueprint Caches§r - chests encased in obsidian, spread over the world on a large grid, holding blueprints.\n- §6Safes§r - rusty, standard, reinforced and unbreakable, each with better loot than the last. Some are guarded by spiders.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:tile.stone_keyhole"
+      },
+      "isMain:1": 0,
+      "isSilent:1": 0,
+      "is_final:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Underground Dungeons",
+      "notification_duration:5": -1.0,
+      "notification_effect:3": -1,
+      "notification_fade_in:5": -1.0,
+      "notification_fade_out:5": -1.0,
+      "notification_icon_offset_y:3": -2147483648,
+      "notification_icon_scale:5": -1.0,
+      "notification_pos_x:3": -2147483648,
+      "notification_pos_y:3": -2147483648,
+      "notification_show_icon:8": "default",
+      "notification_style:8": "default",
+      "notification_subtitle:8": "",
+      "notification_subtitle_scale:5": -1.0,
+      "notification_title:8": "",
+      "notification_title_scale:5": -1.0,
+      "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": 95927740935327395,
+  "questIDLow:4": -7091688003678578211,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

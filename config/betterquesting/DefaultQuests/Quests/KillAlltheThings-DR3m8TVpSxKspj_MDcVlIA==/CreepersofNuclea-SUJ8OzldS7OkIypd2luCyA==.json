@@ -1,0 +1,114 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 9164108901835295382,
+      "questIDLow:4": -8714600132788781668
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "completion_animation:8": "default",
+      "completion_particle:8": "default",
+      "confetti_icon:10": {
+        "Count:3": 0,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "minecraft:stick"
+      },
+      "countAsQuest:1": 1,
+      "desc:8": "The Nuclear Creeper has relatives, and all of them spawn naturally. Kill any one of them.\n\n- §6Volatile Creeper§r - the most common one. Its blast is far bigger than a creeper\u0027s and turns the crater into slag.\n- §6Phosgene Creeper§r - a small explosion, followed by a cloud of deadly §cphosgene§r. Wear a gas mask.\n- §6Golden Creeper§r - rare. Its explosion turns the surrounding blocks into §6gold ore§r.\n- §6Tainted Creeper§r - comes out of §5taint§r and spreads more of it when it explodes. Tainted Tesla Crabs crawl out of taint as well.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 4,
+        "OreDict:8": "",
+        "id:8": "minecraft:skull"
+      },
+      "isMain:1": 0,
+      "isSilent:1": 0,
+      "is_final:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Creepers of Nuclear Tech",
+      "notification_duration:5": -1.0,
+      "notification_effect:3": -1,
+      "notification_fade_in:5": -1.0,
+      "notification_fade_out:5": -1.0,
+      "notification_icon_offset_y:3": -2147483648,
+      "notification_icon_scale:5": -1.0,
+      "notification_pos_x:3": -2147483648,
+      "notification_pos_y:3": -2147483648,
+      "notification_show_icon:8": "default",
+      "notification_style:8": "default",
+      "notification_subtitle:8": "",
+      "notification_subtitle_scale:5": -1.0,
+      "notification_title:8": "",
+      "notification_title_scale:5": -1.0,
+      "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
+      "questLogic:8": "OR",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": 5278918307038972851,
+  "questIDLow:4": -6619400444720741688,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "damageType:8": "",
+      "ignoreNBT:1": 1,
+      "index:3": 0,
+      "required:3": 1,
+      "subtypes:1": 1,
+      "target:8": "hbm.entity_mob_volatile_creeper",
+      "targetNBT:10": {
+        "id:8": "hbm.entity_mob_volatile_creeper"
+      },
+      "taskID:8": "bq_standard:hunt"
+    },
+    "1:10": {
+      "damageType:8": "",
+      "ignoreNBT:1": 1,
+      "index:3": 1,
+      "required:3": 1,
+      "subtypes:1": 1,
+      "target:8": "hbm.entity_mob_phosgene_creeper",
+      "targetNBT:10": {
+        "id:8": "hbm.entity_mob_phosgene_creeper"
+      },
+      "taskID:8": "bq_standard:hunt"
+    },
+    "2:10": {
+      "damageType:8": "",
+      "ignoreNBT:1": 1,
+      "index:3": 2,
+      "required:3": 1,
+      "subtypes:1": 1,
+      "target:8": "hbm.entity_mob_gold_creeper",
+      "targetNBT:10": {
+        "id:8": "hbm.entity_mob_gold_creeper"
+      },
+      "taskID:8": "bq_standard:hunt"
+    },
+    "3:10": {
+      "damageType:8": "",
+      "ignoreNBT:1": 1,
+      "index:3": 3,
+      "required:3": 1,
+      "subtypes:1": 1,
+      "target:8": "hbm.entity_mob_tainted_creeper",
+      "targetNBT:10": {
+        "id:8": "hbm.entity_mob_tainted_creeper"
+      },
+      "taskID:8": "bq_standard:hunt"
+    }
+  }
+}

@@ -21,6 +21,10 @@ betterquesting.quest.-OxoBRz7Spqm0rVUNxRVpA.desc=The §3Stirling Engine§r uses 
 betterquesting.quest.0-Ws1mY3SeeFcyIcv2LKNQ.name=Additional Fluid Tools
 betterquesting.quest.0-Ws1mY3SeeFcyIcv2LKNQ.desc=The §6Siphon§r is a tool used to extract input fluids from a machine. Right-clicking a machine with content in it's input tanks will fill any fluid barrels, universal tanks or pipettes (if the fluid amount cannot fill any of the previous options).%n%n§6Pipettes§r can be used to input specific amounts of fluids. Right-clicking or Shift-Right-clicking will increase or decrease the fluid amount.
 
+# Quest: Overworld Ores
+betterquesting.quest.0gF8gPwCSDmOeGw5qV__ag.name=Overworld Ores
+betterquesting.quest.0gF8gPwCSDmOeGw5qV__ag.desc=Most NTM ores are placed by the Custom Ore Generation mod in large veins. Check the Guide Book table for their heights. Besides the ore veins, the ground hides a few other things:%n%n- §6Resource layers§r - big 3D patches of §6Hematite§r, §6Malachite§r and §6Bauxite§r, plus §6Limestone§r veins. Iron, copper and aluminium in bulk.%n- §6Sulfur caves§r with sulfurous stone and pools of sulfuric acid, and §6asbestos caves§r full of Chrysotile. Do not mine the latter without a mask.%n- §6Gas pockets§r between Y 30 and 40. §cFlammable gas§r ignites from fire, lava or a torch, §cexplosive gas§r blows up. Do not carry torches into caves full of it.%n- §6Alexandrite Ore§r - a rare gem, only near the bedrock (Y 1 to 10).%n- §6Tar Sand§r fields in deserts, a source of bitumen.%n- Natural §6Sellafite§r craters in deserts - highly radioactive.
+
 # Quest: Steam Engine
 betterquesting.quest.1WdjJYUsRMKgt4MYnlmM7A.name=Steam Engine
 betterquesting.quest.1WdjJYUsRMKgt4MYnlmM7A.desc=The §3Steam Engine§r is an early game method of turning §bSteam§r into energy. It requires an external source to provide steam and a way to dump or reprocess the §bLow-Pressure Steam§r it produces. It only handles regular-pressure steam - denser steam needs a turbine.%n%nThe Steam Engine has an energy efficiency of §e85%%§r, making it better than the §3Stirling Engine§r. However, it still has a throughput limit as it can only hold up to 2000 mB of steam. Its maximum processing rate is 2000 mB/t, producing a considerable §e3400 HE/t§r or §e68 kHE/s§r. It is therefore the best generator available before §3Steam Turbines§r.%n%nA boiler being heated up by a heating oven using coal will produce §e17kHE/s§r.
@@ -48,6 +52,10 @@ betterquesting.quest.63Mkw5ZqT6iefbQvFZ_EDQ.desc=Welcome to the Stone Age. This 
 # Quest: Nailed It!
 betterquesting.quest.6l98ozdcQFqJOan6BC4kMA.name=Nailed It!
 betterquesting.quest.6l98ozdcQFqJOan6BC4kMA.desc=The §6Hammer§r is a tool from §dEx Nihilo§r used to crush blocks down into finer forms. Its primary role is producing the materials needed for the §3Sieve§r: cobblestone is crushed into gravel, gravel into sand, and sand into dust, each of which can be sieved for different resources.%n%nTo use it, simply break a target block with the §6Hammer§r as you would with a pickaxe. Hammers come in the standard tool tiers -%nwood through diamond - and differ only in durability. They can be enchanted, though the available enchantments differ from those on a pickaxe.%n%nOres can also be hammered down through a multi-step crushing chain. Each step has a small chance to yield bonus%nmaterial, making the §6Hammer§r a basic form of ore multiplication before dedicated processing machines are available.%n%n§2Hammering can be automated with machines that simulate block breaking, such as the Auto Hammer from §dEx Compressum§r§2.%n§2Check NEI for the full crushing chain of any block.
+
+# Quest: Crates and Loot
+betterquesting.quest.6qwZelyNSkKyUFsrg0WJ7Q.name=Crates and Loot
+betterquesting.quest.6qwZelyNSkKyUFsrg0WJ7Q.desc=Structures are full of containers, and each kind holds different loot.%n%n- §6Crates§r - supply, weapon, radioactive material, machine, canned food, starmetal and enargite crates. Open them with a §6Crowbar§r - the crate breaks and drops its contents.%n- §6Loot Piles§r - items lying on the floor. Just walk up and take them.%n- §6Filing Cabinets§r - open them for paperwork, and sometimes something useful.%n- §6Safes§r - need a screwdriver and pins to pick, see the lockpicking quest.%n- §6Lore books§r, holotapes and bobbleheads tell bits of the world's story.
 
 # Quest: Advanced Hazmat Suit
 betterquesting.quest.7-jaXVNtTausgOChundX0w.name=Advanced Hazmat Suit
@@ -192,6 +200,10 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABdg.desc=The §3Drainage Pipe§r allows 
 # Quest: Fortune and Afterburner Upgrades
 betterquesting.quest.AQ3WryLxRB6gqxVD2_hNAg.name=Fortune and Afterburner Upgrades
 betterquesting.quest.AQ3WryLxRB6gqxVD2_hNAg.desc=Two more upgrades are soldered from vacuum tubes and capacitors. §6Fortune§r (which also needs niobium) increases the ore output of mining machines. §6Afterburner§r makes engines and turbines burn their fuel faster for a higher power output.%n%nLike the basic upgrades, higher levels are made later in the Precision Assembler.
+
+# Quest: Underground Dungeons
+betterquesting.quest.AVTNxaqOTqOdlUNVgtbZ3Q.name=Underground Dungeons
+betterquesting.quest.AVTNxaqOTqOdlUNVgtbZ3Q.desc=Some of the best loot lies below the surface.%n%n- §6Strange Stone§r - a keyhole block hidden deep underground, between Y 6 and 18. It leads to a §cRed Room§r and opens only with a red key.%n- §6Library Dungeons§r - small rooms with a mob spawner and books.%n- §6Arctic Vaults§r - buried deep under the ground.%n- §6Desert Atoms§r - in hot biomes, built around an unexploded bomb, with nuclear loot and rare ores inside.%n- §6Ancient Tombs§r - in very hot biomes. Full of radioactive tomb gas, so bring a gas mask.%n- §6Enargite Labyrinths§r - in jungles, full of traps, with enargite crates at the end.%n- §6Blueprint Caches§r - chests encased in obsidian, spread over the world on a large grid, holding blueprints.%n- §6Safes§r - rusty, standard, reinforced and unbreakable, each with better loot than the last. Some are guarded by spiders.
 
 # Quest: Do a Barrel!
 betterquesting.quest.Ba9zHp22SvGkBCr8xF5oQQ.name=Do a Barrel!
@@ -397,9 +409,17 @@ betterquesting.quest.npgCRfZdSFeBom6eL3qIMg.desc=§dRandomThings§r adds §cBloo
 betterquesting.quest.npi9qvVzRleG6SsA5DQozg.name=The Actual Beginning
 betterquesting.quest.npi9qvVzRleG6SsA5DQozg.desc=Now you are ready to fully begin your journey in this modpack! Happy gaming!
 
+# Quest: Nether Resources
+betterquesting.quest.pJNXkzbKRLqVpvEPYsTqnA.name=Nether Resources
+betterquesting.quest.pJNXkzbKRLqVpvEPYsTqnA.desc=The Nether has a few NTM resources of its own.%n%n- §6Smoldering Netherrack§r - glowing pillars that set you on fire when you walk on them. Mining them gives §6Red Phosphorus§r.%n- §6Volcanic Geysers§r - erupt from time to time and spray burning debris. Keep your distance.%n- §6Nether Depth Neodymium Ore§r - near the bedrock at the top and the bottom of the Nether.%n- The Nether has its own §6bedrock ores§r - glowstone, phosphorus and quartz.
+
 # Quest: Graphite
 betterquesting.quest.pbwyXfgDRaCxA1R8YmlTIQ.name=Graphite
 betterquesting.quest.pbwyXfgDRaCxA1R8YmlTIQ.desc=§6Graphite§r is a crystalline carbon allotrope, consisting of stacked layers of graphene. Graphite is the most stable form of carbon, and is useful in many environments. It's ability to moderate neutrons makes it indispensable for §3nuclear reactors§r that rely on thermal neutrons to maintain criticality. It's ability to withstand high temperatures and electrical conductivity make it useful as electrodes in the §3Arc Furnace§r and §3Arc Welder§r. Press §6coke§r to make it; it is also used as carbon in crucible recipes.
+
+# Quest: Ruins of the Old World
+betterquesting.quest.pe-iquEGRiKCIfVsmO4nag.name=Ruins of the Old World
+betterquesting.quest.pe-iquEGRiKCIfVsmO4nag.desc=The surface is dotted with ruins. Most of them have crates, filing cabinets and loot piles worth checking.%n%n- §6Houses, offices, labs and farmhouses§r in most biomes.%n- §6Bunkers§r and §6Fallout Shelter Houses§r.%n- §6Vertibirds§r, §6Crashed Planes§r and §6Airplanes§r - the last one with a safe.%n- On the coast: §6Beached Patrols§r guarded by turrets, §6Lighthouses§r, §6Oil Rigs§r, a sunken §6Aircraft Carrier§r and §6Submarines§r.%n- In snowy biomes: §6Military Bases§r, §6Abandoned Arctic Stations§r and §6Camps§r.%n- §6Factories§r, §6Cranes§r, §6Radio Houses§r, §6Broadcasting Towers§r, §6Satellite Dishes§r, §6Water Pumps§r and §6Forest Posts§r.%n- In deserts: §6Desert Shacks§r - watch for mines.%n- The §6Spire§r - on very flat land, see the quest about it.%n%nMany of them hold an §6FM Radio§r, a tape recorder or a broken turret, which you can take apart.
 
 # Quest: From Flint to Oil - USA Simulator
 betterquesting.quest.rKlGBLXDR2CgX_rUy5rBVw.name=From Flint to Oil - USA Simulator
@@ -673,6 +693,10 @@ betterquesting.quest.qoqs0rqiScuK8YiqjTh2gA.desc=§eRich Ore Deposits§r are mul
 # Quest: Teleporter
 betterquesting.quest.refh8r3gQyavrC4KgSeWkw.name=Teleporter
 betterquesting.quest.refh8r3gQyavrC4KgSeWkw.desc=The §3Teleporter§r can be used to teleport players, and entities in general, to a specific location.%n%nRight-click a block with the §6Telelinker§r to set the desired exit position, then shift-click the teleporter with the telelinker to configure the teleporter.%n%n§2The teleporter is a one way trip so it is advised that multiple are made.%n%nInterdimensional teleportation using teleporters requires a very expensive type of fuel, so it is recommended that other teleportations methods are used, such as AE2 Spatial. For fuel-free same-dimension travel, see the §3Xenium Resonator Satellite§r quest.
+
+# Quest: Trixite
+betterquesting.quest.rl-wwMCtSFeOm4PfbFY9yA.name=Trixite
+betterquesting.quest.rl-wwMCtSFeOm4PfbFY9yA.desc=§6Trixite Ore§r generates only in §5The End§r, but it is common there.%n%nIn a §3Centrifuge§r it yields plutonium, cobalt, niobium and lapis powder - one of the few early sources of plutonium. The §3Ore Acidizer§r turns it into trixite crystals instead.
 
 # Quest: Pinwheels
 betterquesting.quest.t6tkjZliTEKxH0W6y39auQ.name=Pinwheels
@@ -1534,6 +1558,10 @@ betterquesting.quest.49Z72-6WT0uRG5ej8-yRQQ.desc=A few small things the mod neve
 betterquesting.quest.TVZ02amsTEO2_nmZj_B4eQ.name=Weapon Abilities
 betterquesting.quest.TVZ02amsTEO2_nmZj_B4eQ.desc=Melee weapons and some tools also carry §6weapon abilities§r, which trigger on every hit. They are always active and listed in the tooltip.%n%n- §6Radioactive Blade§r - contaminates the target with 15 to 500 RAD.%n- §6Vampire§r - heals you for part of the damage, from 2 up to 50 health.%n- §6Stunning§r - Slowness and Weakness V for 2 to 15 seconds.%n- §6Phosphorus Tip§r - §cPhosphorus Burns§r that cannot be put out for 60 or 90 seconds.%n- §6Flaming§r - sets the target on fire.%n- §6Painsaw§r - a killed mob bursts into gore and drops §6Small Piles of Nitra§r and experience, one per 10-15 points of its max health.%n- §6Decapitator§r - a killed mob drops its head: skeleton, zombie, creeper and player skulls, a rare wither skeleton skull, slimeballs from slimes and magma cream from magma cubes.%n- §6Luck of the Collector§r - every kill has a tiny chance to drop a random §6Bobblehead§r.
 
+# Quest: Strange Wildlife
+betterquesting.quest.mOunuBA3TAO99IfkAqJSwQ.name=Strange Wildlife
+betterquesting.quest.mOunuBA3TAO99IfkAqJSwQ.desc=Not everything NTM adds wants to kill you.%n%n- §6Pigeons§r flock on plains, and §6Plastic Bags§r drift around in the ocean.%n- Every player gets one §6Duck§r - press §eO§r once to summon it.%n- A duck that soaks up §e200 RAD§r turns into §6Quackos The Elder One§r. It is very hard to kill for good, but when it finally dies it drops three §6Golden Eggs§r, each of which hatches a new duck.%n- Cows that take 50 RAD turn into mooshrooms, villagers that take 500 RAD turn into zombies.%n- If you carry any §cDigamma§r, §6Ghosts§r start appearing near you.
+
 # Quest: Status Effects
 betterquesting.quest.qVrPGBhATuKm6QUeMN3wOQ.name=Status Effects
 betterquesting.quest.qVrPGBhATuKm6QUeMN3wOQ.desc=NTM adds its own status effects. Most of them are bad news.%n%n- §cTainted§r - from taint blocks and taint weapons. Randomly hurts you while it lasts.%n- §aTainted Heart§r - if a tainted entity is caught in a Tainted Creeper's explosion, the taint turns into this. For an hour you are immune to radiation.%n- §cLead Poisoning§r - deals damage over time. You get it from lead bullets and from breaking blocks in air polluted with heavy metals, unless you wear a mask that filters fine particles.%n- §cPhosphorus Burns§r - you keep burning, water does not help.%n- §cContaminated§r - from fallout, keeps adding radiation.%n- §cPotion Sickness§r - after §6Herbal Paste§r you cannot use pills, energy drinks, canteens and injectors for 10 minutes.%n- §cButterfingers§r - you keep sliding and dropping things.%n- §c! ! !§r - you explode when it runs out.%n- §aStability§r - from §6Enteramine Pills§r, protects you from Digamma radiation.%n- §aAmbrosia§r - a strange effect from a certain flask. Do not push your luck with it.%n%nMilk removes most vanilla effects but not all of these. The §6Spider Milk§r armor mod clears bad effects for you.
@@ -1558,6 +1586,10 @@ betterquesting.questline.vNAB2bS7S9uSc1gAlAccnA.desc=Manage your factory and tac
 # Quest: Rails
 betterquesting.quest.1o48G8SRTzWannGld4xy-Q.name=Rails
 betterquesting.quest.1o48G8SRTzWannGld4xy-Q.desc=Minecarts are still a good way to move things over long distances. §6High Speed Rails§r, made from steel and iron plates, let carts travel at 1.0 blocks per tick - two and a half times the vanilla limit.%n%nThe §6High Speed Booster Rail§r needs no power: it multiplies a passing cart's speed by 1.15 every time it rolls over it, but it cannot be placed in curves. §6Wooden Tracks§r are cheap but limit carts to half the vanilla speed.%n%nPut a steel crate on a minecart to get a §6Crate Minecart§r with 54 slots.
+
+# Quest: Carts and Boats
+betterquesting.quest.8YCwQJgBRnumej8P7gTyJg.name=Carts and Boats
+betterquesting.quest.8YCwQJgBRnumej8P7gTyJg.desc=Besides the steel and crate minecarts, NTM has a few more.%n%n- §6Destroyer Minecart§r - deletes dropped items it rolls over that match the filter in its slots. A moving trash can for item lines.%n- §6Powder Minecart§r and §6Semtex Minecart§r - carts carrying a load of explosives.%n%nThe §6Rubber Boat§r is a boat made of rubber. When it is destroyed, you get the boat back instead of planks and sticks.
 
 # Quest: Displays, Buttons and More
 betterquesting.quest.CXh5IW4AQaqb-p6bJlX2-A.name=Displays, Buttons and More
@@ -2311,6 +2343,10 @@ betterquesting.quest.5pGnPJUbRM2FUo2suXuh4w.desc=Wild mint grows in plains, and 
 betterquesting.quest.JFeyBH60RcaKJmhRv-V94Q.name=Coffee
 betterquesting.quest.JFeyBH60RcaKJmhRv-V94Q.desc=Raw coffee beans turn up in office loot. Plant them on farmland - like every NTM crop, coffee only grows in a breathable atmosphere.%n%nRoast the beans in a furnace, grind them in the Shredder and mix the powder with milk, a water bottle and sugar. A cup of §6Coffee§r heals 5 hearts and gives Speed III for a minute.%n%n§cRadium coffee§r gives the same boost and a lot of radiation.
 
+# Quest: Wild Plants
+betterquesting.quest.QydYnlK1S4alueDB2NaqJw.name=Wild Plants
+betterquesting.quest.QydYnlK1S4alueDB2NaqJw.desc=NTM adds a few plants that grow in the wild.%n%n- §6Foxglove§r - in forests. Used in medicine.%n- §6Nightshade§r - in dark forests. Crafts into §6Poison Powder§r.%n- §6Tobacco§r - in jungles. Smelt it to dry it.%n- §6Reeds§r - along rivers and beaches.%n- §6Pink Log§r - a rare oak with a pink trunk. You can also make one by combining a log with WD-2004 powder.%n%nFoxglove, tobacco and nightshade can also be bought from Bobmazon.
+
 # Quest: Wax Crop
 betterquesting.quest.Szmk9xQaQcWQ0Kx8w7fX1Q.name=Wax Crop
 betterquesting.quest.Szmk9xQaQcWQ0Kx8w7fX1Q.desc=The rubber cacti of Tekto drop §6Chlorinated Seeds§r. They only grow on rubber farmland in Tekto's air or chlorine, and a ripe plant yields wax along with more seeds.
@@ -2638,6 +2674,14 @@ betterquesting.quest.Q70rGIFTR6uMPmobimGr9g.desc=You should be careful with this
 betterquesting.quest.Q8FZdwiURgC2PoD4IziLJg.name=Martian Invasion Ship
 betterquesting.quest.Q8FZdwiURgC2PoD4IziLJg.desc=The Martian Invasion Ship is a late-game boss which is killed to get the UFO Coin, used in crafting Gerald.%n%nIt can be summoned with the §6Martian Invasion Ship§r item from Bobmazon's §6Hidden Catalog§r. It also arrives on its own as the final wave of an Alien Invasion.
 
+# Quest: The Spire
+betterquesting.quest.S71YXee2RVqnKumU3Ul_yQ.name=The Spire
+betterquesting.quest.S71YXee2RVqnKumU3Ul_yQ.desc=On very flat land you may find the §6Spire§r - a tall tower surrounded by mines, with a dead man lying at its base.%n%nInside sits a §6Dungeon Spawner Block§r. When you come close, it calls up waves of §cUndead Soldiers§r, ten at a time. Clear the waves to claim what the Spire guards.
+
+# Quest: Creepers of Nuclear Tech
+betterquesting.quest.SUJ8OzldS7OkIypd2luCyA.name=Creepers of Nuclear Tech
+betterquesting.quest.SUJ8OzldS7OkIypd2luCyA.desc=The Nuclear Creeper has relatives, and all of them spawn naturally. Kill any one of them.%n%n- §6Volatile Creeper§r - the most common one. Its blast is far bigger than a creeper's and turns the crater into slag.%n- §6Phosgene Creeper§r - a small explosion, followed by a cloud of deadly §cphosgene§r. Wear a gas mask.%n- §6Golden Creeper§r - rare. Its explosion turns the surrounding blocks into §6gold ore§r.%n- §6Tainted Creeper§r - comes out of §5taint§r and spreads more of it when it explodes. Tainted Tesla Crabs crawl out of taint as well.
+
 # Quest: Time to Kill (Slime)
 betterquesting.quest.Z-RsAsrVRM2a3zWP5a0OsQ.name=Time to Kill (Slime)
 betterquesting.quest.Z-RsAsrVRM2a3zWP5a0OsQ.desc=Sticky and bouncy! Now in many variations. Say hello to my little friend, Lemon Slice!
@@ -2653,6 +2697,10 @@ betterquesting.quest.ZeBLQUsPS72HAxsrR9s_3g.desc=Balls-O-Tron is the second boss
 # Quest: Time to Kill (Spiders)
 betterquesting.quest.ZpKjClvCTGe4ytw_Yu6mYQ.name=Time to Kill (Spiders)
 betterquesting.quest.ZpKjClvCTGe4ytw_Yu6mYQ.desc=Eeeek! Wall climbing monsters, gross! Slay them. Quickly! Watch out for the witch spiders, they can give as good as they get.
+
+# Quest: Glyphid Castes
+betterquesting.quest.c0_jzKSORKyKP9uH86rGYg.name=Glyphid Castes
+betterquesting.quest.c0_jzKSORKyKP9uH86rGYg.desc=A hive is more than a pile of bugs. Know what you are shooting at:%n%n- §6Glyphid§r - the common worker.%n- §6Brawler§r and §6Behemoth§r - bigger, tougher and harder hitting. A Behemoth sprays sulfuric acid and leaves an acid cloud when it dies.%n- §6Bombardier§r and §6Blaster§r - stay back and lob acid bombs.%n- §6Digger§r - tunnels through any block weaker than concrete, so dirt walls will not stop a swarm.%n- §6Scout§r - wanders off to find a spot for a §cnew hive§r. Kill scouts on sight.%n- §6Brenda§r - releases a cloud of pheromones and a brood of glyphids when it dies.%n- §6Big Man Johnson§r - carries a nuclear payload and blows up on death, spilling parasitic maggots.%n%nGlyphids can also be tamed: feed one §6Grilled Glyphid Meat§r and with luck it becomes your pet. Right click to make it sit, feed it meat to heal it. Infected glyphids cannot be tamed.
 
 # Quest: Radioactive Angel
 betterquesting.quest.d_o1VJ-qSt65SYir3fZFfA.name=Radioactive Angel
@@ -2731,7 +2779,7 @@ betterquesting.quest.6k-JrbD-S8GO9PRRthWNRA.desc=The §3Dyson Anatmogenesis Terr
 
 # Quest: Maskman
 betterquesting.quest.8b6batCvQvCiGknitRMrSQ.name=Maskman
-betterquesting.quest.8b6batCvQvCiGknitRMrSQ.desc=Maskman is the first NTM boss. To summon it, you need to be under radiation poisoning (50 rad). A 20-minute timer starts per player when requirements are met. Once it runs out, Mask Man spawns. A warning appears 1 minute before spawn. If you are no longer irradiated, the timer resets.
+betterquesting.quest.8b6batCvQvCiGknitRMrSQ.desc=Maskman is the first NTM boss. To summon it, you need to be under radiation poisoning (50 rad). A 20-minute timer starts per player when requirements are met. Once it runs out, Mask Man spawns. A warning appears 1 minute before spawn. If you are no longer irradiated, the timer resets.%n%nThe timer only runs while you are at least 3 blocks underground, and only if you have crafted or placed an §3Ore Acidizer§r before.
 
 # Quest: Glyphids
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAABQ.name=Glyphids
