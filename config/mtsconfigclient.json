@@ -44,6 +44,22 @@
       "value": true,
       "comment": "If false, beams on lights will not render."
     },
+    "dynamicLights": {
+      "value": true,
+      "comment": "If true, light components marked isDynamicLight light up the world around them, cast shadows and draw a volumetric beam and corona.  If false, they render as regular beams and flares."
+    },
+    "DynL_shadows": {
+      "value": true,
+      "comment": "If true, dynamic lights cast shadows from blocks, vehicles and mobs.  Turn off to save GPU time."
+    },
+    "DynL_MaxLights": {
+      "value": 48,
+      "comment": "How many dynamic lights may light the world at once, 0 to 256, and how many beams and coronas are drawn.  The strongest and closest are kept.  Fewer lights cost less GPU time; raise it on a powerful machine."
+    },
+    "DynL_ShaderFB": {
+      "value": false,
+      "comment": "If true, dynamic lights still light the world under a shader pack (Iris, Oculus, OptiFine) by raising block light and drawing a simple beam cone and flare.  If false, they render as regular beams and flares while a shader pack is active."
+    },
     "brightLights": {
       "value": true,
       "comment": "If false, lights from vehicles and blocks will not make themselves bright and instead will render as if they were part of the model at that same brightness.  Useful if you have shaders and this is causing troubles."
@@ -59,6 +75,10 @@
     "playerTweaks": {
       "value": true,
       "comment": "If true, player hands will be modified when holding guns, and hands and legs will be modified when riding in vehicles.  Set this to false (and restart the game) if mods cause issues, like two-hand rendering or player model issues.  Automatically set to false if some mods are detected."
+    },
+    "gunCrosshair": {
+      "value": true,
+      "comment": "If false, the aiming crosshair for active guns will not be rendered."
     },
     "renderingMode": {
       "value": 0,
@@ -110,6 +130,10 @@
       "value": true,
       "comment": "If true, tutorial and onboarding overlays may be shown.  Set this to false to hide those prompts."
     },
+    "showDefaultAircraftControlsMessageEveryTime": {
+      "value": true,
+      "comment": "If true, the message telling you which controls an aircraft defaults to will show every time you get into the pilot seat of an aircraft that sets its own default.  If false, it only shows the first time you fly each aircraft in each mode."
+    },
     "showHoverTxt": {
       "value": true,
       "comment": "If true, hover text helpers may be shown when looking at supported vehicle elements.  Set this to false to hide those prompts."
@@ -153,7 +177,8 @@
     "radioVolume": {
       "value": 1.0,
       "comment": "Volume for radios in the mod.  This is used instead of the game's master volume."
-    }
+    },
+    "arcadeFlightOverrides": {}
   },
   "controls": {
     "keysetID": 1710,

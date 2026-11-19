@@ -16,6 +16,10 @@
       "value": false,
       "comment": "If true, vehicles can only be picked up in creative mode."
     },
+    "preventBlockBreakingWhileRiding": {
+      "value": false,
+      "comment": "If true, players seated in vehicles or mounted parts cannot break blocks by hand or with held tools."
+    },
     "keyRequiredToStartVehicles": {
       "value": false,
       "comment": "If true, vehicles can only be started if the player has the key in their hand."
@@ -220,6 +224,14 @@
       "value": 1.0,
       "comment": "Factor for damage caused by bullets on vehicles."
     },
+    "cameraShakeFactor": {
+      "value": 1.0,
+      "comment": "Factor applied to camera shake from nearby bullet explosions.  Set this to 0 to disable explosion camera shake."
+    },
+    "gunCameraShakeFactor": {
+      "value": 0.25,
+      "comment": "Factor applied to camera shake from nearby gunshots.  Set this to 0 to disable gunshot camera shake."
+    },
     "wheelDamageMinimumVelocity": {
       "value": 0.2,
       "comment": "Minimum velocity (blocks/second) which vehicles must be going to damage entities with their wheels."
@@ -234,11 +246,25 @@
     }
   },
   "fuel": {
-    "comment1": "The following section is used for fuel configs for engines.  Each entry here is a single fuel type for engines.",
-    "comment2": "Inside each entry exist values for the potency of the fluids that can be considered to be that fuel type.",
-    "comment3": "You can make engines take different types of fluids for their fuels by editing these values.  See the in-game handbook for more information.",
-    "comment4": "If you are having troubles getting the name for a particular fluid, run the game with the mods you want and check the 'lastLoadedFluids' list.  This contains all the fluids that were present during the last run of the game.",
-    "comment5": "The first entry in the list is the registered fluid name, while the second entry will be the displayed name.  Only use the first name, as the second name changes based on game language settings.",
+    "_comment": [
+      "The following section is used for fuel configs for engines.",
+      "Each entry here is a single fuel type / fuel category for engines.",
+      "",
+      "Example: Avgas is not a real fluid. It is a category. An engine can use the avgas category for fuel.",
+      "In the avgas category, there is lava and gasoline. This means an avgas-type engine can use lava and gasoline fluids.",
+      "",
+      "You can make engines take different types of fluids for their fuels by editing these values.",
+      "For example, you can add 'creosote' to 'avgas', and now any avgas engine can also use creosote oil for fuel.",
+      "",
+      "The number is the potency of the fuel.",
+      "Higher potency reduces consumption, but does not affect engine power.",
+      "This means a fluid with potency 2.0 lasts twice as long / the engine consumes only half its fuel rate for the same performance.",
+      "",
+      "If you want to add a fluid as fuel but do not know the correct name, run the game with the mods you want and check the 'lastLoadedFluids' list.",
+      "This contains all the fluids that were present during the last run of the game.",
+      "The first entry in the list is the registered fluid name, while the second entry will be the displayed name.",
+      "Only use the first name, as the second name changes based on game language settings!"
+    ],
     "fuels": {
       "diesel": {
         "creosote": 0.7,
