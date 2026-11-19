@@ -306,6 +306,24 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requireOnlyOneItem:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "hbm:item.mp_thruster_15_balefire_large_rad"
+            }
+          },
+          "taskID:8": "bq_standard:optional_retrieval"
         }
       }
     },
@@ -811,7 +829,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "The red planet, home to vast quantities of §6Iron§r. §6Molysite§r and §6Volcano Gems§r can be found here in basaltic caves, found within basins where vast oceans were theorized to once exist.",
+          "desc:8": "The red planet, home to vast quantities of §6Iron§r. There is no iron ore here - it is locked in the §6Ferric Clay§r of the hills, which a §3Centrifuge§r splits into iron powder and clay. §6Molysite§r and §6Volcano Gems§r can be found here in basaltic caves, found within basins where vast oceans were theorized to once exist.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8028,7 +8046,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "The §3Cryogenic Distillation Machine§r can split atmospheric gases into 4 useful fractions, like for example, taking trace amounts of §bNitrogen§r out of the Dunaian atmosphere to produce soil for planting crops.",
+          "desc:8": "The §3Cryogenic Distillation Machine§r can split atmospheric gases into 4 useful fractions, like for example, taking trace amounts of §bNitrogen§r out of the Dunaian atmosphere to produce soil for planting crops.\n\nWhat you get from each atmosphere:\n- §bDuna Air§r - carbon dioxide, nitrogen, argon and oxygen.\n- §bEve Air§r - potassium permanganate, mercury, xenon and ammonia.\n- §bTekto Air§r - chloromethane, chlorine, natural gas and hydrochloric acid.\n- §bSarnus Gas§r - hydrogen, helium-3, natural gas and nitrogen.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10111,6 +10129,90 @@
     "100:10": {
       "preRequisites:9": {
         "0:10": {
+          "questIDHigh:4": 7275503112583856267,
+          "questIDLow:4": -5943915525948482695
+        }
+      },
+      "properties:10": {
+        "betterquesting:10": {
+          "autoClaim:1": 0,
+          "completion_animation:8": "default",
+          "completion_particle:8": "default",
+          "confetti_icon:10": {
+            "Count:3": 0,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:stick"
+          },
+          "countAsQuest:1": 1,
+          "desc:8": "The §3Orrery§r is a working model of the solar system. Place it in your mission control to see where every body is right now.",
+          "globalShare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "hbm:tile.orrery"
+          },
+          "isMain:1": 0,
+          "isSilent:1": 0,
+          "is_final:1": 0,
+          "lockedProgress:1": 0,
+          "name:8": "Orrery",
+          "notification_duration:5": -1.0,
+          "notification_effect:3": -1,
+          "notification_fade_in:5": -1.0,
+          "notification_fade_out:5": -1.0,
+          "notification_icon_offset_y:3": -2147483648,
+          "notification_icon_scale:5": -1.0,
+          "notification_pos_x:3": -2147483648,
+          "notification_pos_y:3": -2147483648,
+          "notification_show_icon:8": "default",
+          "notification_style:8": "default",
+          "notification_subtitle:8": "",
+          "notification_subtitle_scale:5": -1.0,
+          "notification_title:8": "",
+          "notification_title_scale:5": -1.0,
+          "particle_count:3": -1,
+          "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+          "poem_music:8": "",
+          "poem_text:8": "betterquesting:texts/end_poem",
+          "questLogic:8": "AND",
+          "repeatTime:3": -1,
+          "repeat_relative:1": 1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "random.levelup",
+          "snd_update:8": "random.levelup",
+          "taskLogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questIDHigh:4": -970023178174118039,
+      "questIDLow:4": -5927024180451816691,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requireOnlyOneItem:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "hbm:tile.orrery"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "101:10": {
+      "preRequisites:9": {
+        "0:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 39
         }
@@ -10228,7 +10330,7 @@
         }
       }
     },
-    "101:10": {
+    "102:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -10312,7 +10414,7 @@
         }
       }
     },
-    "102:10": {
+    "103:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1086585241531956692,
@@ -10418,7 +10520,7 @@
         }
       }
     },
-    "103:10": {
+    "104:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -10488,7 +10590,7 @@
         }
       }
     },
-    "104:10": {
+    "105:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6019261448661808939,
@@ -10572,7 +10674,7 @@
         }
       }
     },
-    "105:10": {
+    "106:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -10678,7 +10780,7 @@
         }
       }
     },
-    "106:10": {
+    "107:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -10762,7 +10864,7 @@
         }
       }
     },
-    "107:10": {
+    "108:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7578527000934595783,
@@ -10852,7 +10954,7 @@
         }
       }
     },
-    "108:10": {
+    "109:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 6655386366404936121,
@@ -10936,7 +11038,7 @@
         }
       }
     },
-    "109:10": {
+    "110:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2956680218970272069,
@@ -11038,7 +11140,7 @@
         }
       }
     },
-    "110:10": {
+    "111:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 3347434590198908605,
@@ -11182,7 +11284,7 @@
         }
       }
     },
-    "111:10": {
+    "112:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -11314,7 +11416,7 @@
         }
       }
     },
-    "112:10": {
+    "113:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 743375943806108401,
@@ -11422,7 +11524,7 @@
         }
       }
     },
-    "113:10": {
+    "114:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 3163659380794018993,
@@ -11512,7 +11614,7 @@
         }
       }
     },
-    "114:10": {
+    "115:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2840896175667524302,
@@ -11626,7 +11728,7 @@
         }
       }
     },
-    "115:10": {
+    "116:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -11728,7 +11830,7 @@
         }
       }
     },
-    "116:10": {
+    "117:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -11816,7 +11918,7 @@
         }
       }
     },
-    "117:10": {
+    "118:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -11900,7 +12002,7 @@
         }
       }
     },
-    "118:10": {
+    "119:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -11984,7 +12086,7 @@
         }
       }
     },
-    "119:10": {
+    "120:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -12094,7 +12196,7 @@
         }
       }
     },
-    "120:10": {
+    "121:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -12168,7 +12270,7 @@
         }
       }
     },
-    "121:10": {
+    "122:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -12310,7 +12412,7 @@
         }
       }
     },
-    "122:10": {
+    "123:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -12412,7 +12514,7 @@
         }
       }
     },
-    "123:10": {
+    "124:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -12550,7 +12652,7 @@
         }
       }
     },
-    "124:10": {
+    "125:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 7340101258682910999,
@@ -12634,7 +12736,7 @@
         }
       }
     },
-    "125:10": {
+    "126:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -8603960035130193895,
@@ -12723,7 +12825,7 @@
         }
       }
     },
-    "126:10": {
+    "127:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -12817,7 +12919,7 @@
         }
       }
     },
-    "127:10": {
+    "128:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 3163659380794018993,
@@ -12923,7 +13025,7 @@
         }
       }
     },
-    "128:10": {
+    "129:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -13082,7 +13184,7 @@
         }
       }
     },
-    "129:10": {
+    "130:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2549337488949951986,
@@ -13170,7 +13272,7 @@
         }
       }
     },
-    "130:10": {
+    "131:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 7340101258682910999,
@@ -13254,7 +13356,7 @@
         }
       }
     },
-    "131:10": {
+    "132:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -13328,7 +13430,7 @@
         }
       }
     },
-    "132:10": {
+    "133:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -13449,7 +13551,7 @@
         }
       }
     },
-    "133:10": {
+    "134:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -13551,7 +13653,7 @@
         }
       }
     },
-    "134:10": {
+    "135:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -13659,7 +13761,7 @@
         }
       }
     },
-    "135:10": {
+    "136:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -13743,7 +13845,7 @@
         }
       }
     },
-    "136:10": {
+    "137:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -13813,7 +13915,7 @@
         }
       }
     },
-    "137:10": {
+    "138:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -13897,7 +13999,7 @@
         }
       }
     },
-    "138:10": {
+    "139:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -13989,7 +14091,7 @@
         }
       }
     },
-    "139:10": {
+    "140:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -14073,7 +14175,7 @@
         }
       }
     },
-    "140:10": {
+    "141:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -3069375608230492990,
@@ -14191,7 +14293,7 @@
         }
       }
     },
-    "141:10": {
+    "142:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -14295,7 +14397,7 @@
         }
       }
     },
-    "142:10": {
+    "143:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -14401,7 +14503,7 @@
         }
       }
     },
-    "143:10": {
+    "144:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -14504,7 +14606,7 @@
         }
       }
     },
-    "144:10": {
+    "145:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 8162125792545885492,
@@ -14647,7 +14749,7 @@
         }
       }
     },
-    "145:10": {
+    "146:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -14785,7 +14887,7 @@
         }
       }
     },
-    "146:10": {
+    "147:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -14888,7 +14990,7 @@
         }
       }
     },
-    "147:10": {
+    "148:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 3300935411432441238,
@@ -14972,7 +15074,7 @@
         }
       }
     },
-    "148:10": {
+    "149:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -15076,7 +15178,7 @@
         }
       }
     },
-    "149:10": {
+    "150:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -15191,7 +15293,7 @@
         }
       }
     },
-    "150:10": {
+    "151:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -15279,7 +15381,7 @@
         }
       }
     },
-    "151:10": {
+    "152:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -15376,7 +15478,7 @@
         }
       }
     },
-    "152:10": {
+    "153:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -15460,7 +15562,7 @@
         }
       }
     },
-    "153:10": {
+    "154:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -15544,7 +15646,7 @@
         }
       }
     },
-    "154:10": {
+    "155:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -5329374405835404860,
@@ -15633,7 +15735,7 @@
         }
       }
     },
-    "155:10": {
+    "156:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -15765,7 +15867,7 @@
         }
       }
     },
-    "156:10": {
+    "157:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -15909,7 +16011,7 @@
         }
       }
     },
-    "157:10": {
+    "158:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -16019,7 +16121,7 @@
         }
       }
     },
-    "158:10": {
+    "159:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -16163,7 +16265,7 @@
         }
       }
     },
-    "159:10": {
+    "160:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2549337488949951986,
@@ -16251,7 +16353,7 @@
         }
       }
     },
-    "160:10": {
+    "161:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -16367,7 +16469,7 @@
         }
       }
     },
-    "161:10": {
+    "162:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -16455,7 +16557,7 @@
         }
       }
     },
-    "162:10": {
+    "163:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -16539,7 +16641,7 @@
         }
       }
     },
-    "163:10": {
+    "164:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -857699006552061645,
@@ -16627,7 +16729,7 @@
         }
       }
     },
-    "164:10": {
+    "165:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -16758,7 +16860,7 @@
         }
       }
     },
-    "165:10": {
+    "166:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -16856,7 +16958,7 @@
         }
       }
     },
-    "166:10": {
+    "167:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -17016,7 +17118,7 @@
         }
       }
     },
-    "167:10": {
+    "168:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -17148,7 +17250,7 @@
         }
       }
     },
-    "168:10": {
+    "169:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -17236,7 +17338,7 @@
         }
       }
     },
-    "169:10": {
+    "170:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -17334,7 +17436,7 @@
         }
       }
     },
-    "170:10": {
+    "171:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -17436,7 +17538,7 @@
         }
       }
     },
-    "171:10": {
+    "172:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -17534,7 +17636,7 @@
         }
       }
     },
-    "172:10": {
+    "173:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -17622,7 +17724,7 @@
         }
       }
     },
-    "173:10": {
+    "174:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -17710,7 +17812,7 @@
         }
       }
     },
-    "174:10": {
+    "175:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -17794,7 +17896,7 @@
         }
       }
     },
-    "175:10": {
+    "176:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -17878,7 +17980,7 @@
         }
       }
     },
-    "176:10": {
+    "177:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -17994,7 +18096,7 @@
         }
       }
     },
-    "177:10": {
+    "178:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -18132,7 +18234,7 @@
         }
       }
     },
-    "178:10": {
+    "179:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -18220,7 +18322,7 @@
         }
       }
     },
-    "179:10": {
+    "180:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -18318,7 +18420,7 @@
         }
       }
     },
-    "180:10": {
+    "181:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -18388,7 +18490,7 @@
         }
       }
     },
-    "181:10": {
+    "182:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -18472,7 +18574,7 @@
         }
       }
     },
-    "182:10": {
+    "183:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -18556,7 +18658,7 @@
         }
       }
     },
-    "183:10": {
+    "184:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -18644,7 +18746,7 @@
         }
       }
     },
-    "184:10": {
+    "185:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -18736,7 +18838,7 @@
         }
       }
     },
-    "185:10": {
+    "186:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -18896,7 +18998,7 @@
         }
       }
     },
-    "186:10": {
+    "187:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -18980,7 +19082,7 @@
         }
       }
     },
-    "187:10": {
+    "188:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -109905158396034403,
@@ -19064,7 +19166,7 @@
         }
       }
     },
-    "188:10": {
+    "189:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -19148,7 +19250,7 @@
         }
       }
     },
-    "189:10": {
+    "190:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -19259,7 +19361,7 @@
         }
       }
     },
-    "190:10": {
+    "191:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -19384,7 +19486,7 @@
         }
       }
     },
-    "191:10": {
+    "192:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -19472,7 +19574,7 @@
         }
       }
     },
-    "192:10": {
+    "193:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -19556,7 +19658,7 @@
         }
       }
     },
-    "193:10": {
+    "194:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -19658,7 +19760,7 @@
         }
       }
     },
-    "194:10": {
+    "195:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1247131825417861085,
@@ -19748,7 +19850,7 @@
         }
       }
     },
-    "195:10": {
+    "196:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -19832,7 +19934,7 @@
         }
       }
     },
-    "196:10": {
+    "197:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -19916,7 +20018,7 @@
         }
       }
     },
-    "197:10": {
+    "198:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -20057,7 +20159,7 @@
         }
       }
     },
-    "198:10": {
+    "199:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -20178,7 +20280,7 @@
         }
       }
     },
-    "199:10": {
+    "200:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -20262,7 +20364,7 @@
         }
       }
     },
-    "200:10": {
+    "201:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -20346,7 +20448,7 @@
         }
       }
     },
-    "201:10": {
+    "202:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -20430,7 +20532,7 @@
         }
       }
     },
-    "202:10": {
+    "203:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -8603960035130193895,
@@ -20525,7 +20627,7 @@
         }
       }
     },
-    "203:10": {
+    "204:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -20635,7 +20737,7 @@
         }
       }
     },
-    "204:10": {
+    "205:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -20745,7 +20847,7 @@
         }
       }
     },
-    "205:10": {
+    "206:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -20871,7 +20973,7 @@
         }
       }
     },
-    "206:10": {
+    "207:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -20964,7 +21066,7 @@
         }
       }
     },
-    "207:10": {
+    "208:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -21070,7 +21172,7 @@
         }
       }
     },
-    "208:10": {
+    "209:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -21216,7 +21318,7 @@
         }
       }
     },
-    "209:10": {
+    "210:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1086585241531956692,
@@ -21304,7 +21406,7 @@
         }
       }
     },
-    "210:10": {
+    "211:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -21424,7 +21526,7 @@
         }
       }
     },
-    "211:10": {
+    "212:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -21544,7 +21646,7 @@
         }
       }
     },
-    "212:10": {
+    "213:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7623698422531862605,
@@ -21632,7 +21734,7 @@
         }
       }
     },
-    "213:10": {
+    "214:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7425924978364234072,
@@ -21720,7 +21822,7 @@
         }
       }
     },
-    "214:10": {
+    "215:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6019261448661808939,
@@ -21804,7 +21906,7 @@
         }
       }
     },
-    "215:10": {
+    "216:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -21923,7 +22025,7 @@
         }
       }
     },
-    "216:10": {
+    "217:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 2720273598898784049,
@@ -22019,7 +22121,7 @@
         }
       }
     },
-    "217:10": {
+    "218:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -22142,7 +22244,7 @@
         }
       }
     },
-    "218:10": {
+    "219:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 2720273598898784049,
@@ -22234,7 +22336,7 @@
         }
       }
     },
-    "219:10": {
+    "220:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -22322,7 +22424,7 @@
         }
       }
     },
-    "220:10": {
+    "221:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -22424,7 +22526,7 @@
         }
       }
     },
-    "221:10": {
+    "222:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1137739474903742698,
@@ -22508,7 +22610,7 @@
         }
       }
     },
-    "222:10": {
+    "223:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -22620,7 +22722,7 @@
         }
       }
     },
-    "223:10": {
+    "224:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -22708,7 +22810,7 @@
         }
       }
     },
-    "224:10": {
+    "225:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -22800,7 +22902,7 @@
         }
       }
     },
-    "225:10": {
+    "226:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -22888,7 +22990,7 @@
         }
       }
     },
-    "226:10": {
+    "227:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -22972,7 +23074,7 @@
         }
       }
     },
-    "227:10": {
+    "228:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -23077,7 +23179,7 @@
         }
       }
     },
-    "228:10": {
+    "229:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -23179,7 +23281,7 @@
         }
       }
     },
-    "229:10": {
+    "230:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -23304,7 +23406,7 @@
         }
       }
     },
-    "230:10": {
+    "231:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -23424,7 +23526,7 @@
         }
       }
     },
-    "231:10": {
+    "232:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 4821959902488317033,
@@ -23513,7 +23615,7 @@
         }
       }
     },
-    "232:10": {
+    "233:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -23662,7 +23764,7 @@
         }
       }
     },
-    "233:10": {
+    "234:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -23772,7 +23874,7 @@
         }
       }
     },
-    "234:10": {
+    "235:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -23856,7 +23958,7 @@
         }
       }
     },
-    "235:10": {
+    "236:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -23958,7 +24060,7 @@
         }
       }
     },
-    "236:10": {
+    "237:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -24060,7 +24162,7 @@
         }
       }
     },
-    "237:10": {
+    "238:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -24179,7 +24281,7 @@
         }
       }
     },
-    "238:10": {
+    "239:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -24263,7 +24365,7 @@
         }
       }
     },
-    "239:10": {
+    "240:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -24430,7 +24532,7 @@
         }
       }
     },
-    "240:10": {
+    "241:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -24518,7 +24620,7 @@
         }
       }
     },
-    "241:10": {
+    "242:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -24606,7 +24708,7 @@
         }
       }
     },
-    "242:10": {
+    "243:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -24694,7 +24796,7 @@
         }
       }
     },
-    "243:10": {
+    "244:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -24782,7 +24884,7 @@
         }
       }
     },
-    "244:10": {
+    "245:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -24866,7 +24968,7 @@
         }
       }
     },
-    "245:10": {
+    "246:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -24984,7 +25086,7 @@
         }
       }
     },
-    "246:10": {
+    "247:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -25106,7 +25208,7 @@
         }
       }
     },
-    "247:10": {
+    "248:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -25194,7 +25296,7 @@
         }
       }
     },
-    "248:10": {
+    "249:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1086585241531956692,
@@ -25300,7 +25402,7 @@
         }
       }
     },
-    "249:10": {
+    "250:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -25384,7 +25486,7 @@
         }
       }
     },
-    "250:10": {
+    "251:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -25472,7 +25574,7 @@
         }
       }
     },
-    "251:10": {
+    "252:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -25570,7 +25672,7 @@
         }
       }
     },
-    "252:10": {
+    "253:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -25654,7 +25756,7 @@
         }
       }
     },
-    "253:10": {
+    "254:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -25750,7 +25852,7 @@
         }
       }
     },
-    "254:10": {
+    "255:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -25878,7 +25980,7 @@
         }
       }
     },
-    "255:10": {
+    "256:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7013887161315277003,
@@ -26028,7 +26130,7 @@
         }
       }
     },
-    "256:10": {
+    "257:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -26130,7 +26232,7 @@
         }
       }
     },
-    "257:10": {
+    "258:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2494767301009522045,
@@ -26225,7 +26327,7 @@
         }
       }
     },
-    "258:10": {
+    "259:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -26309,7 +26411,7 @@
         }
       }
     },
-    "259:10": {
+    "260:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -26393,7 +26495,7 @@
         }
       }
     },
-    "260:10": {
+    "261:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -26463,7 +26565,7 @@
         }
       }
     },
-    "261:10": {
+    "262:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -26547,7 +26649,7 @@
         }
       }
     },
-    "262:10": {
+    "263:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -26631,7 +26733,7 @@
         }
       }
     },
-    "263:10": {
+    "264:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -26727,7 +26829,7 @@
         }
       }
     },
-    "264:10": {
+    "265:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 4848198512208791425,
@@ -26811,7 +26913,7 @@
         }
       }
     },
-    "265:10": {
+    "266:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2057032763816915196,
@@ -26901,7 +27003,7 @@
         }
       }
     },
-    "266:10": {
+    "267:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -26985,7 +27087,7 @@
         }
       }
     },
-    "267:10": {
+    "268:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -186644287090702856,
@@ -27079,7 +27181,7 @@
         }
       }
     },
-    "268:10": {
+    "269:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2171037489483201764,
@@ -27149,7 +27251,7 @@
         }
       }
     },
-    "269:10": {
+    "270:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -3338667902618548772,
@@ -27275,7 +27377,7 @@
         }
       }
     },
-    "270:10": {
+    "271:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6403423461322305633,
@@ -27364,7 +27466,7 @@
         }
       }
     },
-    "271:10": {
+    "272:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -27482,7 +27584,7 @@
         }
       }
     },
-    "272:10": {
+    "273:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 5414272911860649617,
@@ -27501,7 +27603,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "Other worlds play by different rules.\n\n- §6Water§r needs atmospheric pressure. Without enough air, a water bucket just evaporates. Build a sealed, pressurized room if you need liquid water.\n- §6Gravity§r differs on every body: you jump much higher on the Mun than on Earth.\n- §6Days§r have their own length. Beds still work and skip to that world\u0027s morning.\n- §6Nether portals§r do not work away from Earth.\n- §cCorrosive§r atmospheres like Eve\u0027s eat through your armor first, then through you.\n- Gases you vent or leak go into the planet\u0027s §6atmosphere§r and can slowly change it.",
+          "desc:8": "Other worlds play by different rules.\n\n- §6Water§r needs atmospheric pressure. Without enough air, a water bucket just evaporates. Build a sealed, pressurized room if you need liquid water.\n- §6Gravity§r differs on every body: you jump much higher on the Mun than on Earth.\n- §6Days§r have their own length. Beds still work and skip to that world\u0027s morning.\n- §6Nether portals§r do not work away from Earth.\n- §cCorrosive§r atmospheres like Eve\u0027s eat through your armor first, then through you.\n- Gases you vent or leak go into the planet\u0027s §6atmosphere§r and can slowly change it.\n\nBreathable air needs at least §e0.21 atm§r of Earth air or §e0.09 atm§r of pure oxygen.\n\nPlanets have their own oceans: Minmus has milk, Eve mercury, Ike alkyl bromide and Tekto carbon tetrachloride. Pumps collect them like water. Icy bodies have bedrock deposits of packed ice that a bedrock drill can mine for water.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -27552,7 +27654,7 @@
         }
       }
     },
-    "273:10": {
+    "274:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -27636,7 +27738,7 @@
         }
       }
     },
-    "274:10": {
+    "275:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 7499288969431368099,
@@ -27750,7 +27852,7 @@
         }
       }
     },
-    "275:10": {
+    "276:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -27834,7 +27936,7 @@
         }
       }
     },
-    "276:10": {
+    "277:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1553027316111163361,
@@ -28029,7 +28131,7 @@
       },
       "tasks:9": {}
     },
-    "277:10": {
+    "278:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -28131,7 +28233,7 @@
         }
       }
     },
-    "278:10": {
+    "279:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -28234,7 +28336,7 @@
         }
       }
     },
-    "279:10": {
+    "280:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -28318,7 +28420,7 @@
         }
       }
     },
-    "280:10": {
+    "281:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6467247789862269309,
@@ -28450,7 +28552,7 @@
         }
       }
     },
-    "281:10": {
+    "282:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -5975608864161641094,
@@ -28520,7 +28622,7 @@
         }
       }
     },
-    "282:10": {
+    "283:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1247131825417861085,
@@ -28608,7 +28710,7 @@
         }
       }
     },
-    "283:10": {
+    "284:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -28716,7 +28818,7 @@
         }
       }
     },
-    "284:10": {
+    "285:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2980932894283183447,
@@ -28830,7 +28932,7 @@
         }
       }
     },
-    "285:10": {
+    "286:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1454872957915675833,
@@ -28918,7 +29020,7 @@
         }
       }
     },
-    "286:10": {
+    "287:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2549337488949951986,
@@ -29002,7 +29104,7 @@
         }
       }
     },
-    "287:10": {
+    "288:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -29086,7 +29188,7 @@
         }
       }
     },
-    "288:10": {
+    "289:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7514485711485907442,
@@ -29170,7 +29272,7 @@
         }
       }
     },
-    "289:10": {
+    "290:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6787868727436752418,
@@ -29294,7 +29396,7 @@
         }
       }
     },
-    "290:10": {
+    "291:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6787868727436752418,
@@ -29400,7 +29502,7 @@
         }
       }
     },
-    "291:10": {
+    "292:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -29484,7 +29586,7 @@
         }
       }
     },
-    "292:10": {
+    "293:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -29592,7 +29694,7 @@
         }
       }
     },
-    "293:10": {
+    "294:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 2921513330843732185,
@@ -29680,7 +29782,7 @@
         }
       }
     },
-    "294:10": {
+    "295:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 8243349716852164300,
@@ -29770,7 +29872,7 @@
         }
       }
     },
-    "295:10": {
+    "296:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -3726345668281548031,
@@ -29872,7 +29974,7 @@
         }
       }
     },
-    "296:10": {
+    "297:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -29974,7 +30076,7 @@
         }
       }
     },
-    "297:10": {
+    "298:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -30058,7 +30160,7 @@
         }
       }
     },
-    "298:10": {
+    "299:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 5069364148884162681,
@@ -30077,7 +30179,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "The §3Gas Giant Harvester Station§r is a device for collecting atmospheric air samples from gas giants.\n\nThe concept is quite simple: on a planet that is a satellite of the giant (for example, to fly to the green giant Jool, you need to go to Laythe), the station is set up. After refueling with §bLiquid Oxygen§r and §bHydrogen§r, the §3harvester rocket§r is sent for air. In one trip, it delivers 16,000 mB§r. As you can understand, the harvester\u0027s§r functionality is completely analogous to the operation of §3MiningModules§r.",
+          "desc:8": "The §3Gas Giant Harvester Station§r is a device for collecting atmospheric air samples from gas giants.\n\nThe concept is quite simple: on a planet that is a satellite of the giant (for example, to fly to the green giant Jool, you need to go to Laythe), the station is set up. After refueling with §bLiquid Oxygen§r and §bHydrogen§r, the §3harvester rocket§r is sent for air. In one trip, it burns 500 mB of each and delivers 8,000 mB§r of gas. As you can understand, the harvester\u0027s§r functionality is completely analogous to the operation of §3MiningModules§r.\n\n§eTekto§r orbits the gas giant §eSarnus§r, so a harvester built there collects §bSarnus Gas§r. Cryogenic distillation splits it into hydrogen, helium-3, natural gas and nitrogen.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -30156,7 +30258,7 @@
         }
       }
     },
-    "299:10": {
+    "300:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 2533543536034662032,
@@ -30244,7 +30346,7 @@
         }
       }
     },
-    "300:10": {
+    "301:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6787868727436752418,
@@ -30350,7 +30452,7 @@
         }
       }
     },
-    "301:10": {
+    "302:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 5414272911860649617,
@@ -30530,7 +30632,7 @@
         }
       }
     },
-    "302:10": {
+    "303:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -30600,7 +30702,7 @@
         }
       }
     },
-    "303:10": {
+    "304:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 3163659380794018993,
@@ -30714,7 +30816,7 @@
         }
       }
     },
-    "304:10": {
+    "305:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1809908221839128987,
@@ -30834,7 +30936,7 @@
         }
       }
     },
-    "305:10": {
+    "306:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -30918,7 +31020,7 @@
         }
       }
     },
-    "306:10": {
+    "307:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -31002,7 +31104,7 @@
         }
       }
     },
-    "307:10": {
+    "308:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 2662942327899570573,
@@ -31086,7 +31188,7 @@
         }
       }
     },
-    "308:10": {
+    "309:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1480799430013988952,
@@ -31194,7 +31296,7 @@
         }
       }
     },
-    "309:10": {
+    "310:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -31338,7 +31440,133 @@
         }
       }
     },
-    "310:10": {
+    "311:10": {
+      "preRequisites:9": {
+        "0:10": {
+          "questIDHigh:4": 5710383793196056753,
+          "questIDLow:4": -7277675015312038802
+        }
+      },
+      "properties:10": {
+        "betterquesting:10": {
+          "autoClaim:1": 0,
+          "completion_animation:8": "default",
+          "completion_particle:8": "default",
+          "confetti_icon:10": {
+            "Count:3": 0,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:stick"
+          },
+          "countAsQuest:1": 1,
+          "desc:8": "Laythe\u0027s oceans are alive. Hunt any one of its creatures.\n\n- §6Scutterfish§r - drop §6Scuttertails§r.\n- §6Scuttlecrabs§r - drop clay.\n- §6Sifter Eels§r, §6Scrapfish§r and §6Depth Squids§r swim in deeper water.\n- §cFlesh Creepers§r - their explosion leaves growths of tumor flesh behind.\n\nThe seafloor is covered in §6Laythe Kelp§r, §6Seagrass§r, §6Coral§r and §6Glowgrass§r.",
+          "globalShare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "hbm:item.scuttertail"
+          },
+          "isMain:1": 0,
+          "isSilent:1": 0,
+          "is_final:1": 0,
+          "lockedProgress:1": 0,
+          "name:8": "Laythe Wildlife",
+          "notification_duration:5": -1.0,
+          "notification_effect:3": -1,
+          "notification_fade_in:5": -1.0,
+          "notification_fade_out:5": -1.0,
+          "notification_icon_offset_y:3": -2147483648,
+          "notification_icon_scale:5": -1.0,
+          "notification_pos_x:3": -2147483648,
+          "notification_pos_y:3": -2147483648,
+          "notification_show_icon:8": "default",
+          "notification_style:8": "default",
+          "notification_subtitle:8": "",
+          "notification_subtitle_scale:5": -1.0,
+          "notification_title:8": "",
+          "notification_title_scale:5": -1.0,
+          "particle_count:3": -1,
+          "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+          "poem_music:8": "",
+          "poem_text:8": "betterquesting:texts/end_poem",
+          "questLogic:8": "OR",
+          "repeatTime:3": -1,
+          "repeat_relative:1": 1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "random.levelup",
+          "snd_update:8": "random.levelup",
+          "taskLogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questIDHigh:4": 1490674111597855949,
+      "questIDLow:4": -7514126894771948980,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "damageType:8": "",
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "required:3": 1,
+          "subtypes:1": 1,
+          "target:8": "hbm.entity_scutterfish",
+          "targetNBT:10": {
+            "id:8": "hbm.entity_scutterfish"
+          },
+          "taskID:8": "bq_standard:hunt"
+        },
+        "1:10": {
+          "damageType:8": "",
+          "ignoreNBT:1": 1,
+          "index:3": 1,
+          "required:3": 1,
+          "subtypes:1": 1,
+          "target:8": "hbm.entity_scuttlecrab",
+          "targetNBT:10": {
+            "id:8": "hbm.entity_scuttlecrab"
+          },
+          "taskID:8": "bq_standard:hunt"
+        },
+        "2:10": {
+          "damageType:8": "",
+          "ignoreNBT:1": 1,
+          "index:3": 2,
+          "required:3": 1,
+          "subtypes:1": 1,
+          "target:8": "hbm.entity_siftereel",
+          "targetNBT:10": {
+            "id:8": "hbm.entity_siftereel"
+          },
+          "taskID:8": "bq_standard:hunt"
+        },
+        "3:10": {
+          "damageType:8": "",
+          "ignoreNBT:1": 1,
+          "index:3": 3,
+          "required:3": 1,
+          "subtypes:1": 1,
+          "target:8": "hbm.entity_scrapfish",
+          "targetNBT:10": {
+            "id:8": "hbm.entity_scrapfish"
+          },
+          "taskID:8": "bq_standard:hunt"
+        },
+        "4:10": {
+          "damageType:8": "",
+          "ignoreNBT:1": 1,
+          "index:3": 4,
+          "required:3": 1,
+          "subtypes:1": 1,
+          "target:8": "hbm.entity_depthsquid",
+          "targetNBT:10": {
+            "id:8": "hbm.entity_depthsquid"
+          },
+          "taskID:8": "bq_standard:hunt"
+        }
+      }
+    },
+    "312:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1480799430013988952,
@@ -31408,7 +31636,7 @@
         }
       }
     },
-    "311:10": {
+    "313:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -31495,7 +31723,7 @@
       },
       "tasks:9": {}
     },
-    "312:10": {
+    "314:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 5371432744959951090,
@@ -31579,7 +31807,7 @@
         }
       }
     },
-    "313:10": {
+    "315:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 5414272911860649617,
@@ -31663,7 +31891,7 @@
         }
       }
     },
-    "314:10": {
+    "316:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -31844,7 +32072,7 @@
         }
       }
     },
-    "315:10": {
+    "317:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 8162125792545885492,
@@ -31928,7 +32156,7 @@
         }
       }
     },
-    "316:10": {
+    "318:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 5492112994879153,
@@ -32052,7 +32280,7 @@
         }
       }
     },
-    "317:10": {
+    "319:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1247131825417861085,
@@ -32164,7 +32392,7 @@
         }
       }
     },
-    "318:10": {
+    "320:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -32266,7 +32494,7 @@
         }
       }
     },
-    "319:10": {
+    "321:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -32414,7 +32642,7 @@
         }
       }
     },
-    "320:10": {
+    "322:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -32502,7 +32730,7 @@
         }
       }
     },
-    "321:10": {
+    "323:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -307702410431020054,
@@ -32644,7 +32872,7 @@
         }
       }
     },
-    "322:10": {
+    "324:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -32768,7 +32996,7 @@
         }
       }
     },
-    "323:10": {
+    "325:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -32795,7 +33023,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "The §6PLSS§r is an armor modification which will allow you to breathe in space. It will only work on airtight sealed suits.\n\nThe §6Heavy Boots§r can be used to quickly descend down in low-gravity environments.",
+          "desc:8": "The §6PLSS§r is an armor modification which will allow you to breathe in space. It will only work on airtight sealed suits.\n\nThe §6Heavy Boots§r can be used to quickly descend down in low-gravity environments.\n\nA suit counts as §esealed§r only if all four pieces can seal: the M1TTY Environment Suit, T-51b, Steam Suit, AJR, AJRO, RPA, NCRPA, HEV, Fau, DNT Nano, Taurun and Trenchmaster sets. The PLSS goes into the helmet\u0027s plate slot and holds 16,000 mB of §bOxygen§r - refill it like any fluid container. The DNT Nano Suit lets you breathe anywhere, even without a PLSS.\n\nWithout air you have §c5 seconds§r before you start taking damage.\n\nIn corrosive air like Eve\u0027s, only a chestplate insert with corrosion protection - the §6CMB Insert§r or the §6Yharonite Insert§r - stops the acid from eating your armor and then you.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -32877,10 +33105,28 @@
             }
           },
           "taskID:8": "bq_standard:optional_retrieval"
+        },
+        "2:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 2,
+          "partialMatch:1": 1,
+          "requireOnlyOneItem:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "hbm:item.insert_yharonite"
+            }
+          },
+          "taskID:8": "bq_standard:optional_retrieval"
         }
       }
     },
-    "324:10": {
+    "326:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -32982,7 +33228,7 @@
         }
       }
     },
-    "325:10": {
+    "327:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -33066,7 +33312,7 @@
         }
       }
     },
-    "326:10": {
+    "328:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -210966866053216921,
@@ -33154,7 +33400,7 @@
         }
       }
     },
-    "327:10": {
+    "329:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2549337488949951986,
@@ -33238,7 +33484,7 @@
         }
       }
     },
-    "328:10": {
+    "330:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2494767301009522045,
@@ -33322,7 +33568,7 @@
         }
       }
     },
-    "329:10": {
+    "331:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -33447,7 +33693,7 @@
         }
       }
     },
-    "330:10": {
+    "332:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -33599,7 +33845,7 @@
         }
       }
     },
-    "331:10": {
+    "333:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -210966866053216921,
@@ -33683,7 +33929,7 @@
         }
       }
     },
-    "332:10": {
+    "334:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -33753,7 +33999,7 @@
         }
       }
     },
-    "333:10": {
+    "335:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 8986632531639880419,
@@ -33843,7 +34089,7 @@
         }
       }
     },
-    "334:10": {
+    "336:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -33931,7 +34177,7 @@
         }
       }
     },
-    "335:10": {
+    "337:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2549337488949951986,
@@ -34045,7 +34291,7 @@
         }
       }
     },
-    "336:10": {
+    "338:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -5021609194468981133,
@@ -34157,7 +34403,7 @@
         }
       }
     },
-    "337:10": {
+    "339:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 2306956816106802527,
@@ -34227,7 +34473,7 @@
         }
       }
     },
-    "338:10": {
+    "340:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 7393826177143426704,
@@ -34341,7 +34587,7 @@
         }
       }
     },
-    "339:10": {
+    "341:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -34427,7 +34673,7 @@
         }
       }
     },
-    "340:10": {
+    "342:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7623698422531862605,
@@ -34606,7 +34852,7 @@
         }
       }
     },
-    "341:10": {
+    "343:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -34704,7 +34950,7 @@
         }
       }
     },
-    "342:10": {
+    "344:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1137739474903742698,
@@ -34824,7 +35070,7 @@
         }
       }
     },
-    "343:10": {
+    "345:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -34944,7 +35190,7 @@
         }
       }
     },
-    "344:10": {
+    "346:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -4323201697992913312,
@@ -35028,7 +35274,7 @@
         }
       }
     },
-    "345:10": {
+    "347:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -35112,7 +35358,7 @@
         }
       }
     },
-    "346:10": {
+    "348:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -35202,7 +35448,7 @@
         }
       }
     },
-    "347:10": {
+    "349:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2956680218970272069,
@@ -35332,7 +35578,7 @@
         }
       }
     },
-    "348:10": {
+    "350:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 6191132467602672579,
@@ -35428,7 +35674,7 @@
         }
       }
     },
-    "349:10": {
+    "351:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 7606679157914027127,
@@ -35526,7 +35772,7 @@
         }
       }
     },
-    "350:10": {
+    "352:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -35645,7 +35891,7 @@
         }
       }
     },
-    "351:10": {
+    "353:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 4920474714509559557,
@@ -35741,7 +35987,7 @@
         }
       }
     },
-    "352:10": {
+    "354:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -35829,7 +36075,7 @@
         }
       }
     },
-    "353:10": {
+    "355:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6787868727436752418,
@@ -35935,7 +36181,7 @@
         }
       }
     },
-    "354:10": {
+    "356:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7902600621291977162,
@@ -36083,7 +36329,7 @@
         }
       }
     },
-    "355:10": {
+    "357:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 5422351929291852264,
@@ -36102,7 +36348,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "The §3Drive Processor Tier 3§r allows for travel to §eLaythe§r.",
+          "desc:8": "The §3Drive Processor Tier 3§r allows for travel to §eLaythe§r.\n\n§eTekto§r also needs a Tier 3 drive.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -36167,7 +36413,7 @@
         }
       }
     },
-    "356:10": {
+    "358:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 7294403272883979501,
@@ -36269,7 +36515,7 @@
         }
       }
     },
-    "357:10": {
+    "359:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -36353,7 +36599,7 @@
         }
       }
     },
-    "358:10": {
+    "360:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -36455,7 +36701,7 @@
         }
       }
     },
-    "359:10": {
+    "361:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 1869690044390394683,
@@ -36567,7 +36813,7 @@
         }
       }
     },
-    "360:10": {
+    "362:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -36715,7 +36961,7 @@
         }
       }
     },
-    "361:10": {
+    "363:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6019261448661808939,
@@ -36799,7 +37045,7 @@
         }
       }
     },
-    "362:10": {
+    "364:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1922987534854173511,
@@ -36869,7 +37115,7 @@
         }
       }
     },
-    "363:10": {
+    "365:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -4633657087608009019,
@@ -36953,7 +37199,7 @@
         }
       }
     },
-    "364:10": {
+    "366:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1922987534854173511,
@@ -37023,7 +37269,7 @@
         }
       }
     },
-    "365:10": {
+    "367:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 4848198512208791425,
@@ -37107,7 +37353,7 @@
         }
       }
     },
-    "366:10": {
+    "368:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -37289,7 +37535,7 @@
         }
       }
     },
-    "367:10": {
+    "369:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -37373,7 +37619,7 @@
         }
       }
     },
-    "368:10": {
+    "370:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -37469,7 +37715,7 @@
         }
       }
     },
-    "369:10": {
+    "371:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -3818632394583945445,
@@ -37559,7 +37805,7 @@
         }
       }
     },
-    "370:10": {
+    "372:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -5753423036809461689,
@@ -37665,7 +37911,7 @@
         }
       }
     },
-    "371:10": {
+    "373:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -37754,7 +38000,7 @@
         }
       }
     },
-    "372:10": {
+    "374:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2549337488949951986,
@@ -37848,7 +38094,7 @@
         }
       }
     },
-    "373:10": {
+    "375:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -37932,7 +38178,7 @@
         }
       }
     },
-    "374:10": {
+    "376:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1137739474903742698,
@@ -38024,7 +38270,7 @@
         }
       }
     },
-    "375:10": {
+    "377:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -5952352412717986838,
@@ -38108,7 +38354,7 @@
         }
       }
     },
-    "376:10": {
+    "378:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -38192,7 +38438,7 @@
         }
       }
     },
-    "377:10": {
+    "379:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -4139600212296318454,
@@ -38276,7 +38522,7 @@
         }
       }
     },
-    "378:10": {
+    "380:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -38378,7 +38624,7 @@
         }
       }
     },
-    "379:10": {
+    "381:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6019261448661808939,
@@ -38462,7 +38708,7 @@
         }
       }
     },
-    "380:10": {
+    "382:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1137739474903742698,
@@ -38546,7 +38792,7 @@
         }
       }
     },
-    "381:10": {
+    "383:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2980932894283183447,
@@ -38664,7 +38910,7 @@
         }
       }
     },
-    "382:10": {
+    "384:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 6419435000744724006,
@@ -38748,7 +38994,7 @@
         }
       }
     },
-    "383:10": {
+    "385:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -38832,7 +39078,7 @@
         }
       }
     },
-    "384:10": {
+    "386:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7623698422531862605,
@@ -38922,7 +39168,7 @@
         }
       }
     },
-    "385:10": {
+    "387:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -39118,7 +39364,7 @@
         }
       }
     },
-    "386:10": {
+    "388:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 1831348228114892710,
@@ -39242,7 +39488,7 @@
         }
       }
     },
-    "387:10": {
+    "389:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -39330,7 +39576,7 @@
         }
       }
     },
-    "388:10": {
+    "390:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 6546284112554378894,
@@ -39419,7 +39665,7 @@
         }
       }
     },
-    "389:10": {
+    "391:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -39549,7 +39795,7 @@
         }
       }
     },
-    "390:10": {
+    "392:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 5480478594726251954,
@@ -39633,7 +39879,7 @@
         }
       }
     },
-    "391:10": {
+    "393:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 1000830747582415130,
@@ -39717,7 +39963,7 @@
         }
       }
     },
-    "392:10": {
+    "394:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -39801,7 +40047,77 @@
         }
       }
     },
-    "393:10": {
+    "395:10": {
+      "preRequisites:9": {
+        "0:10": {
+          "questIDHigh:4": 5414272911860649617,
+          "questIDLow:4": -5022717249602231752
+        }
+      },
+      "properties:10": {
+        "betterquesting:10": {
+          "autoClaim:1": 0,
+          "completion_animation:8": "default",
+          "completion_particle:8": "default",
+          "confetti_icon:10": {
+            "Count:3": 0,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:stick"
+          },
+          "countAsQuest:1": 1,
+          "desc:8": "Someone got there before you. Each body has its own ruins:\n\n- §eMun§r and §eMinmus§r - abandoned habitat domes with flags, solar panels and a StarDar.\n- §eDuna§r - a communications dome and old lanterns.\n- §eDres§r - a ruined RBMK power plant.\n- §eMoho§r - a geothermal station.\n- §eLaythe§r - a sunken nuclear submarine and vertibirds.\n- §eIke§r - strange artifacts and ancient tombs. The tombs are full of radioactive §ctomb gas§r, and their pedestals hold Divine Shards.\n\n§6Meteor Dungeons§r can appear on any body, but are most common on Ike. Cyber Crab spawners guard them.",
+          "globalShare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "hbm:tile.lantern_behemoth"
+          },
+          "isMain:1": 0,
+          "isSilent:1": 0,
+          "is_final:1": 0,
+          "lockedProgress:1": 0,
+          "name:8": "Outposts Among the Stars",
+          "notification_duration:5": -1.0,
+          "notification_effect:3": -1,
+          "notification_fade_in:5": -1.0,
+          "notification_fade_out:5": -1.0,
+          "notification_icon_offset_y:3": -2147483648,
+          "notification_icon_scale:5": -1.0,
+          "notification_pos_x:3": -2147483648,
+          "notification_pos_y:3": -2147483648,
+          "notification_show_icon:8": "default",
+          "notification_style:8": "default",
+          "notification_subtitle:8": "",
+          "notification_subtitle_scale:5": -1.0,
+          "notification_title:8": "",
+          "notification_title_scale:5": -1.0,
+          "particle_count:3": -1,
+          "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+          "poem_music:8": "",
+          "poem_text:8": "betterquesting:texts/end_poem",
+          "questLogic:8": "AND",
+          "repeatTime:3": -1,
+          "repeat_relative:1": 1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "random.levelup",
+          "snd_update:8": "random.levelup",
+          "taskLogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questIDHigh:4": 4787936114531844249,
+      "questIDLow:4": -5071259502378642794,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "396:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -186644287090702856,
@@ -39885,7 +40201,7 @@
         }
       }
     },
-    "394:10": {
+    "397:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -39959,7 +40275,7 @@
         }
       }
     },
-    "395:10": {
+    "398:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -40065,7 +40381,7 @@
         }
       }
     },
-    "396:10": {
+    "399:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1832499694721612595,
@@ -40173,7 +40489,77 @@
         }
       }
     },
-    "397:10": {
+    "400:10": {
+      "preRequisites:9": {
+        "0:10": {
+          "questIDHigh:4": 5414272911860649617,
+          "questIDLow:4": -5022717249602231752
+        }
+      },
+      "properties:10": {
+        "betterquesting:10": {
+          "autoClaim:1": 0,
+          "completion_animation:8": "default",
+          "completion_particle:8": "default",
+          "confetti_icon:10": {
+            "Count:3": 0,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:stick"
+          },
+          "countAsQuest:1": 1,
+          "desc:8": "Every body has its own set of ores. Most of them generate in large veins, so one find usually means many more nearby.\n\n- §eMun§r - nickel, iron, lead, sulfur, fluorite, natural gas shale and brine deposits.\n- §eMinmus§r - copper, niter, nether quartz, malachite, cinnabar and brine deposits.\n- §eDuna§r - redstone, titanium, rare earth, beryllium, zinc, aluminium, tungsten, cinnabar, oil deposits and rich basalt.\n- §eIke§r - uranium, plutonium, lanthanium, coltan, rich mineral deposits and brine deposits.\n- §eMoho§r - australium, cinnabar, phosphorus, glowstone, rich mineral deposits, natural gas shale and rich basalt.\n- §eDres§r - diamond, coltan, lanthanium, niobium and natural gas shale.\n- §eEve§r - schrabidium, niobium, cobalt, natural gas deposits and §6iodine§r, which is found nowhere else.\n- §eLaythe§r - aluminium, asbestos, tungsten and oil deposits.\n- §eTekto§r - lithium, plutonium, beryllium, cinnabar and Tektonic crude.\n\nEvery body also has calcite, rare alexandrite, depth rock deposits near the bottom and its own bedrock ores. Watch for geysers: §6Volcanic Geysers§r on Moho, §6Discharge Geysers§r and electric volcanoes on Eve, and §6DCM Geysers§r on Tekto.",
+          "globalShare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "hbm:tile.ore_iodine"
+          },
+          "isMain:1": 0,
+          "isSilent:1": 0,
+          "is_final:1": 0,
+          "lockedProgress:1": 0,
+          "name:8": "Off-World Ores",
+          "notification_duration:5": -1.0,
+          "notification_effect:3": -1,
+          "notification_fade_in:5": -1.0,
+          "notification_fade_out:5": -1.0,
+          "notification_icon_offset_y:3": -2147483648,
+          "notification_icon_scale:5": -1.0,
+          "notification_pos_x:3": -2147483648,
+          "notification_pos_y:3": -2147483648,
+          "notification_show_icon:8": "default",
+          "notification_style:8": "default",
+          "notification_subtitle:8": "",
+          "notification_subtitle_scale:5": -1.0,
+          "notification_title:8": "",
+          "notification_title_scale:5": -1.0,
+          "particle_count:3": -1,
+          "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+          "poem_music:8": "",
+          "poem_text:8": "betterquesting:texts/end_poem",
+          "questLogic:8": "AND",
+          "repeatTime:3": -1,
+          "repeat_relative:1": 1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "random.levelup",
+          "snd_update:8": "random.levelup",
+          "taskLogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questIDHigh:4": 4903072103052099991,
+      "questIDLow:4": -7168940405710235585,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "401:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -307702410431020054,
@@ -40257,7 +40643,7 @@
         }
       }
     },
-    "398:10": {
+    "402:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 8728878524116324073,
@@ -40363,7 +40749,7 @@
         }
       }
     },
-    "399:10": {
+    "403:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -5952352412717986838,
@@ -40447,7 +40833,7 @@
         }
       }
     },
-    "400:10": {
+    "404:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -40581,7 +40967,7 @@
         }
       }
     },
-    "401:10": {
+    "405:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 5710383793196056753,
@@ -40651,7 +41037,7 @@
         }
       }
     },
-    "402:10": {
+    "406:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -4797899323491139190,
@@ -40739,7 +41125,7 @@
         }
       }
     },
-    "403:10": {
+    "407:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6489789683214170590,
@@ -40817,7 +41203,7 @@
         }
       }
     },
-    "404:10": {
+    "408:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 6236478466157201943,
@@ -40931,7 +41317,7 @@
         }
       }
     },
-    "405:10": {
+    "409:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2770338731755288229,
@@ -41025,7 +41411,7 @@
         }
       }
     },
-    "406:10": {
+    "410:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 5371432744959951090,
@@ -41150,7 +41536,7 @@
         }
       }
     },
-    "407:10": {
+    "411:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 9164108901835295382,
@@ -41264,7 +41650,7 @@
         }
       }
     },
-    "408:10": {
+    "412:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7902600621291977162,
@@ -41348,7 +41734,7 @@
         }
       }
     },
-    "409:10": {
+    "413:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1088709018549335893,
@@ -41450,7 +41836,7 @@
         }
       }
     },
-    "410:10": {
+    "414:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -41534,7 +41920,7 @@
         }
       }
     },
-    "411:10": {
+    "415:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 6107657297413227965,
@@ -41604,7 +41990,7 @@
         }
       }
     },
-    "412:10": {
+    "416:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 6655386366404936121,
@@ -41720,7 +42106,7 @@
         }
       }
     },
-    "413:10": {
+    "417:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -5279191713880847951,
@@ -41808,7 +42194,7 @@
         }
       }
     },
-    "414:10": {
+    "418:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -41928,7 +42314,7 @@
         }
       }
     },
-    "415:10": {
+    "419:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 6135021503671780400,
@@ -42016,7 +42402,7 @@
         }
       }
     },
-    "416:10": {
+    "420:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -42184,7 +42570,7 @@
         }
       }
     },
-    "417:10": {
+    "421:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -3781225446589840784,
@@ -42254,7 +42640,7 @@
         }
       }
     },
-    "418:10": {
+    "422:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 3347434590198908605,
@@ -42356,7 +42742,7 @@
         }
       }
     },
-    "419:10": {
+    "423:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 6884669865635892759,
@@ -42446,7 +42832,7 @@
         }
       }
     },
-    "420:10": {
+    "424:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 3216936886722971351,
@@ -42542,7 +42928,7 @@
         }
       }
     },
-    "421:10": {
+    "425:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 5606889716422756008,
@@ -42632,7 +43018,7 @@
         }
       }
     },
-    "422:10": {
+    "426:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -42720,7 +43106,7 @@
         }
       }
     },
-    "423:10": {
+    "427:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -888930270320571569,
@@ -42804,7 +43190,7 @@
         }
       }
     },
-    "424:10": {
+    "428:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -42888,7 +43274,7 @@
         }
       }
     },
-    "425:10": {
+    "429:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -43032,7 +43418,7 @@
         }
       }
     },
-    "426:10": {
+    "430:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -43116,7 +43502,7 @@
         }
       }
     },
-    "427:10": {
+    "431:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -43260,7 +43646,7 @@
         }
       }
     },
-    "428:10": {
+    "432:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2956680218970272069,
@@ -43446,7 +43832,7 @@
         }
       }
     },
-    "429:10": {
+    "433:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -43530,7 +43916,7 @@
         }
       }
     },
-    "430:10": {
+    "434:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6403423461322305633,
@@ -43646,7 +44032,7 @@
         }
       }
     },
-    "431:10": {
+    "435:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 1700094336438977605,
@@ -43716,7 +44102,7 @@
         }
       }
     },
-    "432:10": {
+    "436:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 5371432744959951090,
@@ -43804,7 +44190,7 @@
         }
       }
     },
-    "433:10": {
+    "437:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 1977404459837440487,
@@ -43888,7 +44274,7 @@
         }
       }
     },
-    "434:10": {
+    "438:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7110633256642261858,
@@ -43978,7 +44364,7 @@
         }
       }
     },
-    "435:10": {
+    "439:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -44068,7 +44454,7 @@
         }
       }
     },
-    "436:10": {
+    "440:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -3637578079703577877,
@@ -44180,7 +44566,7 @@
         }
       }
     },
-    "437:10": {
+    "441:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -44282,7 +44668,7 @@
         }
       }
     },
-    "438:10": {
+    "442:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -44366,7 +44752,7 @@
         }
       }
     },
-    "439:10": {
+    "443:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -44436,7 +44822,7 @@
         }
       }
     },
-    "440:10": {
+    "444:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 1597156130510686175,
@@ -44568,7 +44954,7 @@
         }
       }
     },
-    "441:10": {
+    "445:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 5414272911860649617,
@@ -44652,7 +45038,7 @@
         }
       }
     },
-    "442:10": {
+    "446:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1137739474903742698,
@@ -44736,7 +45122,7 @@
         }
       }
     },
-    "443:10": {
+    "447:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7859074527344246205,
@@ -44806,7 +45192,7 @@
         }
       }
     },
-    "444:10": {
+    "448:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -44890,7 +45276,7 @@
         }
       }
     },
-    "445:10": {
+    "449:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -44998,7 +45384,7 @@
         }
       }
     },
-    "446:10": {
+    "450:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -45114,7 +45500,7 @@
         }
       }
     },
-    "447:10": {
+    "451:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6467247789862269309,
@@ -45198,7 +45584,7 @@
         }
       }
     },
-    "448:10": {
+    "452:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -45268,7 +45654,7 @@
         }
       }
     },
-    "449:10": {
+    "453:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -45352,7 +45738,7 @@
         }
       }
     },
-    "450:10": {
+    "454:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -45436,7 +45822,7 @@
         }
       }
     },
-    "451:10": {
+    "455:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -45536,7 +45922,7 @@
         }
       }
     },
-    "452:10": {
+    "456:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -8952569304068829753,
@@ -45622,7 +46008,7 @@
         }
       }
     },
-    "453:10": {
+    "457:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -45728,7 +46114,7 @@
         }
       }
     },
-    "454:10": {
+    "458:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -4356235348570976913,
@@ -45802,7 +46188,7 @@
         }
       }
     },
-    "455:10": {
+    "459:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -45891,7 +46277,7 @@
         }
       }
     },
-    "456:10": {
+    "460:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1562879166582469695,
@@ -45983,7 +46369,7 @@
         }
       }
     },
-    "457:10": {
+    "461:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1809908221839128987,
@@ -46103,7 +46489,7 @@
         }
       }
     },
-    "458:10": {
+    "462:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7902600621291977162,
@@ -46239,7 +46625,7 @@
         }
       }
     },
-    "459:10": {
+    "463:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 1250592840944208741,
@@ -46337,7 +46723,7 @@
         }
       }
     },
-    "460:10": {
+    "464:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -46487,7 +46873,7 @@
         }
       }
     },
-    "461:10": {
+    "465:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 6466463926402370883,
@@ -46571,7 +46957,7 @@
         }
       }
     },
-    "462:10": {
+    "466:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -46661,7 +47047,7 @@
         }
       }
     },
-    "463:10": {
+    "467:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -46751,7 +47137,7 @@
         }
       }
     },
-    "464:10": {
+    "468:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 4848198512208791425,
@@ -46835,7 +47221,7 @@
         }
       }
     },
-    "465:10": {
+    "469:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -46921,7 +47307,7 @@
         }
       }
     },
-    "466:10": {
+    "470:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -8577169131124537851,
@@ -47009,7 +47395,7 @@
         }
       }
     },
-    "467:10": {
+    "471:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -47119,7 +47505,7 @@
         }
       }
     },
-    "468:10": {
+    "472:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -47209,7 +47595,7 @@
         }
       }
     },
-    "469:10": {
+    "473:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -47297,7 +47683,7 @@
         }
       }
     },
-    "470:10": {
+    "474:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -47316,7 +47702,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "The §3StarDar§r is your base of operations for mission planning, helping you to locate and scan potential landing zones on planets, and §6Program Drives§r that can be inserted into your rocket\u0027s astronavigational systems to make journeys to said planets.\n\nThe §3Drive Processor§r processes drives that have been programmed by the StarDar, allowing them to be inserted into rocket navigation computers. In the Vehicle Assembly Base flight planner, place the drive for the body or station you launch from in the top slot and the target destination in the bottom slot.",
+          "desc:8": "The §3StarDar§r is your base of operations for mission planning, helping you to locate and scan potential landing zones on planets, and §6Program Drives§r that can be inserted into your rocket\u0027s astronavigational systems to make journeys to said planets.\n\nThe §3Drive Processor§r processes drives that have been programmed by the StarDar, allowing them to be inserted into rocket navigation computers. In the Vehicle Assembly Base flight planner, place the drive for the body or station you launch from in the top slot and the target destination in the bottom slot.\n\nThe tier a drive needs depends on where you launch from. Travel within one planet\u0027s system - for example from Kerbin to the Mun or Minmus, or from Duna to Ike - needs no processing at all. Any other trip needs at least Tier 1, while §eEve§r and §eDres§r always need Tier 2 and §eLaythe§r and §eTekto§r always need Tier 3. Orbital stations never need processing.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -47415,7 +47801,7 @@
         }
       }
     },
-    "471:10": {
+    "475:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 3300935411432441238,
@@ -47529,7 +47915,7 @@
         }
       }
     },
-    "472:10": {
+    "476:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1480799430013988952,
@@ -47599,7 +47985,7 @@
         }
       }
     },
-    "473:10": {
+    "477:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1027212781923908880,
@@ -47795,7 +48181,7 @@
         }
       }
     },
-    "474:10": {
+    "478:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -47885,7 +48271,7 @@
         }
       }
     },
-    "475:10": {
+    "479:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1480799430013988952,
@@ -47955,7 +48341,7 @@
         }
       }
     },
-    "476:10": {
+    "480:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -48063,7 +48449,7 @@
         }
       }
     },
-    "477:10": {
+    "481:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -48181,7 +48567,7 @@
         }
       }
     },
-    "478:10": {
+    "482:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 3347434590198908605,
@@ -48289,7 +48675,7 @@
         }
       }
     },
-    "479:10": {
+    "483:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -48373,7 +48759,7 @@
         }
       }
     },
-    "480:10": {
+    "484:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -48479,7 +48865,7 @@
         }
       }
     },
-    "481:10": {
+    "485:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -48624,7 +49010,7 @@
         }
       }
     },
-    "482:10": {
+    "486:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 8162125792545885492,
@@ -48708,7 +49094,7 @@
         }
       }
     },
-    "483:10": {
+    "487:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -48782,7 +49168,7 @@
         }
       }
     },
-    "484:10": {
+    "488:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1159436809681416789,
@@ -48902,7 +49288,7 @@
         }
       }
     },
-    "485:10": {
+    "489:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -48990,7 +49376,7 @@
         }
       }
     },
-    "486:10": {
+    "490:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -5205837353516447570,
@@ -49132,7 +49518,7 @@
         }
       }
     },
-    "487:10": {
+    "491:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -49258,7 +49644,7 @@
         }
       }
     },
-    "488:10": {
+    "492:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -49360,7 +49746,7 @@
         }
       }
     },
-    "489:10": {
+    "493:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 3347434590198908605,
@@ -49468,7 +49854,7 @@
         }
       }
     },
-    "490:10": {
+    "494:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 4848198512208791425,
@@ -49552,7 +49938,7 @@
         }
       }
     },
-    "491:10": {
+    "495:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -49636,7 +50022,7 @@
         }
       }
     },
-    "492:10": {
+    "496:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 3962321330966250483,
@@ -49744,7 +50130,7 @@
         }
       }
     },
-    "493:10": {
+    "497:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 5492112994879153,
@@ -49872,7 +50258,7 @@
         }
       }
     },
-    "494:10": {
+    "498:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -49956,7 +50342,7 @@
         }
       }
     },
-    "495:10": {
+    "499:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -50046,7 +50432,7 @@
         }
       }
     },
-    "496:10": {
+    "500:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -50134,7 +50520,7 @@
         }
       }
     },
-    "497:10": {
+    "501:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -50218,7 +50604,7 @@
         }
       }
     },
-    "498:10": {
+    "502:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 6784220399579514915,
@@ -50342,7 +50728,7 @@
         }
       }
     },
-    "499:10": {
+    "503:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 6466463926402370883,
@@ -50426,7 +50812,7 @@
         }
       }
     },
-    "500:10": {
+    "504:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -50516,7 +50902,7 @@
         }
       }
     },
-    "501:10": {
+    "505:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -50600,7 +50986,7 @@
         }
       }
     },
-    "502:10": {
+    "506:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 7269967256698702332,
@@ -50674,7 +51060,7 @@
         }
       }
     },
-    "503:10": {
+    "507:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2565793389317242141,
@@ -50770,7 +51156,7 @@
         }
       }
     },
-    "504:10": {
+    "508:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -5753423036809461689,
@@ -50902,7 +51288,7 @@
         }
       }
     },
-    "505:10": {
+    "509:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -51004,7 +51390,7 @@
         }
       }
     },
-    "506:10": {
+    "510:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -51174,7 +51560,7 @@
         }
       }
     },
-    "507:10": {
+    "511:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 165201183718657813,
@@ -51312,7 +51698,7 @@
         }
       }
     },
-    "508:10": {
+    "512:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7408403791236087342,
@@ -51412,7 +51798,7 @@
         }
       }
     },
-    "509:10": {
+    "513:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 6546284112554378894,
@@ -51518,7 +51904,7 @@
         }
       }
     },
-    "510:10": {
+    "514:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 4835946095099397745,
@@ -51602,7 +51988,7 @@
         }
       }
     },
-    "511:10": {
+    "515:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 4920474714509559557,
@@ -51702,7 +52088,7 @@
         }
       }
     },
-    "512:10": {
+    "516:10": {
       "preRequisites:9": {},
       "properties:10": {
         "betterquesting:10": {
@@ -51808,7 +52194,7 @@
         }
       }
     },
-    "513:10": {
+    "517:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -5021609194468981133,
@@ -51926,7 +52312,7 @@
         }
       }
     },
-    "514:10": {
+    "518:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 4848198512208791425,
@@ -52010,7 +52396,7 @@
         }
       }
     },
-    "515:10": {
+    "519:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 2966349620086983069,
@@ -52158,7 +52544,7 @@
         }
       }
     },
-    "516:10": {
+    "520:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2980932894283183447,
@@ -52264,7 +52650,7 @@
         }
       }
     },
-    "517:10": {
+    "521:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -52378,7 +52764,7 @@
         }
       }
     },
-    "518:10": {
+    "522:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1922987534854173511,
@@ -52448,7 +52834,7 @@
         }
       }
     },
-    "519:10": {
+    "523:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 6466463926402370883,
@@ -52532,7 +52918,7 @@
         }
       }
     },
-    "520:10": {
+    "524:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6541277924072011943,
@@ -52632,7 +53018,7 @@
         }
       }
     },
-    "521:10": {
+    "525:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -52724,7 +53110,7 @@
         }
       }
     },
-    "522:10": {
+    "526:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1922987534854173511,
@@ -52794,7 +53180,7 @@
         }
       }
     },
-    "523:10": {
+    "527:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -8814956637734549230,
@@ -52878,7 +53264,7 @@
         }
       }
     },
-    "524:10": {
+    "528:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -53026,7 +53412,7 @@
         }
       }
     },
-    "525:10": {
+    "529:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1809908221839128987,
@@ -53146,7 +53532,7 @@
         }
       }
     },
-    "526:10": {
+    "530:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 2870886993118644556,
@@ -53244,7 +53630,7 @@
         }
       }
     },
-    "527:10": {
+    "531:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -53328,7 +53714,7 @@
         }
       }
     },
-    "528:10": {
+    "532:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -53513,7 +53899,7 @@
         }
       }
     },
-    "529:10": {
+    "533:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 9135382564129426290,
@@ -53627,7 +54013,7 @@
         }
       }
     },
-    "530:10": {
+    "534:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 4835946095099397745,
@@ -53711,7 +54097,7 @@
         }
       }
     },
-    "531:10": {
+    "535:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -53817,7 +54203,7 @@
         }
       }
     },
-    "532:10": {
+    "536:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -53905,7 +54291,7 @@
         }
       }
     },
-    "533:10": {
+    "537:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -54023,7 +54409,7 @@
         }
       }
     },
-    "534:10": {
+    "538:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -54165,7 +54551,7 @@
         }
       }
     },
-    "535:10": {
+    "539:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 1482510697200306394,
@@ -54325,7 +54711,7 @@
         }
       }
     },
-    "536:10": {
+    "540:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -54463,7 +54849,7 @@
         }
       }
     },
-    "537:10": {
+    "541:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -54553,7 +54939,7 @@
         }
       }
     },
-    "538:10": {
+    "542:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 1597156130510686175,
@@ -54685,7 +55071,7 @@
         }
       }
     },
-    "539:10": {
+    "543:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -54805,7 +55191,7 @@
         }
       }
     },
-    "540:10": {
+    "544:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -54911,7 +55297,7 @@
         }
       }
     },
-    "541:10": {
+    "545:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 1000830747582415130,
@@ -55015,7 +55401,7 @@
         }
       }
     },
-    "542:10": {
+    "546:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 7853898675283183983,
@@ -55117,7 +55503,7 @@
         }
       }
     },
-    "543:10": {
+    "547:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -5952352412717986838,
@@ -55219,7 +55605,7 @@
         }
       }
     },
-    "544:10": {
+    "548:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7859074527344246205,
@@ -55303,7 +55689,7 @@
         }
       }
     },
-    "545:10": {
+    "549:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7902600621291977162,
@@ -55405,7 +55791,7 @@
         }
       }
     },
-    "546:10": {
+    "550:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -459311557983844238,
@@ -55428,7 +55814,7 @@
             "id:8": "minecraft:stick"
           },
           "countAsQuest:1": 1,
-          "desc:8": "The §3Orbital Station Computer§r, when having a drive inserted into it, can move the station to its destination.\n\n§3Thrusters§r with fuel are required to be attached to the station.",
+          "desc:8": "The §3Orbital Station Computer§r, when having a drive inserted into it, can move the station to its destination.\n\n§3Thrusters§r with fuel are required to be attached to the station.\n\nThe computer can also switch the station\u0027s artificial gravity on and off.\n\nThe §3Orbital Station Core§r is the heart of the station. Do not break it.",
           "globalShare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -55547,7 +55933,7 @@
         }
       }
     },
-    "547:10": {
+    "551:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -55725,7 +56111,7 @@
         }
       }
     },
-    "548:10": {
+    "552:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -55817,7 +56203,7 @@
         }
       }
     },
-    "549:10": {
+    "553:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -55905,7 +56291,7 @@
         }
       }
     },
-    "550:10": {
+    "554:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 6107657297413227965,
@@ -55995,7 +56381,7 @@
         }
       }
     },
-    "551:10": {
+    "555:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 7471477228283643074,
@@ -56079,7 +56465,7 @@
         }
       }
     },
-    "552:10": {
+    "556:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -56235,7 +56621,7 @@
         }
       }
     },
-    "553:10": {
+    "557:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 4821959902488317033,
@@ -56324,7 +56710,7 @@
         }
       }
     },
-    "554:10": {
+    "558:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -56430,7 +56816,7 @@
         }
       }
     },
-    "555:10": {
+    "559:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 4848198512208791425,
@@ -56528,7 +56914,7 @@
         }
       }
     },
-    "556:10": {
+    "560:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -56652,7 +57038,7 @@
         }
       }
     },
-    "557:10": {
+    "561:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 5480478594726251954,
@@ -56754,7 +57140,7 @@
         }
       }
     },
-    "558:10": {
+    "562:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -56844,7 +57230,7 @@
         }
       }
     },
-    "559:10": {
+    "563:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 8243349716852164300,
@@ -56948,7 +57334,7 @@
         }
       }
     },
-    "560:10": {
+    "564:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2980932894283183447,
@@ -57054,7 +57440,7 @@
         }
       }
     },
-    "561:10": {
+    "565:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -57138,7 +57524,7 @@
         }
       }
     },
-    "562:10": {
+    "566:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7623698422531862605,
@@ -57317,7 +57703,7 @@
         }
       }
     },
-    "563:10": {
+    "567:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -57419,7 +57805,7 @@
         }
       }
     },
-    "564:10": {
+    "568:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -57517,7 +57903,7 @@
         }
       }
     },
-    "565:10": {
+    "569:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 2966349620086983069,
@@ -57637,7 +58023,7 @@
         }
       }
     },
-    "566:10": {
+    "570:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1247131825417861085,
@@ -57729,7 +58115,7 @@
         }
       }
     },
-    "567:10": {
+    "571:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1922987534854173511,
@@ -57799,7 +58185,7 @@
         }
       }
     },
-    "568:10": {
+    "572:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -5952352412717986838,
@@ -57905,7 +58291,7 @@
         }
       }
     },
-    "569:10": {
+    "573:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -58021,7 +58407,7 @@
         }
       }
     },
-    "570:10": {
+    "574:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1480799430013988952,
@@ -58105,7 +58491,7 @@
         }
       }
     },
-    "571:10": {
+    "575:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -4356235348570976913,
@@ -58175,7 +58561,7 @@
         }
       }
     },
-    "572:10": {
+    "576:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 4920474714509559557,
@@ -58263,7 +58649,7 @@
         }
       }
     },
-    "573:10": {
+    "577:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6663568669699783320,
@@ -58363,7 +58749,7 @@
         }
       }
     },
-    "574:10": {
+    "578:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7759675952233758520,
@@ -58487,7 +58873,7 @@
         }
       }
     },
-    "575:10": {
+    "579:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1809908221839128987,
@@ -58600,7 +58986,7 @@
         }
       }
     },
-    "576:10": {
+    "580:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -58684,7 +59070,7 @@
         }
       }
     },
-    "577:10": {
+    "581:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -58770,7 +59156,7 @@
         }
       }
     },
-    "578:10": {
+    "582:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -58854,7 +59240,7 @@
         }
       }
     },
-    "579:10": {
+    "583:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -58960,7 +59346,7 @@
         }
       }
     },
-    "580:10": {
+    "584:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 6222004806918030376,
@@ -59048,7 +59434,7 @@
         }
       }
     },
-    "581:10": {
+    "585:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -59172,7 +59558,7 @@
         }
       }
     },
-    "582:10": {
+    "586:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -59300,7 +59686,7 @@
         }
       }
     },
-    "583:10": {
+    "587:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -59483,7 +59869,7 @@
         }
       }
     },
-    "584:10": {
+    "588:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -59589,7 +59975,7 @@
         }
       }
     },
-    "585:10": {
+    "589:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -59726,7 +60112,7 @@
         }
       }
     },
-    "586:10": {
+    "590:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 6466463926402370883,
@@ -59810,7 +60196,7 @@
         }
       }
     },
-    "587:10": {
+    "591:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 1142299974232917545,
@@ -59894,7 +60280,7 @@
         }
       }
     },
-    "588:10": {
+    "592:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -5952352412717986838,
@@ -59978,7 +60364,7 @@
         }
       }
     },
-    "589:10": {
+    "593:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -3862147968578074343,
@@ -60066,7 +60452,7 @@
         }
       }
     },
-    "590:10": {
+    "594:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -60150,7 +60536,7 @@
         }
       }
     },
-    "591:10": {
+    "595:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6663568669699783320,
@@ -60252,7 +60638,7 @@
         }
       }
     },
-    "592:10": {
+    "596:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -60368,7 +60754,7 @@
         }
       }
     },
-    "593:10": {
+    "597:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2029298397552947381,
@@ -60456,7 +60842,7 @@
         }
       }
     },
-    "594:10": {
+    "598:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1137739474903742698,
@@ -60540,7 +60926,7 @@
         }
       }
     },
-    "595:10": {
+    "599:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -60660,7 +61046,7 @@
         }
       }
     },
-    "596:10": {
+    "600:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 8728878524116324073,
@@ -60756,7 +61142,7 @@
         }
       }
     },
-    "597:10": {
+    "601:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -4323201697992913312,
@@ -60840,7 +61226,7 @@
         }
       }
     },
-    "598:10": {
+    "602:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -60956,7 +61342,7 @@
         }
       }
     },
-    "599:10": {
+    "603:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 8036000502216148548,
@@ -61026,7 +61412,7 @@
         }
       }
     },
-    "600:10": {
+    "604:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6019261448661808939,
@@ -61110,7 +61496,7 @@
         }
       }
     },
-    "601:10": {
+    "605:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 8986632531639880419,
@@ -61198,7 +61584,7 @@
         }
       }
     },
-    "602:10": {
+    "606:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -61294,7 +61680,7 @@
         }
       }
     },
-    "603:10": {
+    "607:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -61388,7 +61774,7 @@
         }
       }
     },
-    "604:10": {
+    "608:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 5710383793196056753,
@@ -61483,7 +61869,7 @@
         }
       }
     },
-    "605:10": {
+    "609:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -8577169131124537851,
@@ -61579,7 +61965,7 @@
         }
       }
     },
-    "606:10": {
+    "610:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1922987534854173511,
@@ -61649,7 +62035,7 @@
         }
       }
     },
-    "607:10": {
+    "611:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 6107657297413227965,
@@ -61719,7 +62105,7 @@
         }
       }
     },
-    "608:10": {
+    "612:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -61843,7 +62229,7 @@
         }
       }
     },
-    "609:10": {
+    "613:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -61931,7 +62317,7 @@
         }
       }
     },
-    "610:10": {
+    "614:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -62019,7 +62405,7 @@
         }
       }
     },
-    "611:10": {
+    "615:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -62131,7 +62517,7 @@
         }
       }
     },
-    "612:10": {
+    "616:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 6222004806918030376,
@@ -62215,7 +62601,7 @@
         }
       }
     },
-    "613:10": {
+    "617:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -4356235348570976913,
@@ -62396,7 +62782,7 @@
         }
       }
     },
-    "614:10": {
+    "618:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -62486,7 +62872,7 @@
         }
       }
     },
-    "615:10": {
+    "619:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -62594,7 +62980,7 @@
         }
       }
     },
-    "616:10": {
+    "620:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -62708,7 +63094,7 @@
         }
       }
     },
-    "617:10": {
+    "621:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -62834,7 +63220,7 @@
         }
       }
     },
-    "618:10": {
+    "622:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7623698422531862605,
@@ -62930,7 +63316,7 @@
         }
       }
     },
-    "619:10": {
+    "623:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -63112,7 +63498,7 @@
         }
       }
     },
-    "620:10": {
+    "624:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -8230734542605238237,
@@ -63214,7 +63600,7 @@
         }
       }
     },
-    "621:10": {
+    "625:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 4920474714509559557,
@@ -63310,7 +63696,7 @@
         }
       }
     },
-    "622:10": {
+    "626:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -972783194329954977,
@@ -63394,7 +63780,7 @@
         }
       }
     },
-    "623:10": {
+    "627:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -63482,7 +63868,7 @@
         }
       }
     },
-    "624:10": {
+    "628:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -63566,7 +63952,7 @@
         }
       }
     },
-    "625:10": {
+    "629:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2171037489483201764,
@@ -63636,7 +64022,7 @@
         }
       }
     },
-    "626:10": {
+    "630:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -63726,7 +64112,7 @@
         }
       }
     },
-    "627:10": {
+    "631:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -3818632394583945445,
@@ -63830,7 +64216,7 @@
         }
       }
     },
-    "628:10": {
+    "632:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7790681663354027687,
@@ -63918,7 +64304,7 @@
         }
       }
     },
-    "629:10": {
+    "633:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7623698422531862605,
@@ -64101,7 +64487,7 @@
         }
       }
     },
-    "630:10": {
+    "634:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -64189,7 +64575,7 @@
         }
       }
     },
-    "631:10": {
+    "635:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -64273,7 +64659,7 @@
         }
       }
     },
-    "632:10": {
+    "636:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6504268382655527520,
@@ -64357,7 +64743,7 @@
         }
       }
     },
-    "633:10": {
+    "637:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -64451,7 +64837,7 @@
         }
       }
     },
-    "634:10": {
+    "638:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 6273216181797536169,
@@ -64577,7 +64963,7 @@
         }
       }
     },
-    "635:10": {
+    "639:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 2230394018560756069,
@@ -64679,7 +65065,7 @@
         }
       }
     },
-    "636:10": {
+    "640:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 7340101258682910999,
@@ -64749,7 +65135,7 @@
         }
       }
     },
-    "637:10": {
+    "641:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -64833,7 +65219,7 @@
         }
       }
     },
-    "638:10": {
+    "642:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6787868727436752418,
@@ -64939,7 +65325,7 @@
         }
       }
     },
-    "639:10": {
+    "643:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 6546284112554378894,
@@ -65032,7 +65418,7 @@
         }
       }
     },
-    "640:10": {
+    "644:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 687731528747535133,
@@ -65116,7 +65502,7 @@
         }
       }
     },
-    "641:10": {
+    "645:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -65226,7 +65612,7 @@
         }
       }
     },
-    "642:10": {
+    "646:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -65314,7 +65700,7 @@
         }
       }
     },
-    "643:10": {
+    "647:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6522950791734409860,
@@ -65402,7 +65788,7 @@
         }
       }
     },
-    "644:10": {
+    "648:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -65492,7 +65878,7 @@
         }
       }
     },
-    "645:10": {
+    "649:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 3347434590198908605,
@@ -65600,7 +65986,7 @@
         }
       }
     },
-    "646:10": {
+    "650:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 4706895528217954200,
@@ -65696,7 +66082,7 @@
         }
       }
     },
-    "647:10": {
+    "651:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -65780,7 +66166,7 @@
         }
       }
     },
-    "648:10": {
+    "652:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 8986632531639880419,
@@ -65872,7 +66258,7 @@
         }
       }
     },
-    "649:10": {
+    "653:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -65981,7 +66367,7 @@
         }
       }
     },
-    "650:10": {
+    "654:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -66358,7 +66744,7 @@
         }
       }
     },
-    "651:10": {
+    "655:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 7275503112583856267,
@@ -66446,7 +66832,7 @@
         }
       }
     },
-    "652:10": {
+    "656:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 8645281072263351006,
@@ -66550,7 +66936,7 @@
         }
       }
     },
-    "653:10": {
+    "657:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -66638,7 +67024,7 @@
         }
       }
     },
-    "654:10": {
+    "658:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7902600621291977162,
@@ -66727,7 +67113,7 @@
         }
       }
     },
-    "655:10": {
+    "659:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -66829,7 +67215,7 @@
         }
       }
     },
-    "656:10": {
+    "660:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -66937,7 +67323,7 @@
         }
       }
     },
-    "657:10": {
+    "661:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -67026,7 +67412,7 @@
         }
       }
     },
-    "658:10": {
+    "662:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -67114,7 +67500,7 @@
         }
       }
     },
-    "659:10": {
+    "663:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -67202,7 +67588,7 @@
         }
       }
     },
-    "660:10": {
+    "664:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -67290,7 +67676,7 @@
         }
       }
     },
-    "661:10": {
+    "665:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 3216936886722971351,
@@ -67386,7 +67772,7 @@
         }
       }
     },
-    "662:10": {
+    "666:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 7606679157914027127,
@@ -67470,7 +67856,7 @@
         }
       }
     },
-    "663:10": {
+    "667:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6403423461322305633,
@@ -67565,7 +67951,7 @@
         }
       }
     },
-    "664:10": {
+    "668:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 3300935411432441238,
@@ -67659,7 +68045,7 @@
         }
       }
     },
-    "665:10": {
+    "669:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -67747,7 +68133,7 @@
         }
       }
     },
-    "666:10": {
+    "670:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -67873,7 +68259,7 @@
         }
       }
     },
-    "667:10": {
+    "671:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -4323201697992913312,
@@ -67957,7 +68343,7 @@
         }
       }
     },
-    "668:10": {
+    "672:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -3932849537190903247,
@@ -68051,7 +68437,7 @@
         }
       }
     },
-    "669:10": {
+    "673:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6467247789862269309,
@@ -68135,7 +68521,7 @@
         }
       }
     },
-    "670:10": {
+    "674:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -5753423036809461689,
@@ -68237,7 +68623,7 @@
         }
       }
     },
-    "671:10": {
+    "675:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -4323201697992913312,
@@ -68349,7 +68735,7 @@
         }
       }
     },
-    "672:10": {
+    "676:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 654278939527758023,
@@ -68419,7 +68805,7 @@
         }
       }
     },
-    "673:10": {
+    "677:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -68529,7 +68915,7 @@
         }
       }
     },
-    "674:10": {
+    "678:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2451141085209015770,
@@ -68637,7 +69023,7 @@
         }
       }
     },
-    "675:10": {
+    "679:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7902600621291977162,
@@ -68726,7 +69112,7 @@
         }
       }
     },
-    "676:10": {
+    "680:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -68830,7 +69216,7 @@
         }
       }
     },
-    "677:10": {
+    "681:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -68914,7 +69300,7 @@
         }
       }
     },
-    "678:10": {
+    "682:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 6784220399579514915,
@@ -69010,7 +69396,7 @@
         }
       }
     },
-    "679:10": {
+    "683:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -69094,7 +69480,7 @@
         }
       }
     },
-    "680:10": {
+    "684:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -69178,7 +69564,7 @@
         }
       }
     },
-    "681:10": {
+    "685:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -6787868727436752418,
@@ -69284,7 +69670,7 @@
         }
       }
     },
-    "682:10": {
+    "686:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -69368,7 +69754,7 @@
         }
       }
     },
-    "683:10": {
+    "687:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -5021609194468981133,
@@ -69492,7 +69878,7 @@
         }
       }
     },
-    "684:10": {
+    "688:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -4812035679007519365,
@@ -69612,7 +69998,7 @@
         }
       }
     },
-    "685:10": {
+    "689:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -69754,7 +70140,7 @@
         }
       }
     },
-    "686:10": {
+    "690:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1276458623384728704,
@@ -69838,7 +70224,7 @@
         }
       }
     },
-    "687:10": {
+    "691:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 4835946095099397745,
@@ -69930,7 +70316,7 @@
         }
       }
     },
-    "688:10": {
+    "692:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 5414272911860649617,
@@ -70032,7 +70418,7 @@
         }
       }
     },
-    "689:10": {
+    "693:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 1482510697200306394,
@@ -70102,7 +70488,7 @@
         }
       }
     },
-    "690:10": {
+    "694:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -70190,7 +70576,7 @@
         }
       }
     },
-    "691:10": {
+    "695:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -70274,7 +70660,7 @@
         }
       }
     },
-    "692:10": {
+    "696:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -4323201697992913312,
@@ -70386,7 +70772,7 @@
         }
       }
     },
-    "693:10": {
+    "697:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 6191132467602672579,
@@ -70482,7 +70868,7 @@
         }
       }
     },
-    "694:10": {
+    "698:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -70572,7 +70958,7 @@
         }
       }
     },
-    "695:10": {
+    "699:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7018651477296855465,
@@ -70662,7 +71048,7 @@
         }
       }
     },
-    "696:10": {
+    "700:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 5414272911860649617,
@@ -70746,7 +71132,7 @@
         }
       }
     },
-    "697:10": {
+    "701:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -70854,7 +71240,7 @@
         }
       }
     },
-    "698:10": {
+    "702:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -5329374405835404860,
@@ -70960,7 +71346,7 @@
         }
       }
     },
-    "699:10": {
+    "703:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -8327253549148190124,
@@ -71068,7 +71454,7 @@
         }
       }
     },
-    "700:10": {
+    "704:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -2046269294520939250,
@@ -71138,7 +71524,7 @@
         }
       }
     },
-    "701:10": {
+    "705:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -7110633256642261858,
@@ -71222,7 +71608,7 @@
         }
       }
     },
-    "702:10": {
+    "706:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -71306,7 +71692,7 @@
         }
       }
     },
-    "703:10": {
+    "707:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 9020305243522809957,
@@ -73241,7 +73627,7 @@
         }
       }
     },
-    "704:10": {
+    "708:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": 0,
@@ -73339,7 +73725,7 @@
         }
       }
     },
-    "705:10": {
+    "709:10": {
       "preRequisites:9": {
         "0:10": {
           "questIDHigh:4": -1480799430013988952,
@@ -80474,8 +80860,8 @@
           "questIDLow:4": -5732636717500931472,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
-          "y:3": -108
+          "x:3": -240,
+          "y:3": -156
         },
         "1:10": {
           "questIDHigh:4": -459311557983844238,
@@ -80534,14 +80920,22 @@
           "y:3": 528
         },
         "8:10": {
+          "questIDHigh:4": -970023178174118039,
+          "questIDLow:4": -5927024180451816691,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -120,
+          "y:3": -12
+        },
+        "9:10": {
           "questIDHigh:4": -779875060175125064,
           "questIDLow:4": -4870682395038526172,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": -60
+          "x:3": -72,
+          "y:3": -72
         },
-        "9:10": {
+        "10:10": {
           "questIDHigh:4": 0,
           "questIDLow:4": 139,
           "sizeX:3": 24,
@@ -80549,7 +80943,7 @@
           "x:3": -96,
           "y:3": 384
         },
-        "10:10": {
+        "11:10": {
           "questIDHigh:4": 8923822751760479,
           "questIDLow:4": -4919884249291610453,
           "sizeX:3": 24,
@@ -80557,7 +80951,7 @@
           "x:3": 180,
           "y:3": 48
         },
-        "11:10": {
+        "12:10": {
           "questIDHigh:4": 314954951906839037,
           "questIDLow:4": -8180701147739910632,
           "sizeX:3": 24,
@@ -80565,7 +80959,7 @@
           "x:3": -12,
           "y:3": 96
         },
-        "12:10": {
+        "13:10": {
           "questIDHigh:4": 654278939527758023,
           "questIDLow:4": -6979243876793966676,
           "sizeX:3": 24,
@@ -80573,7 +80967,7 @@
           "x:3": -96,
           "y:3": 336
         },
-        "13:10": {
+        "14:10": {
           "questIDHigh:4": 1000830747582415130,
           "questIDLow:4": -5096712468586466118,
           "sizeX:3": 24,
@@ -80581,7 +80975,7 @@
           "x:3": -48,
           "y:3": 336
         },
-        "14:10": {
+        "15:10": {
           "questIDHigh:4": 1174873149758456155,
           "questIDLow:4": -4652216515636103171,
           "sizeX:3": 24,
@@ -80589,15 +80983,23 @@
           "x:3": 60,
           "y:3": 648
         },
-        "15:10": {
+        "16:10": {
           "questIDHigh:4": 1250592840944208741,
           "questIDLow:4": -7212327951435849081,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 36,
-          "y:3": 96
+          "x:3": -60,
+          "y:3": 72
         },
-        "16:10": {
+        "17:10": {
+          "questIDHigh:4": 1490674111597855949,
+          "questIDLow:4": -7514126894771948980,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 60,
+          "y:3": 588
+        },
+        "18:10": {
           "questIDHigh:4": 1977404459837440487,
           "questIDLow:4": -5376471597076150680,
           "sizeX:3": 24,
@@ -80605,15 +81007,15 @@
           "x:3": -12,
           "y:3": 144
         },
-        "17:10": {
+        "19:10": {
           "questIDHigh:4": 2230394018560756069,
           "questIDLow:4": -8642726076068447292,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -60,
-          "y:3": 48
+          "x:3": 0,
+          "y:3": -24
         },
-        "18:10": {
+        "20:10": {
           "questIDHigh:4": 2443236486450662691,
           "questIDLow:4": -6288104873408930059,
           "sizeX:3": 24,
@@ -80621,7 +81023,7 @@
           "x:3": -168,
           "y:3": 528
         },
-        "19:10": {
+        "21:10": {
           "questIDHigh:4": 2921513330843732185,
           "questIDLow:4": -9065514432476045975,
           "sizeX:3": 48,
@@ -80629,7 +81031,7 @@
           "x:3": -96,
           "y:3": 276
         },
-        "20:10": {
+        "22:10": {
           "questIDHigh:4": 2957371796303463921,
           "questIDLow:4": -5328651468826815989,
           "sizeX:3": 24,
@@ -80637,15 +81039,15 @@
           "x:3": 180,
           "y:3": 432
         },
-        "21:10": {
+        "23:10": {
           "questIDHigh:4": 3105653024266144443,
           "questIDLow:4": -7016312485475172591,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 60,
-          "y:3": -144
+          "x:3": -96,
+          "y:3": -192
         },
-        "22:10": {
+        "24:10": {
           "questIDHigh:4": 3216936886722971351,
           "questIDLow:4": -4945822463607132103,
           "sizeX:3": 24,
@@ -80653,7 +81055,7 @@
           "x:3": -48,
           "y:3": 600
         },
-        "23:10": {
+        "25:10": {
           "questIDHigh:4": 3650914266443039922,
           "questIDLow:4": -4998753462514824979,
           "sizeX:3": 24,
@@ -80661,7 +81063,7 @@
           "x:3": 180,
           "y:3": 72
         },
-        "24:10": {
+        "26:10": {
           "questIDHigh:4": 3751710317272321553,
           "questIDLow:4": -8726799385330671044,
           "sizeX:3": 48,
@@ -80669,7 +81071,7 @@
           "x:3": 120,
           "y:3": 348
         },
-        "25:10": {
+        "27:10": {
           "questIDHigh:4": 4136703669802583229,
           "questIDLow:4": -6248176617741545094,
           "sizeX:3": 24,
@@ -80677,7 +81079,7 @@
           "x:3": 180,
           "y:3": 288
         },
-        "26:10": {
+        "28:10": {
           "questIDHigh:4": 4246124203181559306,
           "questIDLow:4": -6284815850211669194,
           "sizeX:3": 24,
@@ -80685,7 +81087,7 @@
           "x:3": 84,
           "y:3": 408
         },
-        "27:10": {
+        "29:10": {
           "questIDHigh:4": 4848198512208791425,
           "questIDLow:4": -9084662768445139072,
           "sizeX:3": 48,
@@ -80693,7 +81095,7 @@
           "x:3": 120,
           "y:3": 36
         },
-        "28:10": {
+        "30:10": {
           "questIDHigh:4": 4706895528217954200,
           "questIDLow:4": -6347440992248099861,
           "sizeX:3": 24,
@@ -80701,15 +81103,31 @@
           "x:3": -48,
           "y:3": 384
         },
-        "29:10": {
+        "31:10": {
+          "questIDHigh:4": 4787936114531844249,
+          "questIDLow:4": -5071259502378642794,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 48,
+          "y:3": 96
+        },
+        "32:10": {
+          "questIDHigh:4": 4903072103052099991,
+          "questIDLow:4": -7168940405710235585,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -60,
+          "y:3": 24
+        },
+        "33:10": {
           "questIDHigh:4": 5069364148884162681,
           "questIDLow:4": -5715281347459391040,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
-          "y:3": 600
+          "y:3": 612
         },
-        "30:10": {
+        "34:10": {
           "questIDHigh:4": 5422351929291852264,
           "questIDLow:4": -7737719939638563636,
           "sizeX:3": 24,
@@ -80717,15 +81135,15 @@
           "x:3": -48,
           "y:3": 480
         },
-        "31:10": {
+        "35:10": {
           "questIDHigh:4": 5471999309139034143,
           "questIDLow:4": -6272124856831381521,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 36,
-          "y:3": -144
+          "x:3": -120,
+          "y:3": -192
         },
-        "32:10": {
+        "36:10": {
           "questIDHigh:4": 5414272911860649617,
           "questIDLow:4": -5022717249602231752,
           "sizeX:3": 48,
@@ -80733,7 +81151,7 @@
           "x:3": -24,
           "y:3": 36
         },
-        "33:10": {
+        "37:10": {
           "questIDHigh:4": 5710383793196056753,
           "questIDLow:4": -7277675015312038802,
           "sizeX:3": 48,
@@ -80741,7 +81159,7 @@
           "x:3": -12,
           "y:3": 588
         },
-        "34:10": {
+        "38:10": {
           "questIDHigh:4": 6191132467602672579,
           "questIDLow:4": -7822835048866480109,
           "sizeX:3": 24,
@@ -80749,7 +81167,7 @@
           "x:3": -12,
           "y:3": 192
         },
-        "35:10": {
+        "39:10": {
           "questIDHigh:4": 6419435000744724006,
           "questIDLow:4": -5166934149092515591,
           "sizeX:3": 24,
@@ -80757,15 +81175,15 @@
           "x:3": 60,
           "y:3": 48
         },
-        "36:10": {
+        "40:10": {
           "questIDHigh:4": 6655386366404936121,
           "questIDLow:4": -8667935297884431914,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
+          "x:3": -24,
           "y:3": -24
         },
-        "37:10": {
+        "41:10": {
           "questIDHigh:4": 6752243041174375590,
           "questIDLow:4": -5165550109238415698,
           "sizeX:3": 48,
@@ -80773,23 +81191,23 @@
           "x:3": -324,
           "y:3": 468
         },
-        "38:10": {
+        "42:10": {
           "questIDHigh:4": 6784220399579514915,
           "questIDLow:4": -4810091852784329021,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
-          "y:3": -96
+          "x:3": -168,
+          "y:3": -144
         },
-        "39:10": {
+        "43:10": {
           "questIDHigh:4": 6859842320897428443,
           "questIDLow:4": -8894540780510613677,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": 96
+          "x:3": -108,
+          "y:3": 72
         },
-        "40:10": {
+        "44:10": {
           "questIDHigh:4": 7487199538909301476,
           "questIDLow:4": -7462196526617341678,
           "sizeX:3": 24,
@@ -80797,7 +81215,7 @@
           "x:3": 204,
           "y:3": 60
         },
-        "41:10": {
+        "45:10": {
           "questIDHigh:4": 7273854657277608558,
           "questIDLow:4": -5457699182501484203,
           "sizeX:3": 48,
@@ -80805,15 +81223,15 @@
           "x:3": 120,
           "y:3": 180
         },
-        "42:10": {
+        "46:10": {
           "questIDHigh:4": 7275503112583856267,
           "questIDLow:4": -5943915525948482695,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -72,
+          "x:3": -84,
           "y:3": -36
         },
-        "43:10": {
+        "47:10": {
           "questIDHigh:4": 7606679157914027127,
           "questIDLow:4": -7540605868707353005,
           "sizeX:3": 24,
@@ -80821,15 +81239,15 @@
           "x:3": 132,
           "y:3": 444
         },
-        "44:10": {
+        "48:10": {
           "questIDHigh:4": 7927923786232056493,
           "questIDLow:4": -7881117832125045687,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
-          "y:3": -108
+          "x:3": -204,
+          "y:3": -156
         },
-        "45:10": {
+        "49:10": {
           "questIDHigh:4": 8456688258166377270,
           "questIDLow:4": -5663784997821002733,
           "sizeX:3": 24,
@@ -80837,7 +81255,7 @@
           "x:3": 204,
           "y:3": 36
         },
-        "46:10": {
+        "50:10": {
           "questIDHigh:4": -9104147511017321050,
           "questIDLow:4": -5744067961087191626,
           "sizeX:3": 24,
@@ -80845,15 +81263,15 @@
           "x:3": 0,
           "y:3": 336
         },
-        "47:10": {
+        "51:10": {
           "questIDHigh:4": -8908263606612244632,
           "questIDLow:4": -6458985346158849454,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 12,
-          "y:3": -144
+          "x:3": -144,
+          "y:3": -192
         },
-        "48:10": {
+        "52:10": {
           "questIDHigh:4": -8904229655992250421,
           "questIDLow:4": -5688253260765396167,
           "sizeX:3": 24,
@@ -80861,7 +81279,7 @@
           "x:3": 132,
           "y:3": 288
         },
-        "49:10": {
+        "53:10": {
           "questIDHigh:4": -8518280090126892507,
           "questIDLow:4": -6695078442459404349,
           "sizeX:3": 48,
@@ -80869,15 +81287,15 @@
           "x:3": 120,
           "y:3": -36
         },
-        "50:10": {
+        "54:10": {
           "questIDHigh:4": -7902600621291977162,
           "questIDLow:4": -9052586635988317113,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 24,
-          "y:3": -108
+          "x:3": -132,
+          "y:3": -156
         },
-        "51:10": {
+        "55:10": {
           "questIDHigh:4": -7063842120978447283,
           "questIDLow:4": -8602913574319218875,
           "sizeX:3": 24,
@@ -80885,15 +81303,15 @@
           "x:3": 0,
           "y:3": 648
         },
-        "52:10": {
+        "56:10": {
           "questIDHigh:4": -6263652420647694460,
           "questIDLow:4": -7851297577393422739,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -108,
-          "y:3": 48
+          "x:3": 0,
+          "y:3": -72
         },
-        "53:10": {
+        "57:10": {
           "questIDHigh:4": -5889852429960065125,
           "questIDLow:4": -5436800100755777889,
           "sizeX:3": 48,
@@ -80901,15 +81319,15 @@
           "x:3": -108,
           "y:3": 420
         },
-        "54:10": {
+        "58:10": {
           "questIDHigh:4": -5629436486708081629,
           "questIDLow:4": -4812726015812500704,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -108,
-          "y:3": -24
+          "x:3": -120,
+          "y:3": -36
         },
-        "55:10": {
+        "59:10": {
           "questIDHigh:4": -5225017954269770994,
           "questIDLow:4": -6111785811560010469,
           "sizeX:3": 24,
@@ -80917,7 +81335,7 @@
           "x:3": 132,
           "y:3": 576
         },
-        "56:10": {
+        "60:10": {
           "questIDHigh:4": -5366344844601373301,
           "questIDLow:4": -8819962997032680555,
           "sizeX:3": 24,
@@ -80925,7 +81343,7 @@
           "x:3": -96,
           "y:3": 648
         },
-        "57:10": {
+        "61:10": {
           "questIDHigh:4": -5279191713880847951,
           "questIDLow:4": -8489148051542518216,
           "sizeX:3": 48,
@@ -80933,7 +81351,7 @@
           "x:3": -108,
           "y:3": 588
         },
-        "58:10": {
+        "62:10": {
           "questIDHigh:4": -5150571902487410416,
           "questIDLow:4": -8581395135492551044,
           "sizeX:3": 24,
@@ -80941,7 +81359,7 @@
           "x:3": 180,
           "y:3": 456
         },
-        "59:10": {
+        "63:10": {
           "questIDHigh:4": -4812035679007519365,
           "questIDLow:4": -8915000965156691319,
           "sizeX:3": 24,
@@ -80949,7 +81367,7 @@
           "x:3": -144,
           "y:3": 336
         },
-        "60:10": {
+        "64:10": {
           "questIDHigh:4": -4797899323491139190,
           "questIDLow:4": -7485329560748986206,
           "sizeX:3": 48,
@@ -80957,7 +81375,7 @@
           "x:3": -12,
           "y:3": 420
         },
-        "61:10": {
+        "65:10": {
           "questIDHigh:4": -4751184851654063824,
           "questIDLow:4": -8245948833764411788,
           "sizeX:3": 24,
@@ -80965,23 +81383,23 @@
           "x:3": 180,
           "y:3": 192
         },
-        "62:10": {
+        "66:10": {
           "questIDHigh:4": -4356235348570976913,
           "questIDLow:4": -6987053073480892477,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 24,
-          "y:3": -36
+          "x:3": -36,
+          "y:3": -156
         },
-        "63:10": {
+        "67:10": {
           "questIDHigh:4": -4581042162853592970,
           "questIDLow:4": -6588941473002901573,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
-          "y:3": -84
+          "x:3": -204,
+          "y:3": -132
         },
-        "64:10": {
+        "68:10": {
           "questIDHigh:4": -4200229927184087041,
           "questIDLow:4": -8511202365780115733,
           "sizeX:3": 24,
@@ -80989,7 +81407,7 @@
           "x:3": -144,
           "y:3": 384
         },
-        "65:10": {
+        "69:10": {
           "questIDHigh:4": -4139600212296318454,
           "questIDLow:4": -4880440595433137819,
           "sizeX:3": 24,
@@ -80997,15 +81415,15 @@
           "x:3": 84,
           "y:3": 480
         },
-        "66:10": {
+        "70:10": {
           "questIDHigh:4": -3788465028058822921,
           "questIDLow:4": -4708557591325641632,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": 96
+          "y:3": 48
         },
-        "67:10": {
+        "71:10": {
           "questIDHigh:4": -3932849537190903247,
           "questIDLow:4": -6851211685894932829,
           "sizeX:3": 48,

@@ -1,0 +1,70 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 5414272911860649617,
+      "questIDLow:4": -5022717249602231752
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "completion_animation:8": "default",
+      "completion_particle:8": "default",
+      "confetti_icon:10": {
+        "Count:3": 0,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "minecraft:stick"
+      },
+      "countAsQuest:1": 1,
+      "desc:8": "Every body has its own set of ores. Most of them generate in large veins, so one find usually means many more nearby.\n\n- §eMun§r - nickel, iron, lead, sulfur, fluorite, natural gas shale and brine deposits.\n- §eMinmus§r - copper, niter, nether quartz, malachite, cinnabar and brine deposits.\n- §eDuna§r - redstone, titanium, rare earth, beryllium, zinc, aluminium, tungsten, cinnabar, oil deposits and rich basalt.\n- §eIke§r - uranium, plutonium, lanthanium, coltan, rich mineral deposits and brine deposits.\n- §eMoho§r - australium, cinnabar, phosphorus, glowstone, rich mineral deposits, natural gas shale and rich basalt.\n- §eDres§r - diamond, coltan, lanthanium, niobium and natural gas shale.\n- §eEve§r - schrabidium, niobium, cobalt, natural gas deposits and §6iodine§r, which is found nowhere else.\n- §eLaythe§r - aluminium, asbestos, tungsten and oil deposits.\n- §eTekto§r - lithium, plutonium, beryllium, cinnabar and Tektonic crude.\n\nEvery body also has calcite, rare alexandrite, depth rock deposits near the bottom and its own bedrock ores. Watch for geysers: §6Volcanic Geysers§r on Moho, §6Discharge Geysers§r and electric volcanoes on Eve, and §6DCM Geysers§r on Tekto.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:tile.ore_iodine"
+      },
+      "isMain:1": 0,
+      "isSilent:1": 0,
+      "is_final:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Off-World Ores",
+      "notification_duration:5": -1.0,
+      "notification_effect:3": -1,
+      "notification_fade_in:5": -1.0,
+      "notification_fade_out:5": -1.0,
+      "notification_icon_offset_y:3": -2147483648,
+      "notification_icon_scale:5": -1.0,
+      "notification_pos_x:3": -2147483648,
+      "notification_pos_y:3": -2147483648,
+      "notification_show_icon:8": "default",
+      "notification_style:8": "default",
+      "notification_subtitle:8": "",
+      "notification_subtitle_scale:5": -1.0,
+      "notification_title:8": "",
+      "notification_title_scale:5": -1.0,
+      "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": 4903072103052099991,
+  "questIDLow:4": -7168940405710235585,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

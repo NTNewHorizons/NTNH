@@ -25,7 +25,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §6PLSS§r is an armor modification which will allow you to breathe in space. It will only work on airtight sealed suits.\n\nThe §6Heavy Boots§r can be used to quickly descend down in low-gravity environments.",
+      "desc:8": "The §6PLSS§r is an armor modification which will allow you to breathe in space. It will only work on airtight sealed suits.\n\nThe §6Heavy Boots§r can be used to quickly descend down in low-gravity environments.\n\nA suit counts as §esealed§r only if all four pieces can seal: the M1TTY Environment Suit, T-51b, Steam Suit, AJR, AJRO, RPA, NCRPA, HEV, Fau, DNT Nano, Taurun and Trenchmaster sets. The PLSS goes into the helmet\u0027s plate slot and holds 16,000 mB of §bOxygen§r - refill it like any fluid container. The DNT Nano Suit lets you breathe anywhere, even without a PLSS.\n\nWithout air you have §c5 seconds§r before you start taking damage.\n\nIn corrosive air like Eve\u0027s, only a chestplate insert with corrosion protection - the §6CMB Insert§r or the §6Yharonite Insert§r - stops the acid from eating your armor and then you.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -104,6 +104,24 @@
           "Damage:2": 0,
           "OreDict:8": "",
           "id:8": "hbm:item.heavy_boots"
+        }
+      },
+      "taskID:8": "bq_standard:optional_retrieval"
+    },
+    "2:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 2,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.insert_yharonite"
         }
       },
       "taskID:8": "bq_standard:optional_retrieval"
