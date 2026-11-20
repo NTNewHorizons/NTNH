@@ -2,8 +2,12 @@
 
 ## What's changed?
 **Added**
+* **250+ new quests**
 * Hilariously impractical multiple rocket anti air launcher
 	* Nine-barrel rocket launcher that uses micro rockets
+* Modern parts holograms for the Immersive Vehicles: Legacy
+* **FULLY WORKING RECIPES FOR IVL**
+* Wdmla support for IVL
 
 
 
@@ -39,6 +43,8 @@
 * Fixed missing ilmenite material localization
 * Fixed recipe collision in the rotary furnace caused by a missing fluid type check, affecting the sodium aluminate and titanium tetrachloride recipes
 * Fixed port offset on assembled machines
+* Fixed exploits and issues related to the NTM Fluids <-> Forge Fluids system
+* Fixed a bug where wedging yourself into an open IV/MTS car door on the driver or passenger side would instantly kill you
 
 
 
