@@ -19,7 +19,7 @@
 * Changed the custom material/autogen shape config structure
 	* There can now be multiple molds per shape, allowing single and multi molds (like with 1x and 9x ingots)
 	* Examples are now "custom metal demo" and "custom shape demo" instead of "bronze" and "gear" to avoid confusion
-*	Some common materials like tungsten, copper, aluminium and boron now have nugget forms
+* Some common materials like tungsten, copper, aluminium and boron now have nugget forms
 	* This allows foundry setups to use up materials with nugget precision
 
 
@@ -45,6 +45,7 @@
 * Fixed port offset on assembled machines
 * Fixed exploits and issues related to the NTM Fluids <-> Forge Fluids system
 * Fixed a bug where wedging yourself into an open IV/MTS car door on the driver or passenger side would instantly kill you
+* Fixed a bug in which if you disassemble a working PWR using a Gravity Gun it still works
 
 
 
