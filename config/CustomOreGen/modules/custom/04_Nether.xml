@@ -25,7 +25,7 @@
             <Setting name="Size" avg=":= 10.667 * oreSize" range=":= 5.33 * oreSize" type="normal" />
             <Setting name="Frequency" avg=":= 8.667 * oreFreq" range=":= 4.33 * oreFreq" type="normal" scaleTo="base" />
             <Setting name="Height" avg="59" range="49" type="uniform" scaleTo="base" />
-            <ReplacesOre block="minecraft:netherrack" />
+            <Replaces block="minecraft:netherrack" />
             <Biome name=".*" />
         </StandardGen>
 
