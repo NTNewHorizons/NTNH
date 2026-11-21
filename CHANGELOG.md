@@ -21,6 +21,12 @@
 	* Examples are now "custom metal demo" and "custom shape demo" instead of "bronze" and "gear" to avoid confusion
 * Some common materials like tungsten, copper, aluminium and boron now have nugget forms
 	* This allows foundry setups to use up materials with nugget precision
+* Removed saltPeter ore dictionary entry from Pam's Harvestrcraft salt
+* Made ProspectingCraft Geological Surveyor able to detect Pam's Harvestcraft salt
+* Added Pam's Harvestcraft salt crafting recipe in the Chemical Plant
+* Lunar Armor helmet can now be used as a part of the spacesuit
+* Returned the Lunar Armor set eyepatch crafting recipe
+	* Fuck, why did I even remove it in the first place?
 
 
 

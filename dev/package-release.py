@@ -33,6 +33,7 @@ NATIVE_EXCLUDES = {
 # release archive instead of being resolved from a Packwiz download source.
 RAW_MODS = (
     "mods/immersivevehicleslegacy-eefdfb6.jar",
+    "mods/prospectingcraft-58b2c2e.jar",
 )
 
 
