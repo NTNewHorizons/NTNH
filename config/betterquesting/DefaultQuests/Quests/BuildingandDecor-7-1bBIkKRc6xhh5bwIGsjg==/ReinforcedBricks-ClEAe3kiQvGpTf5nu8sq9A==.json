@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "Iron bars woven into concrete bricks make §6Reinforced Bricks§r, more than twice as strong as concrete. Add steel bolts and tar for §6Compound Mesh§r, stronger still.\n\n§6Reinforced Glass§r - glass with iron bars - holds up better than stone, but is still far weaker than concrete. For a window that survives a real blast, make §6Reinforced Laminate§r in the Chemical Plant from glass, steel bolts, xylene and phosgene: it is as strong as reinforced bricks.",
+      "desc:8": "Iron bars woven into concrete bricks make §6Reinforced Bricks§r, more than twice as strong as concrete. Add steel bolts and tar for §6Compound Mesh§r, stronger still.\n\n§6Reinforced Glass§r - glass with iron bars - holds up better than stone, but is still far weaker than concrete. For a window that survives a real blast, make §6Reinforced Laminate§r in the Chemical Plant from glass, steel bolts, xylene and phosgene: it is as strong as reinforced bricks.\n\n Six reinforced glass blocks make 16 §6Reinforced Glass Panes§r.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -106,6 +106,24 @@
           "Damage:2": 0,
           "OreDict:8": "",
           "id:8": "hbm:tile.reinforced_laminate"
+        }
+      },
+      "taskID:8": "bq_standard:optional_retrieval"
+    },
+    "2:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 2,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.reinforced_glass_pane"
         }
       },
       "taskID:8": "bq_standard:optional_retrieval"

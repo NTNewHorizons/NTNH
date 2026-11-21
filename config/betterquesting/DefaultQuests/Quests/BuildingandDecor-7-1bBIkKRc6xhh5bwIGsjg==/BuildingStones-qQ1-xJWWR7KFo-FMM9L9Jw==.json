@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "Basalt, gneiss, depth rock and meteorite can all be cut into bricks and tiles. Lab tiles and vinyl tiles make clean floors for laboratories and offices, obsidian bricks are a sturdy dark wall, and light bricks a cheap red one.",
+      "desc:8": "Basalt, gneiss, depth rock and meteorite can all be cut into bricks and tiles. Lab tiles and vinyl tiles make clean floors for laboratories and offices, obsidian bricks are a sturdy dark wall, and light bricks a cheap red one.\n\n\n\nCraft four bricks into tiles for a finer pattern: §6Polished Basalt§r, §6Basalt Tiles§r, §6Schist Tile§r (and §6Chiseled Schist§r from it), §6Depth Tiles§r, and §6Nether Depth Bricks§r and §6Tiles§r from Nether depth rock. Light bricks wrapped in asbestos make §6Asbestos Bricks§r.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -121,6 +121,66 @@
         }
       },
       "taskID:8": "bq_standard:retrieval"
+    },
+    "1:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 1,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.basalt_polished"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.basalt_tiles"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.gneiss_tile"
+        },
+        "3:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.gneiss_chiseled"
+        },
+        "4:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.depth_tiles"
+        },
+        "5:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.depth_nether_brick"
+        },
+        "6:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.depth_nether_tiles"
+        },
+        "7:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.brick_asbestos"
+        }
+      },
+      "taskID:8": "bq_standard:optional_retrieval"
     }
   }
 }

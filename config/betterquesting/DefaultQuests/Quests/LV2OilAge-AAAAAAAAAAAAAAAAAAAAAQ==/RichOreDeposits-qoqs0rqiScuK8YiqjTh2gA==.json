@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "§eRich Ore Deposits§r are multi‑unit ore blocks that deplete to stone and drop \"rich chunks\". They spawn in big patches of 5-8 blocks each and can be found using §6Neutrino Lenses§r or §6Survey Scanner§r.",
+      "desc:8": "§6Rich Ores§r are big blobs of solid ore in the Overworld, often surrounded by a cloud of the normal ore. Each kind prefers certain biomes:\n- Iron - plains, savanna. Copper - birch forest, plains.\n- Aluminium - jungle, cold taiga. Gold, titanium - desert, jungle (titanium also mesa).\n- Coal, tungsten, beryllium - mountains. Diamond - mountains, cold taiga, low down.\n- Lead, zinc - forest. Redstone - forest, birch, mesa, savanna. Thorium - savanna.\n- Uranium - ocean, cold taiga. Fluorite - ocean, roofed forest.\n- Niter - desert. Lithium - mesa. Sulfur - mesa, swamp. Lignite - swamp. Asbestos - cold taiga. Lapis - anywhere.\n\nA rich ore block does not break. Every time you mine it, it gives one §6Rich Ore Chunk§r and loses one unit. Depending on the ore, a block holds §e50§r (diamond) to §e400§r (coal) units, and it turns into stone once it is empty. Fortune gives more chunks without draining the block faster. Silk touch does not work, and vein mining only takes one rich block per tick.\n\nExplosions release all remaining units at once, so mining charges are the fastest way to empty a blob. The §3Large Mining Drill§r and the §3Mining Laser§r drain the blocks too. Chunks count as ore: smelt them, or put them through any ore processing chain.\n\nThe §6Survey Scanner§r and the §6Neutrino Lens§r show rich ores nearby.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -79,6 +79,30 @@
         }
       },
       "taskID:8": "bq_standard:retrieval"
+    },
+    "1:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 1,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 2600,
+          "OreDict:8": "",
+          "id:8": "hbm:item.chunk_rich"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 2900,
+          "OreDict:8": "",
+          "id:8": "hbm:item.chunk_rich"
+        }
+      },
+      "taskID:8": "bq_standard:optional_retrieval"
     }
   }
 }

@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "§6Depth Ores§r are large ore deposits found at bedrock level. There are many types of deposits, most of them giving ore crystals which can be smelted for 3 ingots per. §3Mining Charges§r of any kind are required to extract the resources from the depth rock.\n\nTwo important resources found in depth deposits are §6Borax§r, which can later be put in an §3Arc Furnace§r or §3Acidizer§r to yield §6Boron§r used in reactors, and §6Zirconium§r which is used in reactor fuel rods.",
+      "desc:8": "§6Depth Ores§r are large ore deposits found at bedrock level. There are many types of deposits, most of them giving ore crystals which can be smelted for 3 ingots per. §3Mining Charges§r of any kind are required to extract the resources from the depth rock.\n\nTwo important resources found in depth deposits are §6Borax§r, which can later be put in an §3Arc Furnace§r or §3Acidizer§r to yield §6Boron§r used in reactors, and §6Zirconium§r which is used in reactor fuel rods.\n\n\n\nIn the Overworld, deposits sit at the very bottom, between Y 0 and 3. Iron, titanium and tungsten clusters turn up roughly once every 24 to 32 chunks, cinnabar, zirconium and borax about once every 16 chunks.\n\nThe Nether has §6Nether Depth Rock§r both at the bottom and at the very top of the world, with deposits of §6Nether Depth Neodymium Ore§r. The Nether bedrock ores sit in this rock as well.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -65,6 +65,54 @@
     "0:10": {
       "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
+    },
+    "1:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 1,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.cluster_depth_iron"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.cluster_depth_titanium"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.cluster_depth_tungsten"
+        },
+        "3:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.ore_depth_zirconium"
+        },
+        "4:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.ore_depth_borax"
+        },
+        "5:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.ore_depth_nether_neodymium"
+        }
+      },
+      "taskID:8": "bq_standard:optional_retrieval"
     }
   }
 }

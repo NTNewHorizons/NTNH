@@ -311,7 +311,7 @@ betterquesting.quest.SAnieueOQIe-pjfTZGvy6g.desc=Safes in structures are locked 
 
 # Quest: Depth Ores
 betterquesting.quest.Ss4wOkCPR6OsjwT8BQs1XA.name=Depth Ores
-betterquesting.quest.Ss4wOkCPR6OsjwT8BQs1XA.desc=§6Depth Ores§r are large ore deposits found at bedrock level. There are many types of deposits, most of them giving ore crystals which can be smelted for 3 ingots per. §3Mining Charges§r of any kind are required to extract the resources from the depth rock.%n%nTwo important resources found in depth deposits are §6Borax§r, which can later be put in an §3Arc Furnace§r or §3Acidizer§r to yield §6Boron§r used in reactors, and §6Zirconium§r which is used in reactor fuel rods.
+betterquesting.quest.Ss4wOkCPR6OsjwT8BQs1XA.desc=§6Depth Ores§r are large ore deposits found at bedrock level. There are many types of deposits, most of them giving ore crystals which can be smelted for 3 ingots per. §3Mining Charges§r of any kind are required to extract the resources from the depth rock.%n%nTwo important resources found in depth deposits are §6Borax§r, which can later be put in an §3Arc Furnace§r or §3Acidizer§r to yield §6Boron§r used in reactors, and §6Zirconium§r which is used in reactor fuel rods.%n%n%n%nIn the Overworld, deposits sit at the very bottom, between Y 0 and 3. Iron, titanium and tungsten clusters turn up roughly once every 24 to 32 chunks, cinnabar, zirconium and borax about once every 16 chunks.%n%nThe Nether has §6Nether Depth Rock§r both at the bottom and at the very top of the world, with deposits of §6Nether Depth Neodymium Ore§r. The Nether bedrock ores sit in this rock as well.
 
 # Quest: Cladding
 betterquesting.quest.UKkcpXk3SEWHXLIVC5VTDg.name=Cladding
@@ -400,6 +400,10 @@ betterquesting.quest.gKQiP_zES4KokMmon9bDQg.desc=The §3Bricked Furnace§r is al
 # Quest: Infinite Water Sources
 betterquesting.quest.gWyCk5zlQlWAPGdwFXhTaQ.name=Infinite Water Sources
 betterquesting.quest.gWyCk5zlQlWAPGdwFXhTaQ.desc=Tired of using buckets to give §bWater§r to your machines? Try using water pumps or infinite water tanks!%n%n§6Infinite Water Tank§r will give §e50mb/t%n%n§6Large Infinite Water Tank§r will give §e500mb/t%n%n§6Steam-Powered Groundwater Pump§r will give §e1000mb/t§r but requires §bSteam§r to operate (which is obvious). Pumps must sit below Y:70; the Electric Groundwater Pump moves up to 10,000 mB/t.
+
+# Quest: Graphitic Schist
+betterquesting.quest.hEFz_tYKQ964FfeHbV_cdQ.name=Graphitic Schist
+betterquesting.quest.hEFz_tYKQ964FfeHbV_cdQ.desc=Deep in the Overworld, roughly between Y 22 and 38, the stone gives way to wide patches of §6Graphitic Schist§r. The §6Survey Scanner§r and the §6Neutrino Lens§r both report schist when it is nearby.%n%nThe schist layer holds its own ores:%n- §6Schist Iron Ore§r and §6Schist Gold Ore§r - plenty of both, processed like their normal versions.%n- §6Schist Rare Earth Ore§r - the main Overworld source of rare earth.%n- §6Gas Shale§r - each block holds §e250 mB§r of §bPetroleum Gas§r. Put it into a machine's fluid input slot to empty it.
 
 # Quest: Geological Survey
 betterquesting.quest.i978VfQyRr6TncUvwFr6iA.name=Geological Survey
@@ -540,7 +544,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAKQ.desc=The §6Impact Drill§r is an el
 
 # Quest: Derrick
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAKw.name=Derrick
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAKw.desc=The §3Oil Derrick§r extracts §bCrude Oil§r and §6§bNatural Gas§r from §eOil Deposits§r that are directly below them. When supplied with power, it will begin to drill downwards until it cannot drill further or reach an oil deposit. Upon reaching a deposit, it will continuously extract oil and gas from it until the deposit is entirely depleted.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAKw.desc=The §3Oil Derrick§r extracts §bCrude Oil§r and §6§bNatural Gas§r from §eOil Deposits§r that are directly below them. When supplied with power, it will begin to drill downwards until it cannot drill further or reach an oil deposit. Upon reaching a deposit, it will continuously extract oil and gas from it until the deposit is entirely depleted.%n%n%n%nA drained deposit turns into an §6Empty Oil Deposit§r and is worthless, so move the derrick to a new one. Gas, brine and Tektonic crude deposits empty out the same way.
 
 # Quest: Bedrock Ore Processing
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAALA.name=Bedrock Ore Processing
@@ -736,7 +740,7 @@ betterquesting.quest.pDSQqXoMTqyf-k8b2X1WjA.desc=The §6Steam Suit§r is the fir
 
 # Quest: Rich Ore Deposits
 betterquesting.quest.qoqs0rqiScuK8YiqjTh2gA.name=Rich Ore Deposits
-betterquesting.quest.qoqs0rqiScuK8YiqjTh2gA.desc=§eRich Ore Deposits§r are multi‑unit ore blocks that deplete to stone and drop "rich chunks". They spawn in big patches of 5-8 blocks each and can be found using §6Neutrino Lenses§r or §6Survey Scanner§r.
+betterquesting.quest.qoqs0rqiScuK8YiqjTh2gA.desc=§6Rich Ores§r are big blobs of solid ore in the Overworld, often surrounded by a cloud of the normal ore. Each kind prefers certain biomes:%n- Iron - plains, savanna. Copper - birch forest, plains.%n- Aluminium - jungle, cold taiga. Gold, titanium - desert, jungle (titanium also mesa).%n- Coal, tungsten, beryllium - mountains. Diamond - mountains, cold taiga, low down.%n- Lead, zinc - forest. Redstone - forest, birch, mesa, savanna. Thorium - savanna.%n- Uranium - ocean, cold taiga. Fluorite - ocean, roofed forest.%n- Niter - desert. Lithium - mesa. Sulfur - mesa, swamp. Lignite - swamp. Asbestos - cold taiga. Lapis - anywhere.%n%nA rich ore block does not break. Every time you mine it, it gives one §6Rich Ore Chunk§r and loses one unit. Depending on the ore, a block holds §e50§r (diamond) to §e400§r (coal) units, and it turns into stone once it is empty. Fortune gives more chunks without draining the block faster. Silk touch does not work, and vein mining only takes one rich block per tick.%n%nExplosions release all remaining units at once, so mining charges are the fastest way to empty a blob. The §3Large Mining Drill§r and the §3Mining Laser§r drain the blocks too. Chunks count as ore: smelt them, or put them through any ore processing chain.%n%nThe §6Survey Scanner§r and the §6Neutrino Lens§r show rich ores nearby.
 
 # Quest: Teleporter
 betterquesting.quest.refh8r3gQyavrC4KgSeWkw.name=Teleporter
@@ -1010,6 +1014,10 @@ betterquesting.quest.EQ8nf9eDQ-K9yPIxEaFQkw.desc=The §3Orbital Precision Laser�
 # Quest: RBMKSim
 betterquesting.quest.EZVGATGCSKCAChL2E07tXA.name=RBMKSim
 betterquesting.quest.EZVGATGCSKCAChL2E07tXA.desc=There is a web-based RBMK simulator, in which you can build and test different RBMK setups, as well as check out other people's creations!%n%n[url]https://rbmksim.nvrsrv.com[/url]
+
+# Quest: Meltdown Cleanup
+betterquesting.quest.FW_aLH1LRCawzvBgE5aTMg.name=Meltdown Cleanup
+betterquesting.quest.FW_aLH1LRCawzvBgE5aTMg.desc=Wrecked reactors do not calm down on their own. §6Burning RBMK Debris§r and the wreck of a §3ZIRNOX§r keep releasing §cCore Gas§r, and §6Smoldering Debris§r keeps fissioning for a very long time.%n%nThe §6Fire Extinguisher§r sprays water by default. Craft its tank with niter for a §6Foam Tank§r, or surround it with boron sand for a §6Sand Tank§r:%n- §6Foam§r puts out burning debris about ten times faster, and it is the only way to put out a burning ZIRNOX.%n- §6Boron Sand§r puts out burning debris just as well, and it is the only thing that speeds up the cooling of smoldering debris, by about 40 times.%n%nIf a core melts down, it turns into §cCorium§r, which flows downwards and slowly solidifies into §6Corium§r and §6Corebblestone§r. Both are extremely radioactive, and corebblestone also keeps leaking radon.
 
 # Quest: Additional Fusion Attachments
 betterquesting.quest.JpsvBP1yQsu-XtkeZegA6A.name=Additional Fusion Attachments
@@ -1634,6 +1642,10 @@ betterquesting.quest.-ZczpvqzQqWXK8Vtr7zjnQ.desc=Pollution is not just a number 
 betterquesting.quest.49Z72-6WT0uRG5ej8-yRQQ.name=Odds and Ends
 betterquesting.quest.49Z72-6WT0uRG5ej8-yRQQ.desc=A few small things the mod never tells you.%n%n- §6Storage crates§r keep their contents when broken, and can be opened while held in your hand.%n- A single §6conveyor belt§r block holds at most §e25§r items. Once it is full, the items behind it stop and wait.%n- Renaming items in an anvil no longer raises their repair cost.%n- §6Landmines§r spawn naturally in the world. Watch your step around ruins.%n- Some mobs can spawn with NTM armor and weapons.%n- NTM has its own §6achievement page§r, §eNuclear Tech§r, in the achievements menu. Some achievements have unusual triggers - try breaking some §6gneiss§r.%n- §e/ntmclient§r lets you change client options such as HUD positions without leaving the game.
 
+# Quest: Storage Blocks
+betterquesting.quest.Q6J8sKsEQS2Q1akgCbNMyw.name=Storage Blocks
+betterquesting.quest.Q6J8sKsEQS2Q1akgCbNMyw.desc=Nearly every NTM ingot, gem and powder can be packed nine to a §6storage block§r. Many metal blocks work as a beacon base.%n%nHazards do not go away when you compress them. A radioactive block is §cten times§r as radioactive as one ingot, so a single block of uranium or plutonium is worse than the nine ingots it is made of. Blocks of §6White Phosphorus§r are hot and set you on fire, and blocks of §6Semtex§r and §6C-4§r are explosives.
+
 # Quest: Custom Machines
 betterquesting.quest.TOfr1kH-SACDra3489xeQQ.name=Custom Machines
 betterquesting.quest.TOfr1kH-SACDra3489xeQQ.desc=NTM lets modpacks add their own multiblock machines through a config file. They are built from §6custom machine parts§r - casings, sheets, ports and more - around a controller crafted from a pack-specific recipe. Look the controller up in NEI to see its shape.%n%nNTNH has two of them:%n- §6Paper Press§r - turns sawdust and water into paper.%n- §6Spatial Rift Synthesizer§r - a late-game machine that turns a shimmer sledge and stellar flux into an end portal block.
@@ -1876,6 +1888,10 @@ betterquesting.quest.D4QKcL3dR4SZP8kB62fEGg.desc=The §6Liberator§r is a four-b
 betterquesting.quest.DoM54D1vQy28cumKEnQExQ.name=Laser Pistol
 betterquesting.quest.DoM54D1vQy28cumKEnQExQ.desc=Saturnite mechanisms start the third generation of guns. The §6Laser Pistol§r focuses energy through a redstone crystal and fires instant laser shots from energy cells, 30 per charge.%n%nRebuilt with more saturnite mechanisms, it becomes the §6Pew Pew§r.
 
+# Quest: Nuclear Charges
+betterquesting.quest.ETAhmV9zSlaUqC5jNrhC_A.name=Nuclear Charges
+betterquesting.quest.ETAhmV9zSlaUqC5jNrhC_A.desc=The §6Nuclear Charge§r is a nuclear bomb without a casing: a Fat Man core surrounded by explosive charges and neutron reflectors. It explodes with the yield of a nuclear missile as soon as it gets a redstone signal or a signal from a detonator.%n%nWrap it in cobalt, gallium arsenide and technetium steel to get the §6Salted Nuclear Charge§r. Its fallout is §6Salted Fallout§r: unlike normal fallout, it keeps adding radiation to the area for as long as it lies there. Clean it up, or the crater will never become safe.
+
 # Quest: Steel Ranger Power Armor
 betterquesting.quest.HLxQVqj-Q6yLo4DWXsDtEA.name=Steel Ranger Power Armor
 betterquesting.quest.HLxQVqj-Q6yLo4DWXsDtEA.desc=The next power armor after the T-51b. Its §6Iron-Shod Armor Plating§r is smithed on a desh anvil, and the pieces are assembled with titanium armor, an M65 gas mask and integrated circuits.%n%nA powered, sealed suit with 95%% radiation resistance, a Geiger counter, V.A.T.S. and strength and jump boosts. Dye it red and black for the §6AJR§r paint scheme.
@@ -1903,6 +1919,10 @@ betterquesting.quest.K-5iJtH2SI6KbZ3dM2qmzg.desc=The §6Carbine§r is a semi-aut
 # Quest: Missile Assembly Station
 betterquesting.quest.LnR6BjmpRr2oLTPLLLSQag.name=Missile Assembly Station
 betterquesting.quest.LnR6BjmpRr2oLTPLLLSQag.desc=Custom missiles are designed part by part. The §3Missile Assembly Station§r takes a §6targeting circuit§r, a §6warhead§r, a §6fuselage§r, optional §6fins§r and a §6thruster§r, and turns them into a §6Custom Missile§r. The rules:%n%n- The warhead must match the top size of the fuselage, and the thruster its bottom size.%n- The thruster must burn the same fuel as the fuselage.%n- The thruster's lift must be at least the warhead's mass. Heavy warheads need a size 10/15 fuselage with a size 15 thruster.%n%nCustom missiles are launched from the compact or the large launch pad, not the regular one.
+
+# Quest: Multi Purpose Bomb
+betterquesting.quest.M_p0PAenQMeDYUBH7Uew6w.name=Multi Purpose Bomb
+betterquesting.quest.M_p0PAenQMeDYUBH7Uew6w.desc=The §6Multi Purpose Bomb§r needs four blocks of TNT in its casing before it can be triggered by redstone. The two remaining slots take modules, and each one adds an effect:%n- Gunpowder or TNT - a bigger explosion.%n- Explosive pellets - a rain of small bomblets.%n- Red phosphorus - sets everything around it on fire.%n- Poison powder - kills the land around it.%n- Poison gas cartridge - a cloud of §cchlorine§r.
 
 # Quest: N² Mine
 betterquesting.quest.Nkh_8YLFRbOm9AByh5o9Fw.name=N² Mine
@@ -1951,6 +1971,10 @@ betterquesting.quest.UUkrjt9XQfq-9E5P06IfVg.desc=With a steady titanium supply f
 # Quest: Radar
 betterquesting.quest.WtkSt3eWRo6ZQhlX22r4mQ.name=Radar
 betterquesting.quest.WtkSt3eWRo6ZQhlX22r4mQ.desc=The §3Radar§r detects missiles, players and mobs in a large radius and shows them on its display. It can also launch anti-ballistic missiles automatically when an attack is detected.%n%nA §3Radar Screen§r linked to a radar with the §6Radar Linker§r shows the same picture anywhere in your base.
+
+# Quest: Explosive Novelties
+betterquesting.quest.X7l2RTDVTimg7O-_jpLNZQ.name=Explosive Novelties
+betterquesting.quest.X7l2RTDVTimg7O-_jpLNZQ.desc=- The §6Firework Battery§r writes in the sky. Load it with gunpowder (3 charges each) or sulfur (1 charge each), dye it for color and use a name tag on it to set the message. While it gets a redstone signal, it fires the message letter by letter.%n- §6Flame War in a Box§r scatters small explosions over a wide area and then goes off with a big blast.%n- A steel tank filled with kerosene becomes a §6Kerosene Barrel§r. Like the §6Explosive Barrel§r, it blows up when it is shot or caught in an explosion.
 
 # Quest: Remnants Power Armor
 betterquesting.quest.YBMp_N7iTLeKt5htR1GVaQ.name=Remnants Power Armor
@@ -2352,7 +2376,7 @@ betterquesting.quest.9mznD7huQ3GF05IEyjvkOA.desc=Smelting the matching sand mix 
 
 # Quest: Reinforced Bricks and Glass
 betterquesting.quest.ClEAe3kiQvGpTf5nu8sq9A.name=Reinforced Bricks and Glass
-betterquesting.quest.ClEAe3kiQvGpTf5nu8sq9A.desc=Iron bars woven into concrete bricks make §6Reinforced Bricks§r, more than twice as strong as concrete. Add steel bolts and tar for §6Compound Mesh§r, stronger still.%n%n§6Reinforced Glass§r - glass with iron bars - holds up better than stone, but is still far weaker than concrete. For a window that survives a real blast, make §6Reinforced Laminate§r in the Chemical Plant from glass, steel bolts, xylene and phosgene: it is as strong as reinforced bricks.
+betterquesting.quest.ClEAe3kiQvGpTf5nu8sq9A.desc=Iron bars woven into concrete bricks make §6Reinforced Bricks§r, more than twice as strong as concrete. Add steel bolts and tar for §6Compound Mesh§r, stronger still.%n%n§6Reinforced Glass§r - glass with iron bars - holds up better than stone, but is still far weaker than concrete. For a window that survives a real blast, make §6Reinforced Laminate§r in the Chemical Plant from glass, steel bolts, xylene and phosgene: it is as strong as reinforced bricks.%n%n Six reinforced glass blocks make 16 §6Reinforced Glass Panes§r.
 
 # Quest: Barbed Wire
 betterquesting.quest.KI42MO76Q_-ML4wdGOMDNg.name=Barbed Wire
@@ -2416,7 +2440,7 @@ betterquesting.quest.p7NNm2NvRgWz37LQO6yraw.desc=§dArchitectureCraft§r introdu
 
 # Quest: Building Stones
 betterquesting.quest.qQ1-xJWWR7KFo-FMM9L9Jw.name=Building Stones
-betterquesting.quest.qQ1-xJWWR7KFo-FMM9L9Jw.desc=Basalt, gneiss, depth rock and meteorite can all be cut into bricks and tiles. Lab tiles and vinyl tiles make clean floors for laboratories and offices, obsidian bricks are a sturdy dark wall, and light bricks a cheap red one.
+betterquesting.quest.qQ1-xJWWR7KFo-FMM9L9Jw.desc=Basalt, gneiss, depth rock and meteorite can all be cut into bricks and tiles. Lab tiles and vinyl tiles make clean floors for laboratories and offices, obsidian bricks are a sturdy dark wall, and light bricks a cheap red one.%n%n%n%nCraft four bricks into tiles for a finer pattern: §6Polished Basalt§r, §6Basalt Tiles§r, §6Schist Tile§r (and §6Chiseled Schist§r from it), §6Depth Tiles§r, and §6Nether Depth Bricks§r and §6Tiles§r from Nether depth rock. Light bricks wrapped in asbestos make §6Asbestos Bricks§r.
 
 # Quest: Doors
 betterquesting.quest.t8EmgjkxSK6HQNnU6NskNg.name=Doors
