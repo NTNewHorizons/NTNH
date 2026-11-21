@@ -161,11 +161,6 @@
         <Biome name="Roofed Forest.*" />
     </Cloud>
 
-    <!-- Evaporite pans: Pam's salt ore collects in the humid rainforest basins.
-         Note: the correct block ID is harvestcraft:pamSalt. Both the old
-         monolithic config and COG's own PamsHarvestCraft.xml module use
-         "harvestcraft:salt", which does not exist in Pam's HarvestCraft
-         1.7.10Lb, so neither ever generated anything. -->
     <Cloud name="SaltRoofedForest"
            block="harvestcraft:salt" inherits="PresetBiomeCloudMedium">
         <Biome name="Roofed Forest.*" />

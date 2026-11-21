@@ -9,10 +9,6 @@ recipes.remove(<harvestcraft:cheeseItem>);
 
 recipes.remove(<harvestcraft:butterItem>);
 
-<ore:oreSaltpeter>.addAll(<ore:oreSalt>);
-
-<ore:dustSaltpeter>.addAll(<ore:dustSalt>);
-
 recipes.remove(<harvestcraft:salt>);
 
 recipes.remove(<harvestcraft:spamcompressedsaltBlockalt>);
