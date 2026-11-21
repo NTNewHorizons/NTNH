@@ -1,0 +1,149 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 6546284112554378894,
+      "questIDLow:4": -7403326972309604199
+    },
+    "1:10": {
+      "questIDHigh:4": -2980932894283183447,
+      "questIDLow:4": -6098896794304004627
+    },
+    "2:10": {
+      "questIDHigh:4": 4848198512208791425,
+      "questIDLow:4": -9084662768445139072
+    },
+    "3:10": {
+      "questIDHigh:4": -5952352412717986838,
+      "questIDLow:4": -8579369927369114948
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "completion_animation:8": "default",
+      "completion_particle:8": "default",
+      "confetti_icon:10": {
+        "Count:3": 0,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "minecraft:stick"
+      },
+      "countAsQuest:1": 1,
+      "desc:8": "§3Louis§r is not a defensive turret - it is a long-range rail cannon that you aim yourself. Enter the target X and Z in its GUI, or send them over Redstone-over-Radio or OpenComputers, and press fire. It calculates the firing angle, charges its 100,000,000 HE capacitor at 250,000 HE/t, and launches the sabot. The charge slowly drains away if you do not fire.\n\nIt takes power from all four sides. Load sabots into its ammo slots - all of them are made in the §3Assembly Machine§r from stainless steel plates and tungsten bolts:\n- T-APFSDS and DU-APFSDS - explosive shells with tungsten or uranium cores.\n- Desh APFSDS - ricochets off the first surface it hits, then explodes.\n- Starmetal APFSDS - faster and more aerodynamic, so it has the longest range.\n- Fluid APFSDS - fill it with a fluid and it sprays a cloud over the target.\n- Nuclear Sabot - a nuclear warhead with schrabidium.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:tile.turret_railgun"
+      },
+      "isMain:1": 0,
+      "isSilent:1": 0,
+      "is_final:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Railgun Turret \"Louis\"",
+      "notification_duration:5": -1.0,
+      "notification_effect:3": -1,
+      "notification_fade_in:5": -1.0,
+      "notification_fade_out:5": -1.0,
+      "notification_icon_offset_y:3": -2147483648,
+      "notification_icon_scale:5": -1.0,
+      "notification_pos_x:3": -2147483648,
+      "notification_pos_y:3": -2147483648,
+      "notification_show_icon:8": "default",
+      "notification_style:8": "default",
+      "notification_subtitle:8": "",
+      "notification_subtitle_scale:5": -1.0,
+      "notification_title:8": "",
+      "notification_title_scale:5": -1.0,
+      "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": -2066643679569950287,
+  "questIDLow:4": -7454033409834832042,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 0,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.turret_railgun"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "1:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 1,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.ammo_railgun"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "OreDict:8": "",
+          "id:8": "hbm:item.ammo_railgun"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 3,
+          "OreDict:8": "",
+          "id:8": "hbm:item.ammo_railgun"
+        },
+        "3:10": {
+          "Count:3": 1,
+          "Damage:2": 4,
+          "OreDict:8": "",
+          "id:8": "hbm:item.ammo_railgun"
+        },
+        "4:10": {
+          "Count:3": 1,
+          "Damage:2": 5,
+          "OreDict:8": "",
+          "id:8": "hbm:item.ammo_railgun",
+          "tag:10": {
+            "capacity:2": 1000,
+            "fill:2": 0,
+            "type:2": 0
+          }
+        },
+        "5:10": {
+          "Count:3": 1,
+          "Damage:2": 2,
+          "OreDict:8": "",
+          "id:8": "hbm:item.ammo_railgun"
+        }
+      },
+      "taskID:8": "bq_standard:optional_retrieval"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 6535369210298319406,
+      "questIDLow:4": -8493741107110649767
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "completion_animation:8": "default",
+      "completion_particle:8": "default",
+      "confetti_icon:10": {
+        "Count:3": 0,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "minecraft:stick"
+      },
+      "countAsQuest:1": 1,
+      "desc:8": "Some blocks fill the air around them with gas. Gases drift around, slowly fade away, and a gas mask with a filter protects you from all of them - at the cost of filter durability.\n\n- §6Radon Gas§r seeps from uranium ores and corebblestone. It is mildly radioactive and harms your lungs.\n- §6Dense Radon Gas§r is much worse and gives a radiation effect.\n- §6Tomb Gas§r leaks from §6Ancient Scrap Metal§r. It strips away Rad-X and RadAway effects.\n- §6Core Gas§r comes out of reactor wrecks: strong radiation and lung damage.\n- §6Carbon Monoxide§r leaks from Nether coal ore.\n- §6Airborne Asbestos Particles§r and §6Airborne Coal Dust§r are released when you mine asbestos and coal. Breathing them in causes asbestosis and black lung.\n- §6Explosive Gas§r and §6Flammable Gas§r fill gas pockets underground and catch fire or explode.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:tile.gas_radon"
+      },
+      "isMain:1": 0,
+      "isSilent:1": 0,
+      "is_final:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Hazardous Gases",
+      "notification_duration:5": -1.0,
+      "notification_effect:3": -1,
+      "notification_fade_in:5": -1.0,
+      "notification_fade_out:5": -1.0,
+      "notification_icon_offset_y:3": -2147483648,
+      "notification_icon_scale:5": -1.0,
+      "notification_pos_x:3": -2147483648,
+      "notification_pos_y:3": -2147483648,
+      "notification_show_icon:8": "default",
+      "notification_style:8": "default",
+      "notification_subtitle:8": "",
+      "notification_subtitle_scale:5": -1.0,
+      "notification_title:8": "",
+      "notification_title_scale:5": -1.0,
+      "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": -4389292266247992938,
+  "questIDLow:4": -6205365420854146996,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

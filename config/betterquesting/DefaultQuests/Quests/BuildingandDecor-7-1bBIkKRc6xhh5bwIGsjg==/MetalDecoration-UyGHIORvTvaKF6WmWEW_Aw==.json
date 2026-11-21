@@ -3,6 +3,10 @@
     "0:10": {
       "questIDHigh:4": -2956680218970272069,
       "questIDLow:4": -7513003025589838484
+    },
+    "1:10": {
+      "questIDHigh:4": 4848198512208791425,
+      "questIDLow:4": -9084662768445139072
     }
   },
   "properties:10": {
@@ -17,7 +21,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "Decorative metal blocks for every metal, steel grates and poles, wire mesh fences, steel trapdoors, sandbags and sturdier ladders give a factory its industrial look.",
+      "desc:8": "Decorative metal blocks for every metal, steel grates and poles, wire mesh fences, steel trapdoors, sandbags and sturdier ladders give a factory its industrial look.\n\n Ladders also come in gold, copper and titanium, and the chainlink fence has a matching gate.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -178,6 +182,42 @@
           "Damage:2": 0,
           "OreDict:8": "",
           "id:8": "hbm:tile.ladder_sturdy"
+        }
+      },
+      "taskID:8": "bq_standard:optional_retrieval"
+    },
+    "2:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 2,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.ladder_gold"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.ladder_copper"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.ladder_titanium"
+        },
+        "3:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.fence_gate"
         }
       },
       "taskID:8": "bq_standard:optional_retrieval"

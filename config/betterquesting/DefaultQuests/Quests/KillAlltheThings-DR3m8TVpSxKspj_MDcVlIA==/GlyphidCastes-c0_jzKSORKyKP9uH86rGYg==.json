@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "A hive is more than a pile of bugs. Know what you are shooting at:\n\n- §6Glyphid§r - the common worker.\n- §6Brawler§r and §6Behemoth§r - bigger, tougher and harder hitting. A Behemoth sprays sulfuric acid and leaves an acid cloud when it dies.\n- §6Bombardier§r and §6Blaster§r - stay back and lob acid bombs.\n- §6Digger§r - tunnels through any block weaker than concrete, so dirt walls will not stop a swarm.\n- §6Scout§r - wanders off to find a spot for a §cnew hive§r. Kill scouts on sight.\n- §6Brenda§r - releases a cloud of pheromones and a brood of glyphids when it dies.\n- §6Big Man Johnson§r - carries a nuclear payload and blows up on death, spilling parasitic maggots.\n\nGlyphids can also be tamed: feed one §6Grilled Glyphid Meat§r and with luck it becomes your pet. Right click to make it sit, feed it meat to heal it. Infected glyphids cannot be tamed.",
+      "desc:8": "A hive is more than a pile of bugs. Know what you are shooting at:\n\n- §6Glyphid§r - the common worker.\n- §6Brawler§r and §6Behemoth§r - bigger, tougher and harder hitting. A Behemoth sprays sulfuric acid and leaves an acid cloud when it dies.\n- §6Bombardier§r and §6Blaster§r - stay back and lob acid bombs.\n- §6Digger§r - tunnels through any block weaker than concrete, so dirt walls will not stop a swarm.\n- §6Scout§r - wanders off to find a spot for a §cnew hive§r. Kill scouts on sight.\n- §6Brenda§r - releases a cloud of pheromones and a brood of glyphids when it dies.\n- §6Big Man Johnson§r - carries a nuclear payload and blows up on death, spilling parasitic maggots.\n\nGlyphids can also be tamed: feed one §6Grilled Glyphid Meat§r and with luck it becomes your pet. Right click to make it sit, feed it meat to heal it. Infected glyphids cannot be tamed.\n\n\n\nGlyphids drop §6Glyphid Meat§r, which can be grilled and eaten.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -85,6 +85,30 @@
         "id:8": "hbm.entity_glyphid_scout"
       },
       "taskID:8": "bq_standard:hunt"
+    },
+    "2:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 2,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.glyphid_meat"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.glyphid_meat_grilled"
+        }
+      },
+      "taskID:8": "bq_standard:optional_retrieval"
     }
   }
 }

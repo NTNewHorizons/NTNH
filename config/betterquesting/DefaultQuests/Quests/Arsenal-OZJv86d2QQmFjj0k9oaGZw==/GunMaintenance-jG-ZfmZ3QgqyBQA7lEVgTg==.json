@@ -2,6 +2,14 @@
   "preRequisites:9": {
     "0:10": {
       "questIDHigh:4": 0,
+      "questIDLow:4": 64
+    },
+    "1:10": {
+      "questIDHigh:4": -647276987096282447,
+      "questIDLow:4": -7632083285719069050
+    },
+    "2:10": {
+      "questIDHigh:4": 0,
       "questIDLow:4": 104
     }
   },
@@ -63,11 +71,15 @@
   "rewards:9": {},
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
+      "taskID:8": "bq_standard:checkbox"
+    },
+    "1:10": {
       "autoConsume:1": 0,
       "consume:1": 0,
       "groupDetect:1": 0,
       "ignoreNBT:1": 1,
-      "index:3": 0,
+      "index:3": 1,
       "partialMatch:1": 1,
       "requireOnlyOneItem:1": 0,
       "requiredItems:9": {

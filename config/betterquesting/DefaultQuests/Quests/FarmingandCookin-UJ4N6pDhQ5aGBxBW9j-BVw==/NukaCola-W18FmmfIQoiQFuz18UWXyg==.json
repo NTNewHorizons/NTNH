@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "Bomb-shaped bottles are blown from glass panes and filled with water, sugar and coal dust for §6Nuka-Cola§r, redstone for Nuka-Cherry or trinitite for Nuka-Cola Quantum. A carrot and a gold nugget turn Nuka-Cola into §6S~Cola§r and Quantum into S~Cola RAD.\n\nYou need a §6Bottle Opener§r in your inventory to drink them, and every bottle leaves a cap behind. 128 caps press into a decorative cap block.",
+      "desc:8": "Bomb-shaped bottles are blown from glass panes and filled with water, sugar and coal dust for §6Nuka-Cola§r, redstone for Nuka-Cherry or trinitite for Nuka-Cola Quantum. A carrot and a gold nugget turn Nuka-Cola into §6S~Cola§r and Quantum into S~Cola RAD.\n\nYou need a §6Bottle Opener§r in your inventory to drink them, and every bottle leaves a cap behind. 128 caps press into a decorative cap block.\n\n Every drink has its own cap - Quantum, S~Cola, S~Cola RAD, Korl and Fritz Cola - so they are worth collecting.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -124,6 +124,48 @@
           "Damage:2": 0,
           "OreDict:8": "",
           "id:8": "hbm:item.cap_nuka"
+        }
+      },
+      "taskID:8": "bq_standard:optional_retrieval"
+    },
+    "2:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 2,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.cap_quantum"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.cap_sparkle"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.cap_rad"
+        },
+        "3:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.cap_korl"
+        },
+        "4:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.cap_fritz"
         }
       },
       "taskID:8": "bq_standard:optional_retrieval"

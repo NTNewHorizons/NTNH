@@ -21,7 +21,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "With the §3Nuclear Waste Disposal Drum§r to decay waste and a §3SILEX§r, §3RBMK§r nuclear fuels can be processed into many new materials.",
+      "desc:8": "The §3SILEX§r recycles used §3RBMK§r fuel. Put a used rod alone into a crafting grid to break it into 8 §6fuel pellets§r. The rod must be cold first: both hull and core below 50°C. Unused rods cannot be broken down.\n\nEach pellet remembers how far its rod was burned up, from §6Brand New§r to §6Fully Depleted§r, and whether it has §6High Xenon Poison§r. The deeper the burnup, the less of the original fuel you get back in the SILEX, and the more plutonium (from uranium fuels) and nuclear waste. Poisoned pellets also yield xenon-135.\n\nDecay the waste in the §3Nuclear Waste Disposal Drum§r and process it further.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -69,6 +69,42 @@
     "0:10": {
       "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
+    },
+    "1:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 1,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.rbmk_pellet_ueu"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.rbmk_pellet_meu"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.rbmk_pellet_mox"
+        },
+        "3:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.rbmk_pellet_po210be"
+        }
+      },
+      "taskID:8": "bq_standard:optional_retrieval"
     }
   }
 }

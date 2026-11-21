@@ -1,12 +1,20 @@
 {
   "preRequisites:9": {
     "0:10": {
+      "questIDHigh:4": 0,
+      "questIDLow:4": 64
+    },
+    "1:10": {
+      "questIDHigh:4": -2956680218970272069,
+      "questIDLow:4": -7513003025589838484
+    },
+    "2:10": {
       "questIDHigh:4": -5205837353516447570,
       "questIDLow:4": -8700714971616828362
     },
-    "1:10": {
-      "questIDHigh:4": 0,
-      "questIDLow:4": 25
+    "3:10": {
+      "questIDHigh:4": 743375943806108401,
+      "questIDLow:4": -6247057386607269132
     }
   },
   "properties:10": {
@@ -21,7 +29,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The Assembly Machine builds large animated doors around motors. Open them by hand or with a redstone signal - a powered door stays open, and padlocks lock them like any other door.\n\nThe §6Secure Access Door§r is the strongest, followed by the §6Blast Door§r, §6Vault Door§r, §6Fire Door§r, §6Large Vehicle Door§r and the sliding doors. The §6Sliding Blast Door§r has a reinforced glass window. The §6Water§r and §6Cargo Doors§r are light doors for submarines and warehouses.",
+      "desc:8": "The Assembly Machine builds large animated doors around motors. Open them by hand or with a redstone signal - a powered door stays open, and padlocks lock them like any other door.\n\nThe §6Secure Access Door§r is the strongest, followed by the §6Blast Door§r, §6Vault Door§r, §6Fire Door§r, §6Large Vehicle Door§r and the sliding doors. The §6Sliding Blast Door§r has a reinforced glass window. The §6Water§r and §6Cargo Doors§r are light doors for submarines and warehouses.\n\n\n\nThe largest ones are the §6QE Containment Door§r, the giant §6Transition Seal§r and the §6Silo Hatch§r: place §6Silo Hatch Frames§r around a §6Silo Hatch Opener§r to build a hatch of any size.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -137,6 +145,42 @@
         }
       },
       "taskID:8": "bq_standard:retrieval"
+    },
+    "1:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 1,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.qe_containment"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.transition_seal"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.seal_frame"
+        },
+        "3:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.seal_controller"
+        }
+      },
+      "taskID:8": "bq_standard:optional_retrieval"
     }
   }
 }
