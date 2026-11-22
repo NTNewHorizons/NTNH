@@ -3210,7 +3210,7 @@ betterquesting.quest.2tILW2Qh26Ci86E5ImImrQ.desc=Programs talk to blocks through
 
 # Quest: APUs
 betterquesting.quest.zcR6r2-yrnHq3Q-Mfx4V_g.name=APUs
-betterquesting.quest.zcR6r2-yrnHq3Q-Mfx4V_g.desc=An §6APU§r is a CPU and a Graphics Card in one slot, which frees a card slot. The tier 1 APU supports 12 components like a tier 2 CPU, the tier 2 APU supports 16.%n%nShift-right-click a CPU or APU in your hand to switch its architecture between Lua 5.2 and Lua 5.3.
+betterquesting.quest.zcR6r2-yrnHq3Q-Mfx4V_g.desc=An §6APU§r is a CPU and a Graphics Card in one slot, which frees a card slot. The tier 1 APU supports 12 components like a tier 2 CPU, the tier 2 APU supports 16.%n%nShift-right-click a CPU or APU in your hand to switch its architecture between Lua 5.2 and Lua 5.3. It is soldered in the §3Soldering Station§r.
 
 # Quest: Loot Disks and OPPM
 betterquesting.quest.fPS9rBPyoXZ9yVnfOQJpwA.name=Loot Disks and OPPM
@@ -3230,31 +3230,31 @@ betterquesting.quest.NmpbyEiX3JGk-FfxzGNOGA.desc=The §6Keyboard§r is crafted f
 
 # Quest: Network Card
 betterquesting.quest.xHm7EkJ790DDlupKA3PKQQ.name=Network Card
-betterquesting.quest.xHm7EkJ790DDlupKA3PKQQ.desc=The §6Network Card§r sends messages over cables to other computers:%n- §6modem.open(port)§r - listen on a port (up to 16)%n- §6modem.send(address, port, ...)§r or §6modem.broadcast(port, ...)§r%n- received messages arrive as the §6modem_message§r event%n%nMessages pass through §3Relays§r, components do not.
+betterquesting.quest.xHm7EkJ790DDlupKA3PKQQ.desc=The §6Network Card§r sends messages over cables to other computers:%n- §6modem.open(port)§r - listen on a port (up to 16)%n- §6modem.send(address, port, ...)§r or §6modem.broadcast(port, ...)§r%n- received messages arrive as the §6modem_message§r event%n%nMessages pass through §3Relays§r, components do not. It is soldered in the §3Soldering Station§r.
 
 # Quest: Relay
 betterquesting.quest.Ux6IOyTyzwpZaagNeExyAA.name=Relay
-betterquesting.quest.Ux6IOyTyzwpZaagNeExyAA.desc=A computer can only handle a limited number of components (8, 12 or 16 by CPU tier). The §3Relay§r passes network messages between two networks but hides their components from each other, so you can split a big setup into parts.%n%nPut a wireless card into it to make a wireless relay, or a linked card to make a tunnel. Messages can jump through 5 relays at most, and loops are not detected.
+betterquesting.quest.Ux6IOyTyzwpZaagNeExyAA.desc=A computer can only handle a limited number of components (8, 12 or 16 by CPU tier). The §3Relay§r passes network messages between two networks but hides their components from each other, so you can split a big setup into parts.%n%nPut a wireless card into it to make a wireless relay, or a linked card to make a tunnel. Messages can jump through 5 relays at most, and loops are not detected. It is made in the §3Assembly Machine§r.
 
 # Quest: Net Splitter
 betterquesting.quest.llkbScdfaoOnu7ZD-38ePA.name=Net Splitter
-betterquesting.quest.llkbScdfaoOnu7ZD-38ePA.desc=The §3Net Splitter§r directly joins or separates the networks on its sides. Toggle each side with a wrench. A redstone signal inverts all sides, so you can connect a machine area to a computer only when you need it.
+betterquesting.quest.llkbScdfaoOnu7ZD-38ePA.desc=The §3Net Splitter§r directly joins or separates the networks on its sides. Toggle each side with a wrench. A redstone signal inverts all sides, so you can connect a machine area to a computer only when you need it. It is made in the §3Assembly Machine§r.
 
 # Quest: Linked Card
 betterquesting.quest._CMrwkn6U1KE45RrHIOzBg.name=Linked Card
-betterquesting.quest._CMrwkn6U1KE45RrHIOzBg.desc=§6Linked Cards§r are crafted in pairs. The two cards of a pair talk to each other over any distance, even across dimensions, without relays. Great for controlling a base on another planet.%n%nThey need §6Interweb§r, made from string and an ender pearl.
+betterquesting.quest._CMrwkn6U1KE45RrHIOzBg.desc=§6Linked Cards§r are crafted in pairs. The two cards of a pair talk to each other over any distance, even across dimensions, without relays. Great for controlling a base on another planet.%n%nThey need §6Interweb§r, made from string and an ender pearl. It is soldered in the §3Soldering Station§r.
 
 # Quest: Redstone Cards
 betterquesting.quest.7QERxObEqTI2beJxtadkIA.name=Redstone Cards
-betterquesting.quest.7QERxObEqTI2beJxtadkIA.desc=The §6Redstone Card§r reads and emits redstone on all sides of the computer. §6getInput(side)§r and §6setOutput(side, value)§r work with analog strength 0 to 15, and changes come as the §6redstone_changed§r event.%n%nThe tier 2 card adds bundled redstone for ProjectRed cables.
+betterquesting.quest.7QERxObEqTI2beJxtadkIA.desc=The §6Redstone Card§r reads and emits redstone on all sides of the computer. §6getInput(side)§r and §6setOutput(side, value)§r work with analog strength 0 to 15, and changes come as the §6redstone_changed§r event.%n%nThe tier 2 card adds bundled redstone for ProjectRed cables. It is soldered in the §3Soldering Station§r.
 
 # Quest: Redstone I/O
 betterquesting.quest.93stDo4XsGScU_uezrQphg.name=Redstone I/O
-betterquesting.quest.93stDo4XsGScU_uezrQphg.desc=The §3Redstone I/O§r block works like a redstone card that you can place anywhere on the network, with bundled support. It uses world sides (north, south and so on) instead of sides relative to the computer.%n%nIt can also wake up a sleeping computer when its input changes.
+betterquesting.quest.93stDo4XsGScU_uezrQphg.desc=The §3Redstone I/O§r block works like a redstone card that you can place anywhere on the network, with bundled support. It uses world sides (north, south and so on) instead of sides relative to the computer.%n%nIt can also wake up a sleeping computer when its input changes. It is made in the §3Assembly Machine§r.
 
 # Quest: Data Card
 betterquesting.quest.fmTRnwlmnidpLZ-U7ZtflA.name=Data Card
-betterquesting.quest.fmTRnwlmnidpLZ-U7ZtflA.desc=The §6Data Card§r gives fast hashing (CRC32, MD5, SHA-256), Base64 and compression. Tier 2 adds AES encryption and random numbers, tier 3 adds key pairs for signatures and key exchange.
+betterquesting.quest.fmTRnwlmnidpLZ-U7ZtflA.desc=The §6Data Card§r gives fast hashing (CRC32, MD5, SHA-256), Base64 and compression. Tier 2 adds AES encryption and random numbers, tier 3 adds key pairs for signatures and key exchange. It is soldered in the §3Soldering Station§r.
 
 # Quest: TPS Card
 betterquesting.quest.44KNOoJ3AUzjISPwMCNiKA.name=TPS Card
@@ -3262,11 +3262,11 @@ betterquesting.quest.44KNOoJ3AUzjISPwMCNiKA.desc=The §6TPS Card§r reads the se
 
 # Quest: Adapter
 betterquesting.quest.pbqxQu9lvG9YNnOnsmup2Q.name=Adapter
-betterquesting.quest.pbqxQu9lvG9YNnOnsmup2Q.desc=The §3Adapter§r turns blocks next to it into components, for example AE2 parts, furnaces and RF storage. Most NTM machines do not need it - they connect to OC cables directly.%n%nIts upgrade slot takes an §6Inventory Controller§r, a §6Tank Controller§r or an §6MFU§r.
+betterquesting.quest.pbqxQu9lvG9YNnOnsmup2Q.desc=The §3Adapter§r turns blocks next to it into components, for example AE2 parts, furnaces and RF storage. Most NTM machines do not need it - they connect to OC cables directly.%n%nIts upgrade slot takes an §6Inventory Controller§r, a §6Tank Controller§r or an §6MFU§r. It is made in the §3Assembly Machine§r.
 
 # Quest: Transposer
 betterquesting.quest.ZNQP-zCKpGb2XwoGQlkS5w.name=Transposer
-betterquesting.quest.ZNQP-zCKpGb2XwoGQlkS5w.desc=The §3Transposer§r moves items and fluids between the inventories and tanks next to it on command: §6transferItem(from, to, count)§r and §6transferFluid(from, to, amount)§r. It can also read their contents.%n%nIn this pack an Adapter cannot read plain chests, so the Transposer is the main way to sort items with a computer. One craft gives 4.
+betterquesting.quest.ZNQP-zCKpGb2XwoGQlkS5w.desc=The §3Transposer§r moves items and fluids between the inventories and tanks next to it on command: §6transferItem(from, to, count)§r and §6transferFluid(from, to, amount)§r. It can also read their contents.%n%nIn this pack an Adapter cannot read plain chests, so the Transposer is the main way to sort items with a computer. One craft gives 4. It is made in the §3Assembly Machine§r.
 
 # Quest: Inventory and Tank Controllers
 betterquesting.quest.l-WPNtkF1nKesxD0TRydmQ.name=Inventory and Tank Controllers
@@ -3286,15 +3286,15 @@ betterquesting.quest.XIM2vh8LXu1Q47rZryuHkQ.desc=An §3ME Controller§r or §3ME
 
 # Quest: Geolyzer
 betterquesting.quest.0nYsO_uk4pnIizE-Ipwojg.name=Geolyzer
-betterquesting.quest.0nYsO_uk4pnIizE-Ipwojg.desc=The §3Geolyzer§r scans the hardness of blocks in a column around it, up to 32 blocks away. Ores are harder than stone, so you can find them, but the result has some noise - the further the block, the less exact.%n%nIt also works as a robot or tablet upgrade.
+betterquesting.quest.0nYsO_uk4pnIizE-Ipwojg.desc=The §3Geolyzer§r scans the hardness of blocks in a column around it, up to 32 blocks away. Ores are harder than stone, so you can find them, but the result has some noise - the further the block, the less exact.%n%nIt also works as a robot or tablet upgrade. It is made in the §3Assembly Machine§r.
 
 # Quest: Hologram Projectors
 betterquesting.quest.zx4uJrEGpa-mnqLP-ejJdw.name=Hologram Projectors
-betterquesting.quest.zx4uJrEGpa-mnqLP-ejJdw.desc=The §3Hologram Projector§r draws a 48x32x48 voxel picture above itself. Tier 1 has one color, tier 2 has three colors and can be scaled bigger. A classic use is a 3D terrain map made with a §3Geolyzer§r.
+betterquesting.quest.zx4uJrEGpa-mnqLP-ejJdw.desc=The §3Hologram Projector§r draws a 48x32x48 voxel picture above itself. Tier 1 has one color, tier 2 has three colors and can be scaled bigger. A classic use is a 3D terrain map made with a §3Geolyzer§r. It is made in the §3Assembly Machine§r.
 
 # Quest: Motion Sensor
 betterquesting.quest.45DMzIU2a7VHV-2PQiZdaw.name=Motion Sensor
-betterquesting.quest.45DMzIU2a7VHV-2PQiZdaw.desc=The §3Motion Sensor§r sends a signal when a living entity moves within 8 blocks and in line of sight. Use it for alarms or automatic doors.
+betterquesting.quest.45DMzIU2a7VHV-2PQiZdaw.desc=The §3Motion Sensor§r sends a signal when a living entity moves within 8 blocks and in line of sight. Use it for alarms or automatic doors. It is made in the §3Assembly Machine§r.
 
 # Quest: 3D Printing
 betterquesting.quest.q-xzXuKPF5He-tLmwHkfqw.name=3D Printing
@@ -3306,7 +3306,7 @@ betterquesting.quest.D4h3Hj2UUgJABlufCn5eyA.desc=OpenComputers adds a craftable 
 
 # Quest: Power Distributor
 betterquesting.quest.luUPlD2Fx2Xl2qWrufVymA.name=Power Distributor
-betterquesting.quest.luUPlD2Fx2Xl2qWrufVymA.desc=The §3Power Distributor§r shares energy between separate networks without connecting their components. One capacitor bank can feed many computers this way.
+betterquesting.quest.luUPlD2Fx2Xl2qWrufVymA.desc=The §3Power Distributor§r shares energy between separate networks without connecting their components. One capacitor bank can feed many computers this way. It is made in the §3Assembly Machine§r.
 
 # Quest: Carpeted Capacitor
 betterquesting.quest.qwJeStLBrEHeYWU8GKFnLQ.name=Carpeted Capacitor
@@ -3314,23 +3314,23 @@ betterquesting.quest.qwJeStLBrEHeYWU8GKFnLQ.desc=Put a carpet on a §3Capacitor�
 
 # Quest: OC Charger
 betterquesting.quest.PG9ravcVrFdxDQZx3bnqAA.name=OC Charger
-betterquesting.quest.PG9ravcVrFdxDQZx3bnqAA.desc=The §3Charger§r charges robots and drones next to it, and tablets or other items in its slot. It only works with a redstone signal, and the signal strength sets the speed. A wrench inverts this.%n%nIt takes power fast, so feed it with a §3Power Converter§r.
+betterquesting.quest.PG9ravcVrFdxDQZx3bnqAA.desc=The §3Charger§r charges robots and drones next to it, and tablets or other items in its slot. It only works with a redstone signal, and the signal strength sets the speed. A wrench inverts this.%n%nIt takes power fast, so feed it with a §3Power Converter§r. It is made in the §3Assembly Machine§r.
 
 # Quest: Disassembler
 betterquesting.quest.vJsEu9J6wETB9z_JKASAKg.name=Disassembler
-betterquesting.quest.vJsEu9J6wETB9z_JKASAKg.desc=The §3Disassembler§r breaks OC items and assembled devices back into their parts. Each part has a small chance to be lost. Use it to fix a robot or drone that you built wrong.
+betterquesting.quest.vJsEu9J6wETB9z_JKASAKg.desc=The §3Disassembler§r breaks OC items and assembled devices back into their parts. Each part has a small chance to be lost. Use it to fix a robot or drone that you built wrong. It is made in the §3Assembly Machine§r.
 
 # Quest: Rack
 betterquesting.quest.F3DhpcKpnNiKy9Sg-fBtoA.name=Rack
-betterquesting.quest.F3DhpcKpnNiKy9Sg-fBtoA.desc=The §3Rack§r holds four mountables: §6Servers§r, a §6Terminal Server§r or a rack §6Disk Drive§r. In its GUI you wire each mountable to the sides of the rack, so different servers can use different networks.%n%nThe rack also works as a relay and power distributor between its sides.
+betterquesting.quest.F3DhpcKpnNiKy9Sg-fBtoA.desc=The §3Rack§r holds four mountables: §6Servers§r, a §6Terminal Server§r or a rack §6Disk Drive§r. In its GUI you wire each mountable to the sides of the rack, so different servers can use different networks.%n%nThe rack also works as a relay and power distributor between its sides. It is made in the §3Assembly Machine§r.
 
 # Quest: Terminal Server
 betterquesting.quest.kWeQmV3OxYkV96SHksV3ZA.name=Terminal Server
-betterquesting.quest.kWeQmV3OxYkV96SHksV3ZA.desc=A §6Terminal Server§r in a rack gives remote access to the servers. Bind a §6Remote Terminal§r to it by clicking the rack, and you can use the server from anywhere in wireless range, with a screen and keyboard in your hand.
+betterquesting.quest.kWeQmV3OxYkV96SHksV3ZA.desc=A §6Terminal Server§r in a rack gives remote access to the servers. Bind a §6Remote Terminal§r to it by clicking the rack, and you can use the server from anywhere in wireless range, with a screen and keyboard in your hand. It is soldered in the §3Soldering Station§r.
 
 # Quest: Raid
 betterquesting.quest.rx3Gjb0DBbgdB0o7_zlRJw.name=Raid
-betterquesting.quest.rx3Gjb0DBbgdB0o7_zlRJw.desc=The §3Raid§r combines three hard drives into one big file system. Inserting a drive wipes it, and removing one wipes the whole raid. Breaking the block keeps the data.
+betterquesting.quest.rx3Gjb0DBbgdB0o7_zlRJw.desc=The §3Raid§r combines three hard drives into one big file system. Inserting a drive wipes it, and removing one wipes the whole raid. Breaking the block keeps the data. It is made in the §3Assembly Machine§r.
 
 # Quest: Robots
 betterquesting.quest.N9qIo9XNT0-UjgvJd1rg-g.name=Robots
@@ -3378,7 +3378,7 @@ betterquesting.quest.78v1aUYyb1cs3xDsCyUZzA.desc=§6Card Containers§r and §6Up
 
 # Quest: Drones
 betterquesting.quest.o8OZ0Ho-ywuCfiLWmDo5Gw.name=Drones
-betterquesting.quest.o8OZ0Ho-ywuCfiLWmDo5Gw.desc=A §6Drone§r is a small, fast flying robot. Build it from a §6Drone Case§r in the §3Electronics Assembler§r. Drones have no tools and no disk - they run only the program on their §6EEPROM§r, usually a small loop that takes commands over a wireless card.%n%nMove them with §6drone.move(x, y, z)§r.
+betterquesting.quest.o8OZ0Ho-ywuCfiLWmDo5Gw.desc=A §6Drone§r is a small, fast flying robot. Build it from a §6Drone Case§r in the §3Electronics Assembler§r. Drones have no tools and no disk - they run only the program on their §6EEPROM§r, usually a small loop that takes commands over a wireless card.%n%nMove them with §6drone.move(x, y, z)§r. Their cases are soldered in the §3Soldering Station§r.
 
 # Quest: Leash Upgrade
 betterquesting.quest.Ybxm9WQjuBA2C7mkXbT6RQ.name=Leash Upgrade
@@ -3386,11 +3386,11 @@ betterquesting.quest.Ybxm9WQjuBA2C7mkXbT6RQ.desc=With the §6Leash Upgrade§r a 
 
 # Quest: Microcontrollers
 betterquesting.quest.RSjo5kS0uUbpFVRaf68Anw.name=Microcontrollers
-betterquesting.quest.RSjo5kS0uUbpFVRaf68Anw.desc=A §3Microcontroller§r is a tiny, cheap computer built from a §6Microcontroller Case§r. It runs only its EEPROM and can only use its own cards and upgrades, not external components.%n%nIt is perfect for one small job, like an emergency shutdown on a redstone signal.
+betterquesting.quest.RSjo5kS0uUbpFVRaf68Anw.desc=A §3Microcontroller§r is a tiny, cheap computer built from a §6Microcontroller Case§r. It runs only its EEPROM and can only use its own cards and upgrades, not external components.%n%nIt is perfect for one small job, like an emergency shutdown on a redstone signal. Their cases are soldered in the §3Soldering Station§r.
 
 # Quest: Tablets
 betterquesting.quest.ap_GDAZbOREBI0qauk3vQg.name=Tablets
-betterquesting.quest.ap_GDAZbOREBI0qauk3vQg.desc=A §6Tablet§r is a computer in your hand, built from a §6Tablet Case§r. Add a keyboard and a wireless card to control your base from anywhere. Charge it in an §3OC Charger§r.%n%nTablets turn off when you log out or change dimension.
+betterquesting.quest.ap_GDAZbOREBI0qauk3vQg.desc=A §6Tablet§r is a computer in your hand, built from a §6Tablet Case§r. Add a keyboard and a wireless card to control your base from anywhere. Charge it in an §3OC Charger§r.%n%nTablets turn off when you log out or change dimension. Their cases are soldered in the §3Soldering Station§r.
 
 # Quest: ME Upgrade
 betterquesting.quest.04ySSqTDPF-L4rY8bRokBA.name=ME Upgrade
