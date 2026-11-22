@@ -492,7 +492,7 @@ betterquesting.quest.8R4pAa2BSWGGBdYOaobEMA.desc=Be meaner.
 
 # Quest: Aluminium Processing
 betterquesting.quest.8Z2F5EPIRPGvasjKDWd4tA.name=Aluminium Processing
-betterquesting.quest.8Z2F5EPIRPGvasjKDWd4tA.desc=§6Bauxite§r and §6Cryolite§r can be further processed to obtain §6Aluminium§r, with additional byproducts of §6Iron§r, §6Titanium§r and §bMercury§r.
+betterquesting.quest.8Z2F5EPIRPGvasjKDWd4tA.desc=§6Bauxite§r and §6Cryolite§r can be further processed to obtain §6Aluminium§r, with additional byproducts of §6Iron§r, §6Titanium§r and §bMercury§r.%n%n§lThe Bayer process§r%n1. §3Industrial Mixer§r: water and ash make §bLye§r.%n2. §3Industrial Mixer§r: lye and bauxite make §bBauxite Solution§r.%n3. §3Fractioning Tower§r: bauxite solution splits into §bRed Mud§r and §bSodium Aluminate§r.%n4. Sodium aluminate goes straight into a §3Rotary Furnace§r as molten aluminium - more of it with flux. Or mix it with fluorite or cryolite into §bAlumina§r and electrolyze that into aluminium powder.%n%nDo not dump the red mud: electrolysis turns it into mercury, titanium, iron and aluminium powder and gives some lye back, and a Coker or Solidifier turns it into iron.
 
 # Quest: Cyclotron
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAA1g.name=Cyclotron
@@ -572,7 +572,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAARA.desc=The §3Industrial Steam Turbine
 
 # Quest: Coker Unit
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAARQ.name=Coker Unit
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAARQ.desc=The §3Coker Unit§r is a machine that turns oil products into §6Petroleum Coke§r, which is the same to the other kinds of coke, aswell as additional fluids as byproducts. The coker unit will require an external heat source in order to function, similar to the §3Crucible§r.%n%n§2§r§2Alongside the §2§r§2§r§2Electric Arc Furnace, the coker unit is one of the most polluting machines of the mod. It spreads 20 soot per second, making it a dangerous machine to use next to a glyphid nest.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAARQ.desc=The §3Coker Unit§r is a machine that turns oil products into §6Petroleum Coke§r, which is the same to the other kinds of coke, aswell as additional fluids as byproducts. The coker unit will require an external heat source in order to function, similar to the §3Crucible§r.%n%n§2§r§2Alongside the §2§r§2§r§2Electric Arc Furnace, the coker unit is one of the most polluting machines of the mod. It spreads 20 soot per second, making it a dangerous machine to use next to a glyphid nest.%n%nIts fluid byproducts are worth processing:%n- §bCoker Oil§r - fractions into cracked oil and heating oil.%n- §bCoker Naphtha§r - fractions into cracked naphtha and cracked light oil, or reforms into reformate.%n- §bCoker Gas§r - a gas-grade fuel, or fractions into aromatics and carbon dioxide.%n%nThe coker also turns sour gas into sulfur, calcium solution into calcium and bromine into bromine powder.
 
 # Quest: Auxiliary Cooling Tower
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAASA.name=Auxiliary Cooling Tower
@@ -782,6 +782,14 @@ betterquesting.quest.JsS88quWS7C43Xy101qxVg.desc=Link the §6Recall Device§r to
 betterquesting.quest.4cv-UUIhQxqc_XwPPvzpYQ.name=Starmetal Static Electricity Generator
 betterquesting.quest.4cv-UUIhQxqc_XwPPvzpYQ.desc=Place a §3Tesla Coil§r on top of a §3Starmetal Static Electricity Generator§r and it never runs out of power - no cables needed.
 
+# Quest: Fuel Grades
+betterquesting.quest.nbNapoaPSASS8lF98JhqZg.name=Fuel Grades
+betterquesting.quest.nbNapoaPSASS8lF98JhqZg.desc=Every fuel has a §6grade§r, shown in its tooltip. The grade decides which engines can burn it and how well.%n%n- §eLow§r - Heavy Oil, Heating Oil, Industrial Oil, Reclaimed Industrial Oil, the vacuum oils.%n- §eMedium§r - Naphtha, Light Oil, Petroil, Coal Gasoline and their cracked, desulfurized and leaded versions.%n- §eHigh§r - Diesel, Gasoline, LPG, Reformate, BTX, High-Cetane Diesel, Ethanol, Methanol, Biofuel, NITAN and BF Rocket Fuel.%n- §eAviation§r - Kerosene, Jet Fuel and Blood Fuel.%n- §eGaseous§r - Natural Gas, Petroleum Gas, Coker Gas, Reformate Gas, Biogas, Syngas and Oxyhydrogen.%n%n§lWho burns what§r%n- §3Diesel Generator§r - medium 50%%, high 75%%, aviation 10%%. No low grade.%n- §3Radial Performance Engine§r - low 75%%, medium 50%%, high 25%%.%n- §3Turbofan§r - aviation only.%n- §3Combined Cycle Gas Turbine§r - gaseous only.%n- §3Industrial Combustion Engine§r - depends on the piston set: §6Steel§r is best for low grade, §6High-Speed Steel§r for medium, §6Desh§r for high and §6Starmetal§r is good at everything, even gas.
+
+# Quest: Chlorocalcite
+betterquesting.quest.fjJrbKoBSUq7eosZ1wKTsA.name=Chlorocalcite
+betterquesting.quest.fjJrbKoBSUq7eosZ1wKTsA.desc=§6Chlorocalcite§r comes out of bedrock ore processing and is a source of §6Calcium§r and §bChlorine§r.%n%n1. §3Industrial Mixer§r: chlorocalcite, water and nitric acid make §bChlorocalcite Solution§r.%n2. §3Industrial Mixer§r: the solution, sulfuric acid and flux make §bMixed Chlorocalcite Solution§r.%n3. §3Fractioning Tower§r: it separates into §bCleaned Chlorocalcite Solution§r and colloid.%n4. §3Chemical Plant§r: with plenty of sulfuric acid it splits into §bPotassium Chloride§r and §bCalcium Chloride§r solutions.%n5. §3Electrolysis Machine§r: both give chlorine, and calcium chloride also leaves §bCalcium Solution§r.%n6. §3Coker Unit§r: calcium solution becomes calcium powder.%n%nFor a quick bit of calcium, a Combination Oven turns chlorocalcite into calcium powder and chlorine directly.
+
 
 ## Quest Line: LV3 - Reactors Age
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAg.name=LV3 - Reactors Age
@@ -901,7 +909,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAVg.desc=§6Schrabidium§r is a dangerou
 
 # Quest: Advanced Oil Processing
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAWw.name=Advanced Oil Processing
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAWw.desc=The §3Catalytic Reformer§r is an optional late-game oil processing machine. It converts certain oil products into more valuable ones.%n%nThe §3Hydrotreater§r is another optional late-game oil processing machine that allows for easier production of §bSour Gas§r, which can also turn §bCrude Oil§r into §bDesulfurized crude Oil§r. %n%n§2The Hydrotreater requires pressurized Liquid Hydrogen in all its recipes, requiring the use of a Compressor. For example, cracked naphtha reforms into reformate while desulfurized naphtha fractions into BTX.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAWw.desc=The §3Catalytic Reformer§r is an optional late-game oil processing machine. It converts certain oil products into more valuable ones: naphtha into §bReformate§r, light oils into aromatics, petroleum gas into unsaturated hydrocarbons, and §bSour Gas§r into sulfuric acid - with hydrogen as a byproduct of most recipes.%n%nThe §3Hydrotreater§r is another optional late-game oil processing machine. It removes sulfur: crude oil becomes §bDesulfurized Crude Oil§r, cracked oil becomes desulfurized cracked oil, natural gas becomes petroleum gas, and cracked diesel becomes ordinary diesel. The sulfur leaves as sour gas.%n%nRefining desulfurized oil gives no sulfur and desulfurized fractions. §bDesulfurized Light Oil§r fractions into §bHigh-Cetane Diesel§r and §bJet Fuel§r - the best fuel a turbofan can burn - and desulfurized naphtha into BTX and high-cetane diesel.%n%n§2The Hydrotreater requires pressurized Hydrogen in all its recipes, requiring the use of a Compressor.
 
 # Quest: Soyuz-FG
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZw.name=Soyuz-FG
@@ -949,7 +957,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkA.desc=The §3Heavy Magnetic Storage T
 
 # Quest: Vacuum Refinery
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkw.name=Vacuum Refinery
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkw.desc=The §3Vacuum Refinery§r is an oil refinery which processes §bpressurized crude oil§r (compress crude oil, then compress again from 1 PU to 2 PU) into 5 products - §bheavy heating oil§r, §bReformate§r, §bBTX§r, §bSour Gas§r and §bReformate Gas§r - most of which are fractioned again. It is a good way to make §bHigh-Performance Solvent§r by using §bReformate Gas§r and §bChlorine Gas§r in an §3Industrial Mixer§r.%n%n§2Compressors are needed for the oil to be inserted inside the Vacuum Refinery.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkw.desc=The §3Vacuum Refinery§r is an oil refinery which processes §bpressurized crude oil§r (compress crude oil, then compress again from 1 PU to 2 PU) into four products, most of which are fractioned again:%n- §bVacuum Heavy Oil§r - fractions into industrial oil and heavy heating oil.%n- §bReformate§r - fractions into BTX and aromatics.%n- §bVacuum Light Oil§r - fractions into kerosene and reformate gas.%n- §bSour Gas§r, or §bReformate Gas§r if the oil was desulfurized first.%n%nIt also refines §bTektonic Crude§r into light halocarbons, chloromethane, hydrochloric acid and halide gas.%n%nReformate gas and chlorine in an §3Industrial Mixer§r make §bHigh-Performance Solvent§r.%n%n§2Compressors are needed for the oil to be inserted inside the Vacuum Refinery.
 
 # Quest: BTX
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAng.name=BTX
@@ -1467,6 +1475,14 @@ betterquesting.quest.8onJDxEJR2mtvvrpHQTLDQ.desc=The §3Orrery§r is a working m
 # Quest: Chungus Solar Array
 betterquesting.quest.qUq4XrL8Sgy7TagwzXS8gA.name=Chungus Solar Array
 betterquesting.quest.qUq4XrL8Sgy7TagwzXS8gA.desc=The §3Chungus Solar Array§r is an oversized 17x3 field of gold-plated panels. It produces as much as 9 solar panels with a 50%% bonus - 13.5 panels in total - and stores up to 5,000 HE.
+
+# Quest: Copper and Nickel Hydrometallurgy
+betterquesting.quest.fKB77dDXSmCnJ3ciOGc3KQ.name=Copper and Nickel Hydrometallurgy
+betterquesting.quest.fKB77dDXSmCnJ3ciOGc3KQ.desc=Brine can leach copper and nickel out of ores.%n%n§lCopper§r%n- §3Industrial Mixer§r: brine and §6Malachite Chunks§r make §bAqueous Copper§r.%n- §3Chemical Plant§r: aqueous copper gives copper and nickel powder plus §bCopper Sulfate§r.%n- §3Electrolysis Machine§r: copper sulfate gives more copper powder, sulfur and oxygen.%n%n§lNickel§r%n- §3Industrial Mixer§r: brine and nickel dust make §bAqueous Nickel§r.%n- §3Electrolysis Machine§r: aqueous nickel gives nickel and iron powder and sulfur.%n- A §3Solidifier§r turns it into §6Nickel Salts§r instead.
+
+# Quest: Noble Gases
+betterquesting.quest.zz4hh45sTNGAW_14YlIfSA.name=Noble Gases
+betterquesting.quest.zz4hh45sTNGAW_14YlIfSA.desc=Cryogenic distillation is the only source of the noble gases, and each comes from a different world:%n%n- §bKrypton§r - from Earth air. Used for the entanglement kit and stainless steel beams.%n- §bArgon§r - from Duna air. Used for the Xenon Ion Engine and stainless steel beams.%n- §bNeon§r - from Jool gas, next to helium-3. Needed to weld the CMB Insert.%n- §bXenon§r - from Eve air, or straight from Laythe's atmosphere.
 
 
 ## Quest Line: LV4 - End Game
@@ -2333,6 +2349,10 @@ betterquesting.quest.QydYnlK1S4alueDB2NaqJw.desc=NTM adds a few plants that grow
 # Quest: Microwave
 betterquesting.quest.kGi2vMlgRteo_PX7S2XEbQ.name=Microwave
 betterquesting.quest.kGi2vMlgRteo_PX7S2XEbQ.desc=The §3Microwave§r cooks food with electricity instead of fuel - anything a furnace can cook. It uses 50 HE per tick, and its speed can be turned up.
+
+# Quest: Bio Oils
+betterquesting.quest.xPm04h4xTM2B-OZuno8VTQ.name=Bio Oils
+betterquesting.quest.xPm04h4xTM2B-OZuno8VTQ.desc=Fish and sunflowers are more useful than they look. An §3Industrial Mixer§r or a §3Liquefaction Machine§r turns fish into §bFish Oil§r and sunflowers into §bSunflower Oil§r.%n%n- Either oil mixed with wood oil makes §bBiofuel§r.%n- Fish oil and ethanol make engine §bLubricant§r.%n- Fish oil and nitric acid make §bNitroglycerin§r.%n- In a §3Crystallizer§r, fish oil and metal dusts make chemical dyes.%n%nEggs mixed with high-performance solvent and fractioned give §bCholesterol§r, which a Catalytic Reformer turns into §bEstradiol§r.
 
 
 ## Quest Line: Applied Energistics 2
