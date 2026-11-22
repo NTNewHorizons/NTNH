@@ -2,12 +2,13 @@
 
 ## What's changed?
 **Added**
-* **250+ new quests**
+* **350+ new quests**
 * Hilariously impractical multiple rocket anti air launcher
 	* Nine-barrel rocket launcher that uses micro rockets
 * Modern parts holograms for the Immersive Vehicles: Legacy
 * **FULLY WORKING RECIPES FOR IVL**
 * Wdmla support for IVL
+* NTNH OST - Disc 2
 
 
 

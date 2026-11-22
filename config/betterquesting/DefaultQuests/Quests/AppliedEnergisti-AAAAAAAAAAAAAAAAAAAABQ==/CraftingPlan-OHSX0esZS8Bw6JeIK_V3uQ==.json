@@ -1,0 +1,70 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 6432556703531286608,
+      "questIDLow:4": -6219066342093590357
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "completion_animation:8": "default",
+      "completion_particle:8": "default",
+      "confetti_icon:10": {
+        "Count:3": 0,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "minecraft:stick"
+      },
+      "countAsQuest:1": 1,
+      "desc:8": "When you order a craft, the plan screen shows every item the job uses, makes or is missing. Things to know:\n- missing items are shown in red - the job will not start in normal mode\n- §6Ignore Missing§r mode starts the job anyway and waits for the missing items\n- you can choose which CPU runs the job\n- §6Start and follow§r notifies you when the job is done\n\nOpen the §6Crafting Status§r from the terminal to see running jobs or cancel them.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 340,
+        "OreDict:8": "",
+        "id:8": "appliedenergistics2:item.ItemMultiPart"
+      },
+      "isMain:1": 0,
+      "isSilent:1": 0,
+      "is_final:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Crafting Plan",
+      "notification_duration:5": -1.0,
+      "notification_effect:3": -1,
+      "notification_fade_in:5": -1.0,
+      "notification_fade_out:5": -1.0,
+      "notification_icon_offset_y:3": -2147483648,
+      "notification_icon_scale:5": -1.0,
+      "notification_pos_x:3": -2147483648,
+      "notification_pos_y:3": -2147483648,
+      "notification_show_icon:8": "default",
+      "notification_style:8": "default",
+      "notification_subtitle:8": "",
+      "notification_subtitle_scale:5": -1.0,
+      "notification_title:8": "",
+      "notification_title_scale:5": -1.0,
+      "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": 4068043291270663104,
+  "questIDLow:4": 8135919337953654713,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": -3726345668281548031,
+      "questIDLow:4": -8161170515994995183
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "completion_animation:8": "default",
+      "completion_particle:8": "default",
+      "confetti_icon:10": {
+        "Count:3": 0,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "minecraft:stick"
+      },
+      "countAsQuest:1": 1,
+      "desc:8": "The §33D Printer§r prints custom-shaped blocks from models. It uses §6Chamelium§r for the volume and an §6Ink Cartridge§r for the colors. Prints can emit light or redstone and can be recycled in the printer.\n\nInstall the examples with §6oppm install print3d-examples§r and print them with §6print3d <file>§r.",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "OpenComputers:printer"
+      },
+      "isMain:1": 0,
+      "isSilent:1": 0,
+      "is_final:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "3D Printing",
+      "notification_duration:5": -1.0,
+      "notification_effect:3": -1,
+      "notification_fade_in:5": -1.0,
+      "notification_fade_out:5": -1.0,
+      "notification_icon_offset_y:3": -2147483648,
+      "notification_icon_scale:5": -1.0,
+      "notification_pos_x:3": -2147483648,
+      "notification_pos_y:3": -2147483648,
+      "notification_show_icon:8": "default",
+      "notification_style:8": "default",
+      "notification_subtitle:8": "",
+      "notification_subtitle_scale:5": -1.0,
+      "notification_title:8": "",
+      "notification_title_scale:5": -1.0,
+      "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": -6058340547355011183,
+  "questIDLow:4": -2379357564598411349,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 0,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "OpenComputers:printer"
+        },
+        "1:10": {
+          "Count:3": 8,
+          "Damage:2": 96,
+          "OreDict:8": "",
+          "id:8": "OpenComputers:item"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 95,
+          "OreDict:8": "",
+          "id:8": "OpenComputers:item"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "1:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 1,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 97,
+          "OreDict:8": "",
+          "id:8": "OpenComputers:item"
+        }
+      },
+      "taskID:8": "bq_standard:optional_retrieval"
+    }
+  }
+}
