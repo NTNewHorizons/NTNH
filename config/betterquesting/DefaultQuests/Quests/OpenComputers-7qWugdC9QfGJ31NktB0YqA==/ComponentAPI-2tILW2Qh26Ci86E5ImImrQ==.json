@@ -17,7 +17,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "Programs talk to blocks through components:\n- §6local component = require(\"component\")§r\n- §6component.list()§r - all components with their addresses\n- §6component.proxy(address)§r - one specific component\n- §6component.ntm_geiger.getRads()§r - the first component of that type\n- §6require(\"event\").pull()§r - wait for signals like key presses or network messages\n\nTry it with any NTM machine that supports OpenComputers.",
+      "desc:8": "Programs talk to blocks through components:\n- §6local component \u003d require(\"component\")§r\n- §6component.list()§r - all components with their addresses\n- §6component.proxy(address)§r - one specific component\n- §6component.ntm_geiger.getRads()§r - the first component of that type\n- §6require(\"event\").pull()§r - wait for signals like key presses or network messages\n\nTry it with any NTM machine that supports OpenComputers.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
