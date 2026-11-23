@@ -32,7 +32,7 @@ NATIVE_EXCLUDES = {
 # open-source yet). They stay as raw JARs in mods/ and are injected into every
 # release archive instead of being resolved from a Packwiz download source.
 RAW_MODS = (
-    "mods/immersivevehicleslegacy-eefdfb6.jar",
+    "mods/immersivevehicleslegacy-79b83b9.jar",
     "mods/prospectingcraft-58b2c2e.jar",
 )
 

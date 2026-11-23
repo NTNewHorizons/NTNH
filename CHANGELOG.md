@@ -9,6 +9,16 @@
 * **FULLY WORKING RECIPES FOR IVL**
 * Wdmla support for IVL
 * NTNH OST - Disc 2
+* Day/night cycle length configurability
+	* The vanilla is set to 20 minutes
+	* In the modpack specifically I've set it to 40 minutes
+	* Can be configured using `/ntmtime` command (per-world) or in hbm.cfg (global)
+* Proper Pam's Harvestcraft integration with NTM machines
+	* Shredder: grains, rice, corn and potatoes into flour, fruits and beets into sugar, plus all former Quern recipes
+	* Centrifuge: all former Presser recipes (juices, olive oil, honey, beeswax, tofu, soy milk)
+	* Press: waxcomb into beeswax, soybeans into silken tofu
+	* Liquefaction: Pam's raw fish into fish oil, fruits into ethanol, almonds into milk
+	* Nuts and oily seeds can be turned into seed oil in the Liquefaction Machine and the Mixer, nuts yield more
 
 
 
@@ -28,6 +38,8 @@
 * Lunar Armor helmet can now be used as a part of the spacesuit
 * Returned the Lunar Armor set eyepatch crafting recipe
 	* Fuck, why did I even remove it in the first place?
+* Biomass recipes now accept any fruit, vegetable or grain from Pam's Harvestcraft
+* Renamed Sunflower Seed Oil to Seed Oil
 
 
 
@@ -53,6 +65,7 @@
 * Fixed exploits and issues related to the NTM Fluids <-> Forge Fluids system
 * Fixed a bug where wedging yourself into an open IV/MTS car door on the driver or passenger side would instantly kill you
 * Fixed a bug in which if you disassemble a working PWR using a Gravity Gun it still works
+* Fixed the Thresher not replanting Pam's Harvestcraft crops
 
 
 
