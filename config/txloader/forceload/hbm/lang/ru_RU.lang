@@ -935,6 +935,11 @@ commands.packet_info.wait_time=Time spent waiting on thread(s) last tick: %sms
 commands.radiation.cleared=Cleared radiation data!
 commands.radiation.radiation_set=Радиация установлена.
 commands.radiation.usage=/ntmrad <set/clear>
+commands.ntmtime.usage=/ntmtime daylength [минуты|reset]
+commands.ntmtime.query=Длина суток в этом мире: %s мин. (задана командой)
+commands.ntmtime.query_config=Длина суток в этом мире: %s мин. (из конфига)
+commands.ntmtime.set=Длина суток установлена на %s мин.
+commands.ntmtime.reset=Длина суток сброшена на значение из конфига: %s мин.
 
 commands.reap_networks.error=An error has occoured during network reap, consult the log for details.
 commands.reap_networks.nodespace_cleared=Узлы очищены :)

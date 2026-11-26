@@ -957,7 +957,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcg.desc=The §3ZIRNOX§r is the first a
 
 # Quest: Cooling Tower
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdQ.name=Градирня
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdQ.desc=The §3Cooling Tower§r is a larger version of the §3Auxiliary Cooling Tower§r, able to process up to 10,000 mB/t of §bLow-Pressure Steam§r.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdQ.desc=§3Градирня§r - это увеличенная версия §3Вспомогательной градирни§r, способная обрабатывать до 10,000 милибакетов §bПара низкого давления§r в тик.
 
 # Quest: Ionized Particles
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAeA.name=Ионизированные частицы
@@ -976,7 +976,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjg.name=Сваренная пласти
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjg.desc=§6Сварная пластина из технециевой/кадмиевой стали§r - это сварной вариант литой пластины из технециевой/кадмиевой стали, используемый в некоторых рецептах, требующих прочных материалов. %n%n§2Убедитесь, что у вас есть хорошая инфраструктура генерации и хранения энергии, так как каждая пластина стоит 1.2 миллиарда HE.
 
 # Quest: Big-Ass Tank (9000)
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjw.name=Big-Ass Tank (9000)
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjw.name=Цистернище
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjw.desc=The §3Big-Ass Tank 9000§r is the largest fluid storage container, capable of storing 16000000mB of fluids, aswell as being able to hold strongly corrosive fluids. It has to be placed on the solid surface, otherwise it is going to break.%n%nThere is also a cheaper version available - §3Big-Ass Tank§r (no 9000 suffix). It is only capable of storing 2048000mB of fluids, but it is twice as cheap and does not require a solid surface,
 
 # Quest: Heavy Magnetic Storage Tank
@@ -1104,7 +1104,7 @@ betterquesting.quest.kb1Cp9wuS3eIjRD2YxiJdQ.name=Cargo Landing Pad§r and Astero
 betterquesting.quest.kb1Cp9wuS3eIjRD2YxiJdQ.desc=The §3Cargo Landing Pad§r receives resource shipments from §3Asteroid Mining Ships§r.%n%nAssign a §bSatellite ID§r to an Asteroid Mining Ship and launch it using a fueled §3Soyuz§r. Insert a §bSatellite ID Chip§r with the same ID into the landing pad. The miner operates at §6Dres§r and prepares a shipment every §b15 minutes of running game time§r, while the pad can receive deliveries on any planet.%n%nKeep the pad’s chunk loaded and the space above it unobstructed. If multiple pads share the same ID, the §efirst to request a ready shipment§r receives it; no planet has priority.
 
 # Quest: Flight Data
-betterquesting.quest.ltOp2GyWQzm3n_bmKj4DPw.name=Flight Data
+betterquesting.quest.ltOp2GyWQzm3n_bmKj4DPw.name=Данные о полёте
 betterquesting.quest.ltOp2GyWQzm3n_bmKj4DPw.desc=One Space Laboratory will produce §eFlight Data§r for §6Disk Drives§r every 15 minutes.%n%nFlight data needs to be processed in the §3Supercomputer§r.
 
 # Quest: Helium-4
@@ -1224,11 +1224,11 @@ betterquesting.quest.tNn2ePdQTDSuqzkvL7iDgQ.name=Вставщик
 betterquesting.quest.tNn2ePdQTDSuqzkvL7iDgQ.desc=§3Вставщик§r автоматизирует Чикагскую поленницу. Он принимает один предмет от автоматики и по сигналу редстоуна вталкивает его в ряд просверленного графита. Все предметы в ряду сдвигаются на один блок, и последний выпадает с дальнего конца. Между вставщиком и графитом оставьте один блок воздуха.
 
 # Quest: Meltdown Cleanup
-betterquesting.quest.FW_aLH1LRCawzvBgE5aTMg.name=Meltdown Cleanup
+betterquesting.quest.FW_aLH1LRCawzvBgE5aTMg.name=Ликвидация аварии
 betterquesting.quest.FW_aLH1LRCawzvBgE5aTMg.desc=Wrecked reactors do not calm down on their own. §6Burning RBMK Debris§r and the wreck of a §3ZIRNOX§r keep releasing §cCore Gas§r, and §6Smoldering Debris§r keeps fissioning for a very long time.%n%nThe §6Fire Extinguisher§r sprays water by default. Craft its tank with niter for a §6Foam Tank§r, or surround it with boron sand for a §6Sand Tank§r:%n- §6Foam§r puts out burning debris about ten times faster, and it is the only way to put out a burning ZIRNOX.%n- §6Boron Sand§r puts out burning debris just as well, and it is the only thing that speeds up the cooling of smoldering debris, by about 40 times.%n%nIf a core melts down, it turns into §cCorium§r, which flows downwards and slowly solidifies into §6Corium§r and §6Corebblestone§r. Both are extremely radioactive, and corebblestone also keeps leaking radon.
 
 # Quest: Liquidator Suit
-betterquesting.quest.TmH3EyXaS_6-kdT4PsVz9Q.name=Liquidator Suit
+betterquesting.quest.TmH3EyXaS_6-kdT4PsVz9Q.name=Костюм ликвидатора
 betterquesting.quest.TmH3EyXaS_6-kdT4PsVz9Q.desc=Wrap each piece of the high-performance hazmat suit in rubber and lead cladding for the §6Liquidator Suit§r. At 99.6%% radiation protection it is the best non-power armor for cleaning up after a meltdown.
 
 
@@ -1293,7 +1293,7 @@ betterquesting.quest.KItM5UOCSNmCMNKnohadaQ.name=Айк
 betterquesting.quest.KItM5UOCSNmCMNKnohadaQ.desc=§eАйк§r, единственная луна §eДюны§r, имеет намеки на то, что в прошлом она использовалась как мусорка для опасных веществ, с большими каменными штыками и пирамидами. §eМетеоритные подземелья§r появляются чаще, и озера состоящие из §bСмеси алкилбромидов§r можно найти на поверхности.%n%n§eПьедесталы§r в постройках Айка хранят §6Божественные осколки§r - ключ к призыву Жар-Ангела.%n
 
 # Quest: Atmospheric Liquefaction Tower
-betterquesting.quest.KQqx-tttRfG2DNO4tLbSCw.name=Atmospheric Liquefaction Tower
+betterquesting.quest.KQqx-tttRfG2DNO4tLbSCw.name=Башня сжижения воздуха
 betterquesting.quest.KQqx-tttRfG2DNO4tLbSCw.desc=Башня сжижения воздуха предназначена для получения жидкого азота из сжатого воздуха.
 
 # Quest: Drive Processor Tier 3
@@ -1535,7 +1535,7 @@ betterquesting.quest.2BKf-swBTG61f8eVn9ynhw.desc=The §3ICF§r can process diffe
 
 # Quest: Dineutronium Armor
 betterquesting.quest.6PZEF2npTwy_exs-JQAKYg.name=Dineutronium Armor
-betterquesting.quest.6PZEF2npTwy_exs-JQAKYg.desc=§6Dineutronium armor§r (helmet, plate, legs and boots): an endgame protective suit crafted from §6dineutronium§r.
+betterquesting.quest.6PZEF2npTwy_exs-JQAKYg.desc=§6Динейтрониевая броня§r (шлем, нагрудник, поножи и ботинки): боевой костюм конца игры, созданный из §6динейтрония§r.
 
 # Quest: Particle Capsules
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8A.name=Капсулы частиц
@@ -1730,11 +1730,11 @@ betterquesting.quest.SODWeSyJSb-vxvL9SdGcrQ.name=Сингулярности
 betterquesting.quest.SODWeSyJSb-vxvL9SdGcrQ.desc=§6Сингулярность§r делается из эвфемия, шрабидия-326 и пробирки с антишрабидием. В оболочке из стали Альянса и намагниченного вольфрама она становится §6контр-резонансной сингулярностью§r, с сатурнитом и энергетическим порошком - §6перегретой резонирующей сингулярностью§r. Все типы вместе нужны для спарк-сингулярности.%n%nОкружённая §6искусственными кристаллами Зена§r, сингулярность становится §6миниатюрной чёрной дырой§r - начинкой ракеты "Чёрная дыра".
 
 # Quest: Rosenberg Pest Control Box
-betterquesting.quest.dE1MhW7WQaGmSYMqKRDc7A.name=Rosenberg Pest Control Box
+betterquesting.quest.dE1MhW7WQaGmSYMqKRDc7A.name=Коробка управления вредителями Розенберга
 betterquesting.quest.dE1MhW7WQaGmSYMqKRDc7A.desc=Right click the §6Rosenberg Pest Control Box§r to switch it on. While it has power, it deals heavy damage to every hostile mob within §e15§r blocks, many times per second. It draws a staggering §c25,000 HE/t§r.%n%nThe §6Chlorine Seal§r is the opposite of subtle: on a redstone signal, it floods all open space around it with §cchlorine gas§r.
 
 # Quest: Osmiridium Anvil
-betterquesting.quest.OadKaS47TqenZxD0LiAHWA.name=Osmiridium Anvil
+betterquesting.quest.OadKaS47TqenZxD0LiAHWA.name=Осмиридиевая наковальня
 betterquesting.quest.OadKaS47TqenZxD0LiAHWA.desc=The highest tier of the §3Anvil§r, [T8]. Smith any anvil together with 10 osmiridium ingots. It can do everything the lower tiers can.
 
 
@@ -1783,12 +1783,12 @@ betterquesting.quest.Q6J8sKsEQS2Q1akgCbNMyw.name=Storage Blocks
 betterquesting.quest.Q6J8sKsEQS2Q1akgCbNMyw.desc=Nearly every NTM ingot, gem and powder can be packed nine to a §6storage block§r. Many metal blocks work as a beacon base.%n%nHazards do not go away when you compress them. A radioactive block is §cten times§r as radioactive as one ingot, so a single block of uranium or plutonium is worse than the nine ingots it is made of. Blocks of §6White Phosphorus§r are hot and set you on fire, and blocks of §6Semtex§r and §6C-4§r are explosives.
 
 # Quest: Hazardous Gases
-betterquesting.quest.wxYZ8HbrSZap4h0G9H8ITA.name=Hazardous Gases
+betterquesting.quest.wxYZ8HbrSZap4h0G9H8ITA.name=Опасные газы
 betterquesting.quest.wxYZ8HbrSZap4h0G9H8ITA.desc=Some blocks fill the air around them with gas. Gases drift around, slowly fade away, and a gas mask with a filter protects you from all of them - at the cost of filter durability.%n%n- §6Radon Gas§r seeps from uranium ores and corebblestone. It is mildly radioactive and harms your lungs.%n- §6Dense Radon Gas§r is much worse and gives a radiation effect.%n- §6Tomb Gas§r leaks from §6Ancient Scrap Metal§r. It strips away Rad-X and RadAway effects.%n- §6Core Gas§r comes out of reactor wrecks: strong radiation and lung damage.%n- §6Carbon Monoxide§r leaks from Nether coal ore.%n- §6Airborne Asbestos Particles§r and §6Airborne Coal Dust§r are released when you mine asbestos and coal. Breathing them in causes asbestosis and black lung.%n- §6Explosive Gas§r and §6Flammable Gas§r fill gas pockets underground and catch fire or explode.
 
 
 ## Quest Line: Advanced Logistics
-betterquesting.questline.vNAB2bS7S9uSc1gAlAccnA.name=Advanced Logistics
+betterquesting.questline.vNAB2bS7S9uSc1gAlAccnA.name=Продвинутая логистика
 betterquesting.questline.vNAB2bS7S9uSc1gAlAccnA.desc=Manage your factory and tackle logistical challenges with advanced redstone features.
 
 # Quest: Rails
@@ -1808,7 +1808,7 @@ betterquesting.quest.Hw_8hujlQsGL2XyuZe-ndw.name=Conveyor Upgrades
 betterquesting.quest.Hw_8hujlQsGL2XyuZe-ndw.desc=§3Conveyor Ejectors§r can be fitted with two upgrade types. §6Stack Ejection§r increases how many items are output at once, while §6Ejection Speed§r increases how quickly items are output. Both upgrades can be applied up to level 3.
 
 # Quest: Better Conveyors
-betterquesting.quest.Jss-h7UPRO2s89rbuH-28g.name=Better Conveyors
+betterquesting.quest.Jss-h7UPRO2s89rbuH-28g.name=Улучшенные конвейеры
 betterquesting.quest.Jss-h7UPRO2s89rbuH-28g.desc=§3Multi-Lane Conveyor Belts§r let you transport items on separate lanes within the same block, so you can run multiple item streams side by side. §6Express Conveyor Belts§r move items twice as fast as standard belts, making them useful when throughput or travel distance becomes a bottleneck.
 
 # Quest: Fluid Overflow
@@ -1816,7 +1816,7 @@ betterquesting.quest.MTiLxFNwSxKjViwIaQJePA.name=Fluid Overflow
 betterquesting.quest.MTiLxFNwSxKjViwIaQJePA.desc=§eRedstone-Over-Radio§r can be combined with a §3Redstone Fluid Valve§r to detect when a tank is starting to fill and then release its contents. This lets you use tanks as buffers without wasting fluid.%n%nA typical setup is a tank that only outputs fluid once it is full. Place a §6RoR Transmitter§r on one port of the tank, give it an ID, and enable Polling.%n%n[img height=1000]betterquesting:textures/QB_Fluid1.png[/img]%n%nThen place a §6RoR Logic Receiver§r next to the fluid valve and configure it so the received signal must be greater than or equal to your desired buffer threshold. Each redstone level equals 16,000 mB, so set the condition based on how large a buffer you want.%n%n[img height=1000]betterquesting:textures/QB_Fluid2.png[/img]
 
 # Quest: Gauges
-betterquesting.quest.P_IpX7K7QbGEwCyd3wB2bQ.name=Gauges
+betterquesting.quest.P_IpX7K7QbGEwCyd3wB2bQ.name=Датчики измерения напряжения и потока
 betterquesting.quest.P_IpX7K7QbGEwCyd3wB2bQ.desc=§3Gauges§r measure how much energy or fluid is moving through your network, so you can spot bottlenecks and tune your setups.%n%nThe §6Flow Gauge Pipe§r works like a normal fluid pipe but also reports flow rate in mB/s and mB/t. Just hover over it to see the values. It connects to any universal fluid pipe, including Boxcar pipes, and treats branched pipe systems joined by a single tank as one system. It does not work with exhaust pipes.%n%nThe §6Power Gauge§r sits inline with your cables and measures the energy passing through per tick and per second. Because it is a variation of red copper cable, it conducts power normally, so you can place it in the middle of a wire without breaking the connection. Separate networks linked by energy storage blocks are treated as one network.
 
 # Quest: Conveyor Grabber
