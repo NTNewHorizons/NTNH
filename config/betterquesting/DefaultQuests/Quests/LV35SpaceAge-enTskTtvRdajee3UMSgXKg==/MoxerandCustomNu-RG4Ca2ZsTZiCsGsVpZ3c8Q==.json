@@ -1,0 +1,84 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": -1276458623384728704,
+      "questIDLow:4": -6029980129346970130
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "completion_animation:8": "default",
+      "completion_particle:8": "default",
+      "confetti_icon:10": {
+        "Count:3": 0,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "minecraft:stick"
+      },
+      "countAsQuest:1": 1,
+      "desc:8": "The §3Moxer§r lets you design your own nuclear fuel. Instead of a fixed recipe, you choose which isotopes go in and how much of each, and the result runs in the §3RBMK§r, §3PWR§r, §3ZIRNOX§r and §3Watz§r. It runs on §bNitric Acid§r, §bAmmonia§r and §bKrypton Gas§r in a 1:1:2 ratio, plus §e15kHE/t§r. A §6Custom Fuel Ingot§r takes §e144 mB§r of isotopes, a §6Custom Fuel Billet§r §e96 mB§r.\n\nAnything containing fuel isotopes goes into the input slot: pure isotopes in any form, vanilla fuels (which get split into their isotopes) and cooled custom fuel, fresh or spent. It is dissolved into an internal buffer that holds §e16 blocks§r.\n\nTo set the mix, pick the ingot or billet recipe, choose an isotope with the arrow buttons, type its amount on the screen and press Enter. A plain number is in mB; a number ending in % is a share of the recipe. Once the amounts add up to the full recipe, press the start button.\n\nCustom fuel is made into reactor fuel the same way as vanilla fuel:\n- 8 billets and an §6Empty RBMK Fuel Rod§r;\n- 2 billets and an §6Empty ZIRNOX Rod§r;\n- billet, §6Insulator§r, billet for the PWR;\n- 4 ingots around a §6Graphite Ingot§r for the Watz.\nLook up your own fuel in NEI to see the exact result and its stats.\n\nFissile isotopes give the power. Fertile ones like §6Uranium-238§r or §6Thorium-232§r absorb neutrons, but slowly breed new fissile material. Sources like §6Plutonium-238§r or §6Polonium-210§r start the fuel on their own. Power grows only slowly with the fissile share, so fuel under §e8.3%§r fissile burns out faster, and no fuel breeds more fissile material than it burns. Schrabidium boosts the other isotopes, mixing several fissile isotopes lowers heat, and thorium reduces xenon and sludge. A ZIRNOX rod under §e1%§r fissile works as a breeding rod.\n\nSpent fuel can go back into the §3Moxer§r, or through the §3PUREX§r with §bKerosene§r and §bNitric Acid§r, which returns nuggets of its isotopes. It can also be crafted into vanilla spent fuel, if its composition reached that fuel\u0027s concentration. Hot PWR rods need a §3Spent Fuel Pool Drum§r first, and RBMK rods are crafted into pellets once they\u0027ve cooled down.\n\nAll of this can be changed in hbm.cfg:\n- 9.02_customFuelModel sets how the mix turns into reactor stats: 0 weighted, 1 like the closest vanilla fuel, 2 hybrid with breeding and neutron economy.\n- 9.03_customFuelSpentPath sets what happens to spent fuel: 0 Moxer only, 1 reprocessing only, 2 both.\n- 9.04_customFuelReprocessing sets how it is reprocessed: 0 vanilla spent items, 1 PUREX, 2 both.\n\n§2The Moxer accepts Speed, Power Saving and Overdrive upgrades, up to level III each.\n",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "hbm:tile.machine_moxer"
+      },
+      "isMain:1": 0,
+      "isSilent:1": 0,
+      "is_final:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Moxer and Custom Nuclear Fuel",
+      "notification_duration:5": -1.0,
+      "notification_effect:3": -1,
+      "notification_fade_in:5": -1.0,
+      "notification_fade_out:5": -1.0,
+      "notification_icon_offset_y:3": -2147483648,
+      "notification_icon_scale:5": -1.0,
+      "notification_pos_x:3": -2147483648,
+      "notification_pos_y:3": -2147483648,
+      "notification_show_icon:8": "default",
+      "notification_style:8": "default",
+      "notification_subtitle:8": "",
+      "notification_subtitle_scale:5": -1.0,
+      "notification_title:8": "",
+      "notification_title_scale:5": -1.0,
+      "particle_count:3": -1,
+      "poem_logo:8": "betterquesting:textures/gui/end_poem_logo.png",
+      "poem_music:8": "",
+      "poem_text:8": "betterquesting:texts/end_poem",
+      "questLogic:8": "AND",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": 4930881302320401816,
+  "questIDLow:4": -9029599512160772879,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 0,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:tile.machine_moxer"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}
