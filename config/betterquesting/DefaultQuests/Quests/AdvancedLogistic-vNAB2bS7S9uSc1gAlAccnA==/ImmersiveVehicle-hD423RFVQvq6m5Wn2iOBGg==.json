@@ -1,12 +1,8 @@
 {
   "preRequisites:9": {
     "0:10": {
-      "questIDHigh:4": 0,
-      "questIDLow:4": 82
-    },
-    "1:10": {
-      "questIDHigh:4": 0,
-      "questIDLow:4": 58
+      "questIDHigh:4": -1044641322075339141,
+      "questIDLow:4": -6450774178604453338
     }
   },
   "properties:10": {
@@ -21,19 +17,19 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The RTG turns the decay heat of radioisotope pellets into power - no cooling, no fuel handling, no meltdowns. It is assembled from three RTG units, steel, wire and plastic.\n\nIt holds 15 pellets. Their combined heat, capped at 200, gives 5 HE per tick for each point of heat. Pellets slowly decay into depleted pellets that you have to replace.\n\n\n\nDo not throw depleted pellets away - craft them back into materials: bismuth, neptunium, zirconium and reactor grade americium billets, or lead, mercury and nickel ingots.",
+      "desc:8": "§3Immersive Vehicles§r adds cars, trucks, planes, boats and more, all built from parts.\n\n- Vehicles and their parts - engines, wheels, seats, propellers, instruments - are crafted at their own benches, such as the §3Vehicle Bench§r, §3Engine Bench§r and §3Wheel Bench§r.\n- Place the vehicle, then right-click it with the parts to install them. The §6Wrench§r removes parts and opens the vehicle\u0027s info screen; the §6Screwdriver§r is used for some parts as well.\n- Vehicles run on fuel. Fill them with a §3Fuel Pump§r or a §6Jerrycan§r, and lock them with a §6Key§r.\n- The car and plane §6Handbooks§r explain the controls and every system in detail.\n\nThe pack also includes the §6NTM Vehicles§r and §6MTS40k§r content packs.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
         "Damage:2": 0,
         "OreDict:8": "",
-        "id:8": "hbm:tile.machine_rtg_grey"
+        "id:8": "immersivevehicleslegacy:mts.wrench"
       },
       "isMain:1": 0,
       "isSilent:1": 0,
       "is_final:1": 0,
       "lockedProgress:1": 0,
-      "name:8": "RTG Generator",
+      "name:8": "Immersive Vehicles",
       "notification_duration:5": -1.0,
       "notification_effect:3": -1,
       "notification_fade_in:5": -1.0,
@@ -62,34 +58,19 @@
       "visibility:8": "NORMAL"
     }
   },
-  "questIDHigh:4": -8577169131124537851,
-  "questIDLow:4": -9077305575034183624,
+  "questIDHigh:4": -8917629889040530694,
+  "questIDLow:4": -5000238413112966886,
   "rewards:9": {},
   "tasks:9": {
     "0:10": {
-      "autoConsume:1": 0,
-      "consume:1": 0,
-      "groupDetect:1": 0,
-      "ignoreNBT:1": 1,
-      "index:3": 0,
-      "partialMatch:1": 1,
-      "requireOnlyOneItem:1": 0,
-      "requiredItems:9": {
-        "0:10": {
-          "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
-          "id:8": "hbm:tile.machine_rtg_grey"
-        }
-      },
-      "taskID:8": "bq_standard:retrieval"
+      "taskID:8": "bq_standard:checkbox",
+      "index:3": 0
     },
     "1:10": {
       "autoConsume:1": 0,
       "consume:1": 0,
       "groupDetect:1": 0,
       "ignoreNBT:1": 1,
-      "index:3": 1,
       "partialMatch:1": 1,
       "requireOnlyOneItem:1": 0,
       "requiredItems:9": {
@@ -97,28 +78,23 @@
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "hbm:item.rtg_unit"
-        }
-      },
-      "taskID:8": "bq_standard:optional_retrieval"
-    },
-    "2:10": {
-      "autoConsume:1": 0,
-      "consume:1": 0,
-      "groupDetect:1": 0,
-      "ignoreNBT:1": 1,
-      "index:3": 2,
-      "partialMatch:1": 1,
-      "requireOnlyOneItem:1": 0,
-      "requiredItems:9": {
-        "0:10": {
+          "id:8": "immersivevehicleslegacy:mts.wrench"
+        },
+        "1:10": {
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "hbm:item.pellet_rtg_depleted"
+          "id:8": "immersivevehicleslegacy:mts.vehiclebench"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "immersivevehicleslegacy:mts.handbook_car"
         }
       },
-      "taskID:8": "bq_standard:optional_retrieval"
+      "taskID:8": "bq_standard:optional_retrieval",
+      "index:3": 1
     }
   }
 }

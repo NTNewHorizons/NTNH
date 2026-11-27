@@ -17,3 +17,16 @@ recipes.addShaped(<StorageDrawers:compDrawers>, [[<ore:craftingPiston>, <ore:dra
 recipes.addShaped(<StorageDrawers:fullDrawers4> * 4, [[<hbm:tile.mass_storage:3>, <ore:plankWood>, <hbm:tile.mass_storage:3>], [<ore:plankWood>, <ore:plankWood>, <ore:plankWood>], [<hbm:tile.mass_storage:3>, <ore:plankWood>, <hbm:tile.mass_storage:3>]]);
 recipes.addShaped(<StorageDrawers:fullDrawers2> * 2, [[<ore:plankWood>, <hbm:tile.mass_storage:3>, <ore:plankWood>], [<ore:plankWood>, <ore:plankWood>, <ore:plankWood>], [<ore:plankWood>, <hbm:tile.mass_storage:3>, <ore:plankWood>]]);
 recipes.addShaped(<StorageDrawers:fullDrawers1>, [[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>], [null, <hbm:tile.mass_storage:3>, null], [<ore:plankWood>, <ore:plankWood>, <ore:plankWood>]]);
+
+// Framed drawers: same Mass Storage Unit cost as the normal drawers, with sticks for the frame
+recipes.remove(<StorageDrawers:fullCustom1>);
+recipes.remove(<StorageDrawers:fullCustom2>);
+recipes.remove(<StorageDrawers:fullCustom4>);
+recipes.remove(<StorageDrawers:halfCustom2>);
+recipes.remove(<StorageDrawers:halfCustom4>);
+
+recipes.addShaped(<StorageDrawers:fullCustom1>, [[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>], [null, <hbm:tile.mass_storage:3>, null], [<ore:stickWood>, <ore:stickWood>, <ore:stickWood>]]);
+recipes.addShaped(<StorageDrawers:fullCustom2> * 2, [[<ore:stickWood>, <hbm:tile.mass_storage:3>, <ore:stickWood>], [<ore:stickWood>, <ore:stickWood>, <ore:stickWood>], [<ore:stickWood>, <hbm:tile.mass_storage:3>, <ore:stickWood>]]);
+recipes.addShaped(<StorageDrawers:fullCustom4> * 4, [[<hbm:tile.mass_storage:3>, <ore:stickWood>, <hbm:tile.mass_storage:3>], [<ore:stickWood>, <ore:stickWood>, <ore:stickWood>], [<hbm:tile.mass_storage:3>, <ore:stickWood>, <hbm:tile.mass_storage:3>]]);
+recipes.addShaped(<StorageDrawers:halfCustom2> * 2, [[<ore:stickWood>, <hbm:tile.mass_storage:3>, <ore:stickWood>], [<ore:slabWood>, <ore:slabWood>, <ore:slabWood>], [<ore:stickWood>, <hbm:tile.mass_storage:3>, <ore:stickWood>]]);
+recipes.addShaped(<StorageDrawers:halfCustom4> * 4, [[<hbm:tile.mass_storage:3>, <ore:stickWood>, <hbm:tile.mass_storage:3>], [<ore:slabWood>, <ore:slabWood>, <ore:slabWood>], [<hbm:tile.mass_storage:3>, <ore:stickWood>, <hbm:tile.mass_storage:3>]]);
