@@ -2,7 +2,8 @@
   "preRequisites:9": {
     "0:10": {
       "questIDHigh:4": 0,
-      "questIDLow:4": 66
+      "questIDLow:4": 66,
+      "type:1": 1
     }
   },
   "properties:10": {
@@ -75,7 +76,10 @@
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "hbm:item.steamsuit_plate"
+          "id:8": "hbm:item.steamsuit_plate",
+          "tag:10": {
+            "fuel:3": 64000
+          }
         }
       },
       "taskID:8": "bq_standard:retrieval"
@@ -93,19 +97,28 @@
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "hbm:item.steamsuit_helmet"
+          "id:8": "hbm:item.steamsuit_helmet",
+          "tag:10": {
+            "fuel:3": 64000
+          }
         },
         "1:10": {
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "hbm:item.steamsuit_legs"
+          "id:8": "hbm:item.steamsuit_legs",
+          "tag:10": {
+            "fuel:3": 64000
+          }
         },
         "2:10": {
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "hbm:item.steamsuit_boots"
+          "id:8": "hbm:item.steamsuit_boots",
+          "tag:10": {
+            "fuel:3": 64000
+          }
         }
       },
       "taskID:8": "bq_standard:optional_retrieval"

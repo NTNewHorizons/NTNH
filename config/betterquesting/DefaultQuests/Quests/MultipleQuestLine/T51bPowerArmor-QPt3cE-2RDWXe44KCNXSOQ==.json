@@ -6,7 +6,8 @@
     },
     "1:10": {
       "questIDHigh:4": 5857260683004428794,
-      "questIDLow:4": -4687035207425843370
+      "questIDLow:4": -4687035207425843370,
+      "type:1": 1
     }
   },
   "properties:10": {
@@ -21,7 +22,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "The §6T-51b§r is the first electric power armor. Each piece is assembled in the Assembly Machine from titanium armor, §6Titanium Armor Plating§r forged on the steel anvil, motors and integrated circuits, and requires a blueprint.\n\nPower armor runs on electricity: it drains its charge while worn and gives high damage resistance in return. Recharge it at a §3Charging Station§r, or carry a §6Power Armor Battery Pack§r to top it up in the field.",
+      "desc:8": "The §6T-51b§r is the first electric power armor. Each piece is assembled in the Assembly Machine from titanium armor, §6Titanium Armor Plating§r forged on the steel anvil, motors and integrated circuits, and requires a blueprint.\n\nPower armor runs on electricity: it drains its charge while worn and gives high damage resistance in return. Recharge it at a §3Charging Station§r, or carry a §6Suit Battery§r to top it up in the field.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -79,7 +80,37 @@
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "hbm:item.t51_plate"
+          "id:8": "hbm:item.t51_helmet",
+          "tag:10": {
+            "charge:4": 1000000
+          }
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.t51_plate",
+          "tag:10": {
+            "charge:4": 1000000
+          }
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.t51_legs",
+          "tag:10": {
+            "charge:4": 1000000
+          }
+        },
+        "3:10": {
+          "Count:3": 1,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "hbm:item.t51_boots",
+          "tag:10": {
+            "charge:4": 1000000
+          }
         }
       },
       "taskID:8": "bq_standard:retrieval"
@@ -97,34 +128,10 @@
           "Count:3": 1,
           "Damage:2": 0,
           "OreDict:8": "",
-          "id:8": "hbm:item.t51_helmet"
-        },
-        "1:10": {
-          "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
-          "id:8": "hbm:item.t51_legs"
-        },
-        "2:10": {
-          "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
-          "id:8": "hbm:item.t51_boots"
-        },
-        "3:10": {
-          "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
-          "id:8": "hbm:item.plate_armor_titanium"
-        },
-        "4:10": {
-          "Count:3": 1,
-          "Damage:2": 0,
-          "OreDict:8": "",
-          "id:8": "hbm:item.armor_battery"
+          "id:8": "hbm:item.hev_battery"
         }
       },
-      "taskID:8": "bq_standard:optional_retrieval"
+      "taskID:8": "bq_standard:retrieval"
     }
   }
 }
