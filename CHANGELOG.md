@@ -4,11 +4,11 @@
 
 **Added**
 
-* **350+ new quests**
+* 500+ new quests
 * Hilariously impractical multiple rocket anti air launcher
   * Nine-barrel rocket launcher that uses micro rockets
 * Modern parts holograms for the Immersive Vehicles: Legacy
-* **FULLY WORKING RECIPES FOR IVL**
+* Fully implemented recipes for IVL
 * Wdmla support for IVL
 * NTNH OST - Disc 2
 * Day/night cycle length configurability
@@ -21,25 +21,25 @@
   * Press: waxcomb into beeswax, soybeans into silken tofu
   * Liquefaction: Pam's raw fish into fish oil, fruits into ethanol, almonds into milk
   * Nuts and oily seeds can be turned into seed oil in the Liquefaction Machine and the Mixer, nuts yield more
-* **Moxer**
+* Moxer
   * A new multiblock machine that mixes isotope slurries into fully custom nuclear fuels, using nitric acid, ammonia, and krypton to produce custom fuel ingots and billets.
   * The GUI lets you select which isotope to buffer, shows total mB and per-cycle consumption, has an auto-mode toggle, and displays a molten-colour buffer bar. Buffered isotopes drop as scraps when the machine is broken.
   * Comes with an assembly recipe and NEI handler.
-* **Custom fuels**
+* Custom fuels
   * Ingots, billets, RBMK rods and pellets, PWR fuel, Zirnox fuel, and Watz fuel, including hot and depleted forms.
   * Fuels are tinted from their isotope mix, with spent forms darkened. Tooltips show composition, fissile share, the active fuel model, and reactor-specific stats.
   * Creative-tab presets include LEU, HEU, MOX, Th-233, a Pu/Np blend, and a schrabidium-doped mix.
-* **Three fuel models** decide how a mix behaves in a reactor:
+* Three fuel models decide how a mix behaves in a reactor:
   * **Weighted sum:** each fissile isotope uses its own curve scaled by its share.
   * **Derived stats:** the mix becomes an equivalent classic fuel based on enrichment tier, strength, and heat.
   * **Hybrid:** native curves plus a neutron economy — fertile isotopes absorb and breed, schrabidium catalyses, diverse mixes run cooler, and thorium suppresses xenon and sludge.
   * Profiles are provided for RBMK, PWR, Zirnox, and Watz.
-* **Spent custom fuel**
+* Spent custom fuel
   * Burn-up shifts the mix: fissile isotopes fission away and fertile isotopes breed into fissile ones.
   * Spent fuel can be configured to recycle back into the Moxer, go through normal reprocessing, or both.
   * Reprocessing can produce the closest vanilla spent item, use PUREX recipes that recover isotopes matching the actual composition, or both.
   * Custom RBMK rods can be broken back into pellets with the same depletion-stage meta as vanilla pellets.
-* **Custom fuel crafting and NEI**
+* Custom fuel crafting and NEI
   * Crafting blends mixes across inputs:
     * 3 billets → 2 ingots, 2 ingots → 3 billets
     * billets + empty RBMK rod → custom RBMK rod
@@ -48,9 +48,9 @@
     * ingot + graphite → Watz fuel
   * Supports shaped and shapeless matching, ore dictionary entries, rod breaking, and spent-fuel conversion to vanilla items.
   * A dedicated NEI handler builds recipes for the exact mix you look up.
-* **Hazards**
+* Hazards
   * Radiation and blinding now come from the actual custom fuel mix, scaled by isotope content and fission products.
-* **Materials**
+* Materials
   * Added Cm-242, Cm-244, Cm-245, Cm-246, Cm-247, Bk-247, Cf-251, Cf-252, and Es-253 as smeltable materials.
 
 **Changed**
@@ -78,6 +78,7 @@
   * `9.04_customFuelReprocessing` picks whether reprocessing uses the closest vanilla item, PUREX, or both (default: both)
 * The Zirnox now accepts custom Zirnox fuel when shift-transferring
 * The PWR now correctly displays custom PWR fuel in its GUI
+* Removed Weather 2 (tornadoes and shi) mod until better implementation
 
 **Fixed**
 
